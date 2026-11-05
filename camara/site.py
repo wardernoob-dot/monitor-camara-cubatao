@@ -1,4 +1,8 @@
-"""Site estatico (docs/) a partir dos dados ja coletados. Servivel por GitHub Pages ou qualquer dominio.
+"""Dados do site: monta vereadores, projetos, votacoes e sessoes e exporta docs/data/dados.json.
+
+O front e um app React (frontend/), compilado uma vez em docs/ e servido estatico (GitHub Pages ou
+qualquer dominio). Todo dia so o JSON muda; o app le docs/data/dados.json ao abrir.
+
 
 Paginas:
   /                       inicio: todos os vereadores x todas as votacoes recentes (matriz) + ultimas sessoes
@@ -22,7 +26,6 @@ from collections import Counter, defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from . import analise as AN
 from . import validacao as V
@@ -31,7 +34,6 @@ from .painel import LAYOUT_2026
 from .posts import APELIDO, ETAPA, NOME_TIPO, frase, lei_num, rotulo_etapa
 
 RAIZ = Path(__file__).resolve().parent.parent
-WEB = RAIZ / "web"
 NOME_SITE = "Voto a voto"
 CIDADE = "Cubatão"
 REPO = "https://github.com/wardernoob-dot/monitor-camara-cubatao"
@@ -199,7 +201,10 @@ class Base:
             for mc in c["materias"]:
                 if not mc["votacoes"]:
                     continue
-                m = self.materia(mc["tipo"], mc["numero"], mc.get("ano") or (c["data"][:4] if mc["tipo"] in ("RQ", "MOCAO") else None))
+                if mc["tipo"] == "RELATORIO":  # relatorio de comissao nao tem numero: um por dia de votacao
+                    m = self.materia("RELATORIO", None, c["data"])
+                else:
+                    m = self.materia(mc["tipo"], mc["numero"], mc.get("ano") or (c["data"][:4] if mc["tipo"] in ("RQ", "MOCAO") else None))
                 if mc.get("assunto") and (not m["assunto"] or (mc["tipo"] in ("RQ", "MOCAO", "RELATORIO"))):
                     m["assunto"] = mc["assunto"]
                 if mc.get("autoria") and not m["autoria_txt"]:
@@ -366,6 +371,9 @@ def _desc_curta(t: str | None) -> str:
 
 
 def _titulo(m: dict) -> str:
+    if m["tipo"] == "RELATORIO":
+        a, mes, d = (m["ano"] or "0000-00-00").split("-")
+        return f"Relatório de comissão ({d}/{mes}/{a})"
     n = f"{m['numero']}/{m['ano']}" if m["ano"] else (m["numero"] or "")
     if m["tipo"] in ("MOCAO", "RELATORIO"):
         return f"{NOME_TIPO[m['tipo']]} {n}".strip()
@@ -403,62 +411,84 @@ def montar(dados: Path) -> Base:
     return b
 
 
-# =============================================================== renderizacao
+# =============================================================== exportacao (consumida pelo app React em frontend/)
 
-def _env() -> Environment:
-    env = Environment(loader=FileSystemLoader(WEB / "templates"), autoescape=select_autoescape(["html"]),
-                      trim_blocks=True, lstrip_blocks=True)
-    env.filters.update({"extenso": data_extenso, "curta": data_curta, "rotulo": lambda v: ROTULO.get(v, v),
-                        "lower1": lambda s: (s[:1].lower() + s[1:]) if s else s})
-    env.globals.update({"NOME_SITE": NOME_SITE, "CIDADE": CIDADE, "REPO": REPO, "NOME_TIPO": NOME_TIPO, "ETAPA": ETAPA})
-    return env
+def _ev_json(ev: dict, vslug: dict) -> dict:
+    return {
+        "id": ev["id"], "data": ev["data"], "materia": ev["materia"]["slug"], "etapa": ev["etapa"],
+        "etapa_txt": ev["etapa_txt"], "resultado": ev["resultado"] or None, "sim": ev["sim"], "nao": ev["nao"],
+        "fonte": ev["fonte"], "link": ev["link"], "resumo_url": ev["resumo_url"], "detalhe": ev["detalhe"],
+        "votos": {vslug[k]: v for k, v in ev["votos"].items() if k in vslug},
+    }
 
 
-def gerar(dados: Path, saida: Path | None = None) -> dict:
+def exportar(dados: Path, saida: Path | None = None) -> dict:
+    """Grava docs/data/dados.json (tudo que o app precisa) e docs/data/analises/<projeto>.json (sob demanda)."""
     dados = Path(dados)
-    saida = Path(saida or RAIZ / "docs")
+    saida = Path(saida or RAIZ / "docs" / "data")
     b = montar(dados)
-    env = _env()
+    vslug = {k: v["slug"] for k, v in b.vereadores.items()}
+    publicas = b.materias_publicas()
+    ids_publicas = {m["id"] for m in publicas}
+    eventos = sorted((ev for m in b.materias.values() for ev in m["eventos"]), key=lambda e: (e["data"], e["ordem"]))
+    for i, ev in enumerate(eventos):
+        ev["id"] = i
+    for m in b.materias.values():
+        m["tem_pagina"] = bool(m["eventos"]) or (bool(m["numero"]) and m["id"] in ids_publicas)
+    paginas = {m["slug"] for m in b.materias.values() if m["tem_pagina"]}
     if saida.exists():
         shutil.rmtree(saida)
-    shutil.copytree(WEB / "static", saida / "static")
-    (saida / ".nojekyll").write_text("", "utf-8")
-    agora = datetime.now(timezone.utc).astimezone().strftime("%d/%m/%Y")
-    paginas = 0
+    (saida / "analises").mkdir(parents=True)
 
-    def escreve(rel: str, tpl: str, **ctx):
-        nonlocal paginas
-        prof = rel.count("/")
-        destino = saida / rel / "index.html" if rel else saida / "index.html"
-        destino.parent.mkdir(parents=True, exist_ok=True)
-        html = env.get_template(tpl).render(raiz="../" * (prof + 1 if rel else 0) or "./", atualizado=agora,
-                                             caminho=rel, **ctx)
-        destino.write_text(html, "utf-8")
-        paginas += 1
+    vereadores = []
+    for v in sorted(b.vereadores.values(), key=lambda v: v["exibicao"]):
+        if not v["em_exercicio"] and v["sessoes_total"] < 5:
+            vslug.pop(v["chave"], None)  # suplente de 1 ou 2 sessoes: aparece so pelo nome, sem pagina
+            continue
+        vereadores.append({
+            "slug": v["slug"], "exibicao": v["exibicao"], "nome": v["nome"], "iniciais": v["iniciais"],
+            "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "cargo": v.get("cargo"),
+            "em_exercicio": v["em_exercicio"], "contagem": v["contagem"], "total_votacoes": v["total_votacoes"],
+            "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
+            "projetos": [m["slug"] for m in v["projetos"] if m["slug"] in paginas],
+            "requerimentos": [m["slug"] for m in v["requerimentos"] if m["slug"] in paginas],
+        })
+    materias = []
+    for m in b.materias.values():
+        if not m["tem_pagina"]:
+            continue
+        if m["analise"]:
+            an = m["analise"]
+            (saida / "analises" / f"{m['slug']}.json").write_text(json.dumps({
+                "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", an["modelo"]),
+                "fonte": an["documento"]["fonte"].split(" (")[0], **{k: an["analise"][k] for k in (
+                    "resumo", "o_que_muda", "quem_e_afetado", "justificativa_do_autor", "pontos_de_atencao", "limitacoes")},
+            }, ensure_ascii=False), "utf-8")
+        materias.append({
+            "slug": m["slug"], "titulo": m["titulo"], "tipo": m["tipo"], "tipo_nome": NOME_TIPO.get(m["tipo"], m["tipo"]),
+            "numero": m["numero"], "ano": m["ano"], "assunto": m["assunto_txt"], "autoria": m["autoria"],
+            "autores": [vslug[k] for k in m["autores"] if k in vslug], "situacao": m["situacao"],
+            "situacao_cls": m["situacao_cls"], "pautas": m["pautas"], "documento": m["documento"], "lei": m["lei"],
+            "veto": m["veto"], "ultima_data": m["ultima_data"], "eventos": [e["id"] for e in m["eventos"]],
+            "divergencias": [{"etapa": d["etapa"], "data": d["data"], "vereador": vslug.get(d["vereador"]),
+                              "vereador_txt": d["vereador_txt"], "painel": d["painel"], "resumo": d["resumo"]}
+                             for d in m["divergencias"]],
+            "analise": bool(m["analise"]), "lista": m["id"] in ids_publicas,
+        })
+    dias = [{"data": d["data"], "sessoes": d["sessoes"], "status": d["status"],
+             "materias": [m["slug"] for m in d["materias"] if m["slug"] in paginas],
+             "noticias": [{"titulo": n["titulo"], "url": n["url"]} for n in d["noticias"]]} for d in b.dias]
+    pacote = {
+        "meta": {"atualizado": datetime.now(timezone.utc).isoformat(timespec="minutes"), "nome_site": NOME_SITE,
+                 "cidade": CIDADE, "repo": REPO},
+        "vereadores": vereadores, "materias": sorted(materias, key=lambda m: (m["ultima_data"], int(m["numero"] or 0)), reverse=True),
+        "votacoes": [_ev_json(e, vslug) for e in eventos], "dias": dias,
+    }
+    (saida / "dados.json").write_text(json.dumps(pacote, ensure_ascii=False, separators=(",", ":")), "utf-8")
+    tam = (saida / "dados.json").stat().st_size // 1024
+    print(f"  site: dados.json ({tam} KB), {len(vereadores)} vereadores, {len(materias)} materias, "
+          f"{len(eventos)} votacoes, {len(list((saida / 'analises').glob('*.json')))} analises")
+    return {"vereadores": len(vereadores), "materias": len(materias), "votacoes": len(eventos)}
 
-    atuais = sorted((v for v in b.vereadores.values() if v["em_exercicio"]), key=lambda v: v["exibicao"])
-    outros = sorted((v for v in b.vereadores.values() if not v["em_exercicio"] and v["sessoes_total"] >= 5),
-                    key=lambda v: v["exibicao"])
-    mats = b.materias_publicas()
-    for m in b.materias.values():
-        m["tem_pagina"] = bool(m["numero"]) and (bool(m["eventos"]) or m in mats)
-    # matriz da pagina inicial: votacoes com voto nominal do painel (registram quem nao votou)
-    recentes = [e for e in b.votacoes if e["fonte"] == "painel"]
-    colunas = recentes[-80:]
-    escreve("", "inicio.html", vereadores=atuais, colunas=colunas, dias=b.dias[:6], total_votacoes=len(b.votacoes),
-            total_painel=len(recentes), leis=[m for m in mats if m["lei"]][:6],
-            desde=recentes[0]["data"] if recentes else None)
-    escreve("vereadores", "vereadores.html", atuais=atuais, outros=outros)
-    for v in atuais + outros:
-        escreve(f"vereadores/{v['slug']}", "vereador.html", v=v)
-    autores = sorted({m["autoria"] for m in mats})
-    escreve("projetos", "projetos.html", materias=mats, autores=autores)
-    for m in b.materias.values():
-        if m["tem_pagina"]:
-            escreve(f"projetos/{m['slug']}", "projeto.html", m=m)
-    escreve("sessoes", "sessoes.html", dias=b.dias)
-    for d in b.dias:
-        escreve(f"sessoes/{d['data']}", "sessao.html", d=d)
-    escreve("como-funciona", "como-funciona.html")
-    print(f"  site: {paginas} pagina(s) em {saida.relative_to(RAIZ) if saida.is_relative_to(RAIZ) else saida}")
-    return {"paginas": paginas}
+
+gerar = exportar  # nome antigo usado no pipeline

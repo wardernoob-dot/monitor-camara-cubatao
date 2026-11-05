@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 from camara import site as S
@@ -17,12 +18,21 @@ def test_descricao_de_requerimento():
                          "solicitando a formação de comissão") == "Solicitando a formação de comissão"
 
 
-def test_site_gerado_com_dados_do_repo(tmp_path):
-    r = S.gerar(RAIZ / "data", tmp_path / "site")
-    assert r["paginas"] > 50
-    inicio = (tmp_path / "site" / "index.html").read_text("utf-8")
-    assert "Como cada vereador de Cubatão votou" in inicio and 'class="mx"' in inicio
-    for p in ("vereadores/xuxa", "vereadores/topete", "projetos/pl-92-2026", "como-funciona"):
-        assert (tmp_path / "site" / p / "index.html").exists(), p
-    pl92 = (tmp_path / "site" / "projetos" / "pl-92-2026" / "index.html").read_text("utf-8")
-    assert "Virou a Lei 4.487" in pl92 and "../../static/site.css" in pl92
+def test_exporta_json_do_app(tmp_path):
+    S.exportar(RAIZ / "data", tmp_path)
+    d = json.loads((tmp_path / "dados.json").read_text("utf-8"))
+    assert set(d) == {"meta", "vereadores", "materias", "votacoes", "dias"}
+    slugs = {v["slug"] for v in d["vereadores"]}
+    assert {"xuxa", "topete", "marcinho"} <= slugs
+    materias = {m["slug"]: m for m in d["materias"]}
+    pl92 = materias["pl-92-2026"]
+    assert pl92["lei"]["numero"] == "4.487" and pl92["situacao_cls"] == "lei"
+    # toda referencia do app aponta pra algo que existe
+    for m in d["materias"]:
+        assert all(0 <= i < len(d["votacoes"]) for i in m["eventos"])
+        assert set(m["autores"]) <= slugs
+    for ev in d["votacoes"]:
+        assert ev["materia"] in materias and set(ev["votos"]) <= slugs
+    assert [e["data"] for e in d["votacoes"]] == sorted(e["data"] for e in d["votacoes"])
+    for s in (tmp_path / "analises").glob("*.json"):
+        assert s.stem in materias and materias[s.stem]["analise"]
