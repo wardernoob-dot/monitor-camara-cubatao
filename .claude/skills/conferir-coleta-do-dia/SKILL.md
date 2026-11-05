@@ -25,7 +25,13 @@ Se precisar de dados mais novos, rode `git pull` antes.
 - **Status do consolidado:** `oficial_conferido` = tem painel e resumo para comparar; `so_oficial` = só resumo (normal antes de set/2026 e enquanto o painel não foi processado).
 - **`votacoes_nao_identificadas` > 0:** o cabeçalho lido do painel não casou com a pauta (o modelo de visão erra dígito em texto miúdo). Veja `validacao.py` e `data/painel/<video>.json` (campos `lido` e `validacao`).
 - **Divergências esperadas:** o resumo oficial costuma contar como SIM quem o painel mostra sem voto, então aparecem juntas `resumo_inclui_nao_votante` e `placar_divergente` (placar do resumo 1 acima). O script as agrupa em uma linha. O site mostra as duas versões lado a lado; é assim que deve ser (veja "Quando as fontes não batem" em *Como funciona*).
-- **Linhas `! INCOMUM`:** divergência de outro tipo, ou `placar_divergente` sem nenhum não-votante por trás. Essas valem investigar: pode ser leitura de painel errada (cor, rosto confundido) ou parser errado.
+- **Linhas `! INCOMUM`:** divergência de outro tipo, ou `placar_divergente` sem nenhum não-votante por trás. Vale investigar,
+  mas dois tipos já aparecem no histórico e têm explicação:
+  - `voto_divergente`: o painel mostra um voto e o resumo registra o contrário para o mesmo vereador. Caso conhecido:
+    PL 27/2026, 1ª discussão, 29/09 (Alessandro: painel NÃO, resumo SIM), descrito em *Como funciona*. **Qualquer outro caso novo é o mais importante da lista**:
+    compare a imagem em `data/painel/img/` com o texto do resumo e veja qual das duas fontes errou (o site mostra as duas, sem concluir).
+  - `painel_incompleto`: o print do painel foi capturado antes do fim da votação (campo `obs` explica). Caso conhecido: PL 87/2026, parecer, 20/10.
+    Em geral é benigno: o site cai para o resumo quando a leitura do painel não está `completo`.
 
 ## Se achar algo incomum
 

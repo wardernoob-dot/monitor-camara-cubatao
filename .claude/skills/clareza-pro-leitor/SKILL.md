@@ -20,6 +20,8 @@ induzir a uma conclusão errada. Antes de dar uma mudança por pronta, passe por
 
 > Estado em 2026-11-05: o front **não** explica o SIM do parecer contrário (tabela do vereador e linha do tempo do projeto).
 > O dono do projeto foi avisado e vai decidir; não mude sem alinhar com ele.
+> Hoje há 3 etapas de parecer contrário, todas lidas pelo painel: PL 74/2026 (15/09, Rejeitado 4x10), PL 75/2026 (20/10, Aprovado 8x6)
+> e PL 92/2026 (29/10, Rejeitado 3x11). Um "Rejeitado 3 a 11" de parecer contrário **não** significa que o projeto foi derrotado.
 
 ## 2. Toda afirmação sobre voto tem fonte?
 
@@ -29,6 +31,9 @@ Painel da transmissão (com link no minuto) ou resumo oficial (com link do PDF).
 ## 3. Regras editoriais do projeto (não negociáveis)
 
 - **Sem ranking, nota, "mais fiel", "mais faltoso"** de vereador, nem comparações que funcionem como ranking.
+  Revisão de 2026-11-05: não há ranking nem lista ordenada por desempenho no front. O mais próximo é o mapa "Quem vota igual a quem"
+  (`Inicio.tsx`, pares de vereadores com % de votos iguais, só votações do painel). Ele não ordena ninguém, mas é comparação
+  entre pessoas; qualquer mudança nele (ordenar, destacar o maior/menor) deve ser alinhada com o dono do projeto.
 - **A IA nunca é fonte de fato.** O texto de "Entenda o projeto" é rotulado como gerado por IA, cita o documento lido e
   **não recebe votos, nomes de vereadores nem partidos** (veja `prompts/analise.md`). Toda frase de "pontos de atenção" tem trecho literal do documento.
 - **Tom imparcial:** não dizer se o projeto é bom ou ruim, não recomendar voto, não elogiar nem criticar o autor.
