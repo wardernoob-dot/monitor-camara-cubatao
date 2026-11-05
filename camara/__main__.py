@@ -57,6 +57,12 @@ def main():
 
         consolidar_tudo(a.dados)
 
+        from .analise import analisar_tudo
+        from .posts import gerar_tudo as gerar_posts
+
+        analisar_tudo(a.dados)
+        gerar_posts(a.dados)
+
 
 if __name__ == "__main__":
     main()
