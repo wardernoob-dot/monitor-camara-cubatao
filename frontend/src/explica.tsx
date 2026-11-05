@@ -60,7 +60,7 @@ export function DicaMateria({ m, children }: { m: Materia; children: ReactNode }
       <>
         <strong className="dica__titulo">Em palavras simples</strong>
         {m.explicacao.texto}
-        <span className="dica__fonte">Texto de IA ({m.explicacao.modelo}) feito só com a {m.explicacao.base}.</span>
+        <span className="dica__fonte">Texto de IA ({m.explicacao.modelo}) feito só com {m.explicacao.base}.</span>
       </>}>
       {children}
     </Dica>

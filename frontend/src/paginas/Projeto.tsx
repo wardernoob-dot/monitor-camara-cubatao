@@ -29,7 +29,7 @@ export default function ProjetoPagina() {
         <aside className="em-poucas" aria-label="Em palavras simples">
           <p className="em-poucas__titulo">Em palavras simples</p>
           <p className="em-poucas__texto">{m.explicacao.texto}</p>
-          <p className="em-poucas__fonte">Texto de IA ({m.explicacao.modelo}) feito só com a {m.explicacao.base}. Pode simplificar demais: o texto oficial vale.</p>
+          <p className="em-poucas__fonte">Texto de IA ({m.explicacao.modelo}) feito só com {m.explicacao.base}. Pode simplificar demais: o texto oficial vale.</p>
         </aside>
       )}
       {m.relevancia.nivel !== "baixa" && (

@@ -572,11 +572,11 @@ def preparar_fotos(vereadores: dict) -> dict[str, str]:
 def _explicacao(m: dict, explic: dict) -> dict | None:
     if m["analise"]:
         a = m["analise"]
-        return {"texto": a["analise"]["resumo"], "base": "texto integral do projeto",
+        return {"texto": a["analise"]["resumo"], "base": "o texto integral do projeto",
                 "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", a["modelo"])}
     e = explic.get(m["slug"])
     if e and "incompleta" not in e["texto"].lower():
-        return {"texto": e["texto"], "base": "descrição oficial (ementa)", "modelo": e["modelo"]}
+        return {"texto": e["texto"], "base": "a descrição oficial (ementa)", "modelo": e["modelo"]}
     return None
 
 
