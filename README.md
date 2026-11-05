@@ -16,7 +16,10 @@ em quê, como, e qual foi o resultado.
 | Site (React, em `frontend/`, publicado de `docs/`) | pronto |
 | Carrossel pro Instagram (`data/posts/`) | pronto |
 
-Site: https://wardernoob-dot.github.io/monitor-camara-cubatao/ (GitHub Pages servindo a pasta `/docs`).
+Site, em dois endereços com o mesmo conteúdo:
+
+- https://votoavoto.surge.sh (Surge, publicado pelo Actions a cada coleta e a cada mudança em `docs/`)
+- https://wardernoob-dot.github.io/monitor-camara-cubatao/ (GitHub Pages servindo a pasta `/docs`)
 
 ## Fontes (todas públicas)
 
