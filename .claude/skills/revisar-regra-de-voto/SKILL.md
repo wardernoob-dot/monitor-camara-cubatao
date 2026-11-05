@@ -10,7 +10,7 @@ description: >
   Ativa quando o usuário diz "revisar regra de voto", "mexi no parser", "confere a lógica de
   voto", "isso inverte favor e contra?" ou "revisa essa mudança de voto".
 metadata:
-  version: "1.2"
+  version: "1.3"
   updated: "2026-11-05"
   author: "Gabriela Caligares"
 ---
@@ -106,7 +106,7 @@ Estas são as regras de leitura de voto do README do projeto. Vale conferir a mu
 - **Parecer do TCE sobre contas:** "rejeição do Parecer" = derrubar o parecer do Tribunal.
 - Cada item tem `objeto_votado` (`materia`, `veto`, `parecer_tc`) e `rotulos` que dizem o que "favor" e "contra" significam naquele caso. Site e posts devem usar esses rótulos, não escrever "a favor/contra" fixo.
 - **O SIM/NÃO do painel é relativo ao que está em votação** (o parecer, o veto), não ao projeto. Um SIM num "parecer contrário" é voto contra o projeto.
-- **Como o site mostra um parecer** (verificado em 2026-11-05): `site.py` (`_evento`, ramo do resumo) e `posts.py` (`votos`) classificam pelo texto da ação (`aprova*`/`manuten*` → SIM, o resto → NAO), não pelo `sentido`. Isso é coerente com o painel: o placar é **do parecer** e a etapa vem rotulada por `rotulo_etapa`. Cuidado: se um texto novo chamar esse SIM de "a favor", estará errado.
+- **O campo `sentido`** (conferido em 2026-11-05, depois do novo front da `main`): `site.py` (função `sentido`) grava em cada votação o que um SIM significa para o projeto: `inverso` no parecer contrário, `direto` no parecer favorável e nas votações comuns, `emenda` nas emendas e `None` nos vetos. O front usa isso para explicar o voto ("na prática: ..."). Ainda assim, `_evento` (site.py) e `votos` (posts.py) montam SIM/NAO pelo texto da ação (`aprova*`/`manuten*` → SIM), o que é coerente com o painel (SIM = aprovou o que estava em votação). Cuidado ao mexer: o SIM de um parecer contrário **não** é "a favor do projeto"; use `sentido`.
 - Sem ranking, nota ou "índice de fidelidade" de vereador. A IA nunca é fonte de voto: voto vem só do painel ou do resumo oficial.
 
 ---
@@ -126,6 +126,7 @@ Estas são as regras de leitura de voto do README do projeto. Vale conferir a mu
 
 ## Histórico de versões
 
+- **v1.3** (2026-11-05): Registra o campo `sentido`, que a `main` passou a gravar no `dados.json`. [Gabriela Caligares]
 - **v1.2** (2026-11-05): O passo de gerar o `dados.json` agora usa pasta temporária (o `exportar` sem destino apaga `docs/data`). Testado: saída idêntica à commitada, exceto a data. [Gabriela Caligares]
 - **v1.1** (2026-11-05): Reformatada no modelo padrão de skills (papel, entradas, saída, passos, regras, exemplo). Gerar o `dados.json` agora avisa que reescreve `docs/data/dados.json` local. [Gabriela Caligares]
 - **v1.0** (2026-11-05): Criada a partir das regras de leitura de voto do README e da revisão do PL 75/2026. [Gabriela Caligares]

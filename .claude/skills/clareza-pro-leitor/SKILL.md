@@ -9,7 +9,7 @@ description: >
   Ativa quando o usuário diz "revisar a clareza", "o leitor entende isso?", "mudei a tela",
   "revisa o texto do site" ou ao criar ou mudar qualquer coisa que o morador vai ler.
 metadata:
-  version: "1.2"
+  version: "1.3"
   updated: "2026-11-05"
   author: "Gabriela Caligares"
 ---
@@ -123,13 +123,10 @@ Estes são princípios do README do projeto. Vale conferir contra eles.
 - **A IA nunca é fonte de fato.** O texto de "Entenda o projeto" é rotulado como gerado por IA, cita o documento lido e não recebe votos, nomes de vereadores nem partidos (veja `prompts/analise.md`). Todo ponto de atenção traz um trecho literal do documento.
 - **Tom imparcial:** não dizer se o projeto é bom ou ruim, não recomendar voto, não elogiar nem criticar o autor.
 - **Os dois lados quando as fontes divergem**, sem concluir qual está certa.
-- **Estado visto nas telas em 2026-11-05** (o dono do projeto foi avisado e vai decidir; não mude sem alinhar com ele; confirme o estado atual com o script do passo 1 e um print):
-  - **Parecer contrário sem explicação.** Em `/#/projetos/pl-75-2026` a etapa "Parecer contrário" mostra "Aprovado 8 a 6" e os vereadores com "Sim" em verde, sem dizer que esse SIM é contra o projeto. Só a etiqueta no topo ("Parecer contrário: aprovado") ajuda um pouco.
-  - **Rótulos que se contradizem.** Na mesma linha aparecem "Aprovado" (resultado do painel) e "Rejeitado" (campo `detalhe`, vindo do resumo oficial). Um leitor lê as duas palavras para a mesma votação.
-  - **"Sim/Não" do parecer contrário vira estatística de "não".** Em `/#/vereadores/xuxa`, o PL 92/2026 (parecer contrário em separado) aparece como **"Não"** em vermelho, mas ele votou a favor do projeto (rejeitou o parecer) e votou "Sim" nas duas discussões. Em código, `estatisticas.ts` (linha ~92, "Votos 'não' por semana") e o cartão "votou não" contam todo `NAO`, sem olhar a etapa, então votos a favor do projeto entram como "não".
-  - **"0 a 0" sem votação.** Em `/#/projetos/pl-75-2026`, as linhas de 15/09 e 18/09 mostram "Sem resultado registrado 0 a 0" para etapas que nem tiveram voto (projeto voltou às comissões; retirado de pauta). Parece uma votação com zero votos.
-  - **Números que parecem não bater.** Em `/#/vereadores/xuxa` o cartão diz "88 votações com voto registrado" e "2 votou não", enquanto a lista diz "Todos (216)" e "Votou não (6)". A explicação existe (até agosto só o resumo, que lista quem votou a favor), mas está num texto pequeno abaixo do gráfico.
-
+- **Estado visto nas telas, 2ª conferência em 2026-11-05** (depois que a `main` trouxe o novo front; confirme o estado atual com um print):
+  - **Resolvido pelo dono:** o "Sim" do parecer contrário agora vem explicado. O site grava `sentido` em cada votação (`inverso` no parecer contrário, `direto`, `emenda`; `site.py`, função `sentido`), a página do projeto mostra o aviso "votar Sim era ser contra o projeto seguir", e a tabela do vereador mostra "na prática: ..." ao lado do voto (`explica.tsx`). Os cartões "votou sim/não" e o filtro "Votou não" saíram, o que também tirou a contagem de votos a favor do projeto como "não".
+  - **Ainda aberto:** (a) a linha do parecer mostra "Aprovado 8 a 6" e, ao lado, "Rejeitado" (campo `detalhe`, do resumo oficial), duas palavras para a mesma votação; (b) etapas sem votação ainda saem como "Sem resultado registrado 0 a 0" (13 casos; o teste `xfail` marca isso); (c) "Vota mais igual a / diferente de" (`Vereador.tsx`) segue ordenando vereadores por semelhança.
+  - **Não verificado:** vetos têm `sentido` vazio (9 votações), então não sei se a tela explica o que o "Sim" significa num veto (manter ou derrubar). O cartão "60% de presença nas sessões" (Xuxa) não foi conferido contra os dados. Na página inicial, números lado a lado diferem sem explicação visível: "5 viraram lei" × barra "Viraram lei 7", "95 projetos apresentados ou votados" × barra "Apresentados 130", "7 projetos vetados" × "Vetos 9" (pode ser definição diferente; confira).
 ---
 
 ## Exemplo
@@ -148,6 +145,7 @@ INVERTE 2026-10-20  pl-75-2026   Parecer contrário   APROVADO   8x6  fonte=pain
 
 ## Histórico de versões
 
+- **v1.3** (2026-11-05): Segunda conferência das telas depois do novo front da `main`: o parecer contrário já vem explicado (`sentido`); registra o que continua aberto e o que não foi verificado (vetos, presença, números da página inicial). [Gabriela Caligares]
 - **v1.2** (2026-11-05): Testada com prints reais do site (Edge headless). Registra os problemas vistos nas telas, corrige a afirmação de que não havia lista ordenada de vereadores ("Vota mais igual a / diferente de") e documenta como tirar o print. [Gabriela Caligares]
 - **v1.1** (2026-11-05): Reformatada no modelo padrão de skills. Troca os números escritos à mão por um script (`listar_pareceres.py`) e passa a exigir o registro do que não foi verificado. [Gabriela Caligares]
 - **v1.0** (2026-11-05): Criada a partir da revisão do front e do caso do parecer contrário do PL 75/2026. [Gabriela Caligares]

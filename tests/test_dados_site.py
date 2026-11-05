@@ -84,6 +84,7 @@ def test_pl75_parecer_contrario_aprovado(dados):
     assert "contr" in v["etapa_txt"].lower()
     assert v["resultado"] == "APROVADO" and (v["sim"], v["nao"]) == (8, 6)
     assert v["fonte"] == "painel" and v["link"]
+    assert v["sentido"] == "inverso"
 
 
 def test_pl92_parecer_contrario_rejeitado(dados):
@@ -92,6 +93,15 @@ def test_pl92_parecer_contrario_rejeitado(dados):
     assert "contr" in v["etapa_txt"].lower()
     assert v["resultado"] == "REJEITADO" and (v["sim"], v["nao"]) == (3, 11)
     assert v["votos"]["xuxa"] == "NAO"
+    assert v["sentido"] == "inverso"
+
+
+def test_sentido_do_parecer_acompanha_o_rotulo(dados):
+    """O front explica o SIM pelo campo `sentido`: parecer contrario inverte, favoravel nao."""
+    for v in dados["votacoes"]:
+        if v["etapa"] == "parecer":
+            esperado = "inverso" if "contr" in v["etapa_txt"].lower() else "direto"
+            assert v["sentido"] == esperado, f"{_rotulo(v)}: '{v['etapa_txt']}' -> {v['sentido']}"
 
 
 @pytest.mark.xfail(strict=True, reason=(
