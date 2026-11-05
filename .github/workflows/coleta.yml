@@ -2,8 +2,8 @@ name: coleta-diaria
 
 on:
   schedule:
-    # 08h17 em Brasilia (11h17 UTC), todo dia
-    - cron: "17 11 * * *"
+    # a cada 4 horas, no minuto 17 (o GitHub pode atrasar alguns minutos)
+    - cron: "17 */4 * * *"
   workflow_dispatch:
     inputs:
       desde:
