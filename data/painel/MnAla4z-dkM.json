@@ -44,7 +44,20 @@
    },
    "horario_video": "1:13:50",
    "link": "https://youtu.be/MnAla4z-dkM?t=4440",
-   "evidencia": "painel/img/MnAla4z-dkM_01.jpg"
+   "evidencia": "painel/img/MnAla4z-dkM_01.jpg",
+   "materia": {
+    "situacao_lida": "REJEITADO",
+    "sessao_lida": "29ª SESSÃO",
+    "texto": "PL nº 92/2026 - Parecer Contrário em Separado - Autor: Vereador Rony Martins",
+    "tipo": "PL",
+    "numero": "92",
+    "ano": "2026",
+    "turno": null,
+    "parecer": "Parecer Contrário em Separado",
+    "autor": "Vereador Rony Martins",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 2,
@@ -80,7 +93,20 @@
    },
    "horario_video": "2:00:20",
    "link": "https://youtu.be/MnAla4z-dkM?t=7250",
-   "evidencia": "painel/img/MnAla4z-dkM_02.jpg"
+   "evidencia": "painel/img/MnAla4z-dkM_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "29ª SESSÃO",
+    "texto": "PL nº 92/2026 - 1ª Discussão - Autor: Prefeito Municipal",
+    "tipo": "PL",
+    "numero": "92",
+    "ano": "2026",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Prefeito Municipal",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 3,
@@ -116,7 +142,20 @@
    },
    "horario_video": "2:16:10",
    "link": "https://youtu.be/MnAla4z-dkM?t=8200",
-   "evidencia": "painel/img/MnAla4z-dkM_03.jpg"
+   "evidencia": "painel/img/MnAla4z-dkM_03.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "30ª SESSÃO",
+    "texto": "PL nº 92/2026 - 2ª Discussão - Autor: Prefeito Municipal",
+    "tipo": "PL",
+    "numero": "92",
+    "ano": "2026",
+    "turno": "2ª Discussão",
+    "parecer": null,
+    "autor": "Prefeito Municipal",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   }
  ]
 }

@@ -44,7 +44,20 @@
    },
    "horario_video": "0:27:40",
    "link": "https://youtu.be/jKmkU-qK0wo?t=1650",
-   "evidencia": "painel/img/jKmkU-qK0wo_01.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_01.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "RQ nº 52/2026 - CEV Ato Solene - Autor: Vereador Marcinho",
+    "tipo": "RQ",
+    "numero": "52",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Marcinho",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 2,
@@ -80,7 +93,20 @@
    },
    "horario_video": "0:34:00",
    "link": "https://youtu.be/jKmkU-qK0wo?t=2020",
-   "evidencia": "painel/img/jKmkU-qK0wo_02.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "RQ nº 53/2026 - CEI SABESP - Autor: Vereador Marcinho",
+    "tipo": "RQ",
+    "numero": "53",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Marcinho",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 3,
@@ -116,7 +142,20 @@
    },
    "horario_video": "0:48:00",
    "link": "https://youtu.be/jKmkU-qK0wo?t=2880",
-   "evidencia": "painel/img/jKmkU-qK0wo_03.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_03.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "Parecer Favorável da Emenda ao PL nº 27/2026",
+    "tipo": "EMENDA",
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": "Parecer Favorável",
+    "autor": null,
+    "identificado": false,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 4,
@@ -152,7 +191,20 @@
    },
    "horario_video": "0:49:10",
    "link": "https://youtu.be/jKmkU-qK0wo?t=2940",
-   "evidencia": "painel/img/jKmkU-qK0wo_04.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_04.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "Emenda ao PL nº 27/2026 - Autor: Vereador Tinho",
+    "tipo": "EMENDA",
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Tinho",
+    "identificado": false,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 5,
@@ -188,7 +240,20 @@
    },
    "horario_video": "1:11:50",
    "link": "https://youtu.be/jKmkU-qK0wo?t=4310",
-   "evidencia": "painel/img/jKmkU-qK0wo_05.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_05.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "Parecer Favorável ao PL nº 27/2026",
+    "tipo": "PL",
+    "numero": "27",
+    "ano": "2026",
+    "turno": null,
+    "parecer": "Parecer Favorável",
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 6,
@@ -224,7 +289,20 @@
    },
    "horario_video": "1:14:10",
    "link": "https://youtu.be/jKmkU-qK0wo?t=4440",
-   "evidencia": "painel/img/jKmkU-qK0wo_06.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_06.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "PL nº 27/2026 - 1ª DISCUSSÃO - Autor: Vereador Marcinho",
+    "tipo": "PL",
+    "numero": "27",
+    "ano": "2026",
+    "turno": "1ª DISCUSSÃO",
+    "parecer": null,
+    "autor": "Vereador Marcinho",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 7,
@@ -260,7 +338,20 @@
    },
    "horario_video": "1:30:10",
    "link": "https://youtu.be/jKmkU-qK0wo?t=5450",
-   "evidencia": "painel/img/jKmkU-qK0wo_07.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_07.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "Parecer Favorável ao PR nº 10/2026",
+    "tipo": "PR",
+    "numero": "10",
+    "ano": "2026",
+    "turno": null,
+    "parecer": "Parecer Favorável",
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 8,
@@ -296,7 +387,20 @@
    },
    "horario_video": "1:32:50",
    "link": "https://youtu.be/jKmkU-qK0wo?t=5580",
-   "evidencia": "painel/img/jKmkU-qK0wo_08.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_08.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "PR nº 10/2026 - DISCUSSÃO ÚNICA - Autor: Mesa da Câmara",
+    "tipo": "PR",
+    "numero": "10",
+    "ano": "2026",
+    "turno": "DISCUSSÃO ÚNICA",
+    "parecer": null,
+    "autor": "Mesa da Câmara",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 9,
@@ -332,7 +436,20 @@
    },
    "horario_video": "1:40:00",
    "link": "https://youtu.be/jKmkU-qK0wo?t=6010",
-   "evidencia": "painel/img/jKmkU-qK0wo_09.jpg"
+   "evidencia": "painel/img/jKmkU-qK0wo_09.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "27ª SESSÃO",
+    "texto": "PL nº 27/2026 - 2ª DISCUSSÃO - Autor: Vereador Marcinho",
+    "tipo": "PL",
+    "numero": "27",
+    "ano": "2026",
+    "turno": "2ª DISCUSSÃO",
+    "parecer": null,
+    "autor": "Vereador Marcinho",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   }
  ]
 }

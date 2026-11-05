@@ -44,7 +44,20 @@
    },
    "horario_video": "2:40:30",
    "link": "https://youtu.be/Rv2f5bX4YyA?t=9640",
-   "evidencia": "painel/img/Rv2f5bX4YyA_01.jpg"
+   "evidencia": "painel/img/Rv2f5bX4YyA_01.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "31ª SESSÃO",
+    "texto": "Relatório Final - CEI - Resolução nº 3.122",
+    "tipo": "RELATORIO",
+    "numero": "3.122",
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 2,
@@ -80,7 +93,20 @@
    },
    "horario_video": "2:54:00",
    "link": "https://youtu.be/Rv2f5bX4YyA?t=10440",
-   "evidencia": "painel/img/Rv2f5bX4YyA_02.jpg"
+   "evidencia": "painel/img/Rv2f5bX4YyA_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "31ª SESSÃO",
+    "texto": "Parecer Favorável ao PL nº 29/2026",
+    "tipo": "PL",
+    "numero": "29",
+    "ano": "2026",
+    "turno": null,
+    "parecer": "Parecer Favorável",
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 3,
@@ -116,7 +142,20 @@
    },
    "horario_video": "3:10:20",
    "link": "https://youtu.be/Rv2f5bX4YyA?t=11440",
-   "evidencia": "painel/img/Rv2f5bX4YyA_03.jpg"
+   "evidencia": "painel/img/Rv2f5bX4YyA_03.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "31ª SESSÃO",
+    "texto": "PL nº 29/2026 - 1º Discussão - Autor: Vereador Ivan Hildebrando",
+    "tipo": "PL",
+    "numero": "29",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Ivan Hildebrando",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 4,
@@ -152,7 +191,20 @@
    },
    "horario_video": "3:39:20",
    "link": "https://youtu.be/Rv2f5bX4YyA?t=13170",
-   "evidencia": "painel/img/Rv2f5bX4YyA_04.jpg"
+   "evidencia": "painel/img/Rv2f5bX4YyA_04.jpg",
+   "materia": {
+    "situacao_lida": null,
+    "sessao_lida": "31ª SESSÃO",
+    "texto": "Parecer Favorável ao PL nº 53/2026",
+    "tipo": "PL",
+    "numero": "53",
+    "ano": "2026",
+    "turno": null,
+    "parecer": "Parecer Favorável",
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 5,
@@ -188,7 +240,20 @@
    },
    "horario_video": "3:47:30",
    "link": "https://youtu.be/Rv2f5bX4YyA?t=13640",
-   "evidencia": "painel/img/Rv2f5bX4YyA_05.jpg"
+   "evidencia": "painel/img/Rv2f5bX4YyA_05.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "26ª SESSÃO",
+    "texto": "PL nº 29/2026 - 2º Discussão - Autor: Vereador Ivan Hildebrando",
+    "tipo": "PL",
+    "numero": "29",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Ivan Hildebrando",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+   }
   }
  ]
 }

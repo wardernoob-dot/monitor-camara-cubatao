@@ -44,7 +44,20 @@
    },
    "horario_video": "0:56:00",
    "link": "https://youtu.be/4c7vtyntvXk?t=3350",
-   "evidencia": "painel/img/4c7vtyntvXk_01.jpg"
+   "evidencia": "painel/img/4c7vtyntvXk_01.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "36ª SESSÃO",
+    "texto": "RQ nº 57/2026 - Prorrogação de CEV - Autor: Vereador Batoré",
+    "tipo": "RQ",
+    "numero": "57",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Batoré",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 2,
@@ -80,7 +93,20 @@
    },
    "horario_video": "1:26:50",
    "link": "https://youtu.be/4c7vtyntvXk?t=5190",
-   "evidencia": "painel/img/4c7vtyntvXk_02.jpg"
+   "evidencia": "painel/img/4c7vtyntvXk_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "36ª SESSÃO",
+    "texto": "Relatório Final - CEV sobre o Descarte Irregular de Entulhos - Autor: Vereador Guilherme do Salão",
+    "tipo": "RELATORIO",
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Guilherme do Salão",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 3,
@@ -101,7 +127,20 @@
    "aviso": "layout do painel nao reconhecido; votos nao atribuidos",
    "horario_video": "1:45:00",
    "link": "https://youtu.be/4c7vtyntvXk?t=6270",
-   "evidencia": "painel/img/4c7vtyntvXk_03.jpg"
+   "evidencia": "painel/img/4c7vtyntvXk_03.jpg",
+   "materia": {
+    "situacao_lida": null,
+    "sessao_lida": null,
+    "texto": "",
+    "tipo": null,
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "identificado": false,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 4,
@@ -122,7 +161,20 @@
    "aviso": "layout do painel nao reconhecido; votos nao atribuidos",
    "horario_video": "1:56:00",
    "link": "https://youtu.be/4c7vtyntvXk?t=6930",
-   "evidencia": "painel/img/4c7vtyntvXk_04.jpg"
+   "evidencia": "painel/img/4c7vtyntvXk_04.jpg",
+   "materia": {
+    "situacao_lida": null,
+    "sessao_lida": null,
+    "texto": "",
+    "tipo": null,
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "identificado": false,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 5,
@@ -158,7 +210,20 @@
    },
    "horario_video": "2:21:50",
    "link": "https://youtu.be/4c7vtyntvXk?t=8520",
-   "evidencia": "painel/img/4c7vtyntvXk_05.jpg"
+   "evidencia": "painel/img/4c7vtyntvXk_05.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "36ª SESSÃO",
+    "texto": "PL nº 22/2026 - 1ª Discussão - Autor: Vereador Ronaldo da Comissão",
+    "tipo": "PL",
+    "numero": "22",
+    "ano": "2026",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Vereador Ronaldo da Comissão",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 6,
@@ -194,7 +259,20 @@
    },
    "horario_video": "2:35:00",
    "link": "https://youtu.be/4c7vtyntvXk?t=9350",
-   "evidencia": "painel/img/4c7vtyntvXk_06.jpg"
+   "evidencia": "painel/img/4c7vtyntvXk_06.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "36ª SESSÃO",
+    "texto": "PL nº 28/2026 - Parecer favorável",
+    "tipo": "PL",
+    "numero": "28",
+    "ano": "2026",
+    "turno": null,
+    "parecer": "Parecer favorável",
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 7,
@@ -230,7 +308,20 @@
    },
    "horario_video": "2:45:10",
    "link": "https://youtu.be/4c7vtyntvXk?t=9920",
-   "evidencia": "painel/img/4c7vtyntvXk_07.jpg"
+   "evidencia": "painel/img/4c7vtyntvXk_07.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "36ª SESSÃO",
+    "texto": "PL nº 30/2026 - 1ª Discussão - Autor: Vereador Xuxa",
+    "tipo": "PL",
+    "numero": "30",
+    "ano": "2026",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Vereador Xuxa",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   }
  ]
 }

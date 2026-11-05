@@ -44,7 +44,20 @@
    },
    "horario_video": "1:04:00",
    "link": "https://youtu.be/NtevRSxgVCQ?t=3810",
-   "evidencia": "painel/img/NtevRSxgVCQ_01.jpg"
+   "evidencia": "painel/img/NtevRSxgVCQ_01.jpg",
+   "materia": {
+    "situacao_lida": "REJEITADO",
+    "sessao_lida": "30ª Sessão",
+    "texto": "Parecer em Separado Contrário ao PL nº 74/2026 - Autor: Vereador Rony Martins",
+    "tipo": "PL",
+    "numero": "74",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Rony Martins",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 2,
@@ -80,7 +93,20 @@
    },
    "horario_video": "1:06:20",
    "link": "https://youtu.be/NtevRSxgVCQ?t=3970",
-   "evidencia": "painel/img/NtevRSxgVCQ_02.jpg"
+   "evidencia": "painel/img/NtevRSxgVCQ_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "30ª Sessão",
+    "texto": "PL nº 74/2026 - 1ª Discussão - Autor: Prefeito Municipal",
+    "tipo": "PL",
+    "numero": "74",
+    "ano": "2026",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Prefeito Municipal",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 3,
@@ -116,7 +142,20 @@
    },
    "horario_video": "1:31:00",
    "link": "https://youtu.be/NtevRSxgVCQ?t=5450",
-   "evidencia": "painel/img/NtevRSxgVCQ_03.jpg"
+   "evidencia": "painel/img/NtevRSxgVCQ_03.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "30ª Sessão",
+    "texto": "PL nº 34/2026 - 1ª Discussão - Autor: Cléber do Cavaco",
+    "tipo": "PL",
+    "numero": "34",
+    "ano": "2026",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Cléber do Cavaco",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 4,
@@ -152,7 +191,20 @@
    },
    "horario_video": "1:34:50",
    "link": "https://youtu.be/NtevRSxgVCQ?t=5680",
-   "evidencia": "painel/img/NtevRSxgVCQ_04.jpg"
+   "evidencia": "painel/img/NtevRSxgVCQ_04.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "24ª Sessão",
+    "texto": "PL nº 74/2026 - 2ª Discussão - Autor: Prefeito Municipal",
+    "tipo": "PL",
+    "numero": "74",
+    "ano": "2026",
+    "turno": "2ª Discussão",
+    "parecer": null,
+    "autor": "Prefeito Municipal",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 5,
@@ -188,7 +240,20 @@
    },
    "horario_video": "1:41:10",
    "link": "https://youtu.be/NtevRSxgVCQ?t=6050",
-   "evidencia": "painel/img/NtevRSxgVCQ_05.jpg"
+   "evidencia": "painel/img/NtevRSxgVCQ_05.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "24ª Sessão",
+    "texto": "PL nº 34/2026 - 2ª Discussão - Autor: Cléber do Cavaco",
+    "tipo": "PL",
+    "numero": "34",
+    "ano": "2026",
+    "turno": "2ª Discussão",
+    "parecer": null,
+    "autor": "Cléber do Cavaco",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   }
  ]
 }

@@ -44,7 +44,20 @@
    },
    "horario_video": "0:40:20",
    "link": "https://youtu.be/aG3vhRvCeis?t=2450",
-   "evidencia": "painel/img/aG3vhRvCeis_01.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_01.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "Moção nº 15 - Autor: Vereador Edson Mota",
+    "tipo": "MOCAO",
+    "numero": "15",
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Edson Mota",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 2,
@@ -80,7 +93,20 @@
    },
    "horario_video": "0:46:30",
    "link": "https://youtu.be/aG3vhRvCeis?t=2800",
-   "evidencia": "painel/img/aG3vhRvCeis_02.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "Moção nº 16 - Autor: Vereador Alessandro Oliveira",
+    "tipo": "MOCAO",
+    "numero": "16",
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Alessandro Oliveira",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 3,
@@ -116,7 +142,20 @@
    },
    "horario_video": "0:59:40",
    "link": "https://youtu.be/aG3vhRvCeis?t=3610",
-   "evidencia": "painel/img/aG3vhRvCeis_03.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_03.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "RQ nº 58/2026 - Prorrogação CEV - Autor: Marcinho",
+    "tipo": "RQ",
+    "numero": "58",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Marcinho",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 4,
@@ -152,7 +191,20 @@
    },
    "horario_video": "1:02:00",
    "link": "https://youtu.be/aG3vhRvCeis?t=3740",
-   "evidencia": "painel/img/aG3vhRvCeis_04.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_04.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "RQ nº 59/2026 - Prorrogação de CEV - Autor: Vereador Dr. Anderson de Laria",
+    "tipo": "RQ",
+    "numero": "59",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": "Vereador Dr. Anderson de Laria",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 5,
@@ -188,7 +240,20 @@
    },
    "horario_video": "1:03:50",
    "link": "https://youtu.be/aG3vhRvCeis?t=3830",
-   "evidencia": "painel/img/aG3vhRvCeis_05.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_05.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "RQ. nº 60/2026 - Formação de CEV - Organização de Ato Solene",
+    "tipo": "RQ",
+    "numero": "60",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 6,
@@ -224,7 +289,20 @@
    },
    "horario_video": "1:33:30",
    "link": "https://youtu.be/aG3vhRvCeis?t=5590",
-   "evidencia": "painel/img/aG3vhRvCeis_06.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_06.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "RQ. 61 - VEREADOR ALLAN MATIAS",
+    "tipo": "RQ",
+    "numero": "61",
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 7,
@@ -260,7 +338,20 @@
    },
    "horario_video": "1:59:20",
    "link": "https://youtu.be/aG3vhRvCeis?t=7170",
-   "evidencia": "painel/img/aG3vhRvCeis_07.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_07.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "PL nº 22/2026 - 2ª Discussão - Autor: Vereador Ronaldo da Comissão",
+    "tipo": "PL",
+    "numero": "22",
+    "ano": "2026",
+    "turno": "2ª Discussão",
+    "parecer": null,
+    "autor": "Vereador Ronaldo da Comissão",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 8,
@@ -296,7 +387,20 @@
    },
    "horario_video": "2:19:50",
    "link": "https://youtu.be/aG3vhRvCeis?t=8370",
-   "evidencia": "painel/img/aG3vhRvCeis_08.jpg"
+   "evidencia": "painel/img/aG3vhRvCeis_08.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "37ª SESSÃO",
+    "texto": "PL nº 38/2026 - 2ª Discussão - Autor: Vereador Xuxa",
+    "tipo": "PL",
+    "numero": "38",
+    "ano": "2026",
+    "turno": "2ª Discussão",
+    "parecer": null,
+    "autor": "Vereador Xuxa",
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+   }
   }
  ]
 }

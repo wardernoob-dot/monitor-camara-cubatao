@@ -44,7 +44,20 @@
    },
    "horario_video": "2:04:50",
    "link": "https://youtu.be/VsOfCH9nd0A?t=7500",
-   "evidencia": "painel/img/VsOfCH9nd0A_01.jpg"
+   "evidencia": "painel/img/VsOfCH9nd0A_01.jpg",
+   "materia": {
+    "situacao_lida": null,
+    "sessao_lida": "35ª SESSÃO",
+    "texto": "",
+    "tipo": null,
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "identificado": false,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+   }
   },
   {
    "n": 2,
@@ -80,7 +93,20 @@
    },
    "horario_video": "2:10:40",
    "link": "https://youtu.be/VsOfCH9nd0A?t=7870",
-   "evidencia": "painel/img/VsOfCH9nd0A_02.jpg"
+   "evidencia": "painel/img/VsOfCH9nd0A_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "35ª SESSÃO",
+    "texto": "",
+    "tipo": null,
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "identificado": false,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+   }
   }
  ]
 }
