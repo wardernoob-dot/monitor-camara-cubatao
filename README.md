@@ -8,7 +8,7 @@ em quê, como, e qual foi o resultado.
 
 | Etapa | Situação |
 |---|---|
-| Coletor (pautas, resumos, projetos, notícias, Diário Oficial) | pronto, roda todo dia no GitHub Actions |
+| Coletor (pautas, resumos, projetos, notícias, Diário Oficial) | pronto, roda a cada 4 horas no GitHub Actions |
 | Votos nominais pelo painel da transmissão (inclui quem não votou) | pronto, desde set/2026 |
 | Identificação do que está em votação, conferida com a pauta | pronto |
 | Consolidado por dia (painel × resumo × notícia × DO) | pronto |
@@ -60,7 +60,7 @@ explicando o que "favor" e "contra" significam naquele caso.
 
 ```bash
 pip install -r requirements.txt
-python -m pytest -q          # 14 testes
+python -m pytest -q          # todos os testes
 python -m camara tudo        # coleta + processa (padrão: 2026 em diante)
 ```
 
