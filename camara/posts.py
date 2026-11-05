@@ -320,9 +320,9 @@ def slide_votacao(c: dict, m: dict) -> Image.Image:
 
 def slide_analise(c: dict, m: dict, an: dict) -> Image.Image:
     a = an["analise"]
-    im, d = _base(f"Análise gerada por IA ({an['modelo']}) só com o {an['documento']['fonte'].split(' (')[0]}. "
-                  f"Não avalia vereadores nem recomenda voto. Prompt público: {REPO}/blob/main/prompts/analise.md",
-                  titulo(m))
+    modelo = re.sub(r"^\w+ \((.+)\)$", r"\1", an["modelo"])
+    im, d = _base(f"Análise gerada por IA ({modelo}) só com o {an['documento']['fonte'].split(' (')[0]}. "
+                  "Não avalia vereadores nem recomenda voto. Prompt público no link da bio.", titulo(m))
     y = 160
     d.text((M, y), "ENTENDA O PROJETO", font=fonte("Bold", 26), fill=COR["destaque"])
     y += 46
@@ -342,6 +342,11 @@ def slide_analise(c: dict, m: dict, an: dict) -> Image.Image:
                 break
             d.ellipse([M + 4, y + 12, M + 14, y + 22], fill=COR["NAO"])
             y = escreve(d, M + 32, y, p["ponto"], fonte("Regular", 26), W - 2 * M - 32, COR["tinta"], max_linhas=3) + 6
+    if a.get("justificativa_do_autor") and y < H - 330:
+        y += 14
+        d.text((M, y), "O que diz o autor", font=fonte("ExtraBold", 28), fill=COR["tinta"])
+        y = escreve(d, M, y + 44, a["justificativa_do_autor"], fonte("Regular", 26), W - 2 * M, COR["suave"],
+                    max_linhas=max(1, (H - 200 - y - 44) // 34)) + 6
     if a.get("limitacoes") and y < H - 170:
         escreve(d, M, max(y + 10, H - 170), a["limitacoes"], fonte("Regular", 22), W - 2 * M, COR["suave"], max_linhas=2)
     return im
@@ -465,7 +470,7 @@ def gerar_dia(dados: Path, data: str, forcar: bool = False) -> dict | None:
         m["_veto"] = veto_do_prefeito(dados, m)
     analises = {}
     for m in principais:
-        if an := AN.carregar(dados, m["tipo"], m["numero"], m.get("ano")):
+        if (an := AN.carregar(dados, m["tipo"], m["numero"], m.get("ano"))) and not an["documento"]["so_ementa"]:
             analises[(m["tipo"], m["numero"])] = an
     pasta = dados / "posts" / data
     h = hashlib.sha256(json.dumps([c, sorted((k, v["hash_documento"], v["analise"]["resumo"]) for k, v in analises.items())],

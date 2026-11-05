@@ -203,7 +203,7 @@ def chave_materia(tipo: str, numero: str, ano: str | None) -> str:
     return f"{tipo}-{int(numero):03d}-{ano or 'sem-ano'}"
 
 
-def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 6, pausa: float = 4.0, http=None) -> dict:
+def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: float = 4.0, http=None) -> dict:
     """Analisa as materias votadas que aparecem no consolidado e ainda nao tem analise valida."""
     dados = Path(dados)
     pasta = dados / "analises"
@@ -228,7 +228,9 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 6, pausa: flo
                 except Exception as e:  # noqa: BLE001
                     rel["erros"].append(f"ocr {k}: {e!r}"[:200])
             doc = documento(dados, m["tipo"], m["numero"], m.get("ano"), m.get("assunto"))
-            if not doc:
+            if not doc or doc["so_ementa"]:
+                # so a ementa (PDF escaneado sem transcricao ainda): nao analisa; a ementa da pauta as vezes
+                # vem cortada (PL 79/2026: "REGULAMENTADOS PELA CVM") e o modelo teria que adivinhar
                 rel["sem_documento"] += 1
                 continue
             h = hashlib.sha256(doc["texto"].encode()).hexdigest()[:16]
