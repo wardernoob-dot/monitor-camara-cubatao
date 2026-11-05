@@ -1,0 +1,47 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "52",
+  "ano": "2026",
+  "autoria": "MARCOS ROBERTO SILVA",
+  "ementa": "DISPÕE SOBRE O RECONHECIMENTO DA ASSOCIAÇÃO CULTURAL FILHOS DE GANGA ZUMBA COMO PATRIMÔNIO CULTURAL IMATERIAL DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2052.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto de lei propõe declarar a Associação Cultural Filhos de Ganga Zumba como Patrimônio Cultural Imaterial do município de Cubatão.",
+  "o_que_muda": [
+   "A associação passa a ser oficialmente reconhecida como patrimônio cultural imaterial da cidade.",
+   "O Poder Executivo (Prefeitura) deverá regulamentar a lei para sua aplicação.",
+   "Prevê o uso de verbas orçamentárias próprias para despesas decorrentes da execução da lei."
+  ],
+  "quem_e_afetado": "A Associação Cultural Filhos de Ganga Zumba e a administração pública municipal.",
+  "justificativa_do_autor": "Segundo o autor, o reconhecimento valoriza a atuação da associação na preservação da cultura afro-brasileira, no combate ao preconceito e na promoção da identidade cultural cubatense.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber quais ações práticas ou benefícios financeiros concretos a associação receberá, pois o texto depende de regulamentação futura pelo Poder Executivo.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto prevê que os custos serão cobertos pelo orçamento municipal, mas não especifica valores.",
+    "trecho": "As despesas decorrentes da execução desta lei correrão por conta das dotações orçamentarias próprias, suplementadas."
+   },
+   {
+    "ponto": "O texto não estabelece prazos específicos para a regulamentação ou para a execução de ações práticas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto depende de regulamentação pela Prefeitura para definir como será aplicado na prática.",
+    "trecho": "O Poder Executivo regulamentará esta Lei, no que couber.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "665d71bbce099bb5",
+ "gerado_em": "2026-11-05T18:53:50Z"
+}

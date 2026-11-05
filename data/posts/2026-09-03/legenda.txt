@@ -3,6 +3,7 @@
 ▪️ PL 81/2026 (Prefeito Municipal): aprovado em 2ª discussão, 10 a 0.
 
 ▪️ PL 84/2026 (Prefeito Municipal): aprovado em 2ª discussão, 14 a 0.
+O projeto altera a destinação de emendas impositivas do orçamento municipal de 2026 para redirecionar recursos a diferentes entidades e finalidades.
 
 Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
 

@@ -1,0 +1,42 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "34",
+  "ano": "2026",
+  "autoria": "JOEMERSON ALVES DE SOUZA",
+  "ementa": "DENOMINA GUILHERME HENRICK DA SILVA A QUADRA DE FUTEBOL SOCIETY LOCALIZADA NA PRAÇA PADRE ANTÔNIO PEREIRA LUZ MAIS CONHECIDA COMO PRAÇA DA CIDADANIA E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2034.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto propõe dar o nome de Guilherme Henrick da Silva à quadra de futebol society situada na Praça da Cidadania, no bairro Vila São José.",
+  "o_que_muda": [
+   "A quadra de futebol society passa a ter um nome oficial.",
+   "O espaço público será identificado em homenagem a Guilherme Henrick da Silva."
+  ],
+  "quem_e_afetado": "Frequentadores da quadra de futebol society e moradores do bairro Vila São José.",
+  "justificativa_do_autor": "Segundo o autor, a homenagem atende a pedidos de moradores e reconhece o legado de carisma, dedicação e o impacto positivo de Guilherme na história e identidade da comunidade local.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber se haverá gastos com a confecção e instalação de placas de identificação, pois o documento não trata de custos.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não menciona custos para a execução da placa ou sinalização.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto não define prazo para a instalação da identificação com o novo nome.",
+    "trecho": "",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "1f632027258372ca",
+ "gerado_em": "2026-11-05T18:53:17Z"
+}
