@@ -115,8 +115,6 @@ def identificar_pendentes(dados: Path) -> dict:
         except Exception as e:  # noqa: BLE001  (sem token, 403, limite do plano gratuito...)
             rel["erros"].append(f"{arq.name}: {e!r}"[:200])
             print(f"  ! cabecalho {arq.name}: {e!r}"[:200])
-            if len(rel["erros"]) == 1:
-                C.diagnostico()
             continue
         for v, m in zip(pend, ids):
             if m["situacao_lida"] and v.get("resultado") and m["situacao_lida"] != v["resultado"]:

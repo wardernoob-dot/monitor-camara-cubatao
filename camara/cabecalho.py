@@ -5,7 +5,7 @@ Uma chamada por sessao: todos os cabecalhos ampliados numa tira so.
 O modelo SO transcreve texto; o voto de cada vereador continua vindo da cor do pixel.
 A transcricao e conferida por regex; o que nao passar fica marcado como nao identificado.
 
-Backend: GitHub Models (gratuito no Actions com o GITHUB_TOKEN e a permissao `models: read`).
+Backend: API do Gemini (plano gratuito, chave em GEMINI_API_KEY). O GitHub Models foi desativado em 30/07/2026.
 """
 from __future__ import annotations
 
@@ -18,8 +18,7 @@ import re
 import numpy as np
 from PIL import Image, ImageDraw
 
-ENDPOINT = "https://models.github.ai/inference/chat/completions"
-MODELO = os.environ.get("MODELO_CABECALHO", "openai/gpt-4.1")
+MODELO = "gemini"  # preenchido com o modelo que efetivamente respondeu
 
 PROMPT = (
     "A imagem tem {n} faixas numeradas, cada uma com o cabecalho de um painel de votacao da "
@@ -68,43 +67,56 @@ def corte_cabecalho(miniatura: np.ndarray) -> np.ndarray:
     return miniatura[14:46, 10:310]
 
 
-def transcrever(png: bytes, n: int, token: str | None = None, http=None) -> list[dict]:
+GEMINI = "https://generativelanguage.googleapis.com/v1beta"
+PREFERENCIA = ["flash-lite", "flash"]  # modelos gratuitos e baratos; Pro e geracao de imagem sao pagos
+
+
+def _modelos_gemini(chave: str, http) -> list[str]:
+    """Pergunta a API quais modelos existem (evita depender de nome que muda)."""
+    fixo = os.environ.get("MODELO_GEMINI")
+    r = http.get(f"{GEMINI}/models", params={"key": chave, "pageSize": 200}, timeout=30)
+    r.raise_for_status()
+    nomes = [m["name"].split("/", 1)[1] for m in r.json().get("models", [])
+             if "generateContent" in m.get("supportedGenerationMethods", [])]
+    estaveis = [n for n in nomes if not re.search(r"preview|exp|image|tts|live|audio|embedding|pro", n)]
+    ordem = []
+    for pref in PREFERENCIA:
+        cand = sorted((n for n in estaveis if n.endswith(pref) or f"-{pref}-" in n or n.endswith(f"{pref}-latest")),
+                      key=lambda n: [int(x) for x in re.findall(r"\d+", n)], reverse=True)
+        ordem += [c for c in cand if c not in ordem]
+    return ([fixo] if fixo else []) + ordem
+
+
+def transcrever(png: bytes, n: int, chave: str | None = None, http=None) -> list[dict]:
+    """Transcreve os cabecalhos via Gemini (plano gratuito). Tenta os modelos disponiveis em ordem."""
     import requests
 
-    token = token or os.environ.get("GITHUB_TOKEN")
-    if not token:
-        raise RuntimeError("sem GITHUB_TOKEN para o GitHub Models")
+    chave = chave or os.environ.get("GEMINI_API_KEY")
+    if not chave:
+        raise RuntimeError("sem GEMINI_API_KEY (secret do repositorio)")
     http = http or requests
     corpo = {
-        "model": MODELO,
-        "temperature": 0,
-        "response_format": {"type": "json_object"},
-        "messages": [{"role": "user", "content": [
-            {"type": "text", "text": PROMPT.format(n=n)},
-            {"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(png).decode()}},
+        "contents": [{"parts": [
+            {"text": PROMPT.format(n=n)},
+            {"inline_data": {"mime_type": "image/png", "data": base64.b64encode(png).decode()}},
         ]}],
+        "generationConfig": {"temperature": 0, "response_mime_type": "application/json"},
     }
-    headers = {"Authorization": f"Bearer {token}", "Accept": "application/json",
-               "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
-    url, trilha = ENDPOINT, []
-    for _ in range(4):  # segue redirect mantendo POST e corpo (requests transformaria em GET)
-        r = http.post(url, json=corpo, timeout=120, headers=headers, allow_redirects=False)
-        trilha.append(f"{r.status_code} {url}")
-        if r.status_code in (301, 302, 303, 307, 308) and r.headers.get("location"):
-            from urllib.parse import urljoin
-            url = urljoin(url, r.headers["location"])
+    erros = []
+    for modelo in _modelos_gemini(chave, http)[:5]:
+        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", params={"key": chave}, json=corpo, timeout=120)
+        if r.status_code != 200:
+            erros.append(f"{modelo}: HTTP {r.status_code} {r.text[:120]}")
             continue
-        break
-    if r.status_code == 200 and not r.headers.get("content-type", "").startswith("application/json"):
-        raise RuntimeError(f"GitHub Models respondeu sem JSON ({' -> '.join(trilha)}; "
-                           f"content-type={r.headers.get('content-type')}): {r.text[:120]!r}")
-    if r.status_code != 200:
-        raise RuntimeError(f"GitHub Models HTTP {r.status_code}: {r.text[:200]}")
-    try:
-        texto = r.json()["choices"][0]["message"]["content"] or ""
-    except Exception as e:  # noqa: BLE001
-        raise RuntimeError(f"resposta inesperada do GitHub Models: {r.text[:300]!r}") from e
-    return _faixas(texto)
+        try:
+            texto = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        except Exception:  # noqa: BLE001
+            erros.append(f"{modelo}: resposta sem texto {r.text[:120]}")
+            continue
+        global MODELO
+        MODELO = modelo
+        return _faixas(texto)
+    raise RuntimeError("nenhum modelo Gemini respondeu: " + " | ".join(erros)[:400])
 
 
 def _faixas(texto: str) -> list[dict]:
@@ -148,11 +160,11 @@ def interpretar(em_votacao: str) -> dict:
     return out
 
 
-def identificar(cabecalhos: list[np.ndarray], token: str | None = None) -> list[dict]:
+def identificar(cabecalhos: list[np.ndarray], chave: str | None = None) -> list[dict]:
     """Uma chamada pra todos os cabecalhos da sessao. Devolve, por votacao, transcricao + campos."""
     if not cabecalhos:
         return []
-    faixas = transcrever(tira(cabecalhos), len(cabecalhos), token)
+    faixas = transcrever(tira(cabecalhos), len(cabecalhos), chave)
     por_n = {int(f.get("n", 0)): f for f in faixas}
     res = []
     for i in range(1, len(cabecalhos) + 1):
@@ -161,34 +173,7 @@ def identificar(cabecalhos: list[np.ndarray], token: str | None = None) -> list[
             "situacao_lida": (f.get("situacao") or "").upper() or None,
             "sessao_lida": f.get("sessao") or None,
             **interpretar(f.get("em_votacao", "")),
-            "fonte": f"transcricao do cabecalho do painel por modelo de visao ({MODELO} via GitHub Models)",
+            "fonte": f"transcricao do cabecalho do painel por modelo de visao ({MODELO}, API Gemini)",
         })
     return res
 
-
-def diagnostico(token: str | None = None) -> None:
-    """Imprime o que o GitHub Models responde (catalogo + chamada minima so com texto)."""
-    import requests
-
-    token = token or os.environ.get("GITHUB_TOKEN")
-    h = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json",
-         "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
-    try:
-        r = requests.get("https://models.github.ai/catalog/models", headers=h, timeout=30)
-        print(f"  [diag] catalogo: {r.status_code} {r.headers.get('content-type')}")
-        if r.ok and r.headers.get("content-type", "").startswith("application/json"):
-            vis = [m["id"] for m in r.json() if "image" in json.dumps(m.get("supported_input_modalities", "")).lower()]
-            print(f"  [diag] modelos com imagem: {vis[:15]}")
-        else:
-            print(f"  [diag] corpo: {r.text[:200]!r}")
-    except Exception as e:  # noqa: BLE001
-        print(f"  [diag] catalogo erro: {e!r}")
-    for url in ["https://models.github.ai/inference/chat/completions",
-                "https://models.inference.ai.azure.com/chat/completions"]:
-        for modelo in ["openai/gpt-4.1-mini", "gpt-4o-mini"]:
-            try:
-                r = requests.post(url, headers=h, timeout=60, json={
-                    "model": modelo, "messages": [{"role": "user", "content": "Responda apenas: ok"}]})
-                print(f"  [diag] {url} {modelo}: {r.status_code} {r.headers.get('content-type')} {r.text[:160]!r}")
-            except Exception as e:  # noqa: BLE001
-                print(f"  [diag] {url} {modelo}: erro {e!r}")
