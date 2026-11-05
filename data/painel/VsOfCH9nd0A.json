@@ -48,18 +48,29 @@
    "materia": {
     "situacao_lida": null,
     "sessao_lida": "35ª SESSÃO",
-    "texto": "",
-    "tipo": null,
-    "numero": null,
-    "ano": null,
+    "texto": "PL nº 87/2026 - Parecer em Conjunto Favorável",
+    "tipo": "PL",
+    "numero": "87",
+    "ano": "2026",
     "turno": null,
-    "parecer": null,
+    "parecer": "Parecer em Conjunto Favorável",
     "autor": null,
-    "identificado": false,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 2,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
     "validacao": {
-     "status": "nao_lido",
-     "motivo": "cabecalho nao transcrito"
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "87"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "87",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": "Parecer em Conjunto Favorável",
+     "turno": null
     }
    }
   },
@@ -101,18 +112,29 @@
    "materia": {
     "situacao_lida": "APROVADO",
     "sessao_lida": "35ª SESSÃO",
-    "texto": "",
-    "tipo": null,
-    "numero": null,
-    "ano": null,
+    "texto": "PL nº 75/2026 - Parecer Contrário - Autor: Vereador Rosy Martins",
+    "tipo": "PL",
+    "numero": "75",
+    "ano": "2026",
     "turno": null,
-    "parecer": null,
-    "autor": null,
-    "identificado": false,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "parecer": "Parecer Contrário",
+    "autor": "Vereador Rosy Martins",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 2,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
     "validacao": {
-     "status": "nao_lido",
-     "motivo": "cabecalho nao transcrito"
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "75"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "75",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": "Parecer Contrário",
+     "turno": null
     }
    }
   }
