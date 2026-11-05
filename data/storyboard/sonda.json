@@ -1,0 +1,238 @@
+{
+ "rss": "ok, 15 videos",
+ "lista_canal": [
+  [
+   "91d_Xz4lyx0",
+   "Ato Solene em Homenagem ao Dia do Nascituro"
+  ],
+  [
+   "aG3vhRvCeis",
+   "37ª SESSÃO ORDINÁRIA DIA 03 DE NOVEMBRO DE 2026"
+  ],
+  [
+   "MnAla4z-dkM",
+   "29ª SESSÃO EXTRAORDINÁRIA DIA 29 DE OUTUBRO DE 2026"
+  ],
+  [
+   "4c7vtyntvXk",
+   "36ª SESSÃO ORDINÁRIA DIA 27 DE OUTUBRO DE 2026"
+  ],
+  [
+   "zUKfXbaeXqE",
+   "Ato Solene em Homenagem ao Círculo de Oração"
+  ],
+  [
+   "VsOfCH9nd0A",
+   "35ª SESSÃO ORDINÁRIA DIA 20 DE OUTUBRO DE 2026"
+  ],
+  [
+   "zeGe2N3_s4M",
+   "34ª SESSÃO ORDINÁRIA DIA 13 DE OUTUBRO DE 2026"
+  ],
+  [
+   "3gHjZLFC_3U",
+   "Ato Solene em Homenagem ao CRECI-SP"
+  ],
+  [
+   "jKmkU-qK0wo",
+   "32ND ORDINARY SESSION SEPTEMBER 29, 2026"
+  ],
+  [
+   "Rv2f5bX4YyA",
+   "31ª SESSÃO ORDINÁRIA DIA 22 DE SETEMBRO DE 2026"
+  ],
+  [
+   "9OQkESPcn60",
+   "25TH EXTRAORDINARY SESSION SEPTEMBER 18, 2026"
+  ],
+  [
+   "NtevRSxgVCQ",
+   "30TH ORDINARY SESSION SEPTEMBER 15, 2026"
+  ],
+  [
+   "4b1MDSwNoD4",
+   "23ª SESSÃO EXTRAORDINÁRIA DIA 10 DE SETEMBRO DE 2026"
+  ],
+  [
+   "oCiThNpdkGA",
+   "29TH ORDINARY SESSION SEPTEMBER 8, 2026"
+  ],
+  [
+   "EvUMo4JaHHg",
+   "21ST EXTRAORDINARY SESSION SEPTEMBER 03, 2026"
+  ],
+  [
+   "Ll7g5vt79Ww",
+   "28ª SESSÃO ORDINÁRIA DIA 01 DE SETEMBRO DE 2026"
+  ],
+  [
+   "78g-pdpcZpA",
+   "SESSÃO SOLENE ALUSIVA À SEMANA DA FAMILIA DO DIA 27 DE AGOSTO DE 2026"
+  ],
+  [
+   "htICFchsnv0",
+   "27ª SESSÃO ORDINÁRIA DO DIA 25 DE AGOSTO DE 2026"
+  ],
+  [
+   "L_laZbve-6Y",
+   "26ª SESSÃO ORDINÁRIA DO DIA 18 DE AGOSTO DE 2026"
+  ],
+  [
+   "i2ZK852H9hM",
+   "25ª SESSÃO ORDINÁRIA DO DIA 11 DE AGOSTO DE 2026"
+  ],
+  [
+   "Agf3_tmMlZw",
+   "25ª SESSÃO ORDINÁRIADO DIA 11 DE AGOSTO DE 2026"
+  ],
+  [
+   "QtRciGOJsYY",
+   "AUDIÊNCIA PÚBLICA DA SAÚDE"
+  ],
+  [
+   "W_pNmfep74I",
+   "AUDIÊNCIA PÚBLICA DE FINANÇAS"
+  ],
+  [
+   "LsRKsdlhkA4",
+   "4ª SESSÃO ORDINÁRIA 2026"
+  ],
+  [
+   "zmsGeoFrc-U",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "LACRKRw7rqs",
+   "3ª SESSÃO ORDINÁRIA 2026"
+  ],
+  [
+   "NkU29zARNHA",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "v4olQzpnkJM",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "vDZ4gfFbpT4",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "tSpXQ4dCwuY",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "Nb2fcotTlB4",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "Dj1woxuA9SA",
+   "AUDIÊNCIA PÚBLICA ECOVIAS"
+  ],
+  [
+   "o-KNB-OYPyw",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "ots6zUol6eg",
+   "2ª SESSÃO ORDINÁRIA 2026"
+  ],
+  [
+   "_2D9UIrb6Rc",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "EIrovO0qrJ8",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "j0fAoMUUnl4",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "Ry0c5-K-waE",
+   "PROGRAMAÇÃO"
+  ],
+  [
+   "0rqktPxZ6QU",
+   "1ª SESSÃO EXTRAORDINÁRIA"
+  ],
+  [
+   "eDHlXiTskiA",
+   "PROGRAMAÇÃO"
+  ]
+ ],
+ "videos": [
+  {
+   "id": "VsOfCH9nd0A",
+   "titulo": "35a ord 20/10",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "erro_download": "HTTPError('500 Server Error: Internal Server Error for url: https://i.ytimg.com/sb/VsOfCH9nd0A/storyboard3_L3/M60.jpg?sqp=-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiX2uHWBg==&sigh=rs$AOn4CLB-Q9PKYJqx87TJTc_Xu"
+  },
+  {
+   "id": "zeGe2N3_s4M",
+   "titulo": "34a ord 13/10",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 1547,
+   "folhas": 44
+  },
+  {
+   "id": "Rv2f5bX4YyA",
+   "titulo": "31a ord 22/09",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 5943,
+   "folhas": 153
+  },
+  {
+   "id": "NtevRSxgVCQ",
+   "titulo": "30a ord 15/09",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 2805,
+   "folhas": 69
+  },
+  {
+   "id": "L_laZbve-6Y",
+   "titulo": "26a ord 18/08",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 7982,
+   "folhas": 194
+  },
+  {
+   "id": "jKmkU-qK0wo",
+   "titulo": "32a ord 29/09",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 3064,
+   "folhas": 72
+  },
+  {
+   "id": "4c7vtyntvXk",
+   "titulo": "36a ord 27/10",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 4269,
+   "folhas": 116
+  },
+  {
+   "id": "MnAla4z-dkM",
+   "titulo": "29a ext 29/10",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 3617,
+   "folhas": 93
+  },
+  {
+   "id": "aG3vhRvCeis",
+   "titulo": "37a ord 03/11",
+   "tentativas": {},
+   "metodo": "spec_do_pc",
+   "kb": 4086,
+   "folhas": 97
+  }
+ ]
+}
