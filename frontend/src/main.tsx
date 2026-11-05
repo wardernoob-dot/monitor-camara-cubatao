@@ -1,14 +1,13 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { HashRouter, NavLink, Link, Route, Routes, useLocation } from "react-router-dom";
-import "@fontsource/barlow-condensed/500.css";
-import "@fontsource/barlow-condensed/600.css";
-import "@fontsource/barlow-condensed/700.css";
-import "@fontsource/atkinson-hyperlegible-next/400.css";
-import "@fontsource/atkinson-hyperlegible-next/400-italic.css";
-import "@fontsource/atkinson-hyperlegible-next/700.css";
+import "@fontsource/geist-sans/400.css";
+import "@fontsource/geist-sans/500.css";
+import "@fontsource/geist-sans/600.css";
+import "@fontsource/geist-mono/400.css";
 import "./estilo.css";
 import { ProvedorDados, useDados } from "./dados";
+import { PoeiraRodape } from "./viz";
 import Inicio from "./paginas/Inicio";
 import Vereadores from "./paginas/Vereadores";
 import VereadorPagina from "./paginas/Vereador";
@@ -40,6 +39,7 @@ function Rodape() {
   const d = new Date(meta.atualizado);
   return (
     <footer className="rodape">
+      <PoeiraRodape />
       <div className="rodape__dentro">
         <p>
           Dados públicos da Câmara Municipal de {meta.cidade}, reunidos automaticamente a partir do painel de votação

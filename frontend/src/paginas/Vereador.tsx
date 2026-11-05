@@ -3,6 +3,14 @@ import { Link, useParams } from "react-router-dom";
 import { useDados, type Votacao, type Voto } from "../dados";
 import { Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, VotoTag } from "../componentes";
 import { corta, dataCurta, useTitulo, votouDiferente } from "../util";
+import { useContador, useEntrou } from "../movimento";
+import { Funil } from "../viz";
+
+function Num({ valor, rotulo }: { valor: number; rotulo: string }) {
+  const [ref, entrou] = useEntrou<HTMLDivElement>();
+  const v = useContador(valor, entrou, 1000);
+  return <div ref={ref}><dt>{rotulo}</dt><dd><span aria-hidden="true">{v}</span><span className="sr">{valor}</span></dd></div>;
+}
 import NaoEncontrado from "./NaoEncontrado";
 
 type Filtro = "todos" | "nao" | "contra" | "semvoto";
@@ -13,12 +21,26 @@ export default function VereadorPagina() {
   const v = b.vereador.get(slug);
   useTitulo(v ? v.exibicao : "Vereador não encontrado");
   const [filtro, setFiltro] = useState<Filtro>("todos");
+  const [limite, setLimite] = useState(30);
 
   const votos = useMemo(() => {
     if (!v) return [];
     return b.votacoes
       .filter((ev) => ev.votos[v.slug])
       .map((ev) => ({ ev, voto: ev.votos[v.slug] as Voto, contra: votouDiferente(ev.votos[v.slug], ev.resultado) }));
+  }, [b, v]);
+
+  const alinhados = useMemo(() => {
+    if (!v) return [];
+    return b.atuais.filter((o) => o.slug !== v.slug).map((o) => {
+      let iguais = 0, total = 0;
+      for (const ev of b.votacoes) {
+        if (ev.fonte !== "painel") continue;
+        const x = ev.votos[v.slug], y = ev.votos[o.slug];
+        if ((x === "SIM" || x === "NAO") && (y === "SIM" || y === "NAO")) { total++; if (x === y) iguais++; }
+      }
+      return { nome: o.exibicao, iguais, total };
+    }).filter((x) => x.total >= 10).sort((a, c) => c.iguais / c.total - a.iguais / a.total);
   }, [b, v]);
 
   if (!v) return <NaoEncontrado />;
@@ -58,13 +80,27 @@ export default function VereadorPagina() {
       </header>
 
       <dl className="numeros">
-        <div><dt>votações com voto registrado</dt><dd>{v.total_votacoes}</dd></div>
-        <div><dt>votou sim</dt><dd>{v.contagem.SIM}</dd></div>
-        <div><dt>votou não</dt><dd>{v.contagem.NAO}</dd></div>
-        <div><dt>presente sem votar</dt><dd>{v.contagem.BRANCO}</dd></div>
-        <div><dt>votou diferente do resultado</dt><dd>{v.contra_resultado}</dd></div>
-        <div><dt>projetos de lei de autoria</dt><dd>{projetos.length}</dd></div>
+        <Num valor={v.total_votacoes} rotulo="votações com voto registrado" />
+        <Num valor={v.contagem.SIM} rotulo="votou sim" />
+        <Num valor={v.contagem.NAO} rotulo="votou não" />
+        <Num valor={v.contagem.BRANCO} rotulo="presente sem votar" />
+        <Num valor={v.contra_resultado} rotulo="votou diferente do resultado" />
+        <Num valor={projetos.length} rotulo="projetos de lei de autoria" />
       </dl>
+
+      {alinhados.length > 0 && (
+        <section aria-labelledby="alinh" className="duas-colunas">
+          <div>
+            <h2 id="alinh" className="secao__titulo">Vota mais igual a</h2>
+            <Funil etapas={alinhados.slice(0, 4).map((x) => ({ rotulo: `${x.nome} (${x.iguais} de ${x.total})`, valor: Math.round((100 * x.iguais) / x.total) }))} max={100} sufixo="%" />
+          </div>
+          <div>
+            <h2 className="secao__titulo">Vota mais diferente de</h2>
+            <Funil etapas={[...alinhados].reverse().slice(0, 4).map((x) => ({ rotulo: `${x.nome} (${x.iguais} de ${x.total})`, valor: Math.round((100 * x.iguais) / x.total) }))} max={100} sufixo="%" />
+          </div>
+          <p className="nota">Porcentagem das votações do painel em que os dois votaram igual, contando só as que ambos votaram sim ou não.</p>
+        </section>
+      )}
 
       {votos.length > 0 && (
         <>
@@ -83,7 +119,7 @@ export default function VereadorPagina() {
             <h2 id="votos" className="secao__titulo">Votos</h2>
             <div className="filtros" role="group" aria-label="Filtrar votos">
               {filtros.map(([f, nome, n]) => (
-                <button key={f} type="button" aria-pressed={filtro === f} onClick={() => setFiltro(f)}>{nome} ({n})</button>
+                <button key={f} type="button" aria-pressed={filtro === f} onClick={() => { setFiltro(f); setLimite(30); }}>{nome} ({n})</button>
               ))}
             </div>
             <div className="tabela-rolagem">
@@ -92,7 +128,7 @@ export default function VereadorPagina() {
                   <tr><th scope="col">Data</th><th scope="col">Projeto</th><th scope="col">Etapa</th><th scope="col">Voto</th><th scope="col">Resultado</th><th scope="col">Fonte</th></tr>
                 </thead>
                 <tbody>
-                  {visiveis.map(({ ev, voto, contra }: { ev: Votacao; voto: Voto; contra: boolean }) => (
+                  {visiveis.slice(0, limite).map(({ ev, voto, contra }: { ev: Votacao; voto: Voto; contra: boolean }) => (
                     <tr key={ev.id}>
                       <td className="tabela__data">{dataCurta(ev.data, true)}</td>
                       <td><LinkMateria slug={ev.materia} /><span className="tabela__assunto">{corta(b.materia.get(ev.materia)?.assunto, 90)}</span></td>
@@ -105,6 +141,13 @@ export default function VereadorPagina() {
                 </tbody>
               </table>
               {visiveis.length === 0 && <p className="nota">Nenhum voto neste filtro.</p>}
+              {visiveis.length > limite && (
+                <div className="mais">
+                  <button type="button" className="botao botao--fantasma" onClick={() => setLimite((l) => l + 30)}>
+                    Mostrar mais {Math.min(30, visiveis.length - limite)} de {visiveis.length - limite} restantes
+                  </button>
+                </div>
+              )}
             </div>
           </section>
         </>
