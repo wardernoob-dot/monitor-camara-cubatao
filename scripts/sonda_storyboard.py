@@ -77,8 +77,28 @@ def baixar_urls(vid, urls):
     return tot
 
 
+SPECS_PC = {}
+_sp = Path(__file__).resolve().parent.parent / "data" / "storyboard_specs.json"
+if _sp.exists():
+    SPECS_PC = json.loads(_sp.read_text("utf-8"))
+
+
 def processar(vid, titulo):
     reg = {"id": vid, "titulo": titulo, "tentativas": {}}
+    if vid in SPECS_PC:
+        # spec obtido de IP residencial (navegador do usuario); testa se o CDN libera as imagens
+        spec = SPECS_PC[vid]["spec"]
+        partes = spec.split("|")
+        p = partes[-1].split("#")
+        n = yt.Nivel(len(partes) - 2, int(p[0]), int(p[1]), int(p[2]), int(p[3]), int(p[4]), int(p[5]), p[6], p[7])
+        urls = [yt.url_folha(partes[0], n, i) for i in range(n.folhas)]
+        reg["metodo"] = "spec_do_pc"
+        try:
+            reg["kb"] = baixar_urls(vid, urls) // 1024
+            reg["folhas"] = len(urls)
+        except Exception as e:  # noqa: BLE001
+            reg["erro_download"] = repr(e)[:200]
+        return reg
     # 1) pagina
     try:
         spec, diag = via_pagina(vid)
@@ -146,6 +166,7 @@ try:
 except Exception as e:  # noqa: BLE001
     rel["lista_canal"] = f"FALHOU: {e!r}"[:300]
 
+alvos = [(k, v["nome"]) for k, v in SPECS_PC.items()] + alvos
 alvos += [(x, "extra") for x in extras]
 vistos, fila = set(), []
 for i, t in alvos:
@@ -155,7 +176,7 @@ for i, t in alvos:
 print("RSS:", rel["rss"], "| canal:", "ok" if isinstance(rel["lista_canal"], list) else rel["lista_canal"])
 print(f"{len(fila)} sessoes alvo")
 
-for vid, titulo in fila[:12]:
+for vid, titulo in fila[:len(SPECS_PC) or 12]:
     try:
         r = processar(vid, titulo)
     except Exception as e:  # noqa: BLE001
