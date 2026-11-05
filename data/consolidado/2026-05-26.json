@@ -1,0 +1,637 @@
+{
+ "data": "2026-05-26",
+ "status": "so_oficial",
+ "sessoes": [
+  {
+   "numero": 13,
+   "tipo": "extraordinaria",
+   "data": "2026-05-26",
+   "inicio": "19:02",
+   "fim": "19:26",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-13a-sessao-extraordinaria-26-05-2026/at_download/file"
+  },
+  {
+   "numero": 17,
+   "tipo": "ordinaria",
+   "data": "2026-05-26",
+   "inicio": "14:30",
+   "fim": "19:00",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [],
+ "noticias": [],
+ "materias": [
+  {
+   "tipo": "VETO",
+   "numero": "60",
+   "ano": "2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO PARCIAL AO PROJETO DE LEI Nº 60/2025, QUE \"DISPÕE SOBRE A INCLUSÃO PROGRESSIVA DE ÔNIBUS OU MICROÔNIBUS IMPULSIONADO POR MOTOR EXCLUSIVAMENTE ELÉTRICO NA FROTA DE TRANSPORTE PÚBLICO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS\"",
+   "na_pauta": true,
+   "resultado_oficial": "veto_mantido",
+   "votacoes": [
+    {
+     "etapa": "discussao_unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "veto_mantido",
+      "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+      "placar": {
+       "favor": 11,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "manutenção": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PELOM",
+   "numero": "1",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "DÁ NOVA REDAÇÃO AO ARTIGO 213 DA LOM, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "1a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+      "placar": {
+       "favor": 11,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "33",
+   "ano": "2026",
+   "autoria": "ALEXANDRE MENDES DA SILVA",
+   "assunto": "DISPÕE SOBRE A INCLUSÃO DA CONFERÊNCIA PINK NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 13,
+       "tipo": "extraordinaria",
+       "data": "2026-05-26",
+       "inicio": "19:02",
+       "fim": "19:26"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-13a-sessao-extraordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO",
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "40",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "REVOGA E ALTERA OS DISPOSITIVOS DA LEI 2.515, DE 15 DE SETEMBRO DE 1998, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "retornou_comissoes",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "retornou_comissoes",
+      "detalhe": "A PROPOSITURA RECEBEU EMENDA E RETORNOU ÀS COMISSÕES PERMANENTES PARA ANÁLISE, NOS TERMOS REGIMENTAIS.",
+      "placar": {
+       "favor": 0,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {}
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "32",
+   "ano": null,
+   "autoria": "Anderson de Lana Andrade",
+   "assunto": "Aprovado o Requerimento nº 32, de autoria do Vereador Anderson de Lana Andrade, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “TRATAR JUNTO ÀS AUTORIDADES COMPETENTES A RESPEITO DOS IMPACTOS RELACIONADOS À CAUSA ANIMAL, DECORRENTES DOS EMPREENDIMENTOS HABITACIONAIS DA CDHU, NO MUNICÍPIO DE CUBATÃO”.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "33",
+   "ano": null,
+   "autoria": "Daniel Barbosa de Assis Silva",
+   "assunto": "Aprovado o Requerimento nº 33, de autoria do Vereador Daniel Barbosa de Assis Silva, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “REALIZAR ESTUDOS, JUNTO ÀS AUTORIDADES COMPETENTES, PARA A CONSTRUÇÃO DE UMA PASSARELA PRÓXIMA À ‘PORTARIA 10’ DA REFINARIA PRESIDENTE BERNARDES (RPBC)”.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "34",
+   "ano": null,
+   "autoria": "Alexandre Mendes da Silva",
+   "assunto": "Aprovado o Requerimento nº 34, de autoria do Vereador Alexandre Mendes da Silva, solicitando gestões ao Poder Executivo para a adoção de providências para a realização de estudos técnicos, operacionais e financeiros, visando à implementação e efetivação do serviço de entrega domiciliar de medicamentos no município, com a utilização de motocicletas como forma de agilizar e ampliar a eficiência dess",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "7",
+   "ano": null,
+   "autoria": "Guilherme dos Santos Malaquias",
+   "assunto": "Aprovada a Moção nº 07, de autoria do Vereador Guilherme dos Santos Malaquias, Moção de Aplausos ao corpo de baile infantojuvenil da Escola Técnica Ivanildo Rebouças da Silva, em reconhecimento à brilhante trajetória artística, às relevantes conquistas culturais e à representatividade proporcionada ao município de Cubatão.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 17,
+       "tipo": "ordinaria",
+       "data": "2026-05-26",
+       "inicio": "14:30",
+       "fim": "19:00"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 11,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-17a-sessao-ordinaria-26-05-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

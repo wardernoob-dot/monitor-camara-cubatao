@@ -1,0 +1,445 @@
+{
+ "data": "2026-03-10",
+ "status": "so_oficial",
+ "sessoes": [
+  {
+   "numero": 6,
+   "tipo": "ordinaria",
+   "data": "2026-03-10",
+   "inicio": "14:27",
+   "fim": "16:41",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-6a-sessao-ordinaria-10-03-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [],
+ "noticias": [],
+ "materias": [
+  {
+   "tipo": "VETO",
+   "numero": "89",
+   "ano": "2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 89/2025 QUE \"DISPÕE SOBRE A INCLUSÃO DO SÍMBOLO MUNDIAL DE CONSCIENTIZAÇÃO DO TRANSTORNO DO ESPECTRO AUTISTA (TEA) NAS SINALIZAÇÕES DE VAGAS ESPECIAIS DE ESTACIONAMENTO EM TODO O TERRITÓRIO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": null,
+   "votacoes": [],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "60",
+   "ano": "2025",
+   "autoria": "GUILHERME DOS SANTOS MALAQUIAS",
+   "assunto": "DISPÕE SOBRE A INCLUSÃO PROGRESSIVA DE ÔNIBUS OU MICROÔNIBUS IMPULSIONADO POR MOTOR EXCLUSIVAMENTE ELÉTRICO NA FROTA DE TRANSPORTE PÚBLICO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": null,
+   "votacoes": [],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "126",
+   "ano": "2025",
+   "autoria": "ALEXANDRE MENDES DA SILVA",
+   "assunto": "DISPÕE SOBRE A REGULAMENTAÇÃO DA CIRCULAÇÃO DE BICICLETAS ELÉTRICAS, CICLOMOTORES ELÉTRICOS E EQUIPAMENTOS DE MOBILIDADE INDIVIDUAL AUTOPROPELIDOS NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": null,
+   "votacoes": [],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "191",
+   "ano": "2025",
+   "autoria": "RONIELE MARTINS DA SILVA",
+   "assunto": "DISPÕE SOBRE A POSSIBILIDADE DE REMOÇÃO DE PACIENTES ATENDIDOS PELO \"SERVIÇO DE ATENDIMENTO MÓVEL DE URGÊNCIA\" (SAMU) E DEMAIS EQUIPES DE SOCORRO PARA HOSPITAIS DA REDE PRIVADA, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "retornou_comissoes",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 6,
+       "tipo": "ordinaria",
+       "data": "2026-03-10",
+       "inicio": "14:27",
+       "fim": "16:41"
+      },
+      "resultado": "retornou_comissoes",
+      "detalhe": "A PROPOSITURA RECEBEU EMENDAS E RETORNOU ÀS COMISSÕES PERMANENTES PARA ANÁLISE, NOS TERMOS REGIMENTAIS.",
+      "placar": {
+       "favor": 0,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-6a-sessao-ordinaria-10-03-2026/at_download/file",
+      "por_acao": {}
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "17",
+   "ano": null,
+   "autoria": "José Elan dos Santos Gomes",
+   "assunto": "Aprovado o Requerimento nº 17, de autoria do Vereador José Elan dos Santos Gomes, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “ACOMPANHAR E FISCALIZAR AS OBRAS DE IMPLANTAÇÃO DA REDE DE ABASTECIMENTO DE ÁGUA POTÁVEL E ESGOTO NO BAIRRO VALE VERDE, SEU RESPECTIVO CONTRATO, PROJETO EXECUTIVO, DOCUMENTOS TÉCNICOS E ",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 6,
+       "tipo": "ordinaria",
+       "data": "2026-03-10",
+       "inicio": "14:27",
+       "fim": "16:41"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-6a-sessao-ordinaria-10-03-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "18",
+   "ano": null,
+   "autoria": "Alexandre Mendes da Silva",
+   "assunto": "Aprovado o Requerimento nº 18, de autoria do Vereador Alexandre Mendes da Silva, solicitando gestões ao Poder Executivo para a realização de estudos visando à viabilidade de adesão e regulamentação, no âmbito do município de Cubatão, da Lei Complementar nº 226/2026, que autoriza o pagamento retroativo de benefícios e direitos remuneratórios congelados aos servidores públicos durante a pandemia da ",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 6,
+       "tipo": "ordinaria",
+       "data": "2026-03-10",
+       "inicio": "14:27",
+       "fim": "16:41"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-6a-sessao-ordinaria-10-03-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RELATORIO",
+   "numero": null,
+   "ano": null,
+   "autoria": null,
+   "assunto": "Lido o Relatório Parcial da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.091/2025, para “ACOMPANHAR, FISCALIZAR E PROPOR SOLUÇÕES ÀS DEMANDAS REFERENTES AOS CONJUNTOS HABITACIONAIS SOB RESPONSABILIDADE DA CDHU NO MUNICÍPIO DE CUBATÃO”.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 6,
+       "tipo": "ordinaria",
+       "data": "2026-03-10",
+       "inicio": "14:27",
+       "fim": "16:41"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-6a-sessao-ordinaria-10-03-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 6,
+       "tipo": "ordinaria",
+       "data": "2026-03-10",
+       "inicio": "14:27",
+       "fim": "16:41"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-6a-sessao-ordinaria-10-03-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

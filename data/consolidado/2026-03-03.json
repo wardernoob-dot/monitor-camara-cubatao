@@ -1,0 +1,563 @@
+{
+ "data": "2026-03-03",
+ "status": "so_oficial",
+ "sessoes": [
+  {
+   "numero": 5,
+   "tipo": "extraordinaria",
+   "data": "2026-03-03",
+   "inicio": "18:13",
+   "fim": "18:19",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-5a-sessao-extraordinaria-03-03-2026/at_download/file"
+  },
+  {
+   "numero": 5,
+   "tipo": "ordinaria",
+   "data": "2026-03-03",
+   "inicio": "14:25",
+   "fim": "18:11",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [],
+ "noticias": [],
+ "materias": [
+  {
+   "tipo": "VETO",
+   "numero": "146",
+   "ano": "2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO PARCIAL AO PROJETO DE LEI Nº 146/2025, QUE \"INSTITUI O PROGRAMA DE PREVENÇÃO À DEPRESSÃO PÓS-PARTO NO MUNICÍPIO DE CUBATÃO/SP E DÁ OUTRAS PROVIDÊNCIAS\"",
+   "na_pauta": true,
+   "resultado_oficial": "veto_mantido",
+   "votacoes": [
+    {
+     "etapa": "discussao_unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "ordinaria",
+       "data": "2026-03-03",
+       "inicio": "14:25",
+       "fim": "18:11"
+      },
+      "resultado": "veto_mantido",
+      "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+      "placar": {
+       "favor": 11,
+       "contra": 2
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file",
+      "por_acao": {
+       "manutenção": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PLC",
+   "numero": "9",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "DISPÕE SOBRE A REMISSÃO DE DÉBITOS TRIBUTÁRIOS IMOBILIÁRIOS PARA A ENTIDADE ESPORTIVA ESPORTE CLUBE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "retornou_comissoes",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "ordinaria",
+       "data": "2026-03-03",
+       "inicio": "14:25",
+       "fim": "18:11"
+      },
+      "resultado": "retornou_comissoes",
+      "detalhe": "A PROPOSITURA RECEBEU EMENDAS E RETORNOU ÀS COMISSÕES PERMANENTES PARA ANÁLISE, NOS TERMOS REGIMENTAIS.",
+      "placar": {
+       "favor": 0,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file",
+      "por_acao": {}
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "5",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "ALTERA A ESTRUTURA DA SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL, PREVISTA NA LEI MUNICIPAL N° 3.562, DE 03 DE DEZEMBRO DE 2012, ALTERADA PELA LEI MUNICIPAL N° 3.917, DE 28 DE JUNHO DE 2018; CRIA O CARGO QUE ESPECIFICA, DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "extraordinaria",
+       "data": "2026-03-03",
+       "inicio": "18:13",
+       "fim": "18:19"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-5a-sessao-extraordinaria-03-03-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "ordinaria",
+       "data": "2026-03-03",
+       "inicio": "14:25",
+       "fim": "18:11"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM MENSAGEM ADITIVA",
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "11",
+   "ano": "2026",
+   "autoria": "ALESSANDRO DONIZETE DE OLIVEIRA",
+   "assunto": "INSTITUI NO MUNICÍPIO DE CUBATÃO O \"DIA DA IGREJA O BRASIL PARA CRISTO\", A SER CELEBRADO ANUALMENTE NO DIA 3 DE MARÇO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "extraordinaria",
+       "data": "2026-03-03",
+       "inicio": "18:13",
+       "fim": "18:19"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-5a-sessao-extraordinaria-03-03-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "ordinaria",
+       "data": "2026-03-03",
+       "inicio": "14:25",
+       "fim": "18:11"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO",
+      "placar": {
+       "favor": 9,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "1",
+   "ano": null,
+   "autoria": "Washington Luiz Lessa de Souza",
+   "assunto": "Aprovada a Moção nº 01, de autoria do Vereador Washington Luiz Lessa de Souza, Moção de Aplausos ao Senhor Luiz Carlos Martins (Jabá), como manifestação de reconhecimento público por sua trajetória de vida e pelos 53 anos de dedicação exemplar ao serviço público.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "ordinaria",
+       "data": "2026-03-03",
+       "inicio": "14:25",
+       "fim": "18:11"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RELATORIO",
+   "numero": null,
+   "ano": null,
+   "autoria": null,
+   "assunto": "Aprovado o Relatório Final da Comissão Especial de Inquérito, nomeada através da Resolução nº 3.089/2025, para “APURAR A RESPONSABILIDADE DA CONCESSIONÁRIA ECOVIAS SOBRE OS DANOS CAUSADOS AOS MUNÍCIPES, NOTADAMENTE AS ENCHENTES E A OBSTRUÇÃO DE ACESSO E SAÍDA DOS MORADORES A MARGEM DO SISTEMA ANCHIETA-IMIGRANTES, E AINDA OS IMPACTOS SOCIOAMBIENTAIS DA CONSTRUÇÃO DA TERCEIRA VIA DA IMIGRANTES E AS ",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 5,
+       "tipo": "ordinaria",
+       "data": "2026-03-03",
+       "inicio": "14:25",
+       "fim": "18:11"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

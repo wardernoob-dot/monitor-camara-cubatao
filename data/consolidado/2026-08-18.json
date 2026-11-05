@@ -1,0 +1,706 @@
+{
+ "data": "2026-08-18",
+ "status": "oficial_conferido",
+ "sessoes": [
+  {
+   "numero": 19,
+   "tipo": "extraordinaria",
+   "data": "2026-08-18",
+   "inicio": "19:16",
+   "fim": "19:22",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-19a-sessao-extraordinaria-18-08-2026/at_download/file"
+  },
+  {
+   "numero": 26,
+   "tipo": "ordinaria",
+   "data": "2026-08-18",
+   "inicio": "14:25",
+   "fim": "19:14",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [
+  {
+   "titulo": "26ª SESSÃO ORDINÁRIA DO DIA 18 DE AGOSTO DE 2026",
+   "url": "https://www.youtube.com/watch?v=L_laZbve-6Y"
+  }
+ ],
+ "noticias": [],
+ "materias": [
+  {
+   "tipo": "PL",
+   "numero": "27",
+   "ano": "2026",
+   "autoria": "MÁRCIO SILVA NASCIMENTO",
+   "assunto": "INSTITUI O PROGRAMA DE APOIO ÀS PESSOAS COM DOENÇAS RARAS E SEUS FAMILIARES NO MUNICÍPIO DE CUBATÃO",
+   "na_pauta": true,
+   "resultado_oficial": "retornou_comissoes",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "retornou_comissoes",
+      "detalhe": "A PROPOSITURA RECEBEU EMENDA E RETORNOU ÀS COMISSÕES PERMANENTES PARA ANÁLISE, NOS TERMOS REGIMENTAIS.",
+      "placar": {
+       "favor": 0,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {}
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "PL",
+   "numero": "40",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "REVOGA E ALTERA OS DISPOSITIVOS DA LEI 2.515, DE 15 DE SETEMBRO DE 1998, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 19,
+       "tipo": "extraordinaria",
+       "data": "2026-08-18",
+       "inicio": "19:16",
+       "fim": "19:22"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 11,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-19a-sessao-extraordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM MENSAGEM ADITIVA E EMENDAS",
+      "placar": {
+       "favor": 11,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RQ",
+   "numero": "41",
+   "ano": null,
+   "autoria": "Anderson de Lana Andrade",
+   "assunto": "Aprovado o Requerimento nº 41, de autoria do Vereador Anderson de Lana Andrade, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “REALIZAR ESTUDOS, LEVANTAMENTOS, DILIGÊNCIAS E ANÁLISES TÉCNICAS SOBRE A ESTRUTURA FÍSICA E A VIABILIDADE DE UTILIZAÇÃO DO IMÓVEL LOCALIZADO NA AVENIDA JOAQUIM MIGUEL COUTO, Nº 800, CENTRO",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RQ",
+   "numero": "42",
+   "ano": null,
+   "autoria": "José Elan dos Santos Gomes",
+   "assunto": "Aprovado o Requerimento nº 42, de autoria do Vereador José Elan dos Santos Gomes, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “REALIZAR ESTUDOS TÉCNICOS SOBRE A AMPLIAÇÃO DA CONECTIVIDADE VIÁRIA E A IMPLANTAÇÃO DE NOVOS ACESSOS AO BAIRRO JARDIM CASQUEIRO, AVALIANDO ALTERNATIVAS DE INTERVENÇÃO, IMPACTOS URBANÍSTI",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RQ",
+   "numero": "43",
+   "ano": null,
+   "autoria": "Guilherme dos Santos Malaquias",
+   "assunto": "Aprovado o Requerimento nº 43, de autoria do Vereador Guilherme dos Santos Malaquias, solicitando a prorrogação por mais 60 (sessenta) dias da Comissão Especial de Vereadores, nomeada pela Resolução nº 3.113 de 13 de maio de 2026, para “AVERIGUAR OS MOTIVOS DA NÃO INSTALAÇÃO DOS EQUIPAMENTOS FR PLAYGROUND, ACOMPANHAR E FISCALIZAR A EXECUÇÃO DO PROJETO NA PRAÇA LOCALIZADA NA ENTRADA DO BAIRRO ILHA ",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RQ",
+   "numero": "44",
+   "ano": null,
+   "autoria": "Guilherme dos Santos Malaquias",
+   "assunto": "Aprovado o Requerimento nº 44, de autoria do Vereador Guilherme dos Santos Malaquias, solicitando a prorrogação por mais 60 (sessenta) dias da Comissão Especial de Vereadores, nomeada pela Resolução nº 3.112 de 13 de maio de 2026, para “AVERIGUAR O DESCARTE IRREGULAR DE ENTULHOS, BEM COMO ACOMPANHAR E FISCALIZAR AS MEDIDAS ADOTADAS NA ÁREA LOCALIZADA ABAIXO DO VIADUTO DA RODOVIA DOS IMIGRANTES, NA",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RQ",
+   "numero": "45",
+   "ano": null,
+   "autoria": "Alessandro Donizete de Oliveira",
+   "assunto": "Aprovado o Requerimento nº 45, de autoria do Vereador Alessandro Donizete de Oliveira, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “AVERIGUAÇÃO DA IMPLANTAÇÃO, EXECUÇÃO, FUNCIONAMENTO, FISCALIZAÇÃO CONTRATUAL E IMPACTOS DO SISTEMA INFORMATIZADO DE GESTÃO DA SAÚDE PÚBLICA MUNICIPAL DE CUBATÃO”.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RQ",
+   "numero": "46",
+   "ano": null,
+   "autoria": "Alexandre Mendes da Silva",
+   "assunto": "Aprovado o Requerimento nº 46, de autoria do Vereador Alexandre Mendes da Silva, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “ORGANIZAR O ATO SOLENE EM HOMENAGEM AO CÍRCULO DE ORAÇÃO”.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RQ",
+   "numero": "47",
+   "ano": null,
+   "autoria": "Márcio Silva Nascimento",
+   "assunto": "Aprovado o Requerimento nº 47, de autoria do Vereador Márcio Silva Nascimento, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “TRATAR JUNTO AO PODER EXECUTIVO MUNICIPAL SOBRE O ANDAMENTO DO CERTAME LICITATÓRIO PARA A CONTRATAÇÃO E IMPLEMENTAÇÃO DAS OBRAS DE DRENAGEM NO BAIRRO VALE VERDE, BEM COMO A EFETIVA EXECUÇÃO",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 26,
+       "tipo": "ordinaria",
+       "data": "2026-08-18",
+       "inicio": "14:25",
+       "fim": "19:14"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 10,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-26a-sessao-ordinaria-18-08-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RELATORIO",
+   "numero": null,
+   "ano": null,
+   "autoria": null,
+   "assunto": "Lido o Relatório Final da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.116, de 1º de junho de 2026, para “REALIZAR ESTUDOS, JUNTO ÀS AUTORIDADES COMPETENTES, PARA A CONSTRUÇÃO DE UMA PASSARELA PRÓXIMA À \"PORTARIA 10\" DA REFINARIA PRESIDENTE BERNARDES (RPBC)”.",
+   "na_pauta": false,
+   "resultado_oficial": "lido",
+   "votacoes": [],
+   "sem_painel": true
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

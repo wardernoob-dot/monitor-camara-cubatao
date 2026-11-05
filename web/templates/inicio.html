@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% import "_macros.html" as mc %}
+{% block titulo %}Como cada vereador votou{% endblock %}
+{% block classe_main %}pagina pagina--larga{% endblock %}
+{% block conteudo %}
+<section class="abertura">
+  <h1 class="abertura__titulo">Como cada vereador de {{ CIDADE }} votou</h1>
+  <p class="abertura__texto">Cada quadrado é um voto registrado no painel eletrônico da Câmara, sessão por sessão{% if desde %}, desde {{ desde|extenso }}{% endif %}. Passe o mouse ou toque para ver o projeto; clique para abrir.</p>
+</section>
+
+<section class="mx-bloco" aria-labelledby="mx-titulo">
+  <h2 id="mx-titulo" class="sr">Votos de cada vereador nas últimas {{ colunas|length }} votações</h2>
+  <div class="mx-rolagem" tabindex="0" aria-label="Tabela de votos, role para os lados">
+    <table class="mx">
+      <thead>
+        <tr>
+          <th scope="col" class="mx__canto">Vereador</th>
+          {% for grupo in colunas|groupby("data") %}
+          <th scope="colgroup" colspan="{{ grupo.list|length }}" class="mx__data">{{ grupo.grouper|curta }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for v in vereadores %}
+        <tr>
+          <th scope="row" class="mx__nome"><a href="{{ raiz }}vereadores/{{ v.slug }}/">{{ v.exibicao }}</a>{% if v.cargo == "presidente" %}<sup class="mx__cargo"><a href="#nota-presidente" aria-label="Nota sobre a presidência">*</a></sup>{% endif %}</th>
+          {% for ev in colunas %}
+          <td class="{% if loop.first or ev.data != loop.previtem.data %}mx__novo-dia{% endif %}">{{ mc.celula(ev, ev.votos.get(v.chave), raiz, v.exibicao) }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {{ mc.legenda() }}
+  {% for v in vereadores if v.cargo == "presidente" %}
+  <p class="nota mx__nota" id="nota-presidente">* {{ v.exibicao }} é o presidente da Câmara e conduz as sessões. O Regimento Interno define em que casos o presidente vota.</p>
+  {% endfor %}
+</section>
+
+<div class="duas-colunas">
+  <section aria-labelledby="ultimas">
+    <h2 id="ultimas" class="secao__titulo">Últimas sessões</h2>
+    <ol class="lista-sessoes">
+      {% for d in dias %}
+      <li>
+        <a class="lista-sessoes__data" href="{{ raiz }}sessoes/{{ d.data }}/">{{ d.data|extenso }}</a>
+        <ul class="lista-sessoes__itens">
+          {% for m in d.materias if m.tipo not in ("RQ", "MOCAO", "RELATORIO") %}
+          {% set ev = (m.eventos|selectattr("data", "equalto", d.data)|list)|last %}
+          <li>{{ mc.link_materia(m, raiz) }}{% if ev %} <span class="lista-sessoes__res">{{ "aprovado" if ev.resultado == "APROVADO" else "rejeitado" if ev.resultado == "REJEITADO" else "" }}{% if ev.sim is not none and ev.votos %} {{ ev.sim }} a {{ ev.nao }}{% endif %}</span>{% endif %}<br><span class="lista-sessoes__assunto">{{ m.assunto_txt|truncate(110) }}</span></li>
+          {% else %}
+          <li class="lista-sessoes__assunto">Só requerimentos e moções.</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ol>
+    <p><a href="{{ raiz }}sessoes/">Todas as sessões</a></p>
+  </section>
+
+  <section aria-labelledby="leis">
+    <h2 id="leis" class="secao__titulo">Viraram lei</h2>
+    <ul class="lista-leis">
+      {% for m in leis %}
+      <li>
+        <span class="lista-leis__num">Lei {{ m.lei.numero }}</span>
+        <a href="{{ raiz }}projetos/{{ m.slug }}/">{{ m.titulo }}</a>, {{ m.autoria }}
+        <p>{{ m.assunto_txt|truncate(140) }}</p>
+      </li>
+      {% else %}
+      <li>Nenhuma lei sancionada encontrada no Diário Oficial no período coletado.</li>
+      {% endfor %}
+    </ul>
+    <p><a href="{{ raiz }}projetos/">Todos os projetos</a></p>
+  </section>
+</div>
+{% endblock %}

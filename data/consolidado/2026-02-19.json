@@ -1,0 +1,610 @@
+{
+ "data": "2026-02-19",
+ "status": "so_oficial",
+ "sessoes": [
+  {
+   "numero": 3,
+   "tipo": "extraordinaria",
+   "data": "2026-02-19",
+   "inicio": "16:48",
+   "fim": "17:05",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-3a-sessao-extraordinaria-19-02-2026/at_download/file"
+  },
+  {
+   "numero": 3,
+   "tipo": "ordinaria",
+   "data": "2026-02-19",
+   "inicio": "14:24",
+   "fim": "16:47",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [],
+ "noticias": [],
+ "materias": [
+  {
+   "tipo": "VETO",
+   "numero": "112",
+   "ano": "2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 112/2025 QUE \"ALTERA E INCLUI DISPOSITIVOS NA LEI MUNICIPAL Nº 3.744, DE 11 DE AGOSTO DE 2015, PARA DISPOR SOBRE A OBRIGATORIEDADE DE PARADAS FLEXÍVEIS PARA EMBARQUE E DESEMBARQUE DE MULHERES NO TRANSPORTE COLETIVO MUNICIPAL NO PERÍODO NOTURNO, COMO MEDIDA DE SEGURANÇA E IGUALDADE DE GÊNERO, E DÁ OUTRAS PROVIDÊNCIAS\"",
+   "na_pauta": true,
+   "resultado_oficial": "veto_mantido",
+   "votacoes": [
+    {
+     "etapa": "discussao_unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "ordinaria",
+       "data": "2026-02-19",
+       "inicio": "14:24",
+       "fim": "16:47"
+      },
+      "resultado": "veto_mantido",
+      "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+      "placar": {
+       "favor": 7,
+       "contra": 5
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "manutenção": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ],
+       "rejeição": [
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "marcio silva nascimento"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "VETO",
+   "numero": "141",
+   "ano": "2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 141/2025 QUE \"DISPÕE SOBRE A CONTRATAÇÃO DE APRENDIZES PELAS EMPRESAS VENCEDORAS DE LICITAÇÃO PÚBLICA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS\"",
+   "na_pauta": true,
+   "resultado_oficial": "veto_mantido",
+   "votacoes": [
+    {
+     "etapa": "discussao_unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "ordinaria",
+       "data": "2026-02-19",
+       "inicio": "14:24",
+       "fim": "16:47"
+      },
+      "resultado": "veto_mantido",
+      "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+      "placar": {
+       "favor": 9,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "manutenção": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "daniel barbosa de assis silva",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "marcio silva nascimento"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "VETO",
+   "numero": "166",
+   "ano": "2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 166/2025 QUE \"DISPÕE SOBRE A INSTALAÇÃO DE EQUIPAMENTOS ELIMINADORES DE AR, NA TUBULAÇÃO INDIVIDUAL DO SISTEMA DE ABASTECIMENTO DE ÁGUA NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS\"",
+   "na_pauta": true,
+   "resultado_oficial": "veto_mantido",
+   "votacoes": [
+    {
+     "etapa": "discussao_unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "ordinaria",
+       "data": "2026-02-19",
+       "inicio": "14:24",
+       "fim": "16:47"
+      },
+      "resultado": "veto_mantido",
+      "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+      "placar": {
+       "favor": 8,
+       "contra": 4
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "manutenção": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "daniel barbosa de assis silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva",
+        "washington luiz lessa de souza"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "120",
+   "ano": "2025",
+   "autoria": "JOSÉ ELAN DOS SANTOS GOMES",
+   "assunto": "INSTITUI E INTEGRA AO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO, O “DIA DA FAVELA” E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "extraordinaria",
+       "data": "2026-02-19",
+       "inicio": "16:48",
+       "fim": "17:05"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-3a-sessao-extraordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "ordinaria",
+       "data": "2026-02-19",
+       "inicio": "14:24",
+       "fim": "16:47"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDA",
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "9",
+   "ano": null,
+   "autoria": "Alexandre Mendes da Silva",
+   "assunto": "Aprovado o Requerimento nº 09, de autoria do Vereador Alexandre Mendes da Silva, solicitando, nos termos regimentais, a realização de SESSÃO SECRETA, para deliberação a respeito de concessão de Título de Cidadão Honorário.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "ordinaria",
+       "data": "2026-02-19",
+       "inicio": "14:24",
+       "fim": "16:47"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "10",
+   "ano": null,
+   "autoria": "Joemerson Alves de Souza",
+   "assunto": "Aprovado o Requerimento nº 10, de autoria do Vereador Joemerson Alves de Souza, solicitando gestões ao Poder Executivo para a realização de estudos visando à implantação do serviço de entrega de medicamentos aos munícipes com pedido devidamente justificado pelo médico.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "ordinaria",
+       "data": "2026-02-19",
+       "inicio": "14:24",
+       "fim": "16:47"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "11",
+   "ano": null,
+   "autoria": "Jair Ferreira Lucas",
+   "assunto": "Aprovado o Requerimento nº 11, de autoria do Vereador Jair Ferreira Lucas, solicitando gestões ao Poder Executivo para a realização de estudos visando à implantação e permanência de uma ambulância 24 horas no Morro do Índio, na Vila Esperança.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 3,
+       "tipo": "ordinaria",
+       "data": "2026-02-19",
+       "inicio": "14:24",
+       "fim": "16:47"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RELATORIO",
+   "numero": null,
+   "ano": null,
+   "autoria": null,
+   "assunto": "Lido o Relatório Final da Comissão Especial de Inquérito, nomeada através da Resolução nº 3.084/2025, para “ACOMPANHAR, FISCALIZAR E PROPOR MELHORES SOLUÇÕES PARA AS OBRAS E SERVIÇOS QUE A SABESP ESTÁ REALIZANDO EM CUBATÃO”.",
+   "na_pauta": false,
+   "resultado_oficial": "lido",
+   "votacoes": [],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

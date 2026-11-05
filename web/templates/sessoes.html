@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block titulo %}Sessões{% endblock %}
+{% block conteudo %}
+<h1 class="titulo-pagina">Sessões</h1>
+<p class="lead">Cada dia em que a Câmara votou alguma coisa em 2026. Ordinárias e extraordinárias do mesmo dia aparecem juntas.</p>
+<ol class="lista-dias">
+{% for d in dias %}
+  <li>
+    <a href="{{ raiz }}sessoes/{{ d.data }}/">{{ d.data|extenso }}</a>
+    <span class="lista-dias__info">{% for s in d.sessoes %}{{ s.numero }}ª {{ "ordinária" if s.tipo.startswith("ord") else "extraordinária" }}{{ ", " if not loop.last }}{% endfor %}{% if d.materias %}; {{ d.materias|length }} {{ "item votado" if d.materias|length == 1 else "itens votados" }}{% endif %}</span>
+  </li>
+{% endfor %}
+</ol>
+{% endblock %}

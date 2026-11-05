@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "_macros.html" as mc %}
+{% block titulo %}Projetos{% endblock %}
+{% block classe_main %}pagina pagina--larga{% endblock %}
+{% block conteudo %}
+<h1 class="titulo-pagina">Projetos</h1>
+<p class="lead">Projetos de lei, de resolução, de decreto legislativo e emendas à Lei Orgânica que passaram pela pauta ou foram publicados no site da Câmara em 2026.</p>
+
+<form class="busca" role="search" data-busca="tabela-projetos" onsubmit="return false">
+  <label>Buscar<input type="search" name="q" placeholder="Número, assunto ou autor" autocomplete="off"></label>
+  <label>Autoria
+    <select name="autor">
+      <option value="">Todas</option>
+      {% for a in autores %}<option>{{ a }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Situação
+    <select name="sit">
+      <option value="">Todas</option>
+      <option value="lei">Virou lei</option>
+      <option value="veto">Vetado</option>
+      <option value="aprovado">Aprovado pela Câmara</option>
+      <option value="andamento">Em votação (etapas intermediárias)</option>
+      <option value="rejeitado">Rejeitado</option>
+      <option value="pauta">Sem votação registrada</option>
+    </select>
+  </label>
+  <p class="busca__contagem" aria-live="polite"><span data-contagem>{{ materias|length }}</span> projetos</p>
+</form>
+
+<div class="tabela-rolagem">
+<table class="tabela" id="tabela-projetos">
+  <thead><tr><th scope="col">Projeto</th><th scope="col">Assunto</th><th scope="col">Autoria</th><th scope="col">Situação</th></tr></thead>
+  <tbody>
+  {% for m in materias %}
+    <tr data-autor="{{ m.autoria }}" data-sit="{{ m.situacao_cls }}">
+      <td class="tabela__projeto"><a href="{{ raiz }}projetos/{{ m.slug }}/">{{ m.titulo }}</a></td>
+      <td>{{ m.assunto_txt|truncate(160) }}</td>
+      <td>{{ m.autoria }}</td>
+      <td>{{ mc.situacao(m) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

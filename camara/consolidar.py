@@ -297,7 +297,7 @@ def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
     }
 
 
-def consolidar_tudo(dados: Path, desde: str = "2026-09-01") -> dict:
+def consolidar_tudo(dados: Path, desde: str = "2026-01-01") -> dict:
     """Refaz o consolidado dos dias com painel ou resumo desde 'desde' (painel so existe a partir de set/2026).
     Segunda passada: liga lei/veto do Diario Oficial ao projeto aprovado."""
     from . import diario as DO

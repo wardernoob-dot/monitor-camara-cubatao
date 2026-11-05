@@ -63,6 +63,10 @@ def main():
         analisar_tudo(a.dados)
         gerar_posts(a.dados)
 
+        from .site import gerar as gerar_site
+
+        gerar_site(a.dados)
+
 
 if __name__ == "__main__":
     main()

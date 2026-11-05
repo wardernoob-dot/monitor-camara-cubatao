@@ -1,0 +1,42 @@
+{% macro link_materia(m, raiz) -%}
+{% if m.tem_pagina %}<a href="{{ raiz }}projetos/{{ m.slug }}/">{{ m.titulo }}</a>{% else %}{{ m.titulo }}{% endif %}
+{%- endmacro %}
+
+{% macro voto(v) -%}
+<span class="voto voto--{{ v|lower }}">{{ v|rotulo }}</span>
+{%- endmacro %}
+
+{% macro resultado(r) -%}
+{% if r == "APROVADO" %}<span class="res res--sim">Aprovado</span>{% elif r == "REJEITADO" %}<span class="res res--nao">Rejeitado</span>{% else %}<span class="res">Sem resultado registrado</span>{% endif %}
+{%- endmacro %}
+
+{% macro situacao(m) -%}
+<span class="sit sit--{{ m.situacao_cls }}">{{ m.situacao }}</span>
+{%- endmacro %}
+
+{% macro celula(ev, voto, raiz, nome) -%}
+<a class="cel cel--{{ voto|lower if voto else 'vazio' }}" href="{{ raiz }}projetos/{{ ev.materia.slug }}/"
+   title="{{ nome }}: {{ voto|rotulo if voto else 'sem registro' }}. {{ ev.materia.titulo }}, {{ ev.etapa_txt|lower1 }}, {{ ev.data|curta }} ({{ 'aprovado' if ev.resultado == 'APROVADO' else 'rejeitado' if ev.resultado == 'REJEITADO' else 'sem resultado' }})"><span class="sr">{{ ev.materia.titulo }}, {{ ev.data|curta }}: {{ voto|rotulo if voto else 'sem registro' }}</span></a>
+{%- endmacro %}
+
+{% macro fonte(ev) -%}
+{% if ev.fonte == "painel" %}{% if ev.link %}<a href="{{ ev.link }}" rel="noopener">painel na transmissão</a>{% else %}painel na transmissão{% endif %}{% elif ev.fonte == "resumo" %}{% if ev.resumo_url %}<a href="{{ ev.resumo_url }}" rel="noopener">resumo oficial</a>{% else %}resumo oficial{% endif %}{% else %}—{% endif %}
+{%- endmacro %}
+
+{% macro grade(ev) -%}
+<ul class="grade">
+{% for g in ev.grade %}
+  <li class="grade__item grade__item--{{ g.voto|lower }}"><span class="grade__nome">{{ g.v.exibicao }}</span> <span class="grade__voto">{{ g.voto|rotulo }}</span></li>
+{% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro legenda() -%}
+<ul class="legenda" aria-label="Legenda">
+  <li><span class="cel cel--sim" aria-hidden="true"></span> Sim</li>
+  <li><span class="cel cel--nao" aria-hidden="true"></span> Não</li>
+  <li><span class="cel cel--branco" aria-hidden="true"></span> Presente, não votou</li>
+  <li><span class="cel cel--ausente" aria-hidden="true"></span> Ausente</li>
+  <li><span class="cel cel--vazio" aria-hidden="true"></span> Sem registro</li>
+</ul>
+{%- endmacro %}

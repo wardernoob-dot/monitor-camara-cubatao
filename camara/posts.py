@@ -102,7 +102,14 @@ def frase(t: str | None) -> str:
         t = t[:1].upper() + t[1:]
         t = re.sub(r"\bcubatão\b", "Cubatão", t)
         t = re.sub(r"\b(ii|iii|iv|vi|vii|viii|ix|xi|xii)\b", lambda m: m.group(1).upper(), t)
-        t = re.sub(r"\b(tea|sabesp|cev|cei|lom|sus|cras|creas|ipva|iptu|iss)\b", lambda m: m.group(1).upper(), t)
+        t = re.sub(r"\b(tea|sabesp|cev|cei|lom|sus|cras|creas|ipva|iptu|iss|cvm|ldo|loa|ppa|cmc|sejur|bets)\b",
+                   lambda m: m.group(1).upper(), t)
+        t = re.sub(r"\b(cubatão|são paulo|brasil|caixa econômica federal|vila socó|serra do mar|baixada santista|"
+                   r"lei orgânica|câmara municipal|prefeitura municipal|tribunal de contas)\b",
+                   lambda m: " ".join(w if w in ("de", "do", "da") else w.capitalize() for w in m.group(1).split()), t)
+        # nomes entre aspas: "guilherme henrick da silva" -> "Guilherme Henrick da Silva"
+        t = re.sub(r"([\"“])([^\"”]{3,140})([\"”])", lambda m: m.group(1) + " ".join(
+            w if w in ("de", "do", "da", "dos", "das", "e", "a", "o", "as", "os", "em", "no", "na", "nos", "nas", "pelas", "pelos", "pela", "pelo", "para", "com", "ao", "à") else w[:1].upper() + w[1:] for w in m.group(2).split()) + m.group(3), t)
     return t
 
 
