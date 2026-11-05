@@ -57,3 +57,17 @@ def test_tribuna_nao_e_painel():
     assert not P.eh_painel(falso)
     bom = np.asarray(Image.open(FIX / "painel_36a_ausentes.png").convert("RGB")).astype(np.int16)
     assert P.eh_painel(bom)
+
+
+def test_conferir_painel_x_resumo():
+    from camara.consolidar import conferir
+    painel = {"resultado": "APROVADO", "placar": {"SIM": 2, "NAO": 1},
+              "votos": {"a": "SIM", "b": "SIM", "c": "NAO", "d": "BRANCO", "e": "AUSENTE"}}
+    resumo = {"resultado": "aprovado", "grupos": [
+        {"acao": "aprovação", "alvo": "Propositura", "vereadores": ["a", "b", "c", "d"]}]}
+    tipos = sorted(d["tipo"] for d in conferir(painel, resumo))
+    assert tipos == ["placar_divergente", "resumo_inclui_nao_votante", "voto_divergente"]
+    resumo_ok = {"resultado": "aprovado", "grupos": [
+        {"acao": "aprovação", "alvo": "Propositura", "vereadores": ["a", "b"]},
+        {"acao": "rejeição", "alvo": "Propositura", "vereadores": ["c"]}]}
+    assert conferir(painel, resumo_ok) == []

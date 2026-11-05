@@ -1,0 +1,428 @@
+{
+ "data": "2026-10-29",
+ "status": "oficial_conferido",
+ "sessoes": [
+  {
+   "numero": 29,
+   "tipo": "extraordinaria",
+   "data": "2026-10-29",
+   "inicio": "15:17",
+   "fim": "17:02",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-29a-sessao-extraordinaria-29-10-2026/at_download/file"
+  },
+  {
+   "numero": 30,
+   "tipo": "extraordinaria",
+   "data": "2026-10-29",
+   "inicio": "17:03",
+   "fim": "17:19",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-30a-sessao-extraordinaria-29-10-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [
+  {
+   "titulo": "29ª SESSÃO EXTRAORDINÁRIA DIA 29 DE OUTUBRO DE 2026",
+   "url": "https://www.youtube.com/watch?v=MnAla4z-dkM"
+  }
+ ],
+ "materias": [
+  {
+   "tipo": "PL",
+   "numero": "92",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "ALTERA A REDAÇÃO DO INCISO II DO ART. 6º DA LEI MUNICIPAL Nº 4.435, DE 22 DE DEZEMBRO DE 2025, QUE ESTIMA A RECEITA E FIXA A DESPESA DO MUNICÍPIO DE CUBATÃO PARA O EXERCÍCIO DE 2026, AMPLIANDO DE 10% (DEZ POR CENTO) PARA 19% (DEZENOVE POR CENTO) O LIMITE PARA ABERTURA DE CRÉDITOS SUPLEMENTARES",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "parecer",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=MnAla4z-dkM",
+      "n": 1,
+      "resultado": "REJEITADO",
+      "placar": {
+       "SIM": 3,
+       "NAO": 11,
+       "BRANCO": 1,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "NAO",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "NAO",
+       "edson menezes mota": "NAO",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "NAO",
+       "jair ferreira lucas": "NAO",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "NAO",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "NAO",
+       "daniel barbosa de assis silva": "NAO",
+       "jose afonso": "NAO",
+       "allan matias barboza de souza": "NAO",
+       "anderson de lana andrade": "NAO"
+      },
+      "completo": true,
+      "link": "https://youtu.be/MnAla4z-dkM?t=4440",
+      "evidencia": "painel/img/MnAla4z-dkM_01.jpg",
+      "lido": "PL nº 92/2026 - Parecer Contrário em Separado - Autor: Vereador Rony Martins",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": null,
+     "conferencia": {
+      "status": "resumo_nao_registra",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=MnAla4z-dkM",
+      "n": 2,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 11,
+       "NAO": 3,
+       "BRANCO": 1,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "NAO",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "NAO",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "NAO",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/MnAla4z-dkM?t=7250",
+      "evidencia": "painel/img/MnAla4z-dkM_02.jpg",
+      "lido": "PL nº 92/2026 - 1ª Discussão - Autor: Prefeito Municipal",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 29,
+       "tipo": "extraordinaria",
+       "data": "2026-10-29",
+       "inicio": "15:17",
+       "fim": "17:02"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDA",
+      "placar": {
+       "favor": 11,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-29a-sessao-extraordinaria-29-10-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "confere",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "2a_discussao",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=MnAla4z-dkM",
+      "n": 3,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 10,
+       "NAO": 3,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "NAO",
+       "jose elan dos santos gomes": "BRANCO",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "NAO",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "NAO",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/MnAla4z-dkM?t=8200",
+      "evidencia": "painel/img/MnAla4z-dkM_03.jpg",
+      "lido": "PL nº 92/2026 - 2ª Discussão - Autor: Prefeito Municipal",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 30,
+       "tipo": "extraordinaria",
+       "data": "2026-10-29",
+       "inicio": "17:03",
+       "fim": "17:19"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 11,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-30a-sessao-extraordinaria-29-10-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ],
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "jose elan dos santos gomes",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "10x3",
+        "resumo": "11x3"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [
+  {
+   "materia": "PL 92",
+   "etapa": "2a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "jose elan dos santos gomes",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 92",
+   "etapa": "2a_discussao",
+   "tipo": "placar_divergente",
+   "painel": "10x3",
+   "resumo": "11x3"
+  }
+ ],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

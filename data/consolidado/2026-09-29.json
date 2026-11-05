@@ -1,0 +1,1008 @@
+{
+ "data": "2026-09-29",
+ "status": "oficial_conferido",
+ "sessoes": [
+  {
+   "numero": 27,
+   "tipo": "extraordinaria",
+   "data": "2026-09-29",
+   "inicio": "15:36",
+   "fim": "15:41",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-27a-sessao-extraordinaria-29-09-2026/at_download/file"
+  },
+  {
+   "numero": 32,
+   "tipo": "ordinaria",
+   "data": "2026-09-29",
+   "inicio": "14:22",
+   "fim": "15:35",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-32a-sessao-ordinaria-29-09-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [
+  {
+   "titulo": "32ª SESSÃO ORDINÁRIA DIA 29 DE SETEMBRO DE 2026",
+   "url": "https://www.youtube.com/watch?v=jKmkU-qK0wo"
+  }
+ ],
+ "materias": [
+  {
+   "tipo": "PL",
+   "numero": "27",
+   "ano": "2026",
+   "autoria": "MÁRCIO SILVA NASCIMENTO",
+   "assunto": "INSTITUI O PROGRAMA DE APOIO ÀS PESSOAS COM DOENÇAS RARAS E SEUS FAMILIARES NO MUNICÍPIO DE CUBATÃO",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "parecer_emenda",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 3,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 12,
+       "NAO": 0,
+       "BRANCO": 3,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "BRANCO",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "BRANCO",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=2880",
+      "evidencia": "painel/img/jKmkU-qK0wo_03.jpg",
+      "lido": "Parecer Favorável da Emenda ao PL nº 27/2026",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": null,
+     "conferencia": {
+      "status": "resumo_nao_registra",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "emenda",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 4,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "BRANCO",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=2940",
+      "evidencia": "painel/img/jKmkU-qK0wo_04.jpg",
+      "lido": "Emenda ao PL nº 27/2026 - Autor: Vereador Tinho",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": null,
+     "conferencia": {
+      "status": "resumo_nao_registra",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "parecer",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 5,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "BRANCO",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=4310",
+      "evidencia": "painel/img/jKmkU-qK0wo_05.jpg",
+      "lido": "Parecer Favorável ao PL nº 27/2026",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": null,
+     "conferencia": {
+      "status": "resumo_nao_registra",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 6,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 11,
+       "NAO": 1,
+       "BRANCO": 3,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "NAO",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "BRANCO",
+       "edson menezes mota": "BRANCO",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=4440",
+      "evidencia": "painel/img/jKmkU-qK0wo_06.jpg",
+      "lido": "PL nº 27/2026 - 1ª DISCUSSÃO - Autor: Vereador Marcinho",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 32,
+       "tipo": "ordinaria",
+       "data": "2026-09-29",
+       "inicio": "14:22",
+       "fim": "15:35"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-32a-sessao-ordinaria-29-09-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "voto_divergente",
+        "vereador": "alessandro donizete de oliveira",
+        "painel": "NAO",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "joemerson alves de souza",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "edson menezes mota",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "11x1",
+        "resumo": "14x0"
+       }
+      ]
+     }
+    },
+    {
+     "etapa": "2a_discussao",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 9,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "BRANCO"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=6010",
+      "evidencia": "painel/img/jKmkU-qK0wo_09.jpg",
+      "lido": "PL nº 27/2026 - 2ª DISCUSSÃO - Autor: Vereador Marcinho",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 27,
+       "tipo": "extraordinaria",
+       "data": "2026-09-29",
+       "inicio": "15:36",
+       "fim": "15:41"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-27a-sessao-extraordinaria-29-09-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "anderson de lana andrade",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "13x0",
+        "resumo": "14x0"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PR",
+   "numero": "10",
+   "ano": "2026",
+   "autoria": "MESA DA CÂMARA",
+   "assunto": "DISPÕE SOBRE O TRÂMITE DOS PROCESSOS ADMINISTRATIVOS DIGITAIS, O USO DE IDENTIFICAÇÕES ELETRÔNICAS, ASSINATURAS DIGITAIS E CERTIFICAÇÃO ELETRÔNICA DE DOCUMENTOS NO ÂMBITO ADMINISTRATIVO E NO PROCESSO LEGISLATIVO DA CÂMARA MUNICIPAL DE CUBATÃO, E DEFINE AS CATEGORIAS DE CERTIFICADOS PARA SERVIDORES E DEPARTAMENTOS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "parecer",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 7,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "SIM",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "BRANCO",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "BRANCO",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=5450",
+      "evidencia": "painel/img/jKmkU-qK0wo_07.jpg",
+      "lido": "Parecer Favorável ao PR nº 10/2026",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": null,
+     "conferencia": {
+      "status": "resumo_nao_registra",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "discussao_unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 8,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 12,
+       "NAO": 0,
+       "BRANCO": 3,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "SIM",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "BRANCO",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "BRANCO",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "BRANCO",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=5580",
+      "evidencia": "painel/img/jKmkU-qK0wo_08.jpg",
+      "lido": "PR nº 10/2026 - DISCUSSÃO ÚNICA - Autor: Mesa da Câmara",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 32,
+       "tipo": "ordinaria",
+       "data": "2026-09-29",
+       "inicio": "14:22",
+       "fim": "15:35"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM DISCUSSÃO ÚNICA",
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-32a-sessao-ordinaria-29-09-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "jose afonso",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "12x0",
+        "resumo": "13x0"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "52",
+   "ano": null,
+   "autoria": "Márcio Silva Nascimento",
+   "assunto": "Aprovado o Requerimento nº 52, de autoria do Vereador Márcio Silva Nascimento, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “ORGANIZAR ATO SOLENE EM HOMENAGEM AO DIA DO NASCITURO”.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 1,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "BRANCO",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=1650",
+      "evidencia": "painel/img/jKmkU-qK0wo_01.jpg",
+      "lido": "RQ nº 52/2026 - CEV Ato Solene - Autor: Vereador Marcinho",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 32,
+       "tipo": "ordinaria",
+       "data": "2026-09-29",
+       "inicio": "14:22",
+       "fim": "15:35"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-32a-sessao-ordinaria-29-09-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "marcos roberto silva",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "13x0",
+        "resumo": "14x0"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "53",
+   "ano": null,
+   "autoria": "Márcio Silva Nascimento",
+   "assunto": "Aprovado o Requerimento nº 53, de autoria do Vereador Márcio Silva Nascimento, solicitando a formação de Comissão Especial de Inquérito, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “ACOMPANHAR E FISCALIZAR AS OBRAS DE IMPLANTAÇÃO DA REDE DE ABASTECIMENTO DE ÁGUA POTÁVEL E ESGOTO NO BAIRRO VALE VERDE, SEU RESPECTIVO CONTRATO, PROJETO EXECUTIVO, DOCUMENTOS TÉCNICOS E CRON",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=jKmkU-qK0wo",
+      "n": 2,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 9,
+       "NAO": 0,
+       "BRANCO": 6,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "BRANCO",
+       "guilherme dos santos malaquias": "BRANCO",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "BRANCO",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "BRANCO",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "BRANCO",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/jKmkU-qK0wo?t=2020",
+      "evidencia": "painel/img/jKmkU-qK0wo_02.jpg",
+      "lido": "RQ nº 53/2026 - CEI SABESP - Autor: Vereador Marcinho",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 32,
+       "tipo": "ordinaria",
+       "data": "2026-09-29",
+       "inicio": "14:22",
+       "fim": "15:35"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-32a-sessao-ordinaria-29-09-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "edson menezes mota",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "guilherme dos santos malaquias",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "jair ferreira lucas",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "ronaldo araujo queiroz",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "marcos roberto silva",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "9x0",
+        "resumo": "14x0"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [
+  {
+   "materia": "PL 27",
+   "etapa": "1a_discussao",
+   "tipo": "voto_divergente",
+   "vereador": "alessandro donizete de oliveira",
+   "painel": "NAO",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 27",
+   "etapa": "1a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "joemerson alves de souza",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 27",
+   "etapa": "1a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "edson menezes mota",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 27",
+   "etapa": "1a_discussao",
+   "tipo": "placar_divergente",
+   "painel": "11x1",
+   "resumo": "14x0"
+  },
+  {
+   "materia": "PL 27",
+   "etapa": "2a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "anderson de lana andrade",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 27",
+   "etapa": "2a_discussao",
+   "tipo": "placar_divergente",
+   "painel": "13x0",
+   "resumo": "14x0"
+  },
+  {
+   "materia": "PR 10",
+   "etapa": "discussao_unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "jose afonso",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PR 10",
+   "etapa": "discussao_unica",
+   "tipo": "placar_divergente",
+   "painel": "12x0",
+   "resumo": "13x0"
+  },
+  {
+   "materia": "RQ 52",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "marcos roberto silva",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 52",
+   "etapa": "unica",
+   "tipo": "placar_divergente",
+   "painel": "13x0",
+   "resumo": "14x0"
+  },
+  {
+   "materia": "RQ 53",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "edson menezes mota",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 53",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "guilherme dos santos malaquias",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 53",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "jair ferreira lucas",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 53",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "ronaldo araujo queiroz",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 53",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "marcos roberto silva",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 53",
+   "etapa": "unica",
+   "tipo": "placar_divergente",
+   "painel": "9x0",
+   "resumo": "14x0"
+  }
+ ],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

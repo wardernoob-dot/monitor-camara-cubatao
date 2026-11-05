@@ -172,7 +172,7 @@
     "tipo": "PL",
     "numero": "29",
     "ano": "2026",
-    "turno": null,
+    "turno": "1º Discussão",
     "parecer": null,
     "autor": "Vereador Ivan Hildebrando",
     "identificado": true,
@@ -192,7 +192,7 @@
      "ano": "2026",
      "emenda": false,
      "parecer": null,
-     "turno": null
+     "turno": "1º Discussão"
     }
    }
   },
@@ -301,7 +301,7 @@
     "tipo": "PL",
     "numero": "29",
     "ano": "2026",
-    "turno": null,
+    "turno": "2º Discussão",
     "parecer": null,
     "autor": "Vereador Ivan Hildebrando",
     "identificado": true,
@@ -321,7 +321,7 @@
      "ano": "2026",
      "emenda": false,
      "parecer": null,
-     "turno": null
+     "turno": "2º Discussão"
     }
    }
   }

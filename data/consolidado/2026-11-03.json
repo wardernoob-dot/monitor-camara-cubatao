@@ -1,0 +1,959 @@
+{
+ "data": "2026-11-03",
+ "status": "oficial_conferido",
+ "sessoes": [
+  {
+   "numero": 37,
+   "tipo": "ordinaria",
+   "data": "2026-11-03",
+   "inicio": "14:32",
+   "fim": "16:20",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [
+  {
+   "titulo": "37ª SESSÃO ORDINÁRIA DIA 03 DE NOVEMBRO DE 2026",
+   "url": "https://www.youtube.com/watch?v=aG3vhRvCeis"
+  }
+ ],
+ "materias": [
+  {
+   "tipo": "PL",
+   "numero": "22",
+   "ano": "2026",
+   "autoria": "RONALDO ARAÚJO QUEIROZ",
+   "assunto": "INSTITUI O PROGRAMA MUNICIPAL DE VALORIZAÇÃO E EMPREGABILIDADE DA PESSOA NA MELHOR IDADE, VOLTADO À CAPACITAÇÃO, INTERMEDIAÇÃO E INCLUSÃO DE PESSOAS COM 50 ANOS OU MAIS NO MERCADO DE TRABALHO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 7,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 14,
+       "NAO": 0,
+       "BRANCO": 1,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=7170",
+      "evidencia": "painel/img/aG3vhRvCeis_07.jpg",
+      "lido": "PL nº 22/2026 - 2ª Discussão - Autor: Vereador Ronaldo da Comissão",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "confere",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "38",
+   "ano": "2026",
+   "autoria": "DANIEL BARBOSA DE ASSIS SILVA",
+   "assunto": "DISPÕE SOBRE A OFERTA DE ATENDIMENTO DOMICILIAR EM SAÚDE PARA PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA (TEA) COM ALTA SENSIBILIDADE SENSORIAL, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 8,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 1,
+       "AUSENTE": 1,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "BRANCO",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM",
+       "alexandre mendes da silva": "AUSENTE"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=8370",
+      "evidencia": "painel/img/aG3vhRvCeis_08.jpg",
+      "lido": "PL nº 38/2026 - 2ª Discussão - Autor: Vereador Xuxa",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "confere",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "58",
+   "ano": null,
+   "autoria": "Márcio Silva Nascimento",
+   "assunto": "Aprovado o Requerimento nº 58, de autoria do Vereador Márcio Silva Nascimento, solicitando a prorrogação por mais 60 (sessenta) dias da Comissão Especial de Vereadores, nomeada pela Resolução nº 3.127 de 03 de setembro de 2026, para “TRATAR JUNTO AO PODER EXECUTIVO MUNICIPAL SOBRE O ANDAMENTO DO CERTAME LICITATÓRIO PARA A CONTRATAÇÃO E IMPLEMENTAÇÃO DAS OBRAS DE DRENAGEM NO BAIRRO VALE VERDE, BEM ",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 3,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 12,
+       "NAO": 0,
+       "BRANCO": 3,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "BRANCO",
+       "marcos roberto silva": "BRANCO",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=3610",
+      "evidencia": "painel/img/aG3vhRvCeis_03.jpg",
+      "lido": "RQ nº 58/2026 - Prorrogação CEV - Autor: Marcinho",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "roniele martins da silva",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "12x0",
+        "resumo": "13x0"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "59",
+   "ano": null,
+   "autoria": "Anderson de Lana Andrade",
+   "assunto": "Aprovado o Requerimento nº 59, de autoria do Vereador Anderson de Lana Andrade, solicitando a prorrogação por mais 60 (sessenta) dias da Comissão Especial de Vereadores, nomeada pela Resolução nº 3.126 de 31 de agosto de 2026, para “REALIZAR ESTUDOS, LEVANTAMENTOS DILIGÊNCIAS E ANÁLISES TÉCNICAS SOBRE A ESTRUTURA FÍSICA E A VIABILIDADE DE UTILIZAÇÃO DO IMÓVEL LOCALIZADO NA AVENIDA JOAQUIM MIGUEL C",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 4,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "BRANCO",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=3740",
+      "evidencia": "painel/img/aG3vhRvCeis_04.jpg",
+      "lido": "RQ nº 59/2026 - Prorrogação de CEV - Autor: Vereador Dr. Anderson de Laria",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "confere",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "60",
+   "ano": null,
+   "autoria": "José Elan dos Santos Gomes",
+   "assunto": "Aprovado o Requerimento nº 60, de autoria do Vereador José Elan dos Santos Gomes, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “ORGANIZAR ATO SOLENE EM HOMENAGEM AO DIA DA CONSCIÊNCIA NEGRA”.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 5,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "BRANCO",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=3830",
+      "evidencia": "painel/img/aG3vhRvCeis_05.jpg",
+      "lido": "RQ. nº 60/2026 - Formação de CEV - Organização de Ato Solene",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "confere",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "RQ",
+   "numero": "61",
+   "ano": null,
+   "autoria": "Allan Matias Barboza de Souza",
+   "assunto": "Aprovado o Requerimento nº 61, de autoria do Vereador Allan Matias Barboza de Souza, solicitando gestões ao Poder Executivo para que sejam efetuados estudos para a implementação de salas de acomodação sensorial em prédios públicos e locais de grande circulação, bem como a realização de estudos para a implantação de um programa de fornecimento gratuito de sensores de monitoramento contínuo da glico",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 6,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 12,
+       "NAO": 0,
+       "BRANCO": 3,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "BRANCO",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "BRANCO"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=5590",
+      "evidencia": "painel/img/aG3vhRvCeis_06.jpg",
+      "lido": "RQ. 61 - VEREADOR ALLAN MATIAS",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "roniele martins da silva",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "12x0",
+        "resumo": "13x0"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "15",
+   "ano": null,
+   "autoria": "Edson Menezes Mota",
+   "assunto": "Aprovada a Moção nº 15, de autoria do Vereador Edson Menezes Mota, Moção de Aplausos ao TEATRO DO KAOS, extensiva à pessoa de seu diretor- presidente e idealizador Lourimar Vieira e a toda a sua equipe artística e técnica, pelas relevantes produções culturais realizadas em 2026.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 1,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 13,
+       "NAO": 0,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "BRANCO",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=2450",
+      "evidencia": "painel/img/aG3vhRvCeis_01.jpg",
+      "lido": "Moção nº 15 - Autor: Vereador Edson Mota",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "daniel barbosa de assis silva",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "13x0",
+        "resumo": "14x0"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "16",
+   "ano": null,
+   "autoria": "Alessandro Donizete de Oliveira",
+   "assunto": "Aprovada a Moção nº 16, de autoria do Vereador Alessandro Donizete de Oliveira, Moção de Aplausos ao Encontro de Carros Antigos, Baixos & Turbos de Cubatão, realizado pela Equipe Baixos Cubatão, que reuniu centenas de colecionadores, entusiastas e famílias de toda a Baixada Santista e do Estado de São Paulo.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=aG3vhRvCeis",
+      "n": 2,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 11,
+       "NAO": 0,
+       "BRANCO": 4,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "BRANCO",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "BRANCO",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "BRANCO",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": true,
+      "link": "https://youtu.be/aG3vhRvCeis?t=2800",
+      "evidencia": "painel/img/aG3vhRvCeis_02.jpg",
+      "lido": "Moção nº 16 - Autor: Vereador Alessandro Oliveira",
+      "validacao": "a_confirmar_resumo",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 37,
+       "tipo": "ordinaria",
+       "data": "2026-11-03",
+       "inicio": "14:32",
+       "fim": "16:20"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 11,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-37a-sessao-ordinaria-03-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "confere",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [
+  {
+   "materia": "RQ 58",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "roniele martins da silva",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 58",
+   "etapa": "unica",
+   "tipo": "placar_divergente",
+   "painel": "12x0",
+   "resumo": "13x0"
+  },
+  {
+   "materia": "RQ 61",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "roniele martins da silva",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RQ 61",
+   "etapa": "unica",
+   "tipo": "placar_divergente",
+   "painel": "12x0",
+   "resumo": "13x0"
+  },
+  {
+   "materia": "MOCAO 15",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "daniel barbosa de assis silva",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "MOCAO 15",
+   "etapa": "unica",
+   "tipo": "placar_divergente",
+   "painel": "13x0",
+   "resumo": "14x0"
+  }
+ ],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

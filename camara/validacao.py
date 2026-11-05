@@ -23,7 +23,6 @@ ESPECIES = {
     "PROJETO DE LEI COMPLEMENTAR": "PLC", "PROJETO DE LEI": "PL", "PROJETO DE RESOLUCAO": "PR",
     "PROJETO DE DECRETO LEGISLATIVO": "PDL", "PROJETO DE EMENDA A LEI ORGANICA": "PELOM",
 }
-RE_ITEM_PAUTA = re.compile(r"ESPECIE:\s*(.{5,70}?)\s+N\S?\s*(\d{1,4})/(\d{4})\s*.{0,40}?AUTORIA:\s*(.{2,70}?)\s+ASSUNTO:")
 RE_VETO = re.compile(r"VETO (?:INTEGRAL|PARCIAL) AO PROJETO DE LEI N\S?\s*(\d{1,4})/(\d{4})")
 RE_APELIDO = re.compile(r"Vereador[a]?\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ][^\-–“\"\n]{5,60}?)\s*[-–]\s*[“\"]([^”\"]{2,40})[”\"]")
 
@@ -81,18 +80,33 @@ def pautas_do_dia(dados: Path, data_iso: str) -> list[str]:
     return out
 
 
+RE_ITEM_ORIG = re.compile(
+    r"ESP[ÉE]CIE:\s*(.{5,90}?)\s+AUTORIA:\s*(.{2,70}?)\s+ASSUNTO:\s*(.+?)(?=\s+\d{1,2}\s*[º°o]\s*PROC\.|\s+PAUTA PARA|$)",
+    re.I | re.S)
+
+
 def candidatos(textos_pauta: list[str]) -> list[dict]:
+    """Itens da pauta: tipo, numero, ano, autor (chave) + autoria/assunto como estao no documento."""
     cands = {}
     for t in textos_pauta:
-        u = _sem_acento_maiusc(t)
-        for m in RE_ITEM_PAUTA.finditer(u):
-            esp = next((v for k, v in ESPECIES.items() if m.group(1).strip().startswith(k)), None)
-            if esp:
-                cands[(esp, m.group(2).lstrip("0"))] = {"tipo": esp, "numero": m.group(2).lstrip("0"),
-                                                        "ano": m.group(3), "autor": chave(m.group(4))}
-        for m in RE_VETO.finditer(u):
-            cands[("VETO", m.group(1).lstrip("0"))] = {"tipo": "VETO", "numero": m.group(1).lstrip("0"),
-                                                       "ano": m.group(2), "autor": "prefeito municipal"}
+        for m in RE_ITEM_ORIG.finditer(t):
+            esp_u, autoria = _sem_acento_maiusc(m.group(1)), m.group(2).strip()
+            assunto = re.split(r"\s+DATA:\s|\s+OBS\.?:\s|\s+PARECER\b", m.group(3))[0].strip(' ."“”')
+            assunto_u = _sem_acento_maiusc(assunto)
+            if mv := RE_VETO.search(assunto_u):
+                tipo, num, ano = "VETO", mv.group(1), mv.group(2)
+            else:
+                esp = next((v for k, v in ESPECIES.items() if esp_u.startswith(k)), None)
+                mn = re.search(r"N\S?\s*(\d{1,4})/(\d{4})", esp_u)
+                if not esp or not mn:
+                    continue
+                tipo, num, ano = esp, mn.group(1), mn.group(2)
+            num = num.lstrip("0")
+            novo = {"tipo": tipo, "numero": num, "ano": ano, "autor": chave(autoria),
+                    "autoria": autoria, "assunto": assunto[:600]}
+            velho = cands.setdefault((tipo, num), novo)
+            if len(velho["assunto"]) < 60 and len(novo["assunto"]) > len(velho["assunto"]):
+                velho["assunto"] = novo["assunto"]  # pauta truncada; parecer anexado traz o assunto inteiro
     return list(cands.values())
 
 

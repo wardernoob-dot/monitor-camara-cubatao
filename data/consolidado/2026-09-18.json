@@ -1,0 +1,213 @@
+{
+ "data": "2026-09-18",
+ "status": "so_oficial",
+ "sessoes": [
+  {
+   "numero": 25,
+   "tipo": "extraordinaria",
+   "data": "2026-09-18",
+   "inicio": "10:10",
+   "fim": "11:16",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-25a-sessao-extraordinaria-18-09-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [],
+ "materias": [
+  {
+   "tipo": "PL",
+   "numero": "75",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO COM A CAIXA ECONÔMICA FEDERAL, COM A GARANTIA DA UNIÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "nao_apreciado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 25,
+       "tipo": "extraordinaria",
+       "data": "2026-09-18",
+       "inicio": "10:10",
+       "fim": "11:16"
+      },
+      "resultado": "nao_apreciado",
+      "detalhe": "O PROJETO NÃO FOI APRECIADO EM FACE DA APRESENTAÇÃO DO OFÍCIO Nº 117/2026/SEJUR, DE AUTORIA DO PODER EXECUTIVO, SOLICITANDO A RETIRADA DE PAUTA DA PRESENTE PROPOSITURA, NOS TERMOS DO § 3º DO ARTIGO 118 DO REGIMENTO INTERNO DESTA CASA.",
+      "placar": {
+       "favor": 0,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-25a-sessao-extraordinaria-18-09-2026/at_download/file",
+      "por_acao": {}
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

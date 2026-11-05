@@ -1,0 +1,468 @@
+{
+ "data": "2026-10-20",
+ "status": "oficial_conferido",
+ "sessoes": [
+  {
+   "numero": 35,
+   "tipo": "ordinaria",
+   "data": "2026-10-20",
+   "inicio": "14:19",
+   "fim": "16:29",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-35a-sessao-ordinaria-20-10-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [
+  {
+   "titulo": "35ª SESSÃO ORDINÁRIA DIA 20 DE OUTUBRO DE 2026",
+   "url": "https://www.youtube.com/watch?v=VsOfCH9nd0A"
+  }
+ ],
+ "materias": [
+  {
+   "tipo": "PL",
+   "numero": "75",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO COM A CAIXA ECONÔMICA FEDERAL, COM A GARANTIA DA UNIÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "rejeitado",
+   "votacoes": [
+    {
+     "etapa": "parecer",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=VsOfCH9nd0A",
+      "n": 2,
+      "resultado": "APROVADO",
+      "placar": {
+       "SIM": 8,
+       "NAO": 6,
+       "BRANCO": 1,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "NAO",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "NAO",
+       "edson menezes mota": "NAO",
+       "guilherme dos santos malaquias": "SIM",
+       "jose elan dos santos gomes": "SIM",
+       "jair ferreira lucas": "SIM",
+       "marcio silva nascimento": "SIM",
+       "ronaldo araujo queiroz": "SIM",
+       "roniele martins da silva": "SIM",
+       "marcos roberto silva": "NAO",
+       "daniel barbosa de assis silva": "SIM",
+       "jose afonso": "NAO",
+       "allan matias barboza de souza": "SIM",
+       "anderson de lana andrade": "NAO"
+      },
+      "completo": true,
+      "link": "https://youtu.be/VsOfCH9nd0A?t=7870",
+      "evidencia": "painel/img/VsOfCH9nd0A_02.jpg",
+      "lido": "PL nº 75/2026 - Parecer Contrário - Autor: Vereador Rosy Martins",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 35,
+       "tipo": "ordinaria",
+       "data": "2026-10-20",
+       "inicio": "14:19",
+       "fim": "16:29"
+      },
+      "resultado": "rejeitado",
+      "detalhe": "REJEITADO",
+      "placar": {
+       "favor": 6,
+       "contra": 8
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-35a-sessao-ordinaria-20-10-2026/at_download/file",
+      "por_acao": {
+       "rejeição": [
+        "alessandro donizete de oliveira",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva"
+       ],
+       "aprovação": [
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "confere",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "PL",
+   "numero": "79",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "REGULAMENTADOS PELA COMISSÃO DE VALORES MOBILIÁRIOS (CVM)",
+   "na_pauta": true,
+   "resultado_oficial": "retirado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 35,
+       "tipo": "ordinaria",
+       "data": "2026-10-20",
+       "inicio": "14:19",
+       "fim": "16:29"
+      },
+      "resultado": "retirado",
+      "detalhe": "RETIRADO DA PAUTA DA ORDEM DO DIA POR SOLICITAÇÃO DO AUTOR.",
+      "placar": {
+       "favor": 0,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-35a-sessao-ordinaria-20-10-2026/at_download/file",
+      "por_acao": {}
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "PL",
+   "numero": "87",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "ALTERA A REDAÇÃO DOS INCISOS II E III DO ART. 6° DA LEI MUNICIPAL Nº 4.435, DE 22 DE DEZEMBRO DE 2025, QUE ESTIMA A RECEITA E FIXA A DESPESA DO MUNICÍPIO DE CUBATÃO PARA O EXERCÍCIO DE 2026, AMPLIANDO DE 10% (DEZ POR CENTO) PARA 20% (VINTE POR CENTO) O LIMITE PARA ABERTURA DE CRÉDITOS ADICIONAIS SUPLEMENTARES E PARA TRANSPOSIÇÃO, REMANEJAMENTO E TRANSFERÊNCIA DE RECURSOS",
+   "na_pauta": true,
+   "resultado_oficial": "rejeitado",
+   "votacoes": [
+    {
+     "etapa": "parecer",
+     "painel": {
+      "video": "https://www.youtube.com/watch?v=VsOfCH9nd0A",
+      "n": 1,
+      "resultado": null,
+      "placar": {
+       "SIM": 6,
+       "NAO": 7,
+       "BRANCO": 2,
+       "AUSENTE": 0,
+       "?": 0
+      },
+      "votos": {
+       "alessandro donizete de oliveira": "SIM",
+       "alexandre mendes da silva": "BRANCO",
+       "joemerson alves de souza": "SIM",
+       "edson menezes mota": "SIM",
+       "guilherme dos santos malaquias": "NAO",
+       "jose elan dos santos gomes": "NAO",
+       "jair ferreira lucas": "NAO",
+       "marcio silva nascimento": "NAO",
+       "ronaldo araujo queiroz": "BRANCO",
+       "roniele martins da silva": "NAO",
+       "marcos roberto silva": "SIM",
+       "daniel barbosa de assis silva": "NAO",
+       "jose afonso": "SIM",
+       "allan matias barboza de souza": "NAO",
+       "anderson de lana andrade": "SIM"
+      },
+      "completo": false,
+      "link": "https://youtu.be/VsOfCH9nd0A?t=7500",
+      "evidencia": "painel/img/VsOfCH9nd0A_01.jpg",
+      "lido": "PL nº 87/2026 - Parecer em Conjunto Favorável",
+      "validacao": "confirmado_pauta",
+      "aviso": null
+     },
+     "resumo": {
+      "sessao": {
+       "numero": 35,
+       "tipo": "ordinaria",
+       "data": "2026-10-20",
+       "inicio": "14:19",
+       "fim": "16:29"
+      },
+      "resultado": "rejeitado",
+      "detalhe": "REJEITADO",
+      "placar": {
+       "favor": 6,
+       "contra": 8
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-35a-sessao-ordinaria-20-10-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva"
+       ],
+       "rejeição": [
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "painel_incompleto",
+        "painel": "6x7",
+        "resumo": "6x8",
+        "obs": "print do painel sem resultado na tela; provavel captura antes do fim da votacao"
+       }
+      ]
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "14",
+   "ano": null,
+   "autoria": "José Afonso",
+   "assunto": "Aprovada a Moção nº 14, de autoria do Vereador José Afonso, Moção de Aplausos ao Maestro Roberto Farias da Silva, em reconhecimento à sua trajetória como regente, compositor e educador e a sua contribuição histórica para a formação musical e o desenvolvimento cultural do Município de Cubatão.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 35,
+       "tipo": "ordinaria",
+       "data": "2026-10-20",
+       "inicio": "14:19",
+       "fim": "16:29"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-35a-sessao-ordinaria-20-10-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [
+  {
+   "materia": "PL 87",
+   "etapa": "parecer",
+   "tipo": "painel_incompleto",
+   "painel": "6x7",
+   "resumo": "6x8",
+   "obs": "print do painel sem resultado na tela; provavel captura antes do fim da votacao"
+  }
+ ],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 64,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 61,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 57,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 38,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 58,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 64,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 65,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 62,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 60,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

@@ -35,8 +35,8 @@ RE_TIPO = re.compile(
     r"\b(PLC|PL|PR|PDL|PELOM|RQ|Requerimento|Mo[çc][ãa]o|Veto|Relat[óo]rio(?: Final)?|Parecer|"
     r"Of[íi]cio|Emenda|Indica[çc][ãa]o)\b\.?", re.I)
 RE_NUM = re.compile(r"^\W*(?:n[º°o]?\.?\s*)?(\d[\d\.]{0,6})(?:\s*/\s*(\d{4}))?", re.I)
-RE_TURNO = re.compile(r"(1ª|2ª|[12]\s*[ªa°o])\s*Discuss[ãa]o|Discuss[ãa]o [ÚU]nica|Reda[çc][ãa]o Final", re.I)
-RE_PARECER = re.compile(r"Parecer\s+(?:em\s+Conjunto\s+)?(Favor[áa]vel|Contr[áa]rio)(?:\s+em\s+Separado)?", re.I)
+RE_TURNO = re.compile(r"[12]\s*[ªaº°o]\s*Discuss[ãa]o|Discuss[ãa]o [ÚU]nica|Reda[çc][ãa]o Final", re.I)
+RE_PARECER = re.compile(r"Parecer\s+(?:em\s+(?:Conjunto|Separado)\s+)?(Favor[áa]vel|Contr[áa]rio)(?:\s+em\s+Separado)?", re.I)
 # "Emenda ao PL nº 27/2026", "Veto Parcial ao PL nº 60/2025": a materia de referencia
 RE_REF = re.compile(r"\b(PLC|PL|PR|PDL|PELOM)\s*n?[º°o]?\.?\s*(\d[\d\.]{0,6})\s*/\s*(\d{4})", re.I)
 RE_AUTOR = re.compile(r"Autor(?:ia)?\s*:\s*(.+)$", re.I)

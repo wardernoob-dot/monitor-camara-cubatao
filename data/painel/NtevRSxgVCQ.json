@@ -53,7 +53,7 @@
     "numero": "74",
     "ano": "2026",
     "turno": null,
-    "parecer": null,
+    "parecer": "Parecer em Separado Contrário",
     "autor": "Vereador Rony Martins",
     "identificado": true,
     "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
@@ -68,7 +68,7 @@
      "numero": "74",
      "ano": "2026",
      "emenda": false,
-     "parecer": null,
+     "parecer": "Parecer em Separado Contrário",
      "turno": null
     }
    }

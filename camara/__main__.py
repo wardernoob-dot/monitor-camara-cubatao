@@ -46,6 +46,10 @@ def main():
         print(f"cabecalhos: {ri['identificadas']}/{ri['votacoes']} votacao(oes) identificada(s); {len(ri['erros'])} erro(s)")
         validar_todas(a.dados)
 
+        from .consolidar import consolidar_tudo
+
+        consolidar_tudo(a.dados)
+
 
 if __name__ == "__main__":
     main()
