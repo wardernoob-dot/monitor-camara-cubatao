@@ -459,7 +459,8 @@ def preparar_fotos(vereadores: dict) -> dict[str, str]:
             lado = min(im.size)
             x = (im.width - lado) // 2
             y = max(0, min(int(im.height * 0.08), im.height - lado)) if im.height > im.width else 0
-            im.crop((x, y, x + lado, y + lado)).resize((480, 480), Image.LANCZOS).save(final, "WEBP", quality=82)
+            alvo_px = min(lado, 480)  # nao amplia foto pequena (fica borrada)
+            im.crop((x, y, x + lado, y + lado)).resize((alvo_px, alvo_px), Image.LANCZOS).save(final, "WEBP", quality=85)
         out[alvo] = f"fotos/{alvo}.webp"
     return out
 
