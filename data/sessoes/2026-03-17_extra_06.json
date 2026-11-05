@@ -1,0 +1,255 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-6a-sessao-extraordinaria-17-03-2026/at_download/file",
+ "sessao": {
+  "numero": 6,
+  "tipo": "extraordinaria",
+  "data": "2026-03-17",
+  "inicio": "19:52",
+  "fim": "20:07"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "justificada",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim",
+  "washington luiz lessa de souza": "sim"
+ },
+ "titulo_site": "RESUMO DA 6ª SESSÃO EXTRAORDINÁRIA - 17/03/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "1.278/2025",
+   "especie": "PROJETO DE LEI Nº 190/2025",
+   "numero": "190/2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "INSTITUI O SISTEMA DE ESTACIONAMENTO ROTATIVO REMUNERADO DE VEÍCULOS EM VIAS E LOGRADOUROS PÚBLICOS DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "23/12/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Propositura",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor",
+      "guilherme dos santos malaquias": "contra",
+      "marcio silva nascimento": "contra"
+     },
+     "placar": {
+      "favor": 10,
+      "contra": 2
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "327/2025",
+   "especie": "PROJETO DE LEI Nº 60/2025",
+   "numero": "60/2025",
+   "autoria": "GUILHERME DOS SANTOS MALAQUIAS",
+   "assunto": "DISPÕE SOBRE A INCLUSÃO PROGRESSIVA DE ÔNIBUS OU MICROÔNIBUS IMPULSIONADO POR MOTOR EXCLUSIVAMENTE ELÉTRICO NA FROTA DE TRANSPORTE PÚBLICO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "28/03/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "3",
+   "tipo": "deliberacao",
+   "processo": "803/2025",
+   "especie": "PROJETO DE LEI Nº 126/2025",
+   "numero": "126/2025",
+   "autoria": "ALEXANDRE MENDES DA SILVA",
+   "assunto": "DISPÕE SOBRE A REGULAMENTAÇÃO DA CIRCULAÇÃO DE BICICLETAS ELÉTRICAS, CICLOMOTORES ELÉTRICOS E EQUIPAMENTOS DE MOBILIDADE INDIVIDUAL AUTOPROPELIDOS NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "29/08/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "washington luiz lessa de souza": "Washington Luiz Lessa de Souza",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [
+  "[6a extraordinaria 2026-03-17] ordem 1: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[6a extraordinaria 2026-03-17] ordem 2: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[6a extraordinaria 2026-03-17] ordem 3: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'"
+ ],
+ "sha256_pdf": "5d0faa1d4b3a224df4679941938608f9151a19a4aebd89ca21546214512a88a1"
+}

@@ -1,0 +1,122 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-9a-sessao-extraordinaria-28-04-2026/at_download/file",
+ "sessao": {
+  "numero": 9,
+  "tipo": "extraordinaria",
+  "data": "2026-04-28",
+  "inicio": "16:44",
+  "fim": "16:46"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "ivan da silva": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 9ª SESSÃO EXTRAORDINÁRIA - 28/04/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "79/2026",
+   "especie": "PROJETO DE LEI Nº 04/2026",
+   "numero": "04/2026",
+   "autoria": "WASHINGTON LUIZ LESSA DE SOUZA",
+   "assunto": "ASSEGURA À GESTANTE O DIREITO À ASSISTÊNCIA DE PROFISSIONAL FISIOTERAPEUTA DURANTE O CICLO GRAVÍDICO-PUERPERAL NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "26/01/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva",
+  "ivan da silva": "Ivan da Silva"
+ },
+ "avisos": [],
+ "notas": [
+  "[9a extraordinaria 2026-04-28] ordem 1: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'"
+ ],
+ "sha256_pdf": "1810bb9a2e01e841acc456a3c35c9e7f91bb322e060a9589f222ef7e882c6c98"
+}

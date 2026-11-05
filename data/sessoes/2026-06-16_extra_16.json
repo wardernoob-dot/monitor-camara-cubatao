@@ -1,0 +1,313 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-16a-sessao-extraordinaria-16-06-2026/at_download/file",
+ "sessao": {
+  "numero": 16,
+  "tipo": "extraordinaria",
+  "data": "2026-06-16",
+  "inicio": "17:28",
+  "fim": "17:48"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 16ª SESSÃO EXTRAORDINÁRIA - 16/06/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "493/2026",
+   "especie": "PROJETO DE LEI Nº 55/2026",
+   "numero": "55/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "REVOGA A LEI MUNICIPAL Nº 2.262, DE 21 DE JULHO DE 1994; ALTERA A TABELA I DA LEI MUNICIPAL Nº 1.986, DE 25 DE OUTUBRO DE 1991, PARA MODIFICAR A NOMENCLATURA DO CARGO DE “AUXILIAR II - PROFESSOR DE DESENVOLVIMENTO INICIAL” PARA “AUXILIAR II – PAJEM”; E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "20/05/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "138/2026",
+   "especie": "PROJETO DE LEI Nº 08/2026",
+   "numero": "08/2026",
+   "autoria": "JOSÉ ELAN DOS SANTOS GOMES",
+   "assunto": "INSTITUI O CENSO DE INCLUSÃO E O CADASTRAMENTO MUNICIPAL PARA PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA (TEA) E SUAS FAMÍLIAS NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "09/02/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "3",
+   "tipo": "deliberacao",
+   "processo": "402/2026",
+   "especie": "PROJETO DE LEI Nº 42/2026",
+   "numero": "42/2026",
+   "autoria": "ALEXANDRE MENDES DA SILVA",
+   "assunto": "ACRESCENTA DISPOSITIVO À LEI Nº 3.763, DE 28 DE OUTUBRO DE 2015, PARA ASSEGURAR A INCLUSÃO DAS PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA ENTRE OS BENEFICIÁRIOS",
+   "data_documento": "29/04/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "4",
+   "tipo": "deliberacao",
+   "processo": "524/2026",
+   "especie": "PROJETO DE LEI Nº 60/2026",
+   "numero": "60/2026",
+   "autoria": "MESA DA CÂMARA",
+   "assunto": "DISPÕE SOBRE O REAJUSTE SALARIAL DOS SERVIDORES PÚBLICOS DA CÂMARA MUNICIPAL DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "27/05/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "737eeb6a410ca2d8de3fe56bcfedb5e0292c8f80d8b791292b933d4a91de99e9"
+}

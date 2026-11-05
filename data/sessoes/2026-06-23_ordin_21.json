@@ -1,0 +1,459 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-21a-sessao-ordinaria-23-06-2026/at_download/file",
+ "sessao": {
+  "numero": 21,
+  "tipo": "ordinaria",
+  "data": "2026-06-23",
+  "inicio": "14:31",
+  "fim": "17:16"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "ausente",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 21ª SESSÃO ORDINÁRIA - 23/06/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "09",
+   "autoria": "José Elan dos Santos Gomes",
+   "descricao": "Aprovada a Moção nº 09, de autoria do Vereador José Elan dos Santos Gomes, Moção de Aplausos à Guarda Civil Municipal de Cubatão, em reconhecimento à coragem, ao profissionalismo e ao elevado compromisso com a proteção da vida demonstrados por seus agentes em duas ocorrências de grande relevância ocorridas no Município.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "10",
+   "autoria": "José Afonso",
+   "descricao": "Aprovada a Moção nº 10, de autoria do Vereador José Afonso, Moção de Aplausos ao Projeto Canoama e a todas as mulheres participantes desta grandiosa iniciativa, em reconhecimento ao extraordinário trabalho desenvolvido na promoção da saúde, da dignidade, do acolhimento humano e da valorização da vida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Joemerson Alves de Souza - “Cléber do Cavaco”, nºs: 868, implantar via preferencial na Rua Embaixador Pedro de Toledo, entre a Avenida Pedro José Cardoso e a Avenida Joaquim Miguel Couto, na Vila Paulista; 869, ",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "494/2026",
+   "especie": "PROJETO DE EMENDA À LEI ORGÂNICA Nº 02/2026",
+   "numero": "02/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "ALTERA A REDAÇÃO DO CAPÍTULO III, DO TÍTULO VI DA LEI ORGÂNICA MUNICIPAL, CRIA SEÇÃO IV DO REFERIDO CAPÍTULO III, E ACRESCENTA OS ARTIGOS 185-A E 185-B, DISPONDO SOBRE A POLÍTICA MUNICIPAL DE TURISMO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "20/05/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "470/2026",
+   "especie": "PROJETO DE RESOLUÇÃO Nº 04/2026",
+   "numero": "04/2026",
+   "autoria": "JAIR FERREIRA LUCAS",
+   "assunto": "DENOMINA “GERALDO ANTÔNIO NOVAES” O LOCAL QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "13/05/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "discussao_unica",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM DISCUSSÃO ÚNICA",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "3",
+   "tipo": "deliberacao",
+   "processo": "1.233/2025",
+   "especie": "PROJETO DE LEI Nº 188/2025",
+   "numero": "188/2025",
+   "autoria": "DANIEL BARBOSA DE ASSIS SILVA",
+   "assunto": "INSTITUI O PROGRAMA DE DEFESA PESSOAL PARA MULHERES - \"EU ME DEFENDO\", E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "15/12/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "4",
+   "tipo": "deliberacao",
+   "processo": "237/2026",
+   "especie": "PROJETO DE LEI Nº 17/2026",
+   "numero": "17/2026",
+   "autoria": "MÁRCIO SILVA NASCIMENTO",
+   "assunto": "INSTITUI O DIA MUNICIPAL DA ABERTURA DA CAMPANHA DA FRATERNIDADE NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "10/03/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "0ecd55a08de32cf63dde957955c1e5df623e249b57db26239afbc8edc3d0a1cd"
+}

@@ -1,0 +1,563 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-14a-sessao-ordinaria-05-05-2026/at_download/file",
+ "sessao": {
+  "numero": 14,
+  "tipo": "ordinaria",
+  "data": "2026-05-05",
+  "inicio": "14:46",
+  "fim": "18:10"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "ivan da silva": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 14ª SESSÃO ORDINÁRIA - 05/05/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "03",
+   "autoria": "Allan Matias Barbosa de Souza",
+   "descricao": "Aprovada a Moção nº 03, de autoria do Vereador Allan Matias Barbosa de Souza, Moção de Repúdio à instalação de estrutura de controle de acesso, com bilheteria e cancela, nas imediações da conhecida \"Serrinha\", localizada nas proximidades da Refinaria Presidente Bernardes.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "lido",
+   "especie": "Relatório Final",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Lido o Relatório Final da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.108/2026, para “REALIZAÇÃO DE ATO SOLENE EM HOMENAGEM AOS 25 ANOS DE FUNDAÇÃO DO ROTARY CLUB DE CUBATÃO - JARDIM CASQUEIRO”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Guilherme dos Santos Malaquias - “Guilherme do Salão”, nºs: 550, realização de carpinagem e roçagem no Conjunto Habitacional São Judas Tadeu, no Jardim Casqueiro; 551, execução de serviços de manutenção na UME E",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "e",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "27",
+   "autoria": "Guilherme dos Santos Malaquias",
+   "descricao": "Aprovado o Requerimento nº 27, de autoria do Vereador Guilherme dos Santos Malaquias, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “AVERIGUAR O DESCARTE IRREGULAR DE ENTULHOS, BEM COMO ACOMPANHAR E FISCALIZAR AS MEDIDAS ADOTADAS NA AREA LOCALIZADA ABAIXO DO VIADUTO DA RODOVIA DOS IMIGRANTES, NA ENTRADA DO BAIRRO ILHA CARAGUATA.”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "ivan da silva",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "ivan da silva": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "f",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "28",
+   "autoria": "Guilherme dos Santos Malaquias",
+   "descricao": "Aprovado o Requerimento nº 28, de autoria do Vereador Guilherme dos Santos Malaquias, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, 493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa “AVERIGUAR OS MOTIVOS DA NÃO INSTALAÇÃO DOS EQUIPAMENTOS DE PLAYGROUND, ACOMPANHAR E FISCALIZAR A EXECUÇÃO DO PROJETO NA PRAÇA LOCALIZADA NA ENTRADA DO BAIRRO ILHA CARAGUATÁ”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_vereadores",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "29",
+   "autoria": "Edson Menezes Mota",
+   "descricao": "Aprovado o Requerimento nº 29, de autoria do Vereador Edson Menezes Mota, solicitando gestões ao Poder Executivo para: disponibilização de linha de ônibus escolar entre a Vila dos Pescadores e Jardim Casqueiro; disponibilização de linha de ônibus comunitário entre Vila dos Pescadores e Jardim Casqueiro; ar- condicionado para o transporte escolar de Cubatão; instalação de lombofaixas para a Avenida Ferroviária, na Vila dos Pescadores; criação de sistema de segurança pública por meio de totens com câmeras de monitoramento; placas de identificação de logradouros; e manutenção das passarelas de acesso às palafitas existentes na Vila dos Pescadores.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "549/2025",
+   "especie": "PROJETO DE LEI Nº 92/2025",
+   "numero": "92/2025",
+   "autoria": "WASHINGTON LUIZ LESSA DE SOUZA",
+   "assunto": "INSTITUI NO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO A SEMANA DA SAÚDE VASCULAR E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "04/06/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "866/2025",
+   "especie": "PROJETO DE LEI Nº 134/2025",
+   "numero": "134/2025",
+   "autoria": "JOSÉ ELAN DOS SANTOS GOMES",
+   "assunto": "DENOMINA “AMAURY JOSÉ LEME”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "15/09/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDA",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "3",
+   "tipo": "deliberacao",
+   "processo": "195/2026",
+   "especie": "PROJETO DE LEI Nº 12/2026",
+   "numero": "12/2026",
+   "autoria": "RONALDO ARAÚJO QUEIROZ",
+   "assunto": "INSTITUI O SERVIÇO DE VACINAÇÃO DOMICILIAR PARA PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA (TEA) E OUTRAS DEFICIÊNCIAS QUE DIFICULTEM A LOCOMOÇÃO OU O ACESSO À REDE REGULAR DE SAÚDE NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "27/02/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz": "493ºanodafundaçãodopovoadoe Divisãolegislativa 77ºdeemancipaçãopolíticoadministrativa Ronaldo Araújo Queiroz",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva",
+  "ivan da silva": "Ivan da Silva"
+ },
+ "avisos": [],
+ "notas": [
+  "[14a ordinaria 2026-05-05] expediente_mesa b): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[14a ordinaria 2026-05-05] expediente_mesa e): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[14a ordinaria 2026-05-05] expediente_mesa f): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[14a ordinaria 2026-05-05] expediente_vereadores a): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[14a ordinaria 2026-05-05] ordem 1: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[14a ordinaria 2026-05-05] ordem 2: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[14a ordinaria 2026-05-05] ordem 3: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'"
+ ],
+ "sha256_pdf": "eff88384d7f9f0540c2dfeec68d83321c95911689199240ed589ce26e2223937"
+}

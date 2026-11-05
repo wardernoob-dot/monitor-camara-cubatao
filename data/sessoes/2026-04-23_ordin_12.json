@@ -1,0 +1,73 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-12a-sessao-ordinaria-23-04-2026/at_download/file",
+ "sessao": {
+  "numero": 12,
+  "tipo": "ordinaria",
+  "data": "2026-04-23",
+  "inicio": "14:46",
+  "fim": "14:50"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "ivan da silva": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 12ª SESSÃO ORDINÁRIA - 23/04/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": true,
+ "obstrucoes": [
+  {
+   "vereador": "roniele martins da silva",
+   "bancada": "PSD"
+  },
+  {
+   "vereador": "alessandro donizete de oliveira",
+   "bancada": "REPUBLICANOS"
+  },
+  {
+   "vereador": "ivan da silva",
+   "bancada": "PSDB"
+  },
+  {
+   "vereador": "edson menezes mota",
+   "bancada": "UNIÃO BRASIL"
+  },
+  {
+   "vereador": "jose elan dos santos gomes",
+   "bancada": "AGIR"
+  }
+ ],
+ "itens": [],
+ "vereadores": {
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva",
+  "ivan da silva": "Ivan da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "c49f8b81c770705469fd73c2651d53655201ef35b26e520a4c4a70270df527f1"
+}

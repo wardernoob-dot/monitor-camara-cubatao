@@ -1,0 +1,52 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-1a-sessao-extraordinaria-05-02-2026/at_download/file",
+ "sessao": {
+  "numero": 1,
+  "tipo": "extraordinaria",
+  "data": "2026-02-05",
+  "inicio": "14:51",
+  "fim": "14:57"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme amaral belo nogueira": "sim",
+  "guilherme dos santos malaquias": "justificada",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "maria jaqueline da silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "justificada"
+ },
+ "titulo_site": "RESUMO DA 1ª SESSÃO EXTRAORDINÁRIA - 05/02/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [],
+ "vereadores": {
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "maria jaqueline da silva": "Maria Jaqueline da Silva",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "guilherme amaral belo nogueira": "Guilherme Amaral Belo Nogueira",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "9b8adfa167ed7d8d1182e7bb837200a6842c0c9e928b9827ffd3acc6909d1f76"
+}

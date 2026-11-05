@@ -1,0 +1,436 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-5a-sessao-ordinaria-24-02-2026/at_download/file",
+ "sessao": {
+  "numero": 5,
+  "tipo": "ordinaria",
+  "data": "2026-03-03",
+  "inicio": "14:25",
+  "fim": "18:11"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "justificada",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim",
+  "washington luiz lessa de souza": "sim"
+ },
+ "titulo_site": "RESUMO DA 5ª SESSÃO ORDINÁRIA - 03/03/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "01",
+   "autoria": "Washington Luiz Lessa de Souza",
+   "descricao": "Aprovada a Moção nº 01, de autoria do Vereador Washington Luiz Lessa de Souza, Moção de Aplausos ao Senhor Luiz Carlos Martins (Jabá), como manifestação de reconhecimento público por sua trajetória de vida e pelos 53 anos de dedicação exemplar ao serviço público.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Relatório Final",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Aprovado o Relatório Final da Comissão Especial de Inquérito, nomeada através da Resolução nº 3.089/2025, para “APURAR A RESPONSABILIDADE DA CONCESSIONÁRIA ECOVIAS SOBRE OS DANOS CAUSADOS AOS MUNÍCIPES, NOTADAMENTE AS ENCHENTES E A OBSTRUÇÃO DE ACESSO E SAÍDA DOS MORADORES A MARGEM DO SISTEMA ANCHIETA-IMIGRANTES, E AINDA OS IMPACTOS SOCIOAMBIENTAIS DA CONSTRUÇÃO DA TERCEIRA VIA DA IMIGRANTES E AS CONTRAPARTIDAS AO MUNICÍPIO DE CUBATÃO.”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Alessandro Donizete de Oliveira - “Alessandro Oliveira”, nºs: 152, eliminação de crateras no leito carroçável da Rua Júlio Cunha, esquina com a Rua José Maria, no Jardim Casqueiro, próximo a Ambev; 153, identifi",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "922/2025",
+   "especie": "OFÍCIO Nº 245/2025/SEJUR",
+   "numero": "245/2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO PARCIAL AO PROJETO DE LEI Nº 146/2025, QUE \"INSTITUI O PROGRAMA DE PREVENÇÃO À DEPRESSÃO PÓS-PARTO NO MUNICÍPIO DE CUBATÃO/SP E DÁ OUTRAS PROVIDÊNCIAS\"",
+   "data_documento": "23 DE DEZEMBRO DE 2025",
+   "objeto_votado": "veto",
+   "rotulos": {
+    "favor": "manter o veto",
+    "contra": "derrubar o veto"
+   },
+   "resultado": "veto_mantido",
+   "votacoes": [
+    {
+     "turno": "discussao_unica",
+     "resultado": "veto_mantido",
+     "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+     "grupos": [
+      {
+       "acao": "manutenção",
+       "alvo": "Veto",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Veto",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor",
+      "guilherme dos santos malaquias": "contra",
+      "marcio silva nascimento": "contra"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 2
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "188/2026",
+   "especie": "PROJETO DE LEI Nº 11/2026",
+   "numero": "11/2026",
+   "autoria": "ALESSANDRO DONIZETE DE OLIVEIRA",
+   "assunto": "INSTITUI NO MUNICÍPIO DE CUBATÃO O \"DIA DA IGREJA O BRASIL PARA CRISTO\", A SER CELEBRADO ANUALMENTE NO DIA 3 DE MARÇO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "26 DE FEVEREIRO DE 2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 9,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "3",
+   "tipo": "deliberacao",
+   "processo": "80/2026",
+   "especie": "PROJETO DE LEI Nº 05/2026",
+   "numero": "05/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "ALTERA A ESTRUTURA DA SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL, PREVISTA NA LEI MUNICIPAL N° 3.562, DE 03 DE DEZEMBRO DE 2012, ALTERADA PELA LEI MUNICIPAL N° 3.917, DE 28 DE JUNHO DE 2018; CRIA O CARGO QUE ESPECIFICA, DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "26 DE JANEIRO DE 2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM MENSAGEM ADITIVA",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "4",
+   "tipo": "deliberacao",
+   "processo": "148/2026",
+   "especie": "PROJETO DE LEI COMPLEMENTAR Nº 09/2026",
+   "numero": "09/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "DISPÕE SOBRE A REMISSÃO DE DÉBITOS TRIBUTÁRIOS IMOBILIÁRIOS PARA A ENTIDADE ESPORTIVA ESPORTE CLUBE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "11 DE FEVEREIRO DE 2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "retornou_comissoes",
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "retornou_comissoes",
+     "detalhe": "A PROPOSITURA RECEBEU EMENDAS E RETORNOU ÀS COMISSÕES PERMANENTES PARA ANÁLISE, NOS TERMOS REGIMENTAIS.",
+     "grupos": [],
+     "por_vereador": {},
+     "placar": {
+      "favor": 0,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "washington luiz lessa de souza": "Washington Luiz Lessa de Souza",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [
+  "[5a ordinaria 2026-03-03] expediente_mesa b): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[5a ordinaria 2026-03-03] expediente_mesa c): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[5a ordinaria 2026-03-03] ordem 1: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[5a ordinaria 2026-03-03] ordem 3: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'"
+ ],
+ "sha256_pdf": "594584da8fd1dd9a878559ec26d79635250323ef800d5e0eaee67b3222266d63"
+}

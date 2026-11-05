@@ -1,0 +1,167 @@
+{
+ "alessandro donizete de oliveira": {
+  "nome": "Alessandro Donizete de Oliveira",
+  "bancada_declarada": "REPUBLICANOS",
+  "presenca": {
+   "sim": 60,
+   "justificada": 2
+  }
+ },
+ "alexandre mendes da silva": {
+  "nome": "Alexandre Mendes da Silva",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 58,
+   "ausente": 3,
+   "justificada": 1
+  }
+ },
+ "allan matias barboza de souza": {
+  "nome": "Allan Matias Barboza de Souza",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 53,
+   "justificada": 6,
+   "ausente": 2
+  }
+ },
+ "anderson de lana andrade": {
+  "nome": "Anderson de Lana Andrade",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 34,
+   "justificada": 4
+  }
+ },
+ "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa jose afonso": {
+  "nome": "493ºanodafundaçãodopovoadoe Divisãolegislativa 77ºdeemancipaçãopolíticoadministrativa José Afonso",
+  "bancada_declarada": null,
+  "presenca": {}
+ },
+ "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz": {
+  "nome": "493ºanodafundaçãodopovoadoe Divisãolegislativa 77ºdeemancipaçãopolíticoadministrativa Ronaldo Araújo Queiroz",
+  "bancada_declarada": null,
+  "presenca": {}
+ },
+ "daniel barbosa de assis silva": {
+  "nome": "Daniel Barbosa de Assis Silva",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 61,
+   "ausente": 1
+  }
+ },
+ "edson menezes mota": {
+  "nome": "Edson Menezes Mota",
+  "bancada_declarada": "UNIÃO BRASIL",
+  "presenca": {
+   "sim": 55,
+   "justificada": 7
+  }
+ },
+ "guilherme amaral belo nogueira": {
+  "nome": "Guilherme Amaral Belo Nogueira",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 1
+  }
+ },
+ "guilherme dos santos malaquias": {
+  "nome": "Guilherme dos Santos Malaquias",
+  "bancada_declarada": null,
+  "presenca": {
+   "justificada": 1,
+   "sim": 60,
+   "ausente": 1
+  }
+ },
+ "ivan da silva": {
+  "nome": "Ivan da Silva",
+  "bancada_declarada": "PSDB",
+  "presenca": {
+   "sim": 7
+  }
+ },
+ "jair ferreira lucas": {
+  "nome": "Jair Ferreira Lucas",
+  "bancada_declarada": "PSDB",
+  "presenca": {
+   "sim": 61,
+   "ausente": 1
+  }
+ },
+ "joemerson alves de souza": {
+  "nome": "Joemerson Alves de Souza",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 58,
+   "justificada": 4
+  }
+ },
+ "jose afonso": {
+  "nome": "José Afonso",
+  "bancada_declarada": "PSD",
+  "presenca": {
+   "sim": 59,
+   "justificada": 2
+  }
+ },
+ "jose elan dos santos gomes": {
+  "nome": "José Elan dos Santos Gomes",
+  "bancada_declarada": "AGIR",
+  "presenca": {
+   "sim": 59,
+   "justificada": 2,
+   "ausente": 1
+  }
+ },
+ "marcio silva nascimento": {
+  "nome": "Márcio Silva Nascimento",
+  "bancada_declarada": "PSB",
+  "presenca": {
+   "sim": 59,
+   "justificada": 2,
+   "ausente": 1
+  }
+ },
+ "marcos roberto silva": {
+  "nome": "Marcos Roberto Silva",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 59,
+   "justificada": 3
+  }
+ },
+ "maria jaqueline da silva": {
+  "nome": "Maria Jaqueline da Silva",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 1
+  }
+ },
+ "ronaldo araujo queiroz": {
+  "nome": "Ronaldo Araújo Queiroz",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 59,
+   "justificada": 2,
+   "ausente": 1
+  }
+ },
+ "roniele martins da silva": {
+  "nome": "Roniele Martins da Silva",
+  "bancada_declarada": "PSD",
+  "presenca": {
+   "justificada": 5,
+   "sim": 56,
+   "ausente": 1
+  }
+ },
+ "washington luiz lessa de souza": {
+  "nome": "Washington Luiz Lessa de Souza",
+  "bancada_declarada": null,
+  "presenca": {
+   "sim": 15
+  }
+ }
+}

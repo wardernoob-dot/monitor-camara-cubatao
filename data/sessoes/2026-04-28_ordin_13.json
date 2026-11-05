@@ -1,0 +1,327 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-13a-sessao-ordinaria-28-04-2026/at_download/file",
+ "sessao": {
+  "numero": 13,
+  "tipo": "ordinaria",
+  "data": "2026-04-28",
+  "inicio": "14:46",
+  "fim": "16:43"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "ivan da silva": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 13ª SESSÃO ORDINÁRIA - 28/04/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "02",
+   "autoria": "Ivan da Silva",
+   "descricao": "Aprovada a Moção nº 02, de autoria do Vereador Ivan da Silva, Moção de Aplausos ao jovem Kalleby Pietro Ribeiro de Simone, em reconhecimento à sua admirável trajetória, marcada pela determinação, pelo espírito empreendedor e pelo amor à cidade de Cubatão.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": "Balancete",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição dos senhores Vereadores, no sistema eletrônico, o Balancete Analítico da receita e da despesa do Poder Legislativo referente ao mês de março do corrente ano.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Relatório Final",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Aprovado o Relatório Final da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.098/2025, para “APURAR SE AS EMPRESAS ESTABELECIDAS NO ÂMBITO MUNICIPAL ESTÃO CUMPRINDO O PERCENTUAL MÍNIMO DE CONTRATAÇÃO DE PESSOAS COM DEFICIÊNCIA (PCD) EXIGIDO PELA LEGISLAÇÃO FEDERAL”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "e",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Edson Menezes Mota - “Edson Mota”, nºs: 473, visando à construção de lombofaixas em toda a extensão da Avenida Ferroviária I, na Vila dos Pescadores; 474, manutenção asfáltica em toda a extensão da Rua Pedro de ",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "309/2026",
+   "especie": "PROJETO DE LEI COMPLEMENTAR Nº 31/2026",
+   "numero": "31/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "INSTITUI, NOS TERMOS DO ART. 182, § 4° DA CONSTITUIÇÃO FEDERAL, DA LEI FEDERAL N° 10.257, DE 10 DE JULHO DE 2001 (ESTATUTO DAS CIDADES) E DO ART. 47 DA LEI COMPLEMENTAR MUNICIPAL N° 134, DE 28 DE DEZEMBRO DE 2023 (PLANO DIRETOR), OS INSTRUMENTOS PARAO CUMPRIMENTO DA FUNÇÃO SOCIAL DA PROPRIEDADE URBANA NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "30/03/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "retornou_comissoes",
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "retornou_comissoes",
+     "detalhe": "A PROPOSITURA RECEBEU EMENDAS E RETORNOU ÀS COMISSÕES PERMANENTES PARA ANÁLISE, NOS TERMOS REGIMENTAIS.",
+     "grupos": [],
+     "por_vereador": {},
+     "placar": {
+      "favor": 0,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "79/2026",
+   "especie": "PROJETO DE LEI Nº 04/2026",
+   "numero": "04/2026",
+   "autoria": "WASHINGTON LUIZ LESSA DE SOUZA",
+   "assunto": "ASSEGURA À GESTANTE O DIREITO À ASSISTÊNCIA DE PROFISSIONAL FISIOTERAPEUTA DURANTE O CICLO GRAVÍDICO-PUERPERAL NO ÂMBITO DO MUNICÍPIO DE CUBATÃO",
+   "data_documento": "26/01/2026. 493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "ivan da silva",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "ivan da silva": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva",
+  "ivan da silva": "Ivan da Silva"
+ },
+ "avisos": [],
+ "notas": [
+  "[13a ordinaria 2026-04-28] expediente_mesa b): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[13a ordinaria 2026-04-28] ordem 2: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'"
+ ],
+ "sha256_pdf": "9e70d8d5d93d6da54d44a52d0070625b4f704a895d7ff32bcfcfeeb36a30ec05"
+}

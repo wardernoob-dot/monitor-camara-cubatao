@@ -1,0 +1,584 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-7a-sessao-ordinaria-17-03-2026/at_download/file",
+ "sessao": {
+  "numero": 7,
+  "tipo": "ordinaria",
+  "data": "2026-03-17",
+  "inicio": "14:55",
+  "fim": "19:50"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim",
+  "washington luiz lessa de souza": "sim"
+ },
+ "titulo_site": "RESUMO DA 7ª SESSÃO ORDINÁRIA - 17/03/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": "Balancete",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição dos senhores Vereadores, no sistema eletrônico, os Balancetes Analíticos da receita e da despesa do Poder Executivo referentes aos meses de outubro, novembro e dezembro de 2025.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "lido",
+   "especie": "Relatório Parcial",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Lido o Relatório Parcial da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.097/2025, para “APURAR EVENTUAIS IRREGULARIDADES PRATICADAS POR EMPRESAS CONCESSIONÁRIAS OU PERMISSIONÁRIAS DE SERVIÇOS PÚBLICOS QUE OPERAM COM CABEAMENTO EM POSTES NO MUNICÍPIO, NO QUE TANGE AO ALINHAMENTO E A RETIRADA DE FIAÇÃO EXCEDENTE”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "19",
+   "autoria": "Guilherme dos Santos Malaquias",
+   "descricao": "Aprovado o Requerimento nº 19, de autoria do Vereador Guilherme dos Santos Malaquias, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “ORGANIZAR ATO SOLENE EM HOMENAGEM AOS 25 ANOS DE FUNDAÇÃO DO ROTARY CLUB DE CUBATÃO – JARDIM CASQUEIRO”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "e",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "20",
+   "autoria": "Ronaldo Araújo Queiroz",
+   "descricao": "Aprovado o Requerimento nº 20, de autoria do Vereador Ronaldo Araújo Queiroz, solicitando a formação de Comissão Especial de Vereadores, composta por 06 (seis) Vereadores, para, no prazo de 60 (sessenta) dias, “ORGANIZAR ATO SOLENE EM HOMENAGEM AOS TRABALHADORES DE CUBATÃO, EM RECONHECIMENTO À SUA CONTRIBUIÇÃO PARA O CRESCIMENTO E DESENVOLVIMENTO DE NOSSA CIDADE”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "f",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Joemerson Alves de Souza - “Cléber do Cavaco”, nºs: 268, reforma da praça localizada na Rua João Martins Sobrinho, próximo à Rua Rivaldo Alves Feitosa, ao lado da quadra de esporte no Conjunto Habitacional Ruben",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_vereadores",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "21",
+   "autoria": "Alexandre Mendes da Silva",
+   "descricao": "Aprovado o Requerimento nº 21, de autoria do Vereador Alexandre Mendes da Silva, solicitando gestões ao Poder Executivo para a realização de estudos e a adoção das providências necessárias para a revitalização da Praça Euclides Figueiredo.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "537/2025",
+   "especie": "OFÍCIO Nº 03/2026/SEJUR",
+   "numero": "03/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 89/2025 QUE \"DISPÕE SOBRE A INCLUSÃO DO SÍMBOLO MUNDIAL DE CONSCIENTIZAÇÃO DO TRANSTORNO DO ESPECTRO AUTISTA (TEA) NAS SINALIZAÇÕES DE VAGAS ESPECIAIS DE ESTACIONAMENTO EM TODO O TERRITÓRIO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS\"",
+   "data_documento": "09/01/2026",
+   "objeto_votado": "veto",
+   "rotulos": {
+    "favor": "manter o veto",
+    "contra": "derrubar o veto"
+   },
+   "resultado": "veto_mantido",
+   "votacoes": [
+    {
+     "turno": "discussao_unica",
+     "resultado": "veto_mantido",
+     "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+     "grupos": [
+      {
+       "acao": "manutenção",
+       "alvo": "Veto",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Veto",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "marcio silva nascimento"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor",
+      "guilherme dos santos malaquias": "contra",
+      "jair ferreira lucas": "contra",
+      "marcio silva nascimento": "contra"
+     },
+     "placar": {
+      "favor": 10,
+      "contra": 3
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "1.278/2025",
+   "especie": "PROJETO DE LEI Nº 190/2025",
+   "numero": "190/2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "INSTITUI O SISTEMA DE ESTACIONAMENTO ROTATIVO REMUNERADO DE VEÍCULOS EM VIAS E LOGRADOUROS PÚBLICOS DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "23/12/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDA",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Propositura",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor",
+      "washington luiz lessa de souza": "favor",
+      "guilherme dos santos malaquias": "contra",
+      "marcio silva nascimento": "contra"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 2
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "3",
+   "tipo": "deliberacao",
+   "processo": "327/2025",
+   "especie": "PROJETO DE LEI Nº 60/2025",
+   "numero": "60/2025",
+   "autoria": "GUILHERME DOS SANTOS MALAQUIAS",
+   "assunto": "DISPÕE SOBRE A INCLUSÃO PROGRESSIVA DE ÔNIBUS OU MICROÔNIBUS IMPULSIONADO POR MOTOR EXCLUSIVAMENTE ELÉTRICO NA FROTA DE TRANSPORTE PÚBLICO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "28/03/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "4",
+   "tipo": "deliberacao",
+   "processo": "803/2025",
+   "especie": "PROJETO DE LEI Nº 126/2025",
+   "numero": "126/2025",
+   "autoria": "ALEXANDRE MENDES DA SILVA",
+   "assunto": "DISPÕE SOBRE A REGULAMENTAÇÃO DA CIRCULAÇÃO DE BICICLETAS ELÉTRICAS, CICLOMOTORES ELÉTRICOS E EQUIPAMENTOS DE MOBILIDADE INDIVIDUAL AUTOPROPELIDOS NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "29/08/2025",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "washington luiz lessa de souza"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "washington luiz lessa de souza": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "washington luiz lessa de souza": "Washington Luiz Lessa de Souza",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [
+  "[7a ordinaria 2026-03-17] expediente_mesa d): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[7a ordinaria 2026-03-17] expediente_mesa e): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[7a ordinaria 2026-03-17] expediente_vereadores a): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[7a ordinaria 2026-03-17] ordem 1: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[7a ordinaria 2026-03-17] ordem 2: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[7a ordinaria 2026-03-17] ordem 3: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
+  "[7a ordinaria 2026-03-17] ordem 4: 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'"
+ ],
+ "sha256_pdf": "0f761fbe6c0d8899fba0d8eea7ea86a7a5629dbf5fe7a02b30089c9c9d32bbf4"
+}

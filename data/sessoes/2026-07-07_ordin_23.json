@@ -1,0 +1,225 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-23a-sessao-ordinaria-07-07-2026/at_download/file",
+ "sessao": {
+  "numero": 23,
+  "tipo": "ordinaria",
+  "data": "2026-07-07",
+  "inicio": "14:49",
+  "fim": "16:04"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 23ª SESSÃO ORDINÁRIA - 07/07/2026",
+ "participacao_remota": [
+  "allan matias barboza de souza"
+ ],
+ "encerrada_por_falta_de_quorum": true,
+ "obstrucoes": [
+  {
+   "vereador": "marcio silva nascimento",
+   "bancada": "PSB"
+  },
+  {
+   "vereador": "alessandro donizete de oliveira",
+   "bancada": "REPUBLICANOS"
+  },
+  {
+   "vereador": "jose elan dos santos gomes",
+   "bancada": "AGIR"
+  },
+  {
+   "vereador": "jair ferreira lucas",
+   "bancada": "PSDB"
+  },
+  {
+   "vereador": "edson menezes mota",
+   "bancada": "UNIÃO BRASIL"
+  },
+  {
+   "vereador": "jose afonso",
+   "bancada": "PSD"
+  }
+ ],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": "Balancete",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontram à disposição dos senhores Vereadores, no sistema eletrônico, os Balancetes Analíticos da receita e da despesa do Poder Executivo referentes aos meses de abril e maio do corrente ano.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Edson Menezes Mota - “Edson Mota”, nºs: 897, estudos técnicos e jurídicos para a viabilidade de concessão de redução de 50% do valor do IPTU, para pessoas com Transtorno do Espectro Autista; 898, criação de área",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "deliberacao",
+   "resultado": "lido",
+   "especie": "Relatório Final",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Lido o Relatório Final da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.114, de 18 de maio de 2026, para “ORGANIZAR ATO SOLENE EM HOMENAGEM AOS 40 ANOS DO CONSELHO MUNICIPAL DA CONDIÇÃO FEMININA (CMCF) DE CUBATÃO”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "e",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "40",
+   "autoria": "Alexandre Mendes da Silva",
+   "descricao": "Aprovado o Requerimento nº 40, de autoria do Vereador Alexandre Mendes da Silva, solicitando a formação de Comissão Especial de Inquérito, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, apurar os fatos relacionados ao atendimento prestado ao menor Matteo Lima Albertino no Hospital Municipal de Cubatão, investigando todas as circunstâncias que antecederam seu falecimento, bem como eventual ocorrência de falhas administrativas, estruturais, operacionais ou assistenciais, a observância dos protocolos médicos e hospitalares, a atuação dos responsáveis envolvidos e demais aspectos que se mostrarem necessários ao completo esclarecimento dos fatos.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "f",
+   "tipo": "deliberacao",
+   "resultado": "apresentado",
+   "especie": "Requerimento",
+   "numero": "41",
+   "autoria": "Anderson de Lana Andrade",
+   "descricao": "Apresentado o Requerimento nº 41, de autoria do Vereador Anderson de Lana Andrade, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, realizar estudos, levantamentos, diligências e análises técnicas sobre a estrutura física e a viabilidade de utilização do imóvel localizado na Avenida Joaquim Miguel Couto, nº 800, Centro, Cubatão/SP, como sede operacional da Guarda Civil Municipal, avaliando sua adequação funcional, os investimentos eventualmente necessários, os benefícios operacionais decorrentes da medida e os impactos para a prestação dos serviços de segurança pública no Município.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  }
+ ],
+ "vereadores": {
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "3188130be5bbbffcfa8c8a9ef187d01f64afffc58cb8b4b829e7c3adc694a3eb"
+}

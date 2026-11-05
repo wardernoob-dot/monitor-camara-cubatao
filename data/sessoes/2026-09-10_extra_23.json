@@ -1,0 +1,52 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-23a-sessao-extraordinaria-10-09-2026/at_download/file",
+ "sessao": {
+  "numero": 23,
+  "tipo": "extraordinaria",
+  "data": "2026-09-10",
+  "inicio": "12:09",
+  "fim": "12:21"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "ausente",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "ausente",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "ausente",
+  "jair ferreira lucas": "ausente",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "ausente",
+  "marcio silva nascimento": "ausente",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "ausente",
+  "roniele martins da silva": "ausente"
+ },
+ "titulo_site": "RESUMO DA 23ª SESSÃO EXTRAORDINÁRIA - 10/09/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": true,
+ "obstrucoes": [],
+ "itens": [],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "b1acf71604bb6422797d946ad1aafceb5122f745c4485d53968bdb9d8c5d89a5"
+}

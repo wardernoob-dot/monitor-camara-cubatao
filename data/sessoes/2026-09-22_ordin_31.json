@@ -1,0 +1,291 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-31a-sessao-ordinaria-22-09-2026/at_download/file",
+ "sessao": {
+  "numero": 31,
+  "tipo": "ordinaria",
+  "data": "2026-09-22",
+  "inicio": "14:22",
+  "fim": "17:42"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 31ª SESSÃO ORDINÁRIA - 22/09/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Márcio Silva Nascimento - “Marcinho”, nºs: 1103, manutenção do solo na Rua Ana Dias, nº 238, na Vila Paulista; 1104, troca de lâmpada no poste da Rua Cruzeiro do Sul, em frente ao nº 102, na Vila Nova; 1105, pav",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Relatório Final",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Aprovado o Relatório Final da Comissão Especial de Inquérito, nomeada através da Resolução nº 3.122, de 08 de julho de 2026, para “APURAR OS FATOS RELACIONADOS AO ATENDIMENTO PRESTADO AO MENOR MATTEO LIMA ALBERTINO, NO HOSPITAL MUNICIPAL DE CUBATÃO, INVESTIGANDO TODAS AS CIRCUNSTÂNCIAS QUE ANTECEDERAM SEU FALECIMENTO, BEM COMO EVENTUAL OCORRÊNCIA DE FALHAS ADMINISTRATIVAS, ESTRUTURAIS, OPERACIONAIS OU ASSISTENCIAIS, A OBSERVÂNCIA DOS PROTOCOLOS MÉDICOS E HOSPITALARES, A ATUAÇÃO DOS RESPONSÁVEIS ENVOLVIDOS E DEMAIS ASPECTOS QUE SE MOSTRAREM NECESSÁRIOS AO COMPLETO ESCLARECIMENTO DOS FATOS”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "397/2026",
+   "especie": "PROJETO DE LEI Nº 39/2026",
+   "numero": "39/2026",
+   "autoria": "IVAN DA SILVA",
+   "assunto": "INSTITUI DIRETRIZES PARA A PROMOÇÃO DO BEM-ESTAR SONORO DE PESSOAS COM HIPERSENSIBILIDADE AUDITIVA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "27/04/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "482/2026",
+   "especie": "PROJETO DE LEI Nº 53/2026",
+   "numero": "53/2026",
+   "autoria": "ALEXANDRE MENDES DA SILVA",
+   "assunto": "DISPÕE SOBRE A INSTITUIÇÃO DO PROGRAMA “EMPRESA AMIGA DO ESPORTE E DO LAZER”, NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "15/05/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "rejeitado",
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "rejeitado",
+     "detalhe": "REJEITADO",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "parecer favorável à Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alexandre mendes da silva",
+        "anderson de lana andrade",
+        "edson menezes mota",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Parecer favorável à Propositura",
+       "sentido": "contra",
+       "vereadores": [
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alexandre mendes da silva": "favor",
+      "anderson de lana andrade": "favor",
+      "edson menezes mota": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcos roberto silva": "favor",
+      "allan matias barboza de souza": "contra",
+      "daniel barbosa de assis silva": "contra",
+      "guilherme dos santos malaquias": "contra",
+      "jair ferreira lucas": "contra",
+      "jose elan dos santos gomes": "contra",
+      "marcio silva nascimento": "contra",
+      "ronaldo araujo queiroz": "contra",
+      "roniele martins da silva": "contra"
+     },
+     "placar": {
+      "favor": 6,
+      "contra": 8
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "0d6e4bc6626c84773a8bc70401361336d9132817d7ea983898cea89af90c5505"
+}

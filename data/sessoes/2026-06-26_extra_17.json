@@ -1,0 +1,252 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-17a-sessao-extraordinaria-26-06-2026/at_download/file",
+ "sessao": {
+  "numero": 17,
+  "tipo": "extraordinaria",
+  "data": "2026-06-26",
+  "inicio": "15:35",
+  "fim": "16:18"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "justificada",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "justificada"
+ },
+ "titulo_site": "RESUMO DA 17ª SESSÃO EXTRAORDINÁRIA - 26/06/2026",
+ "participacao_remota": [
+  "alexandre mendes da silva"
+ ],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "079/2026",
+   "especie": "OFÍCIO Nº 69/2026/SEJUR",
+   "numero": "69/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO PARCIAL AO PROJETO DE LEI Nº 04/2026 QUE “ASSEGURA À GESTANTE O DIREITO À ASSISTÊNCIA DE PROFISSIONAL FISIOTERAPEUTA DURANTE O CICLO GRAVÍDICO-PUERPERAL NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS”",
+   "data_documento": "22/05/2026",
+   "objeto_votado": "veto",
+   "rotulos": {
+    "favor": "manter o veto",
+    "contra": "derrubar o veto"
+   },
+   "resultado": "veto_mantido",
+   "votacoes": [
+    {
+     "turno": "discussao_unica",
+     "resultado": "veto_mantido",
+     "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA O VETO PARCIAL AO ARTIGO 3º DO PROJETO DE LEI Nº 04/2026",
+     "grupos": [
+      {
+       "acao": "manutenção",
+       "alvo": "Veto",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Veto",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "guilherme dos santos malaquias": "contra",
+      "marcio silva nascimento": "contra"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 2
+     }
+    },
+    {
+     "turno": "discussao_unica",
+     "resultado": "veto_mantido",
+     "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA VETO PARCIAL AO ARTIGO 5º DO PROJETO DE LEI Nº 04/2026",
+     "grupos": [
+      {
+       "acao": "manutenção",
+       "alvo": "Veto",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Veto",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "alexandre mendes da silva": "favor",
+      "allan matias barboza de souza": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "guilherme dos santos malaquias": "contra",
+      "marcio silva nascimento": "contra"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 2
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "526/2026",
+   "especie": "OFÍCIO Nº 086/2026/SEJUR",
+   "numero": "086/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 61/2026 QUE “DISPÕE SOBRE A ALTERAÇÃO DA LEI Nº 4.391, DE 8 DE AGOSTO DE 2025, PARA CRIAR OS PADRÕES DE FUNÇÃO GRATIFICADA F18 E F19 NO QUADRO DA CÂMARA MUNICIPAL DE CUBATÃO”",
+   "data_documento": "25/06/2026",
+   "objeto_votado": "veto",
+   "rotulos": {
+    "favor": "manter o veto",
+    "contra": "derrubar o veto"
+   },
+   "resultado": "veto_derrubado",
+   "votacoes": [
+    {
+     "turno": "discussao_unica",
+     "resultado": "veto_derrubado",
+     "detalhe": "REJEITADO EM DISCUSSÃO ÚNICA",
+     "grupos": [
+      {
+       "acao": "manutenção",
+       "alvo": "Veto",
+       "sentido": "favor",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Veto",
+       "sentido": "contra",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "guilherme dos santos malaquias": "favor",
+      "marcio silva nascimento": "favor",
+      "alessandro donizete de oliveira": "contra",
+      "alexandre mendes da silva": "contra",
+      "allan matias barboza de souza": "contra",
+      "daniel barbosa de assis silva": "contra",
+      "edson menezes mota": "contra",
+      "jair ferreira lucas": "contra",
+      "joemerson alves de souza": "contra",
+      "jose afonso": "contra",
+      "jose elan dos santos gomes": "contra",
+      "marcos roberto silva": "contra",
+      "ronaldo araujo queiroz": "contra"
+     },
+     "placar": {
+      "favor": 2,
+      "contra": 11
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "3d3e8d5200cffd91a40370b88dd7140e8759701c36158cfe69fd7bd8af73cbb0"
+}

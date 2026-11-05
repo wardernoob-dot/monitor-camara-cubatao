@@ -1,0 +1,77 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-24a-sessao-ordinaria-04-08-2026/at_download/file",
+ "sessao": {
+  "numero": 24,
+  "tipo": "ordinaria",
+  "data": "2026-08-04",
+  "inicio": "14:46",
+  "fim": "14:57"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 24ª SESSÃO ORDINÁRIA - 04/08/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": true,
+ "obstrucoes": [
+  {
+   "vereador": "alessandro donizete de oliveira",
+   "bancada": "REPUBLICANOS"
+  },
+  {
+   "vereador": "jose elan dos santos gomes",
+   "bancada": "AGIR"
+  },
+  {
+   "vereador": "edson menezes mota",
+   "bancada": "UNIÃO BRASIL"
+  },
+  {
+   "vereador": "jair ferreira lucas",
+   "bancada": "PSDB"
+  },
+  {
+   "vereador": "jose afonso",
+   "bancada": "PSD"
+  },
+  {
+   "vereador": "marcio silva nascimento",
+   "bancada": "PSB"
+  }
+ ],
+ "itens": [],
+ "vereadores": {
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "1a5293ae312668642e34942f44adda19011d39d81e34bba7322b4669cd1de085"
+}

@@ -1,0 +1,83 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-25a-sessao-extraordinaria-18-09-2026/at_download/file",
+ "sessao": {
+  "numero": 25,
+  "tipo": "extraordinaria",
+  "data": "2026-09-18",
+  "inicio": "10:10",
+  "fim": "11:16"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 25ª SESSÃO EXTRAORDINÁRIA - 18/09/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "729/2026",
+   "especie": "PROJETO DE LEI Nº 75/2026",
+   "numero": "75/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO COM A CAIXA ECONÔMICA FEDERAL, COM A GARANTIA DA UNIÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "06/08/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "nao_apreciado",
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "nao_apreciado",
+     "detalhe": "O PROJETO NÃO FOI APRECIADO EM FACE DA APRESENTAÇÃO DO OFÍCIO Nº 117/2026/SEJUR, DE AUTORIA DO PODER EXECUTIVO, SOLICITANDO A RETIRADA DE PAUTA DA PRESENTE PROPOSITURA, NOS TERMOS DO § 3º DO ARTIGO 118 DO REGIMENTO INTERNO DESTA CASA.",
+     "grupos": [],
+     "por_vereador": {},
+     "placar": {
+      "favor": 0,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "jose afonso": "José Afonso",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "b4c6d339500f19cc29651f908a553465f86a1bf62a34c709f5e12ef00cbbdd99"
+}

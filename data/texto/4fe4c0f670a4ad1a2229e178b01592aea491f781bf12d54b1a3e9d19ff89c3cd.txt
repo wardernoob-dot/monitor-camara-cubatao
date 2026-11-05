@@ -1,0 +1,594 @@
+Câmara Municipal de Cubatão
+Estado de Sao Paulo
+0
+493 Ano da Fundação do Povoado e
+0
+77 de Emancipação Politico Administrativa
+PROJETO DE RESOLUÇÃO N2 (cid:9) /2026
+Dispõe sobre o trâmite dos processos administrativos
+digitais, o uso de identificações eletrônicas, assinaturas
+digitais e certificação eletrônica de documentos no
+âmbito administrativo e no processo legislativo da
+Câmara Municipal de Cubatão, e define as categorias de
+certificados para servidores e departamentos.
+A Mesa Diretora da Câmara Municipal de Cubatão, no uso de suas atribuições legais e regimentais,
+faz saber a todos que encaminhou ao Plenário da Câmara, para a apreciação e votação, o seguinte
+Projeto de Resolução:
+Art. 1° Esta Resolução regulamenta a adoção da identificação eletrônica, a tramitação do processo
+administrativo digital, a gestão documental eletrônica e a utilização de assinaturas eletrônicas para
+a produção, tramitação, armazenamento e arquivamento de documentos no âmbito da Câmara
+Municipal de Cubatão.
+Art. 2° Para os efeitos desta Resolução, são adotadas as seguintes definições conceituais:
+I - Assinatura Eletrônica: registro e dados em formato eletrônico anexados ou associados
+logicamente a outros dados em formato eletrônico, utilizados pelo signatário com o objetivo de
+manifestar sua autoria e vontade;
+II - Certificado Digital: atestado eletrônico emitido por uma Autoridade Certificadora que associa os
+dados de validação de assinatura eletrônica a uma pessoa natural ou jurídica;
+III - Certificado Digital ICP-Brasil: certificado eletrônico emitido por Autoridade Certificadora
+regularmente credenciada junto ao Instituto Nacional de Tecnologia da informação, na
+conformidade dos padrões técnicos da Infraestrutura de Chaves Públicas Brasileira;
+IV Processo Legislativo Eletrônico: meio de automação, tramitação, instrução e disponibilização de
+autógrafos, projetos, pareceres e demais proposições normativas em meio digital;
+V - Processo Administrativo Eletrônico: sequência ordenada de atos, documentos, despachos e
+decisões interligadas em ambiente eletrônico, que visa a alcançar determinado efeito final previsto
+em lei ou ato normativo;
+VI - Captura de documento: incorporação de documento nato-digital ou digitalizado ao processo
+administrativo eletrônico, com o preenchimento de metadados obrigatórios e indexação no sistema
+co r po rat ivo;
+VII - Documento nato-digital: documento gerado e armazenado originalmente em formato
+eletrônico, sem correspondente físico em papel;
+VIII - Usuário interno: vereadores, servidores efetivos ou comissionados, estagiários e agentes em
+exercício de função gratificada na estrutura interna da Câmara Municipal de Cubatão.Câmara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+Art. 32 Os processos administrativos no âmbito da Câmara Municipal de Cubatão serão autuados,
+instruidos, tramitados, controlados e arquivados em meio eletrônico, por meio do sistema
+informatizado corporativo oficial adotado.
+Art. 42 Cada processo administrativo eletrônico receberá numeração única e cronológica, gerada de
+a- •
+forma automatizada pelo sistema, devendo todas as páginas e documentos inseridos manter ordem
+sequencial e trilha de auditoria integra, protegida e auditável, com mecanismos de detecção de
+F
+alteração, que registre a identidade do usuário, data e hora da inserção.
+Art. 52 Na ocorrência de indisponibilidade técnica, pane elétrica ou problemas de infraestrutura de
+rede que impeçam temporariamente o uso do sistema eletrônico, os atos processuais e legislativos
+urgentes poderão ser praticados provisoriamente em suporte físico.
+Parágrafo único. Cessada a indisponibilidade, os documentos físicos gerados na contingência
+deverão ser digitalizados imediatamente pelo setor responsável pela juntada e capturados para o
+sistema digital de processos, com a indicação justificada do motivo técnico.
+Art. 62 No âmbito administrativo e legislativo da Câmara Municipal de Cubatão, serão aceitos os
+seguintes níveis de assinatura eletrônica, em conformidade com a classificação disposta no art. 42
+da Lei Federal n2 14.063, de 23 de setembro de 2020:
+I - Assinatura Eletrônica Simples: aquela que permite identificar o seu signatário por meio de
+associação lógica a cadastros básicos, incluindo as credenciais de login e senha do sistema de rede
+integrada e do correio eletrônico institucional da Câmara;
+II - Assinatura Eletrônica Avançada: aquela que se associa unicamente ao signatário, utiliza dados sob
+seu controle exclusivo com alto nível de confiança e possui detecção de modificações subsequentes,
+nela incluída a assinatura realizada por meio da conta autenticada Gov.br nos níveis prata e ouro;
+Ill - Assinatura Eletrônica Qualificada: aquela que utiliza certificado digital de pessoa física (e-CPF) ou
+jurídica (e-CNR.1) válido e emitido sob os moldes técnicos da ICP-Brasil, nos termos do § 12 do art. 10
+da Medida Provisória n2 2.200-2, de 24 de agosto de 2001.
+Art. 72 A Assinatura Eletrônica Simples poderá ser utilizada apenas nas comunicações, requisições
+de almoxarifado ou atos administrativos internos de menor impacto e que não envolvam
+informações protegidas por grau de sigilo ou obrigações contratuais e financeiras.
+Art. 82 A Assinatura Eletrônica Avançada será admitida como regra geral para a tramitação, instrução
+e processamento das atividades normais da Câmara Municipal de Cubatão, compreendendo:
+I - no âmbito do Processo Legislativo, para a elaboração, apresentação e subscrição, por Vereadores
+ou por Comissões Permanentes e Temporárias, de Projetos de Lei, emendas parlamentares,
+proposições de resolução e de decreto legislativo, indicações, moções e requerimentos, ressalvados
+os atos de promulgação e a subscrição final pela Mesa Diretora, que observarão o disposto no art.
+92, inciso I;
+II - no âmbito do Processo Administrativo, para ofícios, memorandos, termos de abertura de
+processos administrativos, despachos de tramitação interna, relatórios de atividades, cadastros
+patrimoniais de almoxarifado, folhas de presença e comunicações administrativas de expedientes
+rotineiros.Câmara Municipal de Cubatão
+Estado de São Paulo
+0
+493 Ano da Fundação do Povoado e
+0
+77 de Emancipação Politico Administrativa
+Art. 92 A Assinatura Eletrônica Qualificada será de uso obrigatório e indelegável em todos os
+documentos que impliquem atos de representação externa formal da Mesa Diretora, envolvam
+responsabilidade fiscal ou financeira, ou constituam manifestações vinculantes de natureza técnica
+de órgãos de controle e de representação jurídica, sendo exigida expressamente em:
+I - autógrafos de lei, atos de promulgação de leis, resoluções e decretos legislativos subscritos pela
+Mesa Diretora;
+II - Relatórios de Gestão Fiscal - RGF, balancetes mensais, balanço geral do exercício e demais
+demonstrativos fiscais, orçamentários, financeiros ou contábeis com publicidade exigível por lei;
+Ill - relatórios de auditorias internas, notas de recomendação, pareceres conclusivos de controle de
+contas assinados pelo Controlador Geral e agentes de fiscalização;
+IV - editais de licitação, atas de registro de pregos, certidões de habilitação, atos de dispensa ou
+inexigibilidade de licitação, adjudicações, homologações de pregões e instrumentos de contratos ou
+convênios de execução financeira;
+V - portarias de nomeação, exoneração, readaptação ou punição de servidores efetivos,
+comissionados ou agentes politicos;
+VI - petições iniciais, contestações, recursos judiciais, pareceres jurídicos formais emitidos em
+projetos e licitações assinados pelos Procuradores Jurídicos Legislativos; e
+VII - folha de pagamento homologada, preenchimento e envio de DIRF, RAIS e relatórios e outros
+relatórios de obrigações acessórias relacionadas à folha de pagamento destinadas a órgãos federais.
+Art. 10. A Câmara Municipal de Cubatão adotará, como regra geral, os certificados digitais e-CPF do
+tipo Al, instalados em computador ou nuvem corporativa, custeando integralmente a sua aquisição,
+instalação, manutenção e renovação periódica para os agentes e unidades descritos neste artigo, em
+razão da possibilidade de instalação do certificado em mais de um dispositivo do próprio titular, o
+que elimina o risco de perda, extravio ou defeito de mídia física, como tokens ou cartões inteligentes,
+bem como de seu menor custo de aquisição e da facilidade de integração automática aos sistemas
+de processo eletrônico da Casa.
+§ 1° 0 fornecimento de certificados digitais do tipo A3, armazenados em token físico ou cartão
+inteligente com leitora, será admitido de forma excepcional e objetiva, exclusivamente nos seguintes
+casos:
+I - quando houver recomendação ou exigência técnica incontornável de acesso ou autenticação
+imposta por sistemas de tribunais ou órgãos externos de controle, como o e-TCESP e o sistema
+AUDESP do Tribunal de Contas do Estado de São Paulo, e outros da área fiscal ou fazenclária, que
+inviabilize de modo técnico comprovado o uso de certificados do tipo Al;
+II - quando comprovada a necessidade de portabilidade física do dispositivo criptográfico para o
+exercício de representação institucional fora das dependências físicas da Câmara, condicionada a
+parecer técnico de viabilidade da Divisão de Tecnologia da Informação.
+§ 22O custeio institucional para emissão e renovação de certificados digitais e-CPF fica condicionado
+ao critério objetivo de necessidade funcional, destinando-se exclusivamente aos agentes públicosCâmara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+que exerçam atribuições regimentais ou administrativas que exijam a prática frequente de atos
+disciplinados no art. 9.2 desta Resolução, compreendendo unicamente:
+I - vereadores no exercício da Presidência, da Primeira Secretaria e da Segunda Secretaria, o Gestor
+Legislativo e o Gestor Legislativo Adjunto;
+II - todos os Procuradores Jurídicos Legislativos em efetivo exercício;
+Ill - o Controlador Geral e os Agentes de Fiscalização do Controle Interno;
+IV - o Diretor da Divisão de Contabilidade e Finanças, o Chefe do Serviço Contábil e Financeiro, o
+Coordenador de Finanças e os servidores formalmente designados para a operacionalização
+financeira;
+V - o Agente de Contratação e o Coordenador de Planejamento de Compras e Contratações; e
+VI - o Diretor da Divisão de Tecnologia da Informação e os Analistas de Sistemas encarregados de
+segurança computacional e gerência de banco de dados.
+§ 32 A Câmara Municipal de Cubatão manterá um único certificado digital e-CNPJ institucional,
+padrão ICP-Brasil, tendo como titular e representante legal, perante a Secretaria Especial da Receita
+Federal do Brasil, o Presidente da Câmara.
+§ 42 A custódia técnica, o armazenamento seguro, as cópias de segurança e o controle lógico de
+instalação do certificado e-CNPJ institucional ficarão sob a responsabilidade da Divisão de Tecnologia
+da Informação, limitada essa responsabilidade â guarda técnica do arquivo ou dispositivo, e não ao
+seu uso, de modo que o certificado será mantido preferencialmente em dispositivo criptográfico do
+tipo A3 (token) sob guarda em local seguro ou, quando emitido no tipo Al, em módulo de segurança
+(HSM) ou cofre de chaves, com controle de acesso, autenticação em duas etapas e registro de acesso,
+vedada a exportação, a cópia ou a duplicação do arquivo sem autorização formal e motivada da
+Presidência.
+§ 52 A atuação da Câmara perante portais e órgãos externos com o certificado e-CNPJ institucional
+observará, como regra, a outorga de procurações eletrônicas nominais e especificas aos certificados
+e-CPF dos servidores autorizados, de modo que cada ato seja praticado com o certificado pessoal do
+agente e a ele individualmente atribuído, sendo a emissão do e-CNPJ única e não geradora de
+certificados individuais em nome dos servidores, ressalvada a hipótese do § 62 deste artigo, e a
+habilitação de novos usuários se dará por procuração eletrônica e não por nova emissão de
+certificado.
+§ 62 Excepcionalmente, quando o portal ou sistema externo não admitir a atuação por procuração
+eletrônica e exigir a presença do certificado da pessoa jurídica no próprio dispositivo, a Câmara
+poderá emitir certificado e-CNPJ do tipo A3, em token físico, destinado ao setor demandante,
+observando-se o seguinte:
+I - a chefia da Divisão, do Serviço ou do Gabinete demandante será a gestora responsável pela
+autorização, guarda e fiscalização do token;
+II - a detenção do token dependerá de Termo de Detenção e Guarda, e cada delegação de uso a
+servidor do mesmo setor dependerá de Termo de Delegação de Uso, ambos assinados pela chefia daCâmara Municipal de Cubatão
+Estado de São Paulo
+0
+493 Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+Divisão, do Serviço ou do Gabinete interessado, pelo servidor e pelo Presidente da Câmara, na
+qualidade de representante legal da pessoa jurídica, com ciência das responsabilidades pessoais
+decorrentes;
+Ill - a Divisão de Tecnologia da Informação manterá o registro nominal dos tokens emitidos, de seus
+detentores e das delegações, cabendo à chefia de cada setor manter o registro do responsável a cada
+uso do token e comunicar imediatamente à Divisão qualquer desligamento, remoção ou suspeita de
+comprometimento, para fins de revogação;
+IV - preferir-se-á, sempre que a plataforma permitir, a procuração eletrônica de que trata o § 59,
+reservando-se o token A3 do e-CNPJ ás hipóteses em que aquela seja tecnicamente inviável.
+§ 72 É expressamente proibido o custeio, emissão, renovação ou fornecimento de certificados
+digitais com recursos da Câmara para agentes politicos, servidores, estagiários ou terceirizados que
+não desempenhem atividades que demandem juridicamente esse recurso, sendo nulo de pleno
+direito qualquer ato administrativo praticado em contrariedade a este parágrafo.
+§ 82 Poderá ser autorizado, em caráter excepcional e individualizado, o custeio de certificado e-CPF
+a agente público não elencado no § 22 deste artigo, desde que demonstrada objetivamente a
+necessidade funcional do recurso, mediante solicitação motivada da respectiva chefia e autorização
+formal do Gestor Legislativo ou do Presidente, observado o § 72 deste artigo.
+Art. 11. A concessão, o uso, o registro, a revisão periódica e a revogação de acessos a sistemas e de
+credenciais vinculadas a certificados digitais custeados pela Câmara ou ao certificado e-CNPJ
+institucional observarão procedimento formal estruturado nos seguintes termos:
+I - Autorização formal: a habilitação de qualquer usuário para utilização de certificado e-CPF custeado
+ou do e-CNPJ dependerá de solicitação motivada da chefia da Divisão, do Serviço ou do Gabinete
+interessado, aprovada pelo Gestor Legislativo ou pelo Presidente, na qual conste a justificativa
+expressa da necessidade funcional, formalizada no respectivo termo de autorização e
+responsabilidade, conforme os modelos constantes dos Anexos I a IV desta Resolução, assinado pela
+chefia solicitante e pelo servidor titular;
+II - Registro nominal de usuários autorizados: a Divisão de Tecnologia da Informação manterá
+cadastro nominal atualizado de todos os usuários credenciados, contendo o nome completo, CPF,
+cargo, setor de lotação, atos autorizados, data de inicio e prazo de vigência da concessão;
+Ill - Finalidade especifica: o acesso concedido limitar-se-6 ás atribuições institucionais da Divisão, do
+Serviço ou do Gabinete solicitante, sendo vedada a utilização do certificado ou credencial para ato
+alheio às competências dos respectivos cargos e posições envolvidos;
+IV - Registro de logs de utilização: nos sistemas e portais em que a Câmara detenha controle técnico,
+os sistemas da Câmara e as rotinas de uso do e-CNPJ registrarão automaticamente dados auditáveis
+sobre cada transação eletrônica realizada, incluindo a identificação nominal do operador, data, hora,
+endereço IP, ação praticada e documento associado, sendo os atos praticados em portais externos
+registrados pelos próprios portais;
+V - Revisão periódica das autorizações: a revisão semestral de todas as autorizações de acessos e
+certificados ativos será coordenada pelo Controle Interno, cabendo à Divisão de Tecnologia da
+Informação fornecer o cadastro nominal e os logs de utilização, e ao Serviço de Recursos HumanosCâmara Municipal de Cubatão
+Estado de São Paulo
+0
+493 Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+informar a situação funcional dos servidores, com vistas a confirmar a manutenção da necessidade
+funcional que justificou a concessão;
+VI - Revogação imediata: a autorização de uso e os acessos às credenciais digitais serão revogados
+de oficio pela Divisão de Tecnologia da Informação no prazo máximo de 24 (vinte e quatro) horas
+contados da comunicação formal à Divisão da ocorrência de qualquer dos seguintes eventos:
+a) exoneração, demissão, aposentadoria ou término do mandato do agente público;
+b) remoção, transferência ou alteração de funções que afaste a necessidade funcional do uso do
+certificado;
+c) suspensão preventiva ou afastamento cautelar do servidor;
+d) indicio verossímil de comprometimento, vazamento de senha ou uso indevido do certificado ou
+da credencial.
+§ 1° 0 Serviço de Recursos Humanos e a autoridade competente pela prática do ato deverão
+comunicar imediatamente à Divisão de Tecnologia da Informação a ocorrência de qualquer dos
+eventos previstos no inciso VI, sobretudo exoneração, demissão, aposentadoria, término de
+mandato, remoção, transferência, alteração de funções, suspensão preventiva ou afastamento
+cautelar, a fim de viabilizar a revogação no prazo ali fixado.
+§ 22 A revogação referida no inciso VI deste artigo ensejará o imediato cancelamento da procuração
+eletrônica correspondente, nos sistemas e portais em que a Câmara detenha controle técnico,
+observado, quanto aos portais externos, o fluxo do respectivo portal ou da Secretaria Especial da
+Receita Federal do Brasil.
+Art. 12. A segregação de responsabilidades relativas às credenciais e aos certificados digitais
+observará o seguinte:
+I - à Divisão de Tecnologia da Informação cabem a custódia técnica do certificado e-CNPJ institucional
+e a disponibilização dos meios de registro e de auditoria, não lhe competindo a custódia dos
+certificados e-CPF individuais;
+II - os certificados e-CPF são de custódia pessoal e intransferível de cada titular, a quem incumbe sua
+guarda e utilização;
+Ill - a autoria, a integridade e o uso de cada ato praticado com credencial ou certificado são de
+responsabilidade pessoal do respectivo signatário;
+IV - a fiscalização substantiva do uso e da necessidade funcional das credenciais e dos certificados
+compete ao Controle Interno.
+Art. 13. Integram esta Resolução, como anexos de adoção obrigatória, os seguintes modelos
+padronizados de termos de autorização, guarda e delegação de certificados:
+I - Anexo I - Termo de Autorização e Responsabilidade de Certificado e-CPF custeado pela Câmara,
+assinado pela chefia solicitante e pelo servidor titular;Câmara Municipal de Cubatão
+Estado de São Paulo
+0
+493 Ano da Fundação do Povoado e
+183(cid:9) 19(1_4 0
+77 de Emancipação Politico Administrativa
+II - Anexo II - Termo de Detenção e Guarda de Token A3 do e-CNPJ;
+Ill - Anexo Ill - Termo de Delegação de Uso de Token A3 do e-CNPJ;
+IV - Anexo IV - Termo de Autorização de Instalação do Certificado e-CNPJ Al, sob guarda da Divisão
+de Tecnologia da Informação, no dispositivo do usuário autorizado pelo Presidente.
+Parágrafo Calico. Os termos relativos ao e-CNPJ, referidos nos Anexos II, Ill e IV, conterão
+obrigatoriamente, além da assinatura da chefia do setor responsável e do servidor, a assinatura do
+Presidente da Câmara, na qualidade de titular e representante legal da pessoa jurídica.
+Art. 14. 0 acesso e uso dos sistemas de tramitação de processos e documentos administrativos e
+legislativos dependerão de prévio cadastramento e credenciamento dos usuários internos junto a
+Divisão de Tecnologia da Informação.
+Art. 15. 0 credenciamento de que trata o art. 14 desta Resolução sera realizado por meio de
+validação e verificação adequada de identidade, podendo ocorrer de forma remota, mediante
+validação por meio de validador de acesso digital, como o gov.br, nos termos do art. 24 do Decreto
+Municipal n2 11.851/2023, ou de forma presencial por agente público qualificado.
+Art. 16. As credenciais de acesso, logins, senhas, certificados digitais, chaves privadas e os
+dispositivos de criptografia possuem caráter pessoal, individual e intransferível.
+Parágrafo único. Constitui responsabilidade direta, pessoal e inafastavel do agente público titular ou
+credenciado:
+I - a manutenção do sigilo absoluto de suas senhas de acesso, PINs, PUKs, códigos de verificação em
+duas etapas, arquivos criptográficos e a guarda física e lógica segura de tokens ou smartcards;
+II - a autoria, integridade, tempestividade e conformidade legal de todos os atos, despachos,
+assinaturas e transações efetuadas sob a utilização de seus dados de autenticação ou credencial
+eletrônica;
+Ill - a comunicação formal e imediata à Divisão de Tecnologia da Informação quanto a qualquer
+suspeita de perda, furto, extravio, clonagem ou comprometimento do sigilo de sua senha ou
+disposi jvo criptográfico.
+Art. 17 É expressamente vedado a qualquer agente público, independentemente do cargo ou
+hierarquia:
+I - ceder, emprestar, divulgar, transcrever ou permitir o conhecimento de suas senhas, PINs, códigos
+de autenticação ou chaves privadas a outros servidores, estagiários, superiores hierárquicos ou
+terceirizados;
+II - exportar e disponibilizar arquivos de certificados digitais do tipo Al em diretórios de rede
+compartilhados ou computadores de uso coletivo;
+III - assinar eletronicamente qualquer documento utilizando credencial, login, certificado ou
+dispositivo criptográfico pertencente a outro titular, ainda que sob alegação de ordem superior ou
+urgência do serviço;Câmara Municipal de Cubatão
+Estado de São Paulo
+0
+493 Ano da Fundação do Povoado e
+0
+77 de Emancipação Politico Administrativa
+IV - utilizar o certificado institucional e-CNPJ fora das finalidades e limites expressamente autorizados
+na forma desta Resolução.
+§ 1° A violação das proibições estipuladas neste artigo sujeitará o infrator e o beneficiário do uso
+indevido à responsabilização administrativa, disciplinar, civil e penal, nos termos do Estatuto dos
+Servidores Públicos Municipais e demais legislações aplicáveis, garantido o devido processo legal.
+§ 22 A alegação de ordem verbal de superior hierárquico ou de urgência operacional não exime o
+agente público da responsabilidade pessoal decorrente da cessão ou uso indevido de credenciais de
+assinatura eletrônica.
+Art. 18. Os documentos produzidos em papel e recebidos fisicamente na unidade de protocolo e
+recepção da Divisão Administrativa deverão ser imediatamente digitalizados, convertidos para PDF
+pesquisável e indexados eletronicamente no sistema da Câmara.
+Art. 19. Após o término do procedimento de digitalização e verificação de conformidade de
+integridade do documento digital em relação ao físico, o documento original impresso poderá ser
+destruido, observando-se:
+I - a guarda obrigatória física das pegas e acervos classificados como de valor histórico ou cultural da
+Câmara, cujo arquivamento físico permanente é resguardado na forma do Regimento Interno;
+II - a regulamentação técnica e as instruções arquivisticas de prazos de temporalidade de
+documentos aplicáveis.
+Art. 20. 0 Poder Legislativo de Cubatão poderá adotar o Sistema de Apoio ao Processo Legislativo,
+mantido pelo Programa Interlegis do Senado Federal, ou sistema integrado corporativo equivalente
+para a gestão eletrônica unificada de processos.
+Art. 21. 0 Serviço de Recursos Humanos promoverá, com o apoio técnico da Divisão de Tecnologia
+da Informação, orientações e capacitações periódicas aos usuários internos quanto ao uso do
+sistema de processo eletrônico e aos padrões de segurança das credenciais digitais.
+Parágrafo único. Compete j Divisão de Tecnologia da Informação prestar suporte técnico às ações
+de capacitação, especialmente quanto ao funcionamento dos sistemas informatizados, j segurança
+das credenciais digitais, j utilização de assinaturas eletrônicas e aos demais aspectos tecnológicos
+relacionados à execução desta Resolução.
+Art. 22. A guarda, a segurança, o backup, a continuidade e a preservação digital de longo prazo dos
+documentos e sistemas de que trata esta Resolução observarão a política de segurança da
+informação da Câmara Municipal de Cubatão, competindo à Divisão de Tecnologia da Informação a
+execução das rotinas de cópia de segurança, de continuidade dos serviços e de preservação digital,
+na forma nela definida.
+Art. 23. 0 tratamento de dados pessoais decorrente desta Resolução, especialmente os dados de
+validação de identidade, os logs de utilização e o cadastro nominal de usuários, observará a Lei
+Federal n° 13.709, de 14 de agosto de 2018, e a política de segurança da informação da Câmara.Camara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+Parágrafo único. A Câmara Municipal de Cubatão indicará o encarregado pelo tratamento de dados
+pessoais, a quem competirá atuar como canal de comunicação entre a Câmara, os titulares dos dados
+e a Autoridade Nacional de Proteção de Dados.
+Art. 24. A exigência de prática dos atos exclusivamente em meio eletrônico, na forma desta
+Resolução, fica condicionada à conclusão das seguintes providências, conforme cronograma de
+implantação definido pela Mesa Diretora, com apoio técnico da Divisão de Tecnologia da Informação:
+I - implantação do sistema informatizado corporativo;
+II - emissão dos certificados digitais necessários;
+Ill - adequação da infraestrutura tecnológica;
+IV - realização das capacitações dos usuários internos.
+Parágrafo único. Durante o período de adequação, de até 180 (cento e oitenta) dias, os atos poderão
+ser praticados nos moldes anteriores, assegurada a validade dos atos já praticados em meio
+eletrônico.
+Art. 25. Esta Resolução entra em vigor na data de sua publicação, observado o cronograma de
+implantação de que trata o art. 24.
+Cubat-(cid:9) P, Sala D. Helena Meletti Cunha, 6 de agosto de 2026.
+Alexandre endes da Silva
+Pr *den e
+ndro Oliveir
+10 Secretá o
+Jos s antos Gomes
+2° Secre a
+Cubatão/SP, Sal Vereador Aristides Lopes dos Santbs, 6 de agosto de 2026.
+upinambá de Oliveir ilho
+Gestogi1ativo
+_ -
+JUSTIFICATIVA
+0 presente Projeto de Resolução visa modernizar, desmaterializar e conferir celeridade e segurança jurídica
+tramitação de documentos administrativos e ao próprio Processo Legislativo da Câmara Municipal deCâmara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+Cubatão. A iniciativa alinha este Poder Legislativo às mais avançadas diretrizes nacionais sobre
+desburocratização e tecnologia, em especial à Lei Federal n° 14.129, de 29 de março de 2021, Lei do
+Governo Digital, e 6 Lei Federal n° 14.063, de 23 de setembro de 2020.
+A regulamentação do processo eletrônico e do uso de assinaturas digitais afeta diretamente o exercício do
+mandato dos senhores Vereadores, as rotinas das Comissões Permanentes e o trâmite regimental das
+proposituras legislativas.
+A continuidade da transição dos processos físicos de papel para o meio digital gerará imediata redução de
+despesas com impressão, fotocópias, insumos gráficos e armazenamento físico. A desmaterialização poupa
+o erário e simplifica os fluxos de trabalho, garantindo o principio constitucional da eficiência e o direito ao
+meio ambiente ecologicamente equilibrado.
+Além disso, ao estruturar um processo administrativo digital continuo, da autuação ao arquivamento, o
+cidadão de Cubatão passa a contar com um canal transparente de acesso às informações e 6 tramitação de
+processos em tempo real, conforme preconiza o artigo 10 da Lei Orgânica e a Lei de Acesso ã Informação,
+a Lei Federal n° 12.527/2011.
+Buscando a máxima responsabilidade com o gasto público, a presente Resolução estabelece a preferência
+pelo modelo de certificado digital e-CPF Al, armazenado em nuvem corporativa ou arquivo lógico de
+computador. Essa escolha fundamenta-se na possibilidade de instalação do certificado em mais de um
+dispositivo do próprio titular, o que elimina o risco de perda, extravio ou defeito de mídia física, como
+tokens ou cartões inteligentes, que frequentemente apresentam quebra de hardware, travamento ou
+perda, além de seu valor sensivelmente inferior ao do tipo A3 e de sua fácil integração ãs plataformas web
+adotadas pela Câmara, preservando os mesmos padrões de criptografia assimétrica da ICP-Brasil.
+Reserva-se o certificado do tipo A3, com midia física, exclusivamente para casos excepcionais, como a
+necessidade de atendimento ás exigências mandatórias e especificas de auditorias e envios contábeis
+impostas pelo sistema e-TCESP/AUDESP do Tribunal de Contas do Estado de São Paulo.
+Para evitar o uso inadequado ou a duplicação sem controle do certificado corporativo principal da Casa (e-
+CNPJ), o presente projeto define que o Presidente da Câmara figura como seu representante legal máximo,
+enquanto a Divisão de Tecnologia da Informação exercerá a custódia técnica, controle de backups e
+segurança do arquivo. A delegação para o uso operacional nos portais externos foi cuidadosamente dividida
+entre os cargos de chefia técnica de Contabilidade, Recursos Humanos e Licitações, garantindo que cada
+ato seja individualmente registrado e monitorado por rigorosos logs de auditoria.
+Por todas as razões de conveniência, oportunidade, economia e cumprimento das normas legais, a Mesa
+Diretora conclama os nobres pares deste Parlamento a aprovarem o presente Projeto de Resolução,
+propiciando um marco histórico de modernização e eficiência à Câmara Municipal de Cubatão.
+Cubatão/SP, Sala D. Helena Meletti Cunha, 3 de agosto de 2026.
+\l'Al lCl '—
+Alexan re Mendes da Silva
+PresidenteCâmara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+1° Secretár
+José El antos Gomes
+2° Secretári
+Cubatão/SP, Sala Vereador Aristides Lopes dos Santos, 3 de agosto de 2026.
+Áureo iveira Fausto Fit
+Gestor LegislativoCâmara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+ANEXO I
+TERMO DE AUTORIZAÇÃO E RESPONSABILIDADE DE CERTIFICADO DIGITAL e-CPF CUSTEADO PELA CÂMARA
+(Resolução n° (cid:9) /2026 — art. 10, §§ 22 e 8°, e art. 11, inciso I)
+Processo administrativo n9-
+1. IDENTIFICAÇÃO DO SERVIDOR TITULAR
+Nome completo 1--
+CPF
+Matricula
+Cargo / função
+Setor de lotação
+,E-mail institucional
+Telefone / ramal
+2. CERTIFICADO E FINALIDADE
+tipo de certificado e-CPF, padrão ICP-Brasil, tipo Al (regra geral - art. 10, caput)
+Fundamento do custeio ( ) art. 10, § 22 (rol) ( ) art. 10, § 82 (inclusão excepcional)
+Justificativa da necessidade
+funcional
+3. ATOS AUTORIZADOS (art. 92 da Resolução)
+Assinale os atos para os quais o certificado é destinado:
+( ) I - autógrafos de lei e atos de promulgação subscritos pela Mesa Diretora;
+( ) II - Relatórios de Gestão Fiscal, balancetes, balanço e demonstrativos fiscais/contábeis;
+( ) Ill - relatórios de auditoria, notas de recomendação e pareceres de controle de contas;
+( ) IV - editais, atas de registro de pregos, contratos, convênios e atos de licitação;
+( ) V - portarias de nomeação, exoneração, readaptação ou punição;
+( ) VI - petições, contestações, recursos e pareceres jurídicos formais;
+( ) VII - folha de pagamento homologada, DIRF, RAIS e obrigações acessórias federais.
+4. VIGÊNCIA DA AUTORIZAÇÃO
+Inicio
+Término / prazo
+5. DECLARAÇÃO DE RESPONSABILIDADE DO TITULAR
+Declaro estar ciente e comprometo-me a observar que:
+5.1. 0 certificado digital e as credenciais a ele associadas possuem caráter pessoal, individual e intransferível, sendo
+de minha custódia e responsabilidade exclusivas;
+5.2. Manterei sigilo absoluto de senhas, PINs, PUKs, códigos de verificação em duas etapas e arquivos criptográficos,
+não os cedendo, emprestando ou divulgando a terceiros, ainda que superiores hierárquicos, sob qualquer alegação
+de ordem ou urgência;
+5.3. Sou responsável pela autoria, integridade, tempestividade e conformidade legal de todos os atos praticados sob
+a utilização do certificado;
+5.4. Comunicarei formal e imediatamente à Divisão de Tecnologia da Informação qualquer suspeita de perda, furto,
+extravio, clonagem ou comprometimento do sigilo da senha ou do dispositivo;Câmara Municipal de Cubatão
+Estado de Sao Paulo
+0
+493 Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+5.5. 0 uso indevido sujeita-me à responsabilização administrativa, disciplinar, civil e penal, nos termos do Estatuto
+dos Servidores Públicos Municipais e da legislação aplicável, garantido o devido processo legal.
+6. ASSINATURAS
+Cubatão/SP, (cid:9) de (cid:9) de
+Servidor(a) titular
+Nome e matricula
+Chefia solicitante
+Nome, cargo e setor
+Autorização - Gestor Legislativo ou Presidente
+Nome e cargo
+Ciência - Divisão de Tecnologia da Informação
+Nome e matriculaCamara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+ANEXO ll
+TERMO DE DETENÇÃO E GUARDA DE TOKEN A3 DO CERTIFICADO e-CNPJ
+(Resolução n2 (cid:9) /2026 — art. 10, § 62, incisos I e II)
+Processo administrativo n2 (cid:9)
+1. SETOR DEMANDANTE E CHEFIA GESTORA RESPONSÁVEL
+Setor demandante
+Chefia gestora responsável
+CPF / matricula
+Cargo
+E-mail institucional / ramal
+2. IDENTIFICAÇÃO DO TOKEN E MOTIVAÇÃO TÉCNICA
+Tipo 'e-CNPJ, padrão ICP-Brasil, tipo A3 (token físico)
+N2 de série do token
+Autoridade Certificadora
+emissora
+Validade do certificado
+Portal/sistema externo que
+exigiu o token
+Motivo da impossibilidade de
+procuração eletrônica
+3. OBRIGAÇÕES DA CHEFIA GESTORA (DETENTORA)
+3.1. Responsabilizar-se pela autorização, guarda física e lógica e fiscalização do token, mantendo-o em local seguro
+(cofre ou equivalente) quando não estiver em uso;
+3.2. Manter registro nominal atualizado dos detentores e usuários e o registro histórico dos usos do token, com
+identificação do responsável a cada utilização;
+3.3. Autorizar o uso do token exclusivamente por servidor do próprio setor, mediante Termo de Delegação de Uso
+(Anexo Ill);
+3.4. Comunicar imediatamente à Divisão de Tecnologia da Informação qualquer desligamento, remoção, suspeita
+de comprometimento ou uso indevido, para fins de revogação;
+3.5. Preferir, sempre que a plataforma permitir, a procuração eletrônica de que trata o art. 10, § 52, reservando o
+token às hipóteses tecnicamente inviáveis.
+4. ASSINATURAS
+Cubatão/SP, (cid:9) de (cid:9) de
+Chefia gestora responsável (detentora)
+Nome, cargo e setor
+Presidente da Câmara
+Titular e representante legal da pessoa jurídica
+Ciência - Divisão de Tecnologia da Informação
+Nome e matriculaCamara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+ANEXO III
+TERMO DE DELEGAÇÃO DE USO DE TOKEN A3 DO CERTIFICADO e-CNPJ
+(Resolução n2 (cid:9) /2026 - art. 10, § 62, incisos II, Ill e IV)
+Processo administrativo n2 (cid:9)
+Vinculado ao Termo de Detenção e Guarda (Anexo II) do token n2 de série (cid:9)
+1. SERVIDOR USUÁRIO
+Nome completo
+1CPF
+!Matricula
+!Cargo / função
+-t-
+Setor de lotação
+2. FINALIDADE E PERÍODO DA DELEGAÇÃO
+Portal/sistema externo
+Finalidade especifica do uso
+Período autorizado(cid:9) de (cid:9) a
+3. RESPONSABILIDADES DO USUÁRIO DELEGADO
+3.1. Utilizar o token exclusivamente para a finalidade e no período aqui autorizados, no âmbito das competências
+do setor;
+3.2. Registrar, a cada uso, a identificação do responsável, a data, a hora e o ato praticado, em controle mantido pela
+chefia setorial;
+3.3. Zelar pela guarda do dispositivo durante o uso e devolvê-lo â chefia gestora ao término, mantendo sigilo do PIN
+e das credenciais;
+3.4. Responder pessoalmente pela autoria e integridade dos atos praticados sob a delegação, não se admitindo
+alegação de ordem verbal ou urgência para eximir a responsabilidade;
+3.5. Comunicar imediatamente à chefia gestora e â Divisão de Tecnologia da Informação qualquer perda, extravio,
+suspeita de comprometimento ou uso indevido.
+4. ASSINATURAS
+Cubatão/SP, (cid:9) de (cid:9) de (cid:9)
+Servidor(a) usuário(a) delegado(a)
+Nome e matricula
+Chefia gestora responsável
+Nome, cargo e setor
+Presidente da Câmara
+Titular e representante legal da pessoa jurídica
+Ciência - Divisão de Tecnologia da Informação
+Nome e matriculaCamara Municipal de Cubatão
+Estado de São Paulo
+493° Ano da Fundação do Povoado e
+77° de Emancipação Politico Administrativa
+ANEXO IV
+TERMO DE AUTORIZAÇÃO DE INSTALAÇÃO DO CERTIFICADO e-CNPJ Al
+(Resolução n2 (cid:9) /2026 — art. 10, § 42)
+Processo administrativo n2 (cid:9)
+Autorização de instalação e operação do certificado e-CNPJ institucional, padrão ICP-Brasil, tipo Al, sob custódia
+técnica da Divisão de Tecnologia da Informação, no dispositivo abaixo identificado, indicado pelo Presidente da
+Câmara.
+1. DISPOSITIVO E USUÁRIO AUTORIZADO
+Usuário autorizado
+CPF / matrícula
+Cargo / setor
+Dispositivo (n° de patrimônio /
+hostname)
+Local de instalação
+2. MEDIDAS TÉCNICAS DE PROTEÇÃO (art. 10, § 49)
+2.1. 0 certificado Al será mantido em módulo de segurança (HSM) ou cofre de chaves, com controle de acesso,
+autenticação em duas etapas e registro de acesso;
+2.2. É vedada a exportação, a cópia ou a duplicação do arquivo do certificado sem autorização formal e motivada da
+Presidência;
+2.3. A custódia técnica (guarda, cópias de segurança e controle de instalação) compete â Divisão de Tecnologia da
+Informação, não abrangendo o uso, que se dá na forma dos arts. 10, § 52, e 11;
+2.4. Preferir-se-6 a atuação por procuração eletrônica (art. 10, § 52), reservando-se a instalação direta do e-CN-PJ às
+hipóteses técnicas em que aquela seja inviável.
+3. DECLARAÇÃO DO USUÁRIO AUTORIZADO
+3.1. Declaro ciência das medidas de proteção e das vedações acima, comprometendo-me a não exportar, copiar ou
+duplicar o arquivo do certificado, e a comunicar imediatamente â Divisão de Tecnologia da Informação qualquer
+incidente de segurança.
+4. ASSINATURAS
+Cubatão/SP, (cid:9) de (cid:9) de
+Usuário(a) autorizado(a)
+Nome e matricula
+Divisão de Tecnologia da Informação
+Responsável técnico - nome e matricula
+Presidente da Câmara
+Titular e representante legal da pessoa jurídica
