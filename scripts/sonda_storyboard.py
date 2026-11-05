@@ -70,7 +70,12 @@ def baixar_urls(vid, urls):
     d.mkdir(parents=True, exist_ok=True)
     tot = 0
     for i, u in enumerate(urls):
-        r = http.get(u, timeout=30)
+        for tentativa in range(4):
+            r = http.get(u, timeout=30)
+            if r.status_code == 200:
+                break
+            import time
+            time.sleep(2 * (tentativa + 1))
         r.raise_for_status()
         (d / f"L3_M{i:03d}.jpg").write_bytes(r.content)
         tot += len(r.content)
