@@ -15,6 +15,7 @@ import numpy as np
 from PIL import Image
 
 from . import cabecalho as C
+from . import validacao as V
 from . import painel as P
 from . import youtube as yt
 from .parser_resumo import MESES
@@ -99,13 +100,43 @@ def processar_videos(dados: Path, http=None) -> dict:
     return rel
 
 
+def limpar_falsos(dados: Path) -> int:
+    """Remove votacoes cujo print nao e o painel (falso positivo antigo do detector) e renumera."""
+    dados = Path(dados)
+    removidas = 0
+    for arq in sorted((dados / "painel").glob("*.json")):
+        d = json.loads(arq.read_text("utf-8"))
+        boas = []
+        for v in d["votacoes"]:
+            img = dados / v["evidencia"]
+            t = np.asarray(Image.open(img).convert("RGB")).astype(np.int16) if img.exists() else None
+            if t is not None and not P.eh_painel(t):
+                img.unlink()
+                removidas += 1
+                continue
+            boas.append(v)
+        if len(boas) == len(d["votacoes"]):
+            continue
+        for n, v in enumerate(boas, 1):
+            novo = f"painel/img/{d['video_id']}_{n:02d}.jpg"
+            if v["evidencia"] != novo:
+                (dados / v["evidencia"]).rename(dados / novo)
+            v["n"], v["evidencia"] = n, novo
+        d["votacoes"] = boas
+        arq.write_text(json.dumps(d, ensure_ascii=False, indent=1), "utf-8")
+        print(f"  limpeza: {d['titulo'][:50]} -> {len(boas)} votacoes (falsos removidos)")
+    return removidas
+
+
 def identificar_pendentes(dados: Path) -> dict:
-    """Preenche 'materia' (o que estava em votacao) nas votacoes ja lidas, usando os prints salvos."""
+    """Preenche 'materia' (o que estava em votacao) nas votacoes ja lidas, usando os prints salvos.
+    Leitura vazia e refeita em execucoes seguintes (ate 3 tentativas no total)."""
     dados = Path(dados)
     rel = {"sessoes": 0, "votacoes": 0, "identificadas": 0, "erros": []}
     for arq in sorted((dados / "painel").glob("*.json")):
         d = json.loads(arq.read_text("utf-8"))
-        pend = [v for v in d["votacoes"] if "materia" not in v]
+        pend = [v for v in d["votacoes"] if "materia" not in v
+                or (not v["materia"].get("texto") and v["materia"].get("tentativas", 1) < 3)]
         if not pend:
             continue
         try:
@@ -117,6 +148,8 @@ def identificar_pendentes(dados: Path) -> dict:
             print(f"  ! cabecalho {arq.name}: {e!r}"[:200])
             continue
         for v, m in zip(pend, ids):
+            if "materia" in v:
+                m["tentativas"] += v["materia"].get("tentativas", 1)
             if m["situacao_lida"] and v.get("resultado") and m["situacao_lida"] != v["resultado"]:
                 m["aviso"] = f"resultado lido no texto ({m['situacao_lida']}) diferente do lido pela cor ({v['resultado']})"
             v["materia"] = m
@@ -127,3 +160,35 @@ def identificar_pendentes(dados: Path) -> dict:
         print(f"  cabecalhos: {d['titulo'][:50]} -> " + "; ".join(
             (f"{v['materia']['tipo']} {v['materia']['numero']}" if v['materia']['identificado'] else "?") for v in pend))
     return rel
+
+
+def validar_todas(dados: Path) -> dict:
+    """Confere toda materia lida contra a pauta do dia (refeito a cada execucao: barato e sem API).
+    Grava materia['validacao'] e materia['final'] (o que pode ser publicado)."""
+    dados = Path(dados)
+    apel = V.apelidos(dados)
+    cont: dict[str, int] = {}
+    for arq in sorted((dados / "painel").glob("*.json")):
+        d = json.loads(arq.read_text("utf-8"))
+        mats = []
+        for v in d["votacoes"]:
+            m = v.get("materia")
+            if m and m.get("texto"):
+                m.update({k: x for k, x in C.interpretar(m["texto"]).items() if k != "texto"})
+            mats.append(m)
+        cands = V.candidatos(V.pautas_do_dia(dados, d["sessao"]["data"])) if d["sessao"].get("data") else []
+        for v, r in zip(d["votacoes"], V.validar_sessao(mats, cands, apel)):
+            if not v.get("materia"):
+                continue
+            r = r or {"status": "nao_lido", "motivo": "cabecalho nao transcrito"}
+            v["materia"]["validacao"] = r
+            m = v["materia"]
+            if r["status"] in ("confirmado_pauta", "corrigido_pauta"):
+                m["final"] = {"tipo": r["tipo"], "numero": r["numero"], "ano": r.get("ano") or m.get("ano"),
+                              "emenda": m["tipo"] == "EMENDA", "parecer": m.get("parecer"), "turno": m.get("turno")}
+            else:
+                m.pop("final", None)
+            cont[r["status"]] = cont.get(r["status"], 0) + 1
+        arq.write_text(json.dumps(d, ensure_ascii=False, indent=1), "utf-8")
+    print("  validacao pela pauta: " + ", ".join(f"{k}={n}" for k, n in sorted(cont.items())))
+    return cont

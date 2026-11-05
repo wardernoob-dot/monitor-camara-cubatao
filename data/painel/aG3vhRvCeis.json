@@ -56,7 +56,12 @@
     "parecer": null,
     "autor": "Vereador Edson Mota",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -105,7 +110,12 @@
     "parecer": null,
     "autor": "Vereador Alessandro Oliveira",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -154,7 +164,12 @@
     "parecer": null,
     "autor": "Marcinho",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -203,7 +218,12 @@
     "parecer": null,
     "autor": "Vereador Dr. Anderson de Laria",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -252,7 +272,12 @@
     "parecer": null,
     "autor": null,
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -301,7 +326,12 @@
     "parecer": null,
     "autor": null,
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -350,7 +380,21 @@
     "parecer": null,
     "autor": "Vereador Ronaldo da Comissão",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "22"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "22",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "2ª Discussão"
+    }
    }
   },
   {
@@ -399,7 +443,21 @@
     "parecer": null,
     "autor": "Vereador Xuxa",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "38"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "38",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "2ª Discussão"
+    }
    }
   }
  ]

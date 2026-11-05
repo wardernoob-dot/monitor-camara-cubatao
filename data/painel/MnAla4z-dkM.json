@@ -56,7 +56,21 @@
     "parecer": "Parecer Contrário em Separado",
     "autor": "Vereador Rony Martins",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "92"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "92",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": "Parecer Contrário em Separado",
+     "turno": null
+    }
    }
   },
   {
@@ -105,7 +119,21 @@
     "parecer": null,
     "autor": "Prefeito Municipal",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "92"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "92",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "1ª Discussão"
+    }
    }
   },
   {
@@ -154,7 +182,21 @@
     "parecer": null,
     "autor": "Prefeito Municipal",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "92"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "92",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "2ª Discussão"
+    }
    }
   }
  ]

@@ -73,6 +73,10 @@ def miniaturas(pasta: Path, intervalo_s: int = 10):
 
 def eh_painel(t: np.ndarray) -> bool:
     lum = t.mean(axis=2)
+    # faixa do topo e coluna do placar (SIM/NAO/ABSTER/VOTOS) sao quase pretas no painel (~17);
+    # plano de tribuna com terno escuro passava no teste de fundo escuro (36a sessao) e da ~70 aqui
+    if lum[0:12].mean() > 35 or lum[20:140, 268:320].mean() > 35:
+        return False
     fundo_escuro = (lum[15:150, 0:300] < 60).mean()
     if fundo_escuro < 0.55 or fundo_escuro > 0.97:
         return False

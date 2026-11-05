@@ -56,7 +56,11 @@
     "parecer": null,
     "autor": null,
     "identificado": false,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "nao_lido",
+     "motivo": "cabecalho nao transcrito"
+    }
    }
   },
   {
@@ -105,7 +109,11 @@
     "parecer": null,
     "autor": null,
     "identificado": false,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "nao_lido",
+     "motivo": "cabecalho nao transcrito"
+    }
    }
   }
  ]

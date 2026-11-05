@@ -36,7 +36,9 @@ RE_TIPO = re.compile(
     r"Of[íi]cio|Emenda|Indica[çc][ãa]o)\b\.?", re.I)
 RE_NUM = re.compile(r"^\W*(?:n[º°o]?\.?\s*)?(\d[\d\.]{0,6})(?:\s*/\s*(\d{4}))?", re.I)
 RE_TURNO = re.compile(r"(1ª|2ª|[12]\s*[ªa°o])\s*Discuss[ãa]o|Discuss[ãa]o [ÚU]nica|Reda[çc][ãa]o Final", re.I)
-RE_PARECER = re.compile(r"Parecer\s+(Favor[áa]vel|Contr[áa]rio)(?:\s+em\s+Separado)?", re.I)
+RE_PARECER = re.compile(r"Parecer\s+(?:em\s+Conjunto\s+)?(Favor[áa]vel|Contr[áa]rio)(?:\s+em\s+Separado)?", re.I)
+# "Emenda ao PL nº 27/2026", "Veto Parcial ao PL nº 60/2025": a materia de referencia
+RE_REF = re.compile(r"\b(PLC|PL|PR|PDL|PELOM)\s*n?[º°o]?\.?\s*(\d[\d\.]{0,6})\s*/\s*(\d{4})", re.I)
 RE_AUTOR = re.compile(r"Autor(?:ia)?\s*:\s*(.+)$", re.I)
 TIPO_CANON = {"requerimento": "RQ", "rq": "RQ", "pl": "PL", "plc": "PLC", "pr": "PR", "pdl": "PDL",
               "pelom": "PELOM", "veto": "VETO", "parecer": "PARECER", "emenda": "EMENDA",
@@ -134,7 +136,7 @@ def interpretar(em_votacao: str) -> dict:
     """Texto transcrito -> campos estruturados (ou marca como nao identificado)."""
     t = re.sub(r"\s+", " ", em_votacao or "").strip(" -")
     out = {"texto": t, "tipo": None, "numero": None, "ano": None, "turno": None, "parecer": None,
-           "autor": None, "identificado": False}
+           "autor": None, "ref": None, "identificado": False}
     if not t or "[?]" in t:
         return out
     if m := RE_PARECER.search(t):
@@ -152,28 +154,43 @@ def interpretar(em_votacao: str) -> dict:
             resto = re.sub(r"^\D*", "", resto)
         if m := RE_NUM.search(resto):
             out["numero"], out["ano"] = m.group(1).rstrip("."), m.group(2)
+    if out["tipo"] in ("EMENDA", "VETO") and (m := RE_REF.search(t)):
+        out["ref"] = {"tipo": m.group(1).upper(), "numero": m.group(2).rstrip("."), "ano": m.group(3)}
+        if out["tipo"] == "VETO" and not out["numero"]:
+            out["numero"], out["ano"] = out["ref"]["numero"], out["ref"]["ano"]
     if m := RE_TURNO.search(t):
         out["turno"] = m.group(0)
     if m := RE_AUTOR.search(t):
         out["autor"] = m.group(1).strip()
-    out["identificado"] = bool(out["tipo"] and (out["numero"] or out["tipo"] in ("RELATÓRIO", "RELATORIO")))
+    out["identificado"] = bool(out["tipo"] and (out["numero"] or out["ref"] or out["tipo"] in ("RELATÓRIO", "RELATORIO")))
     return out
 
 
-def identificar(cabecalhos: list[np.ndarray], chave: str | None = None) -> list[dict]:
-    """Uma chamada pra todos os cabecalhos da sessao. Devolve, por votacao, transcricao + campos."""
+def identificar(cabecalhos: list[np.ndarray], chave: str | None = None, pausa: float = 4.0) -> list[dict]:
+    """Uma chamada pra todos os cabecalhos da sessao; faixa que voltar vazia ganha uma segunda
+    chamada sozinha e mais ampliada (na 35a as duas vieram vazias com o texto legivel)."""
+    import time
+
     if not cabecalhos:
         return []
     faixas = transcrever(tira(cabecalhos), len(cabecalhos), chave)
     por_n = {int(f.get("n", 0)): f for f in faixas}
     res = []
-    for i in range(1, len(cabecalhos) + 1):
+    for i, c in enumerate(cabecalhos, 1):
         f = por_n.get(i, {})
+        tentativa = 1
+        if not (f.get("em_votacao") or "").strip():
+            time.sleep(pausa)  # plano gratuito: limite de requisicoes por minuto
+            try:
+                f = (transcrever(tira([c], escala=5), 1, chave) or [{}])[0]
+                tentativa = 2
+            except Exception:  # noqa: BLE001
+                pass
         res.append({
             "situacao_lida": (f.get("situacao") or "").upper() or None,
             "sessao_lida": f.get("sessao") or None,
             **interpretar(f.get("em_votacao", "")),
+            "tentativas": tentativa,
             "fonte": f"transcricao do cabecalho do painel por modelo de visao ({MODELO}, API Gemini)",
         })
     return res
-

@@ -56,7 +56,12 @@
     "parecer": null,
     "autor": "Vereador Marcinho",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -105,7 +110,12 @@
     "parecer": null,
     "autor": "Vereador Marcinho",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -153,8 +163,26 @@
     "turno": null,
     "parecer": "Parecer Favorável",
     "autor": null,
-    "identificado": false,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": {
+     "tipo": "PL",
+     "numero": "27",
+     "ano": "2026"
+    },
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "27"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "27",
+     "ano": null,
+     "emenda": true,
+     "parecer": "Parecer Favorável",
+     "turno": null
+    }
    }
   },
   {
@@ -202,8 +230,26 @@
     "turno": null,
     "parecer": null,
     "autor": "Vereador Tinho",
-    "identificado": false,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "identificado": true,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": {
+     "tipo": "PL",
+     "numero": "27",
+     "ano": "2026"
+    },
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "27"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "27",
+     "ano": null,
+     "emenda": true,
+     "parecer": null,
+     "turno": null
+    }
    }
   },
   {
@@ -252,7 +298,21 @@
     "parecer": "Parecer Favorável",
     "autor": null,
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "27"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "27",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": "Parecer Favorável",
+     "turno": null
+    }
    }
   },
   {
@@ -301,7 +361,21 @@
     "parecer": null,
     "autor": "Vereador Marcinho",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "27"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "27",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "1ª DISCUSSÃO"
+    }
    }
   },
   {
@@ -350,7 +424,21 @@
     "parecer": "Parecer Favorável",
     "autor": null,
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PR",
+     "numero": "10"
+    },
+    "final": {
+     "tipo": "PR",
+     "numero": "10",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": "Parecer Favorável",
+     "turno": null
+    }
    }
   },
   {
@@ -399,7 +487,21 @@
     "parecer": null,
     "autor": "Mesa da Câmara",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PR",
+     "numero": "10"
+    },
+    "final": {
+     "tipo": "PR",
+     "numero": "10",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "DISCUSSÃO ÚNICA"
+    }
    }
   },
   {
@@ -448,7 +550,21 @@
     "parecer": null,
     "autor": "Vereador Marcinho",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.1-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "27"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "27",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "2ª DISCUSSÃO"
+    }
    }
   }
  ]

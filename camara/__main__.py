@@ -35,15 +35,16 @@ def main():
         if rel["avisos"]:
             print(f"{len(rel['avisos'])} aviso(s):", *rel["avisos"][:30], sep="\n  ")
 
-        from .videos import processar_videos
+        from .videos import identificar_pendentes, limpar_falsos, processar_videos, validar_todas
 
         rv = processar_videos(a.dados)
         print(f"{rv['processados']} transmissao(oes) lida(s) no painel; {len(rv['erros'])} erro(s)")
 
-        from .videos import identificar_pendentes
-
+        if n := limpar_falsos(a.dados):
+            print(f"{n} falso(s) positivo(s) do painel removido(s)")
         ri = identificar_pendentes(a.dados)
         print(f"cabecalhos: {ri['identificadas']}/{ri['votacoes']} votacao(oes) identificada(s); {len(ri['erros'])} erro(s)")
+        validar_todas(a.dados)
 
 
 if __name__ == "__main__":

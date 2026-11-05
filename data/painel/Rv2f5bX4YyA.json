@@ -56,7 +56,12 @@
     "parecer": null,
     "autor": null,
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
    }
   },
   {
@@ -105,7 +110,24 @@
     "parecer": "Parecer Favorável",
     "autor": null,
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "corrigido_pauta",
+     "tipo": "PL",
+     "numero": "39",
+     "ano": "2026",
+     "numero_lido": "29",
+     "motivo": "unico PL da pauta compativel por 1 digito de diferenca"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "39",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": "Parecer Favorável",
+     "turno": null
+    }
    }
   },
   {
@@ -154,7 +176,24 @@
     "parecer": null,
     "autor": "Vereador Ivan Hildebrando",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "corrigido_pauta",
+     "tipo": "PL",
+     "numero": "39",
+     "ano": "2026",
+     "numero_lido": "29",
+     "motivo": "unico PL da pauta compativel por autor"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "39",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": null
+    }
    }
   },
   {
@@ -203,7 +242,21 @@
     "parecer": "Parecer Favorável",
     "autor": null,
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "53"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "53",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": "Parecer Favorável",
+     "turno": null
+    }
    }
   },
   {
@@ -252,7 +305,24 @@
     "parecer": null,
     "autor": "Vereador Ivan Hildebrando",
     "identificado": true,
-    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)"
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "ref": null,
+    "validacao": {
+     "status": "corrigido_pauta",
+     "tipo": "PL",
+     "numero": "39",
+     "ano": "2026",
+     "numero_lido": "29",
+     "motivo": "unico PL da pauta compativel por autor"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "39",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": null
+    }
    }
   }
  ]
