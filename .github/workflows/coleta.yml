@@ -1,0 +1,50 @@
+name: coleta-diaria
+
+on:
+  schedule:
+    # 08h17 em Brasilia (11h17 UTC), todo dia
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+    inputs:
+      desde:
+        description: "Ano inicial da coleta"
+        default: "2026"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Testes
+        run: python -m pytest -q
+
+      - name: Coletar e processar
+        run: python -m camara tudo --desde "${{ github.event.inputs.desde || '2026' }}"
+
+      - name: Commit dos dados novos
+        run: |
+          git config user.name  "monitor-camara-bot"
+          git config user.email "monitor-camara-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Nada novo hoje."
+          else
+            git commit -m "dados: coleta $(date -u +%Y-%m-%d)"
+            git push
+          fi

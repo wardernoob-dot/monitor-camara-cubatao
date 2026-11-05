@@ -1,0 +1,191 @@
+"""Coletor: varre as pastas do site da Camara, baixa PDFs novos e extrai o texto.
+
+O RSS do site (Plone) vem incompleto e fora de ordem, e as pastas de PL e pauta
+nem tem RSS. Por isso o coletor le a listagem HTML das pastas.
+
+Educacao com o servidor: User-Agent identificado, 1 requisicao por vez com
+intervalo, e so baixa o que ainda nao esta no indice.
+"""
+from __future__ import annotations
+
+import hashlib
+import io
+import json
+import re
+import time
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import urljoin, urlparse
+
+BASE = "https://www.cubatao.sp.leg.br"
+SECOES = {
+    "resumo": "/processo-legislativo/resumo-das-sessoes",
+    "pauta": "/processo-legislativo/pauta-das-sessoes-1",
+    "projetos": "/processo-legislativo/projetos-de-lei",
+}
+USER_AGENT = "monitor-camara-cubatao/0.1 (projeto civico de transparencia; contato no README)"
+INTERVALO_S = 1.5
+
+_IGNORAR = re.compile(r"/RSS$|/sendto_form|/print|#|mailto:|/login|/search|@@", re.I)
+_ANO = re.compile(r"\b(20\d{2})\b")
+
+
+@dataclass
+class Link:
+    url: str
+    titulo: str
+
+
+def extrair_links(html: str, pagina_url: str, prefixo: str) -> list[Link]:
+    """Links do conteudo principal de uma pagina Plone que ficam dentro do prefixo da secao."""
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(html, "html.parser")
+    area = soup.select_one("#content") or soup.body or soup
+    vistos, out = set(), []
+    for a in area.select("a[href]"):
+        href = urljoin(pagina_url, a["href"].strip())
+        titulo = re.sub(r"\s+", " ", a.get_text(" ", strip=True))
+        p = urlparse(href)
+        if p.netloc and p.netloc not in urlparse(BASE).netloc and urlparse(BASE).netloc not in p.netloc:
+            continue
+        if _IGNORAR.search(href) or not titulo or titulo.lower().startswith("leia mais"):
+            continue
+        if not p.path.startswith(prefixo):
+            continue
+        href = href.split("#")[0]
+        if href.rstrip("/") == pagina_url.rstrip("/") or href in vistos:
+            continue
+        vistos.add(href)
+        out.append(Link(href, titulo))
+    return out
+
+
+def url_download(url: str) -> str:
+    """Pagina /view de arquivo Plone -> URL que entrega o binario."""
+    if url.endswith("/view"):
+        return url[: -len("/view")] + "/at_download/file"
+    return url
+
+
+class Coletor:
+    def __init__(self, pasta_dados: Path, desde: int = 2026, sessao=None, guardar_pdf: bool = False):
+        import requests
+
+        self.dados = Path(pasta_dados)
+        self.desde = desde
+        self.guardar_pdf = guardar_pdf
+        self.http = sessao or requests.Session()
+        self.http.headers["User-Agent"] = USER_AGENT
+        self._ultimo = 0.0
+        self.indice_path = self.dados / "indice.json"
+        self.indice: dict = json.loads(self.indice_path.read_text("utf-8")) if self.indice_path.exists() else {}
+        (self.dados / "texto").mkdir(parents=True, exist_ok=True)
+        if guardar_pdf:
+            (self.dados / "pdf").mkdir(parents=True, exist_ok=True)
+
+    # ---------- rede ----------
+    def _get(self, url: str):
+        espera = INTERVALO_S - (time.monotonic() - self._ultimo)
+        if espera > 0:
+            time.sleep(espera)
+        for tentativa in range(3):
+            try:
+                r = self.http.get(url, timeout=60)
+                self._ultimo = time.monotonic()
+                if r.status_code == 200:
+                    return r
+                if r.status_code in (404, 410):
+                    return None
+            except Exception as e:  # noqa: BLE001
+                if tentativa == 2:
+                    print(f"  ! falhou {url}: {e}")
+            time.sleep(3 * (tentativa + 1))
+        return None
+
+    # ---------- varredura ----------
+    def varrer(self, secao: str) -> list[dict]:
+        prefixo = SECOES[secao]
+        fila = [(BASE + prefixo, 0, None)]
+        visitados, docs = set(), []
+        while fila:
+            url, prof, titulo_pasta = fila.pop(0)
+            if url in visitados or prof > 3:
+                continue
+            visitados.add(url)
+            r = self._get(url)
+            if r is None:
+                continue
+            if "pdf" in r.headers.get("content-type", ""):
+                docs.append({"url": url, "titulo": titulo_pasta or url.rsplit("/", 1)[-1], "secao": secao})
+                continue
+            for ln in extrair_links(r.text, url, prefixo):
+                ano = _ANO.search(ln.titulo)
+                # filtro de ano so nas pastas de ano (primeiro nivel)
+                if prof == 0 and ano and int(ano.group(1)) < self.desde:
+                    continue
+                alvo = url_download(ln.url)
+                if alvo != ln.url or alvo.lower().endswith(".pdf") or "/arquivos/" in ln.url:
+                    # arquivos ficam em .../arquivos/...; alguns nao tem extensao (ex.: pl-92.2026).
+                    # baixar() confere o content-type e descarta o que nao for PDF.
+                    docs.append({"url": alvo, "titulo": ln.titulo, "secao": secao})
+                else:
+                    fila.append((ln.url, prof + 1, ln.titulo))
+        # dedup preservando o primeiro titulo visto
+        unicos = {}
+        for d in docs:
+            unicos.setdefault(d["url"], d)
+        return list(unicos.values())
+
+    # ---------- download + texto ----------
+    @staticmethod
+    def extrair_texto(pdf_bytes: bytes) -> tuple[str, int]:
+        import pdfplumber
+
+        paginas = []
+        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            for pg in pdf.pages:
+                paginas.append(pg.extract_text() or "")
+        return "\f".join(paginas), len(paginas)
+
+    def baixar(self, doc: dict) -> dict | None:
+        r = self._get(doc["url"])
+        if r is None:
+            return None
+        if "pdf" not in r.headers.get("content-type", "") and not r.content[:5] == b"%PDF-":
+            return None
+        sha = hashlib.sha256(r.content).hexdigest()
+        texto, n_pag = self.extrair_texto(r.content)
+        (self.dados / "texto" / f"{sha}.txt").write_text(texto, "utf-8")
+        if self.guardar_pdf:
+            (self.dados / "pdf" / f"{sha}.pdf").write_bytes(r.content)
+        meta = {
+            **doc,
+            "sha256": sha,
+            "bytes": len(r.content),
+            "paginas": n_pag,
+            "precisa_ocr": len(texto.strip()) < 80 * max(n_pag, 1),
+            "baixado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        }
+        return meta
+
+    def coletar(self, secoes=("resumo", "pauta", "projetos"), refazer=False) -> list[dict]:
+        novos = []
+        for secao in secoes:
+            print(f"> varrendo {secao}...")
+            docs = self.varrer(secao)
+            print(f"  {len(docs)} documentos listados")
+            for d in docs:
+                if d["url"] in self.indice and not refazer:
+                    continue
+                meta = self.baixar(d)
+                if meta:
+                    self.indice[d["url"]] = meta
+                    novos.append(meta)
+                    print(f"  + {meta['titulo'][:90]}")
+                    self.salvar_indice()
+        return novos
+
+    def salvar_indice(self):
+        self.indice_path.write_text(json.dumps(self.indice, ensure_ascii=False, indent=1, sort_keys=True), "utf-8")
