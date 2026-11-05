@@ -1,0 +1,327 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-36a-sessao-ordinaria-27-10-2026/at_download/file",
+ "sessao": {
+  "numero": 36,
+  "tipo": "ordinaria",
+  "data": "2026-10-27",
+  "inicio": "14:35",
+  "fim": "16:46"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "justificada",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "justificada",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 36ª SESSÃO ORDINÁRIA - 27/10/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Joemerson Alves de Souza - “Cléber do Cavaco”, nºs: 1258, solicitar à ARTESP/BR Mobilidade Baixada Santista que as linhas 912 (Centro de São Vicente/Praia Grande) e 917 (Ponta da Praia) possam atender a Rua Mari",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Requerimento",
+   "numero": "57",
+   "autoria": "José Elan dos Santos Gomes",
+   "descricao": "Aprovado o Requerimento nº 57, de autoria do Vereador José Elan dos Santos Gomes, solicitando a prorrogação por mais 60 (sessenta) dias da Comissão Especial de Vereadores, nomeada pela Resolução nº 3.124 de 25 de agosto de 2026, para “REALIZAR ESTUDOS TÉCNICOS SOBRE A AMPLIAÇÃO DA CONECTIVIDADE VIÁRIA E A IMPLANTAÇÃO DE NOVOS ACESSOS AO BAIRRO JARDIM CASQUEIRO, AVALIANDO ALTERNATIVAS DE INTERVENÇÃO, IMPACTOS URBANÍSTICOS, AMBIENTAIS E DE MOBILIDADE, BEM COMO PROPONDO MEDIDAS VOLTADAS À MELHORIA DA FLUIDEZ DO TRÂNSITO, DA SEGURANÇA VIÁRIA, DA ACESSIBILIDADE E DA INTEGRAÇÃO DO BAIRRO À MALHA VIÁRIA MUNICIPAL E REGIONAL”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Relatório Final",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Aprovado o Relatório Final da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.112, de 13 de maio de 2026, para “AVERIGUAR O DESCARTE IRREGULAR DE ENTULHOS, BEM COMO ACOMPANHAR E FISCALIZAR AS MEDIDAS ADOTADAS NA ÁREA LOCALIZADA EMBAIXO DO VIADUTO DA RODOVIA DOS IMIGRANTES, NA ENTRADA DO BAIRRO ILHA CARAGUATÁ”.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "245/2026",
+   "especie": "PROJETO DE LEI Nº 22/2026",
+   "numero": "22/2026",
+   "autoria": "RONALDO ARAÚJO QUEIROZ",
+   "assunto": "INSTITUI O PROGRAMA MUNICIPAL DE VALORIZAÇÃO E EMPREGABILIDADE DA PESSOA NA MELHOR IDADE, VOLTADO À CAPACITAÇÃO, INTERMEDIAÇÃO E INCLUSÃO DE PESSOAS COM 50 ANOS OU MAIS NO MERCADO DE TRABALHO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "11/03/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "375/2026",
+   "especie": "PROJETO DE LEI Nº 38/2026",
+   "numero": "38/2026",
+   "autoria": "DANIEL BARBOSA DE ASSIS SILVA",
+   "assunto": "DISPÕE SOBRE A OFERTA DE ATENDIMENTO DOMICILIAR EM SAÚDE PARA PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA (TEA) COM ALTA SENSIBILIDADE SENSORIAL, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "23/04/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDA",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose afonso": "José Afonso",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "c837f80e03ae74ef2dbebf8873be1a45f38892d120bf82838ff518cf89522a68"
+}

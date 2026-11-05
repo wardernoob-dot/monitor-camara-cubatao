@@ -1,0 +1,127 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-29a-sessao-extraordinaria-29-10-2026/at_download/file",
+ "sessao": {
+  "numero": 29,
+  "tipo": "extraordinaria",
+  "data": "2026-10-29",
+  "inicio": "15:17",
+  "fim": "17:02"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 29ª SESSÃO EXTRAORDINÁRIA - 29/10/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "1030/2026",
+   "especie": "PROJETO DE LEI Nº 92/2026",
+   "numero": "92/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "ALTERA A REDAÇÃO DO INCISO II DO ART. 6º DA LEI MUNICIPAL Nº 4.435, DE 22 DE DEZEMBRO DE 2025, QUE ESTIMA A RECEITA E FIXA A DESPESA DO MUNICÍPIO DE CUBATÃO PARA O EXERCÍCIO DE 2026, AMPLIANDO DE 10% (DEZ POR CENTO) PARA 19% (DEZENOVE POR CENTO) O LIMITE PARA ABERTURA DE CRÉDITOS SUPLEMENTARES",
+   "data_documento": "22/10/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDA",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      },
+      {
+       "acao": "rejeição",
+       "alvo": "Propositura",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "guilherme dos santos malaquias": "contra",
+      "marcio silva nascimento": "contra",
+      "roniele martins da silva": "contra"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 3
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose afonso": "José Afonso",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "e9956729138f86f8190bcf5262552ec027d3278a331108582c775f47b907051d"
+}
