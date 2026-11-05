@@ -93,7 +93,7 @@
         "guilherme dos santos malaquias",
         "jose elan dos santos gomes",
         "marcio silva nascimento",
-        "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz",
+        "ronaldo araujo queiroz",
         "roniele martins da silva",
         "washington luiz lessa de souza"
        ]
@@ -107,7 +107,7 @@
       "guilherme dos santos malaquias": "favor",
       "jose elan dos santos gomes": "favor",
       "marcio silva nascimento": "favor",
-      "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz": "favor",
+      "ronaldo araujo queiroz": "favor",
       "roniele martins da silva": "favor",
       "washington luiz lessa de souza": "favor"
      },
@@ -238,7 +238,7 @@
    "especie": "Requerimento",
    "numero": "15",
    "autoria": "Márcio Silva Nascimento",
-   "descricao": "Aprovado o Requerimento nº 15, de autoria do Vereador Márcio Silva Nascimento, solicitando gestões ao Poder Executivo visando à realização de 493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa estudos e tratativas para a aquisição de um Equipamento de Ressonância Magnética e oferta dos correspondentes exames oportunamente na renovação do Contrato de Gestão do Hospital Municipal de Cubatão, previsto para o inicio do 2º semestre do ano em curso.",
+   "descricao": "Aprovado o Requerimento nº 15, de autoria do Vereador Márcio Silva Nascimento, solicitando gestões ao Poder Executivo visando à realização de estudos e tratativas para a aquisição de um Equipamento de Ressonância Magnética e oferta dos correspondentes exames oportunamente na renovação do Contrato de Gestão do Hospital Municipal de Cubatão, previsto para o inicio do 2º semestre do ano em curso.",
    "objeto_votado": "materia",
    "rotulos": {
     "favor": "a favor",
@@ -348,7 +348,7 @@
    "especie": "PROJETO DE LEI Nº 88/2025",
    "numero": "88/2025",
    "autoria": "WASHINGTON LUIZ LESSA DE SOUZA",
-   "assunto": "INSTITUI A CAMPANHA DE CONSCIENTIZAÇÃO E PREVENÇÃO DA BRONQUIOLITE NA CIDADE DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS. 493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa",
+   "assunto": "INSTITUI A CAMPANHA DE CONSCIENTIZAÇÃO E PREVENÇÃO DA BRONQUIOLITE NA CIDADE DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
    "data_documento": "30 DE MAIO DE 2025",
    "objeto_votado": "materia",
    "rotulos": {
@@ -515,26 +515,23 @@
   }
  ],
  "vereadores": {
-  "alexandre mendes da silva": "Alexandre Mendes da Silva",
-  "washington luiz lessa de souza": "Washington Luiz Lessa de Souza",
   "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
-  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
   "allan matias barboza de souza": "Allan Matias Barboza de Souza",
-  "joemerson alves de souza": "Joemerson Alves de Souza",
-  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
   "edson menezes mota": "Edson Menezes Mota",
   "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
-  "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz": "493ºanodafundaçãodopovoadoe Divisãolegislativa 77ºdeemancipaçãopolíticoadministrativa Ronaldo Araújo Queiroz",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
   "jose afonso": "José Afonso",
-  "marcos roberto silva": "Marcos Roberto Silva",
-  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
-  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
   "marcio silva nascimento": "Márcio Silva Nascimento",
-  "roniele martins da silva": "Roniele Martins da Silva"
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva",
+  "washington luiz lessa de souza": "Washington Luiz Lessa de Souza"
  },
- "avisos": [
-  "[4a ordinaria 2026-02-24] expediente_vereadores a): nome nao reconhecido '493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa Ronaldo Araújo Queiroz'"
- ],
+ "avisos": [],
  "notas": [],
  "sha256_pdf": "e25026adc14ade8c014eda0d77885e058acd92e00b76437fbb747e1757e5d237"
 }

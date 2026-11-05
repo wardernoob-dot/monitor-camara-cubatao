@@ -209,7 +209,7 @@
    "especie": "Requerimento",
    "numero": "28",
    "autoria": "Guilherme dos Santos Malaquias",
-   "descricao": "Aprovado o Requerimento nº 28, de autoria do Vereador Guilherme dos Santos Malaquias, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, 493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa “AVERIGUAR OS MOTIVOS DA NÃO INSTALAÇÃO DOS EQUIPAMENTOS DE PLAYGROUND, ACOMPANHAR E FISCALIZAR A EXECUÇÃO DO PROJETO NA PRAÇA LOCALIZADA NA ENTRADA DO BAIRRO ILHA CARAGUATÁ”.",
+   "descricao": "Aprovado o Requerimento nº 28, de autoria do Vereador Guilherme dos Santos Malaquias, solicitando a formação de Comissão Especial de Vereadores, composta por 3 (três) Vereadores, para, no prazo de 60 (sessenta) dias, “AVERIGUAR OS MOTIVOS DA NÃO INSTALAÇÃO DOS EQUIPAMENTOS DE PLAYGROUND, ACOMPANHAR E FISCALIZAR A EXECUÇÃO DO PROJETO NA PRAÇA LOCALIZADA NA ENTRADA DO BAIRRO ILHA CARAGUATÁ”.",
    "objeto_votado": "materia",
    "rotulos": {
     "favor": "a favor",
@@ -302,7 +302,7 @@
         "jose elan dos santos gomes",
         "marcio silva nascimento",
         "marcos roberto silva",
-        "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz",
+        "ronaldo araujo queiroz",
         "roniele martins da silva"
        ]
       }
@@ -319,7 +319,7 @@
       "jose elan dos santos gomes": "favor",
       "marcio silva nascimento": "favor",
       "marcos roberto silva": "favor",
-      "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz": "favor",
+      "ronaldo araujo queiroz": "favor",
       "roniele martins da silva": "favor"
      },
      "placar": {
@@ -532,22 +532,21 @@
   }
  ],
  "vereadores": {
-  "alexandre mendes da silva": "Alexandre Mendes da Silva",
   "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
-  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
   "allan matias barboza de souza": "Allan Matias Barboza de Souza",
-  "joemerson alves de souza": "Joemerson Alves de Souza",
-  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
   "edson menezes mota": "Edson Menezes Mota",
   "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
-  "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa ronaldo araujo queiroz": "493ºanodafundaçãodopovoadoe Divisãolegislativa 77ºdeemancipaçãopolíticoadministrativa Ronaldo Araújo Queiroz",
+  "ivan da silva": "Ivan da Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
   "jose afonso": "José Afonso",
-  "marcos roberto silva": "Marcos Roberto Silva",
-  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
-  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
   "marcio silva nascimento": "Márcio Silva Nascimento",
-  "roniele martins da silva": "Roniele Martins da Silva",
-  "ivan da silva": "Ivan da Silva"
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva"
  },
  "avisos": [],
  "notas": [

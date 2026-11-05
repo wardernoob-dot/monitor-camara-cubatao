@@ -137,7 +137,7 @@
         "ivan da silva",
         "jair ferreira lucas",
         "joemerson alves de souza",
-        "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa jose afonso",
+        "jose afonso",
         "jose elan dos santos gomes",
         "marcos roberto silva",
         "ronaldo araujo queiroz"
@@ -153,7 +153,7 @@
       "ivan da silva": "favor",
       "jair ferreira lucas": "favor",
       "joemerson alves de souza": "favor",
-      "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa jose afonso": "favor",
+      "jose afonso": "favor",
       "jose elan dos santos gomes": "favor",
       "marcos roberto silva": "favor",
       "ronaldo araujo queiroz": "favor"
@@ -189,7 +189,7 @@
    "especie": "Requerimento",
    "numero": "25",
    "autoria": "Alexandre Mendes da Silva",
-   "descricao": "Aprovado o Requerimento nº 25, de autoria do Vereador Alexandre Mendes da Silva, solicitando gestões ao Poder Executivo para a realização de estudos 493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa visando à adequação e regulamentação, no âmbito do Município de Cubatão, da Lei Federal n° 15.222/2025, que dispõe sobre o início da licença-maternidade em casos de internação prolongada da mãe ou recém-nascido.",
+   "descricao": "Aprovado o Requerimento nº 25, de autoria do Vereador Alexandre Mendes da Silva, solicitando gestões ao Poder Executivo para a realização de estudos visando à adequação e regulamentação, no âmbito do Município de Cubatão, da Lei Federal n° 15.222/2025, que dispõe sobre o início da licença-maternidade em casos de internação prolongada da mãe ou recém-nascido.",
    "objeto_votado": "materia",
    "rotulos": {
     "favor": "a favor",
@@ -312,7 +312,7 @@
    "numero": "26/2026",
    "autoria": "PREFEITO MUNICIPAL",
    "assunto": "ACRESCENTA OS §§ 1º E 2º AO ARTIGO 5º DA LEI MUNICIPAL Nº3.404, DE 17 DE AGOSTO DE 2010, QUE DISPÕE SOBRE A INSTITUIÇÃO DO VALE TRANSPORTE PARA OS SERVIDORES PÚBLICOS DO MUNICÍPIO DE CUBATÃO",
-   "data_documento": "20/03/2026. 493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa",
+   "data_documento": "20/03/2026",
    "objeto_votado": "materia",
    "rotulos": {
     "favor": "a favor",
@@ -494,26 +494,23 @@
   }
  ],
  "vereadores": {
-  "alexandre mendes da silva": "Alexandre Mendes da Silva",
   "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
-  "jair ferreira lucas": "Jair Ferreira Lucas",
-  "anodafundacaodopovoadoe divisaolegislativa deemancipacaopoliticoadministrativa jose afonso": "493ºanodafundaçãodopovoadoe Divisãolegislativa 77ºdeemancipaçãopolíticoadministrativa José Afonso",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
   "allan matias barboza de souza": "Allan Matias Barboza de Souza",
-  "joemerson alves de souza": "Joemerson Alves de Souza",
-  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
   "edson menezes mota": "Edson Menezes Mota",
   "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "ivan da silva": "Ivan da Silva",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
   "jose afonso": "José Afonso",
-  "marcos roberto silva": "Marcos Roberto Silva",
-  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
-  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
   "marcio silva nascimento": "Márcio Silva Nascimento",
-  "roniele martins da silva": "Roniele Martins da Silva",
-  "ivan da silva": "Ivan da Silva"
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva"
  },
- "avisos": [
-  "[11a ordinaria 2026-04-14] expediente_mesa c): nome nao reconhecido '493ºAnodaFundaçãodoPovoadoe DIVISÃOLEGISLATIVA 77ºdeEmancipaçãoPolíticoAdministrativa José Afonso'"
- ],
+ "avisos": [],
  "notas": [
   "[11a ordinaria 2026-04-14] expediente_mesa b): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",
   "[11a ordinaria 2026-04-14] expediente_mesa c): 'Allan Matias Barbosa de Souza' ~ 'Allan Matias Barboza de Souza'",

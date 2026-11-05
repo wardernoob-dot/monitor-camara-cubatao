@@ -19,12 +19,14 @@ _HOMOGLYPHS = str.maketrans({
     " ": " ", " ": " ", " ": " ", "​": "",
 })
 
+# \s* em vez de espaco: o pdfplumber as vezes cola as palavras do cabecalho
+# ("493ºAnodaFundaçãodoPovoadoe", "DIVISÃOLEGISLATIVA")
 _HEADER_LINES = [
-    re.compile(r"^DIVIS[ÃA]O LEGISLATIVA$", re.I),
-    re.compile(r"^C[âa]mara Municipal de Cubat[ãa]o$", re.I),
-    re.compile(r"^Estado de S[ãa]o Paulo$", re.I),
-    re.compile(r"^\d+\s*[º°o]\s*(Ano\s+)?da Funda[çc][ãa]o do Povoado e$", re.I),
-    re.compile(r"^\d+\s*[º°o]\s*de Emancipa[çc][ãa]o Pol[íi]tico[\s-]*Administrativa\.?$", re.I),
+    re.compile(r"^DIVIS[ÃA]O\s*LEGISLATIVA$", re.I),
+    re.compile(r"^C[âa]mara\s*Municipal\s*de\s*Cubat[ãa]o$", re.I),
+    re.compile(r"^Estado\s*de\s*S[ãa]o\s*Paulo$", re.I),
+    re.compile(r"^\d+\s*[º°o]\s*(Ano\s*)?da\s*Funda[çc][ãa]o\s*do\s*Povoado\s*e$", re.I),
+    re.compile(r"^\d+\s*[º°o]\s*(Ano\s*)?de\s*Emancipa[çc][ãa]o\s*Pol[íi]tico[\s-]*Administrativa\.?$", re.I),
 ]
 _PAGE_MARK = re.compile(r"^<<<PAGE>>>$|^\f$")
 

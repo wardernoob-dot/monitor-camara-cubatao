@@ -357,9 +357,9 @@ def parse_resumo(texto_bruto: str, registro: N.Registro | None = None, fonte: st
         "encerrada_por_falta_de_quorum": bool(RE_FALTA_QUORUM.search(tudo)),
         "obstrucoes": obstrucoes,
         "itens": itens,
-        "vereadores": {k: reg.nome(k) for k in set(presenca) | {
+        "vereadores": {k: reg.nome(k) for k in sorted(set(presenca) | {
             v for it in itens for vt in it["votacoes"] for v in vt["por_vereador"]
-        } | {o["vereador"] for o in obstrucoes}},
+        } | {o["vereador"] for o in obstrucoes})},
         "avisos": avisos,
         "notas": notas,
     }

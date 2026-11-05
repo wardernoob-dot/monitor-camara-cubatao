@@ -122,3 +122,10 @@ def test_participacao_remota_nao_vira_vereador_fantasma():
     assert r["participacao_remota"] == ["allan matias barboza de souza"]
     assert r["obstrucoes"] == [{"vereador": "marcio silva nascimento", "bancada": "PSB"}]
     assert all(len(k) < 60 for k in r["vereadores"])
+
+
+def test_cabecalho_colado_do_pdfplumber():
+    t = normalize("Estado de São Paulo\n493ºAnodaFundaçãodoPovoadoe\nDIVISÃOLEGISLATIVA\n"
+                  "77ºAnodeEmancipaçãoPolítico-Administrativa\nRonaldo Araújo Queiroz\n"
+                  "Divisão Legislativa, 22 de outubro de 2026.")
+    assert t == "Ronaldo Araújo Queiroz\nDivisão Legislativa, 22 de outubro de 2026."
