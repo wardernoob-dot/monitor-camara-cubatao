@@ -7,6 +7,7 @@ import json
 import sys
 from pathlib import Path
 
+sys.stdout.reconfigure(encoding="utf-8")  # console do Windows nao e UTF-8 por padrao
 RAIZ = Path(__file__).resolve().parents[3]
 caminho = Path(sys.argv[1]) if len(sys.argv) > 1 else RAIZ / "docs" / "data" / "dados.json"
 d = json.loads(caminho.read_text("utf-8"))

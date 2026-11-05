@@ -7,8 +7,10 @@ import argparse
 import collections
 import json
 import subprocess
+import sys
 from pathlib import Path
 
+sys.stdout.reconfigure(encoding="utf-8")  # console do Windows nao e UTF-8 por padrao
 RAIZ = Path(__file__).resolve().parents[3]
 ap = argparse.ArgumentParser()
 ap.add_argument("--dias", type=int, default=3, help="quantos consolidados recentes mostrar")

@@ -1,48 +1,130 @@
 ---
 name: revisar-regra-de-voto
-description: Checklist para mexer em como um voto é lido ou exibido (parser_resumo.py, consolidar.py, site.py, posts.py). Use antes de alterar ou revisar qualquer código que interprete "a favor"/"contra", parecer, veto, ausência ou placar.
+display-name: "Revisor de Regra de Voto"
+description: >
+  Revisa uma mudança no código que lê ou exibe voto (parser_resumo.py, consolidar.py, site.py,
+  posts.py) contra as regras de leitura de voto do projeto: roda os testes, confere um caso real
+  de cada tipo no dados.json e devolve um relatório do que foi e do que não foi verificado.
+  Does NOT altera dados em data/, NÃO muda o código sozinha e NÃO aprova a mudança: quem decide é
+  a pessoa. NÃO revisa texto de tela (isso é a clareza-pro-leitor).
+  Ativa quando o usuário diz "revisar regra de voto", "mexi no parser", "confere a lógica de
+  voto", "isso inverte favor e contra?" ou "revisa essa mudança de voto".
+metadata:
+  version: "1.1"
+  updated: "2026-11-05"
+  author: "Gabriela Caligares"
 ---
 
-# Revisar regra de voto
+# Revisor de Regra de Voto
 
-> Sugestões de roteiro, não regras: use o que ajudar e ignore o resto. Os princípios do projeto citados aqui vêm do README.
+## Papel
 
-Um erro aqui vira informação falsa sobre um vereador, publicada com link oficial. Rode esta checklist
-antes de concluir qualquer mudança em `camara/parser_resumo.py`, `consolidar.py`, `site.py` ou `posts.py`.
+Você revisa mudanças de código que interpretam ou mostram voto. Um erro aqui vira informação falsa sobre um vereador, publicada com link oficial. Você confere a mudança contra as regras abaixo, roda o que dá para rodar e relata com honestidade o que ficou sem checar. Este roteiro é uma sugestão, não uma regra: o que o usuário pedir na hora vale mais.
 
-## Regras de leitura do voto (vêm do README; vale conferir)
+## Quando usar
 
-1. **Ausente da lista ≠ voto contrário.** Quem está presente e não aparece vira "não consta". Na maioria
-   das votações o resumo só lista os votos a favor; contrário só aparece em votação dividida, veto e parecer.
-2. **Parecer inverte o sentido.** "Aprovação do Parecer **contrário** à Propositura" = voto **contra** o projeto;
-   "rejeição" do mesmo parecer = a **favor**. Parecer favorável não inverte. A lógica está em `_sentido`
-   (`parser_resumo.py`), e cada grupo de voto carrega o campo `sentido` já resolvido.
-3. **Veto:** "manutenção" = a favor do veto (contra o projeto original); "rejeição" = derrubar o veto.
-4. **Parecer do TCE sobre contas:** "rejeição do Parecer" = derrubar o parecer do Tribunal.
-5. Cada item tem `objeto_votado` (`materia`, `veto`, `parecer_tc`) e `rotulos` que dizem o que "favor" e
-   "contra" significam naquele caso. O site e os posts devem usar esses rótulos, não escrever "a favor/contra" fixo.
-6. **O SIM/NÃO do painel é relativo ao que está sendo votado** (o parecer, o veto), não ao projeto. Um SIM
-   num "parecer contrário" é voto contra o projeto.
+- Foi alterado `camara/parser_resumo.py`, `consolidar.py`, `site.py` ou `posts.py`
+- O usuário pergunta se algo inverte favor e contra, ou como parecer, veto ou ausência são tratados
 
-## Como o site mostra um parecer (verificado em 2026-11-05)
+## Quando NÃO usar
 
-`site.py` (`_evento`, ramo do resumo) e `posts.py` (`votos`) classificam o voto pelo **texto da ação**
-(`aprova*`/`manuten*` → SIM, resto → NAO), não pelo `sentido` do grupo. Isso é coerente com o painel
-(SIM = aprovou o que estava em votação): no PL 75/2026 (sessão 2026-10-20) o site mostra a etapa
-"Parecer contrário" com SIM 8 / NÃO 6 e resultado APROVADO, ou seja, o placar é **do parecer**, e a etapa vem
-rotulada por `rotulo_etapa`. Cuidado ao mexer: o SIM de uma etapa de parecer contrário **não** é "a favor do projeto".
-Se algum texto novo (front, post) chamar esse SIM de "a favor", ele estará errado; use o `sentido` ou o rótulo da etapa.
-Ainda não verificado: se o front deixa claro, para o leitor, o que o SIM significa nessa etapa.
+- A mudança é só de texto ou layout, sem tocar em como o voto é lido: use `clareza-pro-leitor`
+- A dúvida é se o leitor do painel (cor de pixel) leu certo: use `validar-painel`
+- A dúvida é sobre o que o robô trouxe hoje: use `conferir-coleta-do-dia`
+
+## Entradas necessárias
+
+- [ ] Os arquivos alterados (`git diff`, ou o caminho informado pelo usuário)
+- [ ] Python com as dependências de `requirements.txt` instaladas (sem elas o `pytest` não roda: diga isso, não pule o passo em silêncio)
+
+Se não ficar claro o que mudou, pergunte antes de revisar.
+
+---
+
+## Saída
+
+Um relatório curto na resposta (nada é gravado em disco):
+
+```markdown
+# Revisão de regra de voto
+**Arquivos:** [lista]
+**Testes:** [N passaram / falharam / não rodei, por quê]
+
+## Casos conferidos no dados.json
+- Matéria comum: [ok / diferente / não conferi]
+- Veto: [...]
+- Parecer contrário: [...]
+- Parecer do TCE: [...]
+- Votação com ausente: [...]
+
+## Pendências
+- [o que ficou sem checar e por quê]
+```
+
+**Regras da saída**
+- Só escreva "ok" para o que você de fato rodou ou leu.
+- Todo caso não conferido aparece como "não conferi", com o motivo.
+- Não resuma como "tudo certo" se algum teste falhou ou não rodou.
+
+---
 
 ## Passos
 
-1. Rode os testes que cobrem o assunto: `python -m pytest tests/test_parser.py tests/test_validacao.py tests/test_site.py -q`.
-2. Se a mudança for em lógica de voto, **adicione ou ajuste um teste** com um caso real (os textos de exemplo ficam em `tests/fixtures/`). Os testes `test_parecer_contrario_inverte_sentido` e `test_veto_mantido_e_derrubado` são o modelo.
-3. Regenere e confira um caso de cada tipo no `dados.json`: matéria comum, veto, parecer contrário, parecer do TCE, votação com ausente.
-4. Rode `python .claude/skills/conferir-fonte/auditar.py` para garantir que todo voto continua com fonte.
-5. Diga ao usuário o que foi checado e o que não foi (ex.: sem PDF novo para testar).
+### 1. Entender o que mudou
 
-## Evitar
+Leia o diff. Anote quais regras abaixo a mudança toca.
 
-- Não criar ranking, nota ou "índice de fidelidade" de vereador: é princípio do projeto.
-- Não tratar o texto da IA como fonte de voto: voto vem só do painel ou do resumo oficial.
+### 2. Rodar os testes
+
+`python -m pytest tests/test_parser.py tests/test_validacao.py tests/test_site.py -q`. Se algum falhar, mostre a saída; não "conserte" o teste para passar.
+
+### 3. Teste novo, se a lógica mudou
+
+Se a mudança altera como um voto é lido, sugira um teste com um caso real (textos em `tests/fixtures/`). Os modelos são `test_parecer_contrario_inverte_sentido` e `test_veto_mantido_e_derrubado`.
+
+### 4. Conferir um caso de cada tipo
+
+Gere o `dados.json` offline com `python -c "from pathlib import Path; from camara.site import exportar; exportar(Path('data'))"` (isso reescreve `docs/data/dados.json` no working tree: não commite sem querer) e confira: matéria comum, veto, parecer contrário, parecer do TCE, votação com ausente. Compare com `por_vereador` do arquivo da sessão em `data/sessoes/`.
+
+### 5. Conferir a fonte
+
+`python .claude/skills/conferir-fonte/auditar.py` deve continuar sem problemas.
+
+### 6. Relatar
+
+Entregue o relatório no formato acima.
+
+---
+
+## Regras
+
+Estas são as regras de leitura de voto do README do projeto. Vale conferir a mudança contra elas.
+
+- **Ausente da lista ≠ voto contrário.** Quem está presente e não aparece vira "não consta". Na maioria das votações o resumo só lista os votos a favor; contrário só aparece em votação dividida, veto e parecer.
+- **Parecer inverte o sentido.** "Aprovação do Parecer **contrário** à Propositura" = voto **contra** o projeto; a "rejeição" desse parecer = **a favor**. Parecer favorável não inverte. A lógica está em `_sentido` (`parser_resumo.py`) e cada grupo de voto carrega o campo `sentido` já resolvido.
+- **Veto:** "manutenção" = a favor do veto (contra o projeto original); "rejeição" = derrubar o veto.
+- **Parecer do TCE sobre contas:** "rejeição do Parecer" = derrubar o parecer do Tribunal.
+- Cada item tem `objeto_votado` (`materia`, `veto`, `parecer_tc`) e `rotulos` que dizem o que "favor" e "contra" significam naquele caso. Site e posts devem usar esses rótulos, não escrever "a favor/contra" fixo.
+- **O SIM/NÃO do painel é relativo ao que está em votação** (o parecer, o veto), não ao projeto. Um SIM num "parecer contrário" é voto contra o projeto.
+- **Como o site mostra um parecer** (verificado em 2026-11-05): `site.py` (`_evento`, ramo do resumo) e `posts.py` (`votos`) classificam pelo texto da ação (`aprova*`/`manuten*` → SIM, o resto → NAO), não pelo `sentido`. Isso é coerente com o painel: o placar é **do parecer** e a etapa vem rotulada por `rotulo_etapa`. Cuidado: se um texto novo chamar esse SIM de "a favor", estará errado.
+- Sem ranking, nota ou "índice de fidelidade" de vereador. A IA nunca é fonte de voto: voto vem só do painel ou do resumo oficial.
+
+---
+
+## Exemplo
+
+**Situação:** o resumo da sessão de 20/10/2026 traz, para o PL 75/2026, "Rejeição do Parecer contrário à Propositura" (6 vereadores) e "Aprovação do Parecer contrário à Propositura" (8 vereadores).
+
+**Resultado esperado no parser:**
+```markdown
+- rejeitou o parecer contrário → "favor" (a favor do projeto), 6 vereadores
+- aprovou o parecer contrário  → "contra" (contra o projeto), 8 vereadores
+- placar do projeto: favor 6, contra 8
+```
+
+---
+
+## Histórico de versões
+
+- **v1.1** (2026-11-05): Reformatada no modelo padrão de skills (papel, entradas, saída, passos, regras, exemplo). Gerar o `dados.json` agora avisa que reescreve `docs/data/dados.json` local. [Gabriela Caligares]
+- **v1.0** (2026-11-05): Criada a partir das regras de leitura de voto do README e da revisão do PL 75/2026. [Gabriela Caligares]
