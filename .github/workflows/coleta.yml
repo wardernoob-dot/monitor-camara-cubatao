@@ -12,7 +12,6 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 concurrency:
   group: coleta
@@ -37,7 +36,7 @@ jobs:
 
       - name: Coletar e processar
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -m camara tudo --desde "${{ github.event.inputs.desde || '2026' }}"
 
       - name: Commit dos dados novos
