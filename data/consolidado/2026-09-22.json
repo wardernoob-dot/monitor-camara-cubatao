@@ -25,7 +25,18 @@
    "url": "https://www.youtube.com/watch?v=Rv2f5bX4YyA"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Legislativo aprova projeto sobre bem-estar sonoro de pessoas com hipersensibilidade auditiva",
+   "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-institui-em-cubatao-o-programa-empresa-amiga-do-esporte-e-do-lazer",
+   "publicado": "2026-09-22T21:14:46Z"
+  },
+  {
+   "titulo": "CÂMARA INFORMA: Encerramento da 25ª Sessão Extraordinária",
+   "url": "https://www.cubatao.sp.leg.br/camara-informa-encerramento-da-25a-sessao-extraordinaria",
+   "publicado": "2026-09-23T18:50:21Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -262,7 +273,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-institui-em-cubatao-o-programa-empresa-amiga-do-esporte-e-do-lazer",
+     "titulo": "Legislativo aprova projeto sobre bem-estar sonoro de pessoas com hipersensibilidade auditiva",
+     "resultado": "rejeitado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -359,7 +379,31 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-institui-em-cubatao-o-programa-empresa-amiga-do-esporte-e-do-lazer",
+     "titulo": "Legislativo aprova projeto sobre bem-estar sonoro de pessoas com hipersensibilidade auditiva",
+     "resultado": "rejeitado",
+     "votos": [
+      {
+       "alvo": "materia",
+       "SIM": [],
+       "NAO": [
+        "guilherme dos santos malaquias",
+        "jose elan dos santos gomes",
+        "jair ferreira lucas",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "daniel barbosa de assis silva",
+        "allan matias barboza de souza"
+       ]
+      }
+     ],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RELATORIO",

@@ -25,7 +25,13 @@
    "url": "https://www.youtube.com/watch?v=jKmkU-qK0wo"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Legislativo aprova projeto que institui programa de apoio a pessoas com doenças raras e seus familiares",
+   "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-que-institui-programa-de-apoio-a-pessoas-com-doencas-raras-e-seus-familiares",
+   "publicado": "2026-09-30T13:01:52Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -354,7 +360,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-que-institui-programa-de-apoio-a-pessoas-com-doencas-raras-e-seus-familiares",
+     "titulo": "Legislativo aprova projeto que institui programa de apoio a pessoas com doenças raras e seus familiares",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PR",
@@ -496,7 +511,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-que-institui-programa-de-apoio-a-pessoas-com-doencas-raras-e-seus-familiares",
+     "titulo": "Legislativo aprova projeto que institui programa de apoio a pessoas com doenças raras e seus familiares",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RQ",

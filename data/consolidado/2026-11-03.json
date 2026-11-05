@@ -17,7 +17,13 @@
    "url": "https://www.youtube.com/watch?v=aG3vhRvCeis"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Allan Matias solicita salas de acomodação sensorial e aparelhos para monitoramento de glicose via sensor",
+   "url": "https://www.cubatao.sp.leg.br/allan-matias-solicita-salas-de-acomodacao-sensorial-e-aparelhos-para-monitoramento-de-glicose-via-sensor",
+   "publicado": "2026-11-04T20:27:45Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -105,7 +111,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/allan-matias-solicita-salas-de-acomodacao-sensorial-e-aparelhos-para-monitoramento-de-glicose-via-sensor",
+     "titulo": "Allan Matias solicita salas de acomodação sensorial e aparelhos para monitoramento de glicose via sensor",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -192,7 +207,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/allan-matias-solicita-salas-de-acomodacao-sensorial-e-aparelhos-para-monitoramento-de-glicose-via-sensor",
+     "titulo": "Allan Matias solicita salas de acomodação sensorial e aparelhos para monitoramento de glicose via sensor",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RQ",

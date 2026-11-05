@@ -17,7 +17,13 @@
    "url": "https://www.youtube.com/watch?v=VsOfCH9nd0A"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Câmara rejeita projeto que autorizaria o Poder Executivo a contratar operação de crédito",
+   "url": "https://www.cubatao.sp.leg.br/camara-rejeita-projeto-que-autorizaria-o-poder-executivo-a-contratar-operacao-de-credito",
+   "publicado": "2026-10-21T14:30:04Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -104,10 +110,45 @@
      "conferencia": {
       "status": "confere",
       "divergencias": []
+     },
+     "noticia": {
+      "url": "https://www.cubatao.sp.leg.br/camara-rejeita-projeto-que-autorizaria-o-poder-executivo-a-contratar-operacao-de-credito",
+      "confere": true
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-rejeita-projeto-que-autorizaria-o-poder-executivo-a-contratar-operacao-de-credito",
+     "titulo": "Câmara rejeita projeto que autorizaria o Poder Executivo a contratar operação de crédito",
+     "resultado": "rejeitado",
+     "votos": [
+      {
+       "alvo": "parecer_contrario",
+       "SIM": [
+        "guilherme dos santos malaquias",
+        "jose elan dos santos gomes",
+        "jair ferreira lucas",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva",
+        "daniel barbosa de assis silva",
+        "allan matias barboza de souza"
+       ],
+       "NAO": [
+        "alessandro donizete de oliveira",
+        "joemerson alves de souza",
+        "edson menezes mota",
+        "marcos roberto silva",
+        "jose afonso",
+        "anderson de lana andrade"
+       ]
+      }
+     ],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -144,7 +185,16 @@
      }
     }
    ],
-   "sem_painel": true
+   "sem_painel": true,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-rejeita-projeto-que-autorizaria-o-poder-executivo-a-contratar-operacao-de-credito",
+     "titulo": "Câmara rejeita projeto que autorizaria o Poder Executivo a contratar operação de crédito",
+     "resultado": "retirado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -241,7 +291,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-rejeita-projeto-que-autorizaria-o-poder-executivo-a-contratar-operacao-de-credito",
+     "titulo": "Câmara rejeita projeto que autorizaria o Poder Executivo a contratar operação de crédito",
+     "resultado": "rejeitado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "MOCAO",

@@ -12,7 +12,13 @@
   }
  ],
  "transmissoes": [],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Vereador Tinho apresenta moção de aplausos ao grupo Afaban",
+   "url": "https://www.cubatao.sp.leg.br/vereador-tinho-apresenta-mocao-de-aplausos-ao-grupo-afaban",
+   "publicado": "2026-09-08T19:31:36Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -64,7 +70,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/vereador-tinho-apresenta-mocao-de-aplausos-ao-grupo-afaban",
+     "titulo": "Vereador Tinho apresenta moção de aplausos ao grupo Afaban",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -116,7 +131,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/vereador-tinho-apresenta-mocao-de-aplausos-ao-grupo-afaban",
+     "titulo": "Vereador Tinho apresenta moção de aplausos ao grupo Afaban",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RQ",

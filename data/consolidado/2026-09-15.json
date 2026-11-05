@@ -25,7 +25,13 @@
    "url": "https://www.youtube.com/watch?v=NtevRSxgVCQ"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "'Guilherme Henrick da Silva': Câmara aprova projeto que homenageia jovem falecido da Vila São José",
+   "url": "https://www.cubatao.sp.leg.br/quadra-guilherme-henrick-da-silva-camara-aprova-projeto-em-homenagem-falecido-morador-da-vila-sao-jose",
+   "publicado": "2026-09-15T20:33:21Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -243,7 +249,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/quadra-guilherme-henrick-da-silva-camara-aprova-projeto-em-homenagem-falecido-morador-da-vila-sao-jose",
+     "titulo": "'Guilherme Henrick da Silva': Câmara aprova projeto que homenageia jovem falecido da Vila São José",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -454,7 +469,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/quadra-guilherme-henrick-da-silva-camara-aprova-projeto-em-homenagem-falecido-morador-da-vila-sao-jose",
+     "titulo": "'Guilherme Henrick da Silva': Câmara aprova projeto que homenageia jovem falecido da Vila São José",
+     "resultado": "rejeitado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -491,7 +515,16 @@
      }
     }
    ],
-   "sem_painel": true
+   "sem_painel": true,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/quadra-guilherme-henrick-da-silva-camara-aprova-projeto-em-homenagem-falecido-morador-da-vila-sao-jose",
+     "titulo": "'Guilherme Henrick da Silva': Câmara aprova projeto que homenageia jovem falecido da Vila São José",
+     "resultado": "retirado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   }
  ],
  "votacoes_nao_identificadas": [],

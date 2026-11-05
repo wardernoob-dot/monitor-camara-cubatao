@@ -12,8 +12,44 @@
   }
  ],
  "transmissoes": [],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Câmara aprova projeto que reconhece Associação Filhos de Ganga Zumba como patrimônio imaterial de Cubatão",
+   "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-reconhece-associacao-filhos-de-ganga-zumba-como-patrimonio-imaterial-de-cubatao",
+   "publicado": "2026-09-02T16:50:25Z"
+  },
+  {
+   "titulo": "Legislativo aprova projeto de combate e prevenção ao vício em apostas online (bets)",
+   "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-de-combate-e-prevencao-ao-vicio-em-apostas-online-bets",
+   "publicado": "2026-09-02T13:08:18Z"
+  },
+  {
+   "titulo": "Tribuna Popular: mãe de jovem com doenças raras cobra responsabilidade do Poder Público",
+   "url": "https://www.cubatao.sp.leg.br/tribuna-popular-mae-de-jovem-com-doencas-raras-cobra-responsabilidade-do-poder-publico",
+   "publicado": "2026-09-01T20:08:47Z"
+  }
+ ],
  "materias": [
+  {
+   "tipo": "PL",
+   "numero": "27",
+   "ano": null,
+   "autoria": null,
+   "assunto": null,
+   "na_pauta": false,
+   "resultado_oficial": null,
+   "votacoes": [],
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/tribuna-popular-mae-de-jovem-com-doencas-raras-cobra-responsabilidade-do-poder-publico",
+     "titulo": "Tribuna Popular: mãe de jovem com doenças raras cobra responsabilidade do Poder Público",
+     "resultado": null,
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
+  },
   {
    "tipo": "PL",
    "numero": "52",
@@ -61,7 +97,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-reconhece-associacao-filhos-de-ganga-zumba-como-patrimonio-imaterial-de-cubatao",
+     "titulo": "Câmara aprova projeto que reconhece Associação Filhos de Ganga Zumba como patrimônio imaterial de Cubatão",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -109,7 +154,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-de-combate-e-prevencao-ao-vicio-em-apostas-online-bets",
+     "titulo": "Legislativo aprova projeto de combate e prevenção ao vício em apostas online (bets)",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -159,7 +213,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-de-combate-e-prevencao-ao-vicio-em-apostas-online-bets",
+     "titulo": "Legislativo aprova projeto de combate e prevenção ao vício em apostas online (bets)",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RQ",

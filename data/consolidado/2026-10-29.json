@@ -25,7 +25,13 @@
    "url": "https://www.youtube.com/watch?v=MnAla4z-dkM"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Câmara aprova projeto que amplia o limite de créditos suplementares",
+   "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-amplia-o-limite-de-creditos-suplementares",
+   "publicado": "2026-10-30T18:07:53Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -248,7 +254,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-amplia-o-limite-de-creditos-suplementares",
+     "titulo": "Câmara aprova projeto que amplia o limite de créditos suplementares",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   }
  ],
  "votacoes_nao_identificadas": [],

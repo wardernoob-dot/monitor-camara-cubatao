@@ -17,7 +17,18 @@
    "url": "https://www.youtube.com/watch?v=4c7vtyntvXk"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Câmara aprova projeto que incentiva empregabilidade de pessoas com 50 anos ou mais",
+   "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-incentiva-empregabilidade-de-pessoas-com-50-anos-ou-mais",
+   "publicado": "2026-10-28T16:19:25Z"
+  },
+  {
+   "titulo": "Projeto de atendimento domiciliar em saúde para autistas com hipersensibilidade é aprovado na Câmara",
+   "url": "https://www.cubatao.sp.leg.br/projeto-de-atendimento-domiciliar-em-saude-para-autistas-com-hipersensibilidade-e-aprovado-na-camara",
+   "publicado": "2026-10-28T19:09:24Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -102,7 +113,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-incentiva-empregabilidade-de-pessoas-com-50-anos-ou-mais",
+     "titulo": "Câmara aprova projeto que incentiva empregabilidade de pessoas com 50 anos ou mais",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -231,7 +251,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/projeto-de-atendimento-domiciliar-em-saude-para-autistas-com-hipersensibilidade-e-aprovado-na-camara",
+     "titulo": "Projeto de atendimento domiciliar em saúde para autistas com hipersensibilidade é aprovado na Câmara",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RQ",

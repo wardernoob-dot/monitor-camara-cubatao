@@ -17,7 +17,13 @@
    "url": "https://www.youtube.com/watch?v=zeGe2N3_s4M"
   }
  ],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Alessandro Oliveira quer modelo integrado para atendimento de dependentes químicos em Cubatão",
+   "url": "https://www.cubatao.sp.leg.br/alessandro-oliveira-quer-modelo-integrado-para-atendimento-de-dependentes-quimicos-em-cubatao",
+   "publicado": "2026-10-13T19:13:23Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -54,7 +60,16 @@
      }
     }
    ],
-   "sem_painel": true
+   "sem_painel": true,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/alessandro-oliveira-quer-modelo-integrado-para-atendimento-de-dependentes-quimicos-em-cubatao",
+     "titulo": "Alessandro Oliveira quer modelo integrado para atendimento de dependentes químicos em Cubatão",
+     "resultado": "retirado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -91,7 +106,16 @@
      }
     }
    ],
-   "sem_painel": true
+   "sem_painel": true,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/alessandro-oliveira-quer-modelo-integrado-para-atendimento-de-dependentes-quimicos-em-cubatao",
+     "titulo": "Alessandro Oliveira quer modelo integrado para atendimento de dependentes químicos em Cubatão",
+     "resultado": "retirado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -128,7 +152,16 @@
      }
     }
    ],
-   "sem_painel": true
+   "sem_painel": true,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/alessandro-oliveira-quer-modelo-integrado-para-atendimento-de-dependentes-quimicos-em-cubatao",
+     "titulo": "Alessandro Oliveira quer modelo integrado para atendimento de dependentes químicos em Cubatão",
+     "resultado": "retirado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RQ",

@@ -1,0 +1,24 @@
+{
+ "url": "https://www.cubatao.sp.leg.br/camara-informa-encerramento-da-25a-sessao-extraordinaria",
+ "titulo": "CÂMARA INFORMA: Encerramento da 25ª Sessão Extraordinária",
+ "publicado": "2026-09-23T18:50:21Z",
+ "texto": "Em resposta aos pedidos de informação dos vereadores Roniele Martins da Silva, Márcio Silva Nascimento e Guilherme dos Santos Malaquias sobre a 25ª Sessão Extraordinária, realizada em 18/09, a Presidência da Câmara de Cubatão esclarece: A sessão foi suspensa às 11h08 para preservar a ordem no plenário, com fundamento no artigo 103 do Regimento Interno, e retomada às 11h16. Às 11h14, a Presidência recebeu o Ofício Nº 117/2026/SEJUR, pelo qual a Prefeitura solicitou a retirada de pauta do Projeto de Lei Nº 75/2026. Como o projeto era a única matéria da Ordem do Dia, o presidente determinou sua retirada e encerrou a sessão. Com isso, ficou prejudicado o pedido de votação nominal apresentado pelo vereador José Elan dos Santos Gomes. A empresa responsável pelo sistema eletrônico de votação, Wsbc Solutions, informou, após análise dos registros técnicos, que não houve falha, indisponibilidade ou travamento. O encerramento ocorreu por determinação do Gestor Legislativo, Áureo Tupinambá, em razão da retirada do projeto. A gravação da sessão está disponível ao público, por meio do link https://www.youtube.com/live/9OQkESPcn60 . Os documentos que fundamentam estes esclarecimentos foram enviados aos vereadores solicitantes. Presidência da Câmara Municipal de Cubatão",
+ "coletado_em": "2026-11-05T17:44:05",
+ "extraido": {
+  "sessao": {
+   "numero": 25,
+   "tipo": "extraordinaria"
+  },
+  "data_sessao": null,
+  "materias": [
+   {
+    "tipo": "PL",
+    "numero": "75",
+    "ano": "2026",
+    "resultado": "retirado",
+    "votos": [],
+    "nomes_nao_reconhecidos": []
+   }
+  ]
+ }
+}

@@ -20,7 +20,18 @@
   }
  ],
  "transmissoes": [],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Câmara aprova projeto que institui o Dia Municipal da Memória, Verdade e Justiça pelas vítimas da Vila Socó",
+   "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-institui-o-dia-municipal-da-memoria-verdade-e-justica-pelas-vitimas-da-vila-soco",
+   "publicado": "2026-10-07T17:30:18Z"
+  },
+  {
+   "titulo": "Legislativo aprova projeto que estabelece o Dia Municipal do Nordestino em Cubatão",
+   "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-que-estabelece-o-dia-municipal-do-nordestino-em-cubatao",
+   "publicado": "2026-10-07T20:55:11Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -116,7 +127,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-projeto-que-institui-o-dia-municipal-da-memoria-verdade-e-justica-pelas-vitimas-da-vila-soco",
+     "titulo": "Câmara aprova projeto que institui o Dia Municipal da Memória, Verdade e Justiça pelas vítimas da Vila Socó",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -212,7 +232,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/legislativo-aprova-projeto-que-estabelece-o-dia-municipal-do-nordestino-em-cubatao",
+     "titulo": "Legislativo aprova projeto que estabelece o Dia Municipal do Nordestino em Cubatão",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   },
   {
    "tipo": "RQ",

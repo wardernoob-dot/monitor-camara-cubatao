@@ -1,0 +1,62 @@
+{
+ "url": "https://www.cubatao.sp.leg.br/camara-rejeita-projeto-que-autorizaria-o-poder-executivo-a-contratar-operacao-de-credito",
+ "titulo": "Câmara rejeita projeto que autorizaria o Poder Executivo a contratar operação de crédito",
+ "publicado": "2026-10-21T14:30:04Z",
+ "texto": "Os parlamentares rejeitaram ontem (20/10), na 35ª Sessão Ordinária, o Projeto de Lei Nº 75/2026, de autoria da Prefeitura, que autorizaria o Poder Executivo a contratar operação de crédito com a Caixa Econômica Federal (CEF) até o valor de quinhentos milhões de reais, com garantia da União. A operação seria realizada por meio do Financiamento à Infraestrutura e ao Saneamento (FINISA), linha de crédito voltada a projetos de infraestrutura e saneamento ambiental.\nNa justificativa do projeto, o chefe do Executivo citou que o objetivo era viabilizar recursos financeiros para o desenvolvimento sustentável do município, sobretudo em áreas essenciais para a população. Com isso, os recursos seriam aplicados em obras de mobilidade, drenagem, saneamento, modernização administrativa, revitalização de equipamentos públicos, qualificação dos serviços municipais, entre outras, observadas as diretrizes do planejamento municipal e a legislação vigente.\nQuanto às garantias da operação de crédito, a iniciativa previa a vinculação de receitas de transferências constitucionais, como o Fundo de Participação dos Municípios (FPM) e o Imposto Territorial Rural (ITR), a título de contragarantia à garantia outorgada pela União.\nRony Martins (PSD), vice-presidente da Comissão de Finanças e Orçamento, exarou parecer desfavorável à aprovação do projeto, que foi apreciado em Plenário e aprovado pela maioria dos parlamentares. Votaram a favor do parecer desfavorável os vereadores Guilherme do Salão (PSB), Batoré (Agir), Jair do Bar (PSDB), Marcinho (PSB), Ronaldo da Comissão (PSD), Rony Martins, Xuxa (PSDB) e Allan Matias (PSD). Já Alessandro Oliveira (Republicanos), Cléber do Cavaco (PSD), Edson Mota (União), Tinho (PSD), Afonsinho (PSD) e Anderson De Lana (PSDB) votaram contra.\nDe acordo com Rony, o texto do projeto não dispunha de elementos suficientes para aferir, com a segurança necessária, a adequação financeira e orçamentária da operação, sua sustentabilidade, seu impacto plurianual e sua relação custo-benefício.\nProjeto de Lei Nº 87/2026\nO Legislativo também rejeitou o Projeto de Lei Nº 87/2026, de autoria da Prefeitura, cuja proposta era alterar parcialmente a redação do Art. 6º da Lei Municipal Nº 4.335/2025, que estima a receita e fixa a despesa do município para o exercício de 2026. Segundo o Poder Executivo, o objetivo era ampliar de 10% para 20% o limite para a abertura de créditos adicionais suplementares – ou seja, um reforço à dotação orçamentária já existente – estendendo o limite às operações de transposição, remanejamento e transferência de recursos entre uma área do município para outra, mediante decreto executivo.\nVotaram contra o parecer favorável ao projeto os vereadores Guilherme do Salão, Batoré, Jair do Bar, Marcinho, Ronaldo da Comissão, Rony Martins, Xuxa e Allan Matias. Votaram a favor Alessandro Oliveira, Cléber do Cavaco, Edson Mota, Tinho, Afonsinho e Anderson De Lana.\nProjeto de Lei Nº 79/2026\nO Projeto de Lei Nº 79/2026, do Poder Executivo, foi retirado de pauta durante a sessão ordinária a pedido do autor. A medida autoriza a Prefeitura a ceder onerosamente – transferir mediante pagamento – direitos originados de créditos tributários e não tributários a pessoas jurídicas de direito privado ou a fundos de investimento regulamentados pela Comissão de Valores Mobiliários (CVM). Na proposta, estão incluídos os créditos inscritos em Dívida Ativa.",
+ "coletado_em": "2026-11-05T17:43:57",
+ "extraido": {
+  "sessao": {
+   "numero": 35,
+   "tipo": "ordinaria"
+  },
+  "data_sessao": "2026-10-20",
+  "materias": [
+   {
+    "tipo": "PL",
+    "numero": "75",
+    "ano": "2026",
+    "resultado": "rejeitado",
+    "votos": [
+     {
+      "alvo": "parecer_contrario",
+      "SIM": [
+       "guilherme dos santos malaquias",
+       "jose elan dos santos gomes",
+       "jair ferreira lucas",
+       "marcio silva nascimento",
+       "ronaldo araujo queiroz",
+       "roniele martins da silva",
+       "daniel barbosa de assis silva",
+       "allan matias barboza de souza"
+      ],
+      "NAO": [
+       "alessandro donizete de oliveira",
+       "joemerson alves de souza",
+       "edson menezes mota",
+       "marcos roberto silva",
+       "jose afonso",
+       "anderson de lana andrade"
+      ]
+     }
+    ],
+    "nomes_nao_reconhecidos": []
+   },
+   {
+    "tipo": "PL",
+    "numero": "87",
+    "ano": "2026",
+    "resultado": "rejeitado",
+    "votos": [],
+    "nomes_nao_reconhecidos": []
+   },
+   {
+    "tipo": "PL",
+    "numero": "79",
+    "ano": "2026",
+    "resultado": "retirado",
+    "votos": [],
+    "nomes_nao_reconhecidos": []
+   }
+  ]
+ }
+}

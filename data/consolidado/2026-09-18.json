@@ -12,7 +12,13 @@
   }
  ],
  "transmissoes": [],
- "noticias": [],
+ "noticias": [
+  {
+   "titulo": "Projeto que autoriza Prefeitura a contratar operação de crédito é retirado da pauta de sessão",
+   "url": "https://www.cubatao.sp.leg.br/projeto-que-autoriza-prefeitura-a-contratar-operacao-de-credito-e-retirado-de-pauta-durante-sessao",
+   "publicado": "2026-09-18T14:46:00Z"
+  }
+ ],
  "materias": [
   {
    "tipo": "PL",
@@ -49,7 +55,16 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/projeto-que-autoriza-prefeitura-a-contratar-operacao-de-credito-e-retirado-de-pauta-durante-sessao",
+     "titulo": "Projeto que autoriza Prefeitura a contratar operação de crédito é retirado da pauta de sessão",
+     "resultado": "retirado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
   }
  ],
  "votacoes_nao_identificadas": [],
