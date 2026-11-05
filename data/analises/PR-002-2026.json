@@ -1,0 +1,41 @@
+{
+ "materia": {
+  "tipo": "PR",
+  "numero": "2",
+  "ano": "2026",
+  "autoria": "MESA DA CÂMARA",
+  "ementa": "ALTERA A RESOLUÇÃO Nº 3.079, DE 22 DE JULHO DE 2025, QUE DISPÕE SOBRE A ESTRUTURA ADMINISTRATIVA DA CÂMARA MUNICIPAL DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PR%2002.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera a estrutura administrativa da Câmara Municipal de Cubatão para criar a Função de Coordenador de Suporte Técnico.",
+  "o_que_muda": [
+   "Altera a Resolução nº 3.079, de 22 de julho de 2025.",
+   "Cria a Função de Coordenador de Suporte Técnico exigindo ensino superior específico.",
+   "Estabelece exigência de qualificação em Engenharia da Computação, Ciência da Computação ou Tecnologia em Análise e Desenvolvimento de Sistemas."
+  ],
+  "quem_e_afetado": "A estrutura administrativa e os servidores da Câmara Municipal de Cubatão.",
+  "justificativa_do_autor": "Segundo o autor, a criação do cargo visa ao aprimoramento da gestão administrativa, suprindo a necessidade de integração entre plataformas digitais, atendimento à transparência pública, proteção de dados e modernização.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "Não é possível saber o impacto financeiro, o salário do cargo ou quais dispositivos exatos da resolução anterior serão modificados, pois o texto completo das alterações não consta no documento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não traz informações sobre o custo da criação da nova função ou a fonte dos recursos financeiros.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O projeto exige formação de nível superior específica para o novo cargo.",
+    "trecho": "exigindo qualificação de nível superior em Superior em Engenharia da Computação, Ciência da Computação ou Tecnologia em Análise e Desenvolvimento de Sistemas."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "09681459baee74d7",
+ "gerado_em": "2026-11-05T22:59:37Z"
+}

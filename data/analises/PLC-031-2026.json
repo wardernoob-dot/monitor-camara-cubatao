@@ -1,0 +1,56 @@
+{
+ "materia": {
+  "tipo": "PLC",
+  "numero": "31",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "INSTITUI, NOS TERMOS DO ART. 182, § 4° DA CONSTITUIÇÃO FEDERAL, DA LEI FEDERAL N° 10.257, DE 10 DE JULHO DE 2001 (ESTATUTO DAS CIDADES) E DO ART. 47 DA LEI COMPLEMENTAR MUNICIPAL N° 134, DE 28 DE DEZEMBRO DE 2023 (PLANO DIRETOR), OS INSTRUMENTOS PARA O CUMPRIMENTO DA FUNÇÃO SOCIAL DA PROPRIEDADE URBANA NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PLC%2031.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto regulamenta os instrumentos para o cumprimento da função social da propriedade urbana em Cubatão, estabelecendo regras para imóveis não edificados, subutilizados, não utilizados ou abandonados.",
+  "o_que_muda": [
+   "Cria regras para notificar proprietários de imóveis vazios, subutilizados ou não edificados para que deem uso a eles.",
+   "Aumenta o IPTU (Imposto sobre a Propriedade Predial e Territorial Urbana) progressivamente ao longo dos anos para quem descumprir os prazos.",
+   "Permite a desapropriação de imóveis após 5 anos de cobrança de IPTU progressivo sem regularização.",
+   "Cria regras para arrecadar imóveis abandonados e prevê a criação de uma comissão municipal específica."
+  ],
+  "quem_e_afetado": "Proprietários de imóveis urbanos não edificados, subutilizados, não utilizados ou considerados abandonados em Cubatão.",
+  "justificativa_do_autor": "",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não traz a justificativa do autor e deixa a regulamentação de procedimentos para decretos futuros do Poder Executivo.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto define prazos para o proprietário protocolar projetos após notificação.",
+    "trecho": "deverão protocolizar pedido de aprovação de projeto de parcelamento ou edificação no prazo máximo de 1 (um) ano da notificação."
+   },
+   {
+    "ponto": "O IPTU progressivo no tempo aplica alíquotas que chegam a 15% para imóveis construídos e não construídos.",
+    "trecho": "15% (quinze por cento) no 5° (quinto) ano."
+   },
+   {
+    "ponto": "Imóveis abandonados podem passar para a propriedade do município após três anos.",
+    "trecho": "O Município de Cubatão promoverá a arrecadação do bem imóvel abandonado como bem vago, o qual passará à sua propriedade após três anos."
+   },
+   {
+    "ponto": "O procedimento para encampação e arrecadação de imóveis abandonados depende de regulamentação posterior.",
+    "trecho": "O procedimento para encampação e arrecadação do imóvel abandonado será regulamentado pelo Poder Executivo"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "Cria uma comissão municipal com membros que receberão gratificação financeira.",
+    "trecho": "fará jus a uma gratificação pelo exercício de função especial, no valor de R$ 2.824,00",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "ff0e4224cf7367b8",
+ "gerado_em": "2026-11-05T22:58:58Z"
+}

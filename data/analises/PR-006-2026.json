@@ -1,0 +1,42 @@
+{
+ "materia": {
+  "tipo": "PR",
+  "numero": "6",
+  "ano": "2026",
+  "autoria": "MESA DA CÂMARA",
+  "ementa": "ALTERA E ACRESCENTA DISPOSITIVOS À RESOLUÇÃO Nº 3.079, DE 22 DE JULHO DE 2025, PARA READEQUAR O QUADRO DE FUNÇÕES GRATIFICADAS DA CÂMARA MUNICIPAL DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PR%2006.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera a estrutura administrativa da Câmara Municipal de Cubatão, readequando o quadro de funções gratificadas e criando novos cargos de apoio técnico.",
+  "o_que_muda": [
+   "Altera requisitos e padrões de funções gratificadas existentes.",
+   "Cria as funções de Secretária e Subcoordenador da Comissão de Planejamento de Compras e Contratações.",
+   "Aumenta de 4 para 6 o número de vagas para Agente de Fiscalização do Controle Interno.",
+   "Define novas atribuições específicas para os cargos recém-criados na área de compras."
+  ],
+  "quem_e_afetado": "Servidores efetivos da Câmara Municipal de Cubatão que ocupam ou venham a ocupar funções gratificadas.",
+  "justificativa_do_autor": "Segundo o autor, a medida visa modernizar a gestão pública, valorizar funções de liderança, atender à legislação nacional de licitações e fortalecer o controle interno e a eficiência das contratações.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "Não é possível avaliar o impacto orçamentário das alterações, pois o documento não apresenta estimativa de custos ou dotação orçamentária.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não menciona o impacto financeiro ou a fonte de recursos para o pagamento das gratificações.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O projeto entra em vigor imediatamente após a sua publicação.",
+    "trecho": "Esta Resolução entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "085925f6e6f54c53",
+ "gerado_em": "2026-11-05T22:58:33Z"
+}
