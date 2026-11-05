@@ -1,0 +1,48 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "5",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "ALTERA A ESTRUTURA DA SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL, PREVISTA NA LEI MUNICIPAL N° 3.562, DE 03 DE DEZEMBRO DE 2012, ALTERADA PELA LEI MUNICIPAL N° 3.917, DE 28 DE JUNHO DE 2018; CRIA O CARGO QUE ESPECIFICA, DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2005.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera a estrutura administrativa da Secretaria Municipal de Assistência Social de Cubatão, criando novos cargos e definindo suas atribuições. A proposta reorganiza departamentos, divisões e serviços dentro da pasta.",
+  "o_que_muda": [
+   "Cria novos cargos de chefia e coordenação na Secretaria de Assistência Social.",
+   "Define as atribuições específicas para cada novo cargo criado.",
+   "Reorganiza a estrutura interna de departamentos e divisões da secretaria.",
+   "Estabelece requisitos de escolaridade para os novos cargos."
+  ],
+  "quem_e_afetado": "Servidores públicos municipais lotados na Secretaria de Assistência Social e a estrutura administrativa da prefeitura.",
+  "justificativa_do_autor": "Segundo o autor, a alteração visa adequar a estrutura administrativa da Secretaria de Assistência Social para melhorar o funcionamento e a organização dos serviços prestados.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "Não é possível saber o impacto orçamentário ou o custo total com a criação desses novos cargos apenas com este documento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não menciona o impacto financeiro ou a fonte de recursos para a criação dos novos cargos.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não estabelece prazos para a implementação das mudanças ou para o preenchimento dos cargos.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto define os requisitos de escolaridade para os cargos, exigindo nível médio ou superior conforme a função.",
+    "trecho": "Chefe de Serviço de Expediente 1 Nível Médio",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "e7be5450ee3ca1e0",
+ "gerado_em": "2026-11-05T22:59:43Z"
+}

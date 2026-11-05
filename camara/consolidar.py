@@ -196,7 +196,7 @@ def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
             if it.get("assunto"):
                 m["assunto"] = it["assunto"]
             elif not m["assunto"] and it.get("descricao"):
-                m["assunto"] = it["descricao"][:400]
+                m["assunto"] = it["descricao"]
             if mn := re.search(r"/(\d{4})", it.get("numero") or ""):
                 m["ano"] = m["ano"] or mn.group(1)
             m["resultado_oficial"] = it.get("resultado")

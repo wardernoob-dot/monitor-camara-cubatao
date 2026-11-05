@@ -103,7 +103,7 @@ def candidatos(textos_pauta: list[str]) -> list[dict]:
                 tipo, num, ano = esp, mn.group(1), mn.group(2)
             num = num.lstrip("0")
             novo = {"tipo": tipo, "numero": num, "ano": ano, "autor": chave(autoria),
-                    "autoria": autoria, "assunto": assunto[:600]}
+                    "autoria": autoria, "assunto": assunto[:3000]}
             velho = cands.setdefault((tipo, num), novo)
             if len(velho["assunto"]) < 60 and len(novo["assunto"]) > len(velho["assunto"]):
                 velho["assunto"] = novo["assunto"]  # pauta truncada; parecer anexado traz o assunto inteiro

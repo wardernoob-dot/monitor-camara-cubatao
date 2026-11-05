@@ -28,6 +28,7 @@ from pathlib import Path
 
 
 from . import analise as AN
+from . import explicacao as EX
 from . import validacao as V
 from .nomes import Registro, chave, display
 from .painel import LAYOUT_2026
@@ -215,6 +216,18 @@ class Base:
                         m["lei"] = {"numero": lei_num(pub["numero"]), "data": pub["data"], "url": pub.get("url")}
                     elif pub.get("tipo") == "veto" and not m["veto"]:
                         m["veto"] = {"alcance": pub.get("alcance") or "", "url": pub.get("url")}
+                if mc["tipo"] == "VETO":
+                    mv = re.search(r"PROJETO DE LEI(?: COMPLEMENTAR)?\s+N\S?\s*0*(\d{1,4})/(\d{4})", V._sem_acento_maiusc(mc.get("assunto") or ""))
+                    if mv:
+                        pl = self.materia("PL", mv.group(1), mv.group(2))
+                        alc = re.search(r"VETO (INTEGRAL|PARCIAL|TOTAL)", V._sem_acento_maiusc(mc.get("assunto") or ""))
+                        pl["veto"] = {**(pl["veto"] or {}), "alcance": (alc.group(1).lower() if alc else (pl["veto"] or {}).get("alcance", "")),
+                                      "resultado": mc.get("resultado_oficial") or (pl["veto"] or {}).get("resultado"),
+                                      "data": c["data"], "pagina": m["slug"]}
+                        if not pl["assunto"]:
+                            mt = re.search(r'QUE\s*[“"]?(.+?)[”"]?\s*$', mc.get("assunto") or "")
+                            pl["assunto"] = mt.group(1) if mt else None
+                        m["pl_vetado"] = pl["slug"]
                 dia["materias"].append(m)
                 for x in mc["votacoes"]:
                     ev = self._evento(c, m, x)
@@ -292,6 +305,10 @@ class Base:
             m["ultima_data"] = max([e["data"] for e in m["eventos"]] + m["pautas"] or [""])
             if m["tipo"] in ("RQ", "MOCAO"):
                 m["assunto_txt"] = _desc_curta(m["assunto"])
+            m["tema"] = tema(m)
+            m["relevancia"] = relevancia(m)
+            for e in m["eventos"]:
+                e["sentido"] = sentido(e)
             for k in m["autores"]:
                 if k in self.vereadores:
                     self.vereadores[k]["projetos" if m["tipo"] not in ("RQ", "MOCAO") else "requerimentos"].append(m)
@@ -318,12 +335,86 @@ class Base:
             pres = v["presenca"]
             v["sessoes_total"] = sum(pres.values())
             v["leis"] = sum(1 for m in v["projetos"] if m["lei"])
+            v["faltas"] = pres.get("ausente", 0) + pres.get("justificada", 0)
         self.dias.sort(key=lambda d: d["data"], reverse=True)
 
     def materias_publicas(self) -> list[dict]:
         tipos = ("PL", "PLC", "PR", "PDL", "PELOM")
         return sorted((m for m in self.materias.values() if m["tipo"] in tipos and m["numero"] and m["ano"]),
                       key=lambda m: (m["ultima_data"], int(m["numero"])), reverse=True)
+
+
+TEMAS = [
+    ("Homenagens, datas e nomes de lugares", r"DENOMINA|CALENDARIO|DIA MUNICIPAL|SEMANA MUNICIPAL|MES MUNICIPAL|TITULO DE CIDAD|"
+     r"UTILIDADE PUBLICA|HOMENAG|APLAUSO|CONGRATULA|PATRIMONIO CULTURAL|VOTO DE PESAR|MEDALHA"),
+    ("Orçamento, impostos e finanças", r"ORCAMENT|CREDITO|ESTIMA A RECEITA|DESPESA|TRIBUT|IMPOSTO|\bTAXA|IPTU|\bISS\b|EMPRESTIMO|"
+     r"FINANCIAMENTO|DIRETRIZES ORCAMENTARIAS|PLANO PLURIANUAL|FUNDO MUNICIPAL|GARANTIA DA UNIAO|DIVIDA"),
+    ("Servidores e estrutura da Prefeitura", r"SERVIDOR|VENCIMENTO|\bCARGO|ESTRUTURA ADMINISTRATIVA|ESTRUTURA DA SECRETARIA|"
+     r"REVISAO GERAL ANUAL|CARREIRA|ESTATUTO|CESSAO DE SERVIDORES|CONSELHO MUNICIPAL"),
+    ("Saúde", r"SAUDE|AUTIS|\bTEA\b|DOENCA|HOSPITAL|MEDIC|GESTANTE|VACIN|FISIOTERAP|SANGUE|DEPENDENCIA|LUDOPATIA"),
+    ("Educação e cultura", r"EDUCA|ESCOLA|CRECHE|ALUNO|ENSINO|CULTURA|ESPORT|LEITURA|BIBLIOTECA"),
+    ("Assistência social e inclusão", r"DEFICIENCIA|IDOSO|MELHOR IDADE|ASSISTENCIA SOCIAL|VULNERAB|INCLUS|MULHER|CRIANCA|"
+     r"ADOLESCENTE|EMPREGABILIDADE|FOME|ALIMENT|ACESSIBILIDADE|LIBRAS"),
+    ("Meio ambiente e animais", r"ANIMA|AMBIENT|RESIDUO|LIXO|ARBORIZ|MANGUE|RECICL|SONORO|POLUI"),
+    ("Trânsito, transporte e cidade", r"TRANSITO|TRANSPORTE|ONIBUS|VEICULO|BICICLET|CALCADA|ESTACIONAMENTO|URBAN|IMOVEL|OBRA|"
+     r"MOBILIDADE|FAIXA"),
+    ("Segurança", r"SEGURANCA|GUARDA|VIGILANCIA|MONITORAMENTO|VIOLENCIA"),
+    ("Funcionamento da Câmara", r"REGIMENTO|RESOLUCAO N|CAMARA MUNICIPAL|COMISSAO ESPECIAL|\bCEI\b|\bCEV\b|LEI ORGANICA|"
+     r"PRORROGACAO DE CEV|ATO SOLENE|SESSAO SOLENE"),
+]
+
+
+def tema(m: dict) -> str:
+    if m["tipo"] == "PELOM":
+        return "Funcionamento da Câmara" if re.search("CAMARA", V._sem_acento_maiusc(m["assunto"] or "")) else "Lei Orgânica"
+    u = V._sem_acento_maiusc(f"{m.get('assunto') or ''}")
+    for nome, rx in TEMAS:
+        if re.search(rx, u):
+            return nome
+    return "Outros"
+
+
+def relevancia(m: dict) -> dict:
+    """Regras publicas e objetivas (tambem descritas em 'Como funciona'). Nao avalia se e bom ou ruim."""
+    alta, media = [], []
+    t = m.get("tema")
+    if t == "Orçamento, impostos e finanças":
+        alta.append("Mexe no orçamento, em impostos ou nas finanças da cidade")
+    if m["tipo"] == "PELOM":
+        alta.append("Muda a Lei Orgânica, a lei mais importante do município")
+    if t == "Servidores e estrutura da Prefeitura":
+        alta.append("Mexe com servidores ou com a estrutura da Prefeitura")
+    if m.get("veto"):
+        alta.append("Foi vetado pelo prefeito")
+    decisivos = [e for e in m["eventos"] if e["etapa"] not in ("parecer", "parecer_emenda", "emenda")]
+    if any((e["nao"] or 0) >= 3 for e in decisivos):
+        e = max(decisivos, key=lambda e: e["nao"] or 0)
+        alta.append(f"Votação dividida ({e['sim']} a {e['nao']})")
+    if any(e["resultado"] == "REJEITADO" for e in decisivos):
+        alta.append("Foi rejeitado pela Câmara")
+    if any(e["etapa"] == "parecer" and "contr" in e["etapa_txt"].lower() for e in m["eventos"]):
+        media.append("Teve parecer contrário de comissão")
+    if t in ("Saúde", "Educação e cultura", "Assistência social e inclusão", "Meio ambiente e animais",
+             "Trânsito, transporte e cidade", "Segurança") and m["tipo"] in ("PL", "PLC"):
+        media.append("Cria regra, programa ou obrigação para a cidade")
+    if alta:
+        return {"nivel": "alta", "motivos": alta + media}
+    if media:
+        return {"nivel": "media", "motivos": media}
+    motivo = "Homenagem, data comemorativa ou nome de lugar" if t and t.startswith("Homenagens") else "Sem critério de destaque"
+    return {"nivel": "baixa", "motivos": [motivo]}
+
+
+def sentido(e: dict) -> str | None:
+    """O que um SIM significa para o projeto nesta etapa."""
+    t = e["etapa_txt"].lower()
+    if e["etapa"] in ("emenda", "parecer_emenda"):
+        return "emenda"
+    if e["etapa"] == "parecer":
+        return "inverso" if "contr" in t else "direto" if "favor" in t else None
+    if e["materia"]["tipo"] == "VETO":
+        return None
+    return "direto"
 
 
 def _data_pauta(t: str) -> str | None:
@@ -384,7 +475,12 @@ def _situacao(m: dict) -> tuple[str, str]:
     if m["lei"]:
         return f"Virou a Lei {m['lei']['numero']}", "lei"
     if m["veto"]:
-        return f"Vetado pelo prefeito ({m['veto']['alcance']})", "veto"
+        r = m["veto"].get("resultado") or ""
+        if r == "veto_derrubado":
+            return "Veto do prefeito derrubado pela Câmara", "veto"
+        if r == "veto_mantido":
+            return f"Vetado pelo prefeito ({m['veto']['alcance']}); veto mantido", "veto"
+        return f"Vetado pelo prefeito ({m['veto']['alcance']}); falta a Câmara votar o veto", "veto"
     decisivos = [e for e in m["eventos"] if e["etapa"] not in ("parecer", "parecer_emenda", "emenda") and e["resultado"]]
     if decisivos:
         u = decisivos[-1]
@@ -419,6 +515,7 @@ def _ev_json(ev: dict, vslug: dict) -> dict:
         "etapa_txt": ev["etapa_txt"], "resultado": ev["resultado"] or None, "sim": ev["sim"], "nao": ev["nao"],
         "fonte": ev["fonte"], "link": ev["link"], "resumo_url": ev["resumo_url"], "detalhe": ev["detalhe"],
         "votos": {vslug[k]: v for k, v in ev["votos"].items() if k in vslug},
+        "sentido": ev.get("sentido"),
     }
 
 
@@ -472,6 +569,17 @@ def preparar_fotos(vereadores: dict) -> dict[str, str]:
     return out
 
 
+def _explicacao(m: dict, explic: dict) -> dict | None:
+    if m["analise"]:
+        a = m["analise"]
+        return {"texto": a["analise"]["resumo"], "base": "o texto integral do projeto",
+                "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", a["modelo"])}
+    e = explic.get(m["slug"])
+    if e and "incompleta" not in e["texto"].lower():
+        return {"texto": e["texto"], "base": "a descrição oficial (ementa)", "modelo": e["modelo"]}
+    return None
+
+
 def exportar(dados: Path, saida: Path | None = None) -> dict:
     """Grava docs/data/dados.json (tudo que o app precisa) e docs/data/analises/<projeto>.json (sob demanda)."""
     dados = Path(dados)
@@ -491,6 +599,10 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     (saida / "analises").mkdir(parents=True)
 
     fotos = preparar_fotos(b.vereadores)
+    EX.gerar(dados, [{"id": m["slug"], "tipo": NOME_TIPO.get(m["tipo"], m["tipo"]), "titulo": m["titulo"],
+                      "autoria": m["autoria"], "ementa": m["assunto_txt"]}
+                     for m in b.materias.values() if m["tem_pagina"] and not m["analise"]])
+    explic = EX.carregar(dados)
     vereadores = []
     for v in sorted(b.vereadores.values(), key=lambda v: v["exibicao"]):
         if not v["em_exercicio"] and v["sessoes_total"] < 1:
@@ -501,6 +613,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "cargo": v.get("cargo"),
             "em_exercicio": v["em_exercicio"], "contagem": v["contagem"], "total_votacoes": v["total_votacoes"],
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
+            "faltas": v["faltas"], "leis": v["leis"],
             "foto": fotos.get(v["slug"]),
             "projetos": [m["slug"] for m in v["projetos"] if m["slug"] in paginas],
             "requerimentos": [m["slug"] for m in v["requerimentos"] if m["slug"] in paginas],
@@ -526,6 +639,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                               "vereador_txt": d["vereador_txt"], "painel": d["painel"], "resumo": d["resumo"]}
                              for d in m["divergencias"]],
             "analise": bool(m["analise"]), "lista": m["id"] in ids_publicas,
+            "tema": m["tema"], "relevancia": m["relevancia"], "explicacao": _explicacao(m, explic),
         })
     dias = [{"data": d["data"], "sessoes": d["sessoes"], "status": d["status"],
              "materias": [m["slug"] for m in d["materias"] if m["slug"] in paginas],

@@ -2,7 +2,8 @@ import { useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useDados } from "../dados";
 import { Situacao } from "../componentes";
-import { corta, semAcento, useTitulo } from "../util";
+import { semAcento, useTitulo } from "../util";
+import { Destaque, DicaMateria } from "../explica";
 
 const SITUACOES: [string, string][] = [
   ["lei", "Virou lei"],
@@ -20,13 +21,17 @@ export default function Projetos() {
   const q = params.get("q") ?? "";
   const autor = params.get("autor") ?? "";
   const sit = params.get("situacao") ?? "";
+  const destaque = params.get("destaque") === "1";
+  const temaSel = params.get("tema") ?? "";
   const lista = useMemo(() => b.materias.filter((m) => m.lista), [b]);
+  const temas = useMemo(() => [...new Set(lista.map((m) => m.tema))].sort((a, b) => a.localeCompare(b)), [lista]);
   const autores = useMemo(() => [...new Set(lista.map((m) => m.autoria))].sort((a, b) => a.localeCompare(b)), [lista]);
   const textos = useMemo(() => new Map(lista.map((m) => [m.slug, semAcento(`${m.titulo} ${m.assunto} ${m.autoria}`)])), [lista]);
 
   const termos = semAcento(q).split(/\s+/).filter(Boolean);
   const visiveis = lista.filter((m) =>
-    (!autor || m.autoria === autor) && (!sit || m.situacao_cls === sit) && termos.every((t) => textos.get(m.slug)!.includes(t)));
+    (!autor || m.autoria === autor) && (!sit || m.situacao_cls === sit) && (!destaque || m.relevancia.nivel === "alta") &&
+    (!temaSel || m.tema === temaSel) && termos.every((t) => textos.get(m.slug)!.includes(t)));
 
   function muda(chave: string, valor: string) {
     const p = new URLSearchParams(params);
@@ -57,6 +62,15 @@ export default function Projetos() {
             {SITUACOES.map(([v, n]) => <option key={v} value={v}>{n}</option>)}
           </select>
         </label>
+        <label>Tema
+          <select value={temaSel} onChange={(e) => muda("tema", e.target.value)}>
+            <option value="">Todos</option>
+            {temas.map((t) => <option key={t}>{t}</option>)}
+          </select>
+        </label>
+        <label className="busca__marcar">
+          <input type="checkbox" checked={destaque} onChange={(e) => muda("destaque", e.target.checked ? "1" : "")} /> Só os em destaque
+        </label>
         <p className="busca__contagem" aria-live="polite">{visiveis.length} projeto{visiveis.length === 1 ? "" : "s"}</p>
       </form>
       <div className="tabela-rolagem">
@@ -65,8 +79,8 @@ export default function Projetos() {
           <tbody>
             {visiveis.map((m) => (
               <tr key={m.slug}>
-                <td className="tabela__projeto"><Link to={`/projetos/${m.slug}`}>{m.titulo}</Link></td>
-                <td>{corta(m.assunto, 160)}</td>
+                <td className="tabela__projeto"><DicaMateria m={m}><Link to={`/projetos/${m.slug}`}>{m.titulo}</Link></DicaMateria> <Destaque m={m} compacto /></td>
+                <td>{m.assunto}</td>
                 <td>{m.autoria}</td>
                 <td><Situacao m={m} /></td>
               </tr>

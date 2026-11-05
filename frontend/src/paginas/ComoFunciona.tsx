@@ -36,6 +36,20 @@ export default function ComoFunciona() {
 </ul>
 <p>Os votos individuais nunca passam por inteligência artificial: são lidos pela cor de cada moldura no painel.</p>
 
+<h2 id="destaque">Projetos em destaque</h2>
+<p>O selo “Atenção” segue regras fixas, aplicadas igual a todos os projetos. Ele não diz se o projeto é bom ou ruim, só que vale a pena olhar com cuidado. Um projeto recebe o selo quando:</p>
+<ul className="lista-simples">
+  <li>mexe no orçamento, em impostos, em empréstimos ou nas finanças da cidade;</li>
+  <li>mexe com servidores ou com a estrutura da Prefeitura;</li>
+  <li>muda a Lei Orgânica, a lei mais importante do município;</li>
+  <li>foi vetado pelo prefeito;</li>
+  <li>foi rejeitado pela Câmara ou teve votação dividida, com 3 ou mais votos contrários.</li>
+</ul>
+<p>O tema de cada projeto (saúde, educação, homenagens etc.) é identificado por palavras da ementa oficial.</p>
+
+<h2>Explicações ao passar o mouse</h2>
+<p>Ao passar o mouse (ou tocar no “i”) sobre um projeto aparece uma explicação curta em palavras simples. Quando o texto integral do projeto está disponível, ela vem da análise conferida com o texto; nos outros casos, é a ementa oficial reescrita por inteligência artificial (Gemini), sem acrescentar nada. Ao passar o mouse sobre uma etapa (parecer, 1ª discussão, emenda…) aparece o que ela significa, inclusive quando votar “sim” quer dizer ser contra o projeto.</p>
+
 <h2>Limites</h2>
 <ul className="lista-simples">
   <li>Votações simbólicas, sem painel, não têm registro nominal.</li>

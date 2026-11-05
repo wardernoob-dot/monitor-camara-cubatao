@@ -2,18 +2,19 @@ import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDados, type Votacao, type Voto } from "../dados";
 import { Avatar, Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, VotoTag } from "../componentes";
-import { corta, dataCurta, useTitulo, votouDiferente } from "../util";
+import { dataCurta, useTitulo, votouDiferente } from "../util";
+import { Destaque, Dica, DicaMateria, EtapaComDica, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
 import { Funil } from "../viz";
 
-function Num({ valor, rotulo }: { valor: number; rotulo: string }) {
+function Num({ valor, rotulo, sufixo = "" }: { valor: number; rotulo: string; sufixo?: string }) {
   const [ref, entrou] = useEntrou<HTMLDivElement>();
   const v = useContador(valor, entrou, 1000);
-  return <div ref={ref}><dt>{rotulo}</dt><dd><span aria-hidden="true">{v}</span><span className="sr">{valor}</span></dd></div>;
+  return <div ref={ref}><dt>{rotulo}</dt><dd><span aria-hidden="true">{v}{sufixo}</span><span className="sr">{valor}{sufixo}</span></dd></div>;
 }
 import NaoEncontrado from "./NaoEncontrado";
 
-type Filtro = "todos" | "nao" | "contra" | "semvoto";
+type Filtro = "todos" | "destaque" | "contra" | "semvoto";
 
 export default function VereadorPagina() {
   const { slug = "" } = useParams();
@@ -46,14 +47,14 @@ export default function VereadorPagina() {
   if (!v) return <NaoEncontrado />;
 
   const recentes = [...votos].reverse();
-  const visiveis = recentes.filter(({ voto, contra }) =>
-    filtro === "todos" || (filtro === "nao" && voto === "NAO") || (filtro === "contra" && contra) ||
+  const visiveis = recentes.filter(({ ev, voto, contra }) =>
+    filtro === "todos" || (filtro === "destaque" && b.materia.get(ev.materia)?.relevancia.nivel === "alta") || (filtro === "contra" && contra) ||
     (filtro === "semvoto" && (voto === "BRANCO" || voto === "AUSENTE")));
   const projetos = v.projetos.map((s) => b.materia.get(s)!).filter(Boolean);
   const reqs = v.requerimentos.map((s) => b.materia.get(s)!).filter(Boolean);
   const filtros: [Filtro, string, number][] = [
     ["todos", "Todos", votos.length],
-    ["nao", "Votou não", v.contagem.NAO],
+    ["destaque", "Projetos em destaque", votos.filter(({ ev }) => b.materia.get(ev.materia)?.relevancia.nivel === "alta").length],
     ["contra", "Diferente do resultado", v.contra_resultado],
     ["semvoto", "Não votou ou ausente", v.contagem.BRANCO + v.contagem.AUSENTE],
   ];
@@ -80,12 +81,12 @@ export default function VereadorPagina() {
       </header>
 
       <dl className="numeros">
-        <Num valor={v.total_votacoes} rotulo="votações com voto registrado" />
-        <Num valor={v.contagem.SIM} rotulo="votou sim" />
-        <Num valor={v.contagem.NAO} rotulo="votou não" />
-        <Num valor={v.contagem.BRANCO} rotulo="presente sem votar" />
-        <Num valor={v.contra_resultado} rotulo="votou diferente do resultado" />
-        <Num valor={projetos.length} rotulo="projetos de lei de autoria" />
+        <Num valor={v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0} rotulo="% de presença nas sessões" sufixo="%" />
+        <Num valor={v.faltas} rotulo="faltas (justificadas ou não)" />
+        <Num valor={projetos.length} rotulo="projetos de lei apresentados" />
+        <Num valor={v.leis} rotulo="viraram lei" />
+        <Num valor={v.contra_resultado} rotulo="votou diferente do resultado final" />
+        <Num valor={v.contagem.BRANCO} rotulo="vezes presente sem votar (desde set.)" />
       </dl>
 
       {alinhados.length > 0 && (
@@ -131,9 +132,15 @@ export default function VereadorPagina() {
                   {visiveis.slice(0, limite).map(({ ev, voto, contra }: { ev: Votacao; voto: Voto; contra: boolean }) => (
                     <tr key={ev.id}>
                       <td className="tabela__data">{dataCurta(ev.data, true)}</td>
-                      <td><LinkMateria slug={ev.materia} /><span className="tabela__assunto">{corta(b.materia.get(ev.materia)?.assunto, 90)}</span></td>
-                      <td>{ev.etapa_txt}</td>
-                      <td><VotoTag voto={voto} />{contra && <> <span className="marca-contra">diferente do resultado</span></>}</td>
+                      <td>
+                        {(() => { const mt = b.materia.get(ev.materia); return mt ? <><DicaMateria m={mt}><LinkMateria slug={ev.materia} /></DicaMateria> <Destaque m={mt} compacto /><span className="tabela__assunto">{mt.assunto}</span></> : null; })()}
+                      </td>
+                      <td><EtapaComDica ev={ev} tipo={b.materia.get(ev.materia)?.tipo} /></td>
+                      <td>
+                        <VotoTag voto={voto} />
+                        {naPratica(ev.sentido, voto) && <span className="na-pratica">na prática: {naPratica(ev.sentido, voto)}</span>}
+                        {contra && <> <Dica rotulo="O que é votar diferente do resultado" conteudo="O voto foi para o lado que perdeu: votou sim e a proposta foi rejeitada, ou votou não e foi aprovada."><span className="marca-contra">diferente do resultado</span></Dica></>}
+                      </td>
                       <td><ResultadoTag r={ev.resultado} />{Object.keys(ev.votos).length > 0 && <> <Placar ev={ev} /></>}</td>
                       <td className="tabela__fonte"><Fonte ev={ev} /></td>
                     </tr>
@@ -158,7 +165,7 @@ export default function VereadorPagina() {
         {projetos.length ? (
           <ul className="lista-projetos">
             {projetos.map((m) => (
-              <li key={m.slug}><LinkMateria slug={m.slug} /> <Situacao m={m} /><p>{corta(m.assunto, 200)}</p></li>
+              <li key={m.slug}><DicaMateria m={m}><LinkMateria slug={m.slug} /></DicaMateria> <Situacao m={m} /> <Destaque m={m} compacto /><p>{m.assunto}</p></li>
             ))}
           </ul>
         ) : (
@@ -170,7 +177,7 @@ export default function VereadorPagina() {
         <section aria-labelledby="reqs">
           <h2 id="reqs" className="secao__titulo">Requerimentos e moções aprovados</h2>
           <ul className="lista-projetos">
-            {reqs.map((m) => <li key={m.slug}><LinkMateria slug={m.slug} /><p>{corta(m.assunto, 220)}</p></li>)}
+            {reqs.map((m) => <li key={m.slug}><DicaMateria m={m}><LinkMateria slug={m.slug} /></DicaMateria><p>{m.assunto}</p></li>)}
           </ul>
         </section>
       )}

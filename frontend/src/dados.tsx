@@ -17,6 +17,8 @@ export interface Vereador {
   total_votacoes: number;
   contra_resultado: number;
   sessoes_total: number;
+  faltas: number;
+  leis: number;
   presenca: Partial<Record<"sim" | "justificada" | "ausente", number>>;
   projetos: string[];
   requerimentos: string[];
@@ -36,6 +38,7 @@ export interface Votacao {
   resumo_url: string | null;
   detalhe: string | null;
   votos: Record<string, Voto>;
+  sentido: "direto" | "inverso" | "emenda" | null;
 }
 
 export interface Divergencia {
@@ -62,12 +65,15 @@ export interface Materia {
   pautas: string[];
   documento: string | null;
   lei: { numero: string; data: string; url: string | null } | null;
-  veto: { alcance: string; url: string | null } | null;
+  veto: { alcance: string; url?: string | null; resultado?: "veto_mantido" | "veto_derrubado" | null; data?: string; pagina?: string } | null;
   ultima_data: string;
   eventos: number[];
   divergencias: Divergencia[];
   analise: boolean;
   lista: boolean;
+  tema: string;
+  relevancia: { nivel: "alta" | "media" | "baixa"; motivos: string[] };
+  explicacao: { texto: string; base: string; modelo: string } | null;
 }
 
 export interface Sessao {

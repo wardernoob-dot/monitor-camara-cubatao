@@ -5,15 +5,13 @@ import { useDados, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
-import { COR, Contador, FaixaMini, FeedVotacoes, Funil, GradeHero, Heatmap, Modal, Sparkline } from "../viz";
+import { Barras, COR, Contador, FaixaMini, FeedVotacoes, Funil, GradeHero, Heatmap, Modal } from "../viz";
+import { Destaque } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 
 const COLUNAS = 80;
 const LINHAS_TITULO = ["Como cada vereador", "de Cubatão votou"];
 
-function semana(p: { x: string }) {
-  return `semana de ${dataCurta(p.x)}`;
-}
 
 function Bloco({ children, classe = "", i }: { children: React.ReactNode; classe?: string; i: number }) {
   const [ref, entrou] = useEntrou<HTMLDivElement>("-10% 0px");
@@ -39,6 +37,7 @@ export default function Inicio() {
   }, [colunas]);
   const recentes = useMemo(() => [...b.votacoes].filter((v) => v.resultado).reverse().slice(0, 20), [b]);
   const presidente = b.atuais.find((v) => v.cargo === "presidente");
+  const destaques = useMemo(() => b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").slice(0, 6), [b]);
   const rolagem = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = rolagem.current;
@@ -63,7 +62,7 @@ export default function Inicio() {
   return (
     <>
       <section ref={hero} className="hero" aria-labelledby="titulo-inicio">
-        {!reduz && <motion.div className="hero__fundo" style={{ opacity: opacidadeGrade }}><GradeHero /></motion.div>}
+        <motion.div className="hero__fundo" style={{ opacity: reduz ? 1 : opacidadeGrade }}><GradeHero /></motion.div>
         <div className="hero__dentro">
           <h1 id="titulo-inicio" className="hero__titulo">
             {LINHAS_TITULO.map((l, i) => (
@@ -75,7 +74,7 @@ export default function Inicio() {
             ))}
           </h1>
           <motion.p className="hero__texto" initial={reduz ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.5 }}>
-            {p.votacoes} votações da Câmara Municipal em 2026, com o voto de cada um dos 15 vereadores, conferidas com o painel eletrônico da transmissão e os documentos oficiais.
+            {b.votacoes.filter((v) => Object.keys(v.votos).length).length} votações da Câmara Municipal em 2026, com o voto de cada um dos 15 vereadores, conferidas com o painel eletrônico da transmissão e os documentos oficiais.
           </motion.p>
           <motion.div className="hero__acoes" initial={reduz ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65, ease: EASE }}>
             <Link className="botao botao--acao" to="/vereadores">Ver os vereadores</Link>
@@ -86,37 +85,73 @@ export default function Inicio() {
 
       <div className="pagina pagina--larga">
         <section aria-labelledby="numeros-titulo">
-          <h2 id="numeros-titulo" className="secao__titulo">A Câmara em números</h2>
+          <h2 id="numeros-titulo" className="secao__titulo">O que a Câmara fez em 2026</h2>
           <div className="bento">
-            <Bloco i={0} classe="bento__tile--contador"><Contador valor={p.votacoes} rotulo="votações com placar registrado" /></Bloco>
-            <Bloco i={1} classe="bento__tile--contador"><Contador valor={p.votosIndividuais} rotulo="votos individuais de sim ou não" /></Bloco>
-            <Bloco i={2} classe="bento__tile--contador"><Contador valor={p.sessoes} rotulo="dias de sessão com votação" /></Bloco>
-            <Bloco i={3} classe="bento__tile--contador"><Contador valor={p.leis} rotulo="projetos que viraram lei" /></Bloco>
+            <Bloco i={0} classe="bento__tile--contador"><Contador valor={p.apresentados} rotulo="projetos apresentados ou votados" /></Bloco>
+            <Bloco i={1} classe="bento__tile--contador"><Contador valor={p.leis} rotulo="viraram lei no Diário Oficial" /></Bloco>
+            <Bloco i={2} classe="bento__tile--contador"><Contador valor={p.vetos.length} rotulo="projetos vetados pelo prefeito" /></Bloco>
+            <Bloco i={3} classe="bento__tile--contador"><Contador valor={p.sessoes} rotulo="dias de sessão com votação" /></Bloco>
+
             <Bloco i={4} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Votações por semana</h3>
-              <Sparkline serie={p.serieVotacoes} rotulo="Votações por semana" formato={(x) => `${x.y} votações na ${semana(x)}`} />
+              <h3 className="tile__titulo">Vetos do prefeito</h3>
+              <p className="tile__nota">O prefeito pode vetar um projeto aprovado. O veto volta para a Câmara, que decide se mantém (o projeto ou a parte vetada não vale) ou derruba.</p>
+              <Barras
+                itens={[{ rotulo: "Vetos", partes: [
+                  { valor: p.vetos.filter((x) => x.resultado === "mantido").length, classe: "parte--mantido", nome: "mantidos pela Câmara" },
+                  { valor: p.vetos.filter((x) => x.resultado === "derrubado").length, classe: "parte--derrubado", nome: "derrubados pela Câmara" },
+                  { valor: p.vetos.filter((x) => x.resultado === "aguardando").length, classe: "parte--aguardando", nome: "aguardando votação" },
+                ] }]}
+                legenda={[{ classe: "parte--mantido", nome: "Veto mantido" }, { classe: "parte--derrubado", nome: "Veto derrubado" }, { classe: "parte--aguardando", nome: "Falta votar" }]}
+              />
+              <ul className="lista-vetos">
+                {p.vetos.map(({ m, resultado }) => (
+                  <li key={m.slug}>
+                    <Link to={`/projetos/${m.slug}`}>{m.titulo}</Link>
+                    <span className={`lista-vetos__res lista-vetos__res--${resultado}`}>{resultado === "mantido" ? "veto mantido" : resultado === "derrubado" ? "veto derrubado" : "falta votar o veto"}</span>
+                    <span className="lista-vetos__assunto">{m.assunto}</span>
+                  </li>
+                ))}
+              </ul>
             </Bloco>
+
             <Bloco i={5} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Votos “não” por semana</h3>
-              <Sparkline serie={p.serieNao} cor={COR.vermelho} rotulo="Votos não por semana" formato={(x) => `${x.y} votos não na ${semana(x)}`} />
-            </Bloco>
-            <Bloco i={6} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Votações divididas por semana</h3>
-              <Sparkline serie={p.serieDivididas} rotulo="Votações com algum voto não, por semana" formato={(x) => `${x.y} votações divididas na ${semana(x)}`} />
-            </Bloco>
-            <Bloco i={7} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Presentes que não votaram, por semana</h3>
-              <Sparkline serie={p.serieSemVoto} cor={COR.cinza} rotulo="Presentes sem votar por semana, desde setembro" formato={(x) => `${x.y} registros de presente sem votar na ${semana(x)}`} />
-            </Bloco>
-            <Bloco i={8} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Projetos de lei, do protocolo à lei</h3>
+              <h3 className="tile__titulo">Do projeto à lei</h3>
               <Funil etapas={p.funilProjetos} />
+              <h3 className="tile__titulo tile__titulo--seguinte">Do que tratam os projetos</h3>
+              <Barras
+                itens={p.temas.map((t) => ({ rotulo: t.rotulo, partes: [
+                  { valor: t.aprovados, classe: "parte--aprovado", nome: "aprovados" },
+                  { valor: t.outros, classe: "parte--outro", nome: "em andamento ou não votados" },
+                ] }))}
+                legenda={[{ classe: "parte--aprovado", nome: "Aprovados" }, { classe: "parte--outro", nome: "Em andamento ou não votados" }]}
+              />
             </Bloco>
-            <Bloco i={9} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Quanto as votações dividem a Câmara</h3>
-              <Funil etapas={p.funilVotacoes} />
+
+            <Bloco i={6} classe="bento__tile--largo">
+              <h3 className="tile__titulo">Quem apresenta os projetos</h3>
+              <p className="tile__nota">Projetos de lei, de resolução e de decreto legislativo, por autor.</p>
+              <Barras
+                itens={p.autoria.map((a) => ({ rotulo: a.rotulo, para: a.para, partes: [
+                  { valor: a.aprovados, classe: "parte--aprovado", nome: "aprovados" },
+                  { valor: a.outros, classe: "parte--outro", nome: "em andamento ou não votados" },
+                ] }))}
+                legenda={[{ classe: "parte--aprovado", nome: "Aprovados" }, { classe: "parte--outro", nome: "Em andamento ou não votados" }]}
+              />
             </Bloco>
-            <Bloco i={10} classe="bento__tile--alto">
+
+            <Bloco i={7} classe="bento__tile--largo">
+              <h3 className="tile__titulo">Faltas nas sessões</h3>
+              <p className="tile__nota">Segundo a lista de presença dos resumos oficiais de {p.sessoes} dias de sessão em 2026.</p>
+              <Barras
+                itens={p.faltas.map((f) => ({ rotulo: f.v.exibicao, para: `/vereadores/${f.v.slug}`, partes: [
+                  { valor: f.ausente, classe: "parte--ausente", nome: "faltas sem justificativa" },
+                  { valor: f.justificada, classe: "parte--justificada", nome: "faltas justificadas" },
+                ] }))}
+                legenda={[{ classe: "parte--ausente", nome: "Sem justificativa" }, { classe: "parte--justificada", nome: "Justificada" }]}
+              />
+            </Bloco>
+
+            <Bloco i={8} classe="bento__tile--largo">
               <h3 className="tile__titulo">Quem vota igual a quem</h3>
               <p className="tile__nota">Porcentagem de votações do painel em que os dois votaram igual, entre as que ambos votaram sim ou não. Clique num quadrado para ver as votações em que discordaram.</p>
               <Heatmap
@@ -131,25 +166,19 @@ export default function Inicio() {
                 legenda={<p className="tile__nota heat__legenda"><span className="heat__amostra" style={{ background: corAlinh(0.6) }} /> 60% ou menos <span className="heat__amostra" style={{ background: corAlinh(1) }} /> 100%</p>}
               />
             </Bloco>
-            <Bloco i={11} classe="bento__tile--alto">
-              <h3 className="tile__titulo">Votou em cada dia de sessão</h3>
-              <p className="tile__nota">Por dia de sessão desde setembro: votou ao menos uma vez, esteve presente sem votar, ou ausente.</p>
-              <Heatmap
-                linhas={p.presenca.map((x) => x.dias.map((d) => ({ ...d, v: x.v })))}
-                colunas={p.presenca[0]?.dias.length ?? 0}
-                valor={() => 1}
-                cor={(_, c) => c.estado === "votou" ? COR.verde : c.estado === "semvoto" ? "#ffffff" : c.estado === "ausente" ? "repeating-linear-gradient(135deg,#c9c9c9 0 2px,transparent 2px 4px)" : "#eeeeee"}
-                rotuloCelula={(c) => `${c.v.exibicao}, ${dataCurta(c.data)}: ${c.estado === "votou" ? "votou" : c.estado === "semvoto" ? "presente sem votar" : c.estado === "ausente" ? "ausente" : "sem registro"}`}
-                rotuloLinha={(i) => p.presenca[i].v.exibicao}
-                rotuloColuna={(j) => dataCurta(p.presenca[0].dias[j].data).slice(0, 2)}
-                legenda={
-                  <ul className="legenda" aria-label="Legenda">
-                    <li><span className="cel cel--sim" aria-hidden="true" /> Votou</li>
-                    <li><span className="cel cel--branco" aria-hidden="true" /> Presente sem votar</li>
-                    <li><span className="cel cel--ausente" aria-hidden="true" /> Ausente</li>
-                    <li><span className="cel cel--vazio" aria-hidden="true" /> Sem registro</li>
-                  </ul>}
-              />
+
+            <Bloco i={9} classe="bento__tile--largo">
+              <h3 className="tile__titulo">Projetos em destaque</h3>
+              <p className="tile__nota">Mexem no orçamento, em servidores ou na Lei Orgânica, foram vetados, rejeitados ou tiveram votação dividida.</p>
+              <ul className="lista-vetos">
+                {destaques.map((m) => (
+                  <li key={m.slug}>
+                    <Link to={`/projetos/${m.slug}`}>{m.titulo}</Link> <Destaque m={m} compacto />
+                    <span className="lista-vetos__assunto">{m.assunto}</span>
+                  </li>
+                ))}
+              </ul>
+              <p><Link to="/projetos?destaque=1">Ver todos os projetos em destaque</Link></p>
             </Bloco>
           </div>
         </section>

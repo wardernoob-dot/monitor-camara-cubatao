@@ -1,0 +1,917 @@
+{
+ "mocao-1-2026": {
+  "hash": "e54537d7bd4f",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia Luiz Carlos Martins por sua trajetória de vida e dedicação ao serviço público."
+ },
+ "mocao-10-2026": {
+  "hash": "f793b537143d",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia o Projeto Canoama e as mulheres participantes pelo trabalho de acolhimento e valorização da vida."
+ },
+ "mocao-11-2026": {
+  "hash": "c21bcaf859f8",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia Tatiana Carvalho por sua trajetória profissional e dedicação à dança."
+ },
+ "mocao-12-2026": {
+  "hash": "5ba3cc24a8b0",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia o Coletivo Valsa pra Lua pelos 10 anos de atividades e o Festival Ocupacena pela contribuição cultural à cidade de Cubatão."
+ },
+ "mocao-13-2026": {
+  "hash": "6f1f324339b0",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia a Associação de Fanfarras e Bandas da Baixada Santista, Litoral e Vales (AFABAN) por seu trabalho cultural e social."
+ },
+ "mocao-14-2026": {
+  "hash": "481497d69ecf",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia o maestro Roberto Farias da Silva por sua contribuição à música e cultura de Cubatão."
+ },
+ "mocao-15-2026": {
+  "hash": "4f431f445dc6",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia o Teatro do Kaos, seu diretor Lourimar Vieira e toda a equipe pelo trabalho cultural realizado em 2026."
+ },
+ "mocao-16-2026": {
+  "hash": "a5ba0b7ae3a5",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia o Encontro de Carros Antigos, Baixos & Turbos de Cubatão, organizado pela Equipe Baixos Cubatão."
+ },
+ "mocao-2-2026": {
+  "hash": "69d3c9351fcf",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia Kalleby Pietro Ribeiro de Simone por sua trajetória, espírito empreendedor e amor por Cubatão."
+ },
+ "mocao-3-2026": {
+  "hash": "ac0e07296a80",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Repudia a instalação de bilheteria e cancela na região da \"Serrinha\", perto da Refinaria Presidente Bernardes."
+ },
+ "mocao-4-2026": {
+  "hash": "d481ba65a4d9",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia o Grêmio Esportivo Aymoré de Cubatão."
+ },
+ "mocao-5-2026": {
+  "hash": "0056be42ff6f",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia todos os garis que trabalham em Cubatão."
+ },
+ "mocao-6-2026": {
+  "hash": "ee0b2cc1e808",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia enfermeiros, técnicos e auxiliares de saúde."
+ },
+ "mocao-7-2026": {
+  "hash": "fb7f2a2b39aa",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia o corpo de baile infantojuvenil da Escola Técnica Ivanildo Rebouças da Silva pelo seu trabalho artístico e conquistas culturais."
+ },
+ "mocao-8-2026": {
+  "hash": "bdf2fb946cc6",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia a delegada Mayla Ferreira Hadid pelo seu trabalho na segurança pública e no combate à violência doméstica em Cubatão."
+ },
+ "mocao-9-2026": {
+  "hash": "8a64cfc1ca1b",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Homenageia a Guarda Civil Municipal de Cubatão pela coragem e profissionalismo demonstrados em duas ocorrências importantes na cidade."
+ },
+ "pdl-1-2026": {
+  "hash": "632b333d1dc7",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Concede o título de Cidadão Cubatense ao Dr. André Bandeira."
+ },
+ "pdl-2-2026": {
+  "hash": "1ca307f4f7e4",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Concede o título de Cidadão Cubatense ao Pastor Carlos Alberto Lages da Silva."
+ },
+ "pelom-3-2026": {
+  "hash": "ecdd33171499",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda a lei orgânica de Cubatão sobre o período de eleição da mesa da Câmara Municipal."
+ },
+ "pl-1-2026": {
+  "hash": "598a767b811e",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda a lei que criou o conselho municipal de saneamento em Cubatão."
+ },
+ "pl-112-2025": {
+  "hash": "cde1d8744b9a",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Torna obrigatória a parada flexível de ônibus para mulheres no período noturno como medida de segurança."
+ },
+ "pl-12-2026": {
+  "hash": "8827ce85f73f",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o serviço de vacinação em casa para pessoas com Transtorno do Espectro Autista (TEA) e outras deficiências com dificuldade de locomoção em Cubatão."
+ },
+ "pl-120-2025": {
+  "hash": "dbd0c07f3bf1",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o “Dia da Favela” no calendário oficial de eventos de Cubatão."
+ },
+ "pl-126-2025": {
+  "hash": "fda74eb1e1d0",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria regras para a circulação de bicicletas elétricas, ciclomotores e outros equipamentos de mobilidade individual em Cubatão."
+ },
+ "pl-128-2025": {
+  "hash": "2a8e92218f4d",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o dia municipal de conscientização para o enfrentamento de catástrofes e desastres naturais em Cubatão."
+ },
+ "pl-13-2026": {
+  "hash": "886323049fb9",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Obriga ônibus a permitir que mulheres desembarquem fora dos pontos de parada à noite, visando segurança e igualdade."
+ },
+ "pl-132-2025": {
+  "hash": "fb8e5f7c7bc9",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Proíbe o uso de coleiras antilatido e enforcadores com garras, pinos ou espinhos em animais no município."
+ },
+ "pl-134-2025": {
+  "hash": "54e7b3dd61d1",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia dando o nome de Rua Amauri José Leme a uma via pública."
+ },
+ "pl-139-2025": {
+  "hash": "ed0a0075ee92",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o selo empresa amiga da mulher em Cubatão."
+ },
+ "pl-141-2025": {
+  "hash": "52fde13ada58",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Define regras para a contratação de aprendizes por empresas que ganham licitações da Prefeitura."
+ },
+ "pl-146-2025": {
+  "hash": "031a580d2306",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o programa de prevenção à depressão pós-parto no município de Cubatão."
+ },
+ "pl-15-2026": {
+  "hash": "38e800133d46",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria faixas exclusivas para motocicletas em ruas de grande movimento na cidade."
+ },
+ "pl-150-2025": {
+  "hash": "1623dfbee649",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o selo Empresa Amiga do Jovem e do Adolescente Aprendiz em Cubatão."
+ },
+ "pl-16-2026": {
+  "hash": "b2f883fa3dba",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o programa Cubatão Conectada para oferecer internet sem fio (Wi-Fi) gratuita em locais públicos, com apoio de empresas."
+ },
+ "pl-166-2025": {
+  "hash": "0e36775b1da3",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Determina a instalação de equipamentos eliminadores de ar na tubulação individual do sistema de abastecimento de água em Cubatão."
+ },
+ "pl-172-2025": {
+  "hash": "40726d684c3b",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia dando o nome de Rua Antonio Medeiros Bezerra a um local público."
+ },
+ "pl-178-2025": {
+  "hash": "c4334f63d635",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria um programa para prevenir impactos de apostas online e combater o vício em jogos em Cubatão."
+ },
+ "pl-18-2026": {
+  "hash": "0f16ae680ffd",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Inclui a “Festa em Honra a Nossa Senhora das Graças” no calendário oficial de eventos de Cubatão."
+ },
+ "pl-180-2025": {
+  "hash": "1e96bc4890cb",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria um sistema municipal de alerta com localização para o desaparecimento de crianças, adolescentes e adultos em Cubatão."
+ },
+ "pl-182-2025": {
+  "hash": "392f86b10955",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o “Dia do Skate” para celebrar e promover a prática esportiva na comunidade."
+ },
+ "pl-188-2025": {
+  "hash": "d6b7948fec18",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o programa de defesa pessoal para mulheres chamado \"Eu Me Defendo\" em Cubatão."
+ },
+ "pl-19-2026": {
+  "hash": "5c36904fe971",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Autoriza a Prefeitura a fazer parcerias com farmácias particulares para fornecer remédios à população quando faltarem na rede pública."
+ },
+ "pl-190-2025": {
+  "hash": "8eaf33d1ebc5",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o sistema de estacionamento rotativo pago em ruas e locais públicos de Cubatão."
+ },
+ "pl-191-2025": {
+  "hash": "a623ad4c5cc6",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Permite que o SAMU (Serviço de Atendimento Móvel de Urgência) leve pacientes para hospitais da rede particular em Cubatão."
+ },
+ "pl-2-2026": {
+  "hash": "ff4d931c2f49",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o plano municipal de políticas públicas para pessoas com deficiência em Cubatão."
+ },
+ "pl-20-2026": {
+  "hash": "b746e6662114",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria um programa para fornecer sensores de monitoramento de glicose para pacientes com diabetes tipo 1 em Cubatão."
+ },
+ "pl-21-2026": {
+  "hash": "38f245baa100",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Suspende temporariamente a cobrança da CIP (Contribuição para Custeio do Serviço de Iluminação Pública) em Cubatão."
+ },
+ "pl-24-2026": {
+  "hash": "2556ab9b08cb",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria uma política municipal de cuidado para pessoas que não possuem autonomia para se cuidar devido à idade, deficiências ou doenças."
+ },
+ "pl-25-2026": {
+  "hash": "281784c3e738",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Inclui a Semana da Educação Legislativa no calendário oficial de eventos de Cubatão."
+ },
+ "pl-26-2026": {
+  "hash": "d57fa3998ced",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda regras sobre o vale-transporte dos servidores públicos municipais de Cubatão."
+ },
+ "pl-28-2026": {
+  "hash": "c1917248c79d",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda regras sobre descontos em folha de pagamento dos servidores da Câmara Municipal de Cubatão."
+ },
+ "pl-29-2026": {
+  "hash": "d977b1780712",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o Dia Municipal do Desbravador no calendário oficial de eventos de Cubatão."
+ },
+ "pl-3-2026": {
+  "hash": "b517c5b1f319",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Regulamenta o uso de bicicletas elétricas, ciclomotores e equipamentos de mobilidade individual nas ruas de Cubatão."
+ },
+ "pl-32-2026": {
+  "hash": "3e371f077897",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria espaços sensoriais em praças e parques públicos para o acolhimento e inclusão de pessoas com TEA (Transtorno do Espectro Autista)."
+ },
+ "pl-33-2026": {
+  "hash": "ad505ee67d3b",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Inclui a Conferência Pink no calendário oficial de eventos de Cubatão."
+ },
+ "pl-35-2026": {
+  "hash": "a9f185a43236",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "A descrição oficial está incompleta."
+ },
+ "pl-36-2026": {
+  "hash": "f8053e7e6114",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Exige sinalização em LIBRAS (Língua Brasileira de Sinais) nos painéis informativos de serviços públicos em Cubatão."
+ },
+ "pl-37-2026": {
+  "hash": "8cc3b58c39da",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Define regras gerais para elaborar a lei do orçamento de Cubatão para o ano de 2027."
+ },
+ "pl-40-2026": {
+  "hash": "5f8ea117e527",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda leis municipais anteriores sobre regras da cidade."
+ },
+ "pl-41-2026": {
+  "hash": "c0de8dc20c6a",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o programa Médico nas Creches em Cubatão."
+ },
+ "pl-43-2026": {
+  "hash": "d7100fb5ed90",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Reconhece a Associação Esportiva e Cultural Alcateia (AECA) como entidade de utilidade pública."
+ },
+ "pl-44-2026": {
+  "hash": "c7b813c4ca5c",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Dá aumento real nos salários dos servidores públicos municipais de cargo de nível médio em Cubatão."
+ },
+ "pl-45-2026": {
+  "hash": "7aec9068af62",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Define regras para instalar dispositivos sonoros nos semáforos de Cubatão para ajudar na acessibilidade."
+ },
+ "pl-46-2026": {
+  "hash": "b5d4a16e6d9b",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Autoriza a Prefeitura a fazer parcerias com escolas técnicas para oferecer estágios a estudantes."
+ },
+ "pl-47-2026": {
+  "hash": "693192a32cda",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Altera lei municipal para incluir pessoas com TEA (Transtorno do Espectro Autista) como beneficiárias de direitos."
+ },
+ "pl-48-2026": {
+  "hash": "c346dc8862b6",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Torna obrigatória a oferta de abafadores de ruídos para pessoas com TEA (Transtorno do Espectro Autista) em Cubatão."
+ },
+ "pl-49-2026": {
+  "hash": "bebddab34f01",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Permite prorrogar o Bolsa Moradia para famílias atingidas por deslizamentos na área de Pilões."
+ },
+ "pl-50-2026": {
+  "hash": "09d4a2d0e146",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria o transporte humanitário pediátrico para levar crianças e adolescentes a tratamentos médicos e hospitalares de forma gratuita."
+ },
+ "pl-51-2026": {
+  "hash": "fc735f43db46",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Concede transporte coletivo gratuito para gestantes e mulheres que acabaram de dar à luz em Cubatão."
+ },
+ "pl-56-2026": {
+  "hash": "5349954c34bf",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria salas de acomodação sensorial nas escolas da rede municipal de ensino."
+ },
+ "pl-57-2026": {
+  "hash": "07c163fce519",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Determina o uso de GPS nas viaturas do SAMU (Serviço de Atendimento Móvel de Urgência) em Cubatão."
+ },
+ "pl-6-2026": {
+  "hash": "4dd2929df414",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Obriga a prefeitura a publicar relatórios sobre o dinheiro arrecadado e os gastos com a iluminação pública (CIP)."
+ },
+ "pl-60-2025": {
+  "hash": "90a43d6b6201",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Determina que os ônibus e micro-ônibus do transporte público de Cubatão sejam trocados gradualmente por veículos elétricos."
+ },
+ "pl-62-2026": {
+  "hash": "efb64ebf7e4a",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Concede transporte coletivo gratuito para gestantes, mulheres que acabaram de dar à luz e pacientes em tratamento de câncer em Cubatão."
+ },
+ "pl-63-2026": {
+  "hash": "08cee5c0506c",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o cadastro municipal unificado e a carteira de identificação da mãe e do responsável atípico em Cubatão."
+ },
+ "pl-65-2026": {
+  "hash": "e6c08e1dc758",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Torna obrigatória a aceitação de receitas médicas da rede privada ou convênios para fornecer medicamentos na rede pública municipal de saúde."
+ },
+ "pl-66-2026": {
+  "hash": "3cbbca7e419f",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Reorganiza o conselho municipal de políticas para as mulheres e cria o fundo municipal de políticas para as mulheres em Cubatão."
+ },
+ "pl-67-2026": {
+  "hash": "587be9729c13",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o programa municipal de corridas de rua e caminhadas em Cubatão."
+ },
+ "pl-68-2026": {
+  "hash": "96d872bea8bf",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o dia municipal de prevenção da asfixia perinatal na campanha Setembro Verde Esperança. Inclui orientação e treinamento para pais sobre primeiros socorros em bebês."
+ },
+ "pl-69-2026": {
+  "hash": "c031633e1b07",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria a campanha de conscientização sobre a trombofilia, realizada anualmente em setembro em Cubatão."
+ },
+ "pl-7-2026": {
+  "hash": "5bb10dbf262d",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria um programa municipal para combater a cristofobia em Cubatão."
+ },
+ "pl-71-2026": {
+  "hash": "ffec77234049",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o dia de São Pedro e São Paulo no calendário oficial de Cubatão."
+ },
+ "pl-72-2026": {
+  "hash": "4d9c4447f7bb",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria regras para a política municipal de proteção aos acolhedores de animais em Cubatão."
+ },
+ "pl-73-2026": {
+  "hash": "15fa51f6f6ba",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Dá o nome de Rua José Roberto de Campos a um logradouro público em Cubatão."
+ },
+ "pl-76-2026": {
+  "hash": "306edb37ff37",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o programa municipal viver com autonomia em Cubatão."
+ },
+ "pl-77-2026": {
+  "hash": "7484dda02b79",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda a data de realização do torneio de pesca da tainha do rio Cubatão."
+ },
+ "pl-78-2026": {
+  "hash": "0413cfee9c67",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia dando o nome de Ernesto Zwarg Júnior a um local público."
+ },
+ "pl-79-2026": {
+  "hash": "8ea82bfccb56",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "A descrição oficial está incompleta."
+ },
+ "pl-80-2026": {
+  "hash": "62440b425b7c",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o programa municipal de prevenção e conscientização sobre a ludopatia e os riscos das apostas em Cubatão."
+ },
+ "pl-81-2026": {
+  "hash": "a6ec8a2d6355",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Permite prorrogar o Bolsa Moradia para famílias atingidas por inundações com o transbordamento do Rio Pilões."
+ },
+ "pl-82-2026": {
+  "hash": "f59afe2b05d2",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia e dá o nome de Dr. Clermont Silveira Castor ao centro médico de especialidades de Cubatão."
+ },
+ "pl-83-2026": {
+  "hash": "d9cfd9933caa",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria regras para acolhimento emergencial, abrigos em temporais e proteção de animais em situação de rua em Cubatão."
+ },
+ "pl-85-2026": {
+  "hash": "e26738ca4366",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o dia municipal Matteo Lima Albertino e a semana municipal de conscientização e prevenção em saúde infantil em Cubatão."
+ },
+ "pl-86-2026": {
+  "hash": "99bbd5252887",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Estima a receita e fixa a despesa do município de Cubatão para o ano de 2027."
+ },
+ "pl-88-2025": {
+  "hash": "e73bbb4cdbda",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria uma campanha na cidade para conscientizar e prevenir a bronquiolite."
+ },
+ "pl-88-2026": {
+  "hash": "c518d38fa237",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Inclui o Festival Ocupacena no calendário oficial de eventos de Cubatão, com realização anual em junho."
+ },
+ "pl-89-2025": {
+  "hash": "adfcf79340ea",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Determina que o símbolo mundial do Transtorno do Espectro Autista (TEA) seja colocado em vagas de estacionamento reservadas."
+ },
+ "pl-89-2026": {
+  "hash": "41dcf6fa87fd",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Autoriza a Prefeitura a comprar um imóvel específico."
+ },
+ "pl-90-2026": {
+  "hash": "4c8dce5f755d",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria um programa municipal para fornecer ração e utensílios destinados à proteção de animais."
+ },
+ "pl-91-2026": {
+  "hash": "b394bb20cb93",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Concede folgas extras aos guardas civis municipais que trabalham no regime de 12 horas de serviço por 36 horas de descanso."
+ },
+ "pl-92-2025": {
+  "hash": "2ec72282aba2",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria a semana da saúde vascular no calendário oficial de Cubatão."
+ },
+ "pl-93-2026": {
+  "hash": "b35b0792ee6c",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Muda a estrutura, os órgãos e a carreira dos procuradores da Procuradoria Geral do Município."
+ },
+ "plc-70-2026": {
+  "hash": "4aa86ba70daf",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda regras do estatuto e plano de carreira do magistério público municipal de Cubatão."
+ },
+ "plc-9-2026": {
+  "hash": "6041a792b525",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Perdoa dívidas de impostos sobre imóveis do Esporte Clube Cubatão."
+ },
+ "pr-1-2026": {
+  "hash": "0abd23478540",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Muda a estrutura administrativa da Câmara Municipal de Cubatão."
+ },
+ "pr-11-2026": {
+  "hash": "b54afeadd527",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Altera o regimento interno da Câmara para fixar um prazo limite para que a Prefeitura retire projetos de lei de sua autoria."
+ },
+ "pr-7-2026": {
+  "hash": "0864061da1e2",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia e dá nome de Gabinete Histórico Presidente João Faustino Alvarenga a um espaço do município."
+ },
+ "pr-8-2026": {
+  "hash": "8109de147985",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Altera o regimento interno da Câmara para definir como devem ser apresentadas as emendas parlamentares ao orçamento anual e estabelece prazos para análise."
+ },
+ "relatorio-x-2026-02-10": {
+  "hash": "a2b0cc7edd4a",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final de comissão que tratou de medidas contra o abandono de animais em novas unidades habitacionais."
+ },
+ "relatorio-x-2026-03-03": {
+  "hash": "60ddcf864647",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Aprova relatório final de comissão que investigou responsabilidades da Ecovias por enchentes, impactos e acessos na rodovia."
+ },
+ "relatorio-x-2026-03-10": {
+  "hash": "cc89b70afce5",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Apresenta relatório parcial de comissão que acompanha e fiscaliza conjuntos habitacionais da CDHU em Cubatão."
+ },
+ "relatorio-x-2026-03-24": {
+  "hash": "17dc7a4916a7",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final da comissão que investigou as obras do viaduto no bairro 31 de Março, o campo de futebol e a atuação da empresa Rumo Logística."
+ },
+ "relatorio-x-2026-04-14": {
+  "hash": "63b23b3df59f",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final da comissão que investigou irregularidades no alinhamento e na retirada de fios excedentes em postes por empresas de serviços públicos."
+ },
+ "relatorio-x-2026-04-28": {
+  "hash": "94e9c50fb461",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final da comissão que investigou se as empresas da cidade cumprem a lei federal de contratação de pessoas com deficiência (PCD)."
+ },
+ "relatorio-x-2026-05-19": {
+  "hash": "66235459ac02",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final da comissão que investigou as obras do viaduto no bairro 31 de Março, o campo de futebol e a atuação da empresa Rumo Logística."
+ },
+ "relatorio-x-2026-08-25": {
+  "hash": "a3b012c4e2d3",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final da comissão que fiscalizou as obras de água e esgoto da Sabesp no bairro Vale Verde."
+ },
+ "relatorio-x-2026-09-22": {
+  "hash": "efe131c4c040",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final da comissão que investigou o atendimento médico e o falecimento do menor Matteo Lima Albertino no Hospital Municipal."
+ },
+ "relatorio-x-2026-10-27": {
+  "hash": "4f3882c1a775",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Aprova o relatório final da comissão que fiscalizou o descarte irregular de entulhos sob o viaduto da Rodovia dos Imigrantes, na Ilha Caraguatá."
+ },
+ "rq-10-2026": {
+  "hash": "31f62241f77e",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede à Prefeitura estudos para implantar o serviço de entrega de medicamentos com pedido justificado pelo médico."
+ },
+ "rq-11-2026": {
+  "hash": "c3a790d22211",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede à Prefeitura estudos para implantar e manter uma ambulância 24 horas no Morro do Índio, na Vila Esperança."
+ },
+ "rq-12-2026": {
+  "hash": "bf45e0787574",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede à Prefeitura sinal de internet Wi-Fi gratuito em pontos de ônibus, postos de saúde, Pronto Socorro e órgãos públicos."
+ },
+ "rq-13-2026": {
+  "hash": "6941f4e257e3",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede à Prefeitura mais especialistas em saúde, manutenção de equipamentos de visão, redução na fila de exames e plano de atendimento."
+ },
+ "rq-14-2026": {
+  "hash": "1d3a77c82a97",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede o asfaltamento da Ilha Caraguatá, a retomada das obras do Centro de Convivência e novas bombas para canais."
+ },
+ "rq-15-2026": {
+  "hash": "ef9de1500825",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede estudos para a compra de um aparelho de ressonância magnética para o Hospital Municipal de Cubatão."
+ },
+ "rq-16-2026": {
+  "hash": "6d389fd04282",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede estudos para mudar o memorial em homenagem às vítimas do incêndio da Vila São José para a Praça da Cidadania."
+ },
+ "rq-17-2026": {
+  "hash": "482e1c8e2477",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede a criação de uma comissão de vereadores para fiscalizar as obras de água e esgoto no bairro Vale Verde."
+ },
+ "rq-18-2026": {
+  "hash": "00bb26a0d936",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede à Prefeitura estudos para pagar benefícios e direitos congelados de servidores públicos durante a pandemia."
+ },
+ "rq-19-2026": {
+  "hash": "e4430db063c2",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede a criação de comissão de vereadores para organizar ato solene pelos 25 anos do Rotary Club de Cubatão."
+ },
+ "rq-2-2026": {
+  "hash": "394d91f8beaf",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de vereadores para investigar o plano de fechamento e o futuro uso da área industrial da Unigel em Cubatão."
+ },
+ "rq-20-2026": {
+  "hash": "819357dfddd5",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede a criação de comissão de vereadores para organizar ato solene em homenagem aos trabalhadores de Cubatão."
+ },
+ "rq-21-2026": {
+  "hash": "f5d12ca6776e",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos e medidas para revitalizar a Praça Euclides Figueiredo."
+ },
+ "rq-22-2026": {
+  "hash": "24d647d005f3",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria uma comissão de 3 vereadores para investigar, em 60 dias, os impactos das obras do viaduto no bairro 31 de Março, incluindo o campo de futebol e a falta de respostas da empresa Rumo Logística."
+ },
+ "rq-23-2026": {
+  "hash": "5759e18f4217",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos para implantar o sistema de licenciamento por Alvará Autodeclaratório em Cubatão."
+ },
+ "rq-24-2026": {
+  "hash": "9f2799e1dfc8",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos para colocar motolâncias 24 horas nas Unidades Básicas de Saúde (UBS) dos bairros distantes, visando agilizar o atendimento de emergência."
+ },
+ "rq-25-2026": {
+  "hash": "5158d8699f5a",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos para adaptar a lei municipal sobre o início da licença-maternidade em casos de internação prolongada da mãe ou do bebê, conforme lei federal."
+ },
+ "rq-26-2026": {
+  "hash": "0ab6aa40d690",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura que garanta o preparo necessário aos pacientes que farão colonoscopia na rede pública, para melhorar o atendimento."
+ },
+ "rq-27-2026": {
+  "hash": "0177dafdc192",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria uma comissão de 3 vereadores para investigar, em 60 dias, o descarte irregular de entulhos e fiscalizar medidas na área sob o viaduto da Rodovia dos Imigrantes, no bairro Ilha Caraguatá."
+ },
+ "rq-28-2026": {
+  "hash": "d322ebba1e20",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria uma comissão de 3 vereadores para investigar, em 60 dias, por que os equipamentos de playground não foram instalados e fiscalizar a obra na praça do bairro Ilha Caraguatá."
+ },
+ "rq-29-2026": {
+  "hash": "970b9e69ca3c",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura ônibus escolar e comunitário entre Vila dos Pescadores e Jardim Casqueiro, ar-condicionado no transporte escolar, lombofaixas, câmeras de segurança, placas de rua e manutenção de passarelas."
+ },
+ "rq-3-2026": {
+  "hash": "0bc35dec0d12",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias de uma comissão de vereadores que busca ampliar o atendimento educacional e social para jovens e adultos."
+ },
+ "rq-30-2026": {
+  "hash": "46f6436fae78",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Cria uma comissão de 3 vereadores para organizar, em 60 dias, uma homenagem aos 40 anos do Conselho Municipal da Condição Feminina (CMCF) de Cubatão."
+ },
+ "rq-31-2026": {
+  "hash": "251549ba61bc",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias da comissão que fiscaliza as obras de água e esgoto da Sabesp no bairro Vale Verde."
+ },
+ "rq-32-2026": {
+  "hash": "6d1c5d72013c",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para tratar, em 60 dias, dos impactos da CDHU (Companhia de Desenvolvimento Habitacional e Urbano) na causa animal em Cubatão."
+ },
+ "rq-33-2026": {
+  "hash": "c9aef11ea27c",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para estudar, em 60 dias, a construção de uma passarela perto da portaria 10 da refinaria RPBC (Refinaria Presidente Bernardes)."
+ },
+ "rq-34-2026": {
+  "hash": "5f3b12b4f9c8",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos sobre a entrega de remédios em casa usando motocicletas para tornar o serviço mais rápido e eficiente."
+ },
+ "rq-35-2026": {
+  "hash": "947c506513c9",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos para melhorar, ampliar e organizar as regras do Serviço de Atenção Domiciliar (SAD) na cidade."
+ },
+ "rq-36-2026": {
+  "hash": "8f56302cf59b",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura a reforma da Praça Francisco da Silva Cardoso, melhorias nas ruas da Vila Nova e a revitalização da ciclovia do bairro."
+ },
+ "rq-37-2026": {
+  "hash": "c32f9ad6c0b8",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para investigar, em 60 dias, os problemas habitacionais, sociais e ambientais causados pela CDHU em Cubatão."
+ },
+ "rq-38-2026": {
+  "hash": "3628d4b8a126",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos para oferecer o serviço de laserterapia na cidade, com foco no atendimento de mães e crianças."
+ },
+ "rq-39-2026": {
+  "hash": "6be0a28b244e",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede que o projeto de lei sobre o reajuste anual dos salários dos servidores da Câmara seja incluído na pauta da sessão de hoje."
+ },
+ "rq-4-2026": {
+  "hash": "be6317a72dab",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias de uma comissão de vereadores que investiga irregularidades na fiação de postes instalada por empresas de serviços públicos."
+ },
+ "rq-40-2026": {
+  "hash": "c5f0a4dff62b",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para investigar, em 60 dias, o atendimento médico e as causas do falecimento do menor Matteo Lima Albertino no hospital municipal."
+ },
+ "rq-41-2026": {
+  "hash": "de8db275ef04",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para estudar, em 60 dias, se um imóvel no centro é adequado para ser a sede da Guarda Civil Municipal."
+ },
+ "rq-42-2026": {
+  "hash": "cd1a8739463d",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para estudar, em 60 dias, formas de melhorar o trânsito e criar novos acessos ao bairro Jardim Casqueiro."
+ },
+ "rq-43-2026": {
+  "hash": "fe3d5c977f00",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede mais 60 dias para a comissão que fiscaliza a instalação de um parquinho na praça da entrada do bairro Ilha Caraguatá."
+ },
+ "rq-44-2026": {
+  "hash": "b36bc51fab70",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede mais 60 dias para a comissão que fiscaliza o descarte irregular de entulhos na área abaixo do viaduto da Rodovia dos Imigrantes, na Ilha Caraguatá."
+ },
+ "rq-45-2026": {
+  "hash": "03ba1359503b",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para investigar, em 60 dias, o funcionamento e a fiscalização do sistema de gestão da saúde pública de Cubatão."
+ },
+ "rq-46-2026": {
+  "hash": "daf92a1e7f28",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de três vereadores para organizar, em 60 dias, uma homenagem ao Círculo de Oração."
+ },
+ "rq-47-2026": {
+  "hash": "df615e796906",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de 3 vereadores, por 60 dias, para cobrar da Prefeitura o andamento da licitação e das obras de drenagem no bairro Vale Verde."
+ },
+ "rq-48-2026": {
+  "hash": "6f48a4456096",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos para criar um serviço de atendimento a dependentes químicos, seguindo o modelo do Hub de Cuidados do Governo do Estado."
+ },
+ "rq-49-2026": {
+  "hash": "ba4b9ec8e646",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias da comissão que investiga o atendimento médico e o falecimento do menor Matteo Lima Albertino no Hospital Municipal."
+ },
+ "rq-5-2026": {
+  "hash": "70624657599e",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias de uma comissão de vereadores que fiscaliza se empresas locais cumprem a lei de contratação de pessoas com deficiência (PCD)."
+ },
+ "rq-50-2026": {
+  "hash": "5183a0ecc5df",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de 3 vereadores, por 60 dias, para organizar a sessão solene do Conselho Regional de Corretores de Imóveis (CRECISP)."
+ },
+ "rq-51-2026": {
+  "hash": "1fb05329e42f",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias da comissão que investiga a atuação da CDHU (Companhia de Desenvolvimento Habitacional e Urbano) nos conjuntos habitacionais de Cubatão."
+ },
+ "rq-52-2026": {
+  "hash": "eb10d0ef5179",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de 3 vereadores, por 60 dias, para organizar uma homenagem ao Dia do Nascituro."
+ },
+ "rq-53-2026": {
+  "hash": "09c0377f0b7b",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de 3 vereadores, por 60 dias, para fiscalizar as obras de água e esgoto da Sabesp no bairro Vale Verde."
+ },
+ "rq-54-2026": {
+  "hash": "321f0f77d2d2",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de 3 vereadores, por 60 dias, para investigar o atendimento médico e o falecimento de Aylla Sofia do Nascimento Lopes."
+ },
+ "rq-55-2026": {
+  "hash": "6def45d10af5",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de 3 vereadores, por 60 dias, para investigar a execução do contrato da empresa que presta serviços no Pronto-Socorro Infantil e Central."
+ },
+ "rq-57-2026": {
+  "hash": "b04079a46056",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias da comissão que estuda melhorias no trânsito e novos acessos ao bairro Jardim Casqueiro."
+ },
+ "rq-58-2026": {
+  "hash": "1329de7bba78",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias da comissão que acompanha a licitação e as obras de drenagem no bairro Vale Verde."
+ },
+ "rq-59-2026": {
+  "hash": "f0d1b08cdccd",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a prorrogação por 60 dias da comissão que estuda se o imóvel na Avenida Joaquim Miguel Couto, 800, serve como sede da Guarda Civil Municipal."
+ },
+ "rq-6-2026": {
+  "hash": "8e481aff2517",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede que o projeto de resolução sobre a estrutura administrativa da Câmara seja incluído na pauta da sessão de hoje."
+ },
+ "rq-60-2026": {
+  "hash": "2a2c080e309a",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede a criação de uma comissão de 3 vereadores, por 60 dias, para organizar a sessão solene do Dia da Consciência Negra."
+ },
+ "rq-61-2026": {
+  "hash": "919e4f428985",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede à Prefeitura estudos para criar salas sensoriais em locais públicos e para fornecer de graça sensores de glicose, como o Freestyle Libre, pela rede municipal."
+ },
+ "rq-7-2026": {
+  "hash": "b5dac190640e",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura que estude como aplicar a Lei Federal 15.326/2026 no município."
+ },
+ "rq-8-2026": {
+  "hash": "3080d53a1c3f",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Pede à Prefeitura estudos para criar uma linha de ônibus que ligue os bairros Vila Esperança, Bolsão 7, 8 e 9, Ilha Caraguatá e Jardim Casqueiro."
+ },
+ "rq-9-2026": {
+  "hash": "1df9115ee368",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Pede a realização de uma sessão secreta para decidir sobre a concessão de Título de Cidadão Honorário."
+ },
+ "veto-112-2025": {
+  "hash": "9fb460f2631e",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Rejeita totalmente o projeto que obrigaria paradas flexíveis de ônibus para mulheres no período noturno."
+ },
+ "veto-141-2025": {
+  "hash": "145c058362cd",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "Rejeita totalmente o projeto que trata da contratação de aprendizes por empresas que vencem licitações públicas em Cubatão."
+ },
+ "veto-146-2025": {
+  "hash": "36e6d6bbf80b",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Rejeita em parte o projeto de lei que cria o programa de prevenção à depressão pós-parto em Cubatão."
+ },
+ "veto-166-2025": {
+  "hash": "dc8815a22955",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Rejeita totalmente o projeto de lei que obriga a instalação de equipamentos eliminadores de ar nas tubulações de água em Cubatão."
+ },
+ "veto-61-2026": {
+  "hash": "c1c5b5dc410e",
+  "modelo": "gemini-3.1-flash-lite",
+  "texto": "O Prefeito veta totalmente o projeto que criava novos cargos de função gratificada na Câmara Municipal."
+ },
+ "veto-89-2025": {
+  "hash": "b86269666d8d",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Rejeita totalmente projeto que inclui o símbolo mundial do autismo em vagas especiais de estacionamento em Cubatão."
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "4",
+  "ano": "2026",
+  "autoria": "WASHINGTON LUIZ LESSA DE SOUZA",
+  "ementa": "ASSEGURA À GESTANTE O DIREITO À ASSISTÊNCIA DE PROFISSIONAL FISIOTERAPEUTA DURANTE O CICLO GRAVÍDICO-PUERPERAL NO ÂMBITO DO MUNICÍPIO DE CUBATÃO"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2004.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto garante que gestantes em Cubatão tenham o direito de levar um fisioterapeuta particular para acompanhá-las durante o trabalho de parto, parto e pós-parto. O profissional deve ser contratado pela própria paciente ou sua família.",
+  "o_que_muda": [
+   "Gestantes passam a ter o direito legal de contar com fisioterapeuta particular no parto.",
+   "Hospitais e maternidades devem permitir a entrada desse profissional, respeitando seus protocolos.",
+   "O fisioterapeuta precisa ter especialização em Saúde da Mulher reconhecida pelo conselho da categoria.",
+   "O profissional contratado não substitui o direito ao acompanhante já previsto em lei federal."
+  ],
+  "quem_e_afetado": "Gestantes que utilizam maternidades ou hospitais públicos e privados em Cubatão, além das próprias instituições de saúde.",
+  "justificativa_do_autor": "Segundo o autor, a medida promove o parto humanizado, auxilia no alívio da dor e na recuperação da mulher, sem gerar custos para o Poder Público, já que o profissional é contratado pela família.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber como será a fiscalização do cumprimento da lei nem como os hospitais deverão proceder caso haja conflito entre o fisioterapeuta particular e as rotinas hospitalares.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O custo do profissional é de responsabilidade da paciente ou de sua família.",
+    "trecho": "desde que o referido profissional seja de livre contratação da parturiente, de seu companheiro ou de familiares."
+   },
+   {
+    "ponto": "O texto não prevê punições específicas para estabelecimentos que descumprirem a norma.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A atuação do fisioterapeuta deve respeitar as regras internas de cada hospital.",
+    "trecho": "respeitados os protocolos internos e as rotinas da unidade hospitalar."
+   },
+   {
+    "ponto": "O Poder Executivo poderá criar normas para regulamentar a lei.",
+    "trecho": "O Poder Executivo poderá editar normas complementares destinadas à regulamentação desta Lei, sempre que necessário à sua adequada aplicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "7777ff3dc69c5c29",
+ "gerado_em": "2026-11-05T22:59:11Z"
+}
