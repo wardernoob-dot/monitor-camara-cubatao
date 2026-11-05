@@ -1,1 +1,34 @@
+name: sonda-storyboard
 
+# Manual: testa se o Actions alcanca o YouTube e salva amostras de storyboard
+# no branch "amostras" (nao mistura com os dados oficiais da main).
+on:
+  workflow_dispatch:
+    inputs:
+      extras:
+        description: "IDs de video extras separados por espaco"
+        default: "VsOfCH9nd0A"
+
+permissions:
+  contents: write
+
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Baixar storyboards
+        run: python scripts/sonda_storyboard.py ${{ github.event.inputs.extras }}
+      - name: Salvar no branch amostras
+        run: |
+          git config user.name  "monitor-camara-bot"
+          git config user.email "monitor-camara-bot@users.noreply.github.com"
+          git checkout -B amostras
+          git add -f data/storyboard
+          git commit -m "amostras: storyboards $(date -u +%Y-%m-%d)" || echo "nada novo"
+          git push -f origin amostras
