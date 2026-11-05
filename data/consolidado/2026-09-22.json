@@ -282,6 +282,17 @@
      "votos": [],
      "nomes_nao_reconhecidos": []
     }
+   ],
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.485, DE 15 DE OUTUBRO DE 2026",
+     "data": "2026-10-15",
+     "edicao": "2107",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=26090",
+     "tipo": "lei",
+     "numero": "4485",
+     "similaridade_ementa": 0.97
+    }
    ]
   },
   {

@@ -106,6 +106,17 @@
      "votos": [],
      "nomes_nao_reconhecidos": []
     }
+   ],
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.483, DE 01 DE OUTUBRO DE 2026",
+     "data": "2026-10-01",
+     "edicao": "2097",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=25937",
+     "tipo": "lei",
+     "numero": "4483",
+     "similaridade_ementa": 0.99
+    }
    ]
   },
   {
@@ -221,6 +232,17 @@
      "resultado": "aprovado",
      "votos": [],
      "nomes_nao_reconhecidos": []
+    }
+   ],
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.484, DE 06 DE OUTUBRO DE 2026",
+     "data": "2026-10-06",
+     "edicao": "2100",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=26005",
+     "tipo": "lei",
+     "numero": "4484",
+     "similaridade_ementa": 1.0
     }
    ]
   },
