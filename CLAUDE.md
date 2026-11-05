@@ -44,6 +44,20 @@ Pontos que exigem ler mais de um arquivo:
 - **Fotos:** `fotos/` recebe imagens com qualquer nome; `site.py:preparar_fotos` casa por apelido/nome civil (aceita extensão repetida tipo `ivan.jpg..jpg` e nome parcial único), recorta no rosto e converte para webp. Detalhes em `fotos/LEIA-ME.md`.
 - Suplentes com ao menos uma sessão em 2026 ganham página de vereador.
 
+## Skills do projeto
+
+Ficam em `.claude/skills/<nome>/SKILL.md`. São roteiros sugeridos, não regras. Cada uma termina dizendo o que foi e o que não foi verificado.
+
+| Quando | Skill |
+|---|---|
+| Depois de uma rodada do robô, ou ao revisar commits `dados: coleta ...` | `conferir-coleta-do-dia` |
+| Mexeu em `parser_resumo.py`, `consolidar.py`, `site.py` ou `posts.py` | `revisar-regra-de-voto` |
+| Mexeu em `painel.py`/`videos.py`, ou uma votação do painel parece errada | `validar-painel` |
+| Mudou o que o site ou os posts mostram de voto, ou antes de publicar | `conferir-fonte` |
+| Criou ou mudou texto ou tela que o morador lê | `clareza-pro-leitor` |
+
+Ordem sugerida para uma mudança que vai pra `main`: `revisar-regra-de-voto` (se tocou em voto) → `conferir-fonte` → `clareza-pro-leitor` (se tocou em tela) → revisão do dono do projeto.
+
 ## Regras de interpretação de voto (ler antes de mexer em parser/consolidação/site)
 
 - O resumo só lista quem votou. Presente e ausente da lista = "não consta", **nunca** voto contrário. Na maioria das votações só aparecem os votos a favor; contrário só em votação dividida, veto e parecer.
