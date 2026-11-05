@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useDados, type Materia, type Votacao, type Voto, type Resultado } from "./dados";
+import { useDados, type Materia, type Vereador, type Votacao, type Voto, type Resultado } from "./dados";
 import { ORDEM_VOTO, ROTULO, dataCurta, minusculaInicial } from "./util";
 
 export function LinkMateria({ slug }: { slug: string }) {
@@ -72,7 +72,7 @@ export function Grade({ ev }: { ev: Votacao }) {
     <ul className="grade">
       {itens.map(({ v, voto }) => (
         <li key={v!.slug} className={`grade__item grade__item--${voto.toLowerCase()}`}>
-          <Link className="grade__nome" to={`/vereadores/${v!.slug}`}>{v!.exibicao}</Link>
+          <Link className="grade__nome" to={`/vereadores/${v!.slug}`}><Avatar v={v!} tamanho="p" />{v!.exibicao}</Link>
           <span className="grade__voto">{ROTULO[voto]}</span>
         </li>
       ))}
@@ -87,4 +87,11 @@ export function NotaFonte({ ev }: { ev: Votacao }) {
       {ev.fonte === "resumo" ? ". O resumo oficial não registra quem estava presente e não votou" : ""}.
     </p>
   );
+}
+
+/** Rosto do vereador: foto (docs/fotos) quando existir; senao as iniciais. */
+export function Avatar({ v, tamanho = "m" }: { v: Vereador; tamanho?: "p" | "m" | "g" | "retrato" }) {
+  if (v.foto)
+    return <img className={`avatar avatar--${tamanho}`} src={`./${v.foto}`} alt={`Foto de ${v.exibicao}`} loading="lazy" decoding="async" />;
+  return <span className={`avatar avatar--${tamanho} avatar--iniciais`} aria-hidden="true">{v.iniciais}</span>;
 }

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useDados, type Vereador, type Votacao } from "../dados";
-import { Celula, Legenda } from "../componentes";
+import { Avatar, Celula, Legenda } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
 import { COR, Contador, FaixaMini, FeedVotacoes, Funil, GradeHero, Heatmap, Modal, Sparkline } from "../viz";
@@ -196,12 +196,10 @@ export default function Inicio() {
               <motion.li key={v.slug} className="cartao" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.5, delay: (i % 4) * 0.06, ease: EASE }}>
                 <Link to={`/vereadores/${v.slug}`} className="cartao__link">
-                  <span className="cartao__topo">
-                    <span className="monograma" aria-hidden="true">{v.iniciais}</span>
-                    <span>
-                      <span className="cartao__nome">{v.exibicao}</span>
-                      <span className="cartao__civil">{v.nome}{v.partido ? `, ${v.partido}` : ""}</span>
-                    </span>
+                  <Avatar v={v} tamanho="retrato" />
+                  <span>
+                    <span className="cartao__nome">{v.exibicao}</span>
+                    <span className="cartao__civil">{v.nome}{v.partido ? `, ${v.partido}` : ""}{v.cargo === "presidente" ? ". Presidente da Câmara" : ""}</span>
                   </span>
                   <FaixaMini votos={ultimos30(v)} rotulo={v.exibicao} />
                   <span className="cartao__nums">

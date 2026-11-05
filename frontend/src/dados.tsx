@@ -8,6 +8,7 @@ export interface Vereador {
   exibicao: string;
   nome: string;
   iniciais: string;
+  foto: string | null;
   partido: string | null;
   partido_fonte: string | null;
   cargo: "presidente" | "vice" | null;

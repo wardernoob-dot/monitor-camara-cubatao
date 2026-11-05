@@ -422,6 +422,14 @@ def _ev_json(ev: dict, vslug: dict) -> dict:
     }
 
 
+def _foto(slug: str) -> str | None:
+    """Foto colocada pelo responsavel do site em docs/fotos/<slug>.(jpg|png|webp). Sem arquivo, o app usa as iniciais."""
+    for ext in ("webp", "jpg", "jpeg", "png"):
+        if (RAIZ / "docs" / "fotos" / f"{slug}.{ext}").exists():
+            return f"fotos/{slug}.{ext}"
+    return None
+
+
 def exportar(dados: Path, saida: Path | None = None) -> dict:
     """Grava docs/data/dados.json (tudo que o app precisa) e docs/data/analises/<projeto>.json (sob demanda)."""
     dados = Path(dados)
@@ -450,6 +458,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "cargo": v.get("cargo"),
             "em_exercicio": v["em_exercicio"], "contagem": v["contagem"], "total_votacoes": v["total_votacoes"],
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
+            "foto": _foto(v["slug"]),
             "projetos": [m["slug"] for m in v["projetos"] if m["slug"] in paginas],
             "requerimentos": [m["slug"] for m in v["requerimentos"] if m["slug"] in paginas],
         })

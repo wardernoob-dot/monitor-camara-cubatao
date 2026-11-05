@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDados, type Vereador } from "../dados";
+import { Avatar } from "../componentes";
 import { useTitulo } from "../util";
 
 function Item({ v, compacto }: { v: Vereador; compacto?: boolean }) {
@@ -7,7 +8,7 @@ function Item({ v, compacto }: { v: Vereador; compacto?: boolean }) {
   return (
     <li className="vereadores__item">
       <Link to={`/vereadores/${v.slug}`}>
-        <span className="monograma" aria-hidden="true">{v.iniciais}</span>
+        <Avatar v={v} tamanho={compacto ? "m" : "retrato"} />
         <span className="vereadores__nome">{v.exibicao}</span>
         <span className="vereadores__civil">{v.nome}{v.partido ? `, ${v.partido}` : ""}</span>
         <span className="vereadores__nums">

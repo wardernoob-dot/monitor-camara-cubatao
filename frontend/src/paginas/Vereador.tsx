@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDados, type Votacao, type Voto } from "../dados";
-import { Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, VotoTag } from "../componentes";
+import { Avatar, Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, VotoTag } from "../componentes";
 import { corta, dataCurta, useTitulo, votouDiferente } from "../util";
 import { useContador, useEntrou } from "../movimento";
 import { Funil } from "../viz";
@@ -62,7 +62,7 @@ export default function VereadorPagina() {
     <div className="pagina">
       <p className="migalha"><Link to="/vereadores">Vereadores</Link></p>
       <header className="perfil">
-        <span className="monograma monograma--grande" aria-hidden="true">{v.iniciais}</span>
+        <Avatar v={v} tamanho="g" />
         <div>
           <h1 className="titulo-pagina">{v.exibicao}</h1>
           <p className="perfil__civil">
