@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import re
+from datetime import date
 from pathlib import Path
 
 from . import validacao as V
@@ -136,6 +137,33 @@ def _datas(dados: Path) -> list[str]:
     return sorted(ds)
 
 
+def _noticias_do_dia(dados: Path, data: str) -> list[dict]:
+    """Noticias cuja sessao e deste dia: pela data '(dd/mm)' do texto ou, sem ela, publicada no dia ou em D+1."""
+    out = []
+    d0 = date.fromisoformat(data)
+    for p in sorted((dados / "noticias").glob("*.json")) if (dados / "noticias").exists() else []:
+        n = json.loads(p.read_text("utf-8"))
+        e = n.get("extraido") or {}
+        if not e.get("materias"):
+            continue
+        pub = date.fromisoformat(n["publicado"][:10])
+        if e.get("data_sessao") == data or (not e.get("data_sessao") and 0 <= (pub - d0).days <= 1):
+            out.append(n)
+    return out
+
+
+def conferir_noticia(grupo: dict, painel: dict) -> list[dict]:
+    div = []
+    votos = painel.get("votos") or {}
+    for sentido in ("SIM", "NAO"):
+        for v in grupo[sentido]:
+            pv = votos.get(v)
+            if pv and pv != sentido:
+                div.append({"tipo": "noticia_diverge_painel", "vereador": v, "noticia": sentido,
+                            "painel": {"BRANCO": "nao votou", "AUSENTE": "ausente"}.get(pv, pv)})
+    return div
+
+
 def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
     dados = Path(dados)
     resumos = _resumos_do_dia(dados, data)
@@ -217,6 +245,31 @@ def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
                         "obs": "print do painel sem resultado na tela; provavel captura antes do fim da votacao"}]
             alvo["conferencia"] = {"status": "diverge" if div else "confere", "divergencias": div}
 
+    # noticias: resultado do mesmo dia e, nas divididas, os nomes
+    noticias = _noticias_do_dia(dados, data)
+    for n in noticias:
+        for nm in n["extraido"]["materias"]:
+            k = (nm["tipo"], nm["numero"])
+            if k not in materias and n["extraido"].get("data_sessao") != data:
+                continue  # sem data explicita so anexa a materia que ja e deste dia
+            m = mat(k)
+            m.setdefault("noticias", []).append({"url": n["url"], "titulo": n["titulo"], "resultado": nm["resultado"],
+                                                 "votos": nm["votos"], "nomes_nao_reconhecidos": nm["nomes_nao_reconhecidos"]})
+            for g in nm["votos"]:
+                cand = [x for x in m["votacoes"] if x.get("painel") and (
+                    x["etapa"] == "parecer" if g["alvo"].startswith("parecer") else x["etapa"] not in ("parecer", "parecer_emenda"))]
+                # entre os candidatos, o de placar igual ao da noticia
+                alvo = next((x for x in cand if (x["painel"]["placar"] or {}).get("SIM") == len(g["SIM"])
+                             and (x["painel"]["placar"] or {}).get("NAO") == len(g["NAO"])), cand[0] if len(cand) == 1 else None)
+                if alvo is None or not alvo["painel"]["completo"]:
+                    continue
+                dv = conferir_noticia(g, alvo["painel"])
+                alvo["noticia"] = {"url": n["url"], "confere": not dv}
+                if dv:
+                    conf = alvo.setdefault("conferencia", {"status": "diverge", "divergencias": []})
+                    conf["divergencias"] += dv
+                    conf["status"] = "diverge"
+
     for m in materias.values():
         for x in m["votacoes"]:
             if "conferencia" not in x:
@@ -236,6 +289,7 @@ def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
         "status": "oficial_conferido" if resumos and paineis else ("so_oficial" if resumos else "provisorio_painel"),
         "sessoes": [{**r["sessao"], "resumo": r["fonte"]} for r in resumos],
         "transmissoes": [{"titulo": p["titulo"], "url": p["url"]} for p in paineis],
+        "noticias": [{"titulo": n["titulo"], "url": n["url"], "publicado": n["publicado"]} for n in noticias],
         "materias": lista,
         "votacoes_nao_identificadas": nao_casadas,
         "divergencias": divs,

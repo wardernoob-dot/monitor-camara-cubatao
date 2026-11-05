@@ -47,6 +47,9 @@ def main():
         validar_todas(a.dados)
 
         from .consolidar import consolidar_tudo
+        from .noticias import coletar as coletar_noticias
+
+        coletar_noticias(a.dados)
 
         consolidar_tudo(a.dados)
 
