@@ -50,3 +50,17 @@ jobs:
             git commit -m "dados: coleta $(date -u +%Y-%m-%d)"
             git push
           fi
+
+      # Espelho do site em votoavoto.surge.sh. Publica o docs/ recem-gerado nesta rodada.
+      # Sem os secrets SURGE_LOGIN e SURGE_TOKEN o passo e pulado; falha aqui nao derruba a coleta.
+      - name: Publicar no Surge
+        continue-on-error: true
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: |
+          if [ -z "$SURGE_TOKEN" ]; then
+            echo "SURGE_TOKEN ausente; pulando."
+            exit 0
+          fi
+          npx --yes surge ./docs votoavoto.surge.sh
