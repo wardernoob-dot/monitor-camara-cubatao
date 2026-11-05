@@ -1,0 +1,48 @@
+{
+ "materia": {
+  "tipo": "PELOM",
+  "numero": "2",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "ALTERA A REDAÇÃO DO CAPÍTULO III, DO TÍTULO VI DA LEI ORGÂNICA MUNICIPAL, CRIA SEÇÃO IV DO REFERIDO CAPÍTULO III, E ACRESCENTA OS ARTIGOS 185-A E 185-B, DISPONDO SOBRE A POLÍTICA MUNICIPAL DE TURISMO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PELOM%2002.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera a Lei Orgânica de Cubatão para criar regras para a Política Municipal de Turismo e Economia Criativa.",
+  "o_que_muda": [
+   "O turismo e a economia criativa passam a ser considerados atividades prioritárias de desenvolvimento econômico e social.",
+   "São definidos objetivos para o turismo, como desenvolver atrativos locais e fortalecer a cadeia produtiva.",
+   "São estabelecidos elementos para a política de turismo, incluindo conselho, plano diretor, fundo e secretaria municipais.",
+   "A emenda entra em vigor na data de sua publicação."
+  ],
+  "quem_e_afetado": "A população de Cubatão, os turistas e os setores ligados à economia, cultura e turismo do município.",
+  "justificativa_do_autor": "Segundo o autor, a proposta tem a finalidade de criar regras para direcionar o desenvolvimento do turismo e da economia criativa, visando resultados com maior alcance econômico e social.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber qual será o impacto financeiro exato ou como o Fundo Municipal de Turismo será abastecido com base apenas neste documento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não traz o custo da medida ou a fonte de recursos específica para o Fundo Municipal de Turismo.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A emenda entra em vigor na data em que for publicada.",
+    "trecho": "Essa Emenda à Lei Orgânica entra em vigor na data de sua publicação"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto estabelece elementos como conselho e plano, mas não define prazos para a regulamentação deles.",
+    "trecho": "",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "7708a5d33b5ca904",
+ "gerado_em": "2026-11-05T19:16:26Z"
+}

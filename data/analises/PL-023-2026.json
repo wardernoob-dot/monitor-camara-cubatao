@@ -1,0 +1,45 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "23",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "AUTORIZA O PODER EXECUTIVO, RECEBER EM DOAÇÃO COM ENCARGOS, OS IMÓVEIS QUE ESPECIFICA DE PROPRIEDADE DA CDHU - COMPANHIA DE DESENVOLVIMENTO HABITACIONAL E URBANO DO ESTADO DE SÃO PAULO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2023.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto autoriza a Prefeitura de Cubatão a receber, por meio de doação com encargos, dois imóveis de propriedade da CDHU localizados no loteamento Rubens Lara.",
+  "o_que_muda": [
+   "A Prefeitura assume a posse de dois terrenos comerciais.",
+   "O município passa a ser responsável pelos custos de transferência dos imóveis.",
+   "A regularização do segundo imóvel tem efeitos retroativos a 20 de maio de 2021."
+  ],
+  "quem_e_afetado": "A administração municipal e a Companhia de Desenvolvimento Habitacional e Urbano (CDHU).",
+  "justificativa_do_autor": "",
+  "natureza": "orcamento_financas",
+  "limitacoes": "Não é possível saber quais são as obrigações (encargos) que a Prefeitura deverá cumprir ao receber os imóveis, pois o texto não as descreve.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto cita que os custos com a transferência serão pagos pelo município.",
+    "trecho": "As despesas decorrentes da aplicação da presente lei, tais como pagamentos de emolumentos e taxas referentes à lavratura das escrituras públicas de doação"
+   },
+   {
+    "ponto": "O texto não especifica quais são os 'encargos' que acompanham a doação dos imóveis.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não detalha qual será a finalidade ou o uso futuro das áreas recebidas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "f715fae61c47b8ca",
+ "gerado_em": "2026-11-05T19:18:12Z"
+}

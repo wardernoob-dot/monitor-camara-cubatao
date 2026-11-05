@@ -1,0 +1,45 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "55",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "REVOGA INTEGRALMENTE A LEI MUNICIPAL N° 2.262, DE 21 DE JULHO DE 1994, INCLUSIVE OS CARGOS EM COMISSÃO POR ELA CRIADOS E CONSTANTES DA TABELA II DA LEI MUNICIPAL N° 1.986, DE 25 DE OUTUBRO DE 1991; ALTERA A TABELA I DA LEI MUNICIPAL N° 1.986/91, PARA MODIFICAR A NOMENCLATURA DO CARGO DE \"AUXILIAR II - PROFESSOR DE DESENVOLVIMENTO INICIAL\" PARA \"AUXILIAR II - PAJEM\"; E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2055.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera a nomenclatura do cargo de \"Auxiliar II - Professor de Desenvolvimento Inicial\" para \"Auxiliar II - Pajem\" e revoga a Lei Municipal nº 2.262/94.",
+  "o_que_muda": [
+   "Muda o nome do cargo de \"Auxiliar II - Professor de Desenvolvimento Inicial\" para \"Auxiliar II - Pajem\".",
+   "Revoga a Lei Municipal nº 2.262/94.",
+   "Elimina cargos em comissão que haviam sido criados pela lei revogada."
+  ],
+  "quem_e_afetado": "Servidores públicos municipais que ocupam o cargo de Auxiliar II e a estrutura administrativa da Prefeitura.",
+  "justificativa_do_autor": "Segundo o autor, o projeto visa corrigir inconsistências jurídicas causadas por uma lei anterior declarada inconstitucional e adequar a estrutura de cargos às normas constitucionais sobre funções de confiança.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "Não é possível avaliar o impacto prático na rotina dos servidores ou se haverá mudanças nas atribuições reais do cargo além da alteração do nome.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto visa corrigir a nomenclatura do cargo após uma lei anterior ter sido considerada inconstitucional.",
+    "trecho": "foi declarada a inconstitucionalidade integral da referida LCM nº 59/2009, após julgamento, pelo Órgão Especial do E. TJSP"
+   },
+   {
+    "ponto": "O texto não menciona o impacto financeiro ou o custo da alteração.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A lei entra em vigor imediatamente após a sua publicação.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "432995c073bb16ee",
+ "gerado_em": "2026-11-05T19:17:27Z"
+}

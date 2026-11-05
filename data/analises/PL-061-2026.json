@@ -1,0 +1,45 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "61",
+  "ano": "2026",
+  "autoria": "MESA DA CÂMARA",
+  "ementa": "DISPÕE SOBRE A ALTERAÇÃO DA LEI Nº 4.391, DE 8 DE AGOSTO DE 2025, PARA CRIAR OS PADRÕES DE FUNÇÃO GRATIFICADA F18 E F19 NO QUADRO DA CÂMARA MUNICIPAL DE CUBATÃO"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2061.2026_.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria dois novos níveis de gratificação salarial (F18 e F19) para cargos na estrutura da Câmara Municipal de Cubatão.",
+  "o_que_muda": [
+   "Criação do padrão de função gratificada F18 com valor de R$ 17.521,80.",
+   "Criação do padrão de função gratificada F19 com valor de R$ 21.000,00.",
+   "Alteração da Lei nº 4.391 de 2025 para incluir esses novos níveis na tabela de funções."
+  ],
+  "quem_e_afetado": "Servidores da Câmara Municipal de Cubatão que ocuparem as funções gratificadas nos novos padrões.",
+  "justificativa_do_autor": "Segundo o autor, a medida visa modernizar a estrutura administrativa da Câmara, permitindo remunerar adequadamente funções de alta complexidade e responsabilidade para atrair e reter profissionais qualificados.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "Não é possível saber, apenas pelo texto, quais cargos serão contemplados com essas gratificações ou o impacto financeiro total no orçamento anual da Câmara.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto indica que o pagamento será feito com verbas já existentes no orçamento da Câmara.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta das dotações orçamentarias próprias, suplementadas se necessário."
+   },
+   {
+    "ponto": "O texto não especifica quais cargos ou quais servidores específicos receberão essas gratificações.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não estabelece critérios ou requisitos técnicos para que um servidor seja designado para as funções F18 ou F19.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "359aba6f178e09f3",
+ "gerado_em": "2026-11-05T19:18:25Z"
+}

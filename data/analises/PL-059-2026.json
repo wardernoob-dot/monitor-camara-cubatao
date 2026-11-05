@@ -1,0 +1,46 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "59",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "DISPÕE SOBRE A REVISÃO GERAL ANUAL DOS VENCIMENTOS E SALÁRIOS DOS SERVIDORES PÚBLICOS MUNICIPAIS DA ADMINISTRAÇÃO DIRETA E AUTÁRQUICA DO PODER EXECUTIVO; ALTERA OS VALORES DOS BENEFÍCIOS DE ALIMENTAÇÃO E REFEIÇÃO; ACRESCENTA PARÁGRAFO AO ARTIGO 1° DA LEI N° 4.458, DE 14 DE MAIO DE 2026; E DÁ OUTRAS PROVIDÊNCIAS CORRELATAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2059.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto concede reajuste salarial de 5% aos servidores municipais e atualiza os valores dos benefícios de alimentação e refeição.",
+  "o_que_muda": [
+   "Reajuste de 5% nos salários e proventos de servidores ativos, inativos e pensionistas.",
+   "O valor do benefício de alimentação passa a ser R$ 525,00 mensais.",
+   "O valor do benefício de refeição passa a ser R$ 42,00 por dia trabalhado.",
+   "Reajuste de 4,39% para agentes políticos (secretários) da administração direta e autárquica."
+  ],
+  "quem_e_afetado": "Servidores públicos municipais ativos, inativos, pensionistas e agentes políticos da administração direta e autárquica de Cubatão.",
+  "justificativa_do_autor": "Segundo o autor, a medida visa a revisão geral anual dos vencimentos para recomposição das perdas inflacionárias.",
+  "natureza": "orcamento_financas",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O custo total estimado para o exercício de 2026 é de mais de 23 milhões de reais.",
+    "trecho": "TOTAL PARA 0 EXERCÍCIO DE 2026 R$ 23.258.921,00"
+   },
+   {
+    "ponto": "As despesas correrão por conta de dotações orçamentárias próprias, podendo ser suplementadas se necessário.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias"
+   },
+   {
+    "ponto": "Os efeitos financeiros do reajuste retroagem a maio de 2025.",
+    "trecho": "Os efeitos financeiros desta Lei, salvo disposição expressa em contrário, retroagirão a 10 de maio de 2025."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "3d48ca5fe1229661",
+ "gerado_em": "2026-11-05T19:18:18Z"
+}

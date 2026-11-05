@@ -1,0 +1,45 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "17",
+  "ano": "2026",
+  "autoria": "MÁRCIO SILVA NASCIMENTO",
+  "ementa": "INSTITUI O DIA MUNICIPAL DA ABERTURA DA CAMPANHA DA FRATERNIDADE NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2017.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o Dia Municipal da Abertura da Campanha da Fraternidade em Cubatão, que passa a integrar o calendário oficial de eventos da cidade. A data será celebrada anualmente a partir da Quarta-Feira de Cinzas.",
+  "o_que_muda": [
+   "Institui uma data comemorativa oficial no calendário municipal.",
+   "Prevê a possibilidade de realização de audiências públicas e programas ecumênicos.",
+   "Define objetivos para a campanha, como estimular a solidariedade e conscientizar os munícipes."
+  ],
+  "quem_e_afetado": "A população de Cubatão e entidades interessadas em participar das atividades da campanha.",
+  "justificativa_do_autor": "Segundo o autor, a Campanha da Fraternidade é uma iniciativa histórica que promove temas sociais relevantes, desperta o espírito comunitário e incentiva a busca pelo bem comum e pela justiça social.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber se haverá gastos públicos para a organização dos eventos, pois o projeto não detalha o planejamento financeiro ou logístico.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não menciona custos ou a fonte de recursos para a realização das atividades.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não estabelece quem será o responsável por organizar ou fiscalizar as atividades da campanha.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A participação em atividades é facultativa e aberta a diversos grupos.",
+    "trecho": "poderão ser realizadas audiências públicas, programas ecumênicos em conjunto com grupos e entidades, independente de ideologia, sistema político, organização social ou credo religioso."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "08f607b8fb512074",
+ "gerado_em": "2026-11-05T19:11:13Z"
+}

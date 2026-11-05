@@ -1,0 +1,39 @@
+{
+ "materia": {
+  "tipo": "PR",
+  "numero": "4",
+  "ano": "2026",
+  "autoria": "JAIR FERREIRA LUCAS",
+  "ementa": "DENOMINA “GERALDO ANTÔNIO NOVAES” O LOCAL QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PR%2004.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto dá o nome de Geraldo Antônio Novaes à garagem da Câmara Municipal de Cubatão.",
+  "o_que_muda": [
+   "A garagem da Câmara passa a se chamar \"Geraldo Antônio Novaes\"."
+  ],
+  "quem_e_afetado": "A Câmara Municipal de Cubatão e os cidadãos que frequentam ou utilizam o local.",
+  "justificativa_do_autor": "Segundo o autor, a homenagem é justa para perenizar a memória de um servidor exemplar que trabalhou como motorista e chefe de transporte na Prefeitura e na Câmara Municipal.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O documento não informa se haverá custos com placas ou eventos para a mudança de nome.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto entra em vigor na data em que for publicado.",
+    "trecho": "Esta Resolução entra em vigor na data da sua publicação."
+   },
+   {
+    "ponto": "O texto não menciona custos para a realização da homenagem ou fonte de recursos.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "893cf036cee3b596",
+ "gerado_em": "2026-11-05T19:16:36Z"
+}

@@ -1,0 +1,48 @@
+{
+ "materia": {
+  "tipo": "PELOM",
+  "numero": "1",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "DÁ NOVA REDAÇÃO AO ARTIGO 213 DA LOM, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PELOM_01-2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera a Lei Orgânica de Cubatão para permitir que o subsídio público da tarifa do transporte coletivo municipal chegue a até 70% do custo total.",
+  "o_que_muda": [
+   "O limite máximo do subsídio público para o transporte coletivo municipal passa de 30% para até 70%.",
+   "A Prefeitura ganha margem legal para cobrir uma fatia maior dos custos do transporte público."
+  ],
+  "quem_e_afetado": "A população usuária do transporte coletivo municipal e o Poder Público de Cubatão.",
+  "justificativa_do_autor": "Segundo o autor, a mudança é necessária para compatibilizar a lei com diretrizes federais de mobilidade urbana e evitar um colapso no sistema, já que o transporte ficou deficitário após a pandemia com a queda de passageiros pagantes e o aumento de gratuidades, tornando o limite atual de 30% insuficiente.",
+  "natureza": "orcamento_financas",
+  "limitacoes": "Não é possível saber qual será o impacto financeiro exato no orçamento do município nem como a Prefeitura planeja redistribuir verbas para bancar o subsídio mais alto.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O teto do subsídio tarifário passa a ser de até setenta por cento.",
+    "trecho": "A tarifa do transporte coletivo municipal será subsidiada pelo Poder Público em valores até setenta por cento do seu custo total."
+   },
+   {
+    "ponto": "O texto entra em vigor na data em que for publicado.",
+    "trecho": "Esta Emenda à Lei Orgânica entra em vigor na data de sua publicação, revogando-se as disposições em contrário."
+   },
+   {
+    "ponto": "O texto não detalha a origem exata dos recursos financeiros para arcar com o novo limite do subsídio.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não estabelece regras sobre prazos ou obrigatoriedade de regulamentação posterior.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "a8921555b92e7065",
+ "gerado_em": "2026-11-05T19:17:56Z"
+}

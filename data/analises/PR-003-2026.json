@@ -1,0 +1,40 @@
+{
+ "materia": {
+  "tipo": "PR",
+  "numero": "3",
+  "ano": "2026",
+  "autoria": "MESA DA CÂMARA",
+  "ementa": "DENOMINA “VEREADOR WILSON PIO DOS REIS\", A SALA DE EXPOSIÇÕES DA CÂMARA MUNICIPAL DE CUBATÃO E DÁ PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PR%2003.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto propõe dar o nome de \"Vereador Wilson Pio dos Reis\" à sala de exposições da Câmara Municipal de Cubatão.",
+  "o_que_muda": [
+   "A sala de exposições da Câmara passa a ter uma denominação oficial.",
+   "Homenagem póstuma a Wilson Pio dos Reis."
+  ],
+  "quem_e_afetado": "O público que frequenta as dependências da Câmara Municipal de Cubatão.",
+  "justificativa_do_autor": "",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O documento apresentado contém apenas a ementa e informações técnicas de um projeto de reforma do edifício, não trazendo o texto completo da justificativa ou detalhes operacionais da homenagem.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não menciona custos ou a fonte de recursos para a implementação da placa ou sinalização.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não estabelece prazos para a execução da mudança de nome.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "750ebdeb98dc3943",
+ "gerado_em": "2026-11-05T19:17:49Z"
+}

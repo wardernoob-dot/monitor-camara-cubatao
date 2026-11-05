@@ -1,0 +1,46 @@
+{
+ "materia": {
+  "tipo": "PR",
+  "numero": "9",
+  "ano": "2026",
+  "autoria": "MESA DA CÂMARA",
+  "ementa": "ALTERA A RESOLUÇÃO Nº 3.079, DE 22 DE JULHO DE 2025, PARA EXTINGUIR CARGOS DE PROVIMENTO EFETIVO VAGOS DE ESPECIALISTA LEGISLATIVO NAS ÁREAS DE ARQUITETURA E URBANISMO E ENGENHARIA CIVIL, EXTINGUIR CARGOS EM COMISSÃO DE ASSESSORIA JURÍDICA DA PRESIDÊNCIA, CRIAR OS CARGOS EM COMISSÃO DE ASSESSOR ADMINISTRATIVO GERAL E ASSESSOR ADMINISTRATIVO GERAL ADJUNTO, ALTERAR A NOMENCLATURA E ATRIBUIÇÕES DAS FUNÇÕES GRATIFICADAS DE CONTROLE DE COMPRAS, LICITAÇÕES E CONTRATOS, REESTRUTURAR OS ANEXOS I, II, III, IV E VII, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pr-09.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera a estrutura administrativa da Câmara Municipal de Cubatão, extinguindo cargos efetivos vagos, criando novos cargos em comissão e reorganizando funções gratificadas de compras e contratos.",
+  "o_que_muda": [
+   "Extingue 4 cargos efetivos vagos de Especialista Legislativo (Arquitetura e Engenharia).",
+   "Extingue 2 cargos em comissão de assessoria jurídica da Presidência.",
+   "Cria 2 novos cargos em comissão: Assessor Administrativo Geral e seu Adjunto.",
+   "Altera nomes e atribuições de funções gratificadas ligadas a compras e contratos."
+  ],
+  "quem_e_afetado": "A estrutura administrativa e o quadro de pessoal da Câmara Municipal de Cubatão.",
+  "justificativa_do_autor": "Segundo o autor, a medida visa sanear o quadro de pessoal, adequar a estrutura do Gabinete da Presidência a precedentes do STF e aplicar o princípio da segregação de funções na gestão de contratos conforme a lei federal.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "Não é possível verificar se a criação dos novos cargos terá impacto financeiro real a longo prazo apenas com este documento, apesar da alegação de neutralidade.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto alega neutralidade orçamentária ao substituir cargos extintos por novos.",
+    "trecho": "a criação dos novos cargos utiliza exatamente a mesma equivalência salarial e quantitativa dos cargos extintos"
+   },
+   {
+    "ponto": "O texto não especifica o impacto financeiro exato, apenas cita a fonte de recursos.",
+    "trecho": "As despesas decorrentes da execução desta Resolução correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
+   },
+   {
+    "ponto": "O projeto entra em vigor imediatamente após a publicação.",
+    "trecho": "Esta Resolução entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "b8bbe1c9dad2e69c",
+ "gerado_em": "2026-11-05T19:12:45Z"
+}

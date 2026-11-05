@@ -1,0 +1,45 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "42",
+  "ano": "2026",
+  "autoria": "ALEXANDRE MENDES DA SILVA",
+  "ementa": "ACRESCENTA DISPOSITIVO À LEI Nº 3.763, DE 28 DE OUTUBRO DE 2015, PARA ASSEGURAR A INCLUSÃO DAS PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA ENTRE OS BENEFICIÁRIOS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2042.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto inclui expressamente pessoas com Transtorno do Espectro Autista (TEA) como beneficiárias da lei que garante a entrega domiciliar de medicamentos e insumos médicos em Cubatão.",
+  "o_que_muda": [
+   "Pessoas com TEA passam a ser incluídas explicitamente na lei de distribuição domiciliar de remédios",
+   "Elimina dúvidas sobre o direito de pessoas com TEA ao recebimento de insumos em casa",
+   "Reforça o acesso a tratamentos contínuos para este público específico"
+  ],
+  "quem_e_afetado": "Pessoas com Transtorno do Espectro Autista (TEA) residentes em Cubatão que necessitam de medicamentos ou materiais médicos de uso contínuo.",
+  "justificativa_do_autor": "Segundo o autor, o projeto visa eliminar dúvidas interpretativas e garantir segurança jurídica, assegurando que pessoas com TEA tenham acesso facilitado à entrega domiciliar de medicamentos e insumos.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível avaliar o impacto orçamentário ou a capacidade logística da prefeitura para realizar as entregas domiciliares com base apenas neste documento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não menciona o custo financeiro para a implementação da medida.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não indica a fonte de recursos para custear a entrega domiciliar.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A lei entra em vigor imediatamente após ser publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "1021616c281e0e4f",
+ "gerado_em": "2026-11-05T19:16:50Z"
+}
