@@ -37,7 +37,7 @@ Painel da transmissão (com link no minuto) ou resumo oficial (com link do PDF).
 ## 4. Linguagem
 
 - Frases curtas, sem juridiquês. "Veto" e "parecer" precisam de uma explicação de uma linha na primeira vez que aparecem na tela.
-- Datas por extenso ou com o dia da semana não importam menos que o ano: o leitor precisa saber de que sessão se trata.
+- Toda votação deixa claro de que sessão e de que data é (dia, mês e ano); sem isso o leitor não consegue cruzar com o resumo oficial.
 - Acessibilidade: o sentido não pode depender só de cor (verde/vermelho). Veja se há texto ou `title`/`sr` acompanhando (padrão em `componentes.tsx`, `Celula`).
 - Ausência de dado é dita ("sem registro", "resumo ainda não publicado"), nunca preenchida.
 
