@@ -22,14 +22,15 @@ antes de concluir qualquer mudança em `camara/parser_resumo.py`, `consolidar.py
 6. **O SIM/NÃO do painel é relativo ao que está sendo votado** (o parecer, o veto), não ao projeto. Um SIM
    num "parecer contrário" é voto contra o projeto.
 
-## Armadilha para verificar sempre
+## Como o site mostra um parecer (verificado em 2026-11-05)
 
-`site.py` (`_evento`, ramo em que usa o resumo por falta de painel) e `posts.py` (`votos`) classificam o voto
-pelo **texto da ação** (`aprova*`/`manuten*` → SIM, resto → NAO) em vez de usar o `sentido` do grupo. Isso
-é coerente com o painel (SIM = aprovou o que estava em votação), mas num parecer contrário só está certo se
-a tela rotular o SIM/NÃO pela etapa "parecer" e não como "a favor/contra o projeto". Não verificado: se a mudança
-passar por esses trechos, confirme com um caso real (ex.: PL 75/2026, sessão 2026-10-20) que o que o site
-exibe bate com `por_vereador` do arquivo da sessão em `data/sessoes/`.
+`site.py` (`_evento`, ramo do resumo) e `posts.py` (`votos`) classificam o voto pelo **texto da ação**
+(`aprova*`/`manuten*` → SIM, resto → NAO), não pelo `sentido` do grupo. Isso é coerente com o painel
+(SIM = aprovou o que estava em votação): no PL 75/2026 (sessão 2026-10-20) o site mostra a etapa
+"Parecer contrário" com SIM 8 / NÃO 6 e resultado APROVADO, ou seja, o placar é **do parecer**, e a etapa vem
+rotulada por `rotulo_etapa`. Cuidado ao mexer: o SIM de uma etapa de parecer contrário **não** é "a favor do projeto".
+Se algum texto novo (front, post) chamar esse SIM de "a favor", ele estará errado; use o `sentido` ou o rótulo da etapa.
+Ainda não verificado: se o front deixa claro, para o leitor, o que o SIM significa nessa etapa.
 
 ## Passos
 
