@@ -5,10 +5,12 @@ description: Checklist para mexer em como um voto é lido ou exibido (parser_res
 
 # Revisar regra de voto
 
+> Sugestões de roteiro, não regras: use o que ajudar e ignore o resto. Os princípios do projeto citados aqui vêm do README.
+
 Um erro aqui vira informação falsa sobre um vereador, publicada com link oficial. Rode esta checklist
 antes de concluir qualquer mudança em `camara/parser_resumo.py`, `consolidar.py`, `site.py` ou `posts.py`.
 
-## Regras que não podem quebrar
+## Regras de leitura do voto (vêm do README; vale conferir)
 
 1. **Ausente da lista ≠ voto contrário.** Quem está presente e não aparece vira "não consta". Na maioria
    das votações o resumo só lista os votos a favor; contrário só aparece em votação dividida, veto e parecer.
@@ -40,7 +42,7 @@ Ainda não verificado: se o front deixa claro, para o leitor, o que o SIM signif
 4. Rode `python .claude/skills/conferir-fonte/auditar.py` para garantir que todo voto continua com fonte.
 5. Diga ao usuário o que foi checado e o que não foi (ex.: sem PDF novo para testar).
 
-## Não fazer
+## Evitar
 
 - Não criar ranking, nota ou "índice de fidelidade" de vereador: é princípio do projeto.
 - Não tratar o texto da IA como fonte de voto: voto vem só do painel ou do resumo oficial.

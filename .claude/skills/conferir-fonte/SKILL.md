@@ -5,6 +5,8 @@ description: Audita se todo voto, placar e partido exibidos no site mostram de o
 
 # Conferir a fonte de cada voto
 
+> Sugestões de roteiro, não regras: use o que ajudar e ignore o resto. Os princípios do projeto citados aqui vêm do README.
+
 Regra do projeto: **todo voto mostra de onde veio** (painel da transmissão ou resumo oficial) e a IA nunca é fonte de fato.
 
 ## Auditoria automática

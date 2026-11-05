@@ -5,6 +5,8 @@ description: Depois de uma rodada do robô (ou de um `python -m camara tudo`), r
 
 # Conferir a coleta do dia
 
+> Sugestões de roteiro, não regras: use o que ajudar e ignore o resto. Os princípios do projeto citados aqui vêm do README.
+
 O robô roda a cada 4 horas e commita `data/` sem revisão humana. Esta skill mostra, em um comando, o que a última rodada trouxe.
 
 ## Rodar
@@ -37,7 +39,7 @@ Se precisar de dados mais novos, rode `git pull` antes.
 
 1. Veja o item em `data/consolidado/<data>.json` (`conferencia.divergencias`) e a imagem em `data/painel/img/`.
 2. Compare com `data/sessoes/<data>_*.json` (o resumo estruturado) e com o PDF em `data/texto/`.
-3. Corrija a causa no código (`painel.py`, `parser_resumo.py`, `nomes.py`) e rode `python -m pytest -q`. Nunca edite o JSON de dados na mão: o robô o regenera.
+3. Corrija a causa no código (`painel.py`, `parser_resumo.py`, `nomes.py`) e rode `python -m pytest -q`. Evite editar o JSON de dados na mão: o robô o regenera e sobrescreve na próxima rodada.
 4. Para validar o leitor do painel contra os resumos, use a skill `validar-painel`; para regras de voto, `revisar-regra-de-voto`.
 
 ## Relatar

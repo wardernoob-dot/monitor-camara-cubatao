@@ -5,6 +5,8 @@ description: Confere o leitor do painel de votação (camara/painel.py, leitura 
 
 # Validar o leitor do painel
 
+> Sugestões de roteiro, não regras: use o que ajudar e ignore o resto. Os princípios do projeto citados aqui vêm do README.
+
 O painel da transmissão tem 15 fotos em layout fixo (8 em cima, 7 embaixo). Moldura verde = SIM, vermelha = NÃO,
 branca = não votou. O leitor (`camara/painel.py`) é pura leitura de pixel, sem IA, calibrado em miniaturas 320x180.
 `scripts/validar_painel.py` compara o que ele leu com o resumo oficial da mesma data.
@@ -37,7 +39,7 @@ da data já saiu, a votação do resumo que melhor casa (`casa k/n`). No final: 
 - Divergência em um vereador específico costuma ser **rosto confundido** (`conf` baixa) ou **ordem das fotos alterada**
   naquele dia. Divergência em quase todos é o **mapeamento SIM/NÃO ao contrário** (parecer contrário e veto: o painel
   mostra o sentido do que está sendo votado, não do projeto).
-- Cada divergência real vira correção em `painel.py`, nunca ajuste manual no dado.
+- Cada divergência real vira correção em `painel.py`, prefira corrigir no código a ajustar o dado na mão.
 
 ## Depois de mexer em painel.py
 

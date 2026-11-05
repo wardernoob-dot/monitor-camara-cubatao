@@ -5,6 +5,8 @@ description: Checklist para textos e telas voltados ao público (frontend/src, p
 
 # Clareza para o leitor
 
+> Sugestões de roteiro, não regras: use o que ajudar e ignore o resto. Os princípios do projeto citados aqui vêm do README.
+
 O público é morador da cidade, sem formação jurídica, que lê rápido. O dado pode estar certo e a tela ainda
 induzir a uma conclusão errada. Antes de dar uma mudança por pronta, passe por estas perguntas.
 
@@ -28,7 +30,7 @@ induzir a uma conclusão errada. Antes de dar uma mudança por pronta, passe por
 Painel da transmissão (com link no minuto) ou resumo oficial (com link do PDF). Rode
 `python .claude/skills/conferir-fonte/auditar.py` depois de mudar o que exibe voto.
 
-## 3. Regras editoriais do projeto (não negociáveis)
+## 3. Princípios editoriais do projeto (vêm do README; vale conferir)
 
 - **Sem ranking, nota, "mais fiel", "mais faltoso"** de vereador, nem comparações que funcionem como ranking.
   Revisão de 2026-11-05: não há ranking nem lista ordenada por desempenho no front. O mais próximo é o mapa "Quem vota igual a quem"
