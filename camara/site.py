@@ -486,7 +486,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     fotos = preparar_fotos(b.vereadores)
     vereadores = []
     for v in sorted(b.vereadores.values(), key=lambda v: v["exibicao"]):
-        if not v["em_exercicio"] and v["sessoes_total"] < 5:
+        if not v["em_exercicio"] and v["sessoes_total"] < 1:
             vslug.pop(v["chave"], None)  # suplente de 1 ou 2 sessoes: aparece so pelo nome, sem pagina
             continue
         vereadores.append({
