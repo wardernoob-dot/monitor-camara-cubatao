@@ -51,6 +51,10 @@ def main():
 
         coletar_noticias(a.dados)
 
+        from .diario import coletar as coletar_diario
+
+        coletar_diario(a.dados)
+
         consolidar_tudo(a.dados)
 
 

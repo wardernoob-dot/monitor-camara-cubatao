@@ -298,18 +298,35 @@ def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
 
 
 def consolidar_tudo(dados: Path, desde: str = "2026-09-01") -> dict:
-    """Refaz o consolidado dos dias com painel ou resumo desde 'desde' (painel so existe a partir de set/2026)."""
+    """Refaz o consolidado dos dias com painel ou resumo desde 'desde' (painel so existe a partir de set/2026).
+    Segunda passada: liga lei/veto do Diario Oficial ao projeto aprovado."""
+    from . import diario as DO
+
     dados = Path(dados)
     out = dados / "consolidado"
     out.mkdir(exist_ok=True)
-    tot = {"dias": 0, "divergencias": 0, "provisorios": 0}
-    for data in _datas(dados):
-        if data < desde:
-            continue
-        c = consolidar_dia(dados, data)
+    dias = {data: consolidar_dia(dados, data) for data in _datas(dados) if data >= desde}
+
+    aprovadas = []
+    for data, c in dias.items():
+        for m in c["materias"]:
+            ok = (m["resultado_oficial"] or "").startswith("aprovado") or any(
+                (x.get("painel") or {}).get("resultado") == "APROVADO" and x["etapa"] not in ("parecer", "parecer_emenda", "emenda")
+                for x in m["votacoes"])
+            if ok and m.get("assunto"):
+                aprovadas.append({"tipo": m["tipo"], "numero": m["numero"], "assunto": m["assunto"], "data": data})
+    pubs = DO.vincular(dados, aprovadas)
+    for c in dias.values():
+        for m in c["materias"]:
+            if pubs.get((m["tipo"], m["numero"])):
+                m["diario_oficial"] = pubs[(m["tipo"], m["numero"])]
+
+    tot = {"dias": 0, "divergencias": 0, "provisorios": 0, "leis_vinculadas": len(pubs)}
+    for data, c in dias.items():
         (out / f"{data}.json").write_text(json.dumps(c, ensure_ascii=False, indent=1), "utf-8")
         tot["dias"] += 1
         tot["divergencias"] += len(c["divergencias"])
         tot["provisorios"] += c["status"] == "provisorio_painel"
-    print(f"  consolidado: {tot['dias']} dia(s), {tot['provisorios']} provisorio(s), {tot['divergencias']} divergencia(s)")
+    print(f"  consolidado: {tot['dias']} dia(s), {tot['provisorios']} provisorio(s), "
+          f"{tot['divergencias']} divergencia(s), {tot['leis_vinculadas']} materia(s) com publicacao no DO")
     return tot
