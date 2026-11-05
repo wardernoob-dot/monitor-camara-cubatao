@@ -8,12 +8,15 @@ em quê, como, e qual foi o resultado.
 
 | Etapa | Situação |
 |---|---|
-| Coletor (varre o site, baixa PDFs novos, extrai texto) | pronto |
-| Parser dos resumos de sessão (presença, itens, votos nominais) | pronto, validado em 62 de 63 sessões de 2026 |
-| Execução diária no GitHub Actions | configurado, falta o 1º teste real |
-| Parser de pauta (o que vai ser votado) | a fazer |
-| Análise imparcial com Claude | a fazer |
-| Geração de post pro Instagram | a fazer |
+| Coletor (pautas, resumos, projetos, notícias, Diário Oficial) | pronto, roda todo dia no GitHub Actions |
+| Votos nominais pelo painel da transmissão (inclui quem não votou) | pronto, desde set/2026 |
+| Identificação do que está em votação, conferida com a pauta | pronto |
+| Consolidado por dia (painel × resumo × notícia × DO) | pronto |
+| Análise imparcial por projeto (só com o texto oficial, prompt público) | pronto |
+| Site (React, em `frontend/`, publicado de `docs/`) | pronto |
+| Carrossel pro Instagram (`data/posts/`) | pronto |
+
+Site: https://wardernoob-dot.github.io/monitor-camara-cubatao/ (GitHub Pages servindo a pasta `/docs`).
 
 ## Fontes (todas públicas)
 
