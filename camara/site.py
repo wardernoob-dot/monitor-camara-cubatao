@@ -444,12 +444,19 @@ def preparar_fotos(vereadores: dict) -> dict[str, str]:
     for arq in sorted(FOTOS_ORIGINAIS.iterdir()):
         if arq.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp"):
             continue
-        k = slug(arq.stem)
+        # "ivan.jpg..jpg", "guilherme_amaral..jpg": tira extensoes e pontos repetidos
+        base = re.sub(r"(?i)(\.+(jpe?g|png|webp))+\.*$", "", arq.name).strip(". ")
+        k = slug(base)
         alvo = nomes.get(k)
         if not alvo:
             import difflib
             hit = difflib.get_close_matches(k, list(nomes), n=1, cutoff=0.75)
             alvo = nomes[hit[0]] if hit else None
+        if not alvo and k:
+            # todas as palavras do arquivo aparecem no nome de um vereador so ("ivan", "guilherme amaral")
+            palavras = set(k.split("-")) - {"da", "de", "do", "dos", "das", "e"}
+            donos = {s_ for n, s_ in nomes.items() if palavras <= set(n.split("-"))}
+            alvo = donos.pop() if len(donos) == 1 else None
         if not alvo:
             print(f"  ! foto sem vereador correspondente: {arq.name}")
             continue
