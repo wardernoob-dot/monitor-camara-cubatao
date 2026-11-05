@@ -164,3 +164,31 @@ def identificar(cabecalhos: list[np.ndarray], token: str | None = None) -> list[
             "fonte": f"transcricao do cabecalho do painel por modelo de visao ({MODELO} via GitHub Models)",
         })
     return res
+
+
+def diagnostico(token: str | None = None) -> None:
+    """Imprime o que o GitHub Models responde (catalogo + chamada minima so com texto)."""
+    import requests
+
+    token = token or os.environ.get("GITHUB_TOKEN")
+    h = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json",
+         "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
+    try:
+        r = requests.get("https://models.github.ai/catalog/models", headers=h, timeout=30)
+        print(f"  [diag] catalogo: {r.status_code} {r.headers.get('content-type')}")
+        if r.ok and r.headers.get("content-type", "").startswith("application/json"):
+            vis = [m["id"] for m in r.json() if "image" in json.dumps(m.get("supported_input_modalities", "")).lower()]
+            print(f"  [diag] modelos com imagem: {vis[:15]}")
+        else:
+            print(f"  [diag] corpo: {r.text[:200]!r}")
+    except Exception as e:  # noqa: BLE001
+        print(f"  [diag] catalogo erro: {e!r}")
+    for url in ["https://models.github.ai/inference/chat/completions",
+                "https://models.inference.ai.azure.com/chat/completions"]:
+        for modelo in ["openai/gpt-4.1-mini", "gpt-4o-mini"]:
+            try:
+                r = requests.post(url, headers=h, timeout=60, json={
+                    "model": modelo, "messages": [{"role": "user", "content": "Responda apenas: ok"}]})
+                print(f"  [diag] {url} {modelo}: {r.status_code} {r.headers.get('content-type')} {r.text[:160]!r}")
+            except Exception as e:  # noqa: BLE001
+                print(f"  [diag] {url} {modelo}: erro {e!r}")
