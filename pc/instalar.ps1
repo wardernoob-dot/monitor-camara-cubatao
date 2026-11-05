@@ -8,7 +8,7 @@ $Repo  = 'wardernoob-dot/monitor-camara-cubatao'
 Write-Host ''
 Write-Host 'Copie o token do GitHub (Ctrl+C no navegador) e depois aperte Enter aqui.'
 Write-Host '(o instalador le direto da area de transferencia, nao precisa colar)'
-[void](Read-Host)
+[void](Read-Host -AsSecureString)  # mascara qualquer coisa digitada/colada aqui
 
 $tok = (Get-Clipboard -Raw)
 if ($tok) { $tok = ($tok -replace '[\x00-\x20]', '') }
