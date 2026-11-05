@@ -89,8 +89,21 @@ def transcrever(png: bytes, n: int, token: str | None = None, http=None) -> list
         "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"})
     if r.status_code != 200:
         raise RuntimeError(f"GitHub Models HTTP {r.status_code}: {r.text[:200]}")
-    texto = r.json()["choices"][0]["message"]["content"]
-    faixas = json.loads(texto).get("faixas", [])
+    try:
+        texto = r.json()["choices"][0]["message"]["content"] or ""
+    except Exception as e:  # noqa: BLE001
+        raise RuntimeError(f"resposta inesperada do GitHub Models: {r.text[:300]!r}") from e
+    return _faixas(texto)
+
+
+def _faixas(texto: str) -> list[dict]:
+    """Aceita JSON puro, JSON dentro de bloco ```json``` ou com texto em volta."""
+    t = texto.strip()
+    t = re.sub(r"^```(?:json)?\s*|\s*```$", "", t)
+    ini, fim = t.find("{"), t.rfind("}")
+    if ini < 0 or fim < 0:
+        raise RuntimeError(f"modelo nao devolveu JSON: {texto[:300]!r}")
+    faixas = json.loads(t[ini:fim + 1]).get("faixas", [])
     return sorted(faixas, key=lambda f: int(f.get("n", 0)))
 
 
