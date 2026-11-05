@@ -14,6 +14,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+from . import cabecalho as C
 from . import painel as P
 from . import youtube as yt
 from .parser_resumo import MESES
@@ -95,4 +96,34 @@ def processar_videos(dados: Path, http=None) -> dict:
         except Exception as e:  # noqa: BLE001  (spec expirado, video ainda processando etc.)
             rel["erros"].append(f"{vid}: {e!r}"[:200])
             print(f"  ! painel {vid}: {e!r}"[:200])
+    return rel
+
+
+def identificar_pendentes(dados: Path) -> dict:
+    """Preenche 'materia' (o que estava em votacao) nas votacoes ja lidas, usando os prints salvos."""
+    dados = Path(dados)
+    rel = {"sessoes": 0, "votacoes": 0, "identificadas": 0, "erros": []}
+    for arq in sorted((dados / "painel").glob("*.json")):
+        d = json.loads(arq.read_text("utf-8"))
+        pend = [v for v in d["votacoes"] if "materia" not in v]
+        if not pend:
+            continue
+        try:
+            cortes = [C.corte_cabecalho(np.asarray(Image.open(dados / v["evidencia"]).convert("RGB")).astype(np.int16))
+                      for v in pend]
+            ids = C.identificar(cortes)
+        except Exception as e:  # noqa: BLE001  (sem token, 403, limite do plano gratuito...)
+            rel["erros"].append(f"{arq.name}: {e!r}"[:200])
+            print(f"  ! cabecalho {arq.name}: {e!r}"[:200])
+            continue
+        for v, m in zip(pend, ids):
+            if m["situacao_lida"] and v.get("resultado") and m["situacao_lida"] != v["resultado"]:
+                m["aviso"] = f"resultado lido no texto ({m['situacao_lida']}) diferente do lido pela cor ({v['resultado']})"
+            v["materia"] = m
+            rel["votacoes"] += 1
+            rel["identificadas"] += m["identificado"]
+        arq.write_text(json.dumps(d, ensure_ascii=False, indent=1), "utf-8")
+        rel["sessoes"] += 1
+        print(f"  cabecalhos: {d['titulo'][:50]} -> " + "; ".join(
+            (f"{v['materia']['tipo']} {v['materia']['numero']}" if v['materia']['identificado'] else "?") for v in pend))
     return rel

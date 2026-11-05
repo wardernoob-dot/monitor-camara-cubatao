@@ -40,6 +40,11 @@ def main():
         rv = processar_videos(a.dados)
         print(f"{rv['processados']} transmissao(oes) lida(s) no painel; {len(rv['erros'])} erro(s)")
 
+        from .videos import identificar_pendentes
+
+        ri = identificar_pendentes(a.dados)
+        print(f"cabecalhos: {ri['identificadas']}/{ri['votacoes']} votacao(oes) identificada(s); {len(ri['erros'])} erro(s)")
+
 
 if __name__ == "__main__":
     main()

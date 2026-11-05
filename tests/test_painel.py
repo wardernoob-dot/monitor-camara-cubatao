@@ -46,3 +46,21 @@ def test_ausentes_acinzentados_e_ordem_alterada():
 def test_tela_sem_painel_nao_e_detectada():
     t = np.full((180, 320, 3), 120, dtype=np.int16)  # quadro "de plenario" generico
     assert not P.eh_painel(t)
+
+
+def test_interpretar_cabecalhos_reais():
+    from camara.cabecalho import interpretar
+    r = interpretar("PL nº 92/2026 - Parecer Contrário em Separado - Autor: Vereador Rony Martins")
+    assert (r["tipo"], r["numero"], r["ano"]) == ("PL", "92", "2026") and r["parecer"].startswith("Parecer Contr")
+    assert interpretar("RQ. 61 - VEREADOR ALLAN MATIAS")["numero"] == "61"
+    assert interpretar("Parecer Favorável ao PL nº 53/2026")["tipo"] == "PL"
+    assert interpretar("Relatório Final - CEI - Resolução nº 3.122")["numero"] == "3.122"
+    assert interpretar("PL nº [?]/2026 - 2ª Discussão")["identificado"] is False
+
+
+def test_tira_de_cabecalhos():
+    from camara.cabecalho import corte_cabecalho, tira
+    t = np.asarray(Image.open(FX / "painel_32a_rq52.png").convert("RGB")).astype(np.int16)
+    png = tira([corte_cabecalho(t)] * 3)
+    im = Image.open(__import__("io").BytesIO(png))
+    assert im.width == 900 and im.height == 3 * (96 + 18)
