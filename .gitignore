@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 data/pdf/
 .venv/
+
+# criado localmente pelo surge; commitado, derrubaria o endereco do github.io
+docs/CNAME
