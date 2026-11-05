@@ -36,3 +36,29 @@ def test_exporta_json_do_app(tmp_path):
     assert [e["data"] for e in d["votacoes"]] == sorted(e["data"] for e in d["votacoes"])
     for s in (tmp_path / "analises").glob("*.json"):
         assert s.stem in materias and materias[s.stem]["analise"]
+
+
+def _m(tipo="PL", assunto="", eventos=(), veto=None):
+    return {"tipo": tipo, "assunto": assunto, "eventos": list(eventos), "veto": veto}
+
+
+def test_tema_e_relevancia():
+    m = _m(assunto="AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO COM A CAIXA")
+    m["tema"] = S.tema(m)
+    assert m["tema"] == "Orçamento, impostos e finanças"
+    assert S.relevancia(m)["nivel"] == "alta"
+    h = _m(assunto="DENOMINA RUA JOSÉ DA SILVA O LOGRADOURO PÚBLICO")
+    h["tema"] = S.tema(h)
+    assert h["tema"].startswith("Homenagens") and S.relevancia(h)["nivel"] == "baixa"
+    ev = {"etapa": "2a_discussao", "etapa_txt": "2ª discussão", "sim": 8, "nao": 6, "resultado": "APROVADO"}
+    d = _m(assunto="INSTITUI PROGRAMA DE SAÚDE", eventos=[ev])
+    d["tema"] = S.tema(d)
+    assert "Votação dividida (8 a 6)" in S.relevancia(d)["motivos"]
+
+
+def test_sentido_do_voto():
+    base = {"materia": {"tipo": "PL"}}
+    assert S.sentido({**base, "etapa": "parecer", "etapa_txt": "Parecer contrário em separado"}) == "inverso"
+    assert S.sentido({**base, "etapa": "parecer", "etapa_txt": "Parecer favorável"}) == "direto"
+    assert S.sentido({**base, "etapa": "emenda", "etapa_txt": "Emenda"}) == "emenda"
+    assert S.sentido({**base, "etapa": "1a_discussao", "etapa_txt": "1ª discussão"}) == "direto"

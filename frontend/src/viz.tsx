@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
-import type { Ponto } from "./estatisticas";
+export interface Ponto { x: string; y: number }
 import { EASE, useContador, useEntrou, useLacoCanvas } from "./movimento";
 import { useDados, type Votacao } from "./dados";
 import { dataCurta } from "./util";
@@ -18,9 +18,9 @@ export const COR = {
 /* ------------------------------------------------------------------ grade animada do topo */
 export function GradeHero() {
   const ref = useLacoCanvas((ctx, w, h, t) => {
-    const passo = 40;
-    const off = (t * 0.3) % passo;
-    ctx.strokeStyle = "rgba(23,23,23,0.07)";
+    const passo = w < 640 ? 28 : 40;
+    const off = (t * (w < 640 ? 0.25 : 0.3)) % passo;
+    ctx.strokeStyle = w < 640 ? "rgba(23,23,23,0.09)" : "rgba(23,23,23,0.07)";
     ctx.lineWidth = 1;
     ctx.beginPath();
     for (let x = 0.5; x < w; x += passo) { ctx.moveTo(x, 0); ctx.lineTo(x, h); }
@@ -291,5 +291,43 @@ export function FaixaMini({ votos, rotulo }: { votos: (string | undefined)[]; ro
     <div ref={caixa} className="faixa-mini">
       <canvas ref={ref} role="img" aria-label={`${rotulo}: últimas ${votos.length} votações, ${c.SIM} sim, ${c.NAO} não, ${c.BRANCO} sem votar, ${c.AUSENTE} ausente.`} />
     </div>
+  );
+}
+
+/* ------------------------------------------------------------------ barras horizontais empilhadas */
+export interface Barra { rotulo: string; para?: string; partes: { valor: number; classe: string; nome: string }[] }
+
+export function Barras({ itens, legenda }: { itens: Barra[]; legenda?: { classe: string; nome: string }[] }) {
+  const [ref, entrou] = useEntrou<HTMLOListElement>();
+  const reduz = useReducedMotion();
+  const max = Math.max(1, ...itens.map((i) => i.partes.reduce((s, p) => s + p.valor, 0)));
+  return (
+    <>
+      <ol ref={ref} className="barras">
+        {itens.map((it, i) => {
+          const total = it.partes.reduce((s, p) => s + p.valor, 0);
+          const desc = it.partes.filter((p) => p.valor).map((p) => `${p.valor} ${p.nome}`).join(", ");
+          return (
+            <li key={it.rotulo} className="barras__item">
+              <span className="barras__rotulo">{it.para ? <Link to={it.para}>{it.rotulo}</Link> : it.rotulo}</span>
+              <span className="barras__total" aria-label={`${total}: ${desc}`}>{total}</span>
+              <span className="barras__trilho" aria-hidden="true">
+                <motion.span className="barras__cheio" initial={reduz ? false : { scaleX: 0 }}
+                  animate={{ scaleX: entrou || reduz ? total / max : 0 }} transition={{ duration: 0.9, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }}>
+                  {it.partes.map((p) => p.valor > 0 && (
+                    <span key={p.nome} className={`barras__parte ${p.classe}`} style={{ flexGrow: p.valor }} title={`${p.valor} ${p.nome}`} />
+                  ))}
+                </motion.span>
+              </span>
+            </li>
+          );
+        })}
+      </ol>
+      {legenda && (
+        <ul className="legenda">
+          {legenda.map((l) => <li key={l.nome}><span className={`barras__amostra ${l.classe}`} aria-hidden="true" /> {l.nome}</li>)}
+        </ul>
+      )}
+    </>
   );
 }

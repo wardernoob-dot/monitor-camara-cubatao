@@ -1,7 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { useDados } from "../dados";
 import { Grade, LinkMateria, NotaFonte, Placar, ResultadoTag } from "../componentes";
-import { corta, dataExtenso, nomeSessao, useTitulo } from "../util";
+import { dataExtenso, nomeSessao, useTitulo } from "../util";
+import { Destaque, DicaMateria, EtapaComDica } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
 
 export default function SessaoPagina() {
@@ -31,12 +32,13 @@ export default function SessaoPagina() {
         const evs = m.eventos.map(b.votacao).filter((e) => e.data === d.data);
         return (
           <section key={s} className="item-sessao">
-            <h2 className="item-sessao__titulo"><LinkMateria slug={s} /></h2>
+            <h2 className="item-sessao__titulo"><DicaMateria m={m}><LinkMateria slug={s} /></DicaMateria> <Destaque m={m} compacto /></h2>
             {m.autoria !== "Autoria não identificada" && <p className="item-sessao__autor">{m.autoria}</p>}
-            {m.assunto && <p>{corta(m.assunto, 260)}</p>}
+            {m.assunto && <p>{m.assunto}</p>}
             {evs.map((ev) => (
               <div key={ev.id} className="item-sessao__votacao">
-                <h3 className="linha-tempo__etapa">{ev.etapa_txt}</h3>
+                <h3 className="linha-tempo__etapa"><EtapaComDica ev={ev} tipo={m.tipo} /></h3>
+                {ev.sentido === "inverso" && <p className="aviso-voto">Nesta votação, votar <strong>Sim</strong> era ser contra o projeto seguir.</p>}
                 <p><ResultadoTag r={ev.resultado} /> {Object.keys(ev.votos).length > 0 && <Placar ev={ev} />}</p>
                 <Grade ev={ev} />
                 {ev.fonte && <NotaFonte ev={ev} />}
