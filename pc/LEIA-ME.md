@@ -12,7 +12,7 @@ sessão nova (1 requisição por sessão) e manda pro repositório. O GitHub faz
    - Expiration: 1 ano
 2. Abra o PowerShell nesta pasta e rode:
    `powershell -ExecutionPolicy Bypass -File .\instalar.ps1`
-3. Cole o token quando pedir. Ele fica criptografado pelo Windows (`token.sec`), legível só pelo seu usuário.
+3. Copie o token (Ctrl+C) e aperte Enter quando pedir: o instalador lê da área de transferência, testa no GitHub e guarda criptografado pelo Windows (`token.sec`), legível só pelo seu usuário.
 
 A tarefa "MonitorCamaraCubatao" roda todo dia às 12:40 e 21:40. Se o PC estiver desligado,
 roda quando ligar. O que aconteceu fica em `log.txt`.
