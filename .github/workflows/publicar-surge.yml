@@ -1,0 +1,45 @@
+name: publicar-surge
+
+# Publica o site em votoavoto.surge.sh sempre que docs/ mudar na main (front, fotos, textos).
+# Regenera docs/data/dados.json a partir de data/ (offline, sem coleta) para nao publicar dado velho.
+# A coleta (coleta.yml) ja publica sozinha ao fim de cada rodada.
+on:
+  push:
+    branches: [main]
+    paths: ["docs/**", "fotos/**", "camara/site.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: surge
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Regenerar dados do site
+        run: python -c "from pathlib import Path; from camara.site import exportar; exportar(Path('data'))"
+
+      - name: Publicar no Surge
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: |
+          if [ -z "$SURGE_TOKEN" ]; then
+            echo "SURGE_TOKEN ausente; pulando."
+            exit 0
+          fi
+          npx --yes surge ./docs votoavoto.surge.sh
