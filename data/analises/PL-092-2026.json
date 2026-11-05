@@ -1,0 +1,41 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "92",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "ALTERA A REDAÇÃO DO INCISO II DO ART. 6º DA LEI MUNICIPAL Nº 4.435, DE 22 DE DEZEMBRO DE 2025, QUE ESTIMA A RECEITA E FIXA A DESPESA DO MUNICÍPIO DE CUBATÃO PARA O EXERCÍCIO DE 2026, AMPLIANDO DE 10% (DEZ POR CENTO) PARA 19% (DEZENOVE POR CENTO) O LIMITE PARA ABERTURA DE CRÉDITOS SUPLEMENTARES"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-92.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto altera o orçamento da cidade para aumentar o limite que o governo municipal pode usar para remanejar recursos entre áreas já aprovadas.",
+  "o_que_muda": [
+   "O limite para abertura de créditos suplementares sobe de 10% para 19% do total da despesa autorizada.",
+   "A regra vale para a Administração Direta e para a Administração Indireta.",
+   "A Câmara Municipal terá o mesmo limite de sua despesa autorizada."
+  ],
+  "quem_e_afetado": "A gestão financeira da Prefeitura e órgãos municipais de Cubatão.",
+  "justificativa_do_autor": "Segundo o autor, o limite atual de 10% é insuficiente para atender às necessidades reais da execução orçamentária, e a mudança serve para harmonizar a Lei Orçamentária Anual com a Lei de Diretrizes Orçamentárias.",
+  "natureza": "orcamento_financas",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto afirma que a medida não cria novos gastos, tratando-se apenas de realocação de recursos já previstos.",
+    "trecho": "a medida não implica aumento da despesa total autorizada, tampouco renúncia de receita."
+   },
+   {
+    "ponto": "A lei entra em vigor na data em que for publicada.",
+    "trecho": "Esta lei entra em vigor na data da sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "ecfd6897cdb44a51",
+ "gerado_em": "2026-11-05T18:42:56Z"
+}

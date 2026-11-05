@@ -1,0 +1,13 @@
+🏛️ Câmara de Cubatão — votações de 08/09/2026
+
+▪️ PL 52/2026 (Tinho): aprovado em 2ª discussão, 12 a 0.
+✅ Sancionado: Lei nº 4.483 (DO de 01/10/2026).
+
+▪️ PL 178/2025 (Jair do Bar): aprovado em 2ª discussão, 12 a 0.
+✅ Sancionado: Lei nº 4.484 (DO de 06/10/2026).
+
+Também aprovados/votados: RQ 51 (aprovado); Moção 13 (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

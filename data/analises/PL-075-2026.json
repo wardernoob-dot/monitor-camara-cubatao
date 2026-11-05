@@ -1,0 +1,46 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "75",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO COM A CAIXA ECONÔMICA FEDERAL, COM A GARANTIA DA UNIÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-75.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto autoriza a Prefeitura de Cubatão a contratar um empréstimo de até R$ 500 milhões junto à Caixa Econômica Federal. O valor será destinado a investimentos em infraestrutura e saneamento através do programa FINISA.",
+  "o_que_muda": [
+   "Autoriza o município a contrair dívida de R$ 500 milhões",
+   "Permite o uso de receitas municipais como garantia para o empréstimo",
+   "Autoriza a abertura de créditos adicionais no orçamento para pagar a dívida",
+   "Viabiliza o início da análise técnica para a contratação do financiamento"
+  ],
+  "quem_e_afetado": "Toda a administração municipal e, indiretamente, a população, devido ao impacto financeiro do pagamento da dívida e às futuras obras realizadas.",
+  "justificativa_do_autor": "Segundo o autor, o empréstimo visa viabilizar investimentos estratégicos em áreas como infraestrutura, mobilidade, saneamento e modernização administrativa para o desenvolvimento sustentável da cidade.",
+  "natureza": "orcamento_financas",
+  "limitacoes": "Não é possível saber quais obras serão priorizadas, os juros do empréstimo, o prazo de pagamento ou o impacto exato nas contas públicas a longo prazo.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O valor máximo do empréstimo é de R$ 500 milhões.",
+    "trecho": "até o valor de R$ 500.000.000,00 (Quinhentos Milhões de Reais), no âmbito do FINISA"
+   },
+   {
+    "ponto": "O texto não detalha quais obras específicas serão realizadas, apenas cita áreas gerais.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A contratação depende de aprovação técnica e financeira posterior pelos órgãos federais.",
+    "trecho": "não implicando, por si só, a imediata contratação do financiamento, a qual dependerá do atendimento de todas as exigências legais"
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "dfe22eae204c7271",
+ "gerado_em": "2026-11-05T18:43:27Z"
+}

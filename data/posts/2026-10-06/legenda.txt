@@ -1,0 +1,14 @@
+🏛️ Câmara de Cubatão — votações de 06/10/2026
+
+▪️ PL 10/2026 (Guilherme do Salão): aprovado em 1ª discussão, 14 a 0.
+O projeto cria o "Dia Municipal da Memória, Verdade e Justiça pelas Vítimas do Incêndio da Vila Socó" no calendário oficial de Cubatão, a ser celebrado em 25 de fevereiro.
+✅ Sancionado: Lei nº 4.486 (DO de 15/10/2026).
+
+▪️ PL 64/2026 (Batoré): aprovado em 1ª discussão, 14 a 0.
+O projeto cria o Dia Municipal do Nordestino no calendário oficial de eventos de Cubatão, a ser celebrado anualmente em 8 de outubro.
+
+Também aprovados/votados: RQ 54 (aprovado); RQ 55 (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

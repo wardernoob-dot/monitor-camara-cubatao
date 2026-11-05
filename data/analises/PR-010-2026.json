@@ -1,0 +1,46 @@
+{
+ "materia": {
+  "tipo": "PR",
+  "numero": "10",
+  "ano": "2026",
+  "autoria": "MESA DA CÂMARA",
+  "ementa": "DISPÕE SOBRE O TRÂMITE DOS PROCESSOS ADMINISTRATIVOS DIGITAIS, O USO DE IDENTIFICAÇÕES ELETRÔNICAS, ASSINATURAS DIGITAIS E CERTIFICAÇÃO ELETRÔNICA DE DOCUMENTOS NO ÂMBITO ADMINISTRATIVO E NO PROCESSO LEGISLATIVO DA CÂMARA MUNICIPAL DE CUBATÃO, E DEFINE AS CATEGORIAS DE CERTIFICADOS PARA SERVIDORES E DEPARTAMENTOS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pr-10.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto estabelece regras para a tramitação de processos administrativos e legislativos em formato digital na Câmara Municipal de Cubatão. Define os tipos de assinaturas eletrônicas e os critérios para o uso e custeio de certificados digitais pelos servidores.",
+  "o_que_muda": [
+   "Processos passam a ser obrigatoriamente digitais.",
+   "Criação de três níveis de assinatura eletrônica (simples, avançada e qualificada).",
+   "A Câmara passa a custear certificados digitais para funções específicas.",
+   "Regras para uso de certificados em caso de falhas técnicas ou sistemas externos."
+  ],
+  "quem_e_afetado": "Vereadores, servidores, estagiários e departamentos da Câmara Municipal de Cubatão.",
+  "justificativa_do_autor": "Segundo o autor, a medida visa modernizar a gestão documental, garantir a segurança jurídica dos atos e otimizar a tramitação de processos administrativos e legislativos.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "Não é possível avaliar o impacto orçamentário exato, pois o documento não apresenta estimativa de gastos com a contratação dos sistemas e certificados digitais.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto prevê o custeio público para a aquisição e manutenção de certificados digitais para determinados agentes.",
+    "trecho": "custeando integralmente a sua aquisição, instalação, manutenção e renovação periódica para os agentes e unidades descritos neste artigo"
+   },
+   {
+    "ponto": "Em caso de falha no sistema, os atos urgentes podem ser feitos em papel, mas devem ser digitalizados assim que o sistema voltar.",
+    "trecho": "os atos processuais e legislativos urgentes poderão ser praticados provisoriamente em suporte físico."
+   },
+   {
+    "ponto": "O texto não especifica o valor total do custo financeiro para a Câmara com a implementação dessas tecnologias.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "0f06df4bf3c2395c",
+ "gerado_em": "2026-11-05T18:46:11Z"
+}

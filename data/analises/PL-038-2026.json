@@ -1,0 +1,50 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "38",
+  "ano": "2026",
+  "autoria": "DANIEL BARBOSA DE ASSIS SILVA",
+  "ementa": "DISPÕE SOBRE A OFERTA DE ATENDIMENTO DOMICILIAR EM SAÚDE PARA PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA (TEA) COM ALTA SENSIBILIDADE SENSORIAL, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2038.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Cria o atendimento domiciliar em saúde para pessoas com Transtorno do Espectro Autista (TEA) com alta sensibilidade sensorial na rede pública de Cubatão.",
+  "o_que_muda": [
+   "Institui atendimento domiciliar para pessoas com TEA que têm alta sensibilidade sensorial ou necessidade médica para tal.",
+   "Permite que o atendimento inclua consultas, acompanhamento psicológico, terapias, administração de remédios e orientação a famílias.",
+   "Exige laudo médico ou relatório técnico para o encaminhamento ao atendimento domiciliar.",
+   "Dá à Secretaria Municipal de Saúde a possibilidade de criar protocolos e equipes para a execução da política."
+  ],
+  "quem_e_afetado": "Pessoas com Transtorno do Espectro Autista (TEA) com alta sensibilidade sensorial em Cubatão, além de seus familiares e cuidadores.",
+  "justificativa_do_autor": "Segundo o autor, o projeto garante acesso digno à saúde para autistas que não conseguem ir a unidades clínicas convencionais devido à sensibilidade a sons, luzes e cheiros, evitando traumas e cumprindo princípios do SUS.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quanto a medida custará aos cofres públicos nem se há equipes suficientes na prefeitura para suprir essa demanda.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não define um prazo específico para que o atendimento domiciliar comece a funcionar.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A Secretaria Municipal de Saúde tem a opção, mas não a obrigação imediata, de estabelecer protocolos e equipes específicas.",
+    "trecho": "A Secretaria Municipal de Saúde poderá estabelecer protocolos clínicos, fluxos de atendimento e equipes específicas"
+   },
+   {
+    "ponto": "As despesas da lei usarão o orçamento próprio da prefeitura, podendo ser suplementado se necessário.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
+   },
+   {
+    "ponto": "O texto não cita penalidades para o caso de o atendimento não ser fornecido.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "efb157e325262b37",
+ "gerado_em": "2026-11-05T18:41:39Z"
+}

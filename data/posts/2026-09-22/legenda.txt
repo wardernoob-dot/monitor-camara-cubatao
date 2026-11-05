@@ -1,0 +1,15 @@
+🏛️ Câmara de Cubatão — votações de 22/09/2026
+
+▪️ PL 39/2026 (Ivan Hildebrando): aprovado em 2ª discussão, 12 a 0. Não votaram: Guilherme do Salão, Jair do Bar e Ronaldo da Comissão.
+O projeto cria diretrizes para promover o bem-estar sonoro de pessoas com hipersensibilidade auditiva em Cubatão, visando a inclusão social.
+✅ Sancionado: Lei nº 4.485 (DO de 15/10/2026).
+ℹ️ Painel x resumo oficial da sessão: 1ª discussão: Dr. Anderson de Lana não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Guilherme do Salão não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Ronaldo da Comissão não registrou voto no painel e consta como favorável no resumo.
+
+▪️ PL 53/2026 (Topete): rejeitado em parecer favorável, 6 a 8. Contra: Allan Matias, Xuxa, Guilherme do Salão, Jair do Bar, Batoré, Marcinho, Ronaldo da Comissão e Rony Martins.
+Cria o programa "Empresa Amiga do Esporte e do Lazer" para incentivar empresas a apoiarem o esporte e o lazer na cidade.
+
+Também aprovados/votados: Relatório (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

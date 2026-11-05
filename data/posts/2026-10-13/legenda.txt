@@ -1,0 +1,16 @@
+🏛️ Câmara de Cubatão — votações de 13/10/2026
+
+▪️ PL 14/2026 (Afonsinho): retirado, 0 a 0.
+Cria a Política Municipal de Destinação Ambientalmente Adequada de Restos Mortais de Animais Domésticos e autoriza a Prefeitura a implantar um cemitério público para animais.
+
+▪️ PL 54/2026 (Topete): retirado, 0 a 0.
+O projeto cria Espaços Sensoriais Inclusivos em praças e parques públicos de Cubatão para pessoas com autismo e disfunções sensoriais.
+
+▪️ PL 58/2026 (Prefeito Municipal): retornou_comissoes, 0 a 0.
+O projeto estabelece regras e critérios para a cessão de servidores públicos municipais de Cubatão para outros órgãos ou entes públicos.
+
+Também aprovados/votados: RQ 48 (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

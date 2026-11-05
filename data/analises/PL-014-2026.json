@@ -1,0 +1,50 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "14",
+  "ano": "2026",
+  "autoria": "JOSÉ AFONSO",
+  "ementa": "INSTITUI A POLÍTICA MUNICIPAL DE DESTINAÇÃO AMBIENTALMENTE ADEQUADA DE RESTOS MORTAIS DE ANIMAIS DOMÉSTICOS E AUTORIZA O PODER EXECUTIVO A IMPLANTAR CEMITÉRIO PÚBLICO MUNICIPAL PARA ANIMAIS NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2014.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Cria a Política Municipal de Destinação Ambientalmente Adequada de Restos Mortais de Animais Domésticos e autoriza a Prefeitura a implantar um cemitério público para animais.",
+  "o_que_muda": [
+   "Institui regras para o destino correto de restos mortais de animais de estimação.",
+   "Autoriza a Prefeitura a criar um cemitério para animais de forma direta ou por parcerias.",
+   "Permite a oferta de sepultamento, cremação e guarda temporária.",
+   "Permite que a Prefeitura cobre taxas e defina prioridades sociais."
+  ],
+  "quem_e_afetado": "Moradores de Cubatão que possuem animais domésticos de estimação.",
+  "justificativa_do_autor": "Segundo o autor, o projeto atende a uma demanda social crescente devido à importância afetiva dos animais nas famílias, evitando o descarte irregular e problemas ambientais e de saúde pública.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quando ou se a Prefeitura irá implantar o cemitério, nem quais serão os valores das taxas ou prazos.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto tem caráter apenas autorizativo para a Prefeitura, ou seja, não obriga a criação imediata do cemitério.",
+    "trecho": "Ressalta-se que o projeto possui caráter autorizativo, cabendo ao Poder Executivo regulamentar a matéria"
+   },
+   {
+    "ponto": "O texto prevê que poderá haver cobrança de taxa pública para o funcionamento do serviço.",
+    "trecho": "eventual cobrança de taxa pública para custeio operacional;"
+   },
+   {
+    "ponto": "As despesas sairão do orçamento municipal, podendo haver suplementação de verbas.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, podendo ser suplementadas se necessário."
+   },
+   {
+    "ponto": "O texto não define prazos para a implantação do cemitério ou início da política.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "f89257ee27af0868",
+ "gerado_em": "2026-11-05T18:45:18Z"
+}

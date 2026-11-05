@@ -1,0 +1,50 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "53",
+  "ano": "2026",
+  "autoria": "ALEXANDRE MENDES DA SILVA",
+  "ementa": "DISPÕE SOBRE A INSTITUIÇÃO DO PROGRAMA “EMPRESA AMIGA DO ESPORTE E DO LAZER”, NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2053.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Cria o programa \"Empresa Amiga do Esporte e do Lazer\" para incentivar empresas a apoiarem o esporte e o lazer na cidade.",
+  "o_que_muda": [
+   "Empresas podem doar materiais, uniformes e fazer obras em locais de esporte.",
+   "Empresas podem patrocinar atletas, equipes e eventos esportivos.",
+   "Empresas participantes podem receber um selo de reconhecimento.",
+   "Empresas com o selo podem divulgar suas ações para fins publicitários."
+  ],
+  "quem_e_afetado": "Empresas privadas de Cubatão e os praticantes de esporte e lazer na cidade.",
+  "justificativa_do_autor": "Segundo o autor, o projeto incentiva a participação da iniciativa privada para fortalecer o esporte e o lazer sem gerar aumento de despesas públicas ou benefícios fiscais.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não traz prazos de implantação nem detalha como será feita a seleção ou o controle das empresas participantes.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A participação das empresas é voluntária e não gera custos diretos para a Prefeitura.",
+    "trecho": "A participação no Programa terá caráter voluntário e não implicará: I – ônus financeiro direto ao Poder Público;"
+   },
+   {
+    "ponto": "O projeto não prevê incentivos fiscais, tributários ou financeiros para as empresas.",
+    "trecho": "II – concessão de incentivos fiscais, tributários ou financeiros;"
+   },
+   {
+    "ponto": "As regras de funcionamento ainda poderão ser regulamentadas pelo Poder Executivo.",
+    "trecho": "O Poder Executivo poderá regulamentar a presente Lei no que couber."
+   },
+   {
+    "ponto": "O texto não define prazos para a adesão das empresas ou para a entrega do selo.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "cb0e51b1d6d0d1ad",
+ "gerado_em": "2026-11-05T18:46:24Z"
+}

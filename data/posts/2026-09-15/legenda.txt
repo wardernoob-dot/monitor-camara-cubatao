@@ -1,0 +1,14 @@
+🏛️ Câmara de Cubatão — votações de 15/09/2026
+
+▪️ PL 34/2026 (Cléber do Cavaco): aprovado em 2ª discussão, 10 a 0. Não votaram: Topete, Jair do Bar, Ronaldo da Comissão, Rony Martins e Dr. Anderson de Lana.
+✅ Sancionado: Lei nº 4.482 (DO de 23/09/2026).
+ℹ️ Painel x resumo oficial da sessão: 1ª discussão: Alessandro Oliveira não registrou voto no painel e consta como favorável no resumo; 1ª discussão: Rony Martins não registrou voto no painel e consta como favorável no resumo; 1ª discussão: Afonsinho não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Jair do Bar não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Ronaldo da Comissão não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Rony Martins não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Dr. Anderson de Lana não registrou voto no painel e consta como favorável no resumo.
+
+▪️ PL 74/2026 (Prefeito Municipal): aprovado em 2ª discussão, 11 a 3. Contra: Guilherme do Salão, Marcinho e Rony Martins. Não votaram: Topete.
+
+▪️ PL 75/2026 (Prefeito Municipal): retornou_comissoes, 0 a 0.
+O projeto autoriza a Prefeitura de Cubatão a contratar um empréstimo de até R$ 500 milhões junto à Caixa Econômica Federal. O valor será destinado a investimentos em infraestrutura e saneamento através do programa FINISA.
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

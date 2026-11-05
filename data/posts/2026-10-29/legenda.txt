@@ -1,0 +1,10 @@
+🏛️ Câmara de Cubatão — votações de 29/10/2026
+
+▪️ PL 92/2026 (Prefeito Municipal): aprovado em 2ª discussão, 10 a 3. Contra: Guilherme do Salão, Marcinho e Rony Martins. Não votaram: Topete e Batoré.
+O projeto altera o orçamento da cidade para aumentar o limite que o governo municipal pode usar para remanejar recursos entre áreas já aprovadas.
+✅ Sancionado: Lei nº 4.487 (DO de 29/10/2026).
+ℹ️ Painel x resumo oficial da sessão: 2ª discussão: Batoré não registrou voto no painel e consta como favorável no resumo.
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

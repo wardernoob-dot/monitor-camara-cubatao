@@ -1,0 +1,16 @@
+🏛️ Câmara de Cubatão — votações de 20/10/2026
+
+▪️ PL 75/2026 (Prefeito Municipal): aprovado em parecer contrário, 8 a 6. Contra: Alessandro Oliveira, Cléber do Cavaco, Edson Mota, Tinho, Afonsinho e Dr. Anderson de Lana. Não votaram: Topete.
+O projeto autoriza a Prefeitura de Cubatão a contratar um empréstimo de até R$ 500 milhões junto à Caixa Econômica Federal. O valor será destinado a investimentos em infraestrutura e saneamento através do programa FINISA.
+
+▪️ PL 79/2026 (Prefeito Municipal): retirado, 0 a 0.
+O projeto de lei trata de temas relacionados à Comissão de Valores Mobiliários (CVM), órgão que regula o mercado financeiro brasileiro.
+
+▪️ PL 87/2026 (Prefeito Municipal): rejeitado em parecer em conjunto favorável, 6 a 8. Contra: Allan Matias, Xuxa, Guilherme do Salão, Jair do Bar, Batoré, Marcinho, Ronaldo da Comissão e Rony Martins.
+O projeto altera a lei orçamentária de 2026 para aumentar de 10% para 20% o limite de recursos que o Poder Executivo pode remanejar ou suplementar sem precisar de nova autorização legislativa.
+
+Também aprovados/votados: Moção 14 (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

@@ -1,0 +1,13 @@
+🏛️ Câmara de Cubatão — votações de 27/10/2026
+
+▪️ PL 22/2026 (Ronaldo da Comissão): aprovado em 1ª discussão, 11 a 0. Não votaram: Jair do Bar e Rony Martins. Ausentes: Topete e Edson Mota.
+O projeto cria um programa municipal para ajudar pessoas com 50 anos ou mais a se capacitarem e conseguirem vagas no mercado de trabalho. A iniciativa prevê ações como cursos, apoio na elaboração de currículos e um cadastro de vagas.
+
+▪️ PL 38/2026 (Xuxa): aprovado em 1ª discussão, 12 a 0. Não votaram: Jair do Bar. Ausentes: Topete e Edson Mota.
+Cria o atendimento domiciliar em saúde para pessoas com Transtorno do Espectro Autista (TEA) com alta sensibilidade sensorial na rede pública de Cubatão.
+
+Também aprovados/votados: RQ 57 (aprovado); Relatório (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

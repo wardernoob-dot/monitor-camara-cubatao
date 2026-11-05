@@ -1,0 +1,47 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "79",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "REGULAMENTADOS PELA COMISSÃO DE VALORES MOBILIÁRIOS (CVM)"
+ },
+ "documento": {
+  "fonte": "somente a ementa publicada na pauta (o PDF do projeto e imagem escaneada)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-79.2026",
+  "so_ementa": true
+ },
+ "analise": {
+  "resumo": "O projeto de lei trata de temas relacionados à Comissão de Valores Mobiliários (CVM), órgão que regula o mercado financeiro brasileiro.",
+  "o_que_muda": [
+   "O texto não detalha ações práticas para o município de Cubatão.",
+   "Não há descrição de novas regras, serviços ou obrigações para a cidade."
+  ],
+  "quem_e_afetado": "O documento não especifica quais pessoas ou setores da cidade seriam impactados.",
+  "justificativa_do_autor": "",
+  "natureza": "outro",
+  "limitacoes": "O documento fornecido contém apenas uma ementa incompleta que não permite compreender o objetivo ou o conteúdo da proposta legislativa.",
+  "pontos_de_atencao": [],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não menciona prazos para implementação.",
+    "trecho": "",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não indica a fonte de recursos ou custos envolvidos.",
+    "trecho": "",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não define quem será o responsável pela fiscalização.",
+    "trecho": "",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "f829fa74d329c48e",
+ "gerado_em": "2026-11-05T18:43:53Z"
+}

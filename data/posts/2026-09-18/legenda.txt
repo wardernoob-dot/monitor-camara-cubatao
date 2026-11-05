@@ -1,0 +1,8 @@
+🏛️ Câmara de Cubatão — votações de 18/09/2026
+
+▪️ PL 75/2026 (Prefeito Municipal): nao_apreciado, 0 a 0.
+O projeto autoriza a Prefeitura de Cubatão a contratar um empréstimo de até R$ 500 milhões junto à Caixa Econômica Federal. O valor será destinado a investimentos em infraestrutura e saneamento através do programa FINISA.
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência

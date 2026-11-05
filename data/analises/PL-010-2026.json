@@ -1,0 +1,52 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "10",
+  "ano": "2026",
+  "autoria": "GUILHERME DOS SANTOS MALAQUIAS",
+  "ementa": "INSTITUI O “DIA MUNICIPAL DA MEMÓRIA, VERDADE E JUSTIÇA PELAS VÍTIMAS DO INCÊNDIO DA VILA SOCÓ” NO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2010.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o \"Dia Municipal da Memória, Verdade e Justiça pelas Vítimas do Incêndio da Vila Socó\" no calendário oficial de Cubatão, a ser celebrado em 25 de fevereiro.",
+  "o_que_muda": [
+   "Inclui o dia 25 de fevereiro no calendário oficial do município.",
+   "Autoriza a prefeitura a realizar atividades educativas, culturais e memoriais na data.",
+   "Autoriza a prefeitura a instalar marcos, placas ou memoriais em locais públicos.",
+   "Estabelece objetivos como promover a memória das vítimas e divulgar acervo documental desclassificado em 2024."
+  ],
+  "quem_e_afetado": "A população de Cubatão, sobreviventes e familiares das vítimas do incêndio da Vila Socó.",
+  "justificativa_do_autor": "Segundo o autor, o projeto é uma dívida histórica com as famílias das vítimas para preservar a memória da tragédia, combater o revisionismo e reconhecer que o número real de mortos foi ocultado pela \"Operação Abafa\".",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber quanto a prefeitura gastará para realizar as atividades e instalar os memoriais autorizados.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A prefeitura tem autorização, mas não obrigação, de promover atividades e instalar memoriais.",
+    "trecho": "O Poder Executivo Municipal fica autorizado a promover, na data instituída por esta Lei, atividades educativas"
+   },
+   {
+    "ponto": "O texto não traz estimativa de custos para a realização das atividades ou instalação de placas.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não cita fonte de recursos para bancar as ações previstas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto entra em vigor na data em que for publicado.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "ea774f873422024d",
+ "gerado_em": "2026-11-05T18:45:37Z"
+}

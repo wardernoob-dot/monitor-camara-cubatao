@@ -1,0 +1,46 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "22",
+  "ano": "2026",
+  "autoria": "RONALDO ARAÚJO QUEIROZ",
+  "ementa": "INSTITUI O PROGRAMA MUNICIPAL DE VALORIZAÇÃO E EMPREGABILIDADE DA PESSOA NA MELHOR IDADE, VOLTADO À CAPACITAÇÃO, INTERMEDIAÇÃO E INCLUSÃO DE PESSOAS COM 50 ANOS OU MAIS NO MERCADO DE TRABALHO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2022.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria um programa municipal para ajudar pessoas com 50 anos ou mais a se capacitarem e conseguirem vagas no mercado de trabalho. A iniciativa prevê ações como cursos, apoio na elaboração de currículos e um cadastro de vagas.",
+  "o_que_muda": [
+   "Criação de um programa de incentivo ao emprego para pessoas com 50 anos ou mais.",
+   "Possibilidade de criação de um cadastro municipal de vagas específicas para esse público.",
+   "Autorização para o Poder Executivo firmar parcerias com empresas e instituições.",
+   "Oferta de capacitação profissional e orientação sobre direitos trabalhistas."
+  ],
+  "quem_e_afetado": "Pessoas com 50 anos ou mais residentes em Cubatão que buscam inserção ou recolocação no mercado de trabalho.",
+  "justificativa_do_autor": "Segundo o autor, o projeto visa valorizar a experiência profissional desse público e combater barreiras etárias, promovendo a inclusão produtiva e a dignidade através do trabalho.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quais cursos serão oferecidos, como será a gestão do cadastro de vagas ou qual o impacto financeiro real, pois isso dependerá de ações futuras da Prefeitura.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto depende de regulamentação posterior pelo Poder Executivo para definir detalhes de execução.",
+    "trecho": "O Poder Executivo poderá regulamentar esta Lei no que couber."
+   },
+   {
+    "ponto": "O texto não especifica o valor do custo para implementar o programa.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto indica que as despesas serão pagas pelo orçamento municipal, com possibilidade de suplementação.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "7a7794dfbf63757a",
+ "gerado_em": "2026-11-05T18:41:04Z"
+}

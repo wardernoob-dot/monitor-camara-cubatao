@@ -1,0 +1,16 @@
+🏛️ Câmara de Cubatão — votações de 29/09/2026
+
+▪️ PL 27/2026 (Marcinho): aprovado em 2ª discussão, 13 a 0. Não votaram: Topete e Dr. Anderson de Lana.
+O projeto cria o Programa de Apoio às Pessoas com Doenças Raras e seus familiares em Cubatão, focado em diagnóstico, tratamento e criação de um cadastro municipal.
+⛔ Depois de aprovado, o Prefeito vetou o projeto (veto integral). O veto volta para a Câmara votar.
+ℹ️ Painel x resumo oficial da sessão: 1ª discussão: Alessandro Oliveira aparece com NÃO no painel e como favorável no resumo; 1ª discussão: Cléber do Cavaco não registrou voto no painel e consta como favorável no resumo; 1ª discussão: Edson Mota não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Dr. Anderson de Lana não registrou voto no painel e consta como favorável no resumo.
+
+▪️ PR 10/2026 (Mesa da Câmara): aprovado em discussão única, 12 a 0. Não votaram: Edson Mota, Jair do Bar e Afonsinho.
+O projeto estabelece regras para a tramitação de processos administrativos e legislativos em formato digital na Câmara Municipal de Cubatão. Define os tipos de assinaturas eletrônicas e os critérios para o uso e custeio de certificados digitais pelos servidores.
+ℹ️ Painel x resumo oficial da sessão: Discussão única: Afonsinho não registrou voto no painel e consta como favorável no resumo.
+
+Também aprovados/votados: RQ 52 (aprovado); RQ 53 (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência
