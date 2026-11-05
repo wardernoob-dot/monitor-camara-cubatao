@@ -35,6 +35,11 @@ def main():
         if rel["avisos"]:
             print(f"{len(rel['avisos'])} aviso(s):", *rel["avisos"][:30], sep="\n  ")
 
+        from .videos import processar_videos
+
+        rv = processar_videos(a.dados)
+        print(f"{rv['processados']} transmissao(oes) lida(s) no painel; {len(rv['erros'])} erro(s)")
+
 
 if __name__ == "__main__":
     main()

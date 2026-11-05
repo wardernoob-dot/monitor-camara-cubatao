@@ -121,3 +121,32 @@ def baixar_folhas(video_id: str, destino: Path, nivel: int = 3, http=None, pausa
     info = {"video_id": video_id, **meta, "nivel": n.__dict__, "folhas": n.folhas, "bytes": total_bytes}
     (destino / "info.json").write_text(json.dumps(info, ensure_ascii=False, indent=1), "utf-8")
     return info
+
+
+def urls_do_spec(spec: str, nivel: int = 3) -> tuple[list[str], Nivel]:
+    """Spec do storyboard (texto obtido da pagina do video) -> URLs das folhas do nivel pedido."""
+    partes = spec.split("|")
+    i = min(nivel, len(partes) - 2) + 1
+    w, h, total, cols, rows, intervalo, nome, sigh = partes[i].split("#")
+    n = Nivel(i - 1, int(w), int(h), int(total), int(cols), int(rows), int(intervalo), nome, sigh)
+    return [url_folha(partes[0], n, k) for k in range(n.folhas)], n
+
+
+def baixar_urls(urls: list[str], destino: Path, http=None, tentativas: int = 4) -> int:
+    http = http or _http()
+    destino = Path(destino)
+    destino.mkdir(parents=True, exist_ok=True)
+    total = 0
+    for k, u in enumerate(urls):
+        alvo = destino / f"L3_M{k:03d}.jpg"
+        if alvo.exists():
+            continue
+        for t in range(tentativas):
+            r = http.get(u, timeout=30)
+            if r.status_code == 200:
+                break
+            time.sleep(2 * (t + 1))
+        r.raise_for_status()
+        alvo.write_bytes(r.content)
+        total += len(r.content)
+    return total
