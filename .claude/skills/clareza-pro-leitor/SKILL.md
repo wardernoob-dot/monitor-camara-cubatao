@@ -9,7 +9,7 @@ description: >
   Ativa quando o usuário diz "revisar a clareza", "o leitor entende isso?", "mudei a tela",
   "revisa o texto do site" ou ao criar ou mudar qualquer coisa que o morador vai ler.
 metadata:
-  version: "1.3"
+  version: "1.4"
   updated: "2026-11-05"
   author: "Gabriela Caligares"
 ---
@@ -107,7 +107,7 @@ cd docs && python -m http.server 8765 --bind 127.0.0.1 &
 msedge --headless=new --disable-gpu --hide-scrollbars --window-size=1280,2200 --virtual-time-budget=15000 --screenshot=print.png "http://127.0.0.1:8765/#/projetos/pl-75-2026"
 ```
 
-Rotas usam `#/` (`/#/vereadores/xuxa`, `/#/projetos/pl-75-2026`). Salve o print fora do repo. A página inicial tem animações: no print os gráficos saem pela metade, então não tire conclusões dela.
+Rotas usam `#/` (`/#/vereadores/xuxa`, `/#/projetos/pl-75-2026`). Salve o print fora do repo. **Os cartões numéricos têm animação de contagem** (`Contador`, em `viz.tsx`): no print eles saem no meio da subida (ex.: 93 em vez de 130) e só aparecem quando entram na tela. Para ler o valor real, use `--dump-dom` com janela alta e leia o trecho `class="sr"` de cada cartão, que guarda o número verdadeiro. Em 2026-11-05 isso gerou dois falsos alarmes (números "divergentes" na página inicial e "60% de presença").
 
 ### 6. Relatar
 
@@ -125,8 +125,11 @@ Estes são princípios do README do projeto. Vale conferir contra eles.
 - **Os dois lados quando as fontes divergem**, sem concluir qual está certa.
 - **Estado visto nas telas, 2ª conferência em 2026-11-05** (depois que a `main` trouxe o novo front; confirme o estado atual com um print):
   - **Resolvido pelo dono:** o "Sim" do parecer contrário agora vem explicado. O site grava `sentido` em cada votação (`inverso` no parecer contrário, `direto`, `emenda`; `site.py`, função `sentido`), a página do projeto mostra o aviso "votar Sim era ser contra o projeto seguir", e a tabela do vereador mostra "na prática: ..." ao lado do voto (`explica.tsx`). Os cartões "votou sim/não" e o filtro "Votou não" saíram, o que também tirou a contagem de votos a favor do projeto como "não".
-  - **Ainda aberto:** (a) a linha do parecer mostra "Aprovado 8 a 6" e, ao lado, "Rejeitado" (campo `detalhe`, do resumo oficial), duas palavras para a mesma votação; (b) etapas sem votação ainda saem como "Sem resultado registrado 0 a 0" (13 casos; o teste `xfail` marca isso); (c) "Vota mais igual a / diferente de" (`Vereador.tsx`) segue ordenando vereadores por semelhança.
-  - **Não verificado:** vetos têm `sentido` vazio (9 votações), então não sei se a tela explica o que o "Sim" significa num veto (manter ou derrubar). O cartão "60% de presença nas sessões" (Xuxa) não foi conferido contra os dados. Na página inicial, números lado a lado diferem sem explicação visível: "5 viraram lei" × barra "Viraram lei 7", "95 projetos apresentados ou votados" × barra "Apresentados 130", "7 projetos vetados" × "Vetos 9" (pode ser definição diferente; confira).
+  - **Ainda aberto:** (a) a linha do parecer mostra "Aprovado 8 a 6" e, ao lado, "Rejeitado" (campo `detalhe`, do resumo oficial), duas palavras para a mesma votação; (b) etapas sem votação ainda saem como "Sem resultado registrado 0 a 0" (13 casos; o teste `xfail` marca isso); (c) "Vota mais igual a / diferente de" (`Vereador.tsx`) segue ordenando vereadores por semelhança; (d) **vetos** (9 votações, `sentido` vazio): a tela não explica que "Sim" é manter o veto, e a linha mostra "Sem resultado registrado" ao lado de "Mantido em discussão única" (em `site.py`, `_evento` só converte `aprovado*` e `rejeitado*` em resultado, e os vetos vêm como `veto_mantido`/`veto_derrubado`).
+  - **Verificado depois (2026-11-05):**
+    - *Números da página inicial:* sem divergência. Os valores reais são 130 apresentados, 7 leis, 9 vetos e 42 dias com votação; o cartão e a barra usam a mesma conta. O que parecia divergir era a animação de contagem (acima).
+    - *Presença do Xuxa:* **98%** (65 presenças em 66 sessões, 1 ausência), recontada direto de `data/sessoes/*.json`. O "60%" do print era a animação.
+    - *Destaque "Por que este projeto merece atenção":* regras fixas e factuais em `site.py` (`relevancia`), iguais para todos os projetos; o tema vem de regex na ementa, não de IA. Lacuna: "Como funciona" lista só os critérios de nível alto; as razões de nível médio ("Teve parecer contrário de comissão", "Cria regra, programa ou obrigação para a cidade") aparecem na caixa do projeto mas **não estão na lista pública**, apesar do texto "critérios fixos e públicos". Distribuição em 130 projetos: 39 alta, 44 média, 47 baixa.
 ---
 
 ## Exemplo
@@ -145,6 +148,7 @@ INVERTE 2026-10-20  pl-75-2026   Parecer contrário   APROVADO   8x6  fonte=pain
 
 ## Histórico de versões
 
+- **v1.4** (2026-11-05): Verificados os itens pendentes: números da página inicial e presença eram animação de contagem; vetos sem explicação do Sim e sem resultado; critérios de nível médio do destaque não estão em "Como funciona". Ensina a ler o valor real pelo DOM. [Gabriela Caligares]
 - **v1.3** (2026-11-05): Segunda conferência das telas depois do novo front da `main`: o parecer contrário já vem explicado (`sentido`); registra o que continua aberto e o que não foi verificado (vetos, presença, números da página inicial). [Gabriela Caligares]
 - **v1.2** (2026-11-05): Testada com prints reais do site (Edge headless). Registra os problemas vistos nas telas, corrige a afirmação de que não havia lista ordenada de vereadores ("Vota mais igual a / diferente de") e documenta como tirar o print. [Gabriela Caligares]
 - **v1.1** (2026-11-05): Reformatada no modelo padrão de skills. Troca os números escritos à mão por um script (`listar_pareceres.py`) e passa a exigir o registro do que não foi verificado. [Gabriela Caligares]
