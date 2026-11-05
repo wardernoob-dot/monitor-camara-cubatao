@@ -84,9 +84,20 @@ def transcrever(png: bytes, n: int, token: str | None = None, http=None) -> list
             {"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(png).decode()}},
         ]}],
     }
-    r = http.post(ENDPOINT, json=corpo, timeout=120, headers={
-        "Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"})
+    headers = {"Authorization": f"Bearer {token}", "Accept": "application/json",
+               "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
+    url, trilha = ENDPOINT, []
+    for _ in range(4):  # segue redirect mantendo POST e corpo (requests transformaria em GET)
+        r = http.post(url, json=corpo, timeout=120, headers=headers, allow_redirects=False)
+        trilha.append(f"{r.status_code} {url}")
+        if r.status_code in (301, 302, 303, 307, 308) and r.headers.get("location"):
+            from urllib.parse import urljoin
+            url = urljoin(url, r.headers["location"])
+            continue
+        break
+    if r.status_code == 200 and not r.headers.get("content-type", "").startswith("application/json"):
+        raise RuntimeError(f"GitHub Models respondeu sem JSON ({' -> '.join(trilha)}; "
+                           f"content-type={r.headers.get('content-type')}): {r.text[:120]!r}")
     if r.status_code != 200:
         raise RuntimeError(f"GitHub Models HTTP {r.status_code}: {r.text[:200]}")
     try:
