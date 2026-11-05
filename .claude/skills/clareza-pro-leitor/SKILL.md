@@ -9,7 +9,7 @@ description: >
   Ativa quando o usuário diz "revisar a clareza", "o leitor entende isso?", "mudei a tela",
   "revisa o texto do site" ou ao criar ou mudar qualquer coisa que o morador vai ler.
 metadata:
-  version: "1.1"
+  version: "1.2"
   updated: "2026-11-05"
   author: "Gabriela Caligares"
 ---
@@ -100,6 +100,15 @@ Veja a seção Regras.
 
 Abra a tela afetada (`cd frontend && npm run dev`) e pergunte: o que eu concluo daqui? Se não puder abrir, registre em "Não verifiquei".
 
+Sem navegador aberto, dá para tirar um print com o Edge em modo headless (verificado em 2026-11-05):
+
+```bash
+cd docs && python -m http.server 8765 --bind 127.0.0.1 &
+msedge --headless=new --disable-gpu --hide-scrollbars --window-size=1280,2200 --virtual-time-budget=15000 --screenshot=print.png "http://127.0.0.1:8765/#/projetos/pl-75-2026"
+```
+
+Rotas usam `#/` (`/#/vereadores/xuxa`, `/#/projetos/pl-75-2026`). Salve o print fora do repo. A página inicial tem animações: no print os gráficos saem pela metade, então não tire conclusões dela.
+
 ### 6. Relatar
 
 Entregue o relatório no formato acima.
@@ -110,11 +119,16 @@ Entregue o relatório no formato acima.
 
 Estes são princípios do README do projeto. Vale conferir contra eles.
 
-- **Sem ranking, nota, "mais fiel", "mais faltoso"** de vereador, nem comparações que funcionem como ranking. Revisão de 2026-11-05: não há ranking nem lista ordenada por desempenho no front. O mais próximo é o mapa "Quem vota igual a quem" (`Inicio.tsx`: pares de vereadores com % de votos iguais, só votações do painel). Ele não ordena ninguém, mas é comparação entre pessoas: mudanças nele (ordenar, destacar maior ou menor) devem ser alinhadas com o dono do projeto.
+- **Sem ranking, nota, "mais fiel", "mais faltoso"** de vereador, nem comparações que funcionem como ranking. Revisão de 2026-11-05, vendo as telas: não há nota nem lista por desempenho, **mas há listas ordenadas de pessoas por semelhança**. A página de cada vereador tem "Vota mais igual a" e "Vota mais diferente de" (`Vereador.tsx`), com nomes ordenados e porcentagem (ex.: "Rony Martins 77%"), e o início tem o mapa "Quem vota igual a quem" (`Inicio.tsx`). Não medem qualidade, mas ordenam vereadores nominalmente uns contra os outros. Se isso respeita o princípio "sem ranking" é decisão do dono do projeto; mudanças nesses blocos devem ser alinhadas com ele. (Uma checagem anterior desta skill disse que não havia lista ordenada: estava errada, só procurou palavras como "rank" no código.)
 - **A IA nunca é fonte de fato.** O texto de "Entenda o projeto" é rotulado como gerado por IA, cita o documento lido e não recebe votos, nomes de vereadores nem partidos (veja `prompts/analise.md`). Todo ponto de atenção traz um trecho literal do documento.
 - **Tom imparcial:** não dizer se o projeto é bom ou ruim, não recomendar voto, não elogiar nem criticar o autor.
 - **Os dois lados quando as fontes divergem**, sem concluir qual está certa.
-- **Estado conhecido em 2026-11-05:** o front não explica o SIM de uma etapa de parecer contrário (tabela do vereador e linha do tempo do projeto). O dono do projeto foi avisado e vai decidir; não mude sem alinhar com ele. Confirme o estado atual com o script do passo 1.
+- **Estado visto nas telas em 2026-11-05** (o dono do projeto foi avisado e vai decidir; não mude sem alinhar com ele; confirme o estado atual com o script do passo 1 e um print):
+  - **Parecer contrário sem explicação.** Em `/#/projetos/pl-75-2026` a etapa "Parecer contrário" mostra "Aprovado 8 a 6" e os vereadores com "Sim" em verde, sem dizer que esse SIM é contra o projeto. Só a etiqueta no topo ("Parecer contrário: aprovado") ajuda um pouco.
+  - **Rótulos que se contradizem.** Na mesma linha aparecem "Aprovado" (resultado do painel) e "Rejeitado" (campo `detalhe`, vindo do resumo oficial). Um leitor lê as duas palavras para a mesma votação.
+  - **"Sim/Não" do parecer contrário vira estatística de "não".** Em `/#/vereadores/xuxa`, o PL 92/2026 (parecer contrário em separado) aparece como **"Não"** em vermelho, mas ele votou a favor do projeto (rejeitou o parecer) e votou "Sim" nas duas discussões. Em código, `estatisticas.ts` (linha ~92, "Votos 'não' por semana") e o cartão "votou não" contam todo `NAO`, sem olhar a etapa, então votos a favor do projeto entram como "não".
+  - **"0 a 0" sem votação.** Em `/#/projetos/pl-75-2026`, as linhas de 15/09 e 18/09 mostram "Sem resultado registrado 0 a 0" para etapas que nem tiveram voto (projeto voltou às comissões; retirado de pauta). Parece uma votação com zero votos.
+  - **Números que parecem não bater.** Em `/#/vereadores/xuxa` o cartão diz "88 votações com voto registrado" e "2 votou não", enquanto a lista diz "Todos (216)" e "Votou não (6)". A explicação existe (até agosto só o resumo, que lista quem votou a favor), mas está num texto pequeno abaixo do gráfico.
 
 ---
 
@@ -134,5 +148,6 @@ INVERTE 2026-10-20  pl-75-2026   Parecer contrário   APROVADO   8x6  fonte=pain
 
 ## Histórico de versões
 
+- **v1.2** (2026-11-05): Testada com prints reais do site (Edge headless). Registra os problemas vistos nas telas, corrige a afirmação de que não havia lista ordenada de vereadores ("Vota mais igual a / diferente de") e documenta como tirar o print. [Gabriela Caligares]
 - **v1.1** (2026-11-05): Reformatada no modelo padrão de skills. Troca os números escritos à mão por um script (`listar_pareceres.py`) e passa a exigir o registro do que não foi verificado. [Gabriela Caligares]
 - **v1.0** (2026-11-05): Criada a partir da revisão do front e do caso do parecer contrário do PL 75/2026. [Gabriela Caligares]

@@ -9,7 +9,7 @@ description: >
   Ativa quando o usuário diz "validar o painel", "o painel leu errado", "mexi no painel.py",
   "confere o leitor do painel" ou "qual a concordância do painel".
 metadata:
-  version: "1.1"
+  version: "1.2"
   updated: "2026-11-05"
   author: "Gabriela Caligares"
 ---
@@ -44,7 +44,9 @@ git fetch origin amostras
 mkdir -p "$TMP/amostras" && git archive origin/amostras data/storyboard | tar -x -C "$TMP/amostras"
 ```
 
-Se o branch `amostras` não tiver as imagens do vídeo em questão, diga que não dá para validar esse vídeo.
+Se o branch `amostras` não tiver as imagens do vídeo em questão, diga que não dá para validar esse vídeo. (Em 2026-11-05 havia imagens de 7 dos 9 vídeos dos specs; faltavam as sessões de 13/10 e 20/10.)
+
+**Problema conhecido (2026-11-05):** `scripts/validar_painel.py` espera que cada spec tenha o campo `nome` terminando em `dd/mm`, mas os specs atuais só têm `titulo` (ex.: "37ª SESSÃO ORDINÁRIA DIA 03 DE NOVEMBRO DE 2026"). Rodar o script direto termina em `KeyError: 'nome'`. Contorno que funcionou sem alterar o repo: um executor temporário que lê o script, preenche `nome` a partir de `titulo` (dia e mês por extenso → `dd/mm`) logo após carregar `SPECS`, e roda o resultado com `exec`. A correção definitiva é no script e deve ser decidida com o dono. No Windows, use `PYTHONIOENCODING=utf-8` para os acentos.
 
 ---
 
@@ -85,7 +87,8 @@ Extraia o storyboard do branch `amostras` para a pasta temporária (comandos aci
 
 - BRANCO no painel casa com "vereador fora das listas de voto". Presidente e ausente do plenário também aparecem em branco.
 - Divergência em **um** vereador costuma ser rosto confundido (`conf` baixa) ou ordem das fotos alterada naquele dia.
-- Divergência em **quase todos** costuma ser o mapeamento SIM/NÃO ao contrário (parecer contrário e veto: o painel mostra o sentido do que está em votação, não do projeto).
+- **Concordância baixa numa votação de parecer geralmente não é erro do leitor.** O resumo oficial muitas vezes não registra o parecer (`conferencia: resumo_nao_registra`), e o validador compara com a votação "mais parecida" do dia, que é outra. Exemplo verificado: PL 92/2026, parecer contrário, 29/10 → "casa 1/15", mas o resumo não tem essa votação.
+- Referência de 2026-11-05 (7 vídeos): **442/510 = 86,7%** de concordância e **15/15 em 8 de 34** votações. Esse número é um piso, por causa do item acima; compare antes e depois, não com 100%.
 
 ### 4. Depois de mexer em painel.py
 
@@ -123,5 +126,6 @@ Entregue o relatório no formato acima.
 
 ## Histórico de versões
 
+- **v1.2** (2026-11-05): Testada de verdade com as imagens do branch `amostras`. Registra o erro `KeyError: 'nome'` do script, o contorno, a referência de concordância (86,7%) e que votações de parecer dão concordância baixa por artefato. [Gabriela Caligares]
 - **v1.1** (2026-11-05): Reformatada no modelo padrão de skills. Acrescenta a saída em formato fixo, a regra de que a concordância mede o leitor e não as pessoas, e o aviso para parar quando faltam imagens. [Gabriela Caligares]
 - **v1.0** (2026-11-05): Criada a partir de `scripts/validar_painel.py`. [Gabriela Caligares]

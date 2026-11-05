@@ -10,7 +10,7 @@ description: >
   Ativa quando o usuário diz "revisar regra de voto", "mexi no parser", "confere a lógica de
   voto", "isso inverte favor e contra?" ou "revisa essa mudança de voto".
 metadata:
-  version: "1.1"
+  version: "1.2"
   updated: "2026-11-05"
   author: "Gabriela Caligares"
 ---
@@ -84,7 +84,7 @@ Se a mudança altera como um voto é lido, sugira um teste com um caso real (tex
 
 ### 4. Conferir um caso de cada tipo
 
-Gere o `dados.json` offline com `python -c "from pathlib import Path; from camara.site import exportar; exportar(Path('data'))"` (isso reescreve `docs/data/dados.json` no working tree: não commite sem querer) e confira: matéria comum, veto, parecer contrário, parecer do TCE, votação com ausente. Compare com `por_vereador` do arquivo da sessão em `data/sessoes/`.
+Gere o `dados.json` offline **numa pasta temporária**: `python -c "from pathlib import Path; from camara.site import exportar; exportar(Path('data'), Path('<pasta temporária>'))"`. Cuidado: sem o segundo argumento, `exportar` **apaga e recria `docs/data`** (`shutil.rmtree`). Verificado em 2026-11-05: o `dados.json` gerado fica idêntico ao commitado, exceto por `meta.atualizado`. Confira: matéria comum, veto, parecer contrário, parecer do TCE, votação com ausente, comparando com `por_vereador` do arquivo da sessão em `data/sessoes/`.
 
 ### 5. Conferir a fonte
 
@@ -126,5 +126,6 @@ Estas são as regras de leitura de voto do README do projeto. Vale conferir a mu
 
 ## Histórico de versões
 
+- **v1.2** (2026-11-05): O passo de gerar o `dados.json` agora usa pasta temporária (o `exportar` sem destino apaga `docs/data`). Testado: saída idêntica à commitada, exceto a data. [Gabriela Caligares]
 - **v1.1** (2026-11-05): Reformatada no modelo padrão de skills (papel, entradas, saída, passos, regras, exemplo). Gerar o `dados.json` agora avisa que reescreve `docs/data/dados.json` local. [Gabriela Caligares]
 - **v1.0** (2026-11-05): Criada a partir das regras de leitura de voto do README e da revisão do PL 75/2026. [Gabriela Caligares]
