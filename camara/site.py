@@ -422,12 +422,46 @@ def _ev_json(ev: dict, vslug: dict) -> dict:
     }
 
 
-def _foto(slug: str) -> str | None:
-    """Foto colocada pelo responsavel do site em docs/fotos/<slug>.(jpg|png|webp). Sem arquivo, o app usa as iniciais."""
-    for ext in ("webp", "jpg", "jpeg", "png"):
-        if (RAIZ / "docs" / "fotos" / f"{slug}.{ext}").exists():
-            return f"fotos/{slug}.{ext}"
-    return None
+FOTOS_ORIGINAIS = RAIZ / "fotos"
+
+
+def preparar_fotos(vereadores: dict) -> dict[str, str]:
+    """Fotos colocadas pelo responsavel do site em fotos/ (qualquer nome que lembre o vereador:
+    'xuxa.jpg', 'Daniel Barbosa.png', 'DANIEL_BARBOSA_DE_ASSIS.jpeg'). Recorta quadrado puxando
+    pro rosto, reduz pra 480 px e grava docs/fotos/<slug>.webp. Devolve {slug: caminho no site}."""
+    from PIL import Image, ImageOps
+
+    destino = RAIZ / "docs" / "fotos"
+    destino.mkdir(parents=True, exist_ok=True)
+    if not FOTOS_ORIGINAIS.exists():
+        return {}
+    nomes = {}
+    for v in vereadores.values():
+        for n in (v["slug"], v["nome"], v.get("apelido") or ""):
+            if n:
+                nomes[slug(n)] = v["slug"]
+    out = {}
+    for arq in sorted(FOTOS_ORIGINAIS.iterdir()):
+        if arq.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp"):
+            continue
+        k = slug(arq.stem)
+        alvo = nomes.get(k)
+        if not alvo:
+            import difflib
+            hit = difflib.get_close_matches(k, list(nomes), n=1, cutoff=0.75)
+            alvo = nomes[hit[0]] if hit else None
+        if not alvo:
+            print(f"  ! foto sem vereador correspondente: {arq.name}")
+            continue
+        final = destino / f"{alvo}.webp"
+        if not final.exists() or final.stat().st_mtime < arq.stat().st_mtime:
+            im = ImageOps.exif_transpose(Image.open(arq)).convert("RGB")
+            lado = min(im.size)
+            x = (im.width - lado) // 2
+            y = max(0, min(int(im.height * 0.08), im.height - lado)) if im.height > im.width else 0
+            im.crop((x, y, x + lado, y + lado)).resize((480, 480), Image.LANCZOS).save(final, "WEBP", quality=82)
+        out[alvo] = f"fotos/{alvo}.webp"
+    return out
 
 
 def exportar(dados: Path, saida: Path | None = None) -> dict:
@@ -448,6 +482,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
         shutil.rmtree(saida)
     (saida / "analises").mkdir(parents=True)
 
+    fotos = preparar_fotos(b.vereadores)
     vereadores = []
     for v in sorted(b.vereadores.values(), key=lambda v: v["exibicao"]):
         if not v["em_exercicio"] and v["sessoes_total"] < 5:
@@ -458,7 +493,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "cargo": v.get("cargo"),
             "em_exercicio": v["em_exercicio"], "contagem": v["contagem"], "total_votacoes": v["total_votacoes"],
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
-            "foto": _foto(v["slug"]),
+            "foto": fotos.get(v["slug"]),
             "projetos": [m["slug"] for m in v["projetos"] if m["slug"] in paginas],
             "requerimentos": [m["slug"] for m in v["requerimentos"] if m["slug"] in paginas],
         })
