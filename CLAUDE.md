@@ -38,9 +38,9 @@ Pipeline único, orquestrado em `camara/__main__.py` (`tudo` chama as etapas nes
 
 Pontos que exigem ler mais de um arquivo:
 
-- **`docs/` é saída commitada.** O build do front (`npm run build`) e as fotos processadas (`docs/fotos/*.webp`) ficam no repo e são servidos pelo GitHub Pages. O Actions só atualiza `docs/data/` e `data/`, sem Node. Mudou o front, tem que rodar o build e commitar `docs/`.
+- **`docs/` é saída commitada.** O build do front (`npm run build`) e as fotos processadas (`docs/fotos/*.webp`) ficam no repo e são servidos pelo GitHub Pages. O robô do Actions só commita `data/` (nenhum dos últimos 30 commits do robô tocou em `docs/`), então o `docs/data/dados.json` do GitHub Pages só muda quando alguém regenera e commita. O Surge é diferente: o workflow publica o `docs/` gerado na própria rodada. Mudou o front, tem que rodar o build e commitar `docs/`.
 - **O YouTube bloqueia IPs de nuvem.** O Actions não consegue pegar o spec do storyboard; quem faz isso é o script do PC (`pc/`, tarefa agendada no Windows) que atualiza `data/storyboard_specs.json`. `sonda-storyboard.yml` é um teste manual que escreve só no branch `amostras`.
-- **Automação diária:** `.github/workflows/coleta.yml` (08h17 BRT) roda os testes, `python -m camara tudo` e commita `data/` como `monitor-camara-bot`. Testes quebrados bloqueiam a coleta.
+- **Automação:** `.github/workflows/coleta.yml` roda a cada 4 horas (minuto 17), executa os testes e `python -m camara tudo`, commita `data/` como `monitor-camara-bot` e publica o `docs/` em https://votoavoto.surge.sh (precisa dos secrets `SURGE_LOGIN` e `SURGE_TOKEN`; sem eles o passo é pulado). Testes quebrados bloqueiam a coleta. `publicar-surge.yml` republica no Surge quando `docs/`, `fotos/` ou `camara/site.py` mudam na `main`. Nunca commite `docs/CNAME`: o Surge o cria localmente e, commitado, derruba o endereço do GitHub Pages (já está no `.gitignore`).
 - **Fotos:** `fotos/` recebe imagens com qualquer nome; `site.py:preparar_fotos` casa por apelido/nome civil (aceita extensão repetida tipo `ivan.jpg..jpg` e nome parcial único), recorta no rosto e converte para webp. Detalhes em `fotos/LEIA-ME.md`.
 - Suplentes com ao menos uma sessão em 2026 ganham página de vereador.
 
