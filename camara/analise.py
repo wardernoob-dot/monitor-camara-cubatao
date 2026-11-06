@@ -26,6 +26,8 @@ TIPOS_ANALISADOS = ("PL", "PLC", "PR", "PDL", "PELOM", "VETO")
 NATUREZAS = {"homenagem_ou_data", "politica_publica", "orcamento_financas", "organizacao_administrativa",
              "tributos", "funcionamento_da_camara", "outro"}
 MAX_DOC = 14000
+# arquivo sem ano no nome dentro da pasta do ano: ".../arquivos/2025/PL.%20146.pdf"
+RE_URL_PROJ_PASTA = re.compile(r"/arquivos/(\d{4})/(PLC|PL|PR|PDL|PELOM)(?:%20|[ _\-.])*(?:n(?:o|º|°|deg)?(?:%20|[ _\-.])+)?0*(\d{1,4})\.pdf$", re.I)
 RE_URL_PROJ = re.compile(r"/(PLC|PL|PR|PDL|PELOM)(?:%20|[ _\-.])*(?:n(?:o|º|°|deg)?(?:%20|[ _\-.])+)?0*(\d{1,4})[.\-_](\d{4})", re.I)
 RE_VETO_TIT = re.compile(r"VETO (INTEGRAL|PARCIAL|TOTAL) AO PROJETO DE LEI N\S?\s*0*(\d{1,4})/(\d{4})", re.I)
 RE_SHA256 = re.compile(r"^[0-9a-f]{64}$")
@@ -161,8 +163,8 @@ def _pdf_da_materia(dados: Path, tipo: str, numero: str, ano: str | None) -> dic
             mv = RE_VETO_TIT.search(m.get("titulo") or "")
             if mv and mv.group(2) == numero and (not ano or mv.group(3) == ano):
                 return m
-        elif (mu := RE_URL_PROJ.search(m["url"])) and mu.group(1).upper() == tipo and mu.group(2) == numero \
-                and (not ano or mu.group(3) == ano):
+        elif (mu := url_projeto(m["url"])) and mu[0] == tipo and str(int(mu[1])) == str(int(numero)) \
+                and (not ano or mu[2] == ano) and not re.search(r"(?i)of[íi]cio|of\._", m["url"]):
             return m
     return None
 
@@ -258,6 +260,15 @@ def chave_materia(tipo: str, numero: str, ano: str | None) -> str:
     return f"{tipo}-{int(numero):03d}-{ano_limpo}"
 
 
+def url_projeto(url: str) -> tuple[str, str, str] | None:
+    """URL do PDF de um projeto -> (tipo, numero, ano)."""
+    if mu := RE_URL_PROJ.search(url):
+        return mu.group(1).upper(), mu.group(2), mu.group(3)
+    if mp := RE_URL_PROJ_PASTA.search(url):
+        return mp.group(2).upper(), mp.group(3), mp.group(1)
+    return None
+
+
 def transcrever_projetos(dados: Path, slugs_sem_autor: set[str], limite: int = 20, max_paginas: int = 40,
                          pausa: float = 4.0, http=None) -> dict:
     """PDFs escaneados de projetos sem autoria identificada -> .ocr.txt (a assinatura so aparece no texto).
@@ -268,10 +279,10 @@ def transcrever_projetos(dados: Path, slugs_sem_autor: set[str], limite: int = 2
     idx = json.loads((dados / "indice.json").read_text("utf-8"))
     rel = {"transcritos": 0, "erros": [], "pendentes": 0}
     for meta in idx.values():
-        mu = RE_URL_PROJ.search(meta.get("url") or "")
-        if meta.get("secao") != "projetos" or not meta.get("precisa_ocr") or not mu:
+        tna = url_projeto(meta.get("url") or "")
+        if meta.get("secao") != "projetos" or not meta.get("precisa_ocr") or not tna:
             continue
-        sl = f"{mu.group(1).lower()}-{int(mu.group(2))}-{mu.group(3)}"
+        sl = f"{tna[0].lower()}-{int(tna[1])}-{tna[2]}"
         sha = str(meta.get("sha256") or "")
         if sl not in slugs_sem_autor or (meta.get("paginas") or 0) > max_paginas:
             continue

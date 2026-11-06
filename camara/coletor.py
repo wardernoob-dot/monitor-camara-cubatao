@@ -104,7 +104,8 @@ class Coletor:
                                   if (m := re.match(rf"VETO-0*(\d+)-{ant}\.json$", f.name))}
         for f in (self.dados / "consolidado").glob("*.json"):  # vetos votados (mesmo sem oficio localizado)
             for mc in json.loads(f.read_text("utf-8")).get("materias", []):
-                if mc.get("tipo") == "VETO" and str(mc.get("ano")) == str(ant) and str(mc.get("numero") or "").isdigit():
+                if mc.get("tipo") in ("VETO", "PL", "PLC") and str(mc.get("ano")) == str(ant) \
+                        and str(mc.get("numero") or "").isdigit():
                     self.nums_ano_anterior.add(int(mc["numero"]))
 
     # ---------- rede ----------
@@ -192,6 +193,9 @@ class Coletor:
         for m in re.finditer(rf"(?i)(?<![a-z])(?:PLC?|Projeto{sep}de{sep}Lei){sep}(?:n(?:o|º|°|deg)?\.?{sep})?0*(\d{{1,4}})(?:%20|[\s_./-])+{ant}(?!\d)", txt):
             if int(m.group(1)) in self.nums_ano_anterior:
                 return True
+        # dentro da pasta do ano anterior alguns arquivos nao tem o ano no nome: "PL.%20146.pdf"
+        if (m := re.search(r"(?i)/PLC?(?:%20|[\s_.-])*(?:n(?:o|º|°|deg)?(?:%20|[\s_.-])+)?0*(\d{1,4})\.pdf$", txt)):
+            return int(m.group(1)) in self.nums_ano_anterior
         return False
 
     # ---------- download + texto ----------

@@ -156,12 +156,12 @@ class Base:
             if meta["secao"] in ("projetos",) and p_ok:
                 self._cargos(p.read_text("utf-8"))
             if meta["secao"] == "projetos":
-                mu = AN.RE_URL_PROJ.search(meta["url"])
+                mu = AN.url_projeto(meta["url"])
                 mv = AN.RE_VETO_TIT.search(meta.get("titulo") or "")
                 if mv:
                     pass  # oficio de veto: ligar_oficios_de_veto()
-                elif mu:
-                    m = self.materia(mu.group(1).upper(), mu.group(2), mu.group(3))
+                elif mu and not re.search(r"(?i)of[íi]cio|of\._", meta["url"]):
+                    m = self.materia(*mu)
                     m["documento"] = meta["url"]
                     if not m["assunto"] and meta.get("titulo") and "MENSAGEM" not in meta["titulo"].upper():
                         m["assunto"] = meta["titulo"]
