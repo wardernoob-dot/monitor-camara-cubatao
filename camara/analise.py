@@ -92,6 +92,11 @@ def transcrever_pdf(dados: Path, url: str, sha: str, http=None) -> bool:
     http = http or requests
     pdf = http.get(url, timeout=120, headers={"User-Agent": "monitor-camara-cubatao"})
     pdf.raise_for_status()
+    url_final = getattr(pdf, "url", None)
+    if url_final:
+        p_fin = urlparse(str(url_final))
+        if p_fin.scheme not in ("https", "http") or p_fin.hostname != "www.cubatao.sp.leg.br":
+            raise ValueError(f"Redirecionamento externo bloqueado em transcrever_pdf: {url_final!r}")
     if len(pdf.content) > MAX_PDF:
         return False
     chave = os.environ["GEMINI_API_KEY"]
@@ -213,7 +218,7 @@ def conferir(saida: dict, doc: dict) -> dict:
 # ---------------------------------------------------------------- orquestracao
 
 def chave_materia(tipo: str, numero: str, ano: str | None) -> str:
-    if tipo not in TIPOS_ANALISADOS:
+    if not re.match(r"^[A-Z]{2,10}$", str(tipo or "")):
         raise ValueError(f"tipo invalido: {tipo!r}")
     ano_limpo = re.sub(r"[^0-9]", "", str(ano or ""))[:4] or "sem-ano"
     return f"{tipo}-{int(numero):03d}-{ano_limpo}"
@@ -291,5 +296,8 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
 
 
 def carregar(dados: Path, tipo: str, numero: str, ano: str | None) -> dict | None:
-    p = Path(dados) / "analises" / f"{chave_materia(tipo, numero, ano)}.json"
+    pasta = (Path(dados) / "analises").resolve()
+    p = (pasta / f"{chave_materia(tipo, numero, ano)}.json").resolve()
+    if not p.is_relative_to(pasta):
+        raise ValueError(f"caminho de analise invalido: {p}")
     return json.loads(p.read_text("utf-8")) if p.exists() else None

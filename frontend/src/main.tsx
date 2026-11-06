@@ -48,7 +48,7 @@ function Rodape() {
         </p>
         <ul className="rodape__links">
           <li><Link to="/como-funciona">Como os dados são coletados e conferidos</Link></li>
-          <li><a href={meta.repo}>Código-fonte aberto</a></li>
+          <li><a href={meta.repo} rel="noopener noreferrer">Código-fonte aberto</a></li>
           <li><a href="./data/dados.json">Baixar os dados (JSON)</a></li>
         </ul>
       </div>

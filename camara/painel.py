@@ -8,6 +8,7 @@ Calibrado em miniaturas 320x180 (nivel L3 do storyboard, 1 quadro a cada 10 s).
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from dataclasses import dataclass, field
@@ -17,6 +18,8 @@ import numpy as np
 from PIL import Image
 
 TW, TH = 320, 180
+MAX_FOLHA_DIM = 4096
+SHA256_ROSTOS_2026 = "d6de47e5cbfdef9edfd605a069b0578acd3c64dfc390c22d3f4c58344463723d"
 # canto superior esquerdo de cada moldura (x, y) e tamanho
 VAGAS = [(6 + 32 * i, 48) for i in range(8)] + [(6 + 32 * i, 87) for i in range(7)]
 BW, BH = 25, 26
@@ -63,7 +66,10 @@ def miniaturas(pasta: Path, intervalo_s: int = 10):
     """Itera (indice, segundo, array RGB 180x320) por todas as folhas L3 de um video."""
     for f in sorted(Path(pasta).glob("L3_M*.jpg")):
         m = int(re.search(r"M(\d+)", f.stem).group(1))
-        im = np.asarray(Image.open(f).convert("RGB")).astype(np.int16)
+        with Image.open(f) as pil_im:
+            if pil_im.width > MAX_FOLHA_DIM or pil_im.height > MAX_FOLHA_DIM:
+                raise ValueError(f"dimensao de folha excede limite seguro ({pil_im.size}): {f.name}")
+            im = np.asarray(pil_im.convert("RGB")).astype(np.int16)
         linhas, colunas = im.shape[0] // TH, im.shape[1] // TW
         for r in range(linhas):
             for c in range(colunas):
@@ -156,10 +162,21 @@ class Rostos:
         )
 
     @classmethod
-    def carregar(cls, caminho: Path):
+    def carregar(cls, caminho: Path, sha256_esperado: str | None = None):
+        caminho = Path(caminho)
+        esperado = sha256_esperado or (SHA256_ROSTOS_2026 if caminho.name == "rostos_2026.npz" else None)
+        if esperado:
+            atual = hashlib.sha256(caminho.read_bytes()).hexdigest()
+            if atual != esperado:
+                raise ValueError(f"Integridade violada em {caminho.name}: SHA-256 {atual} != {esperado}")
         z = np.load(caminho, allow_pickle=False)
+        chaves_arr, mat_arr = z["chaves"], z["mat"]
+        if chaves_arr.dtype.kind not in ("U", "S") or mat_arr.dtype.kind not in ("f", "i"):
+            raise ValueError("Tipos invalidos em arquivo .npz de rostos")
+        if mat_arr.ndim != 2 or len(chaves_arr) != mat_arr.shape[0]:
+            raise ValueError("Dimensoes invalidas em arquivo .npz de rostos")
         obj = cls.__new__(cls)
-        obj.chaves, obj.mat = [str(k) for k in z["chaves"]], z["mat"]
+        obj.chaves, obj.mat = [str(k) for k in chaves_arr], mat_arr
         return obj
 
     def identificar(self, q: Quadro):

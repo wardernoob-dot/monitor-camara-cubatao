@@ -1,4 +1,4 @@
-﻿# monitor-camara-cubatao :: instalacao no PC (rodar uma vez)
+# monitor-camara-cubatao :: instalacao no PC (rodar uma vez)
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -29,7 +29,9 @@ try {
     exit 1
 }
 
-ConvertTo-SecureString $tok -AsPlainText -Force | ConvertFrom-SecureString | Set-Content -Path (Join-Path $Pasta 'token.sec')
+$arqToken = Join-Path $Pasta 'token.sec'
+ConvertTo-SecureString $tok -AsPlainText -Force | ConvertFrom-SecureString | Set-Content -Path $arqToken
+& icacls $arqToken /inheritance:r /grant:r "$($env:USERDOMAIN)\$($env:USERNAME):(R,W)" | Out-Null
 Set-Clipboard -Value ' '
 $tok = $null
 Write-Host 'Token guardado criptografado (so o seu usuario do Windows consegue ler). Area de transferencia limpa.'

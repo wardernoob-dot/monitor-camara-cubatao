@@ -27,9 +27,17 @@ SECOES = {
 USER_AGENT = "monitor-camara-cubatao/0.1 (projeto civico de transparencia; contato no README)"
 INTERVALO_S = 1.5
 MAX_PDF_BYTES = 25 * 1024 * 1024
+MAX_PAGINAS_PDF = 250
 
 _IGNORAR = re.compile(r"/RSS$|/sendto_form|/print|#|mailto:|/login|/search|@@", re.I)
 _ANO = re.compile(r"\b(20\d{2})\b")
+
+
+def _bloquear_redirect_externo(r, *args, **kwargs):
+    if 300 <= getattr(r, "status_code", 200) < 400 and "location" in getattr(r, "headers", {}):
+        destino = urlparse(urljoin(getattr(r, "url", BASE), r.headers["location"]))
+        if destino.scheme not in ("https", "http") or destino.hostname != urlparse(BASE).hostname:
+            raise ValueError(f"Redirecionamento externo bloqueado: {r.headers['location']!r}")
 
 
 @dataclass
@@ -80,6 +88,8 @@ class Coletor:
         self.guardar_pdf = guardar_pdf
         self.http = sessao or requests.Session()
         self.http.headers["User-Agent"] = USER_AGENT
+        if hasattr(self.http, "hooks") and isinstance(self.http.hooks, dict):
+            self.http.hooks.setdefault("response", []).append(_bloquear_redirect_externo)
         self._ultimo = 0.0
         self.indice_path = self.dados / "indice.json"
         self.indice: dict = json.loads(self.indice_path.read_text("utf-8")) if self.indice_path.exists() else {}
@@ -89,6 +99,9 @@ class Coletor:
 
     # ---------- rede ----------
     def _get(self, url: str):
+        p = urlparse(url or "")
+        if p.scheme not in ("https", "http") or p.hostname != urlparse(BASE).hostname:
+            raise ValueError(f"URL fora do dominio da Camara: {url!r}")
         espera = INTERVALO_S - (time.monotonic() - self._ultimo)
         if espera > 0:
             time.sleep(espera)
@@ -96,6 +109,11 @@ class Coletor:
             try:
                 r = self.http.get(url, timeout=60)
                 self._ultimo = time.monotonic()
+                url_final = getattr(r, "url", None)
+                if url_final:
+                    pf = urlparse(url_final)
+                    if pf.scheme not in ("https", "http") or pf.hostname != urlparse(BASE).hostname:
+                        raise ValueError(f"Redirecionamento para fora do dominio: {url_final!r}")
                 if r.status_code == 200:
                     return r
                 if r.status_code in (404, 410):
@@ -147,7 +165,7 @@ class Coletor:
 
         paginas = []
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-            for pg in pdf.pages:
+            for pg in pdf.pages[:MAX_PAGINAS_PDF]:
                 paginas.append(pg.extract_text() or "")
         return "\f".join(paginas), len(paginas)
 
@@ -155,7 +173,11 @@ class Coletor:
         r = self._get(doc["url"])
         if r is None:
             return None
-        if len(r.content) > MAX_PDF_BYTES:
+        try:
+            cl = int(r.headers.get("content-length") or 0)
+        except ValueError:
+            cl = 0
+        if cl > MAX_PDF_BYTES or len(r.content) > MAX_PDF_BYTES:
             return None
         if "pdf" not in r.headers.get("content-type", "") and not r.content[:5] == b"%PDF-":
             return None
