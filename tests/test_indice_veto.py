@@ -83,4 +83,6 @@ def test_coletor_reconhece_pl_vetado_do_ano_anterior(tmp_path):
     c = Coletor(tmp_path)
     c.nums_ano_anterior = {141}
     assert c._projeto_vetado("PL 141.2025.pdf") and c._projeto_vetado("x/PL%20141.2025.pdf")
-    assert not c._projeto_vetado("PL 14.2025.pdf")
+    assert c._projeto_vetado("PL_no_141-2025.pdf") and c._projeto_vetado("PL_141_2025_-_APRENDIZES.pdf")
+    assert c._projeto_vetado("PL_Ndeg_141_2025.pdf")
+    assert not c._projeto_vetado("PL 14.2025.pdf") and not c._projeto_vetado("PL_no_1410-2025.pdf")
