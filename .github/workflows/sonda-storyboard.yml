@@ -10,12 +10,14 @@ on:
         default: "VsOfCH9nd0A"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   sonda:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,7 +25,11 @@ jobs:
           python-version: "3.12"
       - run: pip install requests
       - name: Baixar storyboards
-        run: python scripts/sonda_storyboard.py ${{ github.event.inputs.extras }}
+        env:
+          EXTRAS: ${{ github.event.inputs.extras }}
+        run: |
+          read -r -a IDS <<< "$EXTRAS"
+          python scripts/sonda_storyboard.py "${IDS[@]}"
       - name: Salvar no branch amostras
         run: |
           git config user.name  "monitor-camara-bot"

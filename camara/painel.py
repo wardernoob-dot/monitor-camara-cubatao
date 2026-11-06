@@ -149,13 +149,17 @@ class Rostos:
         return cls(dict(zip(layout, q.fotos)))
 
     def salvar(self, caminho: Path):
-        np.savez_compressed(caminho, chaves=np.array(self.chaves), mat=self.mat)
+        np.savez_compressed(
+            caminho,
+            chaves=np.asarray(self.chaves, dtype="U80"),
+            mat=np.asarray(self.mat, dtype=np.float32),
+        )
 
     @classmethod
     def carregar(cls, caminho: Path):
-        z = np.load(caminho)
+        z = np.load(caminho, allow_pickle=False)
         obj = cls.__new__(cls)
-        obj.chaves, obj.mat = list(z["chaves"]), z["mat"]
+        obj.chaves, obj.mat = [str(k) for k in z["chaves"]], z["mat"]
         return obj
 
     def identificar(self, q: Quadro):

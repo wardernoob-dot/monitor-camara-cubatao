@@ -11,7 +11,7 @@ on:
         default: "2026"
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: coleta
@@ -21,6 +21,8 @@ jobs:
   coletar:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -37,18 +39,25 @@ jobs:
       - name: Coletar e processar
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m camara tudo --desde "${{ github.event.inputs.desde || '2026' }}"
+          DESDE: ${{ github.event.inputs.desde || '2026' }}
+        run: |
+          if [[ ! "$DESDE" =~ ^[0-9]{4}$ ]]; then
+            echo "Ano inicial invalido: $DESDE"
+            exit 1
+          fi
+          python -m camara tudo --desde "$DESDE"
 
       - name: Commit dos dados novos
         run: |
           git config user.name  "monitor-camara-bot"
           git config user.email "monitor-camara-bot@users.noreply.github.com"
           git add data/
-          if git diff --cached --quiet; then
-            echo "Nada novo hoje."
-          else
+          if ! git diff --cached --quiet; then
+            git add docs/data/
             git commit -m "dados: coleta $(date -u +%Y-%m-%d)"
             git push
+          else
+            echo "Nada novo hoje."
           fi
 
       # Espelho do site em votoavoto.surge.sh. Publica o docs/ recem-gerado nesta rodada.

@@ -104,12 +104,8 @@ def test_sentido_do_parecer_acompanha_o_rotulo(dados):
             assert v["sentido"] == esperado, f"{_rotulo(v)}: '{v['etapa_txt']}' -> {v['sentido']}"
 
 
-@pytest.mark.xfail(strict=True, reason=(
-    "Aberto, aguardando decisao do dono do projeto: etapas sem votacao (projeto voltou as comissoes, "
-    "retirado de pauta) saem com sim=0 e nao=0 e a tela mostra 'Sem resultado registrado 0 a 0', "
-    "como se fosse uma votacao com zero votos. Com sim/nao = None o front nao mostra placar. "
-    "Quando for corrigido este teste passa e o xfail estrito avisa para remover a marca."))
 def test_etapa_sem_votacao_nao_tem_placar_zero(dados):
+    """Etapas sem votacao nominal nem placar (ex.: retirado de pauta, voltou as comissoes) saem com sim/nao = None."""
     for v in dados["votacoes"]:
         if not v["votos"] and not v["resultado"]:
             assert v["sim"] is None and v["nao"] is None, _rotulo(v)

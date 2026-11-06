@@ -40,10 +40,23 @@ jobs:
       issues: write
       id-token: write
     steps:
+      - name: Verificar ANTHROPIC_API_KEY
+        id: chave
+        env:
+          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "ANTHROPIC_API_KEY ausente; pulando."
+            echo "ativa=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ativa=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.chave.outputs.ativa == 'true'
         with:
-          fetch-depth: 1
+          fetch-depth: 0
       - uses: anthropics/claude-code-action@v1
+        if: steps.chave.outputs.ativa == 'true'
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
@@ -60,10 +73,31 @@ jobs:
       issues: read
       id-token: write
     steps:
+      - name: Verificar ANTHROPIC_API_KEY
+        id: chave
+        env:
+          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "ANTHROPIC_API_KEY ausente; pulando."
+            echo "ativa=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ativa=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.chave.outputs.ativa == 'true'
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        if: steps.chave.outputs.ativa == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Instalar dependencias Python
+        if: steps.chave.outputs.ativa == 'true'
+        run: pip install -r requirements.txt
       - uses: anthropics/claude-code-action@v1
+        if: steps.chave.outputs.ativa == 'true'
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |

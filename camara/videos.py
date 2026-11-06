@@ -23,6 +23,7 @@ from .nomes import chave as chave_nome
 
 RE_DATA_TITULO = re.compile(r"DIA\s+(\d{1,2})\s+DE\s+([A-ZÇa-zç]+)\s+DE\s+(\d{4})", re.I)
 RE_NUM = re.compile(r"(\d+)\s*[ªa]\s*SESS[ÃA]O\s+(ORDIN|EXTRAORDIN)", re.I)
+RE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 
 
 def sessao_do_titulo(titulo: str) -> dict:
@@ -42,6 +43,8 @@ def _hms(seg: int) -> str:
 
 
 def ler_video(vid: str, meta: dict, pasta_folhas: Path, rostos: P.Rostos, dados: Path) -> dict:
+    if not RE_VIDEO_ID.match(vid or ""):
+        raise ValueError(f"video_id invalido: {vid!r}")
     img_dir = dados / "painel" / "img"
     img_dir.mkdir(parents=True, exist_ok=True)
     evs = P.eventos(pasta_folhas)
@@ -80,11 +83,15 @@ def processar_videos(dados: Path, http=None) -> dict:
         return {"processados": 0, "erros": []}
     specs = json.loads(arq.read_text("utf-8"))
     rostos = P.Rostos.carregar(dados / "rostos_2026.npz")
-    (dados / "painel").mkdir(exist_ok=True)
+    painel_dir = (dados / "painel").resolve()
+    painel_dir.mkdir(exist_ok=True)
     rel = {"processados": 0, "erros": []}
     for vid, meta in specs.items():
-        saida = dados / "painel" / f"{vid}.json"
-        if saida.exists():
+        if not RE_VIDEO_ID.match(vid or ""):
+            rel["erros"].append(f"video_id invalido: {vid!r}"[:200])
+            continue
+        saida = (painel_dir / f"{vid}.json").resolve()
+        if not saida.is_relative_to(painel_dir) or saida.exists():
             continue
         try:
             urls, _ = yt.urls_do_spec(meta["spec"])
