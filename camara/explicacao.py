@@ -41,7 +41,8 @@ def _gemini(prompt: str, http) -> tuple[str, str]:
              "generationConfig": {"temperature": 0.2, "response_mime_type": "application/json"}}
     erros = []
     for modelo in _modelos_gemini(chave, http)[:5]:
-        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", params={"key": chave}, json=corpo, timeout=180)
+        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", headers={"x-goog-api-key": chave},
+                      json=corpo, timeout=180)
         if r.status_code != 200:
             erros.append(f"{modelo}: HTTP {r.status_code}")
             continue
