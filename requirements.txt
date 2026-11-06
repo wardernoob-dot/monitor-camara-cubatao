@@ -5,4 +5,4 @@ numpy>=1.26
 pillow>=10
 scipy>=1.11
 pytest>=8
-reportlab>=4  # so pros testes (gera PDF falso)
+reportlab>=5.1.0  # so pros testes (gera PDF falso)
