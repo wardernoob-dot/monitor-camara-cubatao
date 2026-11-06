@@ -82,8 +82,8 @@ export default function Ranking() {
     <div className="pagina">
       <h1 className="titulo-pagina">Ranking</h1>
       <p className="lead">
-        Os vereadores em exercício ordenados pelo Índice de Atuação, de 0 a 10. Troque o critério para ver quem lidera em cada pilar.
-        Média da Câmara: <strong>{fmt(media)}</strong>.
+        Vereadores em exercício ordenados pelo Índice de Atuação, <span className="sem-quebra">de 0 a 10.</span>
+        <br />Média da Câmara: <strong>{fmt(media)}</strong>.
       </p>
 
       <div className="filtros filtros--ordem" role="group" aria-label="Ordenar por">
