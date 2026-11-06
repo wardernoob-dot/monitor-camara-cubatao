@@ -150,7 +150,16 @@ class Coletor:
             if "pdf" in r.headers.get("content-type", ""):
                 docs.append({"url": url, "titulo": titulo_pasta or url.rsplit("/", 1)[-1], "secao": secao})
                 continue
-            for ln in extrair_links(r.text, url, prefixo):
+            links = extrair_links(r.text, url, prefixo)
+            if so_vetos:
+                pul = [ln for ln in links if not _EH_VETO.search(f"{ln.titulo} {ln.url}")
+                       and not self._projeto_vetado(f"{ln.titulo} {ln.url}")]
+                print(f"  pasta do ano anterior {url.rsplit('/', 1)[-1]}: {len(links)} links, {len(pul)} ignorados; "
+                      f"ex.: {[(x.titulo[:40], x.url.rsplit('/', 1)[-1]) for x in pul[:6]]}")
+            for ln in links:
+                if "b_start" in ln.url:  # paginacao do Plone: segue sempre, com o mesmo filtro da pasta
+                    fila.append((ln.url, prof, titulo_pasta, so_vetos))
+                    continue
                 ano = _ANO.search(ln.titulo)
                 vetos_ln = so_vetos
                 # filtro de ano so nas pastas de ano (primeiro nivel). Excecao: na pasta de projetos do ano
