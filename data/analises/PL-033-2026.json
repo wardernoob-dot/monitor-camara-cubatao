@@ -1,0 +1,44 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "33",
+  "ano": "2026",
+  "autoria": "ALEXANDRE MENDES DA SILVA",
+  "ementa": "DISPÕE SOBRE A INCLUSÃO DA CONFERÊNCIA PINK NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%20No%2033.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto inclui a Conferência Pink no Calendário Oficial de Eventos do Município de Cubatão. O evento passa a ser realizado anualmente na última segunda-feira de março.",
+  "o_que_muda": [
+   "A Conferência Pink entra no Calendário Oficial de Eventos de Cubatão.",
+   "O evento passa a ter data fixa anual na última segunda-feira de março."
+  ],
+  "quem_e_afetado": "A população do município, em especial as mulheres que participam do evento organizado pela Igreja Assembleia de Deus Ministério Plenitude do Espírito.",
+  "justificativa_do_autor": "Segundo o autor, a iniciativa visa reconhecer um evento de relevante interesse público e social realizado desde 2017 que promove a saúde, dignidade e acolhimento das mulheres, além de realizar campanhas solidárias para ONGs.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O documento não informa se haverá uso de recursos públicos para o evento ou quais órgãos serão responsáveis pela sua organização.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não menciona custos, origem dos recursos financeiros ou impacto orçamentário para a realização do evento.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não cita prazos específicos além da data anual de realização.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O projeto prevê que a lei entra em vigor na data de sua publicação.",
+    "trecho": "Art. 2º Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "37d1387eb62f498a",
+ "gerado_em": "2026-11-06T18:37:41Z"
+}

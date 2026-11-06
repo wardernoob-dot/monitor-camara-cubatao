@@ -170,9 +170,9 @@
   "texto": "Cria o programa Cubatão Conectada para oferecer internet sem fio (Wi-Fi) gratuita em locais públicos, com apoio de empresas."
  },
  "pl-166-2025": {
-  "hash": "0e36775b1da3",
+  "hash": "d25c6c818f61",
   "modelo": "gemini-3.5-flash-lite",
-  "texto": "Determina a instalação de equipamentos eliminadores de ar na tubulação individual do sistema de abastecimento de água em Cubatão."
+  "texto": "Determina a instalação de aparelhos que eliminam o ar nos canos do sistema de fornecimento de água em Cubatão."
  },
  "pl-172-2025": {
   "hash": "40726d684c3b",
@@ -278,6 +278,11 @@
   "hash": "a9f185a43236",
   "modelo": "gemini-3.1-flash-lite",
   "texto": "A descrição oficial está incompleta."
+ },
+ "pl-36-2025": {
+  "hash": "b5cf4bd52b1f",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Garante o direito à amamentação nas escolas infantis de Cubatão, oferecendo condições adequadas para a mãe e o bebê no local."
  },
  "pl-36-2026": {
   "hash": "f8053e7e6114",
