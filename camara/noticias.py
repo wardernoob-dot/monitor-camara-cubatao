@@ -45,6 +45,23 @@ RE_VOTO_1 = re.compile(r"Votaram\s+(a favor|contra)(\s+d[oa]\s+[^.]{0,60}?)?\s+(
 RE_VOTO_2 = re.compile(r"(?:J[áa]\s+)?([A-ZÁÉÍÓÚÂÊÔÃÕÇ][^.]{3,400}?)\s+votaram\s+(a favor|contra)(\s+d[oa]\s+[^.]{0,60}?)?\s*\.", re.I)
 
 
+def _slug_seguro(url: str) -> str:
+    """Extrai o slug final da URL permitindo apenas [a-z0-9_-] para impedir Path Traversal."""
+    bruto = (url or "").rstrip("/").rsplit("/", 1)[-1]
+    limpo = re.sub(r"[^a-zA-Z0-9_-]+", "-", bruto).strip("-_").lower()[:120]
+    if not limpo:
+        raise ValueError(f"slug invalido para URL: {url!r}")
+    return limpo
+
+
+def _caminho_seguro(pasta: Path, nome_arquivo: str) -> Path:
+    base = pasta.resolve()
+    alvo = (base / nome_arquivo).resolve()
+    if not alvo.is_relative_to(base):
+        raise ValueError(f"caminho fora de {base}: {alvo}")
+    return alvo
+
+
 def _nomes(lista: str, apel: dict[str, str]) -> tuple[list[str], list[str]]:
     lista = re.sub(r"\([^)]*\)", "", lista)
     partes = [p.strip() for p in re.split(r",|\s+e\s+", lista) if p.strip()]
@@ -168,8 +185,12 @@ def coletar(dados: Path, http=None, apel: dict | None = None) -> dict:
         rel["erros"].append(f"RSS: {e!r}"[:200])
         itens = []
     for it in itens:
-        slug = it["url"].rstrip("/").rsplit("/", 1)[-1]
-        arq = pasta / f"{slug}.json"
+        try:
+            slug = _slug_seguro(it["url"])
+            arq = _caminho_seguro(pasta, f"{slug}.json")
+        except ValueError as e:
+            rel["erros"].append(f"slug: {e!r}"[:200])
+            continue
         if arq.exists():
             continue
         try:

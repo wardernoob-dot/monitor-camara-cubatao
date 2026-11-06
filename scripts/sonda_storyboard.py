@@ -13,9 +13,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from camara import youtube as yt  # noqa: E402
 
-DEST = Path(__file__).resolve().parent.parent / "data" / "storyboard"
+RE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+DEST = (Path(__file__).resolve().parent.parent / "data" / "storyboard").resolve()
 DEST.mkdir(parents=True, exist_ok=True)
-extras = sys.argv[1:]
+extras = [x for x in sys.argv[1:] if RE_VIDEO_ID.match(x)]
 http = yt._http()
 rel = {"rss": None, "lista_canal": None, "videos": []}
 
@@ -66,7 +67,11 @@ def via_ytdlp(vid):
 
 
 def baixar_urls(vid, urls):
-    d = DEST / vid
+    if not RE_VIDEO_ID.match(vid or ""):
+        raise ValueError(f"video_id invalido: {vid!r}")
+    d = (DEST / vid).resolve()
+    if not d.is_relative_to(DEST):
+        raise ValueError(f"caminho invalido: {d}")
     d.mkdir(parents=True, exist_ok=True)
     tot = 0
     for i, u in enumerate(urls):
@@ -175,7 +180,7 @@ alvos = [(k, v["nome"]) for k, v in SPECS_PC.items()] + alvos
 alvos += [(x, "extra") for x in extras]
 vistos, fila = set(), []
 for i, t in alvos:
-    if i not in vistos:
+    if RE_VIDEO_ID.match(i or "") and i not in vistos:
         vistos.add(i)
         fila.append((i, t))
 print("RSS:", rel["rss"], "| canal:", "ok" if isinstance(rel["lista_canal"], list) else rel["lista_canal"])

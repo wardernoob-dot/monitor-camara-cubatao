@@ -51,6 +51,14 @@ def slug(t: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
 
 
+def url_segura(u: str | None) -> str | None:
+    """Garante que URLs exportadas para o front usam apenas http(s), evitando XSS via javascript:/data:."""
+    if not u or not isinstance(u, str):
+        return None
+    u = u.strip()
+    return u if u.startswith(("https://", "http://")) else None
+
+
 def data_extenso(iso: str) -> str:
     d = date.fromisoformat(iso)
     return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
@@ -516,7 +524,8 @@ def _ev_json(ev: dict, vslug: dict) -> dict:
     return {
         "id": ev["id"], "data": ev["data"], "materia": ev["materia"]["slug"], "etapa": ev["etapa"],
         "etapa_txt": ev["etapa_txt"], "resultado": ev["resultado"] or None, "sim": ev["sim"], "nao": ev["nao"],
-        "fonte": ev["fonte"], "link": ev["link"], "resumo_url": ev["resumo_url"], "detalhe": ev["detalhe"],
+        "fonte": ev["fonte"], "link": url_segura(ev["link"]), "resumo_url": url_segura(ev["resumo_url"]),
+        "detalhe": ev["detalhe"],
         "votos": {vslug[k]: v for k, v in ev["votos"].items() if k in vslug},
         "sentido": ev.get("sentido"),
     }
@@ -632,12 +641,15 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                 "fonte": an["documento"]["fonte"].split(" (")[0], **{k: an["analise"][k] for k in (
                     "resumo", "o_que_muda", "quem_e_afetado", "justificativa_do_autor", "pontos_de_atencao", "limitacoes")},
             }, ensure_ascii=False), "utf-8")
+        lei_obj = {**m["lei"], "url": url_segura(m["lei"].get("url"))} if m["lei"] else None
+        veto_obj = ({**m["veto"], "url": url_segura(m["veto"].get("url"))}
+                    if m["veto"] and "url" in m["veto"] else m["veto"])
         materias.append({
             "slug": m["slug"], "titulo": m["titulo"], "tipo": m["tipo"], "tipo_nome": NOME_TIPO.get(m["tipo"], m["tipo"]),
             "numero": m["numero"], "ano": m["ano"], "assunto": m["assunto_txt"], "autoria": m["autoria"],
             "autores": [vslug[k] for k in m["autores"] if k in vslug], "situacao": m["situacao"],
-            "situacao_cls": m["situacao_cls"], "pautas": m["pautas"], "documento": m["documento"], "lei": m["lei"],
-            "veto": m["veto"], "ultima_data": m["ultima_data"], "eventos": [e["id"] for e in m["eventos"]],
+            "situacao_cls": m["situacao_cls"], "pautas": m["pautas"], "documento": url_segura(m["documento"]),
+            "lei": lei_obj, "veto": veto_obj, "ultima_data": m["ultima_data"], "eventos": [e["id"] for e in m["eventos"]],
             "divergencias": [{"etapa": d["etapa"], "data": d["data"], "vereador": vslug.get(d["vereador"]),
                               "vereador_txt": d["vereador_txt"], "painel": d["painel"], "resumo": d["resumo"]}
                              for d in m["divergencias"]],
@@ -646,7 +658,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
         })
     dias = [{"data": d["data"], "sessoes": d["sessoes"], "status": d["status"],
              "materias": [m["slug"] for m in d["materias"] if m["slug"] in paginas],
-             "noticias": [{"titulo": n["titulo"], "url": n["url"]} for n in d["noticias"]]} for d in b.dias]
+             "noticias": [{"titulo": n["titulo"], "url": url_segura(n["url"]) or ""} for n in d["noticias"] if url_segura(n["url"])]} for d in b.dias]
     pacote = {
         "meta": {"atualizado": datetime.now(timezone.utc).isoformat(timespec="minutes"), "nome_site": NOME_SITE,
                  "cidade": CIDADE, "repo": REPO},

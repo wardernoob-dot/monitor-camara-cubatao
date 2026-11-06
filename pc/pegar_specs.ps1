@@ -1,4 +1,4 @@
-﻿# monitor-camara-cubatao :: roda no PC (IP residencial)
+# monitor-camara-cubatao :: roda no PC (IP residencial)
 # Pega o "spec" do storyboard das sessoes novas no canal da TV Camara,
 # manda pro repositorio e dispara o processamento no GitHub Actions.
 # Nao baixa video. Faz 1 requisicao por sessao nova.
@@ -28,7 +28,7 @@ try {
 
     # 1) sessoes no feed do canal
     [xml]$rss = Texto "https://www.youtube.com/feeds/videos.xml?channel_id=$Canal" $yt
-    $sessoes = @($rss.feed.entry | Where-Object { $_.title -match '\d+\S{0,2}\s*SESS\S{1,2}O\s+(ORDIN|EXTRAORDIN)' -and $_.title -match 'DIA\s+\d' } |
+    $sessoes = @($rss.feed.entry | Where-Object { $_.videoId -match '^[A-Za-z0-9_-]{11}$' -and $_.title -match '\d+\S{0,2}\s*SESS\S{1,2}O\s+(ORDIN|EXTRAORDIN)' -and $_.title -match 'DIA\s+\d' } |
         ForEach-Object { [pscustomobject]@{ id = $_.videoId; titulo = $_.title } })
     Log "feed: $($sessoes.Count) sessao(oes) entre os ultimos videos"
 
@@ -46,6 +46,7 @@ try {
     # 3) spec das sessoes ainda nao lidas (renova sempre: a assinatura pode expirar)
     $novos = 0
     foreach ($s in $sessoes) {
+        if ($s.id -notmatch '^[A-Za-z0-9_-]{11}$') { continue }
         if ($prontos.ContainsKey($s.id)) { continue }
         $html = Texto "https://www.youtube.com/watch?v=$($s.id)" $yt
         $m = [regex]::Match($html, '"playerStoryboardSpecRenderer":\{"spec":"([^"]+)"')

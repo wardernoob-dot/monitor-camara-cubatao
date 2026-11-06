@@ -1,6 +1,11 @@
 import json
 from pathlib import Path
 
+import numpy as np
+import pytest
+
+from camara import noticias as N
+from camara import painel as P
 from camara import site as S
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -47,7 +52,7 @@ def test_tema_e_relevancia():
     m["tema"] = S.tema(m)
     assert m["tema"] == "Orçamento, impostos e finanças"
     assert S.relevancia(m)["nivel"] == "alta"
-    h = _m(assunto="DENOMINA RUA JOSÉ DA SILVA O LOGRADOURO PÚBLICO")
+    h = _m(assunto="DENOMINA RUA JOSÉ DA SILVA O LOGRADOUICO")
     h["tema"] = S.tema(h)
     assert h["tema"].startswith("Homenagens") and S.relevancia(h)["nivel"] == "baixa"
     ev = {"etapa": "2a_discussao", "etapa_txt": "2ª discussão", "sim": 8, "nao": 6, "resultado": "APROVADO"}
@@ -62,3 +67,16 @@ def test_sentido_do_voto():
     assert S.sentido({**base, "etapa": "parecer", "etapa_txt": "Parecer favorável"}) == "direto"
     assert S.sentido({**base, "etapa": "emenda", "etapa_txt": "Emenda"}) == "emenda"
     assert S.sentido({**base, "etapa": "1a_discussao", "etapa_txt": "1ª discussão"}) == "direto"
+
+
+def test_hardening_url_slug_e_npz(tmp_path):
+    assert S.url_segura("https://www.cubatao.sp.leg.br/doc.pdf") == "https://www.cubatao.sp.leg.br/doc.pdf"
+    assert S.url_segura("javascript:alert(1)") is None
+    assert S.url_segura("data:text/html,<script>alert(1)</script>") is None
+    assert N._slug_seguro("https://www.cubatao.sp.leg.br/noticias/sessao-de-hoje/") == "sessao-de-hoje"
+    with pytest.raises(ValueError):
+        N._caminho_seguro(tmp_path, "../fora.json")
+    malicioso = tmp_path / "pickle.npz"
+    np.savez(malicioso, chaves=np.array([{"cmd": "evil"}], dtype=object), mat=np.zeros((1, 4)))
+    with pytest.raises(ValueError):
+        P.Rostos.carregar(malicioso)
