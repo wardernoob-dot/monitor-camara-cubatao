@@ -90,7 +90,7 @@ export function calcular(b: Base): Painel {
       { rotulo: "Apresentados", valor: projetos.length },
       { rotulo: "Foram à pauta", valor: projetos.filter((m) => m.pautas.length || m.eventos.length).length },
       { rotulo: "Aprovados pela Câmara", valor: projetos.filter((m) => APROVADO.has(m.situacao_cls)).length },
-      { rotulo: "Viraram lei (Diário Oficial, últimos 45 dias coletados)", valor: projetos.filter((m) => m.lei).length },
+      { rotulo: "Viraram lei (publicadas no Diário Oficial)", valor: projetos.filter((m) => m.lei).length },
     ],
     vetos,
     autoria,

@@ -84,9 +84,9 @@ main:focus { outline: none; }
 section > p, section > ul.lista-simples { max-width: var(--larg-texto); }
 
 /* ---------------------------------------------------------------- hero */
-.hero { position: relative; min-height: min(88vh, 54rem); display: grid; align-items: center; overflow: hidden; border-bottom: 1px solid var(--color-linha); }
+.hero { position: relative; min-height: min(66vh, 42rem); display: grid; align-items: center; overflow: hidden; border-bottom: 1px solid var(--color-linha); }
 .hero__fundo, .hero__grade { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero__dentro { position: relative; max-width: var(--larg-pagina); width: 100%; margin: 0 auto; padding: 5rem 1.25rem; text-align: center; }
+.hero__dentro { position: relative; max-width: var(--larg-pagina); width: 100%; margin: 0 auto; padding: 4rem 1.25rem 6.5rem; text-align: center; }
 .hero__titulo { font-size: clamp(2.75rem, 8vw, 5.5rem); font-weight: 500; letter-spacing: -0.06em; line-height: .98; margin: 0 auto 1.5rem; }
 .hero__linha { display: block; overflow: hidden; padding-bottom: .06em; }
 .hero__linha > span { display: inline-block; }
@@ -479,4 +479,44 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
   .vereadores__item .avatar--retrato { grid-row: span 3; width: 72px; height: 72px; aspect-ratio: 1; margin-bottom: 0; font-size: 1.4rem; }
   .vereadores__item .vereadores__civil, .vereadores__item .vereadores__nums { grid-column: 2; }
   .vereadores__item .indice-mini { grid-column: 1 / -1; }
+}
+
+/* ---------- painel interativo da pagina inicial */
+.painel-secao { margin-top: -4.5rem; position: relative; z-index: 2; }
+.painel__trilho { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; padding: 6px; background: color-mix(in srgb, var(--color-surface-1) 82%, transparent); backdrop-filter: blur(10px); border: 1px solid var(--color-linha); border-radius: 20px; box-shadow: 0 12px 40px -18px rgba(0,0,0,.18); scrollbar-width: none; }
+.painel__trilho::-webkit-scrollbar { display: none; }
+.painel__aba { all: unset; box-sizing: border-box; position: relative; display: flex; flex-direction: column; gap: .2rem; padding: .9rem 1rem; border-radius: 14px; cursor: pointer; min-width: 0; transition: background .2s var(--ease); }
+.painel__aba:hover:not(.painel__aba--ativa) { background: #f3f3f3; }
+.painel__aba:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.painel__realce { position: absolute; inset: 0; border-radius: 14px; background: var(--color-ink); z-index: 0; }
+.painel__num, .painel__rotulo { position: relative; z-index: 1; transition: color .25s var(--ease); }
+.painel__num { font-family: var(--font-display); font-size: clamp(1.6rem, 2.6vw, 2.3rem); font-weight: 500; letter-spacing: -0.05em; line-height: 1; }
+.painel__rotulo { font-size: .8rem; line-height: 1.25; color: var(--color-surface-3); }
+.painel__aba--ativa .painel__num { color: #fff; }
+.painel__aba--ativa .painel__rotulo { color: #c9c9c9; }
+.painel__pontos { display: none; }
+.painel__palco { margin-top: 12px; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 20px; overflow: hidden; position: relative; }
+.painel__conteudo { padding: 1.5rem 1.6rem 1.75rem; touch-action: pan-y; }
+.painel__cabeca { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.painel__contagem { margin: 0 0 .35rem; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-surface-3); font-family: var(--font-mono); }
+.painel__titulo { font-size: clamp(1.5rem, 2.8vw, 2rem); letter-spacing: -0.04em; }
+.painel__descricao { margin: .5rem 0 0; color: var(--color-secondary); max-width: 46rem; font-size: .95rem; }
+.painel__setas { display: flex; gap: 6px; flex: none; }
+.painel__setas button { all: unset; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--color-linha); cursor: pointer; color: var(--color-ink); transition: background .2s, border-color .2s; }
+.painel__setas button:hover { background: #f3f3f3; border-color: var(--color-surface-2); }
+.painel__setas button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.painel__conteudo .tile-solto { max-width: none; }
+.painel__conteudo .mx-secao { margin: 0; }
+@media (max-width: 900px) {
+  .painel__trilho { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .painel__aba { flex: 0 0 9.5rem; scroll-snap-align: center; }
+}
+@media (max-width: 640px) {
+  .painel-secao { margin-top: -2rem; }
+  .painel__aba { flex-basis: 8.4rem; padding: .75rem .85rem; }
+  .painel__conteudo { padding: 1.1rem 1rem 1.4rem; }
+  .painel__setas { display: none; }
+  .painel__pontos { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+  .painel__pontos span { width: 6px; height: 6px; border-radius: 3px; background: var(--color-surface-2); transition: width .3s var(--ease), background .3s; }
+  .painel__pontos span.ativo { width: 18px; background: var(--color-ink); }
 }
