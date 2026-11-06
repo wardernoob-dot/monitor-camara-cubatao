@@ -3,6 +3,9 @@ name: sonda-painel-antigo
 # Manual e so no branch sondagem-2025: testa se o painel aparece nas transmissoes antigas.
 on:
   workflow_dispatch:
+  push:
+    branches: [sondagem-2025]
+    paths: ["sonda/specs.json", "scripts/sonda_painel_antigo.py", ".github/workflows/sonda-painel-antigo.yml"]
 
 permissions:
   contents: read
