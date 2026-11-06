@@ -430,5 +430,4 @@ npm run build    # compila para ../docs/ (atualiza o bundle estático do site)
 
 1. **Fonte oficial sempre à vista:** Todo voto e todo projeto exibem o link direto para o PDF oficial da Câmara ou para o segundo exato do vídeo da sessão no YouTube.
 2. **A IA nunca é fonte de fato:** Votos são lidos por cor de pixel no painel ou extraídos do texto oficial do resumo. Análises textuais usam apenas o documento oficial, com prompt aberto e verificação automática de citações literais.
-3. **Sem juízo de valor nem ranking de vereador:** O projeto não atribui nota, selo de "bom/ruim" nem ranking a parlamentares. O papel da ferramenta é tornar o dado público acessível, legível e auditável por qualquer cidadão.
-4. **Trilha de auditoria imutável:** O histórico do Git + os hashes `SHA-256` em `data/indice.json` permitem comprovar exatamente quando cada documento foi publicado pela Câmara e se sofreu alteração posterior.
+3. **Trilha de auditoria imutável:** O histórico do Git + os hashes `SHA-256` em `data/indice.json` permitem comprovar exatamente quando cada documento foi publicado pela Câmara e se sofreu alteração posterior.
