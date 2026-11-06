@@ -1,6 +1,7 @@
 """Uso:
     python -m camara coletar   [--desde 2026] [--secoes resumo,pauta,projetos] [--guardar-pdf]
     python -m camara processar
+    python -m camara ocr-resumos   (manual: transcreve resumos escaneados; conferir o .ocr.txt antes de commitar)
     python -m camara tudo      [--desde 2026]
 """
 import argparse
@@ -11,12 +12,25 @@ DADOS = Path(__file__).resolve().parent.parent / "data"
 
 def main():
     ap = argparse.ArgumentParser(prog="camara")
-    ap.add_argument("comando", choices=["coletar", "processar", "tudo"])
+    ap.add_argument("comando", choices=["coletar", "processar", "tudo", "ocr-resumos"])
     ap.add_argument("--desde", type=int, default=2026)
     ap.add_argument("--secoes", default="resumo,pauta,projetos")
     ap.add_argument("--guardar-pdf", action="store_true")
     ap.add_argument("--dados", type=Path, default=DADOS)
     a = ap.parse_args()
+
+    if a.comando == "ocr-resumos":
+        from .analise import transcrever_resumos
+
+        r = transcrever_resumos(a.dados)
+        print("transcritos:", *r["transcritos"], sep="
+  ")
+        print("ja existiam:", *r["ja_existiam"], sep="
+  ")
+        print("falhas:", *r["falhas"], sep="
+  ")
+        print("Confira cada data/texto/<sha>.ocr.txt contra o PDF antes de commitar.")
+        return
 
     if a.comando in ("coletar", "tudo"):
         from .coletor import Coletor
@@ -30,6 +44,9 @@ def main():
 
         rel = processar(a.dados)
         print(f"{rel['sessoes']} sessoes | {rel['itens']} itens | {rel['votos']} votos individuais")
+        if rel["via_ocr"]:
+            print("lidos de transcricao OCR conferida:", *rel["via_ocr"], sep="
+  ")
         if rel["precisa_ocr"]:
             print("precisam de OCR:", *rel["precisa_ocr"], sep="\n  ")
         if rel["avisos"]:

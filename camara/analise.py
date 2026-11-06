@@ -67,10 +67,15 @@ def documento(dados: Path, tipo: str, numero: str, ano: str | None, ementa: str 
 
 PROMPT_OCR = ("Transcreva literalmente todo o texto deste documento oficial, na ordem, sem resumir, "
               "sem corrigir e sem comentar. Ignore carimbos e assinaturas. Responda so com o texto.")
+# Resumo de sessao: o parser le a lista de presenca como uma linha "NOME STATUS" por vereador.
+# Tabela com barras ou nome e status em linhas separadas fazem o parser nao achar a lista.
+PROMPT_OCR_RESUMO = (PROMPT_OCR + " Na lista de presenca dos vereadores, escreva uma linha por vereador no formato "
+                     "NOME STATUS (por exemplo: EDSON MENEZES MOTA SIM, ou JAIR FERREIRA LUCAS JUSTIFICADA), sem tabela, "
+                     "sem barras verticais e sem cabecalho de coluna.")
 MAX_PDF = 15 * 1024 * 1024
 
 
-def transcrever_pdf(dados: Path, url: str, sha: str, http=None) -> bool:
+def transcrever_pdf(dados: Path, url: str, sha: str, http=None, prompt: str = PROMPT_OCR) -> bool:
     """PDF escaneado -> data/texto/<sha>.ocr.txt via Gemini (uma vez por documento)."""
     import base64
 
@@ -100,7 +105,7 @@ def transcrever_pdf(dados: Path, url: str, sha: str, http=None) -> bool:
     if len(pdf.content) > MAX_PDF:
         return False
     chave = os.environ["GEMINI_API_KEY"]
-    corpo = {"contents": [{"parts": [{"text": PROMPT_OCR},
+    corpo = {"contents": [{"parts": [{"text": prompt},
                                      {"inline_data": {"mime_type": "application/pdf",
                                                       "data": base64.b64encode(pdf.content).decode()}}]}],
              "generationConfig": {"temperature": 0}}
@@ -116,6 +121,27 @@ def transcrever_pdf(dados: Path, url: str, sha: str, http=None) -> bool:
                 destino.write_text(t, "utf-8")
                 return True
     return False
+
+
+def transcrever_resumos(dados: Path, http=None) -> dict:
+    """Resumos de sessao escaneados -> data/texto/<sha>.ocr.txt. Comando manual (python -m camara ocr-resumos).
+
+    O resultado NAO entra no site sozinho: uma pessoa confere o .ocr.txt contra o PDF e so entao commita.
+    """
+    dados = Path(dados)
+    indice = json.loads((dados / "indice.json").read_text("utf-8"))
+    rel = {"transcritos": [], "ja_existiam": [], "falhas": []}
+    for m in indice.values():
+        if m["secao"] != "resumo" or not m.get("precisa_ocr"):
+            continue
+        existia = (dados / "texto" / f"{m['sha256']}.ocr.txt").exists()
+        try:
+            ok = transcrever_pdf(dados, m["url"], m["sha256"], http, prompt=PROMPT_OCR_RESUMO)
+        except Exception as e:  # noqa: BLE001
+            rel["falhas"].append(f"{m['titulo']}: {e!r}"[:200])
+            continue
+        (rel["ja_existiam"] if existia else rel["transcritos"] if ok else rel["falhas"]).append(m["titulo"])
+    return rel
 
 
 def _pdf_da_materia(dados: Path, tipo: str, numero: str, ano: str | None) -> dict | None:
@@ -296,6 +322,8 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
 
 
 def carregar(dados: Path, tipo: str, numero: str, ano: str | None) -> dict | None:
+    if tipo not in TIPOS_ANALISADOS:  # ex.: RQ (requerimento) nao tem analise; chave_materia segue recusando tipo estranho
+        return None
     pasta = (Path(dados) / "analises").resolve()
     p = (pasta / f"{chave_materia(tipo, numero, ano)}.json").resolve()
     if not p.is_relative_to(pasta):

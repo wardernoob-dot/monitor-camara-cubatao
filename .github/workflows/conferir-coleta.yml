@@ -1,0 +1,54 @@
+name: conferir-coleta
+
+# Todo dia 21:30 UTC (18:30 em Brasilia): roda o resumo.py e abre issue so se houver pendencia.
+# Sem IA e sem secret extra. Nao altera nada em data/.
+on:
+  schedule:
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  conferir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          fetch-depth: 20
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: Rodar resumo.py
+        run: python .claude/skills/conferir-coleta-do-dia/resumo.py --dias 1 | tee resumo.txt
+      - name: Abrir ou comentar issue se houver pendencia
+        run: |
+          avisos=$(grep -oP 'avisos do parser: \K[0-9]+' resumo.txt || echo 0)
+          ocr=$(grep -oP 'PDFs que precisam de OCR: \K[0-9]+' resumo.txt || echo 0)
+          incomuns=$(grep -c '! ' resumo.txt || true)
+          if [ "$avisos" = "0" ] && [ "$ocr" = "0" ] && [ "$incomuns" = "0" ]; then
+            echo "sem pendencias"
+            exit 0
+          fi
+          titulo="conferir coleta $(date -u +%Y-%m-%d)"
+          {
+            echo "O \`resumo.py\` achou itens para olho humano (avisos do parser: $avisos, PDFs sem texto: $ocr, itens com \`!\`: $incomuns)."
+            echo
+            echo '```'
+            cat resumo.txt
+            echo '```'
+            echo
+            echo "Rodada: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          } > corpo.md
+          aberta=$(gh issue list --state open --search "conferir coleta in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$aberta" ]; then
+            gh issue comment "$aberta" --body-file corpo.md
+          else
+            gh issue create --title "$titulo" --body-file corpo.md
+          fi

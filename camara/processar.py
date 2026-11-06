@@ -28,24 +28,34 @@ def processar(pasta_dados: Path) -> dict:
 
     reg = Registro()
     resumos = sorted((m for m in indice.values() if m["secao"] == "resumo"), key=_ordem)
-    relatorio = {"sessoes": 0, "itens": 0, "votos": 0, "avisos": [], "precisa_ocr": []}
+    relatorio = {"sessoes": 0, "itens": 0, "votos": 0, "avisos": [], "precisa_ocr": [], "via_ocr": []}
     partidos: dict[str, Counter] = defaultdict(Counter)
     presencas: dict[str, Counter] = defaultdict(Counter)
 
     for meta in resumos:
+        via_ocr = False
         if meta.get("precisa_ocr"):
-            relatorio["precisa_ocr"].append(meta["titulo"])
-            continue
+            # Transcricao de PDF escaneado (python -m camara ocr-resumos) so vale depois de conferida por pessoa
+            # e commitada; sem ela o resumo fica de fora e aparece em precisa_ocr.
+            sha_ocr = str(meta.get("sha256") or "")
+            arq_ocr = (texto_dir / f"{sha_ocr}.ocr.txt").resolve()
+            if not _RE_SHA256.match(sha_ocr) or not arq_ocr.is_relative_to(texto_dir) or not arq_ocr.exists():
+                relatorio["precisa_ocr"].append(meta["titulo"])
+                continue
+            via_ocr = True
         sha = str(meta.get("sha256") or "")
         if not _RE_SHA256.match(sha):
             relatorio["avisos"].append(f"{meta.get('titulo')}: sha256 invalido, ignorado")
             continue
-        arq_txt = (texto_dir / f"{sha}.txt").resolve()
+        arq_txt = (texto_dir / (f"{sha}.ocr.txt" if via_ocr else f"{sha}.txt")).resolve()
         if not arq_txt.is_relative_to(texto_dir):
             continue
         texto = arq_txt.read_text("utf-8")
         r = parse_resumo(texto, reg, fonte=meta["url"], titulo=meta["titulo"])
         r["sha256_pdf"] = sha
+        if via_ocr:
+            r["transcrito_por_ocr"] = True  # transcricao de PDF escaneado, conferida por pessoa
+            relatorio["via_ocr"].append(meta["titulo"])
         s = r["sessao"]
         tipo_limpo = re.sub(r"[^a-z0-9]", "", str(s.get("tipo") or "")[:5].lower())
         if not (s.get("data") and _RE_DATA_ISO.match(str(s["data"])) and s.get("numero") and tipo_limpo):

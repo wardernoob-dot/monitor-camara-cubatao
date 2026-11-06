@@ -69,3 +69,14 @@ def test_post_do_dia(tmp_path):
 
 def test_frase_mantem_numeral_romano():
     assert P.frase("ALTERA A REDAÇÃO DO INCISO II DO ART. 6º") == "Altera a redação do inciso II do art. 6º"
+
+
+def test_carregar_tipo_sem_analise_devolve_none(tmp_path):
+    """RQ (requerimento) aparece no site mas nao tem analise: nao pode estourar ValueError."""
+    import pytest
+
+    from camara import analise as AN
+
+    assert AN.carregar(tmp_path, "RQ", "2", "2026") is None
+    with pytest.raises(ValueError):
+        AN.chave_materia("../x", "1", "2026")
