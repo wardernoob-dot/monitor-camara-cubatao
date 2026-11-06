@@ -8,21 +8,18 @@
 @font-face { font-family: "Ordinais"; src: local("Arial"), local("Helvetica Neue"), local("Helvetica"), local("Roboto"), local("DejaVu Sans"), local("Liberation Sans"); unicode-range: U+00AA, U+00BA; }
 
 :root {
-  /* pilares do indice: paleta categorica validada (daltonismo e contraste), sempre na mesma ordem */
-  --pilar-assiduidade: #2a78d6;   /* azul: constancia, confianca */
-  --pilar-participacao: #eb6834;  /* laranja: engajamento */
-  --pilar-producao: #1baf7a;      /* verde-agua: criacao, crescimento */
-  --pilar-fiscalizacao: #6250d6;  /* violeta: controle, autoridade */
+  /* azul: cor de interacao (clique, selecao, foco) e de medida (barras de quantidade e de nota) */
+  --azul: #2a6fd6;
+  --azul-escuro: #1c4f9c;
+  --azul-claro: #e3edfc;
+  --azul-trilho: #dfe7f3;
   /* estados (nunca usados como serie) */
   --cor-bom: #1f8f3a;             /* aprovado, sim, veto derrubado */
   --cor-critico: #d03b3b;         /* nao, veto mantido, falta sem justificativa */
   --cor-alerta: #e8a21a;          /* atencao, aguardando, falta justificada */
-  --cor-andamento: #86b6ef;       /* em andamento / nao votado */
+  --cor-andamento: #b9cdea;       /* em andamento / nao votado */
   /* rampa sequencial (azul) para etapas */
   --seq-0: #86b6ef; --seq-1: #5598e7; --seq-2: #2a78d6; --seq-3: #1c5cab;
-  /* assuntos do painel da pagina inicial (texto branco por cima) */
-  --tema-projetos: #2a78d6; --tema-vetos: #c2362f; --tema-destaques: #a86a00; --tema-autoria: #12805a;
-  --tema-faltas: #c9541d; --tema-alinhamento: #5a48c9; --tema-votos: #171717;
   --color-accent: #297a3a;      /* Verdant: ações, links de ação, voto sim */
   --color-secondary: #4d4d4d;   /* Ash */
   --color-canvas: #fafafa;      /* Bone White */
@@ -602,34 +599,41 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 .marca__nome { white-space: nowrap; }
 @media (max-width: 640px) { .marca__sub { display: none; } }
 
-/* ---------- cores com significado */
-.pilar--assiduidade { --pc: var(--pilar-assiduidade); }
-.pilar--participacao { --pc: var(--pilar-participacao); }
-.pilar--producao { --pc: var(--pilar-producao); }
-.pilar--fiscalizacao { --pc: var(--pilar-fiscalizacao); }
-.ponto { display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; background: var(--pc, var(--color-ink)); margin-right: .45rem; vertical-align: .05em; }
-.indice-mini__barra { background: color-mix(in srgb, var(--pc) 16%, #f1f1f1); }
-.indice-mini__barra > span { background: var(--pc); }
-.indice-mini__barra--na { background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--pc) 22%, #eee) 0 3px, transparent 3px 5px); }
-.indice__trilho { background: color-mix(in srgb, var(--color-linha) 70%, #fff); }
-.indice__barra { background: var(--pc); }
-/* ranking: barra empilhada pelos pilares (2px de respiro entre segmentos) */
-.rank__cheio { display: flex; gap: 2px; background: none; }
-.rank__seg { display: block; height: 100%; background: var(--pc); border-radius: 2px; }
-.rank__seg:first-child { border-radius: 5px 2px 2px 5px; }
-.rank--parcial .rank__seg { opacity: .45; }
-.rank__pilar-trilho { background: color-mix(in srgb, var(--pc) 14%, #f1f1f1); }
-.rank__pilar-trilho > span { background: var(--pc); }
-.rank__pilar--apagado { opacity: .35; }
-.rank__pilar--foco .rank__pilar-nome { color: var(--color-ink); }
-.rank__pos--medalha { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; font-size: 1rem; font-weight: 600; color: #fff; letter-spacing: -0.02em; }
-.rank__pos--1 { background: linear-gradient(145deg, #f4c542, #c9930c); color: #3d2a00; box-shadow: 0 2px 8px -2px rgba(201,147,12,.6); }
-.rank__pos--2 { background: linear-gradient(145deg, #e3e6ea, #a7adb5); color: #2b2f35; }
-.rank__pos--3 { background: linear-gradient(145deg, #e3a978, #b06a36); color: #fff; }
-.rank__item--primeiro { border-color: #f0d27a; box-shadow: 0 0 0 4px #fdf4d6; }
-.rank__item--primeiro .rank__pos { color: #3d2a00; }
-.legenda--pilares { margin: .25rem 0 0; }
-/* barras de quantidade: aprovado x em andamento, vetos, faltas */
+
+/* ---------- cores: azul = clicavel/selecionado e medida; verde/vermelho/ambar so quando significam algo */
+:focus-visible, .sanfona__titulo button:focus-visible, .painel__aba:focus-visible, .painel__setas button:focus-visible { outline-color: var(--azul); }
+.botao--acao { background: var(--azul); }
+.botao--acao:hover { background: var(--azul-escuro); }
+.filtros button[aria-pressed="true"] { background: var(--azul); border-color: var(--azul); color: #fff; }
+.topo nav a[aria-current="page"] { background: var(--azul-claro); color: var(--azul-escuro); }
+/* painel da pagina inicial */
+.painel__realce { background: var(--azul); }
+.painel__palco { border-top: 3px solid var(--azul); }
+.painel__contagem { color: var(--azul); }
+.painel__aba--ativa .painel__rotulo { color: rgba(255,255,255,.85); }
+.painel__pontos span.ativo { background: var(--azul); }
+/* indice e ranking: uma cor so; o nome do pilar vem escrito */
+.indice-mini__barra { background: var(--azul-trilho); }
+.indice-mini__barra > span { background: var(--azul); }
+.indice-mini__barra--na { background: repeating-linear-gradient(90deg, var(--azul-trilho) 0 3px, transparent 3px 5px); }
+.indice__trilho { background: var(--azul-trilho); }
+.indice__barra { background: var(--azul); }
+.rank__barra { background: var(--azul-trilho); }
+.rank__cheio { display: flex; background: none; }
+.rank__seg { display: block; height: 100%; background: var(--azul); border-radius: 5px; }
+.rank--parcial .rank__seg { background: #9db7de; }
+.rank__pilar-trilho { background: var(--azul-trilho); }
+.rank__pilar-trilho > span { background: #8fb0e3; }
+.rank__pilar--foco .rank__pilar-nome { color: var(--azul-escuro); font-weight: 600; }
+.rank__pilar--foco .rank__pilar-trilho > span { background: var(--azul); }
+.rank__pilar--apagado { opacity: .45; }
+.rank__pos--medalha { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; font-size: 1rem; font-weight: 600; letter-spacing: -0.02em; }
+.rank__pos--1 { background: #f6e3a5; color: #6b4d00; }
+.rank__pos--2 { background: #e4e7eb; color: #3d434b; }
+.rank__pos--3 { background: #efd2bb; color: #6e3b14; }
+.rank__item--primeiro { border-color: var(--azul); box-shadow: 0 0 0 3px var(--azul-claro); }
+.rank__item--primeiro .rank__pos { color: #6b4d00; }
+/* estados com significado */
 .parte--aprovado, .parte--derrubado { background-color: var(--cor-bom); }
 .parte--outro { background-color: var(--cor-andamento); }
 .parte--mantido { background-color: var(--cor-critico); }
@@ -641,11 +645,3 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 .lista-vetos__res--mantido { color: var(--cor-critico); }
 .lista-vetos__res--derrubado { color: var(--cor-bom); }
 .lista-vetos__res--aguardando { color: #8a5a00; }
-/* painel da pagina inicial: cada assunto com a sua cor */
-.painel__aba::before { content: ""; position: absolute; left: 1rem; right: 1rem; top: 0; height: 3px; border-radius: 0 0 3px 3px; background: var(--aba-cor); opacity: .85; z-index: 1; }
-.painel__aba--ativa::before { opacity: 0; }
-.painel__aba .painel__num { color: var(--aba-cor); }
-.painel__aba--ativa .painel__num { color: #fff; }
-.painel__aba--ativa .painel__rotulo { color: rgba(255,255,255,.82); }
-.painel__palco { border-top: 3px solid var(--aba-cor); transition: border-color .35s var(--ease); }
-.painel__contagem { color: var(--aba-cor); }

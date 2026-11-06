@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useDados } from "../dados";
 import { Situacao } from "../componentes";
@@ -18,6 +18,8 @@ export default function Projetos() {
   useTitulo("Projetos");
   const b = useDados();
   const [params, setParams] = useSearchParams();
+  const [limite, setLimite] = useState(10);
+  useEffect(() => setLimite(10), [params]); // filtro novo volta para os 10 primeiros
   const q = params.get("q") ?? "";
   const autor = params.get("autor") ?? "";
   const sit = params.get("situacao") ?? "";
@@ -77,7 +79,7 @@ export default function Projetos() {
         <table className="tabela">
           <thead><tr><th scope="col">Projeto</th><th scope="col">Assunto</th><th scope="col">Autoria</th><th scope="col">Situação</th></tr></thead>
           <tbody>
-            {visiveis.map((m) => (
+            {visiveis.slice(0, limite).map((m) => (
               <tr key={m.slug}>
                 <td className="tabela__projeto"><DicaMateria m={m}><Link to={`/projetos/${m.slug}`}>{m.titulo}</Link></DicaMateria> <Destaque m={m} compacto /></td>
                 <td>{m.assunto}</td>
@@ -88,6 +90,13 @@ export default function Projetos() {
           </tbody>
         </table>
         {visiveis.length === 0 && <p className="nota">Nenhum projeto com esses filtros. Limpe a busca ou escolha outra situação.</p>}
+        {visiveis.length > limite && (
+          <div className="mais">
+            <button type="button" className="botao botao--fantasma" onClick={() => setLimite((l) => l + 10)}>
+              Mostrar mais {Math.min(10, visiveis.length - limite)} de {visiveis.length - limite} restantes
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

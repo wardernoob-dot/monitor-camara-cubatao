@@ -40,12 +40,7 @@ function Linha({ v, pos, c, i }: { v: Vereador; pos: number | null; c: Criterio;
       <span className="rank__barra" aria-hidden="true">
         <motion.span className="rank__cheio" initial={reduz ? false : { scaleX: 0 }} animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: reduz ? 0 : Math.min(i, 10) * 0.035, ease: EASE }}>
-          {c === "indice"
-            ? v.indice.pilares.filter((pl) => !pl.nao_se_aplica && pl.pontos > 0).map((pl) => (
-                <span key={pl.id} className={`rank__seg pilar--${pl.id}`} style={{ width: `${(100 * pl.pontos) / v.indice.pontos_validos}%` }}
-                  title={`${CURTO[pl.id]}: ${fmt(pl.pontos)} de ${pl.max}`} />
-              ))
-            : val != null && <span className={`rank__seg pilar--${c}`} style={{ width: `${100 * val}%` }} />}
+          {val != null && <span className="rank__seg" style={{ width: `${100 * val}%` }} />}
         </motion.span>
       </span>
       <span className="rank__nota">
@@ -55,7 +50,7 @@ function Linha({ v, pos, c, i }: { v: Vereador; pos: number | null; c: Criterio;
       </span>
       <span className="rank__pilares" aria-hidden="true">
         {v.indice.pilares.map((pl) => (
-          <span key={pl.id} className={`rank__pilar pilar--${pl.id} ${pl.id === c ? "rank__pilar--foco" : ""} ${c !== "indice" && pl.id !== c ? "rank__pilar--apagado" : ""}`} title={`${CURTO[pl.id]}: ${pl.nao_se_aplica ? "não se aplica" : `${fmt(pl.pontos)} de ${pl.max}`}`}>
+          <span key={pl.id} className={`rank__pilar ${pl.id === c ? "rank__pilar--foco" : ""} ${c !== "indice" && pl.id !== c ? "rank__pilar--apagado" : ""}`} title={`${CURTO[pl.id]}: ${pl.nao_se_aplica ? "não se aplica" : `${fmt(pl.pontos)} de ${pl.max}`}`}>
             <span className="rank__pilar-nome">{CURTO[pl.id]}</span>
             <span className="rank__pilar-trilho"><span style={{ width: `${pl.nao_se_aplica ? 0 : 100 * pctPilar(pl)}%` }} /></span>
           </span>
@@ -100,12 +95,6 @@ export default function Ranking() {
             onClick={() => setParams(k === "indice" ? {} : { por: k }, { replace: true, preventScrollReset: true })}>{rot}</button>
         ))}
       </div>
-
-      <ul className="legenda legenda--pilares" aria-label="Cores dos pilares">
-        {(["assiduidade", "participacao", "producao", "fiscalizacao"] as const).map((k) => (
-          <li key={k}><span className={`ponto pilar--${k}`} aria-hidden="true" /> {CURTO[k]}</li>
-        ))}
-      </ul>
 
       <LayoutGroup>
         <ol className="rank">

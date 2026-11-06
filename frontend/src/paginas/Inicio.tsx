@@ -81,7 +81,7 @@ export default function Inicio() {
         <section className="painel-secao" aria-labelledby="painel-titulo">
           <h2 id="painel-titulo" className="sr">A Câmara em 2026</h2>
           <Painel rotulo="A Câmara em 2026" abas={[
-            { id: "projetos", cor: "var(--tema-projetos)", numero: p.apresentados, rotulo: "projetos em 2026", titulo: "Do projeto à lei",
+            { id: "projetos", numero: p.apresentados, rotulo: "projetos em 2026", titulo: "Do projeto à lei",
               descricao: `${p.leis} viraram lei no Diário Oficial. Abaixo, do que tratam os projetos.`, conteudo: (
               <>
             <div className="tile-solto">
@@ -96,7 +96,7 @@ export default function Inicio() {
                 />
             </div>
               </>) },
-            { id: "vetos", cor: "var(--tema-vetos)", numero: p.vetos.length, rotulo: "vetos do prefeito", titulo: "Vetos do prefeito",
+            { id: "vetos", numero: p.vetos.length, rotulo: "vetos do prefeito", titulo: "Vetos do prefeito",
               descricao: "O prefeito pode vetar um projeto aprovado. O veto volta para a Câmara, que mantém ou derruba.", conteudo: (
               <div className="tile-solto">
               <Barras
@@ -117,7 +117,7 @@ export default function Inicio() {
                 ))}
               </ul>
               </div>) },
-            { id: "destaques", cor: "var(--tema-destaques)", numero: b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").length, rotulo: "projetos em destaque", titulo: "Projetos em destaque",
+            { id: "destaques", numero: b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").length, rotulo: "projetos em destaque", titulo: "Projetos em destaque",
               descricao: "Mexem no orçamento, em servidores ou na Lei Orgânica, foram vetados, rejeitados ou tiveram votação dividida.", conteudo: (
               <div className="tile-solto">
               <ul className="lista-vetos">
@@ -130,7 +130,7 @@ export default function Inicio() {
               </ul>
               <p><Link to="/projetos?destaque=1">Ver todos os projetos em destaque</Link></p>
               </div>) },
-            { id: "autoria", cor: "var(--tema-autoria)", numero: p.autoria.filter((x) => x.para).length, rotulo: "vereadores com projetos", titulo: "Quem apresenta os projetos",
+            { id: "autoria", numero: p.autoria.filter((x) => x.para).length, rotulo: "vereadores com projetos", titulo: "Quem apresenta os projetos",
               descricao: "Projeto apresentado por mais de um vereador conta para cada um e aparece listrado.", conteudo: (
               <>
 <div className="tile-solto">
@@ -149,7 +149,7 @@ export default function Inicio() {
                 />
             </div>
               </>) },
-            { id: "faltas", cor: "var(--tema-faltas)", numero: p.faltas.reduce((s, f) => s + f.ausente + f.justificada, 0), rotulo: "faltas nas sessões", titulo: "Faltas nas sessões",
+            { id: "faltas", numero: p.faltas.reduce((s, f) => s + f.ausente + f.justificada, 0), rotulo: "faltas nas sessões", titulo: "Faltas nas sessões",
               descricao: `Lista de presença dos resumos oficiais de ${p.sessoes} dias de sessão em 2026.`, conteudo: (
               <>
 <div className="tile-solto">
@@ -162,7 +162,7 @@ export default function Inicio() {
                 />
             </div>
               </>) },
-            { id: "alinhamento", cor: "var(--tema-alinhamento)", numero: mediaAlinh, sufixo: "%", rotulo: "das vezes votam igual", titulo: "Quem vota igual a quem", arrastavel: false,
+            { id: "alinhamento", numero: mediaAlinh, sufixo: "%", rotulo: "das vezes votam igual", titulo: "Quem vota igual a quem", arrastavel: false,
               descricao: "Votações do painel em que os dois votaram igual. Toque num quadrado para ver onde discordaram.", conteudo: (
               <>
 <div className="tile-solto">
@@ -179,7 +179,7 @@ export default function Inicio() {
                 />
             </div>
               </>) },
-            { id: "voto-a-voto", cor: "var(--tema-votos)", numero: colunas.length, rotulo: "votações no painel", titulo: `Voto a voto, desde ${colunas.length ? dataExtenso(colunas[0].data) : "setembro"}`, arrastavel: false,
+            { id: "voto-a-voto", numero: colunas.length, rotulo: "votações no painel", titulo: `Voto a voto, desde ${colunas.length ? dataExtenso(colunas[0].data) : "setembro"}`, arrastavel: false,
               descricao: "Cada quadrado é um voto registrado no painel eletrônico. Passe o mouse ou toque para ver o projeto.", conteudo: (
             <div className="mx-secao">
             <div className="mx-secao__principal">
