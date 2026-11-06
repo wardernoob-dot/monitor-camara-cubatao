@@ -22,8 +22,14 @@ function Texto($url, $headers) {
 try {
     # token do GitHub (criptografado pelo Windows para este usuario; criado pelo instalar.ps1)
     $sec = Get-Content (Join-Path $Pasta 'token.sec') | ConvertTo-SecureString
-    $token = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($sec))
+    $bstr = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($sec)
+    try {
+        $token = [Runtime.InteropServices.Marshal]::PtrToStringAuto($bstr)
+    } finally {
+        [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($bstr)
+    }
     $gh = @{ Authorization = "Bearer $token"; Accept = 'application/vnd.github+json'; 'X-GitHub-Api-Version' = '2022-11-28'; 'User-Agent' = 'monitor-camara-pc' }
+    $token = $null
     $yt = @{ 'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'; 'Accept-Language' = 'pt-BR,pt;q=0.9' }
 
     # 1) sessoes no feed do canal

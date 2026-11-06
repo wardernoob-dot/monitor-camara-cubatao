@@ -4,9 +4,12 @@ from pathlib import Path
 import numpy as np
 import pytest
 
+from camara import analise as A
+from camara import coletor as C
 from camara import noticias as N
 from camara import painel as P
 from camara import site as S
+from camara import youtube as YT
 
 RAIZ = Path(__file__).resolve().parent.parent
 
@@ -52,7 +55,7 @@ def test_tema_e_relevancia():
     m["tema"] = S.tema(m)
     assert m["tema"] == "Orçamento, impostos e finanças"
     assert S.relevancia(m)["nivel"] == "alta"
-    h = _m(assunto="DENOMINA RUA JOSÉ DA SILVA O LOGRADOUICO")
+    h = _m(assunto="DENOMINA RUA JOSÉ DA SILVA O LOGRADOURO PÚBLICO")
     h["tema"] = S.tema(h)
     assert h["tema"].startswith("Homenagens") and S.relevancia(h)["nivel"] == "baixa"
     ev = {"etapa": "2a_discussao", "etapa_txt": "2ª discussão", "sim": 8, "nao": 6, "resultado": "APROVADO"}
@@ -80,3 +83,16 @@ def test_hardening_url_slug_e_npz(tmp_path):
     np.savez(malicioso, chaves=np.array([{"cmd": "evil"}], dtype=object), mat=np.zeros((1, 4)))
     with pytest.raises(ValueError):
         P.Rostos.carregar(malicioso)
+
+
+def test_hardening_ssrf_e_citacao_curta():
+    # Substring de dominio falso bloqueada em coletor.extrair_links
+    html = '<div id="content"><a href="https://www.cubatao.sp.leg.br.evil.com/processo-legislativo/resumo-das-sessoes/2026">2026</a></div>'
+    assert C.extrair_links(html, C.BASE + "/processo-legislativo/resumo-das-sessoes", "/processo-legislativo/resumo-das-sessoes") == []
+    # SSRF bloqueado no storyboard do YouTube
+    with pytest.raises(ValueError):
+        YT.urls_do_spec("http://169.254.169.254/latest/meta-data|160#90#10#5#5#2000#M$M.jpg#sig")
+    # Trecho de 1 palavra nao passa na conferencia anti-alucinacao
+    doc = {"texto": "Art. 1 Fica instituido o programa municipal de saude.", "so_ementa": False}
+    res = A.conferir({"resumo": "Cria programa.", "pontos_de_atencao": [{"ponto": "Ponto falso", "trecho": "de"}]}, doc)
+    assert res["pontos_de_atencao"] == [] and len(res["pontos_descartados"]) == 1

@@ -26,6 +26,7 @@ SECOES = {
 }
 USER_AGENT = "monitor-camara-cubatao/0.1 (projeto civico de transparencia; contato no README)"
 INTERVALO_S = 1.5
+MAX_PDF_BYTES = 25 * 1024 * 1024
 
 _IGNORAR = re.compile(r"/RSS$|/sendto_form|/print|#|mailto:|/login|/search|@@", re.I)
 _ANO = re.compile(r"\b(20\d{2})\b")
@@ -44,11 +45,12 @@ def extrair_links(html: str, pagina_url: str, prefixo: str) -> list[Link]:
     soup = BeautifulSoup(html, "html.parser")
     area = soup.select_one("#content") or soup.body or soup
     vistos, out = set(), []
+    host_base = urlparse(BASE).hostname
     for a in area.select("a[href]"):
         href = urljoin(pagina_url, a["href"].strip())
         titulo = re.sub(r"\s+", " ", a.get_text(" ", strip=True))
         p = urlparse(href)
-        if p.netloc and p.netloc not in urlparse(BASE).netloc and urlparse(BASE).netloc not in p.netloc:
+        if p.scheme not in ("https", "http") or p.hostname != host_base:
             continue
         if _IGNORAR.search(href) or not titulo or titulo.lower().startswith("leia mais"):
             continue
@@ -152,6 +154,8 @@ class Coletor:
     def baixar(self, doc: dict) -> dict | None:
         r = self._get(doc["url"])
         if r is None:
+            return None
+        if len(r.content) > MAX_PDF_BYTES:
             return None
         if "pdf" not in r.headers.get("content-type", "") and not r.content[:5] == b"%PDF-":
             return None
