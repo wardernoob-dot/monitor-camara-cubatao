@@ -25,17 +25,27 @@ def processar(pasta_dados: Path) -> dict:
 
     reg = Registro()
     resumos = sorted((m for m in indice.values() if m["secao"] == "resumo"), key=_ordem)
-    relatorio = {"sessoes": 0, "itens": 0, "votos": 0, "avisos": [], "precisa_ocr": []}
+    relatorio = {"sessoes": 0, "itens": 0, "votos": 0, "avisos": [], "precisa_ocr": [], "via_ocr": []}
     partidos: dict[str, Counter] = defaultdict(Counter)
     presencas: dict[str, Counter] = defaultdict(Counter)
 
     for meta in resumos:
+        via_ocr = False
         if meta.get("precisa_ocr"):
-            relatorio["precisa_ocr"].append(meta["titulo"])
-            continue
-        texto = (dados / "texto" / f"{meta['sha256']}.txt").read_text("utf-8")
+            # Transcricao de PDF escaneado (python -m camara ocr-resumos) so vale depois de conferida por pessoa
+            # e commitada; sem ela o resumo fica de fora e aparece em precisa_ocr.
+            arq_ocr = dados / "texto" / f"{meta['sha256']}.ocr.txt"
+            if not arq_ocr.exists():
+                relatorio["precisa_ocr"].append(meta["titulo"])
+                continue
+            texto, via_ocr = arq_ocr.read_text("utf-8"), True
+        else:
+            texto = (dados / "texto" / f"{meta['sha256']}.txt").read_text("utf-8")
         r = parse_resumo(texto, reg, fonte=meta["url"], titulo=meta["titulo"])
         r["sha256_pdf"] = meta["sha256"]
+        if via_ocr:
+            r["transcrito_por_ocr"] = True  # transcricao de PDF escaneado, conferida por pessoa
+            relatorio["via_ocr"].append(meta["titulo"])
         s = r["sessao"]
         if not (s["data"] and s["numero"] and s["tipo"]):
             relatorio["avisos"].append(f"{meta['titulo']}: cabecalho incompleto, ignorado")

@@ -115,3 +115,48 @@ def test_coleta_e_processamento_ponta_a_ponta(tmp_path, site):
     pl75 = next(i for i in sessao["itens"] if i.get("numero") == "75/2026")
     assert pl75["votacoes"][0]["placar"] == {"favor": 6, "contra": 8}
     assert sessao["titulo_site"].startswith("RESUMO DA 35ª")
+
+
+_OCR_RESUMO = """RESUMO DA 1ª SESSÃO ORDINÁRIA, DO 2° ANO
+LEGISLATIVO, DA 19ª LEGISLATURA,
+REALIZADA NO DIA 03 DE FEVEREIRO DE 2026.
+Início às 15h29min.
+PRESIDÊNCIA: JAIR FERREIRA LUCAS
+LISTA DE PRESENÇA DOS SENHORES VEREADORES
+EDSON MENEZES MOTA SIM
+JAIR FERREIRA LUCAS SIM
+MARCOS ROBERTO SILVA JUSTIFICADA
+O Vereador Roniele Martins da Silva solicitou obstrução da Sessão em nome da bancada do PSD.
+A presente Sessão Ordinária foi encerrada antes do horário regimental, por falta de "quórum" regimental.
+A Sessão foi encerrada às 15h32min.
+Divisão Legislativa, 05 de fevereiro de 2026.
+"""
+
+
+def _dados_resumo_escaneado(tmp_path, com_ocr):
+    (tmp_path / "texto").mkdir()
+    sha = "ab" * 32
+    meta = {"url": "https://x/resumo.pdf", "titulo": "RESUMO DA 1ª SESSÃO ORDINÁRIA - 03/02/2026", "secao": "resumo",
+            "sha256": sha, "paginas": 2, "precisa_ocr": True}
+    (tmp_path / "indice.json").write_text(json.dumps({meta["url"]: meta}), "utf-8")
+    (tmp_path / "texto" / f"{sha}.txt").write_text("", "utf-8")
+    if com_ocr:
+        (tmp_path / "texto" / f"{sha}.ocr.txt").write_text(_OCR_RESUMO, "utf-8")
+    return meta
+
+
+def test_resumo_escaneado_sem_ocr_conferido_fica_de_fora(tmp_path):
+    meta = _dados_resumo_escaneado(tmp_path, com_ocr=False)
+    rel = processar(tmp_path)
+    assert rel["sessoes"] == 0 and rel["precisa_ocr"] == [meta["titulo"]] and rel["via_ocr"] == []
+
+
+def test_resumo_escaneado_com_ocr_conferido_entra_marcado(tmp_path):
+    meta = _dados_resumo_escaneado(tmp_path, com_ocr=True)
+    rel = processar(tmp_path)
+    assert rel["sessoes"] == 1 and rel["precisa_ocr"] == [] and rel["via_ocr"] == [meta["titulo"]]
+    assert rel["avisos"] == []  # o aviso diario do robo so olha avisos/precisa_ocr
+    sessao = json.loads((tmp_path / "sessoes" / "2026-02-03_ordin_01.json").read_text("utf-8"))
+    assert sessao["transcrito_por_ocr"] is True and sessao["itens"] == []
+    assert sorted(sessao["presenca"].values()) == ["justificada", "sim", "sim"]
+    assert sessao["sessao"]["fim"] == "15:32"
