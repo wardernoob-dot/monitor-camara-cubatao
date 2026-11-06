@@ -113,6 +113,7 @@ class Base:
             return [], "Mesa da Câmara"
         if "tribunal de contas" in ku:
             return [], "Tribunal de Contas do Estado"
+        a = re.sub(r"(?i)\s*-?\s*Mo[çc][ãa]o\b.*$", "", a)
         chaves = []
         for parte in re.split(r",| E | e |/", a):
             k, _ = self.reg.resolver(parte)
@@ -164,8 +165,15 @@ class Base:
                     m["documento"] = meta["url"]
                     if not m["assunto"] and meta.get("titulo") and "MENSAGEM" not in meta["titulo"].upper():
                         m["assunto"] = meta["titulo"]
-                    if not m["autoria_txt"] and p_ok:
-                        m["autoria_txt"] = self._autor_do_pdf(p.read_text("utf-8"))
+                    if not m["autoria_txt"] and (RE_ORCAMENTO.search(m["assunto"] or "") or
+                                                 re.search(r"(?i)SEJUR", meta["url"])):
+                        m["autoria_txt"] = "PREFEITO MUNICIPAL"
+                    if not m["autoria_txt"]:
+                        po = (texto_dir / f"{sha}.ocr.txt").resolve() if AN.RE_SHA256.match(sha) else None
+                        txt = (po.read_text("utf-8") if po and po.is_relative_to(texto_dir) and po.exists() else "") \
+                            or (p.read_text("utf-8") if p_ok else "")
+                        if len(txt.strip()) > 200:
+                            m["autoria_txt"] = self._autor_do_pdf(txt)
         for m in self.materias.values():
             m["autores"], m["autoria"] = self.autor(m["autoria_txt"])
             m["pautas"].sort()
@@ -185,18 +193,35 @@ class Base:
                     break
 
     def _autor_do_pdf(self, t: str) -> str | None:
-        if re.search(r"Prefeitura Municipal de Cubat", t[:400], re.I) or \
+        if re.search(r"Prefeitura Municipal de Cubat|SECRETARIA MUNICIPAL DE ASSUNTOS JUR", t[:1500], re.I) or \
                 re.search(r"(?im)^\s*Prefeito(?: Municipal)?\s*$", t[-2500:]):
             return "PREFEITO MUNICIPAL"
         ap = {chave(n): k for k, n in {**APELIDO, **APELIDO_EXTRA}.items()}
         nomes = []
         for nome, partido in _assinaturas(t):
+            nome = re.sub(r"(?<=[a-zà-ü])(?=[A-ZÀ-Ü])", " ", nome)  # "MarcioSilvaNascimento"
             k = ap.get(chave(nome)) or self.reg.resolver(nome, cutoff=0.8)[0]
             if k and k in self.vereadores:
                 if k not in nomes:
                     nomes.append(k)
                 if partido:
                     self.partidos_pdf[k][partido] += 1
+        if re.search(r"(?i)p?residente\b", t[-1800:]) and len(re.findall(r"(?i)\bsecre", t[-1800:])) >= 2:
+            return "MESA DA CÂMARA"  # assinado pela Mesa (presidente, 1o e 2o secretarios)
+        # "NOME / (APELIDO) / Presidente da Camara Municipal": so no fecho do documento (no topo e destinatario de oficio)
+        fecho = [ln.strip(" _\t") for ln in t[-1800:].splitlines()]
+        for i, ln in enumerate(fecho):
+            if not re.match(r"(?i)^(vice[- ]?)?presidente da c[âa]mara", ln):
+                continue
+            for j in range(i - 1, max(-1, i - 4), -1):
+                cand = re.sub(r"(?i)^vereador[a]?\s+|\(cid:\d+\)", "", fecho[j]).strip()
+                if re.search(r"(?i)excel|senhor", " ".join(fecho[max(0, j - 2):j + 1])):
+                    break
+                k = (ap.get(chave(cand)) or self.reg.resolver(cand, cutoff=0.85)[0]) if len(cand) > 3 else None
+                if k and k in self.vereadores:
+                    if k not in nomes:
+                        nomes.append(k)
+                    break
         if nomes:
             return " E ".join(self.vereadores[k]["nome"] for k in nomes)
         if mm := re.search(r"GABINETE (?:DO |DA )?VEREADOR[A]?\s+([A-ZÀ-Ü][A-ZÀ-Ü ]{5,60}?)\s*\n", t):
@@ -331,9 +356,19 @@ class Base:
                 self.vereadores[k]["votos"].append({"ev": ev, "voto": v, "contra": contra})
         rank = {"parecer_emenda": 0, "emenda": 1, "parecer": 2, "1a_discussao": 3, "2a_discussao": 4,
                 "discussao_unica": 4, "unica": 5, "redacao_final": 6}
+        ap = {chave(n): k for k, n in {**APELIDO, **APELIDO_EXTRA}.items()}
         for m in self.materias.values():
             m["eventos"].sort(key=lambda e: (e["data"], rank.get(e["etapa"], 5), e["ordem"]))
             m["titulo"] = _titulo(m)
+            if m["tipo"] == "RELATORIO" and not m["autores"]:
+                # relatorio e da comissao; se o painel mostrou o relator ("Autor: Vereador X"), ele entra como autor
+                for e in m["eventos"]:
+                    if (ma := RE_AUTOR_LIDO.search(e.get("lido") or "")):
+                        k = ap.get(chave(ma.group(1))) or self.reg.resolver(ma.group(1), cutoff=0.8)[0]
+                        if k in self.vereadores and k not in m["autores"]:
+                            m["autores"].append(k)
+                m["autoria"] = (", ".join(self.vereadores[k]["exibicao"] for k in m["autores"]) + " (relator)"
+                                if m["autores"] else "Comissão de vereadores")
             m["assunto_txt"] = frase(m["assunto"]) if m["assunto"] else ""
             m["situacao"], m["situacao_cls"] = _situacao(m)
             an = AN.carregar(self.dados, m["tipo"], m["numero"], m["ano"]) if m["numero"] and m["ano"] else None
@@ -463,6 +498,7 @@ APROVADOS = ("aprovado", "lei", "veto")
 TIPOS_PRODUCAO = ("PL", "PLC", "PR", "PDL", "PELOM")
 MIN_SESSOES = 10
 MIN_VOTACOES_P2 = 10  # menos que isso fora da presidencia: amostra pequena demais pro pilar Participacao
+RE_ORCAMENTO = re.compile(r"(?i)ESTIMA A RECEITA E FIXA A DESPESA|DIRETRIZES OR[ÇC]AMENT[ÁA]RIAS|PLANO PLURIANUAL")
 RE_RQ_PROCEDIMENTO = re.compile(r"SOLICITANDO QUE O PROCESSO|REGIME DE URGENCIA|SESSAO SECRETA|SOLICITANDO A PRORROGACAO|ATO SOLENE|SESSAO SOLENE")
 RE_AUTOR_LIDO = re.compile(r"Autor(?:ia)?\s*:\s*(?:Vereador[a]?\s+)?(.+)$", re.I)
 
@@ -660,7 +696,7 @@ def _assinaturas(t: str) -> list[tuple[str, str | None]]:
         mm = re.match(r"(?i)^vereador[a]?\b\s*(.*)$", ln)
         if not mm or any(re.search(r"(?i)excel|senhor|^a\s*$|^ao\s", x) for x in linhas[max(0, i - 2):i]):
             continue  # destinatario de oficio ("A Vossa Excelencia o Senhor Vereador X, Presidente"), nao autor
-        resto = mm.group(1)
+        resto = re.sub(r"(?i)^[\s\-–—]*cubat[ãa]o\b\s*", "", mm.group(1))  # "Vereador–Cubatao"
         pm = re.search(RE_PARTIDOS, resto, re.I)
         partido = pm.group(1).upper().replace("UNIAO", "UNIÃO") if pm else None
         nome = re.split(r"\s+[-–]\s+|" + RE_PARTIDOS, resto, flags=re.I)[0].strip(" -–") if resto else ""
@@ -668,7 +704,9 @@ def _assinaturas(t: str) -> list[tuple[str, str | None]]:
             j = i - 1
             while j >= 0 and not linhas[j]:
                 j -= 1
-            nome = linhas[j] if j >= 0 else ""
+            nome = re.sub(r"\s*\(([A-Z]{2,12})\)\s*$", "", linhas[j]) if j >= 0 else ""
+            if j >= 0 and (pp := re.search(r"\(([A-Z]{2,12})\)\s*$", linhas[j])) and not partido:
+                partido = pp.group(1)
         if 4 <= len(nome) <= 60 and not re.search(r"\d|c[âa]mara|presidente|sala|nobres", nome, re.I):
             out.append((nome, partido))
     return out

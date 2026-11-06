@@ -70,11 +70,14 @@ def main():
 
         consolidar_tudo(a.dados)
 
-        from .analise import analisar_tudo, analisar_vetos
+        from .analise import analisar_tudo, analisar_vetos, transcrever_projetos
         from .site import montar
         from .vetos import oficios
 
         base = montar(a.dados)
+        sem_autor = {m["slug"] for m in base.materias.values() if m["autoria"] == "Autoria não identificada"}
+        if transcrever_projetos(a.dados, sem_autor)["transcritos"]:
+            base = montar(a.dados)
         assuntos = {(m["tipo"], m["numero"], m["ano"]): m["assunto"] or "" for m in base.materias.values()
                     if m["numero"] and m["ano"]}
         analisar_vetos(a.dados, oficios(a.dados, assuntos))

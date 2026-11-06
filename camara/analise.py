@@ -250,6 +250,38 @@ def chave_materia(tipo: str, numero: str, ano: str | None) -> str:
     return f"{tipo}-{int(numero):03d}-{ano_limpo}"
 
 
+def transcrever_projetos(dados: Path, slugs_sem_autor: set[str], limite: int = 20, max_paginas: int = 40,
+                         pausa: float = 4.0, http=None) -> dict:
+    """PDFs escaneados de projetos sem autoria identificada -> .ocr.txt (a assinatura so aparece no texto).
+    Uma chamada de OCR por documento, uma vez so (o .ocr.txt fica em cache)."""
+    import time
+
+    dados = Path(dados)
+    idx = json.loads((dados / "indice.json").read_text("utf-8"))
+    rel = {"transcritos": 0, "erros": [], "pendentes": 0}
+    for meta in idx.values():
+        mu = RE_URL_PROJ.search(meta.get("url") or "")
+        if meta.get("secao") != "projetos" or not meta.get("precisa_ocr") or not mu:
+            continue
+        sl = f"{mu.group(1).lower()}-{int(mu.group(2))}-{mu.group(3)}"
+        sha = str(meta.get("sha256") or "")
+        if sl not in slugs_sem_autor or (meta.get("paginas") or 0) > max_paginas or \
+                (dados / "texto" / f"{sha}.ocr.txt").exists():
+            continue
+        if rel["transcritos"] >= limite:
+            rel["pendentes"] += 1
+            continue
+        try:
+            if transcrever_pdf(dados, meta["url"], sha, http=http):
+                rel["transcritos"] += 1
+                time.sleep(pausa)
+        except Exception as e:  # noqa: BLE001 - um PDF ruim nao derruba a rodada
+            rel["erros"].append(f"{sl}: {e}")
+    print(f"  ocr de projetos sem autoria: {rel['transcritos']} transcrito(s), {rel['pendentes']} para a proxima rodada,"
+          f" {len(rel['erros'])} erro(s)")
+    return rel
+
+
 def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: float = 4.0, http=None) -> dict:
     """Analisa as materias votadas que aparecem no consolidado e ainda nao tem analise valida."""
     dados = Path(dados)

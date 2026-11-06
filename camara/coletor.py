@@ -97,6 +97,15 @@ class Coletor:
         (self.dados / "texto").mkdir(parents=True, exist_ok=True)
         if guardar_pdf:
             (self.dados / "pdf").mkdir(parents=True, exist_ok=True)
+        # projetos do ano anterior que interessam: os vetados (o veto e votado neste ano). Sem o PDF do
+        # projeto nao da pra saber a autoria. Vem dos oficios ja lidos (data/analises/VETO-<num>-<ano>.json).
+        ant = self.desde - 1
+        self.nums_ano_anterior = {int(m.group(1)) for f in (self.dados / "analises").glob(f"VETO-*-{ant}.json")
+                                  if (m := re.match(rf"VETO-0*(\d+)-{ant}\.json$", f.name))}
+        for f in (self.dados / "consolidado").glob("*.json"):  # vetos votados (mesmo sem oficio localizado)
+            for mc in json.loads(f.read_text("utf-8")).get("materias", []):
+                if mc.get("tipo") == "VETO" and str(mc.get("ano")) == str(ant) and str(mc.get("numero") or "").isdigit():
+                    self.nums_ano_anterior.add(int(mc["numero"]))
 
     # ---------- rede ----------
     def _get(self, url: str):
@@ -151,7 +160,8 @@ class Coletor:
                         vetos_ln = True
                     else:
                         continue
-                if vetos_ln and prof > 0 and not _EH_VETO.search(f"{ln.titulo} {ln.url}"):
+                if vetos_ln and prof > 0 and not _EH_VETO.search(f"{ln.titulo} {ln.url}") \
+                        and not self._projeto_vetado(f"{ln.titulo} {ln.url}"):
                     continue
                 alvo = url_download(ln.url)
                 if alvo != ln.url or alvo.lower().endswith(".pdf") or "/arquivos/" in ln.url:
@@ -165,6 +175,14 @@ class Coletor:
         for d in docs:
             unicos.setdefault(d["url"], d)
         return list(unicos.values())
+
+    def _projeto_vetado(self, txt: str) -> bool:
+        """'PL 112.2025.pdf', 'PL%20141.2025', 'pl-146-2025' na pasta do ano anterior."""
+        ant = self.desde - 1
+        for m in re.finditer(rf"(?i)\bPLC?(?:%20|[\s_.-])*0*(\d{{1,4}})(?:%20|[\s_./-])+{ant}\b", txt):
+            if int(m.group(1)) in self.nums_ano_anterior:
+                return True
+        return False
 
     # ---------- download + texto ----------
     @staticmethod

@@ -60,3 +60,27 @@ def test_vice_nao_perde_participacao_por_presidir(base):
     vice = next(v for v in base.vereadores.values() if v.get("cargo") == "vice")
     p2 = next(p for p in vice["indice"]["pilares"] if p["id"] == "participacao")
     assert p2["presidiu"] > 0 and "presidiu outras" in p2["itens"][0]["conta"]
+
+
+def test_autoria_assinaturas(base):
+    pres = next(k for k, v in base.vereadores.items() if v.get("cargo") == "presidente")
+    nome = base.vereadores[pres]["nome"].upper()
+    t = "x" * 300 + f"\nconto com o apoio dos Nobres Pares.\nSala Dona Helena Meletti Cunha, 4 de março de 2026.\n{nome}\nTOPETE\nPresidente da Câmara Municipal de Cubatão\n"
+    assert base.autor(base._autor_do_pdf(t))[0] == [pres]
+    # oficio endereçado ao presidente nao vira autoria dele
+    of = f"A Vossa Excelência o Senhor Vereador\n{nome}\nPresidente da Câmara Municipal\n" + "y" * 300
+    assert base._autor_do_pdf(of) is None
+    mesa = "z" * 300 + "\nAlexandre Mendes da Silva\nPresidente\nFulano\n1º Secretário\nCiclano\n2º Secretário\n"
+    assert base._autor_do_pdf(mesa) == "MESA DA CÂMARA"
+
+
+def test_autoria_mocao_com_titulo_colado(base):
+    assert base.autor("Márcio Silva Nascimento Moção de Aplauso aos enfermeiros")[0]
+
+
+def test_coletor_reconhece_pl_vetado_do_ano_anterior(tmp_path):
+    from camara.coletor import Coletor
+    c = Coletor(tmp_path)
+    c.nums_ano_anterior = {141}
+    assert c._projeto_vetado("PL 141.2025.pdf") and c._projeto_vetado("x/PL%20141.2025.pdf")
+    assert not c._projeto_vetado("PL 14.2025.pdf")
