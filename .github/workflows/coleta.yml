@@ -57,7 +57,11 @@ jobs:
           if ! git diff --cached --quiet; then
             git add docs/data/
             git commit -m "dados: coleta $(date -u +%Y-%m-%d)"
-            git push
+            # outro workflow (publicar-surge) pode ter commitado durante a coleta: rebase e tenta de novo
+            for i in 1 2 3; do
+              git pull --rebase -X theirs -q && git push && break
+              sleep 10
+            done
           else
             echo "Nada novo hoje."
           fi
