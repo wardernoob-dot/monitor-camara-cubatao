@@ -1,0 +1,47 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "120",
+  "ano": "2025",
+  "autoria": "JOSÉ ELAN DOS SANTOS GOMES",
+  "ementa": "INSTITUI E INTEGRA AO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO, O “DIA DA FAVELA” E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20120.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o \"Dia da Favela\" no município de Cubatão, a ser comemorado anualmente em 4 de novembro.",
+  "o_que_muda": [
+   "O \"Dia da Favela\" passa a integrar o Calendário Oficial do Município de Cubatão.",
+   "A data será comemorada todos os anos no dia 4 de novembro.",
+   "Dois conselhos municipais vão participar das políticas públicas e programações da data."
+  ],
+  "quem_e_afetado": "Os moradores de favelas e a população de Cubatão em geral.",
+  "justificativa_do_autor": "Segundo o autor, o objetivo é promover a conscientização de pertencimento ao território, ressignificar a palavra favela, celebrar a potência desses lugares e alertar sobre as lutas dos moradores.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber como serão as programações práticas ou se haverá gastos públicos para a data.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não traz informações sobre o custo da medida ou a fonte de recursos.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A lei entra em vigor na data de sua publicação.",
+    "trecho": "Esta Lei entra em vigor na data da sua publicação."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "Dois conselhos municipais vão participar efetivamente das políticas públicas e programações derivadas da lei.",
+    "trecho": "O Conselho Municipal de Promoção da Igualdade Racial - COMPIR... e o Conselho Municipal da Juventude – CMJ... participarão efetivamente da instituição",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "7d81ed984588ecb4",
+ "gerado_em": "2026-11-06T18:50:34Z"
+}

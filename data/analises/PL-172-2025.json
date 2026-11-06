@@ -1,0 +1,48 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "172",
+  "ano": "2025",
+  "autoria": "ALEXANDRE MENDES DA SILVA",
+  "ementa": "DENOMINA “RUA ANTONIO MEDEIROS BEZERRA O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS”"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_No_172-2025_Denomina_Rua_Antonio_Medeiros_Bezerra_assinado.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto dá o nome de \"Rua Antonio Medeiros Bezerra\" a um logradouro público localizado entre a Rua São Francisco de Assis e a Avenida Nossa Senhora da Lapa.",
+  "o_que_muda": [
+   "A rua localizada atrás do mercado Bonsucesso passa a se chamar Rua Antonio Medeiros Bezerra.",
+   "A lei passa a valer na data de sua publicação."
+  ],
+  "quem_e_afetado": "Os moradores e quem transita pela rua que fica entre a Rua São Francisco de Assis e a Avenida Nossa Senhora da Lapa, atrás do mercado Bonsucesso.",
+  "justificativa_do_autor": "Segundo o autor, a homenagem é justa devido à trajetória de vida de Antonio Medeiros Bezerra, que chegou a Cubatão em 1990, venceu na vida com trabalho honesto, fundou empresas na Vila São José e teve sua vida ceifada tragicamente durante um assalto em 2020.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber se existem custos para a alteração de sinalização ou se a rua já possui alguma outra denominação oficial.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O efeito do projeto é simbólico, consistindo na atribuição de um nome a um logradouro público.",
+    "trecho": "DENOMINA “RUA ANTONIO MEDEIROS BEZERRA O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS”"
+   },
+   {
+    "ponto": "O texto não menciona custos, fonte de recursos ou impacto financeiro.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não estipula prazos específicos para a alteração das placas de sinalização ou cadastros.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O projeto entra em vigor imediatamente após a sua publicação oficial.",
+    "trecho": "Esta lei entra em vigor na data da sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "ee1cccc0dfe0f0a5",
+ "gerado_em": "2026-11-06T18:49:49Z"
+}

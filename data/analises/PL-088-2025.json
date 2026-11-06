@@ -1,0 +1,46 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "88",
+  "ano": "2025",
+  "autoria": "WASHINGTON LUIZ LESSA DE SOUZA",
+  "ementa": "INSTITUI A CAMPANHA DE CONSCIENTIZAÇÃO E PREVENÇÃO DA BRONQUIOLITE NA CIDADE DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2088.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria uma campanha anual de conscientização e prevenção contra a bronquiolite no município de Cubatão.",
+  "o_que_muda": [
+   "Cria uma campanha oficial de março a julho",
+   "Foca na educação sobre riscos e prevenção da doença",
+   "Prioriza informações para famílias com gestantes e crianças de até dois anos",
+   "Busca informar sobre formas de contágio e acesso a medicamentos"
+  ],
+  "quem_e_afetado": "A população em geral, com foco em gestantes e famílias de crianças de zero a dois anos.",
+  "justificativa_do_autor": "Segundo o autor, a bronquiolite é uma infecção comum em bebês no inverno e a conscientização é o melhor caminho para a prevenção, já que o sistema imunológico dos pequenos ainda é imaturo.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quais ações práticas serão realizadas, quem as executará ou qual o impacto financeiro para os cofres públicos.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não define de onde virá o dinheiro para realizar as ações da campanha.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A campanha tem um período definido para ocorrer anualmente.",
+    "trecho": "iniciada anualmente na primeira semana do mês de março e com término no último dia do mês de julho."
+   },
+   {
+    "ponto": "O texto não estabelece quem será o responsável por fiscalizar ou executar as ações da campanha.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "8477b1765c8ea37d",
+ "gerado_em": "2026-11-06T18:50:16Z"
+}

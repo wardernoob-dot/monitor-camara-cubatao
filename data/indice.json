@@ -779,6 +779,16 @@
   "titulo": "MENSAGEM ADITIVA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_197-2025-SEJUR.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf": {
+  "baixado_em": "2026-11-06T18:46:53+00:00",
+  "bytes": 369819,
+  "paginas": 2,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "07d28aab7f394b0bbf4fe3143b5d931036d5a1b81f8db09c0200bf08f6c065ce",
+  "titulo": "DISPÕE SOBRE A PROTEÇÃO E O BEM-ESTAR ANIMAL, VEDANDO O USO DE COLEIRAS ANTILATIDO E SIMILARES, BEM COMO COLEIRAS DO TIPO ENFORCADOR QUE POSSUAM GARRAS, PINOS OU ESPÍCULAS, NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20157.2025%20-%20Oficio_229-2025-Resp.-Of._563-2025.pdf": {
   "baixado_em": "2026-11-06T17:21:31+00:00",
   "bytes": 6609696,
@@ -788,6 +798,86 @@
   "sha256": "c71c851f0a2de59edb246107b761d9187588ce6e7c0d3a65fc2053d98be9b2f7",
   "titulo": "MENSAGEM ADITIVA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20157.2025%20-%20Oficio_229-2025-Resp.-Of._563-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20180-2025.pdf": {
+  "baixado_em": "2026-11-06T18:46:37+00:00",
+  "bytes": 5560503,
+  "paginas": 15,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "89a805794d4ffd7e705479d2e3642267a97344f675bfa03062b874ebc77302ad",
+  "titulo": "DISPÕE SOBRE CRIAÇÃO DO SISTEMA MUNICIPAL DE ALTERTA GEOCALIZADO PARA O DESAPARECIMENTO DE CRIANÇAS, ADOLESCENTES E ADULTOS NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20180-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20182-2025.pdf": {
+  "baixado_em": "2026-11-06T18:46:32+00:00",
+  "bytes": 240611,
+  "paginas": 3,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "5d62c90f886b46191bfa64bcc066798e12ab467a376bb8496af26aea5018ddb4",
+  "titulo": "DISPÕE SOBRE CRIAÇÃO DO PROJETO DE LEI QUE VISA INSTITUIR O \"DIA DO SKATE\", COM O OBJETIVO DE CELEBRAR, PRESERVAR E PROMOVER ESTA ATIVIDADE QUE POSSUI UM PAPEL SIGNIFICATIVO EM NOSSA COMUNIDADE",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20182-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20120.pdf": {
+  "baixado_em": "2026-11-06T18:47:00+00:00",
+  "bytes": 189804,
+  "paginas": 2,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "30546bb2c0687273836f233afb2a4b17317732bb9d226cd31e45bb2840ea42a1",
+  "titulo": "INSTITUI E INTEGRA AO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO, O “DIA DA FAVELA” E DÁ OUTRAS PROVIDÊNCIAS.",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20120.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20134.pdf": {
+  "baixado_em": "2026-11-06T18:46:50+00:00",
+  "bytes": 332415,
+  "paginas": 2,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "75faad5f132a1a3d92a9e56a512ca13a5d361a833a7d377a018cdfc9623116a8",
+  "titulo": "DENOMINA “AMAURY JOSÉ LEME”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20134.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20141.pdf": {
+  "baixado_em": "2026-11-06T18:46:45+00:00",
+  "bytes": 331527,
+  "paginas": 3,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "3b4f010a8eb4bce6138851adac4a14dee1c7d99a9974c541fa7f40081c942a7b",
+  "titulo": "DISPÕE SOBRE A CONTRATAÇÃO DE APRENDIZES PELAS EMPRESAS VENCEDORAS DE LICITAÇÃO PÚBLICA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS\"",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20141.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20146.pdf": {
+  "baixado_em": "2026-11-06T18:46:43+00:00",
+  "bytes": 449251,
+  "paginas": 2,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "d8d900f2f65f72b640a8ac10c6212e30d837398bf59cf39f9376a15fc0f230f6",
+  "titulo": "\"INSTITUI O PROGRAMA DE PREVENÇÃO À DEPRESSÃO PÓS-PARTO NO MUNICÍPIO DE CUBATÃO/SP E DÁ OUTRAS PROVIDÊNCIAS\"",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20146.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2088.pdf": {
+  "baixado_em": "2026-11-06T18:47:04+00:00",
+  "bytes": 210453,
+  "paginas": 2,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "a0c8590a513d622453a84411459d7e6778672ce545892da78b2e1b8217cafd2f",
+  "titulo": "INSTITUI A CAMPANHA DE CONSCIENTIZAÇÃO E PREVENÇÃO DA BRONQUIOLITE NA CIDADE DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2088.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2089.pdf": {
+  "baixado_em": "2026-11-06T18:47:06+00:00",
+  "bytes": 440605,
+  "paginas": 4,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "69c8bdbb1caeaeea07db8ca1b50e30a2290a95804c0e5c418dc2c530d249e411",
+  "titulo": "DISPÕE SOBRE A INCLUSÃO DO SÍMBOLO MUNDIAL DE CONSCIENTIZAÇÃO DO TRANSTORNO DO ESPECTRO AUTISTA (TEA) NAS SINALIZAÇÕES DE VAGAS ESPECIAIS DE ESTACIONAMENTO EM TODO O TERRITÓRIO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2089.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_112_2025_-MULHERES_TRANSPORTE_PUBLICO.pdf": {
   "baixado_em": "2026-11-06T18:26:09+00:00",
@@ -799,6 +889,26 @@
   "titulo": "ALTERA E INCLUI DISPOSITIVOS NA LEI MUNICIPAL N.° 3.744, DE 11 DE AGOSTO DE 2.015, PARA DISPOR SOBRE A OBRIGATORIEDADE DE PARADAS FLEXÍVEIS PARA EMBARQUE E DESEMBARQUE DE MULHERES NO TRANSPORTE COLETIVO MUNICIPAL NO PERÍODO NOTURNO, СОМО MEDIDA DE SEGURANÇA E IGUALDADE DE GÊNERO, E DÁ OUTRAS PROVIDÊNCIAS.\"",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_112_2025_-MULHERES_TRANSPORTE_PUBLICO.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_139-2025_-_Selo_Empresa_Amiga_da_Mulher.pdf": {
+  "baixado_em": "2026-11-06T18:46:48+00:00",
+  "bytes": 1390636,
+  "paginas": 3,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "c3e051ea0add4412abcc20a21bfe97885b77ea6a4fd6184016fc3623bd9883b4",
+  "titulo": "DISPÕE SOBRE A CRIAÇÃO DO SELO EMPRESA AMIGA DA MULHER E DÁ OUTRAS PROVIDÊNCIAS.",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_139-2025_-_Selo_Empresa_Amiga_da_Mulher.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_150_2025_-_SELO_EMPRESA_AMIGA_DO_JOVEM_E_DO_ADOLESCENTE.pdf": {
+  "baixado_em": "2026-11-06T18:46:41+00:00",
+  "bytes": 277505,
+  "paginas": 3,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "8627b8a0632b926e170188859a5e623e5bf3ceaa360088cd8f65d570c3d1f3f4",
+  "titulo": "\"INSTITUI O SELO “EMPRESA AMIGA DO JOVEM E DO ADOLESCENTE APRENDIZ”, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS.\"",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_150_2025_-_SELO_EMPRESA_AMIGA_DO_JOVEM_E_DO_ADOLESCENTE.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_178-2025_JOGOS_DE_AZAR_FINAL.pdf": {
   "baixado_em": "2026-11-06T18:26:04+00:00",
   "bytes": 335201,
@@ -808,6 +918,16 @@
   "sha256": "322c7c17db90a4852656ac8701b25a85ef2f4c88f92c634e0db7c0824055227f",
   "titulo": "INSTITUI O PROGRAMA DE PREVENCÃO AOS IMPACTOS DAS APOSTAS ONLINE (BETS) E DE COMBATE À LUDOPATIA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_178-2025_JOGOS_DE_AZAR_FINAL.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_191_2025_-_REMOCAO_PARA_HOSPITAIS_DE_REDE_PRIVADA.pdf": {
+  "baixado_em": "2026-11-06T18:46:26+00:00",
+  "bytes": 1074522,
+  "paginas": 4,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "6001f40bba3b87208716c65519a7085b63767cf1fa0a1e72ed687cbe576b9094",
+  "titulo": "DISPÕE SOBRE A POSSIBILIDADE DE REMOÇÃO DE PACIENTES ATENDIDOS PELO \"SERVIÇO DE ATENDIMENTO MÓVEL DE URGÊNCIA\" (SAMU) E DEMAIS EQUIPES DE SOCORRO PARA HOSPITAIS DA REDE PRIVADA, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS.",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_191_2025_-_REMOCAO_PARA_HOSPITAIS_DE_REDE_PRIVADA.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_36_2025_-_DIREITO_AO_ALEITAMENTO_MATERNO.pdf": {
   "baixado_em": "2026-11-06T18:26:13+00:00",
@@ -829,6 +949,16 @@
   "titulo": "DISPÕE SOBRE A INCLUSÃO PROGRESSIVA DE ÔNIBUS OU MICROÔNIBUS IMPULSIONADO POR MOTOR EXCLUSIVAMENTE ELÉTRICO NA FROTA DE TRANSPORTE PÚBLICO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_60_2025.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_No_172-2025_Denomina_Rua_Antonio_Medeiros_Bezerra_assinado.pdf": {
+  "baixado_em": "2026-11-06T18:46:39+00:00",
+  "bytes": 342301,
+  "paginas": 4,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "5e51926cde1a5134ebe428c8733ab60b90f26be11e79a8d0c51a1d63b15a7a00",
+  "titulo": "DENOMINA “RUA ANTONIO MEDEIROS BEZERRA\" O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS.",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_No_172-2025_Denomina_Rua_Antonio_Medeiros_Bezerra_assinado.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_166_2025_-_Instalacao_redutor_de_ar_sabesp_assinado_assinado.pdf": {
   "baixado_em": "2026-11-06T18:26:06+00:00",
   "bytes": 221297,
@@ -838,6 +968,56 @@
   "sha256": "5d47834d2bd1d2e0c764617075853d6c03c58eeb1de2c850f72f8fd52447d07f",
   "titulo": "DISPÕE SOBRE INSTALAÇÃO DE EQUIPAMENTO ELIMINADOR DE AR NA TUBULAÇÃO SISTEMA DE ABASTECIMENTO DE ÁGUA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_166_2025_-_Instalacao_redutor_de_ar_sabesp_assinado_assinado.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_188-2025.pdf": {
+  "baixado_em": "2026-11-06T18:46:30+00:00",
+  "bytes": 928211,
+  "paginas": 2,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "a415356b336c05fd6673ba7b0702dd8c970399def65921254c3acf266335009a",
+  "titulo": "INSTITUI O PROGRAMA DE DEFESA PESSOAL PARA MULHERES - \"EU ME DEFENDO\", E DÁ OUTRAS PROVIDÊNCIAS.",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_188-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_190-2025.pdf": {
+  "baixado_em": "2026-11-06T18:46:28+00:00",
+  "bytes": 5118274,
+  "paginas": 6,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "fec9221ce3e297e2d60779f238a55c6f7a003670886d72f90d5557d223219163",
+  "titulo": "INSTITUI O SISTEMA DE ESTACIONAMENTO ROTATIVO REMUNERADO DE VEÍCULOS EM VIAS E LOGRADOUROS PÚBLICOS DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_190-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_126_2025.pdf": {
+  "baixado_em": "2026-11-06T18:46:57+00:00",
+  "bytes": 452461,
+  "paginas": 4,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "9e278e86b4f7150b55faa451199a3f0424ff7e5cbfce3714e4c5477f7dde8019",
+  "titulo": "DISPÕE SOBRE A REGULAMENTAÇÃO DA CIRCULAÇÃO DE BICICLETAS ELÉTRICAS, CICLOMOTORES ELÉTRICOS E EQUIPAMENTOS DE MOBILIDADE INDIVIDUAL AUTOPROPELIDOS NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS.",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_126_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_128_2025.pdf": {
+  "baixado_em": "2026-11-06T18:46:55+00:00",
+  "bytes": 906753,
+  "paginas": 2,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "1dedfd0d2b6f8a8293e27696d545732d5d1e7c335ad4c4aa6aee2944672d9fb8",
+  "titulo": "INSTITUI O DIA MUNICIPAL DE CONSCIENTIZAÇÃO PARA O ENFRENTAMENTO DE CATÁSTROFES E DESASTRES NATURAIS NO MUNICÍPIO DE CUBATÃO",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_128_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_no_92_2025_-_SEMANA_DA_SAUDE_VASCULAR.pdf": {
+  "baixado_em": "2026-11-06T18:47:02+00:00",
+  "bytes": 318967,
+  "paginas": 3,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "28f7a42466cc05b84aec27b0266c517157ba2a0ce2a9aaf2626e8d6e0d6761ee",
+  "titulo": "INSTITUI NO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO A SEMANA DA SAÚDE VASCULAR E DÁ OUTRAS PROVIDÊNCIAS",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_no_92_2025_-_SEMANA_DA_SAUDE_VASCULAR.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Veto_Parcial_-_Of._245-2025-Sejur.pdf": {
   "baixado_em": "2026-11-06T17:21:16+00:00",

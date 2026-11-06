@@ -1,0 +1,48 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "132",
+  "ano": "2025",
+  "autoria": "ALEXANDRE MENDES DA SILVA",
+  "ementa": "DISPÕE SOBRE A PROTEÇÃO E O BEM-ESTAR ANIMAL, VEDANDO O USO DE COLEIRAS ANTILATIDO E SIMILARES, BEM COMO COLEIRAS DO TIPO ENFORCADOR QUE POSSUAM GARRAS, PINOS OU ESPÍCULAS, NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto proíbe o uso de coleiras antilatido e coleiras enforcadoras com garras, pinos ou espículas em animais no município de Cubatão.",
+  "o_que_muda": [
+   "Fica proibido o uso de coleiras que emitem sons, vibrações, choques ou odores para impedir latidos.",
+   "Fica proibido o uso de coleiras enforcadoras com garras, pinos ou espículas que causem ferimentos.",
+   "O Poder Executivo terá 90 dias para regulamentar a lei, definir a fiscalização e as multas.",
+   "O dinheiro arrecadado com as multas poderá ser usado em ações de proteção animal."
+  ],
+  "quem_e_afetado": "Os tutores de animais de estimação na cidade de Cubatão.",
+  "justificativa_do_autor": "Segundo o autor, esses métodos causam dor, medo e estresse nos animais, reprimindo comportamentos naturais como o latido e configurando práticas de maus-tratos.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quais serão os valores das multas ou como será feita a fiscalização no dia a dia, pois isso dependerá da futura regulamentação.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto define um prazo de 90 dias para o Poder Executivo regulamentar a lei.",
+    "trecho": "O Poder Executivo regulamentará esta lei no prazo de 90 (noventa) dias"
+   },
+   {
+    "ponto": "As regras de fiscalização e as penalidades ainda serão definidas na regulamentação.",
+    "trecho": "estabelecendo as medidas de fiscalização e as penalidades administrativas aplicáveis"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O documento não especifica o valor das multas que poderão ser aplicadas aos infratores.",
+    "trecho": "",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "7521d3fe39d74738",
+ "gerado_em": "2026-11-06T18:50:22Z"
+}

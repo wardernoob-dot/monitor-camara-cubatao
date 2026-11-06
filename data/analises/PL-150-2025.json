@@ -1,0 +1,45 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "150",
+  "ano": "2025",
+  "autoria": "RONALDO ARAÚJO QUEIROZ",
+  "ementa": "INSTITUI O SELO “EMPRESA AMIGA DO JOVEM E DO ADOLESCENTE APRENDIZ”, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_150_2025_-_SELO_EMPRESA_AMIGA_DO_JOVEM_E_DO_ADOLESCENTE.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Cria o selo Empresa Amiga do Jovem e do Adolescente Aprendiz para reconhecer empresas que contratam jovens e oferecem desenvolvimento profissional.",
+  "o_que_muda": [
+   "Empresas que cumprem regras de contratação de jovens podem receber o selo.",
+   "O selo vale por um ano e pode ser usado em materiais de divulgação da empresa.",
+   "A Prefeitura precisará definir as regras práticas da lei."
+  ],
+  "quem_e_afetado": "Empresas locais e jovens em busca de oportunidades de trabalho ou capacitação.",
+  "justificativa_do_autor": "Segundo o autor, o projeto busca combater o desemprego juvenil, incentivar a autonomia financeira dos jovens e valorizar empresas que investem nessa faixa etária.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quais serão os custos exatos para a Prefeitura nem como será feita a avaliação das empresas na prática.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O selo tem validade de um ano e pode ser renovado.",
+    "trecho": "O Selo “Empresa Amiga do Jovem e do Adolescente Aprendiz” terá validade de um ano, podendo ser renovado"
+   },
+   {
+    "ponto": "O texto prevê que a Prefeitura regulamentará a lei.",
+    "trecho": "O Poder Executivo regulamentará a presente Lei, no que couber."
+   },
+   {
+    "ponto": "O texto menciona que os gastos sairão do orçamento próprio, mas não traz valores.",
+    "trecho": "As despesas com a execução desta lei correrão por conta das dotações orçamentárias próprias"
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "966f8ec282",
+ "hash_documento": "36bcdc08f0766635",
+ "gerado_em": "2026-11-06T18:50:39Z"
+}

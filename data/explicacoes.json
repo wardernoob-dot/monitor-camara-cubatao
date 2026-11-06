@@ -145,12 +145,12 @@
   "texto": "Cria o selo empresa amiga da mulher em Cubatão."
  },
  "pl-141-2025": {
-  "hash": "52fde13ada58",
-  "modelo": "gemini-3.1-flash-lite",
-  "texto": "Define regras para a contratação de aprendizes por empresas que ganham licitações da Prefeitura."
+  "hash": "315d95998f5d",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Exige a contratação de aprendizes por empresas que vencerem licitações públicas na cidade de Cubatão."
  },
  "pl-146-2025": {
-  "hash": "031a580d2306",
+  "hash": "b7161d06c872",
   "modelo": "gemini-3.5-flash-lite",
   "texto": "Cria o programa de prevenção à depressão pós-parto no município de Cubatão."
  },
