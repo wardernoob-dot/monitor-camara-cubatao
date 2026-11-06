@@ -38,11 +38,25 @@ Pipeline único, orquestrado em `camara/__main__.py` (`tudo` chama as etapas nes
 
 Pontos que exigem ler mais de um arquivo:
 
-- **`docs/` é saída commitada.** O build do front (`npm run build`) e as fotos processadas (`docs/fotos/*.webp`) ficam no repo e são servidos pelo GitHub Pages. O Actions só atualiza `docs/data/` e `data/`, sem Node. Mudou o front, tem que rodar o build e commitar `docs/`.
+- **`docs/` é saída commitada.** O build do front (`npm run build`) e as fotos processadas (`docs/fotos/*.webp`) ficam no repo e são servidos pelo GitHub Pages. O robô do Actions só commita `data/` (nenhum dos últimos 30 commits do robô tocou em `docs/`), então o `docs/data/dados.json` do GitHub Pages só muda quando alguém regenera e commita. O Surge é diferente: o workflow publica o `docs/` gerado na própria rodada. Mudou o front, tem que rodar o build e commitar `docs/`.
 - **O YouTube bloqueia IPs de nuvem.** O Actions não consegue pegar o spec do storyboard; quem faz isso é o script do PC (`pc/`, tarefa agendada no Windows) que atualiza `data/storyboard_specs.json`. `sonda-storyboard.yml` é um teste manual que escreve só no branch `amostras`.
-- **Automação diária:** `.github/workflows/coleta.yml` (08h17 BRT) roda os testes, `python -m camara tudo` e commita `data/` como `monitor-camara-bot`. Testes quebrados bloqueiam a coleta.
+- **Automação:** `.github/workflows/coleta.yml` roda a cada 4 horas (minuto 17), executa os testes e `python -m camara tudo`, commita `data/` como `monitor-camara-bot` e publica o `docs/` em https://votoavoto.surge.sh (precisa dos secrets `SURGE_LOGIN` e `SURGE_TOKEN`; sem eles o passo é pulado). Testes quebrados bloqueiam a coleta. `publicar-surge.yml` republica no Surge quando `docs/`, `fotos/` ou `camara/site.py` mudam na `main`. Nunca commite `docs/CNAME`: o Surge o cria localmente e, commitado, derruba o endereço do GitHub Pages (já está no `.gitignore`).
 - **Fotos:** `fotos/` recebe imagens com qualquer nome; `site.py:preparar_fotos` casa por apelido/nome civil (aceita extensão repetida tipo `ivan.jpg..jpg` e nome parcial único), recorta no rosto e converte para webp. Detalhes em `fotos/LEIA-ME.md`.
 - Suplentes com ao menos uma sessão em 2026 ganham página de vereador.
+
+## Skills do projeto
+
+Ficam em `.claude/skills/<nome>/SKILL.md`. São roteiros sugeridos, não regras. Cada uma termina dizendo o que foi e o que não foi verificado.
+
+| Quando | Skill |
+|---|---|
+| Depois de uma rodada do robô, ou ao revisar commits `dados: coleta ...` | `conferir-coleta-do-dia` |
+| Mexeu em `parser_resumo.py`, `consolidar.py`, `site.py` ou `posts.py` | `revisar-regra-de-voto` |
+| Mexeu em `painel.py`/`videos.py`, ou uma votação do painel parece errada | `validar-painel` |
+| Mudou o que o site ou os posts mostram de voto, ou antes de publicar | `conferir-fonte` |
+| Criou ou mudou texto ou tela que o morador lê | `clareza-pro-leitor` |
+
+Ordem sugerida para uma mudança que vai pra `main`: `revisar-regra-de-voto` (se tocou em voto) → `conferir-fonte` → `clareza-pro-leitor` (se tocou em tela) → revisão do dono do projeto.
 
 ## Regras de interpretação de voto (ler antes de mexer em parser/consolidação/site)
 
