@@ -402,3 +402,46 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 @media print { .topo nav, .filtros, .busca, .rodape__poeira { display: none; } body { background: #fff; } }
+
+/* ---------- indice de atuacao */
+.filtros--ordem { align-items: center; margin: 1.5rem 0 .5rem; }
+.filtros__rotulo { font-size: .85rem; color: var(--color-surface-3); margin-right: .25rem; }
+.selo-cinza { display: inline-block; font-size: .7rem; font-weight: 600; line-height: 1.3; padding: .1rem .45rem; border-radius: var(--raio-pilula); background: #f0f0f0; color: var(--color-secondary); border: 1px solid var(--color-linha); white-space: nowrap; vertical-align: .15em; margin-right: .35rem; }
+.indice-mini { display: grid; gap: .35rem; margin-top: .6rem; }
+.indice-mini__nota { display: flex; align-items: baseline; gap: .2rem; flex-wrap: wrap; }
+.indice-mini__nota strong { font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; letter-spacing: -0.04em; line-height: 1; }
+.indice-mini__nota > span:not(.selo-cinza) { color: var(--color-surface-3); font-size: .85rem; margin-right: .4rem; }
+.indice-mini__barras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+.indice-mini__barra { height: 4px; border-radius: 2px; background: var(--color-linha); overflow: hidden; }
+.indice-mini__barra > span { display: block; height: 100%; background: var(--color-accent); }
+.indice-mini__barra--na { background: repeating-linear-gradient(90deg, var(--color-linha) 0 3px, transparent 3px 5px); }
+.vereadores--compacto .indice-mini { grid-column: 2; }
+.indice { max-width: var(--larg-texto); }
+.indice__topo { display: flex; align-items: end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.indice__nota { margin: 0; line-height: 1; }
+.indice__nota strong { font-family: var(--font-display); font-weight: 500; font-size: 4rem; letter-spacing: -0.05em; }
+.indice__nota span { color: var(--color-surface-3); font-size: 1.2rem; }
+.indice__media { margin: 0 0 .4rem; color: var(--color-secondary); font-size: .95rem; }
+.indice__pilares { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.indice__pilar-nome { display: flex; justify-content: space-between; gap: 1rem; margin: 0 0 .35rem; font-weight: 500; }
+.indice__pilar-pts { color: var(--color-surface-3); font-weight: 400; font-size: .9rem; white-space: nowrap; }
+.indice__pilar .nota { margin: 0; }
+.indice__trilho { position: relative; display: block; height: 8px; border-radius: 4px; background: var(--color-linha); }
+.indice__barra { position: absolute; inset: 0 auto 0 0; border-radius: 4px; background: var(--color-accent); }
+.indice__marca { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; background: var(--color-ink); border-radius: 1px; }
+.indice__marca--legenda { position: static; display: inline-block; width: 2px; height: .9em; vertical-align: -.1em; margin: 0 .3rem 0 0; }
+.indice__legenda { font-size: .8rem; color: var(--color-surface-3); margin: .75rem 0 1rem; }
+.indice__memoria { background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 12px; padding: .75rem 1.1rem; margin-bottom: 1rem; }
+.indice__memoria summary { cursor: pointer; font-weight: 500; }
+.indice__memoria-pilar h3 { font-size: 1.05rem; letter-spacing: -0.02em; margin: 1.25rem 0 .5rem; }
+.indice__conta { color: var(--color-secondary); font-size: .9rem; }
+
+/* ---------- veto do prefeito */
+.veto { max-width: var(--larg-texto); margin: 2.5rem 0 0; padding: 1.25rem 1.25rem 1rem; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-left: 3px solid var(--color-nao); border-radius: 12px; }
+.veto .secao__titulo { margin: 0 0 .75rem; font-size: clamp(1.35rem, 2.6vw, 1.7rem); }
+.veto__status { margin: 0 0 1rem; display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.veto__pilula { font-size: .78rem; font-weight: 600; padding: .15rem .6rem; border-radius: 8px; border: 1px solid var(--color-linha); background: #f3f3f3; }
+.veto__pilula--mantido { background: #fde8e6; color: #8a231c; border-color: #f3c3be; }
+.veto__pilula--derrubado { background: #e5f2e7; color: #1d5a2a; border-color: #bcdcc2; }
+.veto h3 { font-size: 1.05rem; letter-spacing: -0.02em; margin: 1.25rem 0 .4rem; }
+.veto__meta { font-size: .9rem; color: var(--color-secondary); }

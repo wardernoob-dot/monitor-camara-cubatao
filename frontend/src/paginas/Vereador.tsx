@@ -1,3 +1,4 @@
+import { CartaoIndice } from "../indice";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDados, type Votacao, type Voto } from "../dados";
@@ -88,6 +89,8 @@ export default function VereadorPagina() {
         <Num valor={v.contra_resultado} rotulo="votou diferente do resultado final" />
         <Num valor={v.contagem.BRANCO} rotulo="vezes presente sem votar (desde set.)" />
       </dl>
+
+      <CartaoIndice i={v.indice} nome={v.exibicao} />
 
       {alinhados.length > 0 && (
         <section aria-labelledby="alinh" className="duas-colunas">

@@ -30,6 +30,7 @@ MAX_PDF_BYTES = 25 * 1024 * 1024
 MAX_PAGINAS_PDF = 250
 
 _IGNORAR = re.compile(r"/RSS$|/sendto_form|/print|#|mailto:|/login|/search|@@", re.I)
+_EH_VETO = re.compile(r"(?i)veto|of[._ -]*\d|oficio|of[íi]cio")
 _ANO = re.compile(r"\b(20\d{2})\b")
 
 
@@ -127,10 +128,10 @@ class Coletor:
     # ---------- varredura ----------
     def varrer(self, secao: str) -> list[dict]:
         prefixo = SECOES[secao]
-        fila = [(BASE + prefixo, 0, None)]
+        fila = [(BASE + prefixo, 0, None, False)]
         visitados, docs = set(), []
         while fila:
-            url, prof, titulo_pasta = fila.pop(0)
+            url, prof, titulo_pasta, so_vetos = fila.pop(0)
             if url in visitados or prof > 3:
                 continue
             visitados.add(url)
@@ -142,8 +143,15 @@ class Coletor:
                 continue
             for ln in extrair_links(r.text, url, prefixo):
                 ano = _ANO.search(ln.titulo)
-                # filtro de ano so nas pastas de ano (primeiro nivel)
+                vetos_ln = so_vetos
+                # filtro de ano so nas pastas de ano (primeiro nivel). Excecao: na pasta de projetos do ano
+                # anterior entram so os oficios de veto (veto de projeto de 2025 e votado em 2026)
                 if prof == 0 and ano and int(ano.group(1)) < self.desde:
+                    if secao == "projetos" and int(ano.group(1)) == self.desde - 1:
+                        vetos_ln = True
+                    else:
+                        continue
+                if vetos_ln and prof > 0 and not _EH_VETO.search(f"{ln.titulo} {ln.url}"):
                     continue
                 alvo = url_download(ln.url)
                 if alvo != ln.url or alvo.lower().endswith(".pdf") or "/arquivos/" in ln.url:
@@ -151,7 +159,7 @@ class Coletor:
                     # baixar() confere o content-type e descarta o que nao for PDF.
                     docs.append({"url": alvo, "titulo": ln.titulo, "secao": secao})
                 else:
-                    fila.append((ln.url, prof + 1, ln.titulo))
+                    fila.append((ln.url, prof + 1, ln.titulo, vetos_ln))
         # dedup preservando o primeiro titulo visto
         unicos = {}
         for d in docs:

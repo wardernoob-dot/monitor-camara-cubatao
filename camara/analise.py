@@ -260,8 +260,8 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
     vistas = set()
     for arq in sorted((dados / "consolidado").glob("*.json"), reverse=True):  # mais recentes primeiro
         for m in json.loads(arq.read_text("utf-8"))["materias"]:
-            if m["tipo"] not in TIPOS_ANALISADOS or not m.get("numero") or not m["votacoes"]:
-                continue
+            if m["tipo"] not in TIPOS_ANALISADOS or m["tipo"] == "VETO" or not m.get("numero") or not m["votacoes"]:
+                continue  # vetos: analisar_vetos(), com prompt proprio
             k = chave_materia(m["tipo"], m["numero"], m.get("ano"))
             if k in vistas:
                 continue
@@ -329,3 +329,90 @@ def carregar(dados: Path, tipo: str, numero: str, ano: str | None) -> dict | Non
     if not p.is_relative_to(pasta):
         raise ValueError(f"caminho de analise invalido: {p}")
     return json.loads(p.read_text("utf-8")) if p.exists() else None
+
+
+# ---------------------------------------------------------------- oficios de veto
+
+FUNDAMENTOS = {"competencia_ou_iniciativa", "inconstitucionalidade", "custo_ou_orcamento", "interesse_publico",
+               "tecnica_ou_redacao", "outro"}
+
+
+def _prompt_veto() -> tuple[str, str]:
+    txt = (RAIZ / "prompts" / "veto.md").read_text("utf-8")
+    corpo = txt.split("\n---\n", 1)[1].strip()
+    return corpo, hashlib.sha256(corpo.encode()).hexdigest()[:10]
+
+
+def conferir_veto(saida: dict, texto: str) -> dict:
+    base = _n(texto)
+    out = {
+        "resumo": str(saida.get("resumo") or "").strip(),
+        "o_que_foi_vetado": [str(x).strip() for x in (saida.get("o_que_foi_vetado") or []) if str(x).strip()][:6],
+        "fundamento": saida.get("fundamento") if saida.get("fundamento") in FUNDAMENTOS else "outro",
+        "limitacoes": str(saida.get("limitacoes") or "").strip(),
+        "razoes": [], "razoes_descartadas": [],
+    }
+    for r in saida.get("razoes") or []:
+        razao, trecho = str(r.get("razao") or "").strip(), str(r.get("trecho") or "").strip()
+        if razao and trecho and _n(trecho) and _n(trecho) in base:
+            out["razoes"].append({"razao": razao, "trecho": trecho})
+        elif razao:
+            out["razoes_descartadas"].append({"razao": razao, "trecho": trecho, "motivo": "trecho nao encontrado no oficio"})
+    out["razoes"] = out["razoes"][:5]
+    if not out["resumo"]:
+        raise ValueError("modelo nao devolveu resumo do veto")
+    return out
+
+
+def analisar_vetos(dados: Path, oficios: list[dict], pausa: float = 4.0, http=None) -> dict:
+    """Todo oficio de veto, votado ou nao: transcreve se for escaneado e le as razoes do prefeito.
+    Grava data/analises/VETO-<num>-<ano>.json (num/ano do projeto vetado)."""
+    from .vetos import texto_doc
+
+    dados = Path(dados)
+    (dados / "analises").mkdir(exist_ok=True)
+    corpo, versao = _prompt_veto()
+    rel = {"novas": 0, "em_cache": 0, "sem_texto": 0, "ocr": 0, "erros": []}
+    for o in oficios:
+        k = chave_materia("VETO", o["numero"], o["ano"])
+        meta = {"sha256": o["sha256"]}
+        if o.get("precisa_ocr") and not (dados / "texto" / f"{o['sha256']}.ocr.txt").exists():
+            try:
+                if transcrever_pdf(dados, o["url"], o["sha256"], http):
+                    rel["ocr"] += 1
+                    time.sleep(pausa)
+            except Exception as e:  # noqa: BLE001
+                rel["erros"].append(f"ocr {k}: {e!r}"[:200])
+        texto = flat(normalize(texto_doc(dados, meta)))
+        if len(texto) < 300:
+            rel["sem_texto"] += 1
+            continue
+        h = hashlib.sha256(texto.encode()).hexdigest()[:16]
+        saida = dados / "analises" / f"{k}.json"
+        if saida.exists():
+            antigo = json.loads(saida.read_text("utf-8"))
+            if antigo.get("tipo_analise") == "veto" and antigo.get("hash_documento") == h and antigo.get("versao_prompt") == versao:
+                rel["em_cache"] += 1
+                continue
+        fonte = "transcricao automatica do PDF escaneado" if o.get("precisa_ocr") else "texto do oficio publicado no site da Camara"
+        prompt = corpo.replace("{fonte}", fonte).replace("{documento}", texto[:MAX_DOC])
+        try:
+            if rel["novas"]:
+                time.sleep(pausa)
+            bruto, modelo = gerar(prompt, http)
+            res = conferir_veto(_json(bruto), texto)
+        except Exception as e:  # noqa: BLE001
+            rel["erros"].append(f"{k}: {e!r}"[:200])
+            print(f"  ! veto {k}: {e!r}"[:200])
+            continue
+        saida.write_text(json.dumps({
+            "tipo_analise": "veto",
+            "materia": {"tipo": "VETO", "numero": o["numero"], "ano": o["ano"], "alcance": o["alcance"]},
+            "documento": {"fonte": fonte, "url": o["url"], "oficio": o.get("oficio"), "data_oficio": o.get("data_oficio")},
+            "analise": res, "modelo": modelo, "versao_prompt": versao, "hash_documento": h,
+            "gerado_em": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        }, ensure_ascii=False, indent=1), "utf-8")
+        rel["novas"] += 1
+    print(f"  vetos: {rel['novas']} lido(s), {rel['em_cache']} em cache, {rel['sem_texto']} sem texto, "
+          f"{rel['ocr']} PDF(s) transcrito(s), {len(rel['erros'])} erro(s)")
+    return rel

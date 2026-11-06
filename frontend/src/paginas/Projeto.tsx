@@ -4,6 +4,7 @@ import { Grade, NotaFonte, Placar, ResultadoTag, Situacao } from "../componentes
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { Destaque, EtapaComDica } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
+import BlocoVeto from "../veto";
 
 export default function ProjetoPagina() {
   const { slug = "" } = useParams();
@@ -49,6 +50,8 @@ export default function ProjetoPagina() {
         {m.lei && <div><dt>Lei</dt><dd>Lei {m.lei.numero}, publicada no Diário Oficial em {dataExtenso(m.lei.data)}{m.lei.url && <> (<a href={m.lei.url} rel="noopener">ver publicação</a>)</>}</dd></div>}
         {m.veto && <div><dt>Veto</dt><dd>Veto {m.veto.alcance} do prefeito{m.veto.url && <> (<a href={m.veto.url} rel="noopener">ver ofício</a>)</>}. {m.veto.resultado === "veto_mantido" ? <>A Câmara manteve o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : m.veto.resultado === "veto_derrubado" ? <>A Câmara derrubou o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : <>A Câmara ainda não votou o veto.</>}{m.veto.pagina && <> <Link to={`/projetos/${m.veto.pagina}`}>Ver a votação do veto</Link>.</>}</dd></div>}
       </dl>
+
+      {m.veto && <BlocoVeto m={m} />}
 
       {eventos.length > 0 && (
         <section aria-labelledby="votacoes">

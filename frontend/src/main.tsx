@@ -19,11 +19,13 @@ import ComoFunciona from "./paginas/ComoFunciona";
 import NaoEncontrado from "./paginas/NaoEncontrado";
 
 function RolaParaTopo() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const alvo = hash ? document.getElementById(decodeURIComponent(hash.slice(1))) : null;
+    if (alvo) alvo.scrollIntoView();
+    else window.scrollTo(0, 0);
     document.getElementById("conteudo")?.focus({ preventScroll: true });
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 }
 

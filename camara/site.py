@@ -158,8 +158,7 @@ class Base:
                 mu = AN.RE_URL_PROJ.search(meta["url"])
                 mv = AN.RE_VETO_TIT.search(meta.get("titulo") or "")
                 if mv:
-                    m = self.materia("PL", mv.group(2), mv.group(3))
-                    m["veto"] = {"alcance": mv.group(1).lower(), "url": meta["url"]}
+                    pass  # oficio de veto: ligar_oficios_de_veto()
                 elif mu:
                     m = self.materia(mu.group(1).upper(), mu.group(2), mu.group(3))
                     m["documento"] = meta["url"]
@@ -252,6 +251,30 @@ class Base:
             dia["materias"] = list({id(m): m for m in dia["materias"]}.values())
             self.dias.append(dia)
 
+    def ligar_oficios_de_veto(self):
+        """Oficio do prefeito (numero, data, PDF) e a leitura das razoes do veto, no projeto vetado."""
+        from . import vetos as VT
+
+        assuntos = {(m["tipo"], m["numero"], m["ano"]): m["assunto"] or "" for m in self.materias.values()
+                    if m["numero"] and m["ano"] and m["tipo"] in ("PL", "PLC")}
+        for o in VT.oficios(self.dados, assuntos):
+            m = self.materia(o["tipo"], o["numero"], o["ano"])
+            v = m["veto"] or {}
+            v.update({"alcance": v.get("alcance") or o["alcance"], "url": o["url"], "oficio": o["oficio"],
+                      "data_oficio": o["data_oficio"], "ligacao": o["ligacao"]})
+            leitura = AN.carregar(self.dados, "VETO", o["numero"], o["ano"])
+            if leitura and leitura.get("tipo_analise") == "veto":
+                a = leitura["analise"]
+                v["leitura"] = {"resumo": a["resumo"], "o_que_foi_vetado": a["o_que_foi_vetado"], "razoes": a["razoes"],
+                                "fundamento": a["fundamento"], "limitacoes": a["limitacoes"],
+                                "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", leitura["modelo"]),
+                                "fonte": leitura["documento"]["fonte"]}
+            m["veto"] = v
+            # a pagina da votacao do veto mostra o mesmo oficio
+            vv = self.materias.get(f"veto-{o['numero']}-{o['ano']}") or self.materias.get(f"veto-{o['numero']}-x")
+            if vv is not None:
+                vv["veto"] = v
+
     def _nome(self, k: str) -> str:
         return self.vereadores[k]["exibicao"] if k in self.vereadores else display(k)
 
@@ -284,7 +307,7 @@ class Base:
         ev = {
             "data": c["data"], "materia": m, "etapa": x["etapa"], "etapa_txt": rotulo_etapa(x),
             "resultado": res, "sim": sim, "nao": nao, "votos": votos, "fonte": fonte,
-            "link": p.get("link"), "detalhe": r.get("detalhe"), "resumo_url": r.get("fonte"),
+            "link": p.get("link"), "detalhe": r.get("detalhe"), "resumo_url": r.get("fonte"), "lido": p.get("lido"),
             "grade": [], "ordem": len(self.votacoes),
         }
         for k in LAYOUT_2026:
@@ -313,7 +336,7 @@ class Base:
             m["assunto_txt"] = frase(m["assunto"]) if m["assunto"] else ""
             m["situacao"], m["situacao_cls"] = _situacao(m)
             an = AN.carregar(self.dados, m["tipo"], m["numero"], m["ano"]) if m["numero"] and m["ano"] else None
-            if an and not an["documento"]["so_ementa"]:
+            if an and an.get("tipo_analise") != "veto" and not an["documento"].get("so_ementa"):
                 m["analise"] = an
             m["autores_obj"] = [self.vereadores[k] for k in m["autores"] if k in self.vereadores]
             m["ultima_data"] = max([e["data"] for e in m["eventos"]] + m["pautas"] or [""])
@@ -351,6 +374,7 @@ class Base:
             v["leis"] = sum(1 for m in v["projetos"] if m["lei"])
             v["faltas"] = pres.get("ausente", 0) + pres.get("justificada", 0)
         self.dias.sort(key=lambda d: d["data"], reverse=True)
+        calcular_indice(self)
 
     def materias_publicas(self) -> list[dict]:
         tipos = ("PL", "PLC", "PR", "PDL", "PELOM")
@@ -429,6 +453,157 @@ def sentido(e: dict) -> str | None:
     if e["materia"]["tipo"] == "VETO":
         return None
     return "direto"
+
+
+# =============================================================== indice de atuacao (0 a 10)
+
+PESO_SIMBOLICO = 0.3
+APROVADOS = ("aprovado", "lei", "veto")
+TIPOS_PRODUCAO = ("PL", "PLC", "PR", "PDL", "PELOM")
+MIN_SESSOES = 10
+RE_RQ_PROCEDIMENTO = re.compile(r"SOLICITANDO QUE O PROCESSO|REGIME DE URGENCIA|SESSAO SECRETA|SOLICITANDO A PRORROGACAO|ATO SOLENE|SESSAO SOLENE")
+RE_AUTOR_LIDO = re.compile(r"Autor(?:ia)?\s*:\s*(?:Vereador[a]?\s+)?(.+)$", re.I)
+
+
+def _peso_tema(m: dict) -> float:
+    t = m.get("tema") or ""
+    if t.startswith("Homenagens"):
+        return PESO_SIMBOLICO
+    if m["tipo"] == "RQ" and (t == "Funcionamento da Câmara" or RE_RQ_PROCEDIMENTO.search(V._sem_acento_maiusc(m.get("assunto") or ""))):
+        return PESO_SIMBOLICO  # pedido de procedimento interno (urgencia, prorrogacao, sessao secreta): nao e cobranca ao Executivo
+    return 1.0
+
+
+def _br(x: float, casas: int = 2) -> str:
+    return f"{x:.{casas}f}".replace(".", ",")
+
+
+def _pct(a: float, b: float) -> float:
+    return a / b if b else 0.0
+
+
+def calcular_indice(b: "Base") -> None:
+    """Indice de Atuacao em 4 pilares (25 + 25 + 35 + 15 = 100 pontos, exibido de 0 a 10).
+    Toda conta fica registrada em v['indice']['pilares'][...]['itens'][...]['conta'] (memoria de calculo)."""
+    ap = {chave(n): k for k, n in {**APELIDO, **APELIDO_EXTRA}.items()}
+    vs = b.vereadores
+
+    # producao ponderada: tema (homenagem 0,3) e coautoria (1/raiz de k)
+    prod = {k: {"apresentados": 0.0, "aprovados": 0.0, "leis": 0.0, "n_ap": 0, "n_aprov": 0, "n_leis": 0} for k in vs}
+    fisc = {k: {"rq": 0.0, "n_rq": 0, "emendas": 0.0, "n_em": 0} for k in vs}
+    for m in b.materias.values():
+        autores = [k for k in m["autores"] if k in vs]
+        if not autores:
+            continue
+        w = _peso_tema(m) / (len(autores) ** 0.5)
+        for k in autores:
+            if m["tipo"] in TIPOS_PRODUCAO:
+                prod[k]["apresentados"] += w
+                prod[k]["n_ap"] += 1
+                if m["situacao_cls"] in APROVADOS:
+                    prod[k]["aprovados"] += w
+                    prod[k]["n_aprov"] += 1
+                if m["lei"] or (m["veto"] or {}).get("resultado") == "veto_derrubado":
+                    prod[k]["leis"] += w
+                    prod[k]["n_leis"] += 1
+            elif m["tipo"] == "RQ" and m["situacao_cls"] in APROVADOS:
+                fisc[k]["rq"] += w
+                fisc[k]["n_rq"] += 1
+    # emendas e relatorios: autor lido no painel (so desde set/2026)
+    vistos = set()
+    for m in b.materias.values():
+        for e in m["eventos"]:
+            if e["etapa"] not in ("emenda", "unica") or not e.get("lido"):
+                continue
+            if e["etapa"] == "unica" and m["tipo"] != "RELATORIO":
+                continue
+            ma = RE_AUTOR_LIDO.search(e["lido"])
+            k = ap.get(chave(ma.group(1))) if ma else None
+            k = k or (b.reg.resolver(ma.group(1), cutoff=0.8)[0] if ma else None)
+            if k in fisc and (m["slug"], k) not in vistos:
+                vistos.add((m["slug"], k))
+                fisc[k]["emendas"] += 1
+                fisc[k]["n_em"] += 1
+
+    base_norm = [k for k, v in vs.items() if v["em_exercicio"] and v["sessoes_total"] >= MIN_SESSOES]
+    def teto(d, campo):
+        return max([d[k][campo] for k in base_norm] + [0.0])
+    tetos = {c: teto(prod, c) for c in ("apresentados", "aprovados", "leis")}
+    tetos.update({c: teto(fisc, c) for c in ("rq", "emendas")})
+
+    for k, v in vs.items():
+        pres = v["presenca"]
+        s_tot = v["sessoes_total"]
+        s_p, s_j, s_a = pres.get("sim", 0), pres.get("justificada", 0), pres.get("ausente", 0)
+        painel = [x for x in v["votos"] if x["ev"]["fonte"] == "painel"]
+        c = Counter(x["voto"] for x in painel)
+        presente_painel = c["SIM"] + c["NAO"] + c["BRANCO"]
+        alta = [x for x in painel if x["ev"]["materia"]["relevancia"]["nivel"] == "alta"]
+        ca = Counter(x["voto"] for x in alta)
+        presente_alta = ca["SIM"] + ca["NAO"] + ca["BRANCO"]
+        presidente = v.get("cargo") == "presidente"
+
+        def item(nome, pts, mx, conta):
+            return {"nome": nome, "pontos": round(pts, 2), "max": mx, "conta": conta}
+
+        a1 = 15 * max(0.0, _pct(s_p - 0.5 * s_j - 1.5 * s_a, s_tot))
+        b1 = 10 * (1 - _pct(c["AUSENTE"], len(painel))) if painel else 0.0
+        pil1 = [item("Presença nas sessões", a1, 15,
+                     f"{s_p} presenças, {s_j} faltas justificadas (peso 0,5) e {s_a} sem justificativa (peso 1,5) em {s_tot} sessões: "
+                     f"15 × ({s_p} − 0,5×{s_j} − 1,5×{s_a}) / {s_tot}"),
+                item("No plenário na hora de votar", b1, 10,
+                     f"ausente em {c['AUSENTE']} de {len(painel)} votações do painel (desde set/2026): 10 × (1 − {c['AUSENTE']}/{len(painel)})"
+                     if painel else "sem votações do painel")]
+        a2 = 15 * _pct(c["SIM"] + c["NAO"], presente_painel)
+        b2 = 10 * _pct(ca["SIM"] + ca["NAO"], presente_alta)
+        pil2 = [item("Votou quando estava presente", a2, 15,
+                     f"votou sim ou não em {c['SIM'] + c['NAO']} das {presente_painel} votações do painel em que estava presente"),
+                item("Votou nos projetos em destaque", b2, 10,
+                     f"votou sim ou não em {ca['SIM'] + ca['NAO']} das {presente_alta} votações de projetos em destaque em que estava presente")]
+        p = prod[k]
+        pil3 = [item("Projetos apresentados", 15 * _pct(p["apresentados"], tetos["apresentados"]), 15,
+                     f"{p['n_ap']} projetos, {_br(p['apresentados'], 2)} pontos ponderados (homenagem vale 0,3; coautoria divide por √autores); "
+                     f"maior da Câmara: {_br(tetos['apresentados'], 2)}"),
+                item("Projetos aprovados", 10 * _pct(p["aprovados"], tetos["aprovados"]), 10,
+                     f"{p['n_aprov']} aprovados, {_br(p['aprovados'], 2)} ponderados; maior da Câmara: {_br(tetos['aprovados'], 2)}"),
+                item("Viraram lei", 10 * _pct(p["leis"], tetos["leis"]), 10,
+                     f"{p['n_leis']} viraram lei (Diário Oficial do ano) ou tiveram o veto derrubado, {_br(p['leis'], 2)} ponderados; "
+                     f"maior da Câmara: {_br(tetos['leis'], 2)}")]
+        f = fisc[k]
+        pil4 = [item("Requerimentos aprovados", 10 * _pct(f["rq"], tetos["rq"]), 10,
+                     f"{f['n_rq']} requerimentos aprovados, {_br(f['rq'], 2)} ponderados (homenagem e pedido de procedimento interno, como urgência ou prorrogação, valem 0,3); "
+                     f"maior da Câmara: {_br(tetos['rq'], 2)}"),
+                item("Emendas e relatórios de comissão", 5 * _pct(f["emendas"], tetos["emendas"]), 5,
+                     f"{f['n_em']} emendas ou relatórios votados com autoria no painel (desde set/2026); maior da Câmara: {_br(tetos['emendas'], 0)}")]
+        sem_painel = not painel
+        if sem_painel:  # nao exerceu mandato no periodo do painel: o item nao conta (peso redistribuido)
+            pil1[1]["nao_se_aplica"] = True
+            pil1[1]["conta"] = "não exerceu mandato no período com painel (desde set/2026); item não entra na nota"
+        pilares = [
+            {"id": "assiduidade", "nome": "Assiduidade", "max": 25 if not sem_painel else 15, "itens": pil1},
+            {"id": "participacao", "nome": "Participação nas votações", "max": 25, "itens": pil2,
+             "nao_se_aplica": presidente or sem_painel},
+            {"id": "producao", "nome": "Produção legislativa", "max": 35, "itens": pil3},
+            {"id": "fiscalizacao", "nome": "Fiscalização e plenário", "max": 15, "itens": pil4},
+        ]
+        for pl in pilares:
+            pl["pontos"] = round(sum(i["pontos"] for i in pl["itens"] if not i.get("nao_se_aplica")), 2)
+        conta = [pl for pl in pilares if not pl.get("nao_se_aplica")]
+        total_max = sum(pl["max"] for pl in conta)
+        nota = 10 * sum(pl["pontos"] for pl in conta) / total_max if total_max else 0
+        v["indice"] = {"nota": round(nota, 1), "pilares": pilares, "parcial": s_tot < MIN_SESSOES or sem_painel,
+                       "presidente": presidente, "pontos_validos": total_max}
+
+    # media da Camara (titulares com amostra cheia)
+    for pl_i in range(4):
+        vals = [vs[k]["indice"]["pilares"][pl_i]["pontos"] for k in base_norm
+                if not vs[k]["indice"]["pilares"][pl_i].get("nao_se_aplica")]
+        media = round(sum(vals) / len(vals), 2) if vals else 0
+        for v in vs.values():
+            v["indice"]["pilares"][pl_i]["media_camara"] = media
+    notas = [vs[k]["indice"]["nota"] for k in base_norm]
+    for v in vs.values():
+        v["indice"]["media_camara"] = round(sum(notas) / len(notas), 1) if notas else 0
 
 
 def _data_pauta(t: str) -> str | None:
@@ -517,6 +692,7 @@ def montar(dados: Path) -> Base:
     b.carregar_vereadores()
     b.carregar_pautas_e_documentos()
     b.carregar_votacoes()
+    b.ligar_oficios_de_veto()
     b.finalizar()
     return b
 
@@ -628,7 +804,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "cargo": v.get("cargo"),
             "em_exercicio": v["em_exercicio"], "contagem": v["contagem"], "total_votacoes": v["total_votacoes"],
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
-            "faltas": v["faltas"], "leis": v["leis"],
+            "faltas": v["faltas"], "leis": v["leis"], "indice": v["indice"],
             "foto": fotos.get(v["slug"]),
             "projetos": [m["slug"] for m in v["projetos"] if m["slug"] in paginas],
             "requerimentos": [m["slug"] for m in v["requerimentos"] if m["slug"] in paginas],

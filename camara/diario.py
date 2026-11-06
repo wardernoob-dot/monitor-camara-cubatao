@@ -84,7 +84,9 @@ def coletar(dados: Path, http=None, dias: int = 45) -> dict:
     pasta = (dados / "diario").resolve()
     pasta.mkdir(exist_ok=True)
     fim = date.today()
-    ini = fim - timedelta(days=dias)
+    # desde 1o de janeiro do ano corrente (o indice dos vereadores conta leis do ano inteiro);
+    # 'dias' so amplia a janela no comeco do ano
+    ini = min(fim - timedelta(days=dias), date(fim.year, 1, 1))
     rel = {"novas": 0, "erros": []}
     for termo in TERMOS:
         try:

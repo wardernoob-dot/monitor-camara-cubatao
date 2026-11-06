@@ -19,9 +19,24 @@ export interface Vereador {
   sessoes_total: number;
   faltas: number;
   leis: number;
+  indice: Indice;
   presenca: Partial<Record<"sim" | "justificada" | "ausente", number>>;
   projetos: string[];
   requerimentos: string[];
+}
+
+export interface ItemIndice { nome: string; pontos: number; max: number; conta: string; nao_se_aplica?: boolean }
+export interface PilarIndice { id: string; nome: string; max: number; pontos: number; media_camara: number; itens: ItemIndice[]; nao_se_aplica?: boolean }
+export interface Indice { nota: number; pilares: PilarIndice[]; parcial: boolean; presidente: boolean; pontos_validos: number; media_camara: number }
+
+export interface LeituraVeto {
+  resumo: string;
+  o_que_foi_vetado: string[];
+  razoes: { razao: string; trecho: string }[];
+  fundamento: string;
+  limitacoes: string;
+  modelo: string;
+  fonte: string;
 }
 
 export interface Votacao {
@@ -65,7 +80,10 @@ export interface Materia {
   pautas: string[];
   documento: string | null;
   lei: { numero: string; data: string; url: string | null } | null;
-  veto: { alcance: string; url?: string | null; resultado?: "veto_mantido" | "veto_derrubado" | null; data?: string; pagina?: string } | null;
+  veto: {
+    alcance: string; url?: string | null; resultado?: "veto_mantido" | "veto_derrubado" | null; data?: string; pagina?: string;
+    oficio?: string | null; data_oficio?: string | null; leitura?: LeituraVeto;
+  } | null;
   ultima_data: string;
   eventos: number[];
   divergencias: Divergencia[];

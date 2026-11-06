@@ -70,7 +70,14 @@ def main():
 
         consolidar_tudo(a.dados)
 
-        from .analise import analisar_tudo
+        from .analise import analisar_tudo, analisar_vetos
+        from .site import montar
+        from .vetos import oficios
+
+        base = montar(a.dados)
+        assuntos = {(m["tipo"], m["numero"], m["ano"]): m["assunto"] or "" for m in base.materias.values()
+                    if m["numero"] and m["ano"]}
+        analisar_vetos(a.dados, oficios(a.dados, assuntos))
         from .posts import gerar_tudo as gerar_posts
 
         analisar_tudo(a.dados)
