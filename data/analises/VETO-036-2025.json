@@ -1,0 +1,39 @@
+{
+ "tipo_analise": "veto",
+ "materia": {
+  "tipo": "VETO",
+  "numero": "36",
+  "ano": "2025",
+  "alcance": "parcial"
+ },
+ "documento": {
+  "fonte": "texto do oficio publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_196-2025-SEJUR.pdf",
+  "oficio": "Ofício nº 196/2025/SEJUR",
+  "data_oficio": "2025-10-23"
+ },
+ "analise": {
+  "resumo": "Segundo a Prefeitura, os artigos 7 e 8 do projeto sobre aleitamento materno foram vetados parcialmente porque criam punições por decreto e impõem prazos e custos às escolas municipais, o que fere regras de competência e legalidade.",
+  "o_que_foi_vetado": [
+   "Art. 7°",
+   "Art. 8°"
+  ],
+  "fundamento": "inconstitucionalidade",
+  "limitacoes": "Não é possível saber quais foram os argumentos da Câmara Municipal em defesa do projeto original.",
+  "razoes": [
+   {
+    "razao": "Segundo a Prefeitura, deixar que o decreto crie multas e punições sem regras mínimas na lei viola o princípio da legalidade estrita.",
+    "trecho": "A ausência de previsão legal minima sobre as condutas infracionais e os limites das penalidades configura vicio de legalidade, por violar o principio da reserva legal e da legalidade estrita"
+   },
+   {
+    "razao": "Segundo a Prefeitura, o projeto impõe obrigações e prazos para as escolas se adaptarem, o que pode gerar gastos públicos.",
+    "trecho": "ele impõe obrigações às escolas municipais, como a disponibilização de salas adequadas para amamentação e a realização de campanhas educativas, o que pode implicar em aumento de gastos públicos."
+   }
+  ],
+  "razoes_descartadas": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
+ "hash_documento": "a9e2ff03ebc5d0fb",
+ "gerado_em": "2026-11-06T17:23:21Z"
+}

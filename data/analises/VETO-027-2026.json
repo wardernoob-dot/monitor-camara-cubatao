@@ -1,0 +1,50 @@
+{
+ "tipo_analise": "veto",
+ "materia": {
+  "tipo": "VETO",
+  "numero": "27",
+  "ano": "2026",
+  "alcance": "integral"
+ },
+ "documento": {
+  "fonte": "transcricao automatica do PDF escaneado",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-27-2026-veto-integral",
+  "oficio": null,
+  "data_oficio": null
+ },
+ "analise": {
+  "resumo": "Segundo a Prefeitura, o Projeto de Lei nº 27/2026 foi vetado totalmente por contrariar o interesse público, pois o município já segue regras federais e possui um fluxo de atendimento estruturado pelo SUS.",
+  "o_que_foi_vetado": [
+   "Projeto de Lei nº 27/2026 inteiro"
+  ],
+  "fundamento": "interesse_publico",
+  "limitacoes": "Não dá para saber o teor completo do projeto de lei além do que o ofício descreve.",
+  "razoes": [
+   {
+    "razao": "A política nacional de atendimento a essas doenças já existe e é regulada pelo Ministério da Saúde.",
+    "trecho": "A atenção às pessoas com doenças raras já é regulada por política nacional"
+   },
+   {
+    "razao": "O projeto exige exames em unidades municipais que não têm autorização nem capacidade técnica para isso.",
+    "trecho": "O inciso II determina promover o exame para diagnóstico \"em todas as unidades da Rede Pública Municipal de Saúde\"."
+   },
+   {
+    "razao": "A cidade possui baixa demanda de pacientes e não cumpre os requisitos federais para criar um serviço exclusivo.",
+    "trecho": "A demanda local é baixa, dispersa e já acompanhada pela rede"
+   },
+   {
+    "razao": "O projeto gera novos gastos contínuos sem estimar o impacto no orçamento da cidade.",
+    "trecho": "Impacto orçamentário sem estimativa, em período de contingenciamento"
+   },
+   {
+    "razao": "O cadastro de pacientes exige cuidados com dados sensíveis que o projeto não prevê.",
+    "trecho": "Cadastro de dados sensíveis"
+   }
+  ],
+  "razoes_descartadas": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
+ "hash_documento": "ebf31487cc56b50e",
+ "gerado_em": "2026-11-06T17:24:51Z"
+}

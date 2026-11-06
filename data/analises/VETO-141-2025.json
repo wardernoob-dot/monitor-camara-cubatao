@@ -1,0 +1,46 @@
+{
+ "tipo_analise": "veto",
+ "materia": {
+  "tipo": "VETO",
+  "numero": "141",
+  "ano": "2025",
+  "alcance": "integral"
+ },
+ "documento": {
+  "fonte": "transcricao automatica do PDF escaneado",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._241-2025-SEJUR.pdf",
+  "oficio": "Ofício nº 241/2025",
+  "data_oficio": null
+ },
+ "analise": {
+  "resumo": "Segundo a Prefeitura, o Projeto de Lei nº 141/2025 foi totalmente vetado porque cria exigências indevidas para empresas em licitações e invade competências que seriam da União.",
+  "o_que_foi_vetado": [
+   "Projeto de Lei nº 141/2025 (totalmente)"
+  ],
+  "fundamento": "inconstitucionalidade",
+  "limitacoes": "Não é possível saber quais foram os argumentos dos vereadores para defender a aprovação do projeto original.",
+  "razoes": [
+   {
+    "razao": "A exigência de que as entidades formadoras tenham sede em Cubatão restringe a concorrência nas licitações.",
+    "trecho": "O Artigo 1º, §3º, inciso II do Autógrafo exige que as Entidades Formadoras tenham sede em Cubatão."
+   },
+   {
+    "razao": "O projeto cria obrigações sobre licitações que já são tratadas por lei federal.",
+    "trecho": "A Nova Lei de Licitações já disciplina, de forma exaustiva e suficiente, a obrigatoriedade de cumprimento das cotas de aprendizagem."
+   },
+   {
+    "razao": "A criação de regras sobre contratações e obrigações trabalhistas invade a competência da União.",
+    "trecho": "Ao disciplinar formas de contratação e vincular obrigações trabalhistas a requisitos locais, o projeto legisla sobre Direito do Trabalho, matéria de competência privativa da União."
+   },
+   {
+    "razao": "O projeto dá novas tarefas de fiscalização para órgãos da Prefeitura, o que caberia apenas ao Chefe do Executivo.",
+    "trecho": "A propositura impõe novas atribuições administrativas aos órgãos do Poder Executivo para fiscalizar e gerir tais contratos"
+   }
+  ],
+  "razoes_descartadas": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
+ "hash_documento": "ab4dc77bc89256b7",
+ "gerado_em": "2026-11-06T17:22:55Z"
+}

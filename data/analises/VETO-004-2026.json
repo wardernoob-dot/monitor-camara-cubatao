@@ -1,46 +1,39 @@
 {
+ "tipo_analise": "veto",
  "materia": {
   "tipo": "VETO",
   "numero": "4",
   "ano": "2026",
-  "autoria": "PREFEITO MUNICIPAL",
-  "ementa": "VETO PARCIAL AO PROJETO DE LEI Nº 04/2026 QUE “ASSEGURA À GESTANTE O DIREITO À ASSISTÊNCIA DE PROFISSIONAL FISIOTERAPEUTA DURANTE O CICLO GRAVÍDICO-PUERPERAL NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS”"
+  "alcance": "parcial"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto do oficio publicado no site da Camara",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/Oficio_no069_2026_SEJUR_-_PA_5701_2026_-_Veto_Parcial_do_PL_04_2026.pdf",
-  "so_ementa": false
+  "oficio": "Ofício nº 069/2026/SEJUR",
+  "data_oficio": "2026-05-22"
  },
  "analise": {
-  "resumo": "O prefeito de Cubatão vetou parcialmente o Projeto de Lei nº 04/2026, que trata do direito de gestantes à assistência de fisioterapeutas particulares durante o parto e pós-parto.",
-  "o_que_muda": [
-   "O veto retira do projeto a proibição de hospitais usarem o fisioterapeuta da gestante em sua equipe regular.",
-   "O veto retira a regra que obrigava fisioterapeutas a ficarem disponíveis para atendimento durante o período designado.",
-   "O projeto original, com as partes vetadas, não entra em vigor integralmente.",
-   "A Câmara Municipal agora precisa analisar se mantém ou derruba o veto do prefeito."
+  "resumo": "Segundo a Prefeitura, partes do projeto de lei que garantem assistência de fisioterapeuta à gestante foram vetadas por problemas de inconstitucionalidade e de redação das regras.",
+  "o_que_foi_vetado": [
+   "Art. 3°",
+   "Art. 5°"
   ],
-  "quem_e_afetado": "Gestantes que desejam contratar fisioterapeutas particulares e instituições de saúde do município.",
-  "justificativa_do_autor": "Segundo o prefeito, os artigos vetados invadem competências administrativas e criam problemas de interpretação sobre a relação entre profissionais particulares e a estrutura hospitalar.",
-  "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber o impacto financeiro ou como será a fiscalização, pois o documento trata apenas das razões jurídicas do veto.",
-  "pontos_de_atencao": [
+  "fundamento": "inconstitucionalidade",
+  "limitacoes": "Não é possível saber o teor completo do Projeto de Lei n° 04/2026 além dos dois artigos citados.",
+  "razoes": [
    {
-    "ponto": "O texto não menciona custos ou a fonte de recursos para a implementação da lei.",
-    "trecho": ""
+    "razao": "Segundo a Prefeitura, o artigo 5° cria problemas ao sugerir vínculo do profissional com o hospital e interferir na gestão da saúde.",
+    "trecho": "Este dispositivo revela-se problemático sob diversos aspectos."
    },
    {
-    "ponto": "O veto retira o artigo que impedia hospitais de usar o fisioterapeuta da gestante como parte da equipe regular.",
-    "trecho": "Art. 3° É vedado aos estabelecimentos de saúde utilizar o fisioterapeuta contratado pela gestante como integrante de sua equipe assistencial regular"
-   },
-   {
-    "ponto": "O veto retira o artigo que exigia disponibilidade dos fisioterapeutas durante o período de atuação.",
-    "trecho": "Art. 5° Os profissionais fisioterapeutas deverão manter-se disponíveis para atendimento às pacientes internadas durante o período em que estiverem designados"
+    "razao": "Segundo a Prefeitura, o artigo 3° pode gerar dúvidas e dificuldades práticas na rotina dos hospitais, embora tenha um objetivo legítimo.",
+    "trecho": "a redação pode gerar ambiguidades interpretativas e dificuldades práticas de aplicação"
    }
   ],
-  "pontos_descartados": []
+  "razoes_descartadas": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
  "hash_documento": "686833a595ac14e1",
- "gerado_em": "2026-11-05T19:13:51Z"
+ "gerado_em": "2026-11-06T17:24:07Z"
 }

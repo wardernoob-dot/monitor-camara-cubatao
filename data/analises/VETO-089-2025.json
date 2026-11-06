@@ -1,0 +1,38 @@
+{
+ "tipo_analise": "veto",
+ "materia": {
+  "tipo": "VETO",
+  "numero": "89",
+  "ano": "2025",
+  "alcance": "integral"
+ },
+ "documento": {
+  "fonte": "transcricao automatica do PDF escaneado",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._03-SEJUR_-_Proc_CMC_537-2025.pdf",
+  "oficio": null,
+  "data_oficio": null
+ },
+ "analise": {
+  "resumo": "Segundo a Prefeitura, o projeto de lei que incluía o símbolo do autismo nas vagas de estacionamento foi totalmente vetado por ser de iniciativa incorreta da Câmara e trazer problemas técnicos para o trânsito.",
+  "o_que_foi_vetado": [
+   "Projeto de Lei nº 89/2025 (totalmente)"
+  ],
+  "fundamento": "competencia_ou_iniciativa",
+  "limitacoes": "",
+  "razoes": [
+   {
+    "razao": "O projeto foi feito por vereador, mas criava obrigações para a Prefeitura administrar, o que seria interferência indevida.",
+    "trecho": "O vício formal decorrente da iniciativa parlamentar compromete a constitucionalidade do projeto, pois a criação de obrigações administrativas específicas"
+   },
+   {
+    "razao": "O uso de símbolos diferentes para cada deficiência geraria confusão na fiscalização e problemas no trânsito.",
+    "trecho": "A eventual criação de símbolos específicos por tipo de deficiência, como proposto no Projeto de Lei nº 89/2025, acarretaria relevantes impactos técnicos e operacionais"
+   }
+  ],
+  "razoes_descartadas": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
+ "hash_documento": "d8e55611efee50b8",
+ "gerado_em": "2026-11-06T17:22:38Z"
+}

@@ -57,7 +57,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI COMPLEMENTAR Nº 158, DE 26 DE MAIO DE 2026",
+     "data": "2026-05-26",
+     "edicao": "2004",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24553",
+     "tipo": "lei",
+     "numero": "158",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -153,7 +164,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.460, DE 22 DE MAIO DE 2026",
+     "data": "2026-05-22",
+     "edicao": "2002",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24525",
+     "tipo": "lei",
+     "numero": "4460",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "MOCAO",

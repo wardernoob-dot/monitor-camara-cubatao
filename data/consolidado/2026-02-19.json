@@ -276,7 +276,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.447, DE 11 DE MARÇO DE 2026",
+     "data": "2026-03-11",
+     "edicao": "1950",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23594",
+     "tipo": "lei",
+     "numero": "4447",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "RQ",

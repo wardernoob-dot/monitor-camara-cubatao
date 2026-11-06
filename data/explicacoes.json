@@ -904,6 +904,16 @@
   "modelo": "gemini-3.5-flash-lite",
   "texto": "Rejeita totalmente o projeto de lei que obriga a instalação de equipamentos eliminadores de ar nas tubulações de água em Cubatão."
  },
+ "veto-4-2026": {
+  "hash": "b3032f6d66fe",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Rejeita em parte a lei que garante atendimento com fisioterapeuta para grávidas e puérperas na rede municipal de Cubatão."
+ },
+ "veto-60-2025": {
+  "hash": "32dda3710bc4",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Rejeita em parte a lei que obriga a inclusão gradual de ônibus elétricos na frota de transporte público de Cubatão."
+ },
  "veto-61-2026": {
   "hash": "c1c5b5dc410e",
   "modelo": "gemini-3.1-flash-lite",

@@ -1,46 +1,34 @@
 {
+ "tipo_analise": "veto",
  "materia": {
   "tipo": "VETO",
   "numero": "60",
   "ano": "2025",
-  "autoria": "PREFEITO MUNICIPAL",
-  "ementa": "VETO PARCIAL AO PROJETO DE LEI Nº 60/2025, QUE \"DISPÕE SOBRE A INCLUSÃO PROGRESSIVA DE ÔNIBUS OU MICROÔNIBUS IMPULSIONADO POR MOTOR EXCLUSIVAMENTE ELÉTRICO NA FROTA DE TRANSPORTE PÚBLICO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS\""
+  "alcance": "parcial"
  },
  "documento": {
-  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "fonte": "transcricao automatica do PDF escaneado",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/Veto%20Parcial%20PL%2060.2025%20-%20Of._41-2026-SEJUR_-_Razoes_do_Veto.pdf",
-  "so_ementa": false
+  "oficio": "Ofício nº 041/2026/SEJUR",
+  "data_oficio": "2026-04-17"
  },
  "analise": {
-  "resumo": "O prefeito de Cubatão vetou parcialmente o Projeto de Lei nº 60/2025, que previa a substituição gradual da frota de ônibus por veículos elétricos. O veto atinge especificamente as metas e prazos para essa troca.",
-  "o_que_muda": [
-   "O artigo que definia metas de 10%, 50% e 100% de ônibus elétricos até 2040 foi vetado.",
-   "O dispositivo que proibia o aumento da tarifa ou redução da qualidade do serviço devido à troca da frota foi removido.",
-   "A obrigatoriedade de cronograma para a eletrificação dos ônibus deixa de existir com este veto.",
-   "O sistema de transporte público permanece regido pelas condições do Edital de Concorrência nº 2/2018."
+  "resumo": "Segundo a Prefeitura, o Prefeito vetou parte do projeto de lei que obriga a troca por ônibus elétricos por causa de problemas financeiros e falta de estudos de custo.",
+  "o_que_foi_vetado": [
+   "Artigo 2º, caput, incisos e parágrafos do Projeto de Lei nº 60/2025"
   ],
-  "quem_e_afetado": "Empresas concessionárias do transporte público municipal e os passageiros que utilizam o serviço.",
-  "justificativa_do_autor": "Segundo o prefeito, o veto baseia-se na manifestação da CMT (Companhia Municipal de Trânsito), que alega falta de estudos sobre custos e risco de desequilíbrio financeiro no contrato de concessão atual.",
-  "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber se a Câmara Municipal aceitará o veto do prefeito ou se tentará derrubá-lo em votação.",
-  "pontos_de_atencao": [
+  "fundamento": "custo_ou_orcamento",
+  "limitacoes": "Não dá para saber quais são os estudos técnicos completos que a Prefeitura pretende fazer para avaliar a mudança na frota.",
+  "razoes": [
    {
-    "ponto": "O texto não apresenta estimativa de custos para a troca da frota.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O veto justifica-se pela necessidade de manter o equilíbrio financeiro do contrato atual.",
-    "trecho": "sendo Direito da Concessionária a manutenção do equilíbrio econômico financeiro do Contrato de Concessão"
-   },
-   {
-    "ponto": "A CMT (Companhia Municipal de Trânsito) foi o órgão técnico que opinou pelo veto.",
-    "trecho": "A CMT – COMPANHIA MUNICIPAL DE TRÂNSITO manifestou-se contraria ao dispositivo citado"
+    "razao": "A troca dos ônibus pode desequilibrar as finanças do contrato atual e o sistema já opera com prejuízo.",
+    "trecho": "sendo Direito da Concessionária a manutenção do equilíbrio econômico financeiro do Contrato de Concessão, cientes que hoje o sistema é deficitário, nosso setor técnico opina pelo veto"
    }
   ],
-  "pontos_descartados": []
+  "razoes_descartadas": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
  "hash_documento": "fd7987a1e6dd2fc2",
- "gerado_em": "2026-11-05T22:58:52Z"
+ "gerado_em": "2026-11-06T17:24:12Z"
 }

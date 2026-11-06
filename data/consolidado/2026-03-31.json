@@ -66,7 +66,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.456, DE 11 DE MAIO DE 2026",
+     "data": "2026-05-11",
+     "edicao": "1992",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24388",
+     "tipo": "lei",
+     "numero": "4456",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -120,7 +131,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.457, DE 11 DE MAIO DE 2026",
+     "data": "2026-05-11",
+     "edicao": "1992",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24389",
+     "tipo": "lei",
+     "numero": "4457",
+     "similaridade_ementa": 0.98
+    }
+   ]
   },
   {
    "tipo": "RQ",

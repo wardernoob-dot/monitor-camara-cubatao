@@ -1,0 +1,46 @@
+{
+ "tipo_analise": "veto",
+ "materia": {
+  "tipo": "VETO",
+  "numero": "112",
+  "ano": "2025",
+  "alcance": "integral"
+ },
+ "documento": {
+  "fonte": "transcricao automatica do PDF escaneado",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_240-2025_-_SEJUR_-_Veto_Total.pdf",
+  "oficio": null,
+  "data_oficio": null
+ },
+ "analise": {
+  "resumo": "Segundo a Prefeitura, o projeto de lei sobre paradas flexíveis no transporte noturno para mulheres foi totalmente vetado porque a Companhia Municipal de Trânsito apontou riscos e problemas práticos, contrariando o interesse público e a ordem constitucional.",
+  "o_que_foi_vetado": [
+   "Projeto de Lei nº 112/2025 inteiro (veto total)"
+  ],
+  "fundamento": "interesse_publico",
+  "limitacoes": "Não é possível saber o texto exato completo dos artigos 2º e 4º que constavam no projeto original da Câmara Municipal.",
+  "razoes": [
+   {
+    "razao": "O horário pretendido de alta demanda de veículos pode causar risco de acidentes.",
+    "trecho": "poderá acarretar em risco excessivo de acidentes"
+   },
+   {
+    "razao": "A mudança pode aumentar reclamações por descumprimento de horários.",
+    "trecho": "poderá aumentar o volume de reclamações, por conta do descumprimento da tabela horária prevista"
+   },
+   {
+    "razao": "Há dúvida se a regra inclui o transporte intermunicipal além do municipal.",
+    "trecho": "não está claro se inclui transporte intermunicipal na regra, quando a ementa se refere somente ao transporte coletivo municipal"
+   },
+   {
+    "razao": "A suspensão temporária da linha em caso de reincidência prejudica o usuário.",
+    "trecho": "prevê a suspensão temporária da linha, no caso de reincidência, trazendo prejuízo claro ao usuário do sistema"
+   }
+  ],
+  "razoes_descartadas": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
+ "hash_documento": "3cad72fbe9bc7fce",
+ "gerado_em": "2026-11-06T17:23:16Z"
+}

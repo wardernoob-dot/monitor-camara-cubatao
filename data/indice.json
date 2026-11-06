@@ -659,6 +659,36 @@
   "titulo": "PAUTA DA 9ª SESSÃO EXTRAORDINÁRIA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/9a-sessao-extraordinaria"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF._015.2025_-_MENSAGEM_ADITIVA_PL_Ndeg08.2025.pdf": {
+  "baixado_em": "2026-11-06T17:21:46+00:00",
+  "bytes": 1538308,
+  "paginas": 3,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "2245e94854a6fdbabf585910f064b175790f6f515b1cc6b6b5c5813f81e222cc",
+  "titulo": "MENSAGEM ADITIVA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF._015.2025_-_MENSAGEM_ADITIVA_PL_Ndeg08.2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_108.2025.SEJUR_-_VETO_PL_Ndeg_01_2025.pdf": {
+  "baixado_em": "2026-11-06T17:21:41+00:00",
+  "bytes": 3056757,
+  "paginas": 5,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "18c30ccf930c5caf5756e1ee0bbe72535eb0e401c47782d50e2e42de997bf4bb",
+  "titulo": "VETO TOTAL AO PROJETO DE LEI QUE \" DISPÕE SOBRE O RECONHECIMENTO DA FIBROMIALGIA INCAPACITANTE COMO DEFICIÊNCIA E DÁ OUTRAS PROVIDÊNCIAS\"",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_108.2025.SEJUR_-_VETO_PL_Ndeg_01_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_114.2025.SEJUR_-_VETO_PL93_2025.pdf": {
+  "baixado_em": "2026-11-06T17:21:39+00:00",
+  "bytes": 1820164,
+  "paginas": 3,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "4576456a93ce9d90109ebc103faf5ffb7e104b81346c1ada406dab20ac7fa8e5",
+  "titulo": "VETO TOTAL AO PROJETO DE LEI QUE \"INSTITUI, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, O PROGRAMA DE INCENTIVO À AMAMENTAÇÃO E ALIMENTAÇÃO ADEQUADA DE GESTANTES EM SITUAÇÃO DE VULNERABILIDADE SOCIAL, E DÁ OUTRAS PROVIDÊNCIAS.\"",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_114.2025.SEJUR_-_VETO_PL93_2025.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._03-SEJUR_-_Proc_CMC_537-2025.pdf": {
   "baixado_em": "2026-11-05T15:43:01+00:00",
   "bytes": 5712623,
@@ -668,6 +698,116 @@
   "sha256": "6adb8fefff1f7486f6144104f55ee59340ef533b353d5abe7768de827cbf93ec",
   "titulo": "VETO INTEGRAL AO PROJETO DE LEI Nº 89/2025 QUE \"DISPÕE SOBRE A INCLUSÃO DO SÍMBOLO MUNDIAL DE CONSCIENTIZAÇÃO DO TRANSTORNO DO ESPECTRO AUTISTA (TEA) NAS SINALIZAÇÕES DE VAGAS ESPECIAIS DE ESTACIONAMENTO EM TODO O TERRITÓRIO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS\".",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._03-SEJUR_-_Proc_CMC_537-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._124.2025.CMC_-_VETO_TOTAL_PL_Ndeg_105_2025.pdf": {
+  "baixado_em": "2026-11-06T17:21:37+00:00",
+  "bytes": 3139698,
+  "paginas": 5,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "3421ba100d7cbcc11e6ccc0466d81109db939cf1d7d242a82174232b60283ad5",
+  "titulo": "VETO TOTAL AO PROJETO DE LEI QUE \" DISPÕE SOBRE OS VALORES DOS PADRÕES DE VENCIMENTO DOS CARGOS DE PROVIMENTO EFETIVO E EM COMISSÃO, BEM COMO DOS PADRÕES DE FUNÇÕES GRATIFICADAS, DO QUADRO DA CÂMARA MUNICIPAL DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS'",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._124.2025.CMC_-_VETO_TOTAL_PL_Ndeg_105_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._241-2025-SEJUR.pdf": {
+  "baixado_em": "2026-11-06T17:21:19+00:00",
+  "bytes": 1909767,
+  "paginas": 3,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "47b13b0a0ff25e5918ebbb524f63bd7a60d4fd0731ee82a755dcc491f7b9ef2f",
+  "titulo": "VETO INTEGRAL AO PROJETO DE LEI Nº 141/2025 QUE \" DISPÕE SOBRE A CONTRATAÇÃO DE APRENDIZES PELAS EMPRESAS VENCEDORAS DE LICITAÇÃO PÚBLICA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS \".",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._241-2025-SEJUR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio%20no%20104.2025.SEJUR.pdf": {
+  "baixado_em": "2026-11-06T17:21:44+00:00",
+  "bytes": 1857631,
+  "paginas": 5,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "69e7d8459ffd96ad0b8df57f2bb0c588739d53fa77b9a71b1d7513352e00007a",
+  "titulo": "MENSAGEM ADITIVA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio%20no%20104.2025.SEJUR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_213-2025-SEJUR.pdf": {
+  "baixado_em": "2026-11-06T17:21:26+00:00",
+  "bytes": 1827981,
+  "paginas": 3,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "155f6b91ed63fbaeb9a27b849ccdfa0bc0fea5f414d44eece0aea4fae9fd8bc0",
+  "titulo": "VETO INTEGRAL AO PROJETO DE LEI Nº 161 QUE \"AUTORIZA O PODER EXECUTIVO A INSTITUIR VANTAGEM PESSOAL NOMINALMENTE IDENTIFICADA - VPNI AOS SERVIDORES DOS QUADROS COMPLEMENTAR E SUPLEMENTAR, E DÁ OUTRAS PROVIDÊNCIAS\"",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_213-2025-SEJUR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_239-2025-SEJUR_-_Veto_Total.pdf": {
+  "baixado_em": "2026-11-06T17:21:24+00:00",
+  "bytes": 18911309,
+  "paginas": 42,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "8de7201b755de1e298bb39d0bd866461644f9f0be1980f1c87256b3c1f39d86b",
+  "titulo": "VETO INTEGRAL AO PROJETO DE LEI Nº 166/2025 QUE \"DISPÕE SOBRE A INSTALAÇÃO DE EQUIPAMENTOS ELIMINADORES DE AR, NA TUBULAÇÃO INDIVIDUAL DO SISTEMA DE ABASTECIMENTO DE ÁGUA NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS\".",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_239-2025-SEJUR_-_Veto_Total.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_240-2025_-_SEJUR_-_Veto_Total.pdf": {
+  "baixado_em": "2026-11-06T17:21:21+00:00",
+  "bytes": 1280649,
+  "paginas": 2,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "999ab8a592e1e7947af21942d57bee36c0926141e9dbfa52076437b35695e59a",
+  "titulo": "VETO INTEGRAL AO PROJETO DE LEI Nº 112/2025 QUE \" ALTERA E INCLUI DISPOSITIVOS NA LEI MUNICIPAL Nº 3.744, DE 11 DE AGOSTO DE 2015, PARA DISPOR SOBRE A OBRIGATORIEDADE DE PARADAS FLEXÍVEIS PARA EMBARQUE E DESEMBARQUE DE MULHERES NO TRANSPORTE COLETIVO MUNICIPAL NO PERÍODO NOTURNO, СОМО MEDIDA DE SEGURANÇA E IGUALDADE DE GÊNERO, E DÁ OUTRAS PROVIDÊNCIAS \" .",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_240-2025_-_SEJUR_-_Veto_Total.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_196-2025-SEJUR.pdf": {
+  "baixado_em": "2026-11-06T17:21:28+00:00",
+  "bytes": 1832407,
+  "paginas": 4,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "c6c36e94660dc3ecc6d444aa272a59c65b0f9293e87df1bd49ac9ee7b42bd789",
+  "titulo": "VETO PARCIAL AO PROJETO DE LEI Nº 36 QUE \"",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_196-2025-SEJUR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_197-2025-SEJUR.pdf": {
+  "baixado_em": "2026-11-06T17:21:33+00:00",
+  "bytes": 628786,
+  "paginas": 2,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "14a0ab6154c50c0a829b91e56a88d68474ed8701a702e4036bc61f2caf9169d6",
+  "titulo": "MENSAGEM ADITIVA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_197-2025-SEJUR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20157.2025%20-%20Oficio_229-2025-Resp.-Of._563-2025.pdf": {
+  "baixado_em": "2026-11-06T17:21:31+00:00",
+  "bytes": 6609696,
+  "paginas": 12,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "c71c851f0a2de59edb246107b761d9187588ce6e7c0d3a65fc2053d98be9b2f7",
+  "titulo": "MENSAGEM ADITIVA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20157.2025%20-%20Oficio_229-2025-Resp.-Of._563-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Veto_Parcial_-_Of._245-2025-Sejur.pdf": {
+  "baixado_em": "2026-11-06T17:21:16+00:00",
+  "bytes": 1252079,
+  "paginas": 2,
+  "precisa_ocr": true,
+  "secao": "projetos",
+  "sha256": "b0b2250a5cbb0cc6be71917658e640f21e0c52279b3dcea4b08e2f4e4ca26663",
+  "titulo": "VETO PARCIAL AO PROJETO DE LEI Nº 146/2025, QUE \" INSTITUI O PROGRAMA DE PREVENÇÃO À DEPRESSÃO PÓS-PARTO NO MUNICÍPIO DE CUBATÃO/SP E DÁ OUTRAS PROVIDÊNCIAS\".",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Veto_Parcial_-_Of._245-2025-Sejur.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/mensagem%20aditiva%20plc%20131%20Oficio_ndeg_151_2025_SEJUR.pdf": {
+  "baixado_em": "2026-11-06T17:21:35+00:00",
+  "bytes": 982256,
+  "paginas": 4,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "938eae2e1c1374a66c8e4fb0ca3a4e0a643da48cb7d45ce3451c3d797dd71ac8",
+  "titulo": "MENSAGEM ADITIVA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/mensagem%20aditiva%20plc%20131%20Oficio_ndeg_151_2025_SEJUR.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/Mensagem%20Aditiva%20-%20Oficio_no_77_2026_SEJUR_-_Aditivo_ao_PL_40_2026.pdf": {
   "baixado_em": "2026-11-05T15:40:56+00:00",

@@ -206,7 +206,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.465, DE 09 DE JUNHO DE 2026",
+     "data": "2026-06-09",
+     "edicao": "2012",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24729",
+     "tipo": "lei",
+     "numero": "4465",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PL",

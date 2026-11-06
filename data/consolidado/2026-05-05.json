@@ -112,7 +112,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.462, DE 25 DE MAIO DE 2026",
+     "data": "2026-05-25",
+     "edicao": "2003",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24541",
+     "tipo": "lei",
+     "numero": "4462",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -210,6 +221,15 @@
    ],
    "sem_painel": false,
    "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.461, DE 25 DE MAIO DE 2026",
+     "data": "2026-05-25",
+     "edicao": "2003",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24535",
+     "tipo": "lei",
+     "numero": "4461",
+     "similaridade_ementa": 1.0
+    },
     {
      "titulo": "EXTRA - LEI Nº 4.487, DE 29 DE OUTUBRO DE 2026",
      "data": "2026-10-29",
@@ -314,7 +334,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.463, DE 26 DE MAIO DE 2026",
+     "data": "2026-05-26",
+     "edicao": "2004",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24554",
+     "tipo": "lei",
+     "numero": "4463",
+     "similaridade_ementa": 0.8
+    }
+   ]
   },
   {
    "tipo": "RQ",

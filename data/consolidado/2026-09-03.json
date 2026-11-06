@@ -85,6 +85,17 @@
      "votos": [],
      "nomes_nao_reconhecidos": []
     }
+   ],
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.478, DE 04 DE SETEMBRO DE 2026",
+     "data": "2026-09-04",
+     "edicao": "2076",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=25653",
+     "tipo": "lei",
+     "numero": "4478",
+     "similaridade_ementa": 1.0
+    }
    ]
   },
   {
@@ -186,6 +197,17 @@
      "resultado": "aprovado",
      "votos": [],
      "nomes_nao_reconhecidos": []
+    }
+   ],
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.479, DE 04 DE SETEMBRO DE 2026",
+     "data": "2026-09-04",
+     "edicao": "2076",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=25654",
+     "tipo": "lei",
+     "numero": "4479",
+     "similaridade_ementa": 1.0
     }
    ]
   }

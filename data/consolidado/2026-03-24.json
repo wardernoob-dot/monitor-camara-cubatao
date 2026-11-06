@@ -108,7 +108,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI COMPLEMENTAR Nº 157, DE 17 DE ABRIL DE 2026",
+     "data": "2026-04-17",
+     "edicao": "1977",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23943",
+     "tipo": "lei",
+     "numero": "157",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -200,7 +211,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.454, DE 23 DE ABRIL DE 2026",
+     "data": "2026-04-23",
+     "edicao": "1979",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23968",
+     "tipo": "lei",
+     "numero": "4454",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PR",

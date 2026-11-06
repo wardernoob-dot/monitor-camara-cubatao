@@ -169,7 +169,27 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.453, DE 17 DE ABRIL DE 2026",
+     "data": "2026-04-17",
+     "edicao": "1977",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23941",
+     "tipo": "lei",
+     "numero": "4453",
+     "similaridade_ementa": 0.99
+    },
+    {
+     "titulo": "LEI Nº 4.469, DE 25 DE JUNHO DE 2026",
+     "data": "2026-06-25",
+     "edicao": "2025",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=24900",
+     "tipo": "lei",
+     "numero": "4469",
+     "similaridade_ementa": 0.74
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -261,7 +281,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.452, DE 17 DE ABRIL DE 2026",
+     "data": "2026-04-17",
+     "edicao": "1977",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23940",
+     "tipo": "lei",
+     "numero": "4452",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -358,7 +389,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.451, DE 27 DE MARÇO DE 2026",
+     "data": "2026-03-27",
+     "edicao": "1963",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23745",
+     "tipo": "lei",
+     "numero": "4451",
+     "similaridade_ementa": 0.97
+    }
+   ]
   },
   {
    "tipo": "RQ",

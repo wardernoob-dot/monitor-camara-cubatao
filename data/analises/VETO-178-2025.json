@@ -1,0 +1,34 @@
+{
+ "tipo_analise": "veto",
+ "materia": {
+  "tipo": "VETO",
+  "numero": "178",
+  "ano": "2025",
+  "alcance": "parcial"
+ },
+ "documento": {
+  "fonte": "transcricao automatica do PDF escaneado",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/of-123-2026-sejur",
+  "oficio": "Ofício nº 123/2026",
+  "data_oficio": null
+ },
+ "analise": {
+  "resumo": "Segundo a Prefeitura, o prefeito vetou parcialmente o projeto que cria o programa contra apostas online para barrar a definição municipal de ludopatia, que seria contrária às leis federais.",
+  "o_que_foi_vetado": [
+   "Parágrafo único do art. 1º"
+  ],
+  "fundamento": "inconstitucionalidade",
+  "limitacoes": "Não dá para saber o teor completo dos demais artigos do projeto de lei além do que foi citado no ofício.",
+  "razoes": [
+   {
+    "razao": "A lei federal já usa o termo ludopatia considerando critérios médicos, e a definição municipal criaria um conceito próprio e restritivo.",
+    "trecho": "A legislação federal já emprega a expressão \"ludopatia\" no âmbito da proteção dos apostadores, referindo-se à pessoa diagnosticada com a condição por profissional de saúde mental habilitado"
+   }
+  ],
+  "razoes_descartadas": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
+ "hash_documento": "5bf3835bbd7adb92",
+ "gerado_em": "2026-11-06T17:24:30Z"
+}

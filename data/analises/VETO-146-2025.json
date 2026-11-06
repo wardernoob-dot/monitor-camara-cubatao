@@ -1,0 +1,34 @@
+{
+ "tipo_analise": "veto",
+ "materia": {
+  "tipo": "VETO",
+  "numero": "146",
+  "ano": "2025",
+  "alcance": "parcial"
+ },
+ "documento": {
+  "fonte": "transcricao automatica do PDF escaneado",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Veto_Parcial_-_Of._245-2025-Sejur.pdf",
+  "oficio": "Ofício nº 245/2025",
+  "data_oficio": null
+ },
+ "analise": {
+  "resumo": "Segundo a Prefeitura, o artigo 4º do projeto que cria o programa de prevenção à depressão pós-parto foi vetado porque a criação de prazos para o Executivo regulamentar leis fere a Constituição.",
+  "o_que_foi_vetado": [
+   "Art. 4º"
+  ],
+  "fundamento": "inconstitucionalidade",
+  "limitacoes": "Não dá para saber o teor completo dos artigos que não foram vetados do projeto de lei.",
+  "razoes": [
+   {
+    "razao": "Segundo a Prefeitura, a lei não pode impor prazos para o Poder Executivo regulamentar normas.",
+    "trecho": "a fixação de prazo para a regulamentação da norma prevista em seu artigo 4º não pode ser aceita."
+   }
+  ],
+  "razoes_descartadas": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "bfd1e5f30b",
+ "hash_documento": "c27b230777f31d29",
+ "gerado_em": "2026-11-06T17:23:35Z"
+}

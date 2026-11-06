@@ -109,7 +109,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.445, DE 09 DE MARÇO DE 2026",
+     "data": "2026-03-09",
+     "edicao": "1948",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23579",
+     "tipo": "lei",
+     "numero": "4445",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PL",
@@ -202,7 +213,18 @@
      }
     }
    ],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.444, DE 09 DE MARÇO DE 2026",
+     "data": "2026-03-09",
+     "edicao": "1948",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=23578",
+     "tipo": "lei",
+     "numero": "4444",
+     "similaridade_ementa": 1.0
+    }
+   ]
   },
   {
    "tipo": "PR",

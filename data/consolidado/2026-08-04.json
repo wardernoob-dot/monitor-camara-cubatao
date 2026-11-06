@@ -23,7 +23,18 @@
    "na_pauta": true,
    "resultado_oficial": null,
    "votacoes": [],
-   "sem_painel": false
+   "sem_painel": false,
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.480, DE 10 DE SETEMBRO DE 2026",
+     "data": "2026-09-10",
+     "edicao": "2079",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=25712",
+     "tipo": "lei",
+     "numero": "4480",
+     "similaridade_ementa": 0.98
+    }
+   ]
   }
  ],
  "votacoes_nao_identificadas": [],

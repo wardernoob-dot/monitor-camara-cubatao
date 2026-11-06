@@ -489,6 +489,17 @@
      "votos": [],
      "nomes_nao_reconhecidos": []
     }
+   ],
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.481, DE 16 DE SETEMBRO DE 2026",
+     "data": "2026-09-16",
+     "edicao": "2083",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=25772",
+     "tipo": "lei",
+     "numero": "4481",
+     "similaridade_ementa": 1.0
+    }
    ]
   },
   {
