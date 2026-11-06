@@ -78,7 +78,7 @@ jobs:
             echo "SURGE_TOKEN ausente; pulando."
             exit 0
           fi
-          npx --yes surge@0.24.1 ./docs votoavoto.surge.sh
+          npx --yes surge@0.44.7 ./docs votoavoto.surge.sh
 
       # Se qualquer passo acima falhar, abre (ou comenta em) uma issue com o link da rodada.
       - name: Avisar falha
