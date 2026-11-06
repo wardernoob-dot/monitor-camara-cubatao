@@ -317,5 +317,7 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
 
 
 def carregar(dados: Path, tipo: str, numero: str, ano: str | None) -> dict | None:
+    if tipo not in TIPOS_ANALISADOS:  # ex.: RQ (requerimento) nao tem analise; chave_materia segue recusando tipo estranho
+        return None
     p = Path(dados) / "analises" / f"{chave_materia(tipo, numero, ano)}.json"
     return json.loads(p.read_text("utf-8")) if p.exists() else None
