@@ -100,9 +100,9 @@
   "texto": "Muda a lei que criou o conselho municipal de saneamento em Cubatão."
  },
  "pl-112-2025": {
-  "hash": "cde1d8744b9a",
-  "modelo": "gemini-3.1-flash-lite",
-  "texto": "Torna obrigatória a parada flexível de ônibus para mulheres no período noturno como medida de segurança."
+  "hash": "5072abafd02d",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Muda a lei municipal para obrigar ônibus a fazer paradas flexíveis para mulheres à noite, visando segurança e igualdade."
  },
  "pl-12-2026": {
   "hash": "8827ce85f73f",
