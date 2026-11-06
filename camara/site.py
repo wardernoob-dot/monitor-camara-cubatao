@@ -42,7 +42,7 @@ MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "a
          "novembro", "dezembro"]
 MESES_CURTO = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
 FINAIS = ("2a_discussao", "discussao_unica", "redacao_final", "unica")
-APELIDO_EXTRA = {"washington luiz lessa de souza": "Carioca", "maria jaqueline da silva": "Jaque Barbosa"}  # Jaque: confirmado pelo responsavel do site
+APELIDO_EXTRA = {"washington luiz lessa de souza": "Carioca", "maria jaqueline da silva": "Jaque Barbosa", "guilherme amaral belo nogueira": "Guilherme Amaral"}  # Jaque: confirmado pelo responsavel do site
 ROTULO = {"SIM": "Sim", "NAO": "Não", "BRANCO": "Não votou", "AUSENTE": "Ausente", "?": "Ilegível"}
 
 

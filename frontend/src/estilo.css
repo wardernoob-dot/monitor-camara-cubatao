@@ -207,8 +207,9 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 .vereadores__item a { display: grid; grid-template-columns: 1fr; align-content: start; row-gap: .15rem; padding: 1.1rem; height: 100%; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 16px; text-decoration: none; }
 .vereadores__item a:hover { border-color: var(--color-surface-2); }
 .vereadores__item .avatar--retrato { margin-bottom: .75rem; }
-.vereadores--compacto .vereadores__item a { grid-template-columns: auto 1fr; column-gap: 1rem; }
-.vereadores--compacto .avatar { grid-row: 1 / span 3; }
+.vereadores--compacto .vereadores__item a { grid-template-columns: 56px minmax(0, 1fr); column-gap: 1rem; align-items: start; }
+.vereadores--compacto .vereadores__item a > :not(.avatar) { grid-column: 2; }
+.vereadores--compacto .avatar { grid-row: 1 / span 4; grid-column: 1; width: 56px; height: 56px; }
 .vereadores__nome { font-weight: 600; font-size: 1.1rem; letter-spacing: -0.02em; }
 .vereadores__civil { color: var(--color-surface-3); font-size: .85rem; line-height: 1.35; }
 .vereadores__nums { font-size: .85rem; margin-top: .25rem; color: var(--color-secondary); }
@@ -519,4 +520,38 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
   .painel__pontos { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
   .painel__pontos span { width: 6px; height: 6px; border-radius: 3px; background: var(--color-surface-2); transition: width .3s var(--ease), background .3s; }
   .painel__pontos span.ativo { width: 18px; background: var(--color-ink); }
+}
+
+/* ---------- ranking */
+.rank { list-style: none; margin: 1.25rem 0 0; padding: 0; display: grid; gap: 8px; }
+.rank__item { display: grid; grid-template-columns: 2.6rem minmax(12rem, 1.3fr) minmax(6rem, 2fr) 5.5rem minmax(14rem, 1.6fr); align-items: center; gap: 1rem; padding: .7rem 1rem; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 14px; }
+.rank__item--primeiro { border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-linha)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.rank__pos { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; letter-spacing: -0.04em; color: var(--color-surface-3); }
+.rank__item--primeiro .rank__pos { color: var(--color-accent); }
+.rank__quem { display: flex; align-items: center; gap: .75rem; text-decoration: none; min-width: 0; }
+.rank__quem > span { min-width: 0; }
+.rank__nome { display: block; font-weight: 600; letter-spacing: -0.02em; }
+.rank__quem:hover .rank__nome { text-decoration: underline; text-underline-offset: .2em; }
+.rank__partido { display: block; font-size: .8rem; color: var(--color-surface-3); }
+.rank__selo { margin-left: .4rem; }
+.rank__barra { position: relative; height: 10px; border-radius: 5px; background: var(--color-linha); overflow: hidden; }
+.rank__cheio { position: absolute; inset: 0; background: var(--color-accent); transform-origin: left; border-radius: 5px; }
+.rank--parcial .rank__cheio { background: var(--color-surface-2); }
+.rank__nota { text-align: right; white-space: nowrap; }
+.rank__nota strong { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.04em; }
+.rank__nota span { color: var(--color-surface-3); font-size: .8rem; margin-left: .15rem; }
+.rank__na { font-size: .8rem; }
+.rank__pilares { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.rank__pilar { display: grid; gap: 3px; }
+.rank__pilar-nome { font-size: .66rem; color: var(--color-surface-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rank__pilar-trilho { height: 4px; border-radius: 2px; background: var(--color-linha); overflow: hidden; }
+.rank__pilar-trilho > span { display: block; height: 100%; background: var(--color-surface-2); transition: width .5s var(--ease); }
+.rank__pilar--foco .rank__pilar-nome { color: var(--color-ink); font-weight: 600; }
+.rank__pilar--foco .rank__pilar-trilho > span { background: var(--color-accent); }
+.rank__aviso { margin-top: 2.5rem; max-width: var(--larg-texto); padding: 1rem 1.1rem; border-radius: 12px; background: #f3f3f3; font-size: .92rem; color: var(--color-secondary); }
+.rank__aviso p:last-child { margin: 0; }
+@media (max-width: 900px) {
+  .rank__item { grid-template-columns: 2.2rem minmax(0, 1fr) auto; grid-template-areas: "pos quem nota" "barra barra barra" "pil pil pil"; row-gap: .6rem; }
+  .rank__pos { grid-area: pos; } .rank__quem { grid-area: quem; } .rank__nota { grid-area: nota; }
+  .rank__barra { grid-area: barra; } .rank__pilares { grid-area: pil; }
 }

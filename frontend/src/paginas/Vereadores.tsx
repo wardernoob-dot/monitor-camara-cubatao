@@ -24,10 +24,10 @@ function Item({ v, compacto }: { v: Vereador; compacto?: boolean }) {
       <Link to={`/vereadores/${v.slug}`}>
         <Avatar v={v} tamanho={compacto ? "m" : "retrato"} />
         <span className="vereadores__nome">{v.exibicao}</span>
-        <span className="vereadores__civil">{v.nome}{v.partido ? `, ${v.partido}` : ""}</span>
+        {(v.nome !== v.exibicao || v.partido) && <span className="vereadores__civil">{v.nome !== v.exibicao ? v.nome : ""}{v.nome !== v.exibicao && v.partido ? ", " : ""}{v.partido ?? ""}</span>}
         <IndiceMini i={v.indice} />
         <span className="vereadores__nums">
-          {compacto ? `${v.sessoes_total} sessões registradas` : `${v.total_votacoes} votações registradas, ${n} projeto${n === 1 ? "" : "s"} de autoria`}
+          {compacto ? `${v.sessoes_total} ${v.sessoes_total === 1 ? "sessão registrada" : "sessões registradas"}` : `${v.total_votacoes} votações registradas, ${n} projeto${n === 1 ? "" : "s"} de autoria`}
         </span>
       </Link>
     </li>

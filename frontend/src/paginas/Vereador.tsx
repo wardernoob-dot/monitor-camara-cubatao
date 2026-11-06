@@ -24,7 +24,7 @@ export default function VereadorPagina() {
   const v = b.vereador.get(slug);
   useTitulo(v ? v.exibicao : "Vereador não encontrado");
   const [filtro, setFiltro] = useState<Filtro>("todos");
-  const [limite, setLimite] = useState(30);
+  const [limite, setLimite] = useState(10);
 
   const votos = useMemo(() => {
     if (!v) return [];
@@ -99,7 +99,7 @@ export default function VereadorPagina() {
         <Secao id="votos" titulo="Como votou" resumo={`${votos.length} votos`}>
           <div className="filtros" role="group" aria-label="Filtrar votos">
               {filtros.map(([f, nome, n]) => (
-                <button key={f} type="button" aria-pressed={filtro === f} onClick={() => { setFiltro(f); setLimite(30); }}>{nome} ({n})</button>
+                <button key={f} type="button" aria-pressed={filtro === f} onClick={() => { setFiltro(f); setLimite(10); }}>{nome} ({n})</button>
               ))}
           </div>
             <div className="tabela-rolagem">
@@ -129,8 +129,8 @@ export default function VereadorPagina() {
             {visiveis.length === 0 && <p className="nota">Nenhum voto neste filtro.</p>}
             {visiveis.length > limite && (
               <div className="mais">
-                <button type="button" className="botao botao--fantasma" onClick={() => setLimite((l) => l + 30)}>
-                  Mostrar mais {Math.min(30, visiveis.length - limite)} de {visiveis.length - limite} restantes
+                <button type="button" className="botao botao--fantasma" onClick={() => setLimite((l) => l + 10)}>
+                  Mostrar mais {Math.min(10, visiveis.length - limite)} de {visiveis.length - limite} restantes
                 </button>
               </div>
             )}

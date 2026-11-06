@@ -16,6 +16,7 @@ import ProjetoPagina from "./paginas/Projeto";
 import Sessoes from "./paginas/Sessoes";
 import SessaoPagina from "./paginas/Sessao";
 import ComoFunciona from "./paginas/ComoFunciona";
+import Ranking from "./paginas/Ranking";
 import NaoEncontrado from "./paginas/NaoEncontrado";
 
 function RolaParaTopo() {
@@ -31,6 +32,7 @@ function RolaParaTopo() {
 
 const SECOES = [
   ["/vereadores", "Vereadores"],
+  ["/ranking", "Ranking"],
   ["/projetos", "Projetos"],
   ["/sessoes", "Sessões"],
   ["/como-funciona", "Como funciona"],
@@ -86,6 +88,7 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/vereadores" element={<Vereadores />} />
             <Route path="/vereadores/:slug" element={<VereadorPagina />} />
+            <Route path="/ranking" element={<Ranking />} />
             <Route path="/projetos" element={<Projetos />} />
             <Route path="/projetos/:slug" element={<ProjetoPagina />} />
             <Route path="/sessoes" element={<Sessoes />} />
