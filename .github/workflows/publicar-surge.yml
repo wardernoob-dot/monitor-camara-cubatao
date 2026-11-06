@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: surge
@@ -32,6 +32,16 @@ jobs:
 
       - name: Regenerar dados do site
         run: python -c "from pathlib import Path; from camara.site import exportar; exportar(Path('data'))"
+
+      - name: Atualizar docs/data e docs/fotos no GitHub Pages
+        run: |
+          git config user.name  "monitor-camara-bot"
+          git config user.email "monitor-camara-bot@users.noreply.github.com"
+          git add docs/data/ docs/fotos/
+          if ! git diff --cached --quiet; then
+            git commit -m "site: regenera docs/data e docs/fotos"
+            git push
+          fi
 
       - name: Publicar no Surge
         env:
