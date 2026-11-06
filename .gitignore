@@ -6,3 +6,10 @@ data/pdf/
 
 # criado localmente pelo surge; commitado, derrubaria o endereco do github.io
 docs/CNAME
+
+# segredos e logs locais (nunca commitar)
+.env
+.env.*
+pc/token.sec
+pc/*.sec
+pc/log.txt

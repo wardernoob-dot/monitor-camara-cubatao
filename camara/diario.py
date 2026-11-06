@@ -81,7 +81,7 @@ def coletar(dados: Path, http=None, dias: int = 45) -> dict:
 
     http = http or requests.Session()
     dados = Path(dados)
-    pasta = dados / "diario"
+    pasta = (dados / "diario").resolve()
     pasta.mkdir(exist_ok=True)
     fim = date.today()
     ini = fim - timedelta(days=dias)
@@ -96,10 +96,11 @@ def coletar(dados: Path, http=None, dias: int = 45) -> dict:
             rel["erros"].append(f"{termo}: {e!r}"[:200])
             continue
         for p in pubs:
-            if not p["id"]:
+            mid = str(p.get("id") or "")
+            if not mid.isdigit():
                 continue
-            arq = pasta / f"{p['id']}.json"
-            if arq.exists():
+            arq = (pasta / f"{mid}.json").resolve()
+            if not arq.is_relative_to(pasta) or arq.exists():
                 continue
             p["classificacao"] = classificar(p)
             if not p["classificacao"]["tipo"]:

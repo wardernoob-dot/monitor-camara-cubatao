@@ -17,6 +17,7 @@ import os
 import re
 import time
 from pathlib import Path
+from urllib.parse import urlparse
 
 from .textclean import flat, normalize, strip_accents
 
@@ -27,6 +28,7 @@ NATUREZAS = {"homenagem_ou_data", "politica_publica", "orcamento_financas", "org
 MAX_DOC = 14000
 RE_URL_PROJ = re.compile(r"/(PLC|PL|PR|PDL|PELOM)(?:%20|[ _\-.])*0*(\d{1,4})[.\-_](\d{4})", re.I)
 RE_VETO_TIT = re.compile(r"VETO (INTEGRAL|PARCIAL|TOTAL) AO PROJETO DE LEI N\S?\s*0*(\d{1,4})/(\d{4})", re.I)
+RE_SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
 
 def _prompt() -> tuple[str, str]:
@@ -47,7 +49,7 @@ def documento(dados: Path, tipo: str, numero: str, ano: str | None, ementa: str 
     """Acha o PDF da materia no indice; devolve {texto, fonte, url, so_ementa}."""
     dados = Path(dados)
     achado = _pdf_da_materia(dados, tipo, numero, ano)
-    if achado:
+    if achado and RE_SHA256.match(achado.get("sha256") or ""):
         for arq, fonte in ((f"{achado['sha256']}.txt", "texto integral do projeto publicado no site da Camara"),
                            (f"{achado['sha256']}.ocr.txt", "texto integral do projeto (transcricao automatica do PDF escaneado)")):
             p = dados / "texto" / arq
@@ -81,7 +83,15 @@ def transcrever_pdf(dados: Path, url: str, sha: str, http=None, prompt: str = PR
 
     from .cabecalho import GEMINI, _modelos_gemini
 
-    destino = Path(dados) / "texto" / f"{sha}.ocr.txt"
+    if not RE_SHA256.match(sha or ""):
+        raise ValueError(f"sha256 invalido: {sha!r}")
+    p_url = urlparse(url or "")
+    if p_url.scheme not in ("https", "http") or p_url.hostname != "www.cubatao.sp.leg.br":
+        raise ValueError(f"URL de PDF fora do dominio da Camara: {url!r}")
+    texto_dir = (Path(dados) / "texto").resolve()
+    destino = (texto_dir / f"{sha}.ocr.txt").resolve()
+    if not destino.is_relative_to(texto_dir):
+        raise ValueError(f"caminho invalido: {destino}")
     if destino.exists() or not os.environ.get("GEMINI_API_KEY"):
         return destino.exists()
     http = http or requests
@@ -95,7 +105,8 @@ def transcrever_pdf(dados: Path, url: str, sha: str, http=None, prompt: str = PR
                                                       "data": base64.b64encode(pdf.content).decode()}}]}],
              "generationConfig": {"temperature": 0}}
     for modelo in _modelos_gemini(chave, http)[:3]:
-        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", params={"key": chave}, json=corpo, timeout=300)
+        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", headers={"x-goog-api-key": chave},
+                      json=corpo, timeout=300)
         if r.status_code == 200:
             try:
                 t = "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
@@ -153,7 +164,8 @@ def _gemini(prompt: str, http) -> tuple[str, str]:
              "generationConfig": {"temperature": 0.2, "response_mime_type": "application/json"}}
     erros = []
     for modelo in _modelos_gemini(chave, http)[:5]:
-        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", params={"key": chave}, json=corpo, timeout=180)
+        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", headers={"x-goog-api-key": chave},
+                      json=corpo, timeout=180)
         if r.status_code != 200:
             erros.append(f"{modelo}: HTTP {r.status_code}")
             continue
@@ -208,7 +220,8 @@ def conferir(saida: dict, doc: dict) -> dict:
         ponto, trecho = str(p.get("ponto") or "").strip(), str(p.get("trecho") or "").strip()
         if not ponto:
             continue
-        if trecho and _n(trecho) and _n(trecho) in base:
+        tn = _n(trecho)
+        if trecho and len(tn) >= 12 and tn in base:
             out["pontos_de_atencao"].append({"ponto": ponto, "trecho": trecho})
         elif not trecho and _n(ponto).startswith("o texto nao") and not doc["so_ementa"]:
             out["pontos_de_atencao"].append({"ponto": ponto, "trecho": ""})  # ausencia: so vale com texto integral
@@ -226,13 +239,16 @@ def conferir(saida: dict, doc: dict) -> dict:
 # ---------------------------------------------------------------- orquestracao
 
 def chave_materia(tipo: str, numero: str, ano: str | None) -> str:
-    return f"{tipo}-{int(numero):03d}-{ano or 'sem-ano'}"
+    if tipo not in TIPOS_ANALISADOS:
+        raise ValueError(f"tipo invalido: {tipo!r}")
+    ano_limpo = re.sub(r"[^0-9]", "", str(ano or ""))[:4] or "sem-ano"
+    return f"{tipo}-{int(numero):03d}-{ano_limpo}"
 
 
 def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: float = 4.0, http=None) -> dict:
     """Analisa as materias votadas que aparecem no consolidado e ainda nao tem analise valida."""
     dados = Path(dados)
-    pasta = dados / "analises"
+    pasta = (dados / "analises").resolve()
     pasta.mkdir(exist_ok=True)
     corpo, versao = _prompt()
     rel = {"novas": 0, "em_cache": 0, "sem_documento": 0, "ocr": 0, "erros": []}
@@ -260,7 +276,9 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
                 rel["sem_documento"] += 1
                 continue
             h = hashlib.sha256(doc["texto"].encode()).hexdigest()[:16]
-            saida = pasta / f"{k}.json"
+            saida = (pasta / f"{k}.json").resolve()
+            if not saida.is_relative_to(pasta):
+                continue
             if saida.exists():
                 antigo = json.loads(saida.read_text("utf-8"))
                 if antigo.get("hash_documento") == h and antigo.get("versao_prompt") == versao:
@@ -268,9 +286,13 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
                     continue
             if rel["novas"] >= limite:
                 continue
-            prompt = corpo.replace("{fonte}", doc["fonte"]).replace(
-                "{documento}", f"{m['tipo']} {m['numero']}/{m.get('ano') or ''} - Autoria: {m.get('autoria') or 'nao informada'}\n"
-                               f"Ementa: {m.get('assunto') or ''}\n\n{doc['texto']}")
+            bloco_doc = (
+                "<documento_oficial>\n"
+                f"{m['tipo']} {m['numero']}/{m.get('ano') or ''} - Autoria: {m.get('autoria') or 'nao informada'}\n"
+                f"Ementa: {m.get('assunto') or ''}\n\n{doc['texto']}\n"
+                "</documento_oficial>"
+            )
+            prompt = corpo.replace("{fonte}", doc["fonte"]).replace("{documento}", bloco_doc)
             try:
                 if rel["novas"]:
                     time.sleep(pausa)

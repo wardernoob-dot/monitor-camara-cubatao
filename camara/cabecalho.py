@@ -76,7 +76,7 @@ PREFERENCIA = ["flash-lite", "flash"]  # modelos gratuitos e baratos; Pro e gera
 def _modelos_gemini(chave: str, http) -> list[str]:
     """Pergunta a API quais modelos existem (evita depender de nome que muda)."""
     fixo = os.environ.get("MODELO_GEMINI")
-    r = http.get(f"{GEMINI}/models", params={"key": chave, "pageSize": 200}, timeout=30)
+    r = http.get(f"{GEMINI}/models", params={"pageSize": 200}, headers={"x-goog-api-key": chave}, timeout=30)
     r.raise_for_status()
     nomes = [m["name"].split("/", 1)[1] for m in r.json().get("models", [])
              if "generateContent" in m.get("supportedGenerationMethods", [])]
@@ -106,7 +106,8 @@ def transcrever(png: bytes, n: int, chave: str | None = None, http=None) -> list
     }
     erros = []
     for modelo in _modelos_gemini(chave, http)[:5]:
-        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", params={"key": chave}, json=corpo, timeout=120)
+        r = http.post(f"{GEMINI}/models/{modelo}:generateContent", headers={"x-goog-api-key": chave},
+                      json=corpo, timeout=120)
         if r.status_code != 200:
             erros.append(f"{modelo}: HTTP {r.status_code} {r.text[:120]}")
             continue
