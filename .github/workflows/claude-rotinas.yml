@@ -1,0 +1,143 @@
+name: claude-rotinas
+
+# Rotinas do Claude em volta da coleta: conferir o que o robo trouxe, diagnosticar falha e manutencao semanal.
+# Precisa do secret ANTHROPIC_API_KEY. Nunca altera data/ (trilha de auditoria): so abre issue ou PR.
+# workflow_run so dispara a partir do workflow que esta na branch padrao (main).
+on:
+  workflow_run:
+    workflows: ["coleta-diaria"]
+    types: [completed]
+  schedule:
+    # todo dia 21:30 UTC (18:30 em Brasilia), depois da coleta das 20:17 UTC: conferir-coleta
+    - cron: "30 21 * * *"
+    # segunda-feira, 11:00 UTC: manutencao
+    - cron: "0 11 * * 1"
+  workflow_dispatch:
+    inputs:
+      rotina:
+        description: "Qual rotina rodar"
+        type: choice
+        options: [conferir-coleta, manutencao]
+        default: conferir-coleta
+
+concurrency:
+  group: claude-rotinas-${{ github.event_name }}
+  cancel-in-progress: false
+
+jobs:
+  # Uma vez por dia (resume as coletas do dia): roda a skill conferir-coleta-do-dia e abre issue so se achar algo.
+  conferir-coleta:
+    if: |
+      (github.event_name == 'schedule' && github.event.schedule == '30 21 * * *') ||
+      (github.event_name == 'workflow_dispatch' && inputs.rotina == 'conferir-coleta')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Siga o roteiro de .claude/skills/conferir-coleta-do-dia/SKILL.md sobre as coletas das ultimas 24 horas.
+            Se NAO houver nada que mereca olho humano, nao crie issue e responda apenas "sem pendencias".
+            Se houver (avisos do parser, PDF sem texto/OCR, votacao nao identificada, divergencia incomum
+            entre painel e resumo), abra UMA issue em portugues com o titulo "conferir coleta AAAA-MM-DD",
+            listando cada item com sessao/arquivo e o que foi e o que nao foi verificado.
+            Antes de abrir, procure issue aberta com o mesmo tema (gh issue list) e comente nela em vez de duplicar.
+            Nao altere nada em data/. Nao corrija o parser aqui; so relate.
+          claude_args: |
+            --allowedTools "Read,Grep,Glob,Bash(python .claude/skills/conferir-coleta-do-dia/resumo.py:*),Bash(git log:*),Bash(git show:*),Bash(gh issue list:*),Bash(gh issue create:*),Bash(gh issue comment:*)"
+
+  # Coleta falhou: le o log e abre PR com a correcao, ou issue se nao souber corrigir.
+  diagnosticar-falha:
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: read
+      id-token: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            A execucao ${{ github.event.workflow_run.id }} do workflow coleta-diaria falhou.
+            Leia o log (gh run view ${{ github.event.workflow_run.id }} --log-failed) e descubra a causa.
+            - Teste quebrado, ou parser que nao entende mais um PDF/pagina da Camara (grafia nova de vereador,
+              "negrito falso", cirilico, layout novo): reproduza localmente com pytest, corrija o codigo em camara/
+              com um teste novo e abra um PR numa branch "fix/coleta-AAAA-MM-DD". Siga as regras de voto do CLAUDE.md.
+            - Site da Camara fora do ar, timeout, chave/secret ausente, YouTube bloqueando IP de nuvem: isso nao e
+              bug de codigo. Abra (ou comente em) uma issue explicando, sem mexer no codigo.
+            Nunca altere nem reescreva nada em data/. Nao commite na main. Diga o que nao conseguiu verificar.
+          claude_args: |
+            --allowedTools "Read,Edit,Write,Grep,Glob,Bash(python -m pytest:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git diff:*),Bash(git log:*),Bash(gh run view:*),Bash(gh pr create:*),Bash(gh issue list:*),Bash(gh issue create:*),Bash(gh issue comment:*)"
+
+  # Semanal: dependencias e documentacao em dia. Abre um PR so se houver algo a mudar.
+  manutencao:
+    if: |
+      (github.event_name == 'schedule' && github.event.schedule == '0 11 * * 1') ||
+      (github.event_name == 'workflow_dispatch' && inputs.rotina == 'manutencao')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: pip install -r requirements.txt
+      - run: cd frontend && npm ci
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Manutencao semanal. Faca so o que for necessario e abra UM PR (branch "manutencao/AAAA-MM-DD"); se nao
+            houver nada a mudar, nao abra PR e responda "sem mudancas".
+            1. Dependencias: veja pip list --outdated e npm outdated. Atualize apenas atualizacoes menores/patch
+               seguras em requirements.txt e frontend/package.json; rode python -m pytest -q e, no frontend,
+               npm run build. Se algo quebrar, reverta aquela dependencia e cite no PR. Nao suba major sem avisar.
+            2. Documentacao: confira se README, CLAUDE.md e fotos/LEIA-ME.md ainda descrevem o codigo (comandos,
+               nomes de arquivos, ordem do pipeline). Corrija so divergencias reais e pequenas.
+            Se o PR mexer em frontend/, inclua o resultado do npm run build em docs/ (nunca docs/CNAME).
+            Nao altere nada em data/ nem em fotos/. Descreva no PR o que foi e o que nao foi verificado.
+          claude_args: |
+            --allowedTools "Read,Edit,Write,Grep,Glob,Bash(python -m pytest:*),Bash(pip list:*),Bash(pip install:*),Bash(npm outdated:*),Bash(npm install:*),Bash(npm run build:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(gh pr create:*)"
