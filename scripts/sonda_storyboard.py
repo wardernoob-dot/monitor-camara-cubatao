@@ -75,6 +75,7 @@ def baixar_urls(vid, urls):
     d.mkdir(parents=True, exist_ok=True)
     tot = 0
     for i, u in enumerate(urls):
+        yt._validar_base_storyboard(u)
         for tentativa in range(4):
             r = http.get(u, timeout=30)
             if r.status_code == 200:
@@ -154,7 +155,7 @@ def processar(vid, titulo):
 
 
 # ---------- execucao ----------
-subprocess.run([sys.executable, "-m", "pip", "install", "-q", "yt-dlp"], check=False)
+subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--only-binary=:all:", "yt-dlp"], check=False)
 
 alvos = []
 try:

@@ -13,6 +13,7 @@ import re
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup
 
@@ -41,8 +42,27 @@ RESULTADOS = [
     (re.compile(r"\baprov\w+", re.I), "aprovado"),
 ]
 # "Votaram a favor do parecer desfavoravel os vereadores A, B e C."  /  "Ja D, E e F votaram contra."
-RE_VOTO_1 = re.compile(r"Votaram\s+(a favor|contra)(\s+d[oa]\s+[^.]{0,60}?)?\s+(?:os|as)\s+vereador\w*\s+([^.]+)\.", re.I)
+RE_VOTO_1 = re.compile(r"Votaram\s+(a favor|contra)(\s+d[oa]\s+[^.]{0,60}?)?\s+(?:os|as)\s+vereador\w*\s+([^.]{1,600})\.", re.I)
 RE_VOTO_2 = re.compile(r"(?:J[áa]\s+)?([A-ZÁÉÍÓÚÂÊÔÃÕÇ][^.]{3,400}?)\s+votaram\s+(a favor|contra)(\s+d[oa]\s+[^.]{0,60}?)?\s*\.", re.I)
+MAX_XML_BYTES = 2 * 1024 * 1024
+MAX_HTML_BYTES = 5 * 1024 * 1024
+HOST_CAMARA = "www.cubatao.sp.leg.br"
+
+
+def _url_noticia_segura(url: str) -> str:
+    """Garante que a URL da noticia aponta estritamente para www.cubatao.sp.leg.br (bloqueia SSRF via RSS)."""
+    u = (url or "").strip()
+    p = urlparse(u)
+    if p.scheme not in ("https", "http") or p.hostname != HOST_CAMARA:
+        raise ValueError(f"URL de noticia fora do dominio oficial: {url!r}")
+    return u
+
+
+def _bloquear_redirect_externo(r, *args, **kwargs):
+    if 300 <= getattr(r, "status_code", 200) < 400 and "location" in getattr(r, "headers", {}):
+        destino = urlparse(urljoin(getattr(r, "url", RSS), r.headers["location"]))
+        if destino.scheme not in ("https", "http") or destino.hostname != HOST_CAMARA:
+            raise ValueError(f"Redirecionamento externo bloqueado em noticias: {r.headers['location']!r}")
 
 
 def _slug_seguro(url: str) -> str:
@@ -157,6 +177,11 @@ def texto_da_pagina(html: str) -> tuple[str, str]:
 
 
 def ler_rss(xml: bytes) -> list[dict]:
+    if len(xml) > MAX_XML_BYTES:
+        raise ValueError(f"XML do RSS excede limite de {MAX_XML_BYTES} bytes")
+    cab = xml[:4096].upper()
+    if b"<!DOCTYPE" in cab or b"<!ENTITY" in cab:
+        raise ValueError("XML com DTD/ENTITY bloqueado por seguranca (XXE/XML Bomb)")
     raiz = ET.fromstring(xml)
     out = []
     for it in raiz.findall("rss:item", NS):
@@ -171,7 +196,9 @@ def coletar(dados: Path, http=None, apel: dict | None = None) -> dict:
 
     from . import validacao as V
 
-    http = http or requests.Session()
+    if http is None:
+        http = requests.Session()
+        http.hooks.setdefault("response", []).append(_bloquear_redirect_externo)
     dados = Path(dados)
     pasta = dados / "noticias"
     pasta.mkdir(exist_ok=True)
@@ -186,7 +213,8 @@ def coletar(dados: Path, http=None, apel: dict | None = None) -> dict:
         itens = []
     for it in itens:
         try:
-            slug = _slug_seguro(it["url"])
+            url_ok = _url_noticia_segura(it["url"])
+            slug = _slug_seguro(url_ok)
             arq = _caminho_seguro(pasta, f"{slug}.json")
         except ValueError as e:
             rel["erros"].append(f"slug: {e!r}"[:200])
@@ -194,8 +222,10 @@ def coletar(dados: Path, http=None, apel: dict | None = None) -> dict:
         if arq.exists():
             continue
         try:
-            p = http.get(it["url"], headers=UA, timeout=60)
+            p = http.get(url_ok, headers=UA, timeout=60)
             p.raise_for_status()
+            if len(p.content) > MAX_HTML_BYTES:
+                raise ValueError("HTML da noticia excede tamanho maximo")
             titulo, texto = texto_da_pagina(p.text)
         except Exception as e:  # noqa: BLE001
             rel["erros"].append(f"{slug}: {e!r}"[:200])

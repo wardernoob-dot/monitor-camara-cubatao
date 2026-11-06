@@ -124,7 +124,7 @@ class Base:
 
     # ------------------------------------------------------------ projetos
     def materia(self, tipo: str, numero: str | None, ano: str | None) -> dict:
-        k = f"{tipo.lower()}-{numero or 'x'}-{ano or 'x'}"
+        k = slug(f"{tipo.lower()}-{numero or 'x'}-{ano or 'x'}")
         if k not in self.materias:
             self.materias[k] = {
                 "id": k, "slug": k, "tipo": tipo, "numero": numero, "ano": ano, "assunto": None, "autoria_txt": None,
@@ -135,9 +135,12 @@ class Base:
 
     def carregar_pautas_e_documentos(self):
         idx = json.loads((self.dados / "indice.json").read_text("utf-8"))
+        texto_dir = (self.dados / "texto").resolve()
         for meta in idx.values():
-            p = self.dados / "texto" / f"{meta['sha256']}.txt"
-            if meta["secao"] == "pauta" and p.exists():
+            sha = str(meta.get("sha256") or "")
+            p = (texto_dir / f"{sha}.txt").resolve() if AN.RE_SHA256.match(sha) else None
+            p_ok = bool(p and p.is_relative_to(texto_dir) and p.exists())
+            if meta["secao"] == "pauta" and p_ok:
                 t = re.sub(r"\s+", " ", p.read_text("utf-8"))
                 dt = _data_pauta(t)
                 for c in V.candidatos([t]):
@@ -149,7 +152,7 @@ class Base:
                     m["autoria_txt"] = m["autoria_txt"] or c["autoria"]
                     if dt and dt not in m["pautas"]:
                         m["pautas"].append(dt)
-            if meta["secao"] in ("projetos",) and p.exists():
+            if meta["secao"] in ("projetos",) and p_ok:
                 self._cargos(p.read_text("utf-8"))
             if meta["secao"] == "projetos":
                 mu = AN.RE_URL_PROJ.search(meta["url"])
@@ -162,7 +165,7 @@ class Base:
                     m["documento"] = meta["url"]
                     if not m["assunto"] and meta.get("titulo") and "MENSAGEM" not in meta["titulo"].upper():
                         m["assunto"] = meta["titulo"]
-                    if not m["autoria_txt"] and p.exists():
+                    if not m["autoria_txt"] and p_ok:
                         m["autoria_txt"] = self._autor_do_pdf(p.read_text("utf-8"))
         for m in self.materias.values():
             m["autores"], m["autoria"] = self.autor(m["autoria_txt"])
@@ -274,7 +277,7 @@ class Base:
         if votos:
             sim = sum(1 for v in votos.values() if v == "SIM")
             nao = sum(1 for v in votos.values() if v == "NAO")
-        elif r.get("placar"):
+        elif r.get("placar") and (r["placar"].get("favor") or r["placar"].get("contra")):
             sim, nao = r["placar"].get("favor"), r["placar"].get("contra")
         else:
             sim = nao = None
@@ -636,11 +639,14 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             continue
         if m["analise"]:
             an = m["analise"]
-            (saida / "analises" / f"{m['slug']}.json").write_text(json.dumps({
-                "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", an["modelo"]),
-                "fonte": an["documento"]["fonte"].split(" (")[0], **{k: an["analise"][k] for k in (
-                    "resumo", "o_que_muda", "quem_e_afetado", "justificativa_do_autor", "pontos_de_atencao", "limitacoes")},
-            }, ensure_ascii=False), "utf-8")
+            pasta_an = (saida / "analises").resolve()
+            arq_an = (pasta_an / f"{slug(m['slug'])}.json").resolve()
+            if arq_an.is_relative_to(pasta_an):
+                arq_an.write_text(json.dumps({
+                    "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", an["modelo"]),
+                    "fonte": an["documento"]["fonte"].split(" (")[0], **{k: an["analise"][k] for k in (
+                        "resumo", "o_que_muda", "quem_e_afetado", "justificativa_do_autor", "pontos_de_atencao", "limitacoes")},
+                }, ensure_ascii=False), "utf-8")
         lei_obj = {**m["lei"], "url": url_segura(m["lei"].get("url"))} if m["lei"] else None
         veto_obj = ({**m["veto"], "url": url_segura(m["veto"].get("url"))}
                     if m["veto"] and "url" in m["veto"] else m["veto"])

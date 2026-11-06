@@ -10,6 +10,8 @@ from .nomes import Registro
 from .parser_resumo import parse_resumo
 
 _DATA_TITULO = re.compile(r"(\d{2})/(\d{2})/(\d{4})")
+_RE_SHA256 = re.compile(r"^[0-9a-f]{64}$")
+_RE_DATA_ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def _ordem(meta: dict):
@@ -20,8 +22,9 @@ def _ordem(meta: dict):
 def processar(pasta_dados: Path) -> dict:
     dados = Path(pasta_dados)
     indice = json.loads((dados / "indice.json").read_text("utf-8"))
-    saida = dados / "sessoes"
+    saida = (dados / "sessoes").resolve()
     saida.mkdir(exist_ok=True)
+    texto_dir = (dados / "texto").resolve()
 
     reg = Registro()
     resumos = sorted((m for m in indice.values() if m["secao"] == "resumo"), key=_ordem)
@@ -34,24 +37,35 @@ def processar(pasta_dados: Path) -> dict:
         if meta.get("precisa_ocr"):
             # Transcricao de PDF escaneado (python -m camara ocr-resumos) so vale depois de conferida por pessoa
             # e commitada; sem ela o resumo fica de fora e aparece em precisa_ocr.
-            arq_ocr = dados / "texto" / f"{meta['sha256']}.ocr.txt"
-            if not arq_ocr.exists():
+            sha_ocr = str(meta.get("sha256") or "")
+            arq_ocr = (texto_dir / f"{sha_ocr}.ocr.txt").resolve()
+            if not _RE_SHA256.match(sha_ocr) or not arq_ocr.is_relative_to(texto_dir) or not arq_ocr.exists():
                 relatorio["precisa_ocr"].append(meta["titulo"])
                 continue
-            texto, via_ocr = arq_ocr.read_text("utf-8"), True
-        else:
-            texto = (dados / "texto" / f"{meta['sha256']}.txt").read_text("utf-8")
+            via_ocr = True
+        sha = str(meta.get("sha256") or "")
+        if not _RE_SHA256.match(sha):
+            relatorio["avisos"].append(f"{meta.get('titulo')}: sha256 invalido, ignorado")
+            continue
+        arq_txt = (texto_dir / (f"{sha}.ocr.txt" if via_ocr else f"{sha}.txt")).resolve()
+        if not arq_txt.is_relative_to(texto_dir):
+            continue
+        texto = arq_txt.read_text("utf-8")
         r = parse_resumo(texto, reg, fonte=meta["url"], titulo=meta["titulo"])
-        r["sha256_pdf"] = meta["sha256"]
+        r["sha256_pdf"] = sha
         if via_ocr:
             r["transcrito_por_ocr"] = True  # transcricao de PDF escaneado, conferida por pessoa
             relatorio["via_ocr"].append(meta["titulo"])
         s = r["sessao"]
-        if not (s["data"] and s["numero"] and s["tipo"]):
+        tipo_limpo = re.sub(r"[^a-z0-9]", "", str(s.get("tipo") or "")[:5].lower())
+        if not (s.get("data") and _RE_DATA_ISO.match(str(s["data"])) and s.get("numero") and tipo_limpo):
             relatorio["avisos"].append(f"{meta['titulo']}: cabecalho incompleto, ignorado")
             continue
-        nome = f"{s['data']}_{s['tipo'][:5]}_{s['numero']:02d}.json"
-        (saida / nome).write_text(json.dumps(r, ensure_ascii=False, indent=1), "utf-8")
+        nome = f"{s['data']}_{tipo_limpo}_{int(s['numero']):02d}.json"
+        destino = (saida / nome).resolve()
+        if not destino.is_relative_to(saida):
+            continue
+        destino.write_text(json.dumps(r, ensure_ascii=False, indent=1), "utf-8")
 
         relatorio["sessoes"] += 1
         relatorio["itens"] += len(r["itens"])

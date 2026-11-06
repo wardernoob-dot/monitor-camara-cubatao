@@ -25,6 +25,7 @@ ESPECIES = {
 }
 RE_VETO = re.compile(r"VETO (?:INTEGRAL|PARCIAL) AO PROJETO DE LEI N\S?\s*(\d{1,4})/(\d{4})")
 RE_APELIDO = re.compile(r"Vereador[a]?\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ][^\-–“\"\n]{5,60}?)\s*[-–]\s*[“\"]([^”\"]{2,40})[”\"]")
+RE_SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
 # apelidos que nao aparecem nas indicacoes dos resumos (vistos no painel/noticias)
 APELIDOS_EXTRA = {
@@ -46,13 +47,17 @@ def _sem_acento_maiusc(t: str) -> str:
 def apelidos(dados: Path) -> dict[str, str]:
     """apelido normalizado -> chave do nome civil, a partir das indicacoes dos resumos."""
     dados = Path(dados)
+    texto_dir = (dados / "texto").resolve()
     idx = json.loads((dados / "indice.json").read_text("utf-8"))
     out = dict(APELIDOS_EXTRA)
     for m in idx.values():
         if m["secao"] != "resumo":
             continue
-        p = dados / "texto" / f"{m['sha256']}.txt"
-        if not p.exists():
+        sha = str(m.get("sha256") or "")
+        if not RE_SHA256.match(sha):
+            continue
+        p = (texto_dir / f"{sha}.txt").resolve()
+        if not p.is_relative_to(texto_dir) or not p.exists():
             continue
         for a in RE_APELIDO.finditer(flat(normalize(p.read_text("utf-8")))):
             out.setdefault(chave(a.group(2)), chave(a.group(1)))
@@ -62,6 +67,7 @@ def apelidos(dados: Path) -> dict[str, str]:
 def pautas_do_dia(dados: Path, data_iso: str) -> list[str]:
     """Texto de todas as pautas (ordinaria e extraordinarias) daquele dia."""
     dados = Path(dados)
+    texto_dir = (dados / "texto").resolve()
     a, m, d = data_iso.split("-")
     alvo = f"DIA {int(d)} DE {MESES_NOME[int(m) - 1]} DE {a}"
     alvo2 = f"DIA {d} DE {MESES_NOME[int(m) - 1]} DE {a}"
@@ -71,8 +77,11 @@ def pautas_do_dia(dados: Path, data_iso: str) -> list[str]:
     for meta in idx.values():
         if meta["secao"] != "pauta":
             continue
-        p = dados / "texto" / f"{meta['sha256']}.txt"
-        if not p.exists():
+        sha = str(meta.get("sha256") or "")
+        if not RE_SHA256.match(sha):
+            continue
+        p = (texto_dir / f"{sha}.txt").resolve()
+        if not p.is_relative_to(texto_dir) or not p.exists():
             continue
         t = _sem_acento_maiusc(flat(normalize(p.read_text("utf-8")))[:600])
         if alvo in t or alvo2 in t:

@@ -107,15 +107,26 @@ def processar_videos(dados: Path, http=None) -> dict:
     return rel
 
 
+def _caminho_img_seguro(dados: Path, rel_path: str) -> Path:
+    img_dir = (Path(dados) / "painel" / "img").resolve()
+    alvo = (Path(dados) / (rel_path or "")).resolve()
+    if not alvo.is_relative_to(img_dir) or alvo.suffix.lower() != ".jpg":
+        raise ValueError(f"caminho de evidencia fora de painel/img: {rel_path!r}")
+    return alvo
+
+
 def limpar_falsos(dados: Path) -> int:
     """Remove votacoes cujo print nao e o painel (falso positivo antigo do detector) e renumera."""
     dados = Path(dados)
     removidas = 0
     for arq in sorted((dados / "painel").glob("*.json")):
         d = json.loads(arq.read_text("utf-8"))
+        vid = d.get("video_id") or ""
+        if not RE_VIDEO_ID.match(vid):
+            raise ValueError(f"video_id invalido em {arq.name}: {vid!r}")
         boas = []
         for v in d["votacoes"]:
-            img = dados / v["evidencia"]
+            img = _caminho_img_seguro(dados, v["evidencia"])
             t = np.asarray(Image.open(img).convert("RGB")).astype(np.int16) if img.exists() else None
             if t is not None and not P.eh_painel(t):
                 img.unlink()
@@ -125,9 +136,9 @@ def limpar_falsos(dados: Path) -> int:
         if len(boas) == len(d["votacoes"]):
             continue
         for n, v in enumerate(boas, 1):
-            novo = f"painel/img/{d['video_id']}_{n:02d}.jpg"
+            novo = f"painel/img/{vid}_{n:02d}.jpg"
             if v["evidencia"] != novo:
-                (dados / v["evidencia"]).rename(dados / novo)
+                _caminho_img_seguro(dados, v["evidencia"]).rename(_caminho_img_seguro(dados, novo))
             v["n"], v["evidencia"] = n, novo
         d["votacoes"] = boas
         arq.write_text(json.dumps(d, ensure_ascii=False, indent=1), "utf-8")
@@ -147,7 +158,7 @@ def identificar_pendentes(dados: Path) -> dict:
         if not pend:
             continue
         try:
-            cortes = [C.corte_cabecalho(np.asarray(Image.open(dados / v["evidencia"]).convert("RGB")).astype(np.int16))
+            cortes = [C.corte_cabecalho(np.asarray(Image.open(_caminho_img_seguro(dados, v["evidencia"])).convert("RGB")).astype(np.int16))
                       for v in pend]
             ids = C.identificar(cortes)
         except Exception as e:  # noqa: BLE001  (sem token, 403, limite do plano gratuito...)

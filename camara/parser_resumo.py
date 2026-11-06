@@ -30,7 +30,7 @@ RE_INICIO = re.compile(r"In[íi]cio [àa]s (\d{1,2})h\s?(\d{2})", re.I)
 RE_FIM = re.compile(r"Sess[ãa]o foi encerrada [àa]s (\d{1,2})h\s?(\d{2})", re.I)
 RE_PRESENCA = re.compile(r"^(.+?)\s+(SIM|N[ÃA]O|JUSTIFICAD[AO]|AUSENTE|LICENCIAD[AO])$", re.I)
 RE_OBSTRUCAO = re.compile(
-    r"\bO Vereador[a]? ([^.;:]{3,90}?) solicitou obstru[çc][ãa]o da Sess[ãa]o em nome da bancada d[oa]s? (.+?)\.", re.I)
+    r"\bO Vereador[a]? ([^.;:]{3,90}?) solicitou obstru[çc][ãa]o da Sess[ãa]o em nome da bancada d[oa]s? ([^.;]{1,120})\.", re.I)
 RE_REMOTO = re.compile(r"\bO Vereador[a]? ([^.;:]{3,90}?) participou de forma remota", re.I)
 RE_FALTA_QUORUM = re.compile(r"falta de \W?qu[óo]rum", re.I)
 

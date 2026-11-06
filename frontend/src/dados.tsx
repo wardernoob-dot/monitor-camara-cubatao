@@ -172,7 +172,7 @@ export function useAnalise(slug: string, existe: boolean): Analise | null {
   const [a, setA] = useState<Analise | null>(null);
   useEffect(() => {
     setA(null);
-    if (!existe) return;
+    if (!existe || !/^[a-z0-9-]+$/.test(slug)) return;
     let vivo = true;
     fetch(`./data/analises/${slug}.json`, { cache: "no-cache" })
       .then((r) => (r.ok ? r.json() : null))

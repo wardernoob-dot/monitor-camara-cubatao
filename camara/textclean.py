@@ -60,7 +60,7 @@ def undouble_line(line: str) -> str:
 
 
 def _undouble_tok(t: str) -> str:
-    if len(t) < 2:
+    if len(t) < 2 or len(t) > 80:
         return t
     if _is_word_doubled(t):
         return t[: len(t) // 2]

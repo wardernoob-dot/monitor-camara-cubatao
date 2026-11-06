@@ -32,7 +32,7 @@ export default function ComoFunciona() {
 <ul className="lista-simples">
   <li>Ler o texto miúdo no topo do painel, que diz qual projeto está em votação. O número lido é conferido contra a pauta do dia.</li>
   <li>Transcrever PDFs escaneados de projetos.</li>
-  <li>Escrever a seção “Entenda o projeto”. O modelo recebe só o texto do projeto, sem votos, nomes de vereadores ou partidos. Cada ponto de atenção precisa citar um trecho literal do projeto, e o sistema confere se esse trecho existe; se não existir, o ponto é descartado. As instruções enviadas ao modelo são públicas: <a href={`${meta.repo}/blob/main/prompts/analise.md`}>leia o texto completo</a>.</li>
+  <li>Escrever a seção “Entenda o projeto”. O modelo recebe só o texto do projeto, sem votos, nomes de vereadores ou partidos. Cada ponto de atenção precisa citar um trecho literal do projeto, e o sistema confere se esse trecho existe; se não existir, o ponto é descartado. As instruções enviadas ao modelo são públicas: <a href={`${meta.repo}/blob/main/prompts/analise.md`} rel="noopener noreferrer">leia o texto completo</a>.</li>
 </ul>
 <p>Os votos individuais nunca passam por inteligência artificial: são lidos pela cor de cada moldura no painel.</p>
 
@@ -59,7 +59,7 @@ export default function ComoFunciona() {
 </ul>
 
 <h2>Código</h2>
-<p>Todo o código e todos os dados coletados ficam num repositório público: <a href={meta.repo}>{meta.repo.replace("https://", "")}</a>. Se encontrar um erro, abra um aviso por lá.</p>
+<p>Todo o código e todos os dados coletados ficam num repositório público: <a href={meta.repo} rel="noopener noreferrer">{meta.repo.replace("https://", "")}</a>. Se encontrar um erro, abra um aviso por lá.</p>
 </div>
     </div>
   );
