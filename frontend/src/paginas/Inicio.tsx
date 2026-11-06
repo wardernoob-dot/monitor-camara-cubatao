@@ -129,13 +129,19 @@ export default function Inicio() {
 
             <Bloco i={6} classe="bento__tile--largo">
               <h3 className="tile__titulo">Quem apresenta os projetos</h3>
-              <p className="tile__nota">Projetos de lei, de resolução e de decreto legislativo, por autor.</p>
+              <p className="tile__nota">Projetos de lei, de resolução e de decreto legislativo, por autor. Projeto apresentado por mais de um vereador conta para cada um e aparece listrado.</p>
               <Barras
                 itens={p.autoria.map((a) => ({ rotulo: a.rotulo, para: a.para, partes: [
-                  { valor: a.aprovados, classe: "parte--aprovado", nome: "aprovados" },
-                  { valor: a.outros, classe: "parte--outro", nome: "em andamento ou não votados" },
+                  { valor: a.aprovados, classe: "parte--aprovado", nome: "aprovados (sozinho)" },
+                  { valor: a.aprovadosJunto, classe: "parte--aprovado parte--junto", nome: "aprovados (com outros vereadores)" },
+                  { valor: a.outros, classe: "parte--outro", nome: "em andamento ou não votados (sozinho)" },
+                  { valor: a.outrosJunto, classe: "parte--outro parte--junto", nome: "em andamento ou não votados (com outros vereadores)" },
                 ] }))}
-                legenda={[{ classe: "parte--aprovado", nome: "Aprovados" }, { classe: "parte--outro", nome: "Em andamento ou não votados" }]}
+                legenda={[
+                  { classe: "parte--aprovado", nome: "Aprovados" },
+                  { classe: "parte--outro", nome: "Em andamento ou não votados" },
+                  { classe: "parte--neutro parte--junto", nome: "Com outros vereadores" },
+                ]}
               />
             </Bloco>
 

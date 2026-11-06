@@ -7,7 +7,7 @@ export interface Painel {
   sessoes: number;
   funilProjetos: { rotulo: string; valor: number }[];
   vetos: { m: Materia; resultado: "mantido" | "derrubado" | "aguardando" }[];
-  autoria: { rotulo: string; para?: string; aprovados: number; outros: number }[];
+  autoria: { rotulo: string; para?: string; aprovados: number; outros: number; aprovadosJunto: number; outrosJunto: number }[];
   temas: { rotulo: string; aprovados: number; outros: number }[];
   faltas: { v: Vereador; justificada: number; ausente: number }[];
   alinhamento: { a: Vereador; b: Vereador; iguais: number; total: number }[][];
@@ -29,18 +29,26 @@ export function calcular(b: Base): Painel {
     }))
     .sort((x, y) => (y.m.veto!.data ?? "9999").localeCompare(x.m.veto!.data ?? "9999"));
 
-  // quem apresenta: autoria agrupada; vereadores pelo apelido
-  const porAutor = new Map<string, { para?: string; aprovados: number; outros: number }>();
+  // quem apresenta: cada vereador soma os projetos dele; projeto com varios autores conta para cada um
+  // (parte listrada). Prefeito, Mesa e comissao ficam em linhas proprias.
+  type Cont = { para?: string; aprovados: number; outros: number; aprovadosJunto: number; outrosJunto: number };
+  const porAutor = new Map<string, Cont>();
+  const soma = (rotulo: string, para: string | undefined, aprovado: boolean, junto: boolean) => {
+    const c = porAutor.get(rotulo) ?? { para, aprovados: 0, outros: 0, aprovadosJunto: 0, outrosJunto: 0 };
+    if (aprovado) junto ? c.aprovadosJunto++ : c.aprovados++;
+    else junto ? c.outrosJunto++ : c.outros++;
+    porAutor.set(rotulo, c);
+  };
   for (const m of projetos) {
-    const chave = m.autoria || "Autoria não identificada";
-    const v = m.autores.length === 1 ? b.vereador.get(m.autores[0]) : undefined;
-    const atual = porAutor.get(chave) ?? { para: v ? `/vereadores/${v.slug}` : undefined, aprovados: 0, outros: 0 };
-    APROVADO.has(m.situacao_cls) ? atual.aprovados++ : atual.outros++;
-    porAutor.set(chave, atual);
+    const aprovado = APROVADO.has(m.situacao_cls);
+    const vs = m.autores.map((s) => b.vereador.get(s)).filter((v): v is NonNullable<typeof v> => !!v);
+    if (vs.length) for (const v of vs) soma(v.exibicao, `/vereadores/${v.slug}`, aprovado, vs.length > 1);
+    else soma(m.autoria || "Autoria não identificada", undefined, aprovado, false);
   }
+  const total = (c: Cont) => c.aprovados + c.outros + c.aprovadosJunto + c.outrosJunto;
   const autoria = [...porAutor.entries()]
     .map(([rotulo, x]) => ({ rotulo, ...x }))
-    .sort((x, y) => (x.rotulo === "Autoria não identificada" ? 1 : y.rotulo === "Autoria não identificada" ? -1 : y.aprovados + y.outros - (x.aprovados + x.outros)));
+    .sort((x, y) => (x.rotulo === "Autoria não identificada" ? 1 : y.rotulo === "Autoria não identificada" ? -1 : total(y) - total(x)));
 
   const porTema = new Map<string, { aprovados: number; outros: number }>();
   for (const m of projetos) {
