@@ -11,7 +11,8 @@ export interface Aba {
   titulo: string;     // titulo do painel aberto
   descricao?: string;
   conteudo: ReactNode;
-  arrastavel?: boolean; // false quando o conteudo ja rola para os lados (tabela, mapa de calor)
+  arrastavel?: boolean;
+  cor?: string; // cor do assunto (realce da aba ativa e ponto da aba) // false quando o conteudo ja rola para os lados (tabela, mapa de calor)
 }
 
 function NumeroAba({ valor, sufixo = "", ativo }: { valor: number; sufixo?: string; ativo: boolean }) {
@@ -65,8 +66,10 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
           return (
             <button key={a.id} ref={(el) => { botoes.current[i] = el; }} role="tab" type="button" id={`aba-${a.id}`}
               aria-selected={ativo} aria-controls={`painel-${a.id}`} tabIndex={ativo ? 0 : -1}
-              className={`painel__aba ${ativo ? "painel__aba--ativa" : ""}`} onClick={() => ir(i)}>
-              {ativo && <motion.span layoutId="painel-realce" className="painel__realce" transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
+              className={`painel__aba ${ativo ? "painel__aba--ativa" : ""}`} onClick={() => ir(i)}
+              style={{ ["--aba-cor" as string]: a.cor ?? "var(--color-ink)" }}>
+              {ativo && <motion.span layoutId="painel-realce" className="painel__realce" style={{ background: a.cor ?? "var(--color-ink)" }}
+                transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
               <NumeroAba valor={a.numero} sufixo={a.sufixo} ativo={ativo} />
               <span className="painel__rotulo">{a.rotulo}</span>
               <span className="sr">{a.numero}{a.sufixo}</span>
@@ -79,7 +82,7 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
         {abas.map((a, i) => <span key={a.id} className={i === atual ? "ativo" : ""} />)}
       </div>
 
-      <motion.div className="painel__palco" layout={!reduz} transition={{ duration: 0.35, ease: EASE }}>
+      <motion.div className="painel__palco" style={{ ["--aba-cor" as string]: aba.cor ?? "var(--color-ink)" }} layout={!reduz} transition={{ duration: 0.35, ease: EASE }}>
         <AnimatePresence mode="popLayout" initial={false} custom={direcao}>
           <motion.div
             key={aba.id}

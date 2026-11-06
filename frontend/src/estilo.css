@@ -8,6 +8,21 @@
 @font-face { font-family: "Ordinais"; src: local("Arial"), local("Helvetica Neue"), local("Helvetica"), local("Roboto"), local("DejaVu Sans"), local("Liberation Sans"); unicode-range: U+00AA, U+00BA; }
 
 :root {
+  /* pilares do indice: paleta categorica validada (daltonismo e contraste), sempre na mesma ordem */
+  --pilar-assiduidade: #2a78d6;   /* azul: constancia, confianca */
+  --pilar-participacao: #eb6834;  /* laranja: engajamento */
+  --pilar-producao: #1baf7a;      /* verde-agua: criacao, crescimento */
+  --pilar-fiscalizacao: #6250d6;  /* violeta: controle, autoridade */
+  /* estados (nunca usados como serie) */
+  --cor-bom: #1f8f3a;             /* aprovado, sim, veto derrubado */
+  --cor-critico: #d03b3b;         /* nao, veto mantido, falta sem justificativa */
+  --cor-alerta: #e8a21a;          /* atencao, aguardando, falta justificada */
+  --cor-andamento: #86b6ef;       /* em andamento / nao votado */
+  /* rampa sequencial (azul) para etapas */
+  --seq-0: #86b6ef; --seq-1: #5598e7; --seq-2: #2a78d6; --seq-3: #1c5cab;
+  /* assuntos do painel da pagina inicial (texto branco por cima) */
+  --tema-projetos: #2a78d6; --tema-vetos: #c2362f; --tema-destaques: #a86a00; --tema-autoria: #12805a;
+  --tema-faltas: #c9541d; --tema-alinhamento: #5a48c9; --tema-votos: #171717;
   --color-accent: #297a3a;      /* Verdant: ações, links de ação, voto sim */
   --color-secondary: #4d4d4d;   /* Ash */
   --color-canvas: #fafafa;      /* Bone White */
@@ -544,10 +559,9 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 .rank__pilares { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
 .rank__pilar { display: grid; gap: 3px; }
 .rank__pilar-nome { font-size: .66rem; color: var(--color-surface-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.rank__pilar-trilho { height: 4px; border-radius: 2px; background: var(--color-linha); overflow: hidden; }
+.rank__pilar-trilho { height: 5px; border-radius: 2px; background: var(--color-linha); overflow: hidden; }
 .rank__pilar-trilho > span { display: block; height: 100%; background: var(--color-surface-2); transition: width .5s var(--ease); }
 .rank__pilar--foco .rank__pilar-nome { color: var(--color-ink); font-weight: 600; }
-.rank__pilar--foco .rank__pilar-trilho > span { background: var(--color-accent); }
 .rank__aviso { margin-top: 2.5rem; max-width: var(--larg-texto); padding: 1rem 1.1rem; border-radius: 12px; background: #f3f3f3; font-size: .92rem; color: var(--color-secondary); }
 .rank__aviso p:last-child { margin: 0; }
 @media (max-width: 900px) {
@@ -587,3 +601,51 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 .sem-quebra { white-space: nowrap; }
 .marca__nome { white-space: nowrap; }
 @media (max-width: 640px) { .marca__sub { display: none; } }
+
+/* ---------- cores com significado */
+.pilar--assiduidade { --pc: var(--pilar-assiduidade); }
+.pilar--participacao { --pc: var(--pilar-participacao); }
+.pilar--producao { --pc: var(--pilar-producao); }
+.pilar--fiscalizacao { --pc: var(--pilar-fiscalizacao); }
+.ponto { display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; background: var(--pc, var(--color-ink)); margin-right: .45rem; vertical-align: .05em; }
+.indice-mini__barra { background: color-mix(in srgb, var(--pc) 16%, #f1f1f1); }
+.indice-mini__barra > span { background: var(--pc); }
+.indice-mini__barra--na { background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--pc) 22%, #eee) 0 3px, transparent 3px 5px); }
+.indice__trilho { background: color-mix(in srgb, var(--color-linha) 70%, #fff); }
+.indice__barra { background: var(--pc); }
+/* ranking: barra empilhada pelos pilares (2px de respiro entre segmentos) */
+.rank__cheio { display: flex; gap: 2px; background: none; }
+.rank__seg { display: block; height: 100%; background: var(--pc); border-radius: 2px; }
+.rank__seg:first-child { border-radius: 5px 2px 2px 5px; }
+.rank--parcial .rank__seg { opacity: .45; }
+.rank__pilar-trilho { background: color-mix(in srgb, var(--pc) 14%, #f1f1f1); }
+.rank__pilar-trilho > span { background: var(--pc); }
+.rank__pilar--apagado { opacity: .35; }
+.rank__pilar--foco .rank__pilar-nome { color: var(--color-ink); }
+.rank__pos--medalha { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; font-size: 1rem; font-weight: 600; color: #fff; letter-spacing: -0.02em; }
+.rank__pos--1 { background: linear-gradient(145deg, #f4c542, #c9930c); color: #3d2a00; box-shadow: 0 2px 8px -2px rgba(201,147,12,.6); }
+.rank__pos--2 { background: linear-gradient(145deg, #e3e6ea, #a7adb5); color: #2b2f35; }
+.rank__pos--3 { background: linear-gradient(145deg, #e3a978, #b06a36); color: #fff; }
+.rank__item--primeiro { border-color: #f0d27a; box-shadow: 0 0 0 4px #fdf4d6; }
+.rank__item--primeiro .rank__pos { color: #3d2a00; }
+.legenda--pilares { margin: .25rem 0 0; }
+/* barras de quantidade: aprovado x em andamento, vetos, faltas */
+.parte--aprovado, .parte--derrubado { background-color: var(--cor-bom); }
+.parte--outro { background-color: var(--cor-andamento); }
+.parte--mantido { background-color: var(--cor-critico); }
+.parte--aguardando { background: repeating-linear-gradient(135deg, var(--cor-alerta) 0 3px, #fbe3a8 3px 6px); }
+.parte--ausente { background-color: var(--cor-critico); }
+.parte--justificada { background-color: var(--cor-alerta); }
+.parte--neutro { background-color: #8a8a8a; }
+.barras__parte + .barras__parte { margin-left: 2px; }
+.lista-vetos__res--mantido { color: var(--cor-critico); }
+.lista-vetos__res--derrubado { color: var(--cor-bom); }
+.lista-vetos__res--aguardando { color: #8a5a00; }
+/* painel da pagina inicial: cada assunto com a sua cor */
+.painel__aba::before { content: ""; position: absolute; left: 1rem; right: 1rem; top: 0; height: 3px; border-radius: 0 0 3px 3px; background: var(--aba-cor); opacity: .85; z-index: 1; }
+.painel__aba--ativa::before { opacity: 0; }
+.painel__aba .painel__num { color: var(--aba-cor); }
+.painel__aba--ativa .painel__num { color: #fff; }
+.painel__aba--ativa .painel__rotulo { color: rgba(255,255,255,.82); }
+.painel__palco { border-top: 3px solid var(--aba-cor); transition: border-color .35s var(--ease); }
+.painel__contagem { color: var(--aba-cor); }

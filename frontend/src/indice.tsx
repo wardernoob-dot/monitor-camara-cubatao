@@ -17,7 +17,7 @@ export function IndiceMini({ i }: { i: Indice }) {
       </span>
       <span className="indice-mini__barras" aria-hidden="true">
         {i.pilares.map((p) => (
-          <span key={p.id} className={`indice-mini__barra${p.nao_se_aplica ? " indice-mini__barra--na" : ""}`} title={`${CURTO[p.id]}: ${p.nao_se_aplica ? "não se aplica" : `${fmt(p.pontos)} de ${p.max}`}`}>
+          <span key={p.id} className={`indice-mini__barra pilar--${p.id}${p.nao_se_aplica ? " indice-mini__barra--na" : ""}`} title={`${CURTO[p.id]}: ${p.nao_se_aplica ? "não se aplica" : `${fmt(p.pontos)} de ${p.max}`}`}>
             <span style={{ width: `${p.nao_se_aplica ? 0 : 100 * pctPilar(p)}%` }} />
           </span>
         ))}
@@ -45,7 +45,7 @@ export function CartaoIndice({ i, nome }: { i: Indice; nome: string }) {
         {i.pilares.map((p) => (
           <li key={p.id} className="indice__pilar">
             <p className="indice__pilar-nome">
-              <span>{p.nome}</span>
+              <span><span className={`ponto pilar--${p.id}`} aria-hidden="true" />{p.nome}</span>
               <span className="indice__pilar-pts">{p.nao_se_aplica ? "não se aplica" : `${fmt(p.pontos)} de ${p.max}`}</span>
             </p>
             {!p.nao_se_aplica && !!p.presidiu && (
@@ -53,7 +53,7 @@ export function CartaoIndice({ i, nome }: { i: Indice; nome: string }) {
             )}
             {!p.nao_se_aplica && (
               <span className="indice__trilho" aria-hidden="true">
-                <span className="indice__barra" style={{ width: `${100 * pctPilar(p)}%` }} />
+                <span className={`indice__barra pilar--${p.id}`} style={{ width: `${100 * pctPilar(p)}%` }} />
                 <span className="indice__marca" style={{ left: `${(100 * p.media_camara) / p.max}%` }} title={`Média da Câmara: ${fmt(p.media_camara)}`} />
               </span>
             )}

@@ -133,7 +133,7 @@ export function Funil({ etapas, max: maxFixo, sufixo = "" }: { etapas: { rotulo:
               initial={{ scaleX: 0 }}
               animate={{ scaleX: entrou ? e.valor / max : 0 }}
               transition={{ duration: 1, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              style={{ opacity: maxFixo ? 1 : 1 - i * 0.15 }}
+              style={maxFixo ? undefined : { background: i === etapas.length - 1 ? "var(--cor-bom)" : `var(--seq-${Math.min(i, 3)})` }}
             />
           </span>
         </li>
