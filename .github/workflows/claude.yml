@@ -47,7 +47,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
-            --append-system-prompt "Siga o CLAUDE.md. Nao altere nem reescreva nada em data/ (trilha de auditoria). Mudou o front? Avise que e preciso rodar npm run build e commitar docs/. Nunca commite docs/CNAME. Abra PR, nao commite direto na main."
+            --append-system-prompt "Siga o CLAUDE.md. Nao altere nem reescreva nada em data/ (trilha de auditoria). Mudou o front? Avise que e preciso rodar npm run build e commitar docs/. Nunca commite docs/CNAME. Abra PR, nao commite direto na main. Pedido de foto de vereador: veja fotos/LEIA-ME.md e site.py:preparar_fotos (casa por apelido/nome civil), confira fotos/CREDITOS.md e rode o build para atualizar docs/fotos. Grafia nova de vereador ou quirk de PDF (negrito falso, cirilico): ajuste nomes.py ou parser_resumo.py com teste novo. Texto de tela: aplique a logica da skill clareza-pro-leitor e diga o que mudou para o dono decidir."
 
   # Revisao automatica de PR que mexe em leitura/exibicao de voto ou em texto de tela.
   revisar:
