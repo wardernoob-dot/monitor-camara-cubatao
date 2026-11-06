@@ -39,15 +39,31 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
+      - name: Verificar ANTHROPIC_API_KEY
+        id: chave
+        env:
+          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "ANTHROPIC_API_KEY ausente; pulando."
+            echo "ativa=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ativa=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.chave.outputs.ativa == 'true'
         with:
           ref: main
       - uses: actions/setup-python@v5
+        if: steps.chave.outputs.ativa == 'true'
         with:
           python-version: "3.12"
           cache: pip
-      - run: pip install -r requirements.txt
+      - name: Instalar dependencias Python
+        if: steps.chave.outputs.ativa == 'true'
+        run: pip install -r requirements.txt
       - uses: anthropics/claude-code-action@v1
+        if: steps.chave.outputs.ativa == 'true'
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
@@ -75,15 +91,31 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
+      - name: Verificar ANTHROPIC_API_KEY
+        id: chave
+        env:
+          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "ANTHROPIC_API_KEY ausente; pulando."
+            echo "ativa=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ativa=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.chave.outputs.ativa == 'true'
         with:
           ref: main
       - uses: actions/setup-python@v5
+        if: steps.chave.outputs.ativa == 'true'
         with:
           python-version: "3.12"
           cache: pip
-      - run: pip install -r requirements.txt
+      - name: Instalar dependencias Python
+        if: steps.chave.outputs.ativa == 'true'
+        run: pip install -r requirements.txt
       - uses: anthropics/claude-code-action@v1
+        if: steps.chave.outputs.ativa == 'true'
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
@@ -112,29 +144,47 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
+      - name: Verificar ANTHROPIC_API_KEY
+        id: chave
+        env:
+          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "ANTHROPIC_API_KEY ausente; pulando."
+            echo "ativa=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ativa=true" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.chave.outputs.ativa == 'true'
         with:
           ref: main
       - uses: actions/setup-python@v5
+        if: steps.chave.outputs.ativa == 'true'
         with:
           python-version: "3.12"
           cache: pip
       - uses: actions/setup-node@v4
+        if: steps.chave.outputs.ativa == 'true'
         with:
           node-version: "20"
           cache: npm
           cache-dependency-path: frontend/package-lock.json
-      - run: pip install -r requirements.txt
-      - run: cd frontend && npm ci
+      - name: Instalar dependencias Python
+        if: steps.chave.outputs.ativa == 'true'
+        run: pip install -r requirements.txt
+      - name: Instalar dependencias Node
+        if: steps.chave.outputs.ativa == 'true'
+        run: cd frontend && npm ci
       - uses: anthropics/claude-code-action@v1
+        if: steps.chave.outputs.ativa == 'true'
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
             Manutencao semanal. Faca so o que for necessario e abra UM PR (branch "manutencao/AAAA-MM-DD"); se nao
             houver nada a mudar, nao abra PR e responda "sem mudancas".
             1. Dependencias: veja pip list --outdated e npm outdated. Atualize apenas atualizacoes menores/patch
-               seguras em requirements.txt e frontend/package.json; rode python -m pytest -q e, no frontend,
-               npm run build. Se algo quebrar, reverta aquela dependencia e cite no PR. Nao suba major sem avisar.
+               seguras em requirements.txt e frontend/package.json; rode python -m pytest -q e, no frontend,\n               npm run build. Se algo quebrar, reverta aquela dependencia e cite no PR. Nao suba major sem avisar.
             2. Documentacao: confira se README, CLAUDE.md e fotos/LEIA-ME.md ainda descrevem o codigo (comandos,
                nomes de arquivos, ordem do pipeline). Corrija so divergencias reais e pequenas.
             Se o PR mexer em frontend/, inclua o resultado do npm run build em docs/ (nunca docs/CNAME).

@@ -44,11 +44,12 @@ jobs:
           git config user.name  "monitor-camara-bot"
           git config user.email "monitor-camara-bot@users.noreply.github.com"
           git add data/
-          if git diff --cached --quiet; then
-            echo "Nada novo hoje."
-          else
+          if ! git diff --cached --quiet; then
+            git add docs/data/
             git commit -m "dados: coleta $(date -u +%Y-%m-%d)"
             git push
+          else
+            echo "Nada novo hoje."
           fi
 
       # Espelho do site em votoavoto.surge.sh. Publica o docs/ recem-gerado nesta rodada.
