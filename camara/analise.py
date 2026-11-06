@@ -394,7 +394,7 @@ def analisar_vetos(dados: Path, oficios: list[dict], pausa: float = 4.0, http=No
             if antigo.get("tipo_analise") == "veto" and antigo.get("hash_documento") == h and antigo.get("versao_prompt") == versao:
                 rel["em_cache"] += 1
                 continue
-        fonte = "transcricao automatica do PDF escaneado" if o.get("precisa_ocr") else "texto do oficio publicado no site da Camara"
+        fonte = "transcricao automatica do PDF escaneado do oficio" if o.get("precisa_ocr") else "texto do oficio publicado no site da Camara"
         prompt = corpo.replace("{fonte}", fonte).replace("{documento}", texto[:MAX_DOC])
         try:
             if rel["novas"]:

@@ -268,7 +268,8 @@ class Base:
                 v["leitura"] = {"resumo": a["resumo"], "o_que_foi_vetado": a["o_que_foi_vetado"], "razoes": a["razoes"],
                                 "fundamento": a["fundamento"], "limitacoes": a["limitacoes"],
                                 "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", leitura["modelo"]),
-                                "fonte": leitura["documento"]["fonte"]}
+                                "fonte": "texto do ofício (transcrição automática do PDF escaneado)"
+                                if "transcricao" in leitura["documento"]["fonte"] else "texto do ofício publicado no site da Câmara"}
             m["veto"] = v
             # a pagina da votacao do veto mostra o mesmo oficio
             vv = self.materias.get(f"veto-{o['numero']}-{o['ano']}") or self.materias.get(f"veto-{o['numero']}-x")
