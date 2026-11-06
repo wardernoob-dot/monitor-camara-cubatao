@@ -5,26 +5,15 @@ import { useDados, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
-import { Barras, COR, Contador, FeedVotacoes, Funil, GradeHero, Heatmap, Modal } from "../viz";
+import { Barras, COR, FeedVotacoes, Funil, GradeHero, Heatmap, Modal } from "../viz";
 import { IndiceMini } from "../indice";
-import { Secao } from "../secao";
+import { Painel } from "../painel";
 import { Destaque } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 
 const COLUNAS = 80;
 const LINHAS_TITULO = ["Como cada vereador", "de Cubatão votou"];
 
-
-function Bloco({ children, classe = "", i }: { children: React.ReactNode; classe?: string; i: number }) {
-  const [ref, entrou] = useEntrou<HTMLDivElement>("-10% 0px");
-  const reduz = useReducedMotion();
-  return (
-    <motion.div ref={ref} className={`bento__tile ${classe}`} initial={reduz ? false : { opacity: 0, y: 16 }}
-      animate={entrou || reduz ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: (i % 6) * 0.06, ease: EASE }}>
-      {children}
-    </motion.div>
-  );
-}
 
 export default function Inicio() {
   useTitulo("Como cada vereador votou");
@@ -58,6 +47,10 @@ export default function Inicio() {
       ["SIM", "NAO"].includes(ev.votos[par.b.slug]) && ev.votos[par.a.slug] !== ev.votos[par.b.slug]);
   }, [b, par]);
 
+  const mediaAlinh = useMemo(() => {
+    const pares = p.alinhamento.flat().filter((c) => c.a !== c.b && c.total);
+    return pares.length ? Math.round((100 * pares.reduce((s, c) => s + c.iguais / c.total, 0)) / pares.length) : 0;
+  }, [p]);
   const corAlinh = (v: number | null) => v == null ? "#eeeeee" : `color-mix(in srgb, ${COR.verde} ${Math.round(Math.max(0, (v - 0.6) / 0.4) * 100)}%, #f1f1f1)`;
 
   return (
@@ -85,17 +78,27 @@ export default function Inicio() {
       </section>
 
       <div className="pagina pagina--larga">
-        <section aria-labelledby="numeros-titulo">
-          <h2 id="numeros-titulo" className="secao__titulo">O que a Câmara fez em 2026</h2>
-          <div className="bento">
-            <Bloco i={0} classe="bento__tile--contador"><Contador valor={p.apresentados} rotulo="projetos apresentados ou votados" /></Bloco>
-            <Bloco i={1} classe="bento__tile--contador"><Contador valor={p.leis} rotulo="viraram lei no Diário Oficial" /></Bloco>
-            <Bloco i={2} classe="bento__tile--contador"><Contador valor={p.vetos.length} rotulo="projetos vetados pelo prefeito" /></Bloco>
-            <Bloco i={3} classe="bento__tile--contador"><Contador valor={p.sessoes} rotulo="dias de sessão com votação" /></Bloco>
-
-            <Bloco i={4} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Vetos do prefeito</h3>
-              <p className="tile__nota">O prefeito pode vetar um projeto aprovado. O veto volta para a Câmara, que decide se mantém (o projeto ou a parte vetada não vale) ou derruba.</p>
+        <section className="painel-secao" aria-labelledby="painel-titulo">
+          <h2 id="painel-titulo" className="sr">A Câmara em 2026</h2>
+          <Painel rotulo="A Câmara em 2026" abas={[
+            { id: "projetos", numero: p.apresentados, rotulo: "projetos em 2026", titulo: "Do projeto à lei",
+              descricao: `${p.leis} viraram lei no Diário Oficial. Abaixo, do que tratam os projetos.`, conteudo: (
+              <>
+            <div className="tile-solto">
+                <Funil etapas={p.funilProjetos} />
+                <h3 className="tile__titulo tile__titulo--seguinte">Do que tratam os projetos</h3>
+                <Barras
+                  itens={p.temas.map((t) => ({ rotulo: t.rotulo, partes: [
+                    { valor: t.aprovados, classe: "parte--aprovado", nome: "aprovados" },
+                    { valor: t.outros, classe: "parte--outro", nome: "em andamento ou não votados" },
+                  ] }))}
+                  legenda={[{ classe: "parte--aprovado", nome: "Aprovados" }, { classe: "parte--outro", nome: "Em andamento ou não votados" }]}
+                />
+            </div>
+              </>) },
+            { id: "vetos", numero: p.vetos.length, rotulo: "vetos do prefeito", titulo: "Vetos do prefeito",
+              descricao: "O prefeito pode vetar um projeto aprovado. O veto volta para a Câmara, que mantém ou derruba.", conteudo: (
+              <div className="tile-solto">
               <Barras
                 itens={[{ rotulo: "Vetos", partes: [
                   { valor: p.vetos.filter((x) => x.resultado === "mantido").length, classe: "parte--mantido", nome: "mantidos pela Câmara" },
@@ -113,15 +116,10 @@ export default function Inicio() {
                   </li>
                 ))}
               </ul>
-            </Bloco>
-
-
-
-
-
-            <Bloco i={5} classe="bento__tile--largo">
-              <h3 className="tile__titulo">Projetos em destaque</h3>
-              <p className="tile__nota">Mexem no orçamento, em servidores ou na Lei Orgânica, foram vetados, rejeitados ou tiveram votação dividida.</p>
+              </div>) },
+            { id: "destaques", numero: b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").length, rotulo: "projetos em destaque", titulo: "Projetos em destaque",
+              descricao: "Mexem no orçamento, em servidores ou na Lei Orgânica, foram vetados, rejeitados ou tiveram votação dividida.", conteudo: (
+              <div className="tile-solto">
               <ul className="lista-vetos">
                 {destaques.map((m) => (
                   <li key={m.slug}>
@@ -131,53 +129,11 @@ export default function Inicio() {
                 ))}
               </ul>
               <p><Link to="/projetos?destaque=1">Ver todos os projetos em destaque</Link></p>
-            </Bloco>
-          </div>
-        </section>
-
-
-        <section aria-labelledby="ver-titulo">
-          <h2 id="ver-titulo" className="secao__titulo">Os 15 vereadores</h2>
-          <ul className="cartoes">
-            {b.atuais.map((v, i) => (
-              <motion.li key={v.slug} className="cartao" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.5, delay: (i % 4) * 0.06, ease: EASE }}>
-                <Link to={`/vereadores/${v.slug}`} className="cartao__link">
-                  <Avatar v={v} tamanho="retrato" />
-                  <span>
-                    <span className="cartao__nome">{v.exibicao}</span>
-                    <span className="cartao__civil">{v.nome}{v.partido ? `, ${v.partido}` : ""}{v.cargo === "presidente" ? ". Presidente da Câmara" : ""}</span>
-                  </span>
-                  <IndiceMini i={v.indice} />
-                  <span className="cartao__nums">
-                    <span><strong>{v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0}%</strong> presença</span>
-                    <span><strong>{v.projetos.length}</strong> {v.projetos.length === 1 ? "projeto" : "projetos"}</span>
-                    <span><strong>{v.leis}</strong> {v.leis === 1 ? "virou lei" : "viraram lei"}</span>
-                  </span>
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
-        </section>
-
-        <div className="sanfonas">
-          <Secao id="projeto-a-lei" titulo="Do projeto à lei, e do que tratam" resumo={`${p.leis} viraram lei`}>
-            <div className="tile-solto">
-                <h3 className="tile__titulo">Do projeto à lei</h3>
-                <Funil etapas={p.funilProjetos} />
-                <h3 className="tile__titulo tile__titulo--seguinte">Do que tratam os projetos</h3>
-                <Barras
-                  itens={p.temas.map((t) => ({ rotulo: t.rotulo, partes: [
-                    { valor: t.aprovados, classe: "parte--aprovado", nome: "aprovados" },
-                    { valor: t.outros, classe: "parte--outro", nome: "em andamento ou não votados" },
-                  ] }))}
-                  legenda={[{ classe: "parte--aprovado", nome: "Aprovados" }, { classe: "parte--outro", nome: "Em andamento ou não votados" }]}
-                />
-            </div>
-          </Secao>
-          <Secao id="quem-apresenta" titulo="Quem apresenta os projetos">
-            <div className="tile-solto">
-                <p className="tile__nota">Projetos de lei, de resolução e de decreto legislativo, por autor. Projeto apresentado por mais de um vereador conta para cada um e aparece listrado.</p>
+              </div>) },
+            { id: "autoria", numero: p.autoria.filter((x) => x.para).length, rotulo: "vereadores com projetos", titulo: "Quem apresenta os projetos",
+              descricao: "Projeto apresentado por mais de um vereador conta para cada um e aparece listrado.", conteudo: (
+              <>
+<div className="tile-solto">
                 <Barras
                   itens={p.autoria.map((a) => ({ rotulo: a.rotulo, para: a.para, partes: [
                     { valor: a.aprovados, classe: "parte--aprovado", nome: "aprovados (sozinho)" },
@@ -192,10 +148,11 @@ export default function Inicio() {
                   ]}
                 />
             </div>
-          </Secao>
-          <Secao id="faltas" titulo="Faltas nas sessões">
-            <div className="tile-solto">
-                <p className="tile__nota">Segundo a lista de presença dos resumos oficiais de {p.sessoes} dias de sessão em 2026.</p>
+              </>) },
+            { id: "faltas", numero: p.faltas.reduce((s, f) => s + f.ausente + f.justificada, 0), rotulo: "faltas nas sessões", titulo: "Faltas nas sessões",
+              descricao: `Lista de presença dos resumos oficiais de ${p.sessoes} dias de sessão em 2026.`, conteudo: (
+              <>
+<div className="tile-solto">
                 <Barras
                   itens={p.faltas.map((f) => ({ rotulo: f.v.exibicao, para: `/vereadores/${f.v.slug}`, partes: [
                     { valor: f.ausente, classe: "parte--ausente", nome: "faltas sem justificativa" },
@@ -204,10 +161,11 @@ export default function Inicio() {
                   legenda={[{ classe: "parte--ausente", nome: "Sem justificativa" }, { classe: "parte--justificada", nome: "Justificada" }]}
                 />
             </div>
-          </Secao>
-          <Secao id="alinhamento" titulo="Quem vota igual a quem">
-            <div className="tile-solto">
-                <p className="tile__nota">Porcentagem de votações do painel em que os dois votaram igual, entre as que ambos votaram sim ou não. Clique num quadrado para ver as votações em que discordaram.</p>
+              </>) },
+            { id: "alinhamento", numero: mediaAlinh, sufixo: "%", rotulo: "das vezes votam igual", titulo: "Quem vota igual a quem", arrastavel: false,
+              descricao: "Votações do painel em que os dois votaram igual. Toque num quadrado para ver onde discordaram.", conteudo: (
+              <>
+<div className="tile-solto">
                 <Heatmap
                   linhas={p.alinhamento}
                   colunas={b.atuais.length}
@@ -220,12 +178,12 @@ export default function Inicio() {
                   legenda={<p className="tile__nota heat__legenda"><span className="heat__amostra" style={{ background: corAlinh(0.6) }} /> 60% ou menos <span className="heat__amostra" style={{ background: corAlinh(1) }} /> 100%</p>}
                 />
             </div>
-          </Secao>
-          <Secao id="voto-a-voto" titulo={`Voto a voto, desde ${colunas.length ? dataExtenso(colunas[0].data) : "setembro"}`} resumo={`${colunas.length} votações`}>
+              </>) },
+            { id: "voto-a-voto", numero: colunas.length, rotulo: "votações no painel", titulo: `Voto a voto, desde ${colunas.length ? dataExtenso(colunas[0].data) : "setembro"}`, arrastavel: false,
+              descricao: "Cada quadrado é um voto registrado no painel eletrônico. Passe o mouse ou toque para ver o projeto.", conteudo: (
             <div className="mx-secao">
             <div className="mx-secao__principal">
-              <p className="tile__nota">Cada quadrado é um voto registrado no painel eletrônico. Passe o mouse ou toque para ver o projeto; clique para abrir.</p>
-              <div className="mx-rolagem" ref={rolagem} tabIndex={0} aria-label="Tabela de votos, role para os lados">
+                            <div className="mx-rolagem" ref={rolagem} tabIndex={0} aria-label="Tabela de votos, role para os lados">
                 <table className="mx">
                   <thead>
                     <tr>
@@ -255,8 +213,33 @@ export default function Inicio() {
             </div>
             <aside className="mx-secao__feed"><FeedVotacoes eventos={recentes} /></aside>
             </div>
-          </Secao>
-        </div>
+            ) },
+          ]} />
+        </section>
+
+        <section aria-labelledby="ver-titulo">
+          <h2 id="ver-titulo" className="secao__titulo">Os 15 vereadores</h2>
+          <ul className="cartoes">
+            {b.atuais.map((v, i) => (
+              <motion.li key={v.slug} className="cartao" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.5, delay: (i % 4) * 0.06, ease: EASE }}>
+                <Link to={`/vereadores/${v.slug}`} className="cartao__link">
+                  <Avatar v={v} tamanho="retrato" />
+                  <span>
+                    <span className="cartao__nome">{v.exibicao}</span>
+                    <span className="cartao__civil">{v.nome}{v.partido ? `, ${v.partido}` : ""}{v.cargo === "presidente" ? ". Presidente da Câmara" : ""}</span>
+                  </span>
+                  <IndiceMini i={v.indice} />
+                  <span className="cartao__nums">
+                    <span><strong>{v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0}%</strong> presença</span>
+                    <span><strong>{v.projetos.length}</strong> {v.projetos.length === 1 ? "projeto" : "projetos"}</span>
+                    <span><strong>{v.leis}</strong> {v.leis === 1 ? "virou lei" : "viraram lei"}</span>
+                  </span>
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </section>
       </div>
 
       <Modal aberto={!!par} aoFechar={fecha} titulo={par ? `${par.a.exibicao} e ${par.b.exibicao}` : ""}>
