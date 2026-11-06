@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 30
     permissions:
       contents: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
 
@@ -73,3 +74,17 @@ jobs:
             exit 0
           fi
           npx --yes surge ./docs votoavoto.surge.sh
+
+      # Se qualquer passo acima falhar, abre (ou comenta em) uma issue com o link da rodada.
+      - name: Avisar falha
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          link="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          aberta=$(gh issue list --state open --search "coleta falhou in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$aberta" ]; then
+            gh issue comment "$aberta" --body "Falhou de novo: $link"
+          else
+            gh issue create --title "coleta falhou" --body "A coleta-diaria falhou. Log: $link"
+          fi
