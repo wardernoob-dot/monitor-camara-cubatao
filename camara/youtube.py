@@ -13,7 +13,7 @@ import time
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 CANAL_ID = "UCSZ2lKO87tFkPxvHuvk5C7A"
 RSS = f"https://www.youtube.com/feeds/videos.xml?channel_id={CANAL_ID}"
@@ -21,6 +21,9 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
 RE_SESSAO = re.compile(r"(\d+)\s*[ªa]\s*SESS[ÃA]O\s+(ORDIN[ÁA]RIA|EXTRAORDIN[ÁA]RIA)", re.I)
 RE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+MAX_XML_BYTES = 2 * 1024 * 1024
+MAX_FOLHA_BYTES = 5 * 1024 * 1024
+MAX_FOLHAS = 400
 
 
 @dataclass
@@ -51,12 +54,22 @@ class Nivel:
         return -(-self.total // self.por_folha)
 
 
+def _bloquear_redirect_yt(r, *args, **kwargs):
+    if 300 <= getattr(r, "status_code", 200) < 400 and "location" in getattr(r, "headers", {}):
+        destino = urlparse(urljoin(getattr(r, "url", RSS), r.headers["location"]))
+        host = destino.hostname or ""
+        ok = host in ("www.youtube.com", "youtube.com", "m.youtube.com", "i.ytimg.com") or host.endswith((".youtube.com", ".ytimg.com"))
+        if destino.scheme != "https" or not ok:
+            raise ValueError(f"Redirecionamento externo bloqueado no YouTube: {r.headers['location']!r}")
+
+
 def _http():
     import requests
 
     s = requests.Session()
     s.headers.update({"User-Agent": UA, "Accept-Language": "pt-BR,pt;q=0.9"})
     s.cookies.set("CONSENT", "YES+1", domain=".youtube.com")
+    s.hooks.setdefault("response", []).append(_bloquear_redirect_yt)
     return s
 
 
@@ -64,6 +77,11 @@ def listar_videos(http=None) -> list[Video]:
     http = http or _http()
     r = http.get(RSS, timeout=30)
     r.raise_for_status()
+    if len(r.content) > MAX_XML_BYTES:
+        raise ValueError(f"XML do YouTube excede limite de {MAX_XML_BYTES} bytes")
+    cab = r.content[:4096].upper()
+    if b"<!DOCTYPE" in cab or b"<!ENTITY" in cab:
+        raise ValueError("XML com DTD/ENTITY bloqueado por seguranca (XXE/XML Bomb)")
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
     root = ET.fromstring(r.content)
     return [
@@ -143,10 +161,14 @@ def urls_do_spec(spec: str, nivel: int = 3) -> tuple[list[str], Nivel]:
     i = min(nivel, len(partes) - 2) + 1
     w, h, total, cols, rows, intervalo, nome, sigh = partes[i].split("#")
     n = Nivel(i - 1, int(w), int(h), int(total), int(cols), int(rows), int(intervalo), nome, sigh)
+    if n.folhas < 0 or n.folhas > MAX_FOLHAS:
+        raise ValueError(f"numero de folhas de storyboard fora do limite seguro: {n.folhas}")
     return [url_folha(partes[0], n, k) for k in range(n.folhas)], n
 
 
 def baixar_urls(urls: list[str], destino: Path, http=None, tentativas: int = 4) -> int:
+    if len(urls) > MAX_FOLHAS:
+        raise ValueError(f"lista de URLs excede limite de {MAX_FOLHAS} folhas")
     http = http or _http()
     destino = Path(destino)
     destino.mkdir(parents=True, exist_ok=True)
@@ -162,6 +184,8 @@ def baixar_urls(urls: list[str], destino: Path, http=None, tentativas: int = 4) 
                 break
             time.sleep(2 * (t + 1))
         r.raise_for_status()
+        if len(r.content) > MAX_FOLHA_BYTES:
+            raise ValueError(f"folha de storyboard excede {MAX_FOLHA_BYTES} bytes")
         alvo.write_bytes(r.content)
         total += len(r.content)
     return total

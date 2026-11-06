@@ -12,7 +12,12 @@ $Canal = 'UCSZ2lKO87tFkPxvHuvk5C7A'
 $Pasta = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Log   = Join-Path $Pasta 'log.txt'
 
-function Log($m) { $l = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $m"; Write-Host $l; Add-Content -Path $Log -Value $l -Encoding UTF8 }
+function Log($m) {
+    $limpo = ([string]$m -replace '[\x00-\x1F\x7F]', ' ')
+    $l = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $limpo"
+    Write-Host $l
+    Add-Content -Path $Log -Value $l -Encoding UTF8
+}
 
 function Texto($url, $headers) {
     $r = Invoke-WebRequest -UseBasicParsing -Uri $url -Headers $headers
@@ -33,7 +38,9 @@ try {
     $yt = @{ 'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'; 'Accept-Language' = 'pt-BR,pt;q=0.9' }
 
     # 1) sessoes no feed do canal
-    [xml]$rss = Texto "https://www.youtube.com/feeds/videos.xml?channel_id=$Canal" $yt
+    $rssRaw = Texto "https://www.youtube.com/feeds/videos.xml?channel_id=$Canal" $yt
+    if ($rssRaw -match '(?i)<!DOCTYPE|<!ENTITY') { throw 'XML com DTD/ENTITY recusado por seguranca' }
+    [xml]$rss = $rssRaw
     $sessoes = @($rss.feed.entry | Where-Object { $_.videoId -match '^[A-Za-z0-9_-]{11}$' -and $_.title -match '\d+\S{0,2}\s*SESS\S{1,2}O\s+(ORDIN|EXTRAORDIN)' -and $_.title -match 'DIA\s+\d' } |
         ForEach-Object { [pscustomobject]@{ id = $_.videoId; titulo = $_.title } })
     Log "feed: $($sessoes.Count) sessao(oes) entre os ultimos videos"
@@ -58,7 +65,9 @@ try {
         $m = [regex]::Match($html, '"playerStoryboardSpecRenderer":\{"spec":"([^"]+)"')
         if (-not $m.Success) { Log "  sem storyboard ainda (ao vivo ou processando): $($s.titulo)"; continue }
         $dur = [regex]::Match($html, '"lengthSeconds":"(\d+)"').Groups[1].Value
-        $obj = [pscustomobject]@{ titulo = $s.titulo; dur = [int]$dur; spec = [regex]::Unescape($m.Groups[1].Value); obtido_em = (Get-Date).ToUniversalTime().ToString('s') + 'Z' }
+        $spec = [regex]::Unescape($m.Groups[1].Value)
+        if ($spec -notmatch '^https://i\.ytimg\.com/sb/') { Log "  spec invalido ignorado: $($s.id)"; continue }
+        $obj = [pscustomobject]@{ titulo = $s.titulo; dur = [int]$dur; spec = $spec; obtido_em = (Get-Date).ToUniversalTime().ToString('s') + 'Z' }
         $specs | Add-Member -NotePropertyName $s.id -NotePropertyValue $obj -Force
         $novos++
         Log "  spec ok: $($s.titulo)"
