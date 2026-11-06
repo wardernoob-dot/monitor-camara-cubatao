@@ -44,3 +44,19 @@ def test_indice_coerente(base):
                 assert it["conta"] and 0 <= it["pontos"] <= it["max"] + 1e-6
         if v.get("cargo") == "presidente":
             assert next(p for p in i["pilares"] if p["id"] == "participacao")["nao_se_aplica"]
+
+
+def test_quem_presidia():
+    from camara.site import quem_presidia
+    ev = lambda p, v: {"votos": {"pres": p, "vice": v}}
+    assert quem_presidia(ev("BRANCO", "SIM"), "pres", "vice") == "pres"
+    assert quem_presidia(ev("BRANCO", "BRANCO"), "pres", "vice") == "pres"
+    assert quem_presidia(ev("AUSENTE", "BRANCO"), "pres", "vice") == "vice"
+    assert quem_presidia(ev("SIM", "BRANCO"), "pres", "vice") == "vice"
+    assert quem_presidia(ev("SIM", "SIM"), "pres", "vice") is None
+
+
+def test_vice_nao_perde_participacao_por_presidir(base):
+    vice = next(v for v in base.vereadores.values() if v.get("cargo") == "vice")
+    p2 = next(p for p in vice["indice"]["pilares"] if p["id"] == "participacao")
+    assert p2["presidiu"] > 0 and "presidiu outras" in p2["itens"][0]["conta"]

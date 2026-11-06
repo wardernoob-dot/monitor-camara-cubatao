@@ -462,6 +462,7 @@ PESO_SIMBOLICO = 0.3
 APROVADOS = ("aprovado", "lei", "veto")
 TIPOS_PRODUCAO = ("PL", "PLC", "PR", "PDL", "PELOM")
 MIN_SESSOES = 10
+MIN_VOTACOES_P2 = 10  # menos que isso fora da presidencia: amostra pequena demais pro pilar Participacao
 RE_RQ_PROCEDIMENTO = re.compile(r"SOLICITANDO QUE O PROCESSO|REGIME DE URGENCIA|SESSAO SECRETA|SOLICITANDO A PRORROGACAO|ATO SOLENE|SESSAO SOLENE")
 RE_AUTOR_LIDO = re.compile(r"Autor(?:ia)?\s*:\s*(?:Vereador[a]?\s+)?(.+)$", re.I)
 
@@ -477,6 +478,18 @@ def _peso_tema(m: dict) -> float:
 
 def _br(x: float, casas: int = 2) -> str:
     return f"{x:.{casas}f}".replace(".", ",")
+
+
+def quem_presidia(ev: dict, pres: str | None, vice: str | None) -> str | None:
+    """Deducao pelo painel: o presidente preside por padrao (aparece presente sem votar). Se ele esta ausente
+    ou votou e o vice aparece presente sem votar, quem estava na cadeira era o vice. Nao e registro oficial."""
+    vt = ev.get("votos") or {}
+    p, v = vt.get(pres), vt.get(vice)
+    if p == "BRANCO":
+        return pres
+    if p in ("AUSENTE", "SIM", "NAO", None) and v == "BRANCO":
+        return vice
+    return None
 
 
 def _pct(a: float, b: float) -> float:
@@ -526,6 +539,14 @@ def calcular_indice(b: "Base") -> None:
                 fisc[k]["emendas"] += 1
                 fisc[k]["n_em"] += 1
 
+    pres = next((k for k, v in vs.items() if v.get("cargo") == "presidente"), None)
+    vice = next((k for k, v in vs.items() if v.get("cargo") == "vice"), None)
+    presidiu: dict[int, str] = {}  # id(ev) -> slug de quem estava na cadeira
+    for v in vs.values():
+        for x in v["votos"]:
+            if x["ev"]["fonte"] == "painel" and id(x["ev"]) not in presidiu:
+                presidiu[id(x["ev"])] = quem_presidia(x["ev"], pres, vice)
+
     base_norm = [k for k, v in vs.items() if v["em_exercicio"] and v["sessoes_total"] >= MIN_SESSOES]
     def teto(d, campo):
         return max([d[k][campo] for k in base_norm] + [0.0])
@@ -538,8 +559,12 @@ def calcular_indice(b: "Base") -> None:
         s_p, s_j, s_a = pres.get("sim", 0), pres.get("justificada", 0), pres.get("ausente", 0)
         painel = [x for x in v["votos"] if x["ev"]["fonte"] == "painel"]
         c = Counter(x["voto"] for x in painel)
-        presente_painel = c["SIM"] + c["NAO"] + c["BRANCO"]
-        alta = [x for x in painel if x["ev"]["materia"]["relevancia"]["nivel"] == "alta"]
+        # participacao: votacoes em que ele estava na cadeira da presidencia nao entram
+        n_presidiu = sum(1 for x in painel if presidiu.get(id(x["ev"])) == k)
+        votaveis = [x for x in painel if presidiu.get(id(x["ev"])) != k]
+        cv = Counter(x["voto"] for x in votaveis)
+        presente_painel = cv["SIM"] + cv["NAO"] + cv["BRANCO"]
+        alta = [x for x in votaveis if x["ev"]["materia"]["relevancia"]["nivel"] == "alta"]
         ca = Counter(x["voto"] for x in alta)
         presente_alta = ca["SIM"] + ca["NAO"] + ca["BRANCO"]
         presidente = v.get("cargo") == "presidente"
@@ -555,10 +580,11 @@ def calcular_indice(b: "Base") -> None:
                 item("No plenário na hora de votar", b1, 10,
                      f"ausente em {c['AUSENTE']} de {len(painel)} votações do painel (desde set/2026): 10 × (1 − {c['AUSENTE']}/{len(painel)})"
                      if painel else "sem votações do painel")]
-        a2 = 15 * _pct(c["SIM"] + c["NAO"], presente_painel)
+        a2 = 15 * _pct(cv["SIM"] + cv["NAO"], presente_painel)
         b2 = 10 * _pct(ca["SIM"] + ca["NAO"], presente_alta)
+        obs_pres = (f" (presidiu outras {n_presidiu}, que ficam fora da conta: quem conduz a votação não vota)" if n_presidiu else "")
         pil2 = [item("Votou quando estava presente", a2, 15,
-                     f"votou sim ou não em {c['SIM'] + c['NAO']} das {presente_painel} votações do painel em que estava presente"),
+                     f"votou sim ou não em {cv['SIM'] + cv['NAO']} das {presente_painel} votações do painel em que estava presente{obs_pres}"),
                 item("Votou nos projetos em destaque", b2, 10,
                      f"votou sim ou não em {ca['SIM'] + ca['NAO']} das {presente_alta} votações de projetos em destaque em que estava presente")]
         p = prod[k]
@@ -580,10 +606,15 @@ def calcular_indice(b: "Base") -> None:
         if sem_painel:  # nao exerceu mandato no periodo do painel: o item nao conta (peso redistribuido)
             pil1[1]["nao_se_aplica"] = True
             pil1[1]["conta"] = "não exerceu mandato no período com painel (desde set/2026); item não entra na nota"
+            for it in pil2:
+                it["conta"] = "não exerceu mandato no período com painel (desde set/2026)"
         pilares = [
             {"id": "assiduidade", "nome": "Assiduidade", "max": 25 if not sem_painel else 15, "itens": pil1},
             {"id": "participacao", "nome": "Participação nas votações", "max": 25, "itens": pil2,
-             "nao_se_aplica": presidente or sem_painel},
+             "nao_se_aplica": sem_painel or presente_painel < MIN_VOTACOES_P2,
+             "motivo": ("sem_painel" if sem_painel else "presidiu" if presente_painel < MIN_VOTACOES_P2 and n_presidiu
+                        else "poucas_votacoes" if presente_painel < MIN_VOTACOES_P2 else None),
+             "presidiu": n_presidiu},
             {"id": "producao", "nome": "Produção legislativa", "max": 35, "itens": pil3},
             {"id": "fiscalizacao", "nome": "Fiscalização e plenário", "max": 15, "itens": pil4},
         ]

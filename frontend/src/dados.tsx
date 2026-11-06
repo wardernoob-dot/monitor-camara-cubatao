@@ -26,7 +26,10 @@ export interface Vereador {
 }
 
 export interface ItemIndice { nome: string; pontos: number; max: number; conta: string; nao_se_aplica?: boolean }
-export interface PilarIndice { id: string; nome: string; max: number; pontos: number; media_camara: number; itens: ItemIndice[]; nao_se_aplica?: boolean }
+export interface PilarIndice {
+  id: string; nome: string; max: number; pontos: number; media_camara: number; itens: ItemIndice[]; nao_se_aplica?: boolean;
+  motivo?: "sem_painel" | "presidiu" | "poucas_votacoes" | null; presidiu?: number;
+}
 export interface Indice { nota: number; pilares: PilarIndice[]; parcial: boolean; presidente: boolean; pontos_validos: number; media_camara: number }
 
 export interface LeituraVeto {

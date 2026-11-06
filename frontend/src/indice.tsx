@@ -49,6 +49,9 @@ export function CartaoIndice({ i, nome }: { i: Indice; nome: string }) {
               <span>{p.nome}</span>
               <span className="indice__pilar-pts">{p.nao_se_aplica ? "não se aplica" : `${fmt(p.pontos)} de ${p.max}`}</span>
             </p>
+            {!p.nao_se_aplica && !!p.presidiu && (
+              <p className="indice__obs">Presidiu {p.presidiu} votações, que ficam fora desta conta: quem conduz a votação não vota.</p>
+            )}
             {!p.nao_se_aplica && (
               <span className="indice__trilho" aria-hidden="true">
                 <span className="indice__barra" style={{ width: `${100 * pctPilar(p)}%` }} />
@@ -57,9 +60,11 @@ export function CartaoIndice({ i, nome }: { i: Indice; nome: string }) {
             )}
             {p.nao_se_aplica && (
               <p className="nota">
-                {i.presidente && p.id === "participacao"
-                  ? `${nome} preside as sessões e, no painel, quase sempre aparece presente sem voto, o que é esperado de quem conduz a votação. Por isso este pilar não conta; o peso dele é redistribuído entre os outros.`
-                  : "Sem votações do painel no período em que exerceu mandato. O peso deste pilar é redistribuído entre os outros."}
+                {p.motivo === "presidiu"
+                  ? `${nome} presidiu ${p.presidiu} das votações do painel, e quem conduz a votação não vota. Fora delas sobram poucas votações para medir participação, então este pilar não conta; o peso dele é redistribuído entre os outros.`
+                  : p.motivo === "poucas_votacoes"
+                    ? "Poucas votações no painel para medir participação. O peso deste pilar é redistribuído entre os outros."
+                    : "Sem votações do painel no período em que exerceu mandato. O peso deste pilar é redistribuído entre os outros."}
               </p>
             )}
           </li>
