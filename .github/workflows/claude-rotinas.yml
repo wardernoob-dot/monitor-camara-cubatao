@@ -8,7 +8,9 @@ on:
     workflows: ["coleta-diaria"]
     types: [completed]
   schedule:
-    # segunda-feira, 11:00 UTC
+    # todo dia 21:30 UTC (18:30 em Brasilia), depois da coleta das 20:17 UTC: conferir-coleta
+    - cron: "30 21 * * *"
+    # segunda-feira, 11:00 UTC: manutencao
     - cron: "0 11 * * 1"
   workflow_dispatch:
     inputs:
@@ -23,10 +25,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Depois de uma coleta bem-sucedida: roda a skill conferir-coleta-do-dia e abre issue so se achar algo.
+  # Uma vez por dia (resume as coletas do dia): roda a skill conferir-coleta-do-dia e abre issue so se achar algo.
   conferir-coleta:
     if: |
-      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
+      (github.event_name == 'schedule' && github.event.schedule == '30 21 * * *') ||
       (github.event_name == 'workflow_dispatch' && inputs.rotina == 'conferir-coleta')
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -49,7 +51,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            Siga o roteiro de .claude/skills/conferir-coleta-do-dia/SKILL.md sobre a coleta mais recente.
+            Siga o roteiro de .claude/skills/conferir-coleta-do-dia/SKILL.md sobre as coletas das ultimas 24 horas.
             Se NAO houver nada que mereca olho humano, nao crie issue e responda apenas "sem pendencias".
             Se houver (avisos do parser, PDF sem texto/OCR, votacao nao identificada, divergencia incomum
             entre painel e resumo), abra UMA issue em portugues com o titulo "conferir coleta AAAA-MM-DD",
@@ -99,7 +101,7 @@ jobs:
   # Semanal: dependencias e documentacao em dia. Abre um PR so se houver algo a mudar.
   manutencao:
     if: |
-      github.event_name == 'schedule' ||
+      (github.event_name == 'schedule' && github.event.schedule == '0 11 * * 1') ||
       (github.event_name == 'workflow_dispatch' && inputs.rotina == 'manutencao')
     runs-on: ubuntu-latest
     timeout-minutes: 30
