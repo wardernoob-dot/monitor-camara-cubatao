@@ -555,3 +555,7 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
   .rank__pos { grid-area: pos; } .rank__quem { grid-area: quem; } .rank__nota { grid-area: nota; }
   .rank__barra { grid-area: barra; } .rank__pilares { grid-area: pil; }
 }
+.peso { display: inline-block; font-size: .78rem; font-weight: 600; padding: .1rem .55rem; border-radius: var(--raio-pilula); border: 1px solid var(--color-linha); background: #f3f3f3; white-space: nowrap; }
+.peso--normativo, .peso--rq_investigacao { background: #e5f2e7; color: #1d5a2a; border-color: #bcdcc2; }
+.peso--estrutural { background: var(--color-ink); color: #fff; border-color: var(--color-ink); }
+.peso__motivo { font-size: .88rem; color: var(--color-secondary); }

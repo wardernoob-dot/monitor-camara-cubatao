@@ -46,6 +46,12 @@ export default function ProjetoPagina() {
         <div><dt>Autoria</dt><dd>
           {autores.length ? autores.map((v, i) => <span key={v.slug}>{i > 0 && ", "}<Link to={`/vereadores/${v.slug}`}>{v.exibicao}</Link></span>) : m.autoria}
         </dd></div>
+        {m.autores.length > 0 && (
+          <div><dt>Peso no índice</dt><dd>
+            <span className={`peso peso--${m.impacto.faixa}`}>{m.impacto.nome} ({m.impacto.peso.toLocaleString("pt-BR")})</span>{" "}
+            <span className="peso__motivo">{m.impacto.motivo}{m.impacto.fonte === "revisao" ? " (revisão manual)" : ""}. <Link to="/como-funciona#indice">Como é calculado</Link></span>
+          </dd></div>
+        )}
         {m.pautas.length > 0 && <div><dt>Na pauta em</dt><dd>{m.pautas.map((p) => dataCurta(p, true)).join(", ")}</dd></div>}
         {m.documento && <div><dt>Texto original</dt><dd><a href={m.documento} rel="noopener">PDF no site da Câmara</a></dd></div>}
         {m.lei && <div><dt>Lei</dt><dd>Lei {m.lei.numero}, publicada no Diário Oficial em {dataExtenso(m.lei.data)}{m.lei.url && <> (<a href={m.lei.url} rel="noopener">ver publicação</a>)</>}</dd></div>}

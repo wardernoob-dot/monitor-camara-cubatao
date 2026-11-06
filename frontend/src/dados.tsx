@@ -42,6 +42,8 @@ export interface LeituraVeto {
   fonte: string;
 }
 
+export interface Impacto { faixa: string; nome: string; peso: number; motivo: string; fonte: "regra" | "revisao" }
+
 export interface Votacao {
   id: number;
   data: string;
@@ -94,6 +96,7 @@ export interface Materia {
   lista: boolean;
   tema: string;
   relevancia: { nivel: "alta" | "media" | "baixa"; motivos: string[] };
+  impacto: Impacto;
   explicacao: { texto: string; base: string; modelo: string } | null;
 }
 

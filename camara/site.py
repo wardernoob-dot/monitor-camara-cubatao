@@ -28,6 +28,7 @@ from pathlib import Path
 
 
 from . import analise as AN
+from . import impacto as IM
 from . import explicacao as EX
 from . import validacao as V
 from .nomes import Registro, chave, display
@@ -82,6 +83,7 @@ class Base:
         self.presencas: dict[str, dict] = {}  # data -> {vereador: sim/ausente/justificada}
         self.partidos_pdf: dict[str, Counter] = defaultdict(Counter)
         self.cargos: dict[str, Counter] = defaultdict(Counter)  # "presidente"/"vice" -> chave -> ocorrencias
+        self.textos: dict[str, str] = {}  # slug da materia -> texto integral do projeto (quando ha)
 
     # ------------------------------------------------------------ vereadores
     def carregar_vereadores(self):
@@ -168,14 +170,16 @@ class Base:
                     if not m["autoria_txt"] and (RE_ORCAMENTO.search(m["assunto"] or "") or
                                                  re.search(r"(?i)SEJUR", meta["url"])):
                         m["autoria_txt"] = "PREFEITO MUNICIPAL"
-                    if not m["autoria_txt"]:
+                    if (meta.get("paginas") or 0) <= 40:  # texto do projeto: autoria e faixa de impacto (LOA de 600 pag. fica fora)
                         po = (texto_dir / f"{sha}.ocr.txt").resolve() if AN.RE_SHA256.match(sha) else None
                         txt = (po.read_text("utf-8") if po and po.is_relative_to(texto_dir) and po.exists() else "") \
                             or (p.read_text("utf-8") if p_ok else "")
+                        if len(txt.strip()) > 200:
+                            self.textos[m["slug"]] = txt
                         pa = (texto_dir / f"{sha}.assin.txt").resolve() if AN.RE_SHA256.match(sha) else None
                         if pa and pa.is_relative_to(texto_dir) and pa.exists():
                             txt += "\n" + pa.read_text("utf-8")  # bloco de assinaturas lido a parte (fica no fecho)
-                        if len(txt.strip()) > 200:
+                        if not m["autoria_txt"] and len(txt.strip()) > 200:
                             m["autoria_txt"] = self._autor_do_pdf(txt)
         for m in self.materias.values():
             m["autores"], m["autoria"] = self.autor(m["autoria_txt"])
@@ -357,6 +361,7 @@ class Base:
                 contra = v in ("SIM", "NAO") and ev["resultado"] in ("APROVADO", "REJEITADO") and \
                     ((v == "SIM") != (ev["resultado"] == "APROVADO"))
                 self.vereadores[k]["votos"].append({"ev": ev, "voto": v, "contra": contra})
+        manual = IM.carregar_manual(self.dados)
         rank = {"parecer_emenda": 0, "emenda": 1, "parecer": 2, "1a_discussao": 3, "2a_discussao": 4,
                 "discussao_unica": 4, "unica": 5, "redacao_final": 6}
         ap = {chave(n): k for k, n in {**APELIDO, **APELIDO_EXTRA}.items()}
@@ -383,6 +388,7 @@ class Base:
                 m["assunto_txt"] = _desc_curta(m["assunto"])
             m["tema"] = tema(m)
             m["relevancia"] = relevancia(m)
+            m["impacto"] = IM.classificar(m, self.textos.get(m["slug"]), manual)
             for e in m["eventos"]:
                 e["sentido"] = sentido(e)
             for k in m["autores"]:
@@ -496,23 +502,12 @@ def sentido(e: dict) -> str | None:
 
 # =============================================================== indice de atuacao (0 a 10)
 
-PESO_SIMBOLICO = 0.3
 APROVADOS = ("aprovado", "lei", "veto")
 TIPOS_PRODUCAO = ("PL", "PLC", "PR", "PDL", "PELOM")
 MIN_SESSOES = 10
 MIN_VOTACOES_P2 = 10  # menos que isso fora da presidencia: amostra pequena demais pro pilar Participacao
 RE_ORCAMENTO = re.compile(r"(?i)ESTIMA A RECEITA E FIXA A DESPESA|DIRETRIZES OR[ÇC]AMENT[ÁA]RIAS|PLANO PLURIANUAL")
-RE_RQ_PROCEDIMENTO = re.compile(r"SOLICITANDO QUE O PROCESSO|REGIME DE URGENCIA|SESSAO SECRETA|SOLICITANDO A PRORROGACAO|ATO SOLENE|SESSAO SOLENE")
 RE_AUTOR_LIDO = re.compile(r"Autor(?:ia)?\s*:\s*(?:Vereador[a]?\s+)?(.+)$", re.I)
-
-
-def _peso_tema(m: dict) -> float:
-    t = m.get("tema") or ""
-    if t.startswith("Homenagens"):
-        return PESO_SIMBOLICO
-    if m["tipo"] == "RQ" and (t == "Funcionamento da Câmara" or RE_RQ_PROCEDIMENTO.search(V._sem_acento_maiusc(m.get("assunto") or ""))):
-        return PESO_SIMBOLICO  # pedido de procedimento interno (urgencia, prorrogacao, sessao secreta): nao e cobranca ao Executivo
-    return 1.0
 
 
 def _br(x: float, casas: int = 2) -> str:
@@ -541,18 +536,20 @@ def calcular_indice(b: "Base") -> None:
     ap = {chave(n): k for k, n in {**APELIDO, **APELIDO_EXTRA}.items()}
     vs = b.vereadores
 
-    # producao ponderada: tema (homenagem 0,3) e coautoria (1/raiz de k)
-    prod = {k: {"apresentados": 0.0, "aprovados": 0.0, "leis": 0.0, "n_ap": 0, "n_aprov": 0, "n_leis": 0} for k in vs}
-    fisc = {k: {"rq": 0.0, "n_rq": 0, "emendas": 0.0, "n_em": 0} for k in vs}
+    # producao ponderada: faixa de impacto (simbolico 0,2 ... estrutural 1,5) e coautoria (1/raiz de k)
+    prod = {k: {"apresentados": 0.0, "aprovados": 0.0, "leis": 0.0, "n_ap": 0, "n_aprov": 0, "n_leis": 0,
+                "faixas": Counter()} for k in vs}
+    fisc = {k: {"rq": 0.0, "n_rq": 0, "emendas": 0.0, "n_em": 0, "faixas": Counter()} for k in vs}
     for m in b.materias.values():
         autores = [k for k in m["autores"] if k in vs]
         if not autores:
             continue
-        w = _peso_tema(m) / (len(autores) ** 0.5)
+        w = m["impacto"]["peso"] / (len(autores) ** 0.5)
         for k in autores:
             if m["tipo"] in TIPOS_PRODUCAO:
                 prod[k]["apresentados"] += w
                 prod[k]["n_ap"] += 1
+                prod[k]["faixas"][m["impacto"]["nome"]] += 1
                 if m["situacao_cls"] in APROVADOS:
                     prod[k]["aprovados"] += w
                     prod[k]["n_aprov"] += 1
@@ -562,6 +559,7 @@ def calcular_indice(b: "Base") -> None:
             elif m["tipo"] == "RQ" and m["situacao_cls"] in APROVADOS:
                 fisc[k]["rq"] += w
                 fisc[k]["n_rq"] += 1
+                fisc[k]["faixas"][m["impacto"]["nome"]] += 1
     # emendas e relatorios: autor lido no painel (so desde set/2026)
     vistos = set()
     for m in b.materias.values():
@@ -588,9 +586,17 @@ def calcular_indice(b: "Base") -> None:
 
     base_norm = [k for k, v in vs.items() if v["em_exercicio"] and v["sessoes_total"] >= MIN_SESSOES]
     def teto(d, campo):
-        return max([d[k][campo] for k in base_norm] + [0.0])
+        # referencia = media dos 3 maiores (na escala da raiz), para um caso fora da curva nao achatar todo mundo
+        top = sorted((d[k][campo] ** 0.5 for k in base_norm), reverse=True)[:3]
+        return sum(top) / len(top) if top else 0.0
     tetos = {c: teto(prod, c) for c in ("apresentados", "aprovados", "leis")}
     tetos.update({c: teto(fisc, c) for c in ("rq", "emendas")})
+
+    def rel(x: float, ref: float) -> float:  # raiz da soma ponderada / referencia, com teto em 1
+        return min(1.0, _pct(x ** 0.5, ref))
+
+    def faixas_txt(c: Counter) -> str:
+        return ", ".join(f"{n} {nome.lower()}" for nome, n in c.most_common()) or "nenhum"
 
     for k, v in vs.items():
         pres = v["presenca"]
@@ -627,20 +633,25 @@ def calcular_indice(b: "Base") -> None:
                 item("Votou nos projetos em destaque", b2, 10,
                      f"votou sim ou não em {ca['SIM'] + ca['NAO']} das {presente_alta} votações de projetos em destaque em que estava presente")]
         p = prod[k]
-        pil3 = [item("Projetos apresentados", 15 * _pct(p["apresentados"], tetos["apresentados"]), 15,
-                     f"{p['n_ap']} projetos, {_br(p['apresentados'], 2)} pontos ponderados (homenagem vale 0,3; coautoria divide por √autores); "
-                     f"maior da Câmara: {_br(tetos['apresentados'], 2)}"),
-                item("Projetos aprovados", 10 * _pct(p["aprovados"], tetos["aprovados"]), 10,
-                     f"{p['n_aprov']} aprovados, {_br(p['aprovados'], 2)} ponderados; maior da Câmara: {_br(tetos['aprovados'], 2)}"),
-                item("Viraram lei", 10 * _pct(p["leis"], tetos["leis"]), 10,
-                     f"{p['n_leis']} viraram lei (Diário Oficial do ano) ou tiveram o veto derrubado, {_br(p['leis'], 2)} ponderados; "
-                     f"maior da Câmara: {_br(tetos['leis'], 2)}")]
+        pil3 = [item("Projetos apresentados", 15 * rel(p["apresentados"], tetos["apresentados"]), 15,
+                     f"{p['n_ap']} projetos ({faixas_txt(p['faixas'])}); soma ponderada {_br(p['apresentados'])} "
+                     f"(simbólico 0,2, autorizativo 0,5, normativo 1, estrutural 1,5; coautoria divide por √autores). "
+                     f"Conta a raiz da soma: √{_br(p['apresentados'])} = {_br(p['apresentados'] ** 0.5)}, "
+                     f"comparada à média dos 3 maiores da Câmara ({_br(tetos['apresentados'])})"),
+                item("Projetos aprovados", 10 * rel(p["aprovados"], tetos["aprovados"]), 10,
+                     f"{p['n_aprov']} aprovados, soma ponderada {_br(p['aprovados'])}; √ = {_br(p['aprovados'] ** 0.5)}, "
+                     f"referência {_br(tetos['aprovados'])}"),
+                item("Viraram lei", 10 * rel(p["leis"], tetos["leis"]), 10,
+                     f"{p['n_leis']} viraram lei (Diário Oficial) ou tiveram o veto derrubado, soma ponderada {_br(p['leis'])}; "
+                     f"√ = {_br(p['leis'] ** 0.5)}, referência {_br(tetos['leis'])}")]
         f = fisc[k]
-        pil4 = [item("Requerimentos aprovados", 10 * _pct(f["rq"], tetos["rq"]), 10,
-                     f"{f['n_rq']} requerimentos aprovados, {_br(f['rq'], 2)} ponderados (homenagem e pedido de procedimento interno, como urgência ou prorrogação, valem 0,3); "
-                     f"maior da Câmara: {_br(tetos['rq'], 2)}"),
-                item("Emendas e relatórios de comissão", 5 * _pct(f["emendas"], tetos["emendas"]), 5,
-                     f"{f['n_em']} emendas ou relatórios votados com autoria no painel (desde set/2026); maior da Câmara: {_br(tetos['emendas'], 0)}")]
+        pil4 = [item("Requerimentos aprovados", 10 * rel(f["rq"], tetos["rq"]), 10,
+                     f"{f['n_rq']} requerimentos ({faixas_txt(f['faixas'])}); soma ponderada {_br(f['rq'])} "
+                     f"(investigação 1, pedido ao Executivo 0,5, procedimento ou organização de evento 0,2); "
+                     f"√ = {_br(f['rq'] ** 0.5)}, referência {_br(tetos['rq'])}"),
+                item("Emendas e relatórios de comissão", 5 * rel(f["emendas"], tetos["emendas"]), 5,
+                     f"{f['n_em']} emendas ou relatórios votados com autoria no painel (desde set/2026); "
+                     f"√ = {_br(f['emendas'] ** 0.5)}, referência {_br(tetos['emendas'])}")]
         sem_painel = not painel
         if sem_painel:  # nao exerceu mandato no periodo do painel: o item nao conta (peso redistribuido)
             pil1[1]["nao_se_aplica"] = True
@@ -909,7 +920,8 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                               "vereador_txt": d["vereador_txt"], "painel": d["painel"], "resumo": d["resumo"]}
                              for d in m["divergencias"]],
             "analise": bool(m["analise"]), "lista": m["id"] in ids_publicas,
-            "tema": m["tema"], "relevancia": m["relevancia"], "explicacao": _explicacao(m, explic),
+            "tema": m["tema"], "relevancia": m["relevancia"],
+            "impacto": {k: m["impacto"][k] for k in ("faixa", "nome", "peso", "motivo", "fonte")}, "explicacao": _explicacao(m, explic),
         })
     dias = [{"data": d["data"], "sessoes": d["sessoes"], "status": d["status"],
              "materias": [m["slug"] for m in d["materias"] if m["slug"] in paginas],

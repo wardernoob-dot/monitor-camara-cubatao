@@ -1,0 +1,3 @@
+{
+  "_leia": "Revisao manual da faixa de impacto de projetos e requerimentos. Use so quando a regra automatica (camara/impacto.py) erra. Formato: \"pl-12-2026\": {\"faixa\": \"normativo\", \"motivo\": \"frase curta que justifica\"}. Faixas: simbolico, autorizativo, normativo, estrutural, rq_procedimento, rq_organizacao, rq_pedido, rq_investigacao. O motivo aparece no site."
+}
