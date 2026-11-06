@@ -263,10 +263,13 @@ class Base:
         res = p.get("resultado") or ""
         if not res and r.get("resultado"):
             res = "APROVADO" if r["resultado"].startswith("aprovado") else "REJEITADO" if r["resultado"].startswith("rejeitado") else ""
-        sim = sum(1 for v in votos.values() if v == "SIM")
-        nao = sum(1 for v in votos.values() if v == "NAO")
-        if not votos and r.get("placar"):
+        if votos:
+            sim = sum(1 for v in votos.values() if v == "SIM")
+            nao = sum(1 for v in votos.values() if v == "NAO")
+        elif r.get("placar"):
             sim, nao = r["placar"].get("favor"), r["placar"].get("contra")
+        else:
+            sim = nao = None
         ev = {
             "data": c["data"], "materia": m, "etapa": x["etapa"], "etapa_txt": rotulo_etapa(x),
             "resultado": res, "sim": sim, "nao": nao, "votos": votos, "fonte": fonte,
