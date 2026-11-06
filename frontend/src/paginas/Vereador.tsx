@@ -1,4 +1,5 @@
 import { CartaoIndice } from "../indice";
+import { Secao } from "../secao";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDados, type Votacao, type Voto } from "../dados";
@@ -86,85 +87,82 @@ export default function VereadorPagina() {
         <Num valor={v.faltas} rotulo="faltas (justificadas ou não)" />
         <Num valor={projetos.length} rotulo="projetos de lei apresentados" />
         <Num valor={v.leis} rotulo="viraram lei" />
-        <Num valor={v.contra_resultado} rotulo="votou diferente do resultado final" />
-        <Num valor={v.contagem.BRANCO} rotulo="vezes presente sem votar (desde set.)" />
+        <Num valor={reqs.length} rotulo="requerimentos e moções aprovados" />
       </dl>
 
-      <CartaoIndice i={v.indice} nome={v.exibicao} />
-
-      {alinhados.length > 0 && (
-        <section aria-labelledby="alinh" className="duas-colunas">
-          <div>
-            <h2 id="alinh" className="secao__titulo">Vota mais igual a</h2>
-            <Funil etapas={alinhados.slice(0, 4).map((x) => ({ rotulo: `${x.nome} (${x.iguais} de ${x.total})`, valor: Math.round((100 * x.iguais) / x.total) }))} max={100} sufixo="%" />
-          </div>
-          <div>
-            <h2 className="secao__titulo">Vota mais diferente de</h2>
-            <Funil etapas={[...alinhados].reverse().slice(0, 4).map((x) => ({ rotulo: `${x.nome} (${x.iguais} de ${x.total})`, valor: Math.round((100 * x.iguais) / x.total) }))} max={100} sufixo="%" />
-          </div>
-          <p className="nota">Porcentagem das votações do painel em que os dois votaram igual, contando só as que ambos votaram sim ou não.</p>
-        </section>
-      )}
+      <div className="sanfonas">
+      <Secao id="indice" titulo="Índice de atuação" resumo={`${v.indice.nota.toLocaleString("pt-BR", { minimumFractionDigits: 1 })} de 10`} aberta>
+        <CartaoIndice i={v.indice} nome={v.exibicao} />
+      </Secao>
 
       {votos.length > 0 && (
-        <>
-          <section aria-labelledby="faixa">
-            <h2 id="faixa" className="secao__titulo">Cada voto, do mais antigo ao mais recente</h2>
-            <div className="faixa">
-              {votos.map(({ ev, voto }) => <Celula key={ev.id} ev={ev} voto={voto} nome={v.exibicao} />)}
-            </div>
-            <Legenda />
-            <p className="nota">
-              Até agosto os votos vêm do resumo oficial de cada sessão, que não registra quem estava presente e não votou. A partir de setembro vêm do painel eletrônico mostrado na transmissão, que registra.
-            </p>
-          </section>
-
-          <section aria-labelledby="votos">
-            <h2 id="votos" className="secao__titulo">Votos</h2>
-            <div className="filtros" role="group" aria-label="Filtrar votos">
+        <Secao id="votos" titulo="Como votou" resumo={`${votos.length} votos`}>
+          <div className="filtros" role="group" aria-label="Filtrar votos">
               {filtros.map(([f, nome, n]) => (
                 <button key={f} type="button" aria-pressed={filtro === f} onClick={() => { setFiltro(f); setLimite(30); }}>{nome} ({n})</button>
               ))}
-            </div>
+          </div>
             <div className="tabela-rolagem">
-              <table className="tabela">
-                <thead>
-                  <tr><th scope="col">Data</th><th scope="col">Projeto</th><th scope="col">Etapa</th><th scope="col">Voto</th><th scope="col">Resultado</th><th scope="col">Fonte</th></tr>
-                </thead>
-                <tbody>
-                  {visiveis.slice(0, limite).map(({ ev, voto, contra }: { ev: Votacao; voto: Voto; contra: boolean }) => (
-                    <tr key={ev.id}>
-                      <td className="tabela__data">{dataCurta(ev.data, true)}</td>
-                      <td>
-                        {(() => { const mt = b.materia.get(ev.materia); return mt ? <><DicaMateria m={mt}><LinkMateria slug={ev.materia} /></DicaMateria> <Destaque m={mt} compacto /><span className="tabela__assunto">{mt.assunto}</span></> : null; })()}
-                      </td>
-                      <td><EtapaComDica ev={ev} tipo={b.materia.get(ev.materia)?.tipo} /></td>
-                      <td>
-                        <VotoTag voto={voto} />
-                        {naPratica(ev.sentido, voto) && <span className="na-pratica">na prática: {naPratica(ev.sentido, voto)}</span>}
-                        {contra && <> <Dica rotulo="O que é votar diferente do resultado" conteudo="O voto foi para o lado que perdeu: votou sim e a proposta foi rejeitada, ou votou não e foi aprovada."><span className="marca-contra">diferente do resultado</span></Dica></>}
-                      </td>
-                      <td><ResultadoTag r={ev.resultado} />{Object.keys(ev.votos).length > 0 && <> <Placar ev={ev} /></>}</td>
-                      <td className="tabela__fonte"><Fonte ev={ev} /></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {visiveis.length === 0 && <p className="nota">Nenhum voto neste filtro.</p>}
-              {visiveis.length > limite && (
-                <div className="mais">
-                  <button type="button" className="botao botao--fantasma" onClick={() => setLimite((l) => l + 30)}>
-                    Mostrar mais {Math.min(30, visiveis.length - limite)} de {visiveis.length - limite} restantes
-                  </button>
-                </div>
-              )}
-            </div>
-          </section>
-        </>
+            <table className="tabela">
+              <thead>
+                <tr><th scope="col">Data</th><th scope="col">Projeto</th><th scope="col">Etapa</th><th scope="col">Voto</th><th scope="col">Resultado</th><th scope="col">Fonte</th></tr>
+              </thead>
+              <tbody>
+                {visiveis.slice(0, limite).map(({ ev, voto, contra }: { ev: Votacao; voto: Voto; contra: boolean }) => (
+                  <tr key={ev.id}>
+                    <td className="tabela__data">{dataCurta(ev.data, true)}</td>
+                    <td>
+                      {(() => { const mt = b.materia.get(ev.materia); return mt ? <><DicaMateria m={mt}><LinkMateria slug={ev.materia} /></DicaMateria> <Destaque m={mt} compacto /><span className="tabela__assunto">{mt.assunto}</span></> : null; })()}
+                    </td>
+                    <td><EtapaComDica ev={ev} tipo={b.materia.get(ev.materia)?.tipo} /></td>
+                    <td>
+                      <VotoTag voto={voto} />
+                      {naPratica(ev.sentido, voto) && <span className="na-pratica">na prática: {naPratica(ev.sentido, voto)}</span>}
+                      {contra && <> <Dica rotulo="O que é votar diferente do resultado" conteudo="O voto foi para o lado que perdeu: votou sim e a proposta foi rejeitada, ou votou não e foi aprovada."><span className="marca-contra">diferente do resultado</span></Dica></>}
+                    </td>
+                    <td><ResultadoTag r={ev.resultado} />{Object.keys(ev.votos).length > 0 && <> <Placar ev={ev} /></>}</td>
+                    <td className="tabela__fonte"><Fonte ev={ev} /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {visiveis.length === 0 && <p className="nota">Nenhum voto neste filtro.</p>}
+            {visiveis.length > limite && (
+              <div className="mais">
+                <button type="button" className="botao botao--fantasma" onClick={() => setLimite((l) => l + 30)}>
+                  Mostrar mais {Math.min(30, visiveis.length - limite)} de {visiveis.length - limite} restantes
+                </button>
+              </div>
+            )}
+          </div>
+          <h3 className="sub-titulo">Cada voto, do mais antigo ao mais recente</h3>
+          <div className="faixa">
+            {votos.map(({ ev, voto }) => <Celula key={ev.id} ev={ev} voto={voto} nome={v.exibicao} />)}
+          </div>
+          <Legenda />
+          <p className="nota">
+            Até agosto os votos vêm do resumo oficial de cada sessão, que não registra quem estava presente e não votou. A partir de setembro vêm do painel eletrônico mostrado na transmissão, que registra.
+          </p>
+        </Secao>
       )}
 
-      <section aria-labelledby="projetos">
-        <h2 id="projetos" className="secao__titulo">Projetos de autoria</h2>
+      {alinhados.length > 0 && (
+        <Secao id="alinhamento" titulo="Com quem vota igual" resumo={`mais igual: ${alinhados[0].nome}`}>
+          <div className="duas-colunas">
+            <div>
+              <h3 className="sub-titulo">Vota mais igual a</h3>
+              <Funil etapas={alinhados.slice(0, 4).map((x) => ({ rotulo: `${x.nome} (${x.iguais} de ${x.total})`, valor: Math.round((100 * x.iguais) / x.total) }))} max={100} sufixo="%" />
+            </div>
+            <div>
+              <h3 className="sub-titulo">Vota mais diferente de</h3>
+              <Funil etapas={[...alinhados].reverse().slice(0, 4).map((x) => ({ rotulo: `${x.nome} (${x.iguais} de ${x.total})`, valor: Math.round((100 * x.iguais) / x.total) }))} max={100} sufixo="%" />
+            </div>
+            <p className="nota">Porcentagem das votações do painel em que os dois votaram igual, contando só as que ambos votaram sim ou não.</p>
+          </div>
+        </Secao>
+      )}
+
+      <Secao id="projetos" titulo="Projetos de autoria" resumo={`${projetos.length} projeto${projetos.length === 1 ? "" : "s"}`} aberta={projetos.length > 0 && projetos.length <= 6}>
         {projetos.length ? (
           <ul className="lista-projetos">
             {projetos.map((m) => (
@@ -172,26 +170,25 @@ export default function VereadorPagina() {
             ))}
           </ul>
         ) : (
-          <p>Nenhum projeto de lei com autoria identificada nos documentos coletados. Projetos em PDF escaneado podem estar sem autoria reconhecida.</p>
+          <p>Nenhum projeto de lei com autoria identificada nos documentos coletados.</p>
         )}
-      </section>
+      </Secao>
 
       {reqs.length > 0 && (
-        <section aria-labelledby="reqs">
-          <h2 id="reqs" className="secao__titulo">Requerimentos e moções aprovados</h2>
+        <Secao id="requerimentos" titulo="Requerimentos e moções aprovados" resumo={`${reqs.length}`}>
           <ul className="lista-projetos">
             {reqs.map((m) => <li key={m.slug}><DicaMateria m={m}><LinkMateria slug={m.slug} /></DicaMateria><p>{m.assunto}</p></li>)}
           </ul>
-        </section>
+        </Secao>
       )}
 
-      <section aria-labelledby="presenca">
-        <h2 id="presenca" className="secao__titulo">Presença nas sessões</h2>
+      <Secao id="presenca" titulo="Presença nas sessões" resumo={`${v.presenca.sim ?? 0} de ${v.sessoes_total}`}>
         <p>
           Segundo os resumos oficiais de {v.sessoes_total} sessões em 2026: presente em {v.presenca.sim ?? 0}, falta justificada em{" "}
           {v.presenca.justificada ?? 0} e ausência sem justificativa em {v.presenca.ausente ?? 0}.
         </p>
-      </section>
+      </Secao>
+      </div>
 
       {v.partido && <p className="nota" id="nota-partido"><sup>1</sup> Partido conforme {v.partido_fonte}.</p>}
     </div>

@@ -33,8 +33,7 @@ export function IndiceMini({ i }: { i: Indice }) {
 /** Card completo da página do vereador, com a memória de cálculo. */
 export function CartaoIndice({ i, nome }: { i: Indice; nome: string }) {
   return (
-    <section aria-labelledby="indice" className="indice">
-      <h2 id="indice" className="secao__titulo">Índice de atuação</h2>
+    <div className="indice">
       <div className="indice__topo">
         <p className="indice__nota"><strong>{fmt(i.nota)}</strong><span> / 10</span></p>
         <p className="indice__media">
@@ -95,6 +94,6 @@ export function CartaoIndice({ i, nome }: { i: Indice; nome: string }) {
         O índice mede atividade registrada (presença, voto, projetos, requerimentos), não a qualidade nem o mérito do que cada vereador defende.
         Trabalho de bairro, atendimento e articulação política não aparecem em documento público e ficam de fora.
       </p>
-    </section>
+    </div>
   );
 }

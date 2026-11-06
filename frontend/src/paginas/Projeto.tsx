@@ -5,6 +5,7 @@ import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { Destaque, EtapaComDica } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
 import BlocoVeto from "../veto";
+import { Secao } from "../secao";
 
 export default function ProjetoPagina() {
   const { slug = "" } = useParams();
@@ -54,8 +55,7 @@ export default function ProjetoPagina() {
       {m.veto && <BlocoVeto m={m} />}
 
       {eventos.length > 0 && (
-        <section aria-labelledby="votacoes">
-          <h2 id="votacoes" className="secao__titulo">Votações</h2>
+        <Secao id="votacoes" titulo="Votações" resumo={`${eventos.length} ${eventos.length === 1 ? "votação" : "votações"}`} aberta>
           <ol className="linha-tempo">
             {eventos.map((ev) => (
               <li key={ev.id} className="linha-tempo__item">
@@ -72,12 +72,11 @@ export default function ProjetoPagina() {
               </li>
             ))}
           </ol>
-        </section>
+        </Secao>
       )}
 
       {m.divergencias.length > 0 && (
-        <section aria-labelledby="diverg">
-          <h2 id="diverg" className="secao__titulo">Painel e resumo oficial não batem</h2>
+        <Secao id="divergencias" titulo="Painel e resumo oficial não batem" resumo={`${m.divergencias.length}`}>
           <p>O voto mostrado no painel eletrônico durante a transmissão é diferente do que o resumo oficial da sessão registra nestes casos:</p>
           <ul className="lista-simples">
             {m.divergencias.map((d, i) => (
@@ -88,12 +87,11 @@ export default function ProjetoPagina() {
               </li>
             ))}
           </ul>
-        </section>
+        </Secao>
       )}
 
       {a && (
-        <section className="analise" aria-labelledby="entenda">
-          <h2 id="entenda" className="secao__titulo">Entenda o projeto</h2>
+        <Secao id="entenda" titulo="Entenda o projeto" classe="analise" aberta>
           <p className="analise__aviso">
             Texto gerado por inteligência artificial ({a.modelo}) lendo só o {a.fonte}. Não avalia vereadores nem recomenda voto.{" "}
             <Link to="/como-funciona">Como funciona</Link>.
@@ -113,7 +111,7 @@ export default function ProjetoPagina() {
           )}
           {a.justificativa_do_autor && <><h3>O que diz o autor</h3><p>{a.justificativa_do_autor}</p></>}
           {a.limitacoes && <p className="nota">{a.limitacoes}</p>}
-        </section>
+        </Secao>
       )}
     </div>
   );

@@ -448,3 +448,35 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 .indice__obs { font-size: .82rem; color: var(--color-surface-3); margin: -.2rem 0 .35rem; }
 .parte--junto { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.55) 0 2px, transparent 2px 5px); }
 .parte--neutro { background-color: var(--color-surface-3); }
+
+/* ---------- secoes retrateis */
+.sanfona { border-top: 1px solid var(--color-linha); }
+.sanfona + .sanfona { border-top: 1px solid var(--color-linha); }
+.sanfona:last-of-type { border-bottom: 1px solid var(--color-linha); }
+.sanfona__titulo { margin: 0; font-size: inherit; letter-spacing: normal; }
+.sanfona__titulo button { all: unset; box-sizing: border-box; display: flex; align-items: center; gap: 1rem; width: 100%; padding: 1.15rem .25rem; cursor: pointer; border-radius: var(--raio); }
+.sanfona__titulo button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.sanfona__titulo button:hover .sanfona__texto { color: var(--color-secondary); }
+.sanfona__texto { flex: 1; font-family: var(--font-display); font-weight: 500; font-size: clamp(1.25rem, 2.4vw, 1.6rem); letter-spacing: -0.035em; line-height: 1.15; transition: color .2s var(--ease); }
+.sanfona__resumo { font-size: .85rem; color: var(--color-surface-3); white-space: nowrap; }
+.sanfona__seta { flex: none; color: var(--color-surface-3); transition: transform .3s var(--ease); }
+.sanfona--aberta .sanfona__seta { transform: rotate(180deg); }
+.sanfona__interno { padding: .25rem 0 2rem; }
+.sanfona__interno > .secao__titulo:first-child { margin-top: 0; }
+.sanfonas { margin-top: 3rem; }
+@media (max-width: 640px) { .sanfona__resumo { display: none; } }
+.sub-titulo { font-size: 1.1rem; letter-spacing: -0.02em; margin: 2rem 0 .75rem; }
+.sanfona__interno > .sub-titulo:first-child, .duas-colunas .sub-titulo { margin-top: 0; }
+.tile-solto { max-width: 52rem; }
+@media (max-width: 640px) {
+  /* celular: cartao em linha (foto pequena ao lado), lista bem mais curta */
+  .cartao__link { display: grid; grid-template-columns: 72px 1fr; column-gap: .9rem; row-gap: .45rem; align-items: center; padding: .85rem; }
+  .cartao__link > .avatar--retrato { grid-row: span 2; width: 72px; height: 72px; aspect-ratio: 1; border-radius: 12px; font-size: 1.4rem; }
+  .cartao__link > .indice-mini { margin-top: 0; }
+  .cartao__link > .cartao__nums { grid-column: 1 / -1; }
+  .cartao__link .cartao__civil { display: none; }
+  .vereadores__item a { grid-template-columns: 72px 1fr; column-gap: .9rem; align-items: center; }
+  .vereadores__item .avatar--retrato { grid-row: span 3; width: 72px; height: 72px; aspect-ratio: 1; margin-bottom: 0; font-size: 1.4rem; }
+  .vereadores__item .vereadores__civil, .vereadores__item .vereadores__nums { grid-column: 2; }
+  .vereadores__item .indice-mini { grid-column: 1 / -1; }
+}
