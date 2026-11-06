@@ -23,12 +23,9 @@ def main():
         from .analise import transcrever_resumos
 
         r = transcrever_resumos(a.dados)
-        print("transcritos:", *r["transcritos"], sep="
-  ")
-        print("ja existiam:", *r["ja_existiam"], sep="
-  ")
-        print("falhas:", *r["falhas"], sep="
-  ")
+        print("transcritos:", *r["transcritos"], sep="\n  ")
+        print("ja existiam:", *r["ja_existiam"], sep="\n  ")
+        print("falhas:", *r["falhas"], sep="\n  ")
         print("Confira cada data/texto/<sha>.ocr.txt contra o PDF antes de commitar.")
         return
 
@@ -45,8 +42,7 @@ def main():
         rel = processar(a.dados)
         print(f"{rel['sessoes']} sessoes | {rel['itens']} itens | {rel['votos']} votos individuais")
         if rel["via_ocr"]:
-            print("lidos de transcricao OCR conferida:", *rel["via_ocr"], sep="
-  ")
+            print("lidos de transcricao OCR conferida:", *rel["via_ocr"], sep="\n  ")
         if rel["precisa_ocr"]:
             print("precisam de OCR:", *rel["precisa_ocr"], sep="\n  ")
         if rel["avisos"]:
