@@ -156,7 +156,7 @@ class Coletor:
                 pul = [ln for ln in links if not _EH_VETO.search(f"{ln.titulo} {ln.url}")
                        and not self._projeto_vetado(f"{ln.titulo} {ln.url}")]
                 print(f"  pasta do ano anterior {url.rsplit('/', 1)[-1]}: {len(links)} links, {len(pul)} ignorados; "
-                      f"{[x.url.rsplit('/', 1)[-1][:60] for x in pul]}")
+                      f"ex.: {[x.url.rsplit('/', 1)[-1][:50] for x in pul[:5]]}")
             for ln in links:
                 if "b_start" in ln.url:  # paginacao do Plone: segue sempre, com o mesmo filtro da pasta
                     fila.append((ln.url, prof, titulo_pasta, so_vetos))
