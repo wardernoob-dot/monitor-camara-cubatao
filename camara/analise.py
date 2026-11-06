@@ -26,7 +26,7 @@ TIPOS_ANALISADOS = ("PL", "PLC", "PR", "PDL", "PELOM", "VETO")
 NATUREZAS = {"homenagem_ou_data", "politica_publica", "orcamento_financas", "organizacao_administrativa",
              "tributos", "funcionamento_da_camara", "outro"}
 MAX_DOC = 14000
-RE_URL_PROJ = re.compile(r"/(PLC|PL|PR|PDL|PELOM)(?:%20|[ _\-.])*0*(\d{1,4})[.\-_](\d{4})", re.I)
+RE_URL_PROJ = re.compile(r"/(PLC|PL|PR|PDL|PELOM)(?:%20|[ _\-.])*(?:n(?:o|º|°|deg)?(?:%20|[ _\-.])+)?0*(\d{1,4})[.\-_](\d{4})", re.I)
 RE_VETO_TIT = re.compile(r"VETO (INTEGRAL|PARCIAL|TOTAL) AO PROJETO DE LEI N\S?\s*0*(\d{1,4})/(\d{4})", re.I)
 RE_SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
@@ -67,6 +67,11 @@ def documento(dados: Path, tipo: str, numero: str, ano: str | None, ementa: str 
 
 PROMPT_OCR = ("Transcreva literalmente todo o texto deste documento oficial, na ordem, sem resumir, "
               "sem corrigir e sem comentar. Ignore carimbos e assinaturas. Responda so com o texto.")
+# Autoria: o OCR normal ignora assinaturas e as vezes leva junto o nome impresso embaixo delas
+PROMPT_OCR_ASSINATURAS = ("Transcreva literalmente apenas o bloco de assinaturas do fim deste documento oficial: "
+                          "os nomes impressos, apelidos, cargos (Vereador, Presidente, Secretario, Prefeito) e partidos, "
+                          "uma informacao por linha, na ordem em que aparecem. Nao transcreva a rubrica manuscrita. "
+                          "Se nao houver nome impresso, responda SEM ASSINATURA.")
 # Resumo de sessao: o parser le a lista de presenca como uma linha "NOME STATUS" por vereador.
 # Tabela com barras ou nome e status em linhas separadas fazem o parser nao achar a lista.
 PROMPT_OCR_RESUMO = (PROMPT_OCR + " Na lista de presenca dos vereadores, escreva uma linha por vereador no formato "
@@ -75,8 +80,9 @@ PROMPT_OCR_RESUMO = (PROMPT_OCR + " Na lista de presenca dos vereadores, escreva
 MAX_PDF = 15 * 1024 * 1024
 
 
-def transcrever_pdf(dados: Path, url: str, sha: str, http=None, prompt: str = PROMPT_OCR) -> bool:
-    """PDF escaneado -> data/texto/<sha>.ocr.txt via Gemini (uma vez por documento)."""
+def transcrever_pdf(dados: Path, url: str, sha: str, http=None, prompt: str = PROMPT_OCR,
+                    sufixo: str = ".ocr.txt", minimo: int = 300) -> bool:
+    """PDF escaneado -> data/texto/<sha><sufixo> via Gemini (uma vez por documento)."""
     import base64
 
     import requests
@@ -89,7 +95,9 @@ def transcrever_pdf(dados: Path, url: str, sha: str, http=None, prompt: str = PR
     if p_url.scheme not in ("https", "http") or p_url.hostname != "www.cubatao.sp.leg.br":
         raise ValueError(f"URL de PDF fora do dominio da Camara: {url!r}")
     texto_dir = (Path(dados) / "texto").resolve()
-    destino = (texto_dir / f"{sha}.ocr.txt").resolve()
+    if sufixo not in (".ocr.txt", ".assin.txt"):
+        raise ValueError(f"sufixo invalido: {sufixo!r}")
+    destino = (texto_dir / f"{sha}{sufixo}").resolve()
     if not destino.is_relative_to(texto_dir):
         raise ValueError(f"caminho invalido: {destino}")
     if destino.exists() or not os.environ.get("GEMINI_API_KEY"):
@@ -117,7 +125,7 @@ def transcrever_pdf(dados: Path, url: str, sha: str, http=None, prompt: str = PR
                 t = "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
             except Exception:  # noqa: BLE001
                 continue
-            if len(t) > 300:
+            if len(t) > minimo:
                 destino.write_text(t, "utf-8")
                 return True
     return False
@@ -265,14 +273,18 @@ def transcrever_projetos(dados: Path, slugs_sem_autor: set[str], limite: int = 2
             continue
         sl = f"{mu.group(1).lower()}-{int(mu.group(2))}-{mu.group(3)}"
         sha = str(meta.get("sha256") or "")
-        if sl not in slugs_sem_autor or (meta.get("paginas") or 0) > max_paginas or \
-                (dados / "texto" / f"{sha}.ocr.txt").exists():
+        if sl not in slugs_sem_autor or (meta.get("paginas") or 0) > max_paginas:
+            continue
+        # ja transcrito e mesmo assim sem autor: le so o bloco de assinaturas (nome impresso sob a rubrica)
+        so_assin = (dados / "texto" / f"{sha}.ocr.txt").exists()
+        if so_assin and (dados / "texto" / f"{sha}.assin.txt").exists():
             continue
         if rel["transcritos"] >= limite:
             rel["pendentes"] += 1
             continue
         try:
-            if transcrever_pdf(dados, meta["url"], sha, http=http):
+            kw = {"prompt": PROMPT_OCR_ASSINATURAS, "sufixo": ".assin.txt", "minimo": 5} if so_assin else {}
+            if transcrever_pdf(dados, meta["url"], sha, http=http, **kw):
                 rel["transcritos"] += 1
                 time.sleep(pausa)
         except Exception as e:  # noqa: BLE001 - um PDF ruim nao derruba a rodada

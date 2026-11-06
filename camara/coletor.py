@@ -189,7 +189,7 @@ class Coletor:
         """'PL 112.2025.pdf', 'PL%20141.2025', 'pl-146-2025' na pasta do ano anterior."""
         ant = self.desde - 1
         sep = r"(?:%20|[\s_.-])*"
-        for m in re.finditer(rf"(?i)(?<![a-z])PLC?{sep}(?:n(?:o|º|°|deg)?\.?{sep})?0*(\d{{1,4}})(?:%20|[\s_./-])+{ant}(?!\d)", txt):
+        for m in re.finditer(rf"(?i)(?<![a-z])(?:PLC?|Projeto{sep}de{sep}Lei){sep}(?:n(?:o|º|°|deg)?\.?{sep})?0*(\d{{1,4}})(?:%20|[\s_./-])+{ant}(?!\d)", txt):
             if int(m.group(1)) in self.nums_ano_anterior:
                 return True
         return False

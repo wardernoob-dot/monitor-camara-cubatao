@@ -172,6 +172,9 @@ class Base:
                         po = (texto_dir / f"{sha}.ocr.txt").resolve() if AN.RE_SHA256.match(sha) else None
                         txt = (po.read_text("utf-8") if po and po.is_relative_to(texto_dir) and po.exists() else "") \
                             or (p.read_text("utf-8") if p_ok else "")
+                        pa = (texto_dir / f"{sha}.assin.txt").resolve() if AN.RE_SHA256.match(sha) else None
+                        if pa and pa.is_relative_to(texto_dir) and pa.exists():
+                            txt += "\n" + pa.read_text("utf-8")  # bloco de assinaturas lido a parte (fica no fecho)
                         if len(txt.strip()) > 200:
                             m["autoria_txt"] = self._autor_do_pdf(txt)
         for m in self.materias.values():
