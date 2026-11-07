@@ -6,6 +6,13 @@ import { Destaque, EtapaComDica } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
 import BlocoVeto from "../veto";
 import { Secao } from "../secao";
+import { Toc } from "../toc";
+
+const TOC_PROJETO = [
+  ["votacoes", "Votações"],
+  ["divergencias", "Painel e resumo não batem"],
+  ["entenda", "Entenda o projeto"],
+] as const;
 
 export default function ProjetoPagina() {
   const { slug = "" } = useParams();
@@ -60,6 +67,8 @@ export default function ProjetoPagina() {
 
       {m.veto && <BlocoVeto m={m} />}
 
+      <div className="com-toc">
+      <div className="sanfonas">
       {eventos.length > 0 && (
         <Secao id="votacoes" titulo="Votações" resumo={`${eventos.length} ${eventos.length === 1 ? "votação" : "votações"}`} aberta>
           <ol className="linha-tempo">
@@ -119,6 +128,9 @@ export default function ProjetoPagina() {
           {a.limitacoes && <p className="nota">{a.limitacoes}</p>}
         </Secao>
       )}
+      </div>
+      <Toc itens={TOC_PROJETO} caminho={`/projetos/${m.slug}`} />
+      </div>
     </div>
   );
 }

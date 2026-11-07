@@ -15,6 +15,17 @@ function Num({ valor, rotulo, sufixo = "" }: { valor: number; rotulo: string; su
   return <div ref={ref}><dt>{rotulo}</dt><dd><span aria-hidden="true">{v}{sufixo}</span><span className="sr">{valor}{sufixo}</span></dd></div>;
 }
 import NaoEncontrado from "./NaoEncontrado";
+import { Toc } from "../toc";
+
+const TOC_VEREADOR = [
+  ["indice", "Índice de atuação"],
+  ["votos", "Como votou"],
+  ["alinhamento", "Com quem vota igual"],
+  ["prefeitura", "Posição da Prefeitura"],
+  ["projetos", "Projetos de autoria"],
+  ["requerimentos", "Requerimentos e moções"],
+  ["presenca", "Presença nas sessões"],
+] as const;
 
 type Filtro = "todos" | "destaque" | "contra" | "semvoto";
 
@@ -94,6 +105,7 @@ export default function VereadorPagina() {
         )}
       </dl>
 
+      <div className="com-toc">
       <div className="sanfonas">
       <Secao id="indice" titulo="Índice de atuação" resumo={`${v.indice.nota.toLocaleString("pt-BR", { minimumFractionDigits: 1 })} de 10`} aberta>
         <CartaoIndice i={v.indice} nome={v.exibicao} />
@@ -203,6 +215,8 @@ export default function VereadorPagina() {
           {v.presenca.justificada ?? 0} e ausência sem justificativa em {v.presenca.ausente ?? 0}.
         </p>
       </Secao>
+      </div>
+      <Toc itens={TOC_VEREADOR} caminho={`/vereadores/${v.slug}`} />
       </div>
 
       {v.partido && (

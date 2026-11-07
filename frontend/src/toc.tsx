@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
  *  As seções são as de <Secao id=…>; clicar abre a seção, porque ela já reage ao #id do endereço. */
 export function Toc({ itens, caminho }: { itens: readonly (readonly [string, string])[]; caminho: string }) {
   const [ativo, setAtivo] = useState<string>("");
+  const [presentes, setPresentes] = useState<string[]>(() => itens.map(([id]) => id));
+
+  useEffect(() => {
+    setPresentes(itens.map(([id]) => id).filter((id) => document.getElementById(id)));
+  }, [itens, caminho]);
 
   useEffect(() => {
     const els = itens.map(([id]) => document.getElementById(id)).filter((e): e is HTMLElement => !!e);
@@ -17,11 +22,13 @@ export function Toc({ itens, caminho }: { itens: readonly (readonly [string, str
     return () => io.disconnect();
   }, [itens]);
 
+  if (presentes.length < 2) return null;
+
   return (
     <aside className="toc" aria-label="Nesta página">
       <p className="toc__titulo">Nesta página</p>
       <ul className="toc__lista">
-        {itens.map(([id, nome]) => (
+        {itens.filter(([id]) => presentes.includes(id)).map(([id, nome]) => (
           <li key={id}>
             <Link to={{ pathname: caminho, hash: `#${id}` }} className={`toc__link${ativo === id ? " toc__link--ativo" : ""}`}
               aria-current={ativo === id ? "location" : undefined}>{nome}</Link>

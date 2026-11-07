@@ -9,6 +9,7 @@ import { EASE, useEntrou } from "../movimento";
 import { Barras, COR, FeedVotacoes, Funil, GradeHero, Heatmap, Modal } from "../viz";
 import { IndiceMini } from "../indice";
 import { Painel } from "../painel";
+import { Paisagem } from "../guara";
 import { Destaque, Termo } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 
@@ -97,6 +98,7 @@ export default function Inicio() {
     <>
       <section ref={hero} className="hero" aria-labelledby="titulo-inicio">
         <motion.div className="hero__fundo" style={{ opacity: reduz ? 1 : opacidadeGrade }}><GradeHero /></motion.div>
+        <Paisagem />
         <div className="hero__dentro">
           <p className="hero__selo">Câmara Municipal de Cubatão · 2026</p>
           <h1 id="titulo-inicio" className="hero__titulo">
