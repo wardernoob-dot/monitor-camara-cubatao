@@ -98,7 +98,7 @@ Entregue o relatório no formato acima.
 
 ## Regras
 
-Estas são as regras de leitura de voto do README do projeto. Vale conferir a mudança contra elas.
+Estas são as regras de leitura de voto do projeto (`ARQUITETURA.md`, seção 6). Vale conferir a mudança contra elas.
 
 - **Ausente da lista ≠ voto contrário.** Quem está presente e não aparece vira "não consta". Na maioria das votações o resumo só lista os votos a favor; contrário só aparece em votação dividida, veto e parecer.
 - **Parecer inverte o sentido.** "Aprovação do Parecer **contrário** à Propositura" = voto **contra** o projeto; a "rejeição" desse parecer = **a favor**. Parecer favorável não inverte. A lógica está em `_sentido` (`parser_resumo.py`) e cada grupo de voto carrega o campo `sentido` já resolvido.

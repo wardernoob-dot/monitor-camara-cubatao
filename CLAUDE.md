@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 "Voto a voto": coleta o que a Câmara Municipal de Cubatão publica (resumos de sessão, pautas, projetos, vetos) e a leitura do painel de votação da transmissão no YouTube, e gera dado estruturado + um site estático. O código e os dados estão em português (sem acentos nos identificadores/docstrings do Python).
 
+Documentação longa (módulos, workflows, IA, regras de leitura de voto, segurança, estrutura): `ARQUITETURA.md`. O `README.md` é só a porta de entrada.
+
 ## Comandos
 
 ```bash
