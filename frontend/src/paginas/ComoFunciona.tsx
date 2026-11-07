@@ -1,6 +1,7 @@
 import { useDados } from "../dados";
 import { useTitulo } from "../util";
 import { Secao } from "../secao";
+import { Termo } from "../explica";
 
 export default function ComoFunciona() {
   useTitulo("Como funciona");
@@ -15,7 +16,7 @@ export default function ComoFunciona() {
 <Secao id="de-onde-vem-os-dados" titulo="De onde vêm os dados">
 <dl className="fontes">
   <dt>Painel de votação na transmissão</dt>
-  <dd>Durante cada votação a TV Câmara mostra o painel eletrônico com a foto de cada vereador: moldura verde para sim, vermelha para não, branca para quem está presente e não votou, foto apagada para quem está ausente. O sistema lê esse painel nas imagens de prévia do vídeo publicado no YouTube, sem baixar o vídeo. É a fonte dos votos individuais a partir de setembro de 2026. Cada voto tem link para o momento exato da transmissão.</dd>
+  <dd>Durante cada votação a TV Câmara mostra o <Termo chave="painel">painel eletrônico</Termo> com a foto de cada vereador: moldura verde para sim, vermelha para não, branca para quem está presente e não votou, foto apagada para quem está ausente. O sistema lê esse painel nas imagens de prévia do vídeo publicado no YouTube, sem baixar o vídeo. É a fonte dos votos individuais a partir de setembro de 2026. Cada voto tem link para o momento exato da transmissão.</dd>
   <dt>Pauta da sessão</dt>
   <dd>Publicada na véspera. Diz o que vai ser votado, quem é o autor e qual é o assunto. Serve também para conferir a leitura do painel: um número de projeto lido no painel só é aceito se estiver na pauta daquele dia.</dd>
   <dt>Resumo oficial da sessão</dt>
@@ -27,7 +28,7 @@ export default function ComoFunciona() {
 </dl>
 </Secao>
 <Secao id="quando-as-fontes-nao-batem" titulo="Quando as fontes não batem">
-<p>O resumo oficial costuma listar como favoráveis todos os vereadores presentes numa votação sem votos contrários, inclusive quem aparece no painel sem ter votado. Em pelo menos um caso o painel mostra um voto contrário que o resumo registra como favorável. O site mostra as duas versões lado a lado, sem tirar conclusão, na página de cada projeto.</p>
+<p>O <Termo chave="resumo">resumo oficial</Termo> costuma listar como favoráveis todos os vereadores presentes numa votação sem votos contrários, inclusive quem aparece no painel sem ter votado. Em pelo menos um caso o painel mostra um voto contrário que o resumo registra como favorável. O site mostra as duas versões lado a lado, sem tirar conclusão, na página de cada projeto.</p>
 </Secao>
 <Secao id="ia" titulo="Uso de inteligência artificial">
 <p>A inteligência artificial é usada nestes pontos, sempre com conferência:</p>
@@ -47,7 +48,7 @@ export default function ComoFunciona() {
   <li>foi vetado pelo prefeito;</li>
   <li>foi rejeitado pela Câmara ou teve votação dividida, com 3 ou mais votos contrários.</li>
 </ul>
-<p>O tema de cada projeto (saúde, educação, homenagens etc.) é identificado por palavras da ementa oficial.</p>
+<p>O tema de cada projeto (saúde, educação, homenagens etc.) é identificado por palavras da <Termo chave="ementa">ementa</Termo> oficial.</p>
 </Secao>
 <Secao id="indice" titulo="Índice de Atuação Parlamentar">
 <p>Nota de 0 a 10 que resume atividade registrada em documento público. Não mede qualidade, mérito das ideias nem trabalho que não deixa registro (atendimento, articulação, bairro). Serve para comparar e para abrir perguntas, não para dizer quem é bom vereador. A conta completa de cada um fica aberta na página do vereador.</p>
@@ -62,7 +63,7 @@ export default function ComoFunciona() {
 </Secao>
 <Secao id="partidos" titulo="Partidos e posição da Prefeitura">
 <p>O partido de cada vereador vem do resumo oficial da sessão ou da assinatura nos projetos. Quando nenhum documento da Câmara diz o partido, vale o partido pelo qual a pessoa foi eleita em 2024 (dados do TSE), com a fonte indicada na página do vereador. Troca de partido depois da eleição só aparece quando estiver num documento oficial.</p>
-<p><strong>Posição da Prefeitura.</strong> Conta só as votações em que a Prefeitura tem lado claro: projetos enviados pelo prefeito (a favor é votar pela aprovação; no parecer contrário, votar contra o parecer) e vetos do prefeito (a favor é votar por manter o veto). Emendas e projetos de vereadores ficam de fora. Votar contra não é bom nem ruim: o número mostra com que frequência cada vereador e cada bancada acompanha o Executivo.</p>
+<p><strong>Posição da Prefeitura.</strong> Conta só as votações em que a Prefeitura tem lado claro: projetos enviados pelo prefeito (a favor é votar pela aprovação; no <Termo chave="parecer">parecer</Termo> contrário, votar contra o parecer) e <Termo chave="veto">vetos</Termo> do prefeito (a favor é votar por manter o veto). Emendas e projetos de vereadores ficam de fora. Votar contra não é bom nem ruim: o número mostra com que frequência cada vereador e cada bancada acompanha o Executivo.</p>
 <p><strong>Bancada unida.</strong> Em cada votação em que dois ou mais vereadores do mesmo partido votaram sim ou não, conta quantos acompanharam a maioria do partido. A média dessas votações é a porcentagem mostrada.</p>
 <p>Até agosto de 2026 os votos vêm do resumo oficial, que costuma registrar como favorável quem estava presente sem votar; por isso os números desse período tendem a mostrar mais concordância do que houve de fato.</p>
 </Secao>
@@ -70,14 +71,14 @@ export default function ComoFunciona() {
 <p>Quando o prefeito veta um projeto, ele manda à Câmara um ofício explicando por quê. O site localiza esse ofício nas pastas de projetos da Câmara (pelo número do projeto no título, no texto ou, se faltar, pela ementa), transcreve quando o PDF é escaneado e gera um resumo com inteligência artificial: o que foi vetado, as razões alegadas e o tipo de fundamento. Cada razão precisa citar um trecho literal do ofício, conferido automaticamente; o resumo descreve a posição do prefeito sem dizer se ele tem razão. <a href={`${meta.repo}/blob/main/prompts/veto.md`} rel="noopener noreferrer">Instruções enviadas ao modelo</a>.</p>
 </Secao>
 <Secao id="explicacoes-ao-passar-o-mouse" titulo="Explicações ao passar o mouse">
-<p>Ao passar o mouse (ou tocar no “i”) sobre um projeto aparece uma explicação curta em palavras simples. Quando o texto integral do projeto está disponível, ela vem da análise conferida com o texto; nos outros casos, é a ementa oficial reescrita por inteligência artificial (Gemini), sem acrescentar nada. Ao passar o mouse sobre uma etapa (parecer, 1ª discussão, emenda…) aparece o que ela significa, inclusive quando votar “sim” quer dizer ser contra o projeto.</p>
+<p>Ao passar o mouse (ou tocar no “i”) sobre um projeto aparece uma explicação curta em palavras simples. Quando o texto integral do projeto está disponível, ela vem da análise conferida com o texto; nos outros casos, é a ementa oficial reescrita por inteligência artificial (Gemini), sem acrescentar nada. Ao passar o mouse sobre uma etapa (parecer, 1ª discussão, emenda…) aparece o que ela significa, inclusive quando votar “sim” quer dizer ser contra o projeto. Termos como veto, parecer ou Diário Oficial, quando aparecem com sublinhado pontilhado no texto, também explicam o que significam.</p>
 </Secao>
 <Secao id="limites" titulo="Limites">
 <ul className="lista-simples">
   <li>Votações simbólicas, sem painel, não têm registro nominal.</li>
   <li>Antes de setembro de 2026 não há registro de quem estava presente e não votou.</li>
   <li>Projetos em PDF escaneado podem ficar sem autoria identificada até serem transcritos.</li>
-  <li>O Diário Oficial é consultado desde o início do ano a cada atualização; leis publicadas antes disso podem não aparecer.</li>
+  <li>O <Termo chave="diario">Diário Oficial</Termo> é consultado desde o início do ano a cada atualização; leis publicadas antes disso podem não aparecer.</li>
 </ul>
 </Secao>
 <Secao id="codigo" titulo="Código">

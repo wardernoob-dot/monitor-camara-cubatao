@@ -680,3 +680,48 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 .tabela__num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .rachas li { padding: .5rem 0; border-bottom: 1px solid var(--color-linha); }
 .rachas__votos { display: flex; flex-wrap: wrap; gap: .25rem .9rem; margin-top: .25rem; font-size: .88rem; }
+
+/* Landing: selo, caminhos por intenção e passos (inspirada em documentação com "Which path is yours?") */
+.hero__selo { margin: 0 0 1.25rem; font: 600 .75rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--azul); }
+.hero__destaque { color: var(--azul); }
+.secao__titulo--topo { margin-top: 3rem; }
+.caminhos__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.caminho { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.35rem 1.4rem 1.25rem; background: #fff; border: 1px solid var(--color-linha); border-radius: 12px; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.caminho:hover, .caminho:focus-within { border-color: var(--azul); box-shadow: 0 6px 22px rgba(42, 111, 214, .12); transform: translateY(-2px); }
+.caminho__titulo { margin: 0; font-size: 1.1rem; font-weight: 600; letter-spacing: -0.02em; }
+.caminho__texto { margin: 0; color: var(--color-secondary); font-size: .95rem; line-height: 1.5; flex: 1; }
+.caminho__link { margin-top: .5rem; font-weight: 600; font-size: .92rem; color: var(--azul); text-decoration: none; }
+.caminho__link:hover { color: var(--azul-escuro); }
+.passos { margin: 3.5rem 0 1rem; padding: 2rem 1.75rem 2.25rem; background: var(--azul-claro); border-radius: 16px; }
+.passos__topo { display: flex; flex-wrap: wrap; gap: .75rem 2rem; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem; }
+.passos__titulo { margin: 0; font-size: clamp(1.15rem, 2.2vw, 1.4rem); font-weight: 500; letter-spacing: -0.02em; max-width: 34rem; }
+.passos__mais { font-weight: 600; font-size: .92rem; color: var(--azul); text-decoration: none; }
+.passos__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 20px; }
+.passo { border-top: 3px solid var(--azul); padding-top: .9rem; }
+.passo__n { font: 600 .8rem/1 var(--font-mono); color: var(--azul-escuro); letter-spacing: .08em; }
+.passo__titulo { margin: .5rem 0 .35rem; font-size: 1.05rem; font-weight: 600; }
+.passo__texto { margin: 0; font-size: .92rem; line-height: 1.5; color: var(--color-secondary); }
+@media (prefers-reduced-motion: reduce) { .caminho { transition: none; } .caminho:hover { transform: none; } }
+@media (max-width: 62rem) { .caminhos__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) { .caminhos__lista { grid-template-columns: 1fr; } }
+
+.em-destaque { margin: 3rem 0 1rem; }
+.em-destaque__topo { display: flex; flex-wrap: wrap; gap: .5rem 2rem; align-items: baseline; justify-content: space-between; }
+.em-destaque__titulo { margin: 0; font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.em-destaque__texto { margin: .5rem 0 1.25rem; max-width: 46rem; color: var(--color-secondary); }
+.caminho__etiqueta { font: 600 .7rem/1 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--azul-escuro); }
+.explorar { margin-bottom: 3rem; }
+.explorar__grade { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; border-top: 1px solid var(--color-linha); padding-top: 1.5rem; }
+.explorar__nome { margin: 0 0 .25rem; font-size: 1.05rem; font-weight: 600; }
+.explorar__texto { margin: 0 0 .75rem; font-size: .9rem; color: var(--color-secondary); line-height: 1.45; }
+.explorar__links { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.explorar__links a { color: var(--azul); text-decoration: none; font-size: .92rem; font-weight: 500; }
+.explorar__links a:hover { color: var(--azul-escuro); text-decoration: underline; }
+@media (max-width: 62rem) { .explorar__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) { .explorar__grade { grid-template-columns: 1fr; } }
+.caminho__texto--ementa { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.caminho__texto--ementa::first-letter { text-transform: uppercase; }
+.painel__dica { margin: .6rem 0 0; text-align: center; font-size: .85rem; color: var(--color-surface-3); }
+.painel__setas .painel__recolher { width: auto; height: 38px; padding: 0 .9rem; border-radius: 19px; font-size: .85rem; font-weight: 500; }
+.pagina .painel-secao { margin-top: 3rem; }
+@media (max-width: 40rem) { .pagina .painel-secao { margin-top: 2.5rem; } }

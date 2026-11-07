@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
@@ -8,11 +9,34 @@ import { EASE, useEntrou } from "../movimento";
 import { Barras, COR, FeedVotacoes, Funil, GradeHero, Heatmap, Modal } from "../viz";
 import { IndiceMini } from "../indice";
 import { Painel } from "../painel";
-import { Destaque } from "../explica";
+import { Destaque, Termo } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 
 const COLUNAS = 80;
-const LINHAS_TITULO = ["Como cada vereador", "de Cubatão votou"];
+const LINHAS_TITULO: [string, string?][] = [["Como cada vereador"], ["de Cubatão ", "votou"]];
+
+const CAMINHOS = [
+  { to: "/vereadores", titulo: "Como meu vereador votou", texto: "Votos, presença e projetos de cada um dos 15 vereadores, com a fonte de cada voto.", chamada: "Ver os vereadores" },
+  { to: "/projetos", titulo: "Quero achar um projeto", texto: "Busque por tema ou número e acompanhe as etapas, o placar e se virou lei ou foi vetado.", chamada: "Buscar um projeto" },
+  { to: "/sessoes", titulo: "O que aconteceu nas sessões", texto: "Pauta, presença e votações de cada sessão da Câmara em 2026.", chamada: "Ver as sessões" },
+  { to: "/ranking", titulo: "Índice de Atuação", texto: "Nota de 0 a 10 por presença, participação, projetos e fiscalização, com a conta aberta.", chamada: "Ver o ranking" },
+  { to: "/partidos", titulo: "Partidos e a Prefeitura", texto: "Como cada bancada vota e com que frequência acompanha a posição da Prefeitura.", chamada: "Ver os partidos" },
+  { to: "/como-funciona", titulo: "Como os dados são conferidos", texto: "De onde vem cada informação, como lemos o painel e o que o site não consegue saber.", chamada: "Ver o método" },
+];
+
+const EXPLORAR = [
+  { area: "Vereadores", texto: "Quem são, como votaram e como atuam.", links: [["Os 15 vereadores", "/vereadores"], ["Índice de Atuação", "/ranking"]] },
+  { area: "Projetos", texto: "O que foi apresentado, votado, vetado ou virou lei.", links: [["Todos os projetos", "/projetos"], ["Projetos em destaque", "/projetos?destaque=1"]] },
+  { area: "Sessões", texto: "Pauta, presença e votações dia a dia.", links: [["Todas as sessões", "/sessoes"], ["Partidos e a Prefeitura", "/partidos"]] },
+  { area: "Método e dados", texto: "De onde vem cada informação e como baixar.", links: [["Como funciona", "/como-funciona"], ["Como o índice é calculado", "/como-funciona#indice"], ["Dados abertos (JSON)", "./data/dados.json"]] },
+] as const;
+
+const PASSOS: { n: string; titulo: string; texto: ReactNode }[] = [
+  { n: "01", titulo: "Documentos oficiais", texto: <>Pautas, resumos de sessão, projetos e <Termo chave="diario">Diário Oficial</Termo>, guardados com um código de verificação (<Termo chave="sha256">SHA-256</Termo>).</> },
+  { n: "02", titulo: "Painel da transmissão", texto: <>O voto de cada vereador é lido pela cor do quadrado no <Termo chave="painel">painel</Termo> do YouTube, sem IA.</> },
+  { n: "03", titulo: "Conferência", texto: <>Painel e <Termo chave="resumo">resumo oficial</Termo> ficam lado a lado, e as divergências aparecem na tela.</> },
+  { n: "04", titulo: "Fonte à vista", texto: "Todo voto mostra de onde veio: painel da transmissão ou resumo oficial." },
+];
 
 
 export default function Inicio() {
@@ -58,17 +82,18 @@ export default function Inicio() {
       <section ref={hero} className="hero" aria-labelledby="titulo-inicio">
         <motion.div className="hero__fundo" style={{ opacity: reduz ? 1 : opacidadeGrade }}><GradeHero /></motion.div>
         <div className="hero__dentro">
+          <p className="hero__selo">Câmara Municipal de Cubatão · 2026</p>
           <h1 id="titulo-inicio" className="hero__titulo">
             {LINHAS_TITULO.map((l, i) => (
-              <span key={l} className="hero__linha">
+              <span key={l[0]} className="hero__linha">
                 <motion.span initial={reduz ? false : { y: "110%" }} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.1 + i * 0.08, ease: EASE }}>
-                  {l}
+                  {l[0]}{l[1] && <span className="hero__destaque">{l[1]}</span>}
                 </motion.span>
               </span>
             ))}
           </h1>
           <motion.p className="hero__texto" initial={reduz ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.5 }}>
-            {b.votacoes.filter((v) => Object.keys(v.votos).length).length} votações da Câmara Municipal em 2026, com o voto de cada um dos 15 vereadores, conferidas com o painel eletrônico da transmissão e os documentos oficiais.
+            {b.votacoes.filter((v) => Object.keys(v.votos).length).length} votações da Câmara Municipal em 2026, com o voto de cada um dos 15 vereadores, conferidas com o <Termo chave="painel">painel eletrônico</Termo> da transmissão e os documentos oficiais.
           </motion.p>
           <motion.div className="hero__acoes" initial={reduz ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65, ease: EASE }}>
             <Link className="botao botao--acao" to="/vereadores">Ver os vereadores</Link>
@@ -78,6 +103,56 @@ export default function Inicio() {
       </section>
 
       <div className="pagina pagina--larga">
+        <section className="caminhos" aria-labelledby="caminhos-titulo">
+          <h2 id="caminhos-titulo" className="secao__titulo secao__titulo--topo">Por onde você quer começar?</h2>
+          <ul className="caminhos__lista">
+            {CAMINHOS.map((c, i) => (
+              <motion.li key={c.to} className="caminho" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.5, delay: (i % 3) * 0.06, ease: EASE }}>
+                <h3 className="caminho__titulo">{c.titulo}</h3>
+                <p className="caminho__texto">{c.texto}</p>
+                <Link to={c.to} className="caminho__link esticado">{c.chamada} <span aria-hidden="true">→</span></Link>
+              </motion.li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="passos" aria-labelledby="passos-titulo">
+          <div className="passos__topo">
+            <h2 id="passos-titulo" className="passos__titulo">Como cada voto chega até aqui, em quatro passos.</h2>
+            <Link to="/como-funciona" className="passos__mais">Ver o método completo <span aria-hidden="true">→</span></Link>
+          </div>
+          <ol className="passos__lista">
+            {PASSOS.map((x) => (
+              <li key={x.n} className="passo">
+                <span className="passo__n">{x.n}</span>
+                <h3 className="passo__titulo">{x.titulo}</h3>
+                <p className="passo__texto">{x.texto}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {destaques.length > 0 && (
+          <section className="em-destaque" aria-labelledby="destaque-titulo">
+            <div className="em-destaque__topo">
+              <h2 id="destaque-titulo" className="em-destaque__titulo">Projetos em destaque</h2>
+              <Link to="/projetos?destaque=1" className="passos__mais">Ver todos <span aria-hidden="true">→</span></Link>
+            </div>
+            <p className="em-destaque__texto">Mexem no orçamento, em servidores ou na <Termo chave="loa">Lei Orgânica</Termo>, foram vetados, rejeitados ou tiveram votação dividida. Critério fixo e público, igual para todos; não diz se o projeto é bom ou ruim.</p>
+            <ul className="caminhos__lista">
+              {destaques.slice(0, 3).map((m) => (
+                <li key={m.slug} className="caminho">
+                  <span className="caminho__etiqueta">{m.situacao}</span>
+                  <h3 className="caminho__titulo">{m.titulo}</h3>
+                  <p className="caminho__texto caminho__texto--ementa">{m.assunto.toLowerCase()}</p>
+                  <Link to={`/projetos/${m.slug}`} className="caminho__link esticado">Ver o projeto <span aria-hidden="true">→</span></Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         <section className="painel-secao" aria-labelledby="painel-titulo">
           <h2 id="painel-titulo" className="sr">A Câmara em 2026</h2>
           <Painel rotulo="A Câmara em 2026" abas={[
@@ -239,6 +314,23 @@ export default function Inicio() {
               </motion.li>
             ))}
           </ul>
+        </section>
+
+        <section className="explorar" aria-labelledby="explorar-titulo">
+          <h2 id="explorar-titulo" className="secao__titulo">Explorar o site</h2>
+          <div className="explorar__grade">
+            {EXPLORAR.map((e) => (
+              <div key={e.area} className="explorar__area">
+                <h3 className="explorar__nome">{e.area}</h3>
+                <p className="explorar__texto">{e.texto}</p>
+                <ul className="explorar__links">
+                  {e.links.map(([t, to]) => (
+                    <li key={t}>{to.startsWith("./") ? <a href={to}>{t}</a> : <Link to={to}>{t}</Link>}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </section>
       </div>
 
