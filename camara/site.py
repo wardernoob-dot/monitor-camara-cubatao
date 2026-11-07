@@ -11,10 +11,13 @@ Paginas:
   /projetos/              tudo que foi pautado ou publicado, com situacao e autoria
   /projetos/<pl-92-2026>/ etapas, placar, voto de cada um, analise, lei/veto, documentos
   /sessoes/ e /sessoes/<data>/
+  /ranking/               vereadores em exercicio ordenados pelo Indice de Atuacao (0 a 10)
+  /partidos/              lista e pagina por partido: posicao da Prefeitura e bancada unida
   /como-funciona/         fontes, metodo, limites
 
 Regra: todo voto mostra de onde veio (painel da transmissao ou resumo oficial).
-Sem ranking de vereadores.
+Sem ranking nem nota por como o vereador votou. A unica ordenacao de vereadores e o Indice de Atuacao
+(camara/impacto.py + site.py), que mede atividade registrada e tem o metodo publicado em /como-funciona.
 """
 from __future__ import annotations
 

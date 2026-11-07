@@ -109,7 +109,7 @@ Entregue o relatório no formato acima.
 
 - Só leia e relate. Não rode a coleta e não commite dados.
 - Divergência esperada não é motivo de alarme; divergência incomum nunca é descartada sem olhar a imagem e o texto.
-- Sem ranking nem juízo sobre vereador: divergência é sobre fonte, não sobre pessoa.
+- Sem juízo sobre vereador: divergência é sobre fonte, não sobre pessoa. (O Índice de Atuação é o único ranking permitido; não o use para explicar divergência de coleta.)
 
 ---
 

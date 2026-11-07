@@ -34,7 +34,8 @@ Pipeline único, orquestrado em `camara/__main__.py` (`tudo` chama as etapas nes
 4. `noticias.py` e `diario.py`: notícias e Diário Oficial.
 5. `consolidar.py`: junta painel × resumo × notícia × DO em `data/consolidado/<data>.json`.
 6. `analise.py` (prompt público em `prompts/analise.md`, cache por matéria+hash do documento+versão do prompt) e `posts.py` (carrossel Instagram em `data/posts/`).
-7. `site.py`: gera `docs/data/dados.json`, que o app React em `frontend/` lê ao abrir.
+7. `impacto.py` (faixa de impacto de cada projeto, regra fixa sem IA, exceções em `data/impacto_manual.json`) alimenta o Índice de Atuação calculado em `site.py`.
+8. `site.py`: gera `docs/data/dados.json`, que o app React em `frontend/` lê ao abrir.
 
 Pontos que exigem ler mais de um arquivo:
 
@@ -64,6 +65,6 @@ Ordem sugerida para uma mudança que vai pra `main`: `revisar-regra-de-voto` (se
 - "Aprovação do Parecer contrário" = voto **contra** o projeto. "Manutenção do Veto" = a favor do veto; "rejeição do Veto" = derrubar o veto. "Rejeição do Parecer" do TCE = derrubar o parecer.
 - Cada item carrega `objeto_votado` (`materia`, `veto`, `parecer_tc`) e `rotulos` explicando o que "favor"/"contra" significa naquele caso.
 - Quirks reais do PDF que o código já trata: "negrito falso" (letra/palavra/frase duplicada), cirílico no meio do texto, grafias diferentes do mesmo vereador (normalizadas em `nomes.py`), título do site divergindo do PDF (mantém o PDF e registra aviso), PDF escaneado sem texto (precisa OCR).
-- Todo voto mostra a fonte (painel ou resumo oficial). A IA nunca é fonte de fato; a análise usa só o texto do projeto, sem votos nem nomes. Sem ranking nem nota de vereador.
+- Todo voto mostra a fonte (painel ou resumo oficial). A IA nunca é fonte de fato; a análise usa só o texto do projeto, sem votos nem nomes. Sem ranking nem nota **de voto**: nada de "mais fiel", "mais faltoso", "índice de fidelidade" nem ordenar vereadores por como votaram. Desde 2026-11-07 (decisão do dono do projeto) existe o **Índice de Atuação Parlamentar** (nota 0 a 10 e página Ranking, `Ranking.tsx`, `camara/impacto.py`), que mede atividade registrada em documento público e tem método aberto em Como funciona. Posição da Prefeitura e "bancada unida" por partido são porcentagens descritivas (`Partidos.tsx`).
 - O SAPL não tem PL nem votação; não usar como fonte de voto.
 - O histórico do git é trilha de auditoria (o sha256 muda se o documento mudar); não reescreva histórico de `data/`.

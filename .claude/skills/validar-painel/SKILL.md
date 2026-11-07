@@ -105,7 +105,7 @@ Entregue o relatório no formato acima.
 - O dado do painel vai ao ar sem revisão humana, então uma queda de concordância pesa mais que um ganho pequeno.
 - Prefira corrigir a causa em `painel.py` a ajustar o dado na mão; `data/painel/` é regenerado pelo robô.
 - O painel só é fonte de voto quando a leitura está `completo`; caso contrário o site usa o resumo.
-- Sem ranking nem nota de vereador a partir dessa concordância: ela mede o leitor, não as pessoas.
+- Sem ranking nem nota de vereador a partir dessa concordância: ela mede o leitor, não as pessoas. (O Índice de Atuação usa o painel para presença e participação; leitura `incompleta` não deve alimentá-lo.)
 
 ---
 

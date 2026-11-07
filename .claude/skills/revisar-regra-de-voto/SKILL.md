@@ -107,7 +107,7 @@ Estas são as regras de leitura de voto do README do projeto. Vale conferir a mu
 - Cada item tem `objeto_votado` (`materia`, `veto`, `parecer_tc`) e `rotulos` que dizem o que "favor" e "contra" significam naquele caso. Site e posts devem usar esses rótulos, não escrever "a favor/contra" fixo.
 - **O SIM/NÃO do painel é relativo ao que está em votação** (o parecer, o veto), não ao projeto. Um SIM num "parecer contrário" é voto contra o projeto.
 - **O campo `sentido`** (conferido em 2026-11-05, depois do novo front da `main`): `site.py` (função `sentido`) grava em cada votação o que um SIM significa para o projeto: `inverso` no parecer contrário, `direto` no parecer favorável e nas votações comuns, `emenda` nas emendas e `None` nos vetos. O front usa isso para explicar o voto ("na prática: ..."). Ainda assim, `_evento` (site.py) e `votos` (posts.py) montam SIM/NAO pelo texto da ação (`aprova*`/`manuten*` → SIM), o que é coerente com o painel (SIM = aprovou o que estava em votação). Cuidado ao mexer: o SIM de um parecer contrário **não** é "a favor do projeto"; use `sentido`.
-- Sem ranking, nota ou "índice de fidelidade" de vereador. A IA nunca é fonte de voto: voto vem só do painel ou do resumo oficial.
+- Sem ranking, nota ou "índice de fidelidade" **baseado em como o vereador votou**. O Índice de Atuação (2026-11-07, decisão do dono) é permitido porque mede atividade (assiduidade, participação, produção, fiscalização) com método público em Como funciona; "posição da Prefeitura" só conta votações com lado claro (projeto do prefeito, veto) e não é juízo. Ao mexer em `impacto.py`/`site.py`, o método de Como funciona tem que continuar batendo com o código. A IA nunca é fonte de voto: voto vem só do painel ou do resumo oficial.
 
 ---
 
