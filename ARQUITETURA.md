@@ -38,57 +38,7 @@ Documento técnico do [Voto a Voto](README.md): quem faz o quê, workflows, uso 
 
 Todo o fluxo é orquestrado pelo comando `python -m camara tudo` (definido em [`camara/__main__.py`](camara/__main__.py)), que encadeia os módulos exatamente nesta ordem:
 
-![Fluxo do pipeline: fontes públicas, nove etapas no GitHub Actions e publicação](imagens/arquitetura.svg)
-
-<details><summary>Versão em texto (Mermaid)</summary>
-
-```mermaid
-flowchart TD
-    subgraph Fontes["Fontes Públicas Oficiais"]
-        P_CAM["Portal da Câmara (Plone)<br/>Pautas, Resumos, Projetos e Notícias"]
-        YT["TV Câmara no YouTube<br/>Feed RSS + Folhas de Storyboard"]
-        DO["Diário Oficial de Cubatão<br/>Leis Sancionadas e Promulgadas"]
-    end
-
-    subgraph PC_Local["Agente Windows (IP Residencial)"]
-        PS1["pc/pegar_specs.ps1<br/>Lê HTML do YouTube -> data/storyboard_specs.json<br/>Dispara workflow coleta.yml via API do GitHub"]
-    end
-
-    subgraph Pipeline_Python["Pipeline no GitHub Actions (coleta.yml -> python -m camara tudo)"]
-        COL["1. coletor.py (BeautifulSoup + pdfplumber)<br/>Baixa PDFs -> data/indice.json + data/texto/<sha>.txt"]
-        PROC["2. processar.py + parser_resumo.py + pauta.py<br/>Extrai votos do Resumo -> data/sessoes/*.json + vereadores.json"]
-        VID["3. youtube.py + painel.py + videos.py (NumPy + Pillow)<br/>Cor RGB da moldura + cosseno em rostos_2026.npz -> data/painel/*.json"]
-        CAB["4. cabecalho.py (Gemini API) + validacao.py<br/>Lê topo do painel em 1 tira PNG e valida contra a Pauta"]
-        NOT_DO["5. noticias.py + diario.py<br/>Notícias da Câmara + Leis no Diário Oficial"]
-        CONS["6. consolidar.py<br/>Cruza Painel x Resumo x Pauta x Notícia x DO -> data/consolidado/*.json"]
-        ANA["7. analise.py + explicacao.py (Gemini API / Claude API)<br/>OCR de PDF escaneado + 'Entenda o projeto' + dicas curtas"]
-        POSTS["8. posts.py (Pillow)<br/>Cards 1080x1350 PNG -> data/posts/"]
-        SITE["9. site.py (Pillow + SciPy + JSON)<br/>Gera docs/data/dados.json + docs/fotos/*.webp"]
-    end
-
-    subgraph Deploy["Publicação Automática"]
-        PAGES["GitHub Pages<br/>Commit do monitor-camara-bot em docs/data/"]
-        SURGE["Surge.sh (votoavoto.surge.sh)<br/>npx surge@0.44.7 ./docs"]
-    end
-
-    P_CAM --> COL
-    P_CAM --> NOT_DO
-    DO --> NOT_DO
-    YT --> PS1
-    PS1 --> VID
-    COL --> PROC
-    VID --> CAB
-    PROC --> CONS
-    CAB --> CONS
-    NOT_DO --> CONS
-    CONS --> ANA
-    ANA --> POSTS
-    ANA --> SITE
-    SITE --> PAGES
-    SITE --> SURGE
-```
-
-</details>
+![Fluxo do pipeline em 9 etapas: (1) coletor baixa os PDFs do portal da Câmara; (2) processar e parser_resumo extraem os votos do resumo; (3) painel lê a cor da moldura nas miniaturas do YouTube, com o agente Windows trazendo o storyboard; (4) cabecalho identifica a matéria e validacao confere na pauta; (5) noticias e diario trazem notícias e o Diário Oficial; (6) consolidar cruza tudo; (7) analise e explicacao geram o texto do projeto; (8) posts cria os cards; (9) site gera dados.json e publica no GitHub Pages e no Surge.](imagens/arquitetura.svg)
 
 ### Detalhamento passo a passo do Pipeline (`camara/__main__.py`)
 
