@@ -5,6 +5,7 @@ export interface Ponto { x: string; y: number }
 import { EASE, useContador, useEntrou, useLacoCanvas } from "./movimento";
 import { useDados, type Votacao } from "./dados";
 import { dataCurta } from "./util";
+import { paleta, temaAtual, useTema } from "./tema";
 
 export const COR = {
   tinta: "#171717",
@@ -20,15 +21,16 @@ export function GradeHero() {
   const ref = useLacoCanvas((ctx, w, h, t) => {
     const passo = w < 640 ? 28 : 40;
     const off = (t * (w < 640 ? 0.25 : 0.3)) % passo;
-    ctx.strokeStyle = w < 640 ? "rgba(23,23,23,0.09)" : "rgba(23,23,23,0.07)";
+    const pal = paleta(temaAtual());
+    ctx.strokeStyle = `rgba(${pal.grade},${w < 640 ? 0.09 : 0.07})`;
     ctx.lineWidth = 1;
     ctx.beginPath();
     for (let x = 0.5; x < w; x += passo) { ctx.moveTo(x, 0); ctx.lineTo(x, h); }
     for (let y = h - off; y > -passo; y -= passo) { ctx.moveTo(0, Math.round(y) + 0.5); ctx.lineTo(w, Math.round(y) + 0.5); }
     ctx.stroke();
     const g = ctx.createLinearGradient(0, 0, 0, h);
-    g.addColorStop(0, "rgba(250,250,250,0)");
-    g.addColorStop(1, "rgba(250,250,250,1)");
+    g.addColorStop(0, pal.papel + "00");
+    g.addColorStop(1, pal.papel);
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, w, h);
   });
@@ -52,7 +54,9 @@ export function PoeiraRodape() {
 }
 
 /* ------------------------------------------------------------------ sparkline */
-export function Sparkline({ serie, cor = COR.tinta, rotulo, formato }: { serie: Ponto[]; cor?: string; rotulo: string; formato: (p: Ponto) => string }) {
+export function Sparkline({ serie, cor: corProp, rotulo, formato }: { serie: Ponto[]; cor?: string; rotulo: string; formato: (p: Ponto) => string }) {
+  const tema = useTema();
+  const cor = corProp ?? paleta(tema).tinta;
   const [caixa, entrou] = useEntrou<HTMLDivElement>();
   const reduz = useReducedMotion();
   const [dica, setDica] = useState<{ i: number; x: number } | null>(null);
@@ -84,7 +88,7 @@ export function Sparkline({ serie, cor = COR.tinta, rotulo, formato }: { serie: 
       ctx.fill();
     }
     return progresso.current < 1;
-  }, entrou, [dica?.i]);
+  }, entrou, [dica?.i, cor]);
 
   let espera = 0;
   const mover = (e: React.PointerEvent) => {
@@ -269,6 +273,8 @@ export function FeedVotacoes({ eventos }: { eventos: Votacao[] }) {
 /* ------------------------------------------------------------------ faixa de votos de um vereador (canvas) */
 export function FaixaMini({ votos, rotulo }: { votos: (string | undefined)[]; rotulo: string }) {
   const [caixa, entrou] = useEntrou<HTMLDivElement>();
+  const tema = useTema();
+  const pal = paleta(tema);
   const prog = useRef(0);
   const reduz = useReducedMotion();
   const ref = useLacoCanvas((ctx, w, h) => {
@@ -278,13 +284,13 @@ export function FaixaMini({ votos, rotulo }: { votos: (string | undefined)[]; ro
     const lw = w / Math.max(1, votos.length);
     votos.slice(0, n).forEach((v, i) => {
       const x = i * lw;
-      if (v === "SIM") { ctx.fillStyle = COR.verde; ctx.fillRect(x + 0.5, 0, lw - 1.5, h); }
-      else if (v === "NAO") { ctx.fillStyle = COR.vermelho; ctx.fillRect(x + 0.5, 0, lw - 1.5, h); }
-      else if (v === "BRANCO") { ctx.strokeStyle = COR.cinza; ctx.lineWidth = 1; ctx.strokeRect(x + 1, 0.5, lw - 2.5, h - 1); }
-      else if (v === "AUSENTE") { ctx.fillStyle = COR.nevoa; ctx.fillRect(x + 0.5, h * 0.4, lw - 1.5, h * 0.2); }
+      if (v === "SIM") { ctx.fillStyle = pal.verde; ctx.fillRect(x + 0.5, 0, lw - 1.5, h); }
+      else if (v === "NAO") { ctx.fillStyle = pal.vermelho; ctx.fillRect(x + 0.5, 0, lw - 1.5, h); }
+      else if (v === "BRANCO") { ctx.strokeStyle = pal.cinza; ctx.lineWidth = 1; ctx.strokeRect(x + 1, 0.5, lw - 2.5, h - 1); }
+      else if (v === "AUSENTE") { ctx.fillStyle = pal.nevoa; ctx.fillRect(x + 0.5, h * 0.4, lw - 1.5, h * 0.2); }
     });
     return prog.current < 1;
-  }, entrou);
+  }, entrou, [tema]);
   const c = { SIM: 0, NAO: 0, BRANCO: 0, AUSENTE: 0 } as Record<string, number>;
   votos.forEach((v) => v && (c[v] = (c[v] || 0) + 1));
   return (

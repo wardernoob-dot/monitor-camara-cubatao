@@ -8,6 +8,9 @@ import "@fontsource/geist-mono/400.css";
 import "./estilo.css";
 import { ProvedorDados, useDados } from "./dados";
 import { PoeiraRodape } from "./viz";
+import { Busca, BotaoBusca } from "./busca";
+import { BotaoTema } from "./tema";
+import { BotaoPergunta, Pergunta } from "./pergunta";
 import Inicio from "./paginas/Inicio";
 import Vereadores from "./paginas/Vereadores";
 import VereadorPagina from "./paginas/Vereador";
@@ -74,17 +77,24 @@ function App() {
             <span className="marca__nome">Voto a voto</span>
             <span className="marca__sub">Câmara Municipal de Cubatão</span>
           </Link>
-          <nav aria-label="Seções">
-            <ul>
-              {SECOES.map(([para, nome]) => (
-                <li key={para}><NavLink to={para}>{nome}</NavLink></li>
-              ))}
-            </ul>
-          </nav>
+          <div className="topo__acoes">
+            <nav aria-label="Seções">
+              <ul>
+                {SECOES.map(([para, nome]) => (
+                  <li key={para}><NavLink to={para}>{nome}</NavLink></li>
+                ))}
+              </ul>
+            </nav>
+            <BotaoBusca />
+            <BotaoTema />
+            <BotaoPergunta />
+          </div>
         </div>
       </header>
+      <Pergunta />
       <ProvedorDados>
         <RolaParaTopo />
+        <Busca />
         <main id="conteudo" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Inicio />} />

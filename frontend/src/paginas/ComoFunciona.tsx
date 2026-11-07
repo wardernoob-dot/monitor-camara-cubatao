@@ -73,6 +73,9 @@ export default function ComoFunciona() {
 <Secao id="explicacoes-ao-passar-o-mouse" titulo="Explicações ao passar o mouse">
 <p>Ao passar o mouse (ou tocar no “i”) sobre um projeto aparece uma explicação curta em palavras simples. Quando o texto integral do projeto está disponível, ela vem da análise conferida com o texto; nos outros casos, é a ementa oficial reescrita por inteligência artificial (Gemini), sem acrescentar nada. Ao passar o mouse sobre uma etapa (parecer, 1ª discussão, emenda…) aparece o que ela significa, inclusive quando votar “sim” quer dizer ser contra o projeto. Termos como veto, parecer ou Diário Oficial, quando aparecem com sublinhado pontilhado no texto, também explicam o que significam.</p>
 </Secao>
+<Secao id="perguntar-a-ia" titulo="Perguntar à IA">
+<p>O botão “Perguntar” não responde nada dentro do site. Ele abre um assistente externo (Claude ou ChatGPT) com a sua pergunta e instruções para ler só os dados abertos deste site e citar a fonte de cada voto. O Voto a voto não recebe a pergunta nem a resposta. A resposta de uma IA não é fonte de voto e pode errar: confira sempre na página do projeto, que mostra de onde veio cada voto.</p>
+</Secao>
 <Secao id="limites" titulo="Limites">
 <ul className="lista-simples">
   <li>Votações simbólicas, sem painel, não têm registro nominal.</li>

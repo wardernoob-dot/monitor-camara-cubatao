@@ -15,14 +15,30 @@ import { dataCurta, dataExtenso, useTitulo } from "../util";
 const COLUNAS = 80;
 const LINHAS_TITULO: [string, string?][] = [["Como cada vereador"], ["de Cubatão ", "votou"]];
 
+const I = (d: ReactNode) => <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{d}</svg>;
+const ICONE = {
+  pessoas: I(<><circle cx="8" cy="7" r="3" /><path d="M2.5 17c0-3 2.5-5 5.5-5s5.5 2 5.5 5" /><circle cx="14.5" cy="8" r="2.2" /><path d="M15 12.2c2 .2 3.5 1.8 3.5 4.3" /></>),
+  doc: I(<><path d="M5 2.5h6.5l4 4v11H5z" /><path d="M11.5 2.5v4h4" /><path d="M7.5 10.5h6M7.5 13.5h6" /></>),
+  agenda: I(<><rect x="3" y="4.5" width="14" height="12.5" rx="2" /><path d="M3 8.5h14M7 2.5v3M13 2.5v3" /></>),
+  barras: I(<path d="M4 16V9M10 16V4M16 16v-5" />),
+  predio: I(<path d="M3 8l7-4.5L17 8M4.5 8v7M8 8v7M12 8v7M15.5 8v7M3 17h14" />),
+  escudo: I(<><path d="M10 2.5l6 2.2v4.8c0 4-2.6 6.4-6 8-3.4-1.6-6-4-6-8V4.7z" /><path d="M7 10l2.2 2.2L13.2 8" /></>),
+};
+
 const CAMINHOS = [
-  { to: "/vereadores", titulo: "Como meu vereador votou", texto: "Votos, presença e projetos de cada um dos 15 vereadores, com a fonte de cada voto.", chamada: "Ver os vereadores" },
-  { to: "/projetos", titulo: "Quero achar um projeto", texto: "Busque por tema ou número e acompanhe as etapas, o placar e se virou lei ou foi vetado.", chamada: "Buscar um projeto" },
-  { to: "/sessoes", titulo: "O que aconteceu nas sessões", texto: "Pauta, presença e votações de cada sessão da Câmara em 2026.", chamada: "Ver as sessões" },
-  { to: "/ranking", titulo: "Índice de Atuação", texto: "Nota de 0 a 10 por presença, participação, projetos e fiscalização, com a conta aberta.", chamada: "Ver o ranking" },
-  { to: "/partidos", titulo: "Partidos e a Prefeitura", texto: "Como cada bancada vota e com que frequência acompanha a posição da Prefeitura.", chamada: "Ver os partidos" },
-  { to: "/como-funciona", titulo: "Como os dados são conferidos", texto: "De onde vem cada informação, como lemos o painel e o que o site não consegue saber.", chamada: "Ver o método" },
+  { to: "/vereadores", icone: ICONE.pessoas, titulo: "Como meu vereador votou", texto: "Votos, presença e projetos de cada um dos 15 vereadores, com a fonte de cada voto.", chamada: "Ver os vereadores" },
+  { to: "/projetos", icone: ICONE.doc, titulo: "Quero achar um projeto", texto: "Busque por tema ou número e acompanhe as etapas, o placar e se virou lei ou foi vetado.", chamada: "Buscar um projeto" },
+  { to: "/sessoes", icone: ICONE.agenda, titulo: "O que aconteceu nas sessões", texto: "Pauta, presença e votações de cada sessão da Câmara em 2026.", chamada: "Ver as sessões" },
+  { to: "/ranking", icone: ICONE.barras, titulo: "Índice de Atuação", texto: "Nota de 0 a 10 por presença, participação, projetos e fiscalização, com a conta aberta.", chamada: "Ver o ranking" },
+  { to: "/partidos", icone: ICONE.predio, titulo: "Partidos e a Prefeitura", texto: "Como cada bancada vota e com que frequência acompanha a posição da Prefeitura.", chamada: "Ver os partidos" },
+  { to: "/como-funciona", icone: ICONE.escudo, titulo: "Como os dados são conferidos", texto: "De onde vem cada informação, como lemos o painel e o que o site não consegue saber.", chamada: "Ver o método" },
 ];
+
+const luz = (e: React.PointerEvent<HTMLElement>) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+};
 
 const EXPLORAR = [
   { area: "Vereadores", texto: "Quem são, como votaram e como atuam.", links: [["Os 15 vereadores", "/vereadores"], ["Índice de Atuação", "/ranking"]] },
@@ -75,7 +91,7 @@ export default function Inicio() {
     const pares = p.alinhamento.flat().filter((c) => c.a !== c.b && c.total);
     return pares.length ? Math.round((100 * pares.reduce((s, c) => s + c.iguais / c.total, 0)) / pares.length) : 0;
   }, [p]);
-  const corAlinh = (v: number | null) => v == null ? "#eeeeee" : `color-mix(in srgb, ${COR.verde} ${Math.round(Math.max(0, (v - 0.6) / 0.4) * 100)}%, #f1f1f1)`;
+  const corAlinh = (v: number | null) => v == null ? "var(--suave-2)" : `color-mix(in srgb, var(--color-accent) ${Math.round(Math.max(0, (v - 0.6) / 0.4) * 100)}%, var(--suave))`;
 
   return (
     <>
@@ -104,49 +120,67 @@ export default function Inicio() {
 
       <div className="pagina pagina--larga">
         <section className="caminhos" aria-labelledby="caminhos-titulo">
-          <h2 id="caminhos-titulo" className="secao__titulo secao__titulo--topo">Por onde você quer começar?</h2>
+          <header className="cab-secao">
+            <p className="cab-secao__selo">Comece por aqui</p>
+            <h2 id="caminhos-titulo" className="cab-secao__titulo">Por onde você quer começar?</h2>
+          </header>
           <ul className="caminhos__lista">
             {CAMINHOS.map((c, i) => (
-              <motion.li key={c.to} className="caminho" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.5, delay: (i % 3) * 0.06, ease: EASE }}>
+              <motion.li key={c.to} className="caminho" onPointerMove={luz} initial={reduz ? false : { opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-8% 0px" }} transition={{ duration: 0.55, delay: (i % 3) * 0.07, ease: EASE }}>
+                <div className="caminho__topo">
+                  <span className="caminho__icone">{c.icone}</span>
+                  <span className="caminho__n" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+                </div>
                 <h3 className="caminho__titulo">{c.titulo}</h3>
                 <p className="caminho__texto">{c.texto}</p>
-                <Link to={c.to} className="caminho__link esticado">{c.chamada} <span aria-hidden="true">→</span></Link>
+                <Link to={c.to} className="caminho__link esticado">{c.chamada}<span className="caminho__seta" aria-hidden="true">→</span></Link>
               </motion.li>
             ))}
           </ul>
         </section>
 
         <section className="passos" aria-labelledby="passos-titulo">
-          <div className="passos__topo">
-            <h2 id="passos-titulo" className="passos__titulo">Como cada voto chega até aqui, em quatro passos.</h2>
-            <Link to="/como-funciona" className="passos__mais">Ver o método completo <span aria-hidden="true">→</span></Link>
-          </div>
+          <header className="cab-secao cab-secao--lado">
+            <div>
+              <p className="cab-secao__selo">Método</p>
+              <h2 id="passos-titulo" className="cab-secao__titulo">Como cada voto chega até aqui</h2>
+            </div>
+            <Link to="/como-funciona" className="link-seta">Ver o método completo <span aria-hidden="true">→</span></Link>
+          </header>
           <ol className="passos__lista">
-            {PASSOS.map((x) => (
-              <li key={x.n} className="passo">
+            <motion.span className="passos__linha" aria-hidden="true" initial={reduz ? false : { scaleX: 0 }} whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 1.4, ease: EASE }} />
+            {PASSOS.map((x, i) => (
+              <motion.li key={x.n} className="passo" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.6, delay: 0.15 + i * 0.18, ease: EASE }}>
                 <span className="passo__n">{x.n}</span>
                 <h3 className="passo__titulo">{x.titulo}</h3>
                 <p className="passo__texto">{x.texto}</p>
-              </li>
+              </motion.li>
             ))}
           </ol>
         </section>
 
         {destaques.length > 0 && (
           <section className="em-destaque" aria-labelledby="destaque-titulo">
-            <div className="em-destaque__topo">
-              <h2 id="destaque-titulo" className="em-destaque__titulo">Projetos em destaque</h2>
-              <Link to="/projetos?destaque=1" className="passos__mais">Ver todos <span aria-hidden="true">→</span></Link>
-            </div>
-            <p className="em-destaque__texto">Mexem no orçamento, em servidores ou na <Termo chave="loa">Lei Orgânica</Termo>, foram vetados, rejeitados ou tiveram votação dividida. Critério fixo e público, igual para todos; não diz se o projeto é bom ou ruim.</p>
-            <ul className="caminhos__lista">
+            <header className="cab-secao cab-secao--lado">
+              <div>
+                <p className="cab-secao__selo">Atenção</p>
+                <h2 id="destaque-titulo" className="cab-secao__titulo">Projetos em destaque</h2>
+                <p className="cab-secao__texto">Mexem no orçamento, em servidores ou na <Termo chave="loa">Lei Orgânica</Termo>, foram vetados, rejeitados ou tiveram votação dividida. Critério fixo e público, igual para todos; não diz se o projeto é bom ou ruim.</p>
+              </div>
+              <Link to="/projetos?destaque=1" className="link-seta">Ver todos <span aria-hidden="true">→</span></Link>
+            </header>
+            <ul className="destaques">
               {destaques.slice(0, 3).map((m) => (
-                <li key={m.slug} className="caminho">
-                  <span className="caminho__etiqueta">{m.situacao}</span>
-                  <h3 className="caminho__titulo">{m.titulo}</h3>
-                  <p className="caminho__texto caminho__texto--ementa">{m.assunto.toLowerCase()}</p>
-                  <Link to={`/projetos/${m.slug}`} className="caminho__link esticado">Ver o projeto <span aria-hidden="true">→</span></Link>
+                <li key={m.slug} className="destaque" onPointerMove={luz}>
+                  <span className="destaque__id">{m.titulo}</span>
+                  <span className="destaque__corpo">
+                    <span className="destaque__situacao">{m.situacao}</span>
+                    <span className="destaque__ementa">{m.assunto.toLowerCase().replace(/cubat[ãa]o/g, "Cubatão")}</span>
+                  </span>
+                  <Link to={`/projetos/${m.slug}`} className="destaque__link esticado" aria-label={`Ver o projeto ${m.titulo}`}><span aria-hidden="true">→</span></Link>
                 </li>
               ))}
             </ul>
@@ -317,7 +351,7 @@ export default function Inicio() {
         </section>
 
         <section className="explorar" aria-labelledby="explorar-titulo">
-          <h2 id="explorar-titulo" className="secao__titulo">Explorar o site</h2>
+          <header className="cab-secao"><p className="cab-secao__selo">Mapa do site</p><h2 id="explorar-titulo" className="cab-secao__titulo">Explorar o site</h2></header>
           <div className="explorar__grade">
             {EXPLORAR.map((e) => (
               <div key={e.area} className="explorar__area">
