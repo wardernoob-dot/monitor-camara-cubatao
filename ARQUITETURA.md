@@ -38,6 +38,10 @@ Documento técnico do [Voto a Voto](README.md): quem faz o quê, workflows, uso 
 
 Todo o fluxo é orquestrado pelo comando `python -m camara tudo` (definido em [`camara/__main__.py`](camara/__main__.py)), que encadeia os módulos exatamente nesta ordem:
 
+![Fluxo do pipeline: fontes públicas, nove etapas no GitHub Actions e publicação](imagens/arquitetura.svg)
+
+<details><summary>Versão em texto (Mermaid)</summary>
+
 ```mermaid
 flowchart TD
     subgraph Fontes["Fontes Públicas Oficiais"]
@@ -63,8 +67,8 @@ flowchart TD
     end
 
     subgraph Deploy["Publicação Automática"]
-        PAGES["GitHub Pages<br/>Commit demonitor-camara-bot em docs/data/"]
-        SURGE["Surge.sh (votoavoto.surge.sh)<br/>npx surge@0.24.1 ./docs"]
+        PAGES["GitHub Pages<br/>Commit do monitor-camara-bot em docs/data/"]
+        SURGE["Surge.sh (votoavoto.surge.sh)<br/>npx surge@0.44.7 ./docs"]
     end
 
     P_CAM --> COL
@@ -83,6 +87,8 @@ flowchart TD
     SITE --> PAGES
     SITE --> SURGE
 ```
+
+</details>
 
 ### Detalhamento passo a passo do Pipeline (`camara/__main__.py`)
 
