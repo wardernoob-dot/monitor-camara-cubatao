@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useDados, type Vereador, type Votacao } from "../dados";
-import { Avatar, Celula, Legenda } from "../componentes";
+import { Avatar, Celula, Legenda, TagPartido } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
 import { Barras, COR, FeedVotacoes, Funil, GradeHero, Heatmap, Modal } from "../viz";
@@ -223,11 +223,11 @@ export default function Inicio() {
             {b.atuais.map((v, i) => (
               <motion.li key={v.slug} className="cartao" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.5, delay: (i % 4) * 0.06, ease: EASE }}>
-                <Link to={`/vereadores/${v.slug}`} className="cartao__link">
+                <div className="cartao__link">
                   <Avatar v={v} tamanho="retrato" />
                   <span>
-                    <span className="cartao__nome">{v.exibicao}</span>
-                    <span className="cartao__civil">{v.nome}{v.partido ? `, ${v.partido}` : ""}{v.cargo === "presidente" ? ". Presidente da Câmara" : ""}</span>
+                    <Link to={`/vereadores/${v.slug}`} className="cartao__nome esticado">{v.exibicao}</Link>
+                    <span className="cartao__civil">{v.nome}{v.cargo === "presidente" ? ", presidente da Câmara" : ""} <TagPartido sigla={v.partido} /></span>
                   </span>
                   <IndiceMini i={v.indice} />
                   <span className="cartao__nums">
@@ -235,7 +235,7 @@ export default function Inicio() {
                     <span><strong>{v.projetos.length}</strong> {v.projetos.length === 1 ? "projeto" : "projetos"}</span>
                     <span><strong>{v.leis}</strong> {v.leis === 1 ? "virou lei" : "viraram lei"}</span>
                   </span>
-                </Link>
+                </div>
               </motion.li>
             ))}
           </ul>

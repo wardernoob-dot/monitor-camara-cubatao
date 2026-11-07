@@ -1,0 +1,8 @@
+{
+  "_leia": "Partido de quem nao aparece com partido em nenhum documento coletado (resumo de sessao ou assinatura de projeto). Documento da Camara sempre tem prioridade sobre esta lista. Fonte: lista de eleitos e de candidatos de 2024 publicada com dados do TSE. Trocas de partido depois da eleicao (janela partidaria) so entram quando aparecerem em documento oficial.",
+  "alexandre mendes da silva": {"partido": "PSD", "fonte": "eleição de 2024 (dados do TSE publicados pelo Diário do Litoral)", "url": "https://www.diariodolitoral.com.br/cotidiano/confira-lista-de-vereadores-eleitos-para-cubatao-no-litoral-de-sp/"},
+  "joemerson alves de souza": {"partido": "PSD", "fonte": "eleição de 2024 (dados do TSE publicados pelo Diário do Litoral)", "url": "https://www.diariodolitoral.com.br/cotidiano/eleicoes-2024-veja-os-candidatos-a-prefeito-e-vereador-em-cubatao/"},
+  "ronaldo araujo queiroz": {"partido": "PSD", "fonte": "eleição de 2024 (dados do TSE publicados pelo Diário do Litoral)", "url": "https://www.diariodolitoral.com.br/cotidiano/confira-lista-de-vereadores-eleitos-para-cubatao-no-litoral-de-sp/"},
+  "guilherme amaral belo nogueira": {"partido": "PSD", "fonte": "eleição de 2024 (dados do TSE publicados pelo Diário do Litoral)", "url": "https://www.diariodolitoral.com.br/cotidiano/confira-lista-de-vereadores-eleitos-para-cubatao-no-litoral-de-sp/"},
+  "maria jaqueline da silva": {"partido": "PSD", "fonte": "eleição de 2024 (dados do TSE publicados pelo Diário do Litoral)", "url": "https://www.diariodolitoral.com.br/cotidiano/eleicoes-2024-veja-os-candidatos-a-prefeito-e-vereador-em-cubatao/"}
+}

@@ -2,8 +2,8 @@ import { CartaoIndice } from "../indice";
 import { Secao } from "../secao";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useDados, type Votacao, type Voto } from "../dados";
-import { Avatar, Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, VotoTag } from "../componentes";
+import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
+import { Avatar, Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
 import { Destaque, Dica, DicaMateria, EtapaComDica, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
@@ -70,7 +70,7 @@ export default function VereadorPagina() {
           <h1 className="titulo-pagina">{v.exibicao}</h1>
           <p className="perfil__civil">
             {v.nome}
-            {v.partido && <>, {v.partido}<sup><a href="#nota-partido" aria-label="Fonte do partido">1</a></sup></>}
+            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href="#nota-partido" aria-label="Fonte do partido">1</a></sup></>}
             {!v.em_exercicio && ". Não está entre os 15 em exercício hoje"}
           </p>
           {v.cargo && (
@@ -88,6 +88,10 @@ export default function VereadorPagina() {
         <Num valor={projetos.length} rotulo="projetos de lei apresentados" />
         <Num valor={v.leis} rotulo="viraram lei" />
         <Num valor={reqs.length} rotulo="requerimentos e moções aprovados" />
+        {v.executivo.com + v.executivo.contra > 0 && (
+          <Num valor={Math.round((100 * v.executivo.com) / (v.executivo.com + v.executivo.contra))} sufixo="%"
+            rotulo={`dos votos na posição da Prefeitura (${v.executivo.contra} contra)`} />
+        )}
       </dl>
 
       <div className="sanfonas">
@@ -162,6 +166,17 @@ export default function VereadorPagina() {
         </Secao>
       )}
 
+      {v.executivo.contra > 0 && (
+        <Secao id="prefeitura" titulo="Quando votou contra a posição da Prefeitura" resumo={`${v.executivo.contra} ${v.executivo.contra === 1 ? "vez" : "vezes"}`}>
+          <p className="nota">Projetos enviados pelo prefeito em que votou contra a aprovação, e vetos do prefeito em que votou para derrubar. <Link to="/como-funciona#partidos">Como é contado</Link>.</p>
+          <ul className="lista-simples">
+            {v.executivo.contra_ids.map(b.votacao).reverse().map((ev) => (
+              <li key={ev.id}><strong>{dataCurta(ev.data, true)}</strong> · <LinkMateria slug={ev.materia} /> · {ev.etapa_txt.toLowerCase()} · votou <VotoTag voto={ev.votos[v.slug]} /> · <ResultadoTag r={ev.resultado} /></li>
+            ))}
+          </ul>
+        </Secao>
+      )}
+
       <Secao id="projetos" titulo="Projetos de autoria" resumo={`${projetos.length} projeto${projetos.length === 1 ? "" : "s"}`} aberta={projetos.length > 0 && projetos.length <= 6}>
         {projetos.length ? (
           <ul className="lista-projetos">
@@ -190,7 +205,12 @@ export default function VereadorPagina() {
       </Secao>
       </div>
 
-      {v.partido && <p className="nota" id="nota-partido"><sup>1</sup> Partido conforme {v.partido_fonte}.</p>}
+      {v.partido && (
+        <p className="nota" id="nota-partido">
+          <sup>1</sup> Partido conforme {v.partido_fonte}{v.partido_url && <> (<a href={v.partido_url} rel="noopener noreferrer">fonte</a>)</>}.
+          {" "}<Link to={`/partidos/${slugPartido(v.partido)}`}>Ver o partido {v.partido} na Câmara</Link>.
+        </p>
+      )}
     </div>
   );
 }

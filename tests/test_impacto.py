@@ -30,3 +30,13 @@ def test_requerimentos():
     assert classificar(m("RQ", "Solicitando a prorrogação por mais 60 dias da Comissão Especial de Vereadores"))["faixa"] == "rq_procedimento"
     assert classificar(m("RQ", "Solicitando a formação de Comissão Especial de Vereadores para ORGANIZAR a sessão solene"))["faixa"] in ("rq_organizacao", "rq_procedimento")
     assert classificar(m("RQ", "Solicitando gestões ao Poder Executivo para a realização de estudos"))["faixa"] == "rq_pedido"
+
+
+def test_posicao_executivo():
+    from camara.site import posicao_executivo
+    pl = {"tipo": "PL", "autoria": "Prefeito Municipal"}
+    assert posicao_executivo({"materia": pl, "sentido": "direto"}) == "SIM"
+    assert posicao_executivo({"materia": pl, "sentido": "inverso"}) == "NAO"
+    assert posicao_executivo({"materia": pl, "sentido": "emenda"}) is None
+    assert posicao_executivo({"materia": {"tipo": "VETO", "autoria": "Prefeito Municipal"}, "sentido": None}) == "SIM"
+    assert posicao_executivo({"materia": {"tipo": "PL", "autoria": "Topete"}, "sentido": "direto"}) is None

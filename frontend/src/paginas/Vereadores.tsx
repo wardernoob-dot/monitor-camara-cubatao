@@ -1,6 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { useDados, type Vereador } from "../dados";
-import { Avatar } from "../componentes";
+import { Avatar, TagPartido } from "../componentes";
 import { useTitulo } from "../util";
 import { IndiceMini, pctPilar } from "../indice";
 
@@ -21,15 +21,17 @@ function Item({ v, compacto }: { v: Vereador; compacto?: boolean }) {
   const n = v.projetos.length;
   return (
     <li className="vereadores__item">
-      <Link to={`/vereadores/${v.slug}`}>
+      <div className="vereadores__card">
         <Avatar v={v} tamanho={compacto ? "m" : "retrato"} />
-        <span className="vereadores__nome">{v.exibicao}</span>
-        {(v.nome !== v.exibicao || v.partido) && <span className="vereadores__civil">{v.nome !== v.exibicao ? v.nome : ""}{v.nome !== v.exibicao && v.partido ? ", " : ""}{v.partido ?? ""}</span>}
+        <Link to={`/vereadores/${v.slug}`} className="vereadores__nome esticado">{v.exibicao}</Link>
+        {(v.nome !== v.exibicao || v.partido) && (
+          <span className="vereadores__civil">{v.nome !== v.exibicao ? v.nome : ""} <TagPartido sigla={v.partido} /></span>
+        )}
         <IndiceMini i={v.indice} />
         <span className="vereadores__nums">
           {compacto ? `${v.sessoes_total} ${v.sessoes_total === 1 ? "sessão registrada" : "sessões registradas"}` : `${v.total_votacoes} votações registradas, ${n} projeto${n === 1 ? "" : "s"} de autoria`}
         </span>
-      </Link>
+      </div>
     </li>
   );
 }

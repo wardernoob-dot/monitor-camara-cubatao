@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDados, type Materia, type Vereador, type Votacao, type Voto, type Resultado } from "./dados";
+import { slugPartido } from "./dados";
 import { ORDEM_VOTO, ROTULO, dataCurta, minusculaInicial } from "./util";
 
 export function LinkMateria({ slug }: { slug: string }) {
@@ -94,4 +95,15 @@ export function Avatar({ v, tamanho = "m" }: { v: Vereador; tamanho?: "p" | "m" 
   if (v.foto)
     return <img className={`avatar avatar--${tamanho}`} src={`./${v.foto}`} alt={`Foto de ${v.exibicao}`} loading="lazy" decoding="async" />;
   return <span className={`avatar avatar--${tamanho} avatar--iniciais`} aria-hidden="true">{v.iniciais}</span>;
+}
+
+/** Sigla do partido como tag clicavel (leva a /partidos/<sigla>). */
+export function TagPartido({ sigla, parar }: { sigla: string | null | undefined; parar?: boolean }) {
+  if (!sigla) return null;
+  return (
+    <Link to={`/partidos/${slugPartido(sigla)}`} className="tag-partido"
+      onClick={parar ? (e) => e.stopPropagation() : undefined} aria-label={`Partido ${sigla}: ver todos os vereadores`}>
+      {sigla}
+    </Link>
+  );
 }

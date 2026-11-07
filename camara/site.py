@@ -404,6 +404,13 @@ class Base:
         for cargo, cont in self.cargos.items():
             if cont:
                 self.vereadores[cont.most_common(1)[0][0]]["cargo"] = cargo
+        arq_pm = self.dados / "partidos_manual.json"
+        pm = json.loads(arq_pm.read_text("utf-8")) if arq_pm.exists() else {}
+        for k, v in self.vereadores.items():
+            if not v["partido"] and isinstance(pm.get(k), dict) and pm[k].get("partido"):
+                v["partido"] = pm[k]["partido"]
+                v["partido_fonte"] = pm[k].get("fonte") or "lista manual"
+                v["partido_url"] = url_segura(pm[k].get("url"))
         for v in self.vereadores.values():
             if v["partido"]:
                 v.setdefault("partido_fonte", "resumo oficial de sessão")
@@ -420,6 +427,7 @@ class Base:
             v["faltas"] = pres.get("ausente", 0) + pres.get("justificada", 0)
         self.dias.sort(key=lambda d: d["data"], reverse=True)
         calcular_indice(self)
+        calcular_executivo(self)
 
     def materias_publicas(self) -> list[dict]:
         tipos = ("PL", "PLC", "PR", "PDL", "PELOM")
@@ -498,6 +506,68 @@ def sentido(e: dict) -> str | None:
     if e["materia"]["tipo"] == "VETO":
         return None
     return "direto"
+
+
+# =============================================================== posicao da Prefeitura e partidos
+
+def posicao_executivo(ev: dict) -> str | None:
+    """Qual voto acompanha a Prefeitura nesta votacao: 'SIM', 'NAO' ou None (sem posicao definida).
+    Projeto do prefeito: SIM aprova (no parecer contrario, NAO). Veto: SIM mantem o veto."""
+    m = ev["materia"]
+    if m["tipo"] == "VETO":
+        return "SIM"
+    if m.get("autoria") != "Prefeito Municipal" or ev.get("sentido") not in ("direto", "inverso"):
+        return None
+    return "SIM" if ev["sentido"] == "direto" else "NAO"
+
+
+def calcular_executivo(b: "Base") -> None:
+    """v['executivo'] = votos com e contra a posicao da Prefeitura; b.partidos = metricas por partido."""
+    for v in b.vereadores.values():
+        com, contra, contra_lista = 0, 0, []
+        for x in v["votos"]:
+            pos = posicao_executivo(x["ev"])
+            if pos is None or x["voto"] not in ("SIM", "NAO"):
+                continue
+            if x["voto"] == pos:
+                com += 1
+            else:
+                contra += 1
+                contra_lista.append(x["ev"])
+        v["executivo"] = {"com": com, "contra": contra, "contra_lista": contra_lista}
+
+    grupos: dict[str, list[str]] = defaultdict(list)
+    for k, v in b.vereadores.items():
+        if v.get("partido"):
+            grupos[v["partido"]].append(k)
+    partidos = {}
+    for sigla, ks in grupos.items():
+        # coesao: em cada votacao com 2+ membros votando sim/nao, quantos acompanharam a maioria do partido
+        coes, n_vot, rachas = [], 0, []
+        for ev in b.votacoes:
+            vs = [ev["votos"].get(k) for k in ks if ev["votos"].get(k) in ("SIM", "NAO")]
+            if len(vs) < 2:
+                continue
+            n_vot += 1
+            c = Counter(vs)
+            coes.append(c.most_common(1)[0][1] / len(vs))
+            if len(c) > 1:
+                rachas.append(ev)
+        com = sum(b.vereadores[k]["executivo"]["com"] for k in ks)
+        contra = sum(b.vereadores[k]["executivo"]["contra"] for k in ks)
+        titulares = [k for k in ks if b.vereadores[k]["em_exercicio"]]
+        notas = [b.vereadores[k]["indice"]["nota"] for k in titulares if not b.vereadores[k]["indice"]["parcial"]]
+        partidos[sigla] = {
+            "sigla": sigla, "membros": ks, "em_exercicio": titulares,
+            "indice_medio": round(sum(notas) / len(notas), 1) if notas else None,
+            "executivo": {"com": com, "contra": contra},
+            "coesao": round(100 * sum(coes) / len(coes)) if coes else None, "votacoes_coesao": n_vot,
+            "rachas": rachas,
+            "projetos": len({m["slug"] for k in ks for m in b.vereadores[k]["projetos"]}),
+            "leis": len({m["slug"] for k in ks for m in b.vereadores[k]["projetos"] if m["lei"]}),
+            "contra_resultado": sum(b.vereadores[k].get("contra_resultado", 0) for k in ks),
+        }
+    b.partidos = partidos
 
 
 # =============================================================== indice de atuacao (0 a 10)
@@ -885,7 +955,10 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             continue
         vereadores.append({
             "slug": v["slug"], "exibicao": v["exibicao"], "nome": v["nome"], "iniciais": v["iniciais"],
-            "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "cargo": v.get("cargo"),
+            "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "partido_url": v.get("partido_url"),
+            "cargo": v.get("cargo"),
+            "executivo": {"com": v["executivo"]["com"], "contra": v["executivo"]["contra"],
+                          "contra_ids": [e["id"] for e in v["executivo"]["contra_lista"]]},
             "em_exercicio": v["em_exercicio"], "contagem": v["contagem"], "total_votacoes": v["total_votacoes"],
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
             "faltas": v["faltas"], "leis": v["leis"], "indice": v["indice"],
@@ -931,6 +1004,11 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                  "cidade": CIDADE, "repo": REPO},
         "vereadores": vereadores, "materias": sorted(materias, key=lambda m: (m["ultima_data"], int(m["numero"] or 0)), reverse=True),
         "votacoes": [_ev_json(e, vslug) for e in eventos], "dias": dias,
+        "partidos": sorted(({**{k: x for k, x in p.items() if k not in ("membros", "em_exercicio", "rachas")},
+                             "membros": [vslug[k] for k in p["membros"] if k in vslug],
+                             "em_exercicio": [vslug[k] for k in p["em_exercicio"] if k in vslug],
+                             "rachas": [e["id"] for e in p["rachas"]]}
+                            for p in b.partidos.values()), key=lambda p: (-len(p["em_exercicio"]), p["sigla"])),
     }
     (saida / "dados.json").write_text(json.dumps(pacote, ensure_ascii=False, separators=(",", ":")), "utf-8")
     tam = (saida / "dados.json").stat().st_size // 1024

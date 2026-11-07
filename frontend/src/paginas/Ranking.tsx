@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { useDados, type Vereador } from "../dados";
-import { Avatar } from "../componentes";
+import { Avatar, TagPartido } from "../componentes";
 import { useTitulo } from "../util";
 import { pctPilar } from "../indice";
 import { EASE } from "../movimento";
@@ -27,16 +27,17 @@ function Linha({ v, pos, c, i }: { v: Vereador; pos: number | null; c: Criterio;
   return (
     <motion.li layout={!reduz} transition={{ duration: 0.5, ease: EASE }} className={`rank__item ${pos === 1 ? "rank__item--primeiro" : ""}`}>
       <span className={`rank__pos ${pos && pos <= 3 ? `rank__pos--medalha rank__pos--${pos}` : ""}`} aria-label={pos ? `${pos}º lugar` : "fora da ordem"}>{pos ? `${pos}º` : "–"}</span>
-      <Link to={`/vereadores/${v.slug}`} className="rank__quem">
+      <div className="rank__quem">
         <Avatar v={v} tamanho="m" />
         <span>
-          <span className="rank__nome">{v.exibicao}</span>
+          <Link to={`/vereadores/${v.slug}`} className="rank__nome esticado">{v.exibicao}</Link>
           <span className="rank__partido">
-            {[v.partido, v.cargo === "presidente" ? "presidente da Câmara" : null].filter(Boolean).join(" · ")}
+            <TagPartido sigla={v.partido} />
+            {v.cargo === "presidente" && <span> presidente da Câmara</span>}
             {v.indice.parcial && <span className="selo-cinza rank__selo">Amostra parcial</span>}
           </span>
         </span>
-      </Link>
+      </div>
       <span className="rank__barra" aria-hidden="true">
         <motion.span className="rank__cheio" initial={reduz ? false : { scaleX: 0 }} animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: reduz ? 0 : Math.min(i, 10) * 0.035, ease: EASE }}>

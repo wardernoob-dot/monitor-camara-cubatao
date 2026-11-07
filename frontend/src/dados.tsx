@@ -11,6 +11,8 @@ export interface Vereador {
   foto: string | null;
   partido: string | null;
   partido_fonte: string | null;
+  partido_url?: string | null;
+  executivo: { com: number; contra: number; contra_ids: number[] };
   cargo: "presidente" | "vice" | null;
   em_exercicio: boolean;
   contagem: Record<"SIM" | "NAO" | "BRANCO" | "AUSENTE", number>;
@@ -128,12 +130,27 @@ export interface Analise {
   limitacoes: string;
 }
 
+export interface Partido {
+  sigla: string;
+  membros: string[];
+  em_exercicio: string[];
+  indice_medio: number | null;
+  executivo: { com: number; contra: number };
+  coesao: number | null;
+  votacoes_coesao: number;
+  rachas: number[];
+  projetos: number;
+  leis: number;
+  contra_resultado: number;
+}
+
 interface Bruto {
   meta: { atualizado: string; nome_site: string; cidade: string; repo: string };
   vereadores: Vereador[];
   materias: Materia[];
   votacoes: Votacao[];
   dias: Dia[];
+  partidos: Partido[];
 }
 
 export interface Base extends Bruto {
@@ -141,6 +158,7 @@ export interface Base extends Bruto {
   materia: Map<string, Materia>;
   votacao: (id: number) => Votacao;
   atuais: Vereador[];
+  partido: Map<string, Partido>;
 }
 
 const Ctx = createContext<Base | null>(null);
@@ -167,6 +185,7 @@ export function ProvedorDados({ children }: { children: ReactNode }) {
       materia: new Map(bruto.materias.map((m) => [m.slug, m])),
       votacao: (id: number) => bruto.votacoes[id],
       atuais: bruto.vereadores.filter((v) => v.em_exercicio),
+      partido: new Map((bruto.partidos ?? []).map((p) => [slugPartido(p.sigla), p])),
     };
   }, [bruto]);
 
@@ -208,3 +227,5 @@ export function useAnalise(slug: string, existe: boolean): Analise | null {
   }, [slug, existe]);
   return a;
 }
+
+export const slugPartido = (sigla: string) => sigla.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-");
