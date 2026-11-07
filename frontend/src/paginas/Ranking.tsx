@@ -83,6 +83,7 @@ export default function Ranking() {
 
   return (
     <div className="pagina">
+      <p className="selo-pagina">Atividade registrada</p>
       <h1 className="titulo-pagina">Ranking</h1>
       <p className="lead">
         Vereadores em exercício ordenados pelo Índice de Atuação, <span className="sem-quebra">de 0 a 10.</span>

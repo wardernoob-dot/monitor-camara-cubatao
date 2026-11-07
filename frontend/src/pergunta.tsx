@@ -85,8 +85,8 @@ export function Pergunta() {
   };
 
   return createPortal(
-    <div className="busca" onMouseDown={(e) => { if (e.target === e.currentTarget) setAberta(false); }}>
-      <div className="busca__caixa pergunta" role="dialog" aria-modal="true" aria-labelledby="pergunta-titulo">
+    <div className="cmd" onMouseDown={(e) => { if (e.target === e.currentTarget) setAberta(false); }}>
+      <div className="cmd__caixa pergunta" role="dialog" aria-modal="true" aria-labelledby="pergunta-titulo">
         <header className="pergunta__cab">
           <div>
             <p className="cab-secao__selo">Experimental</p>

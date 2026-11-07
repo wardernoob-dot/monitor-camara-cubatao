@@ -110,41 +110,41 @@ export function Busca() {
 
   let grupoAtual = "";
   return createPortal(
-    <div className="busca" onMouseDown={(e) => { if (e.target === e.currentTarget) fecha(); }}>
-      <div className="busca__caixa" role="dialog" aria-modal="true" aria-label="Buscar" onKeyDown={teclado}>
-        <div className="busca__campo">
+    <div className="cmd" onMouseDown={(e) => { if (e.target === e.currentTarget) fecha(); }}>
+      <div className="cmd__caixa" role="dialog" aria-modal="true" aria-label="Buscar" onKeyDown={teclado}>
+        <div className="cmd__campo">
           <Lupa />
-          <input ref={entrada} className="busca__entrada" value={q} onChange={(e) => setQ(e.target.value)}
+          <input ref={entrada} className="cmd__entrada" value={q} onChange={(e) => setQ(e.target.value)}
             placeholder="Buscar vereador, projeto ou número (ex.: PL 75)"
             role="combobox" aria-expanded="true" aria-controls={idLista}
             aria-activedescendant={resultados[ativo] ? `${idLista}-${ativo}` : undefined}
             aria-autocomplete="list" autoComplete="off" spellCheck={false} />
-          <kbd className="busca__esc">Esc</kbd>
+          <kbd className="cmd__esc">Esc</kbd>
         </div>
-        <ul id={idLista} ref={lista} className="busca__lista" role="listbox">
+        <ul id={idLista} ref={lista} className="cmd__lista" role="listbox">
           {resultados.length === 1 && resultados[0].id === "ia" && (
-            <li className="busca__vazio" role="presentation">Nada encontrado no site para “{q}”.</li>
+            <li className="cmd__vazio" role="presentation">Nada encontrado no site para “{q}”.</li>
           )}
           {resultados.length === 0 && (
-            <li className="busca__vazio" role="presentation">Nada encontrado para “{q}”. Tente o sobrenome do vereador ou o número do projeto.</li>
+            <li className="cmd__vazio" role="presentation">Nada encontrado para “{q}”. Tente o sobrenome do vereador ou o número do projeto.</li>
           )}
           {resultados.map((r, i) => {
             const cab = r.grupo !== grupoAtual ? (grupoAtual = r.grupo) : null;
             return (
               <li key={r.id} role="presentation">
-                {cab && <p className="busca__grupo" role="presentation">{cab === "Páginas" && !q ? "Ir para" : cab}</p>}
+                {cab && <p className="cmd__grupo" role="presentation">{cab === "Páginas" && !q ? "Ir para" : cab}</p>}
                 <div id={`${idLista}-${i}`} data-i={i} role="option" aria-selected={i === ativo}
-                  className={`busca__item ${i === ativo ? "busca__item--ativo" : ""}`}
+                  className={`cmd__item ${i === ativo ? "cmd__item--ativo" : ""}`}
                   onMouseMove={() => ativo !== i && setAtivo(i)} onClick={() => vai(r)}>
-                  <span className="busca__rotulo">{r.rotulo}</span>
-                  {r.sub && <span className="busca__sub">{r.sub}</span>}
-                  <span className="busca__enter" aria-hidden="true">↵</span>
+                  <span className="cmd__rotulo">{r.rotulo}</span>
+                  {r.sub && <span className="cmd__sub">{r.sub}</span>}
+                  <span className="cmd__enter" aria-hidden="true">↵</span>
                 </div>
               </li>
             );
           })}
         </ul>
-        <p className="busca__dicas" aria-hidden="true">
+        <p className="cmd__dicas" aria-hidden="true">
           <span><kbd>↑</kbd><kbd>↓</kbd> navegar</span><span><kbd>↵</kbd> abrir</span><span><kbd>Esc</kbd> fechar</span>
         </p>
       </div>

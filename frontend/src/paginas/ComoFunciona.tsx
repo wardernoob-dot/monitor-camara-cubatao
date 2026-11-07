@@ -2,13 +2,30 @@ import { useDados } from "../dados";
 import { useTitulo } from "../util";
 import { Secao } from "../secao";
 import { Termo } from "../explica";
+import { Toc } from "../toc";
+
+const TOC = [
+  ["de-onde-vem-os-dados", "De onde vêm os dados"],
+  ["quando-as-fontes-nao-batem", "Quando as fontes não batem"],
+  ["ia", "Uso de inteligência artificial"],
+  ["destaque", "Projetos em destaque"],
+  ["indice", "Índice de Atuação"],
+  ["partidos", "Partidos e Prefeitura"],
+  ["vetos", "Vetos do prefeito"],
+  ["explicacoes-ao-passar-o-mouse", "Explicações ao passar o mouse"],
+  ["perguntar-a-ia", "Perguntar à IA"],
+  ["limites", "Limites"],
+  ["codigo", "Código"],
+] as const;
 
 export default function ComoFunciona() {
   useTitulo("Como funciona");
   const { meta } = useDados();
   return (
     <div className="pagina">
+      <p className="selo-pagina">Método e fontes</p>
       <h1 className="titulo-pagina">Como funciona</h1>
+      <div className="como">
       <div className="texto">
 <p className="lead">Este site lê todos os dias os documentos públicos da Câmara Municipal de {meta.cidade} e organiza o que foi votado, quem votou como e o que aconteceu com cada projeto depois. Ninguém escolhe à mão o que entra.</p>
 
@@ -89,6 +106,8 @@ export default function ComoFunciona() {
 </Secao>
 </div>
 </div>
+      <Toc itens={TOC} caminho="/como-funciona" />
+      </div>
     </div>
   );
 }

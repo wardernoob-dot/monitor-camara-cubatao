@@ -36,6 +36,7 @@ export function ListaPartidos() {
   const { partidos, vereador } = useDados();
   return (
     <div className="pagina">
+      <p className="selo-pagina">Bancadas</p>
       <h1 className="titulo-pagina">Partidos</h1>
       <p className="lead">Como cada bancada da Câmara vota e trabalha. Clique num partido para ver os vereadores e as votações em que a bancada se dividiu.</p>
       <ul className="partidos">

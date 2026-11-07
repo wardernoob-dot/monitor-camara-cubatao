@@ -9,6 +9,7 @@ export default function Sessoes() {
   const [limite, setLimite] = useState(10);
   return (
     <div className="pagina">
+      <p className="selo-pagina">Dia a dia</p>
       <h1 className="titulo-pagina">Sessões</h1>
       <p className="lead">Cada dia em que a Câmara votou alguma coisa em 2026. Ordinárias e extraordinárias do mesmo dia aparecem juntas.</p>
       <ol className="lista-dias">

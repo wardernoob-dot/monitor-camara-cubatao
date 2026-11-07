@@ -45,6 +45,7 @@ export default function Vereadores() {
   const lista = ordenar(atuais, ordem);
   return (
     <div className="pagina">
+      <p className="selo-pagina">Quem são</p>
       <h1 className="titulo-pagina">Vereadores</h1>
       <p className="lead">
         Os {atuais.length} vereadores em exercício na Câmara Municipal de {meta.cidade}. Abra cada um para ver como votou, quantas vezes faltou e quais projetos apresentou.

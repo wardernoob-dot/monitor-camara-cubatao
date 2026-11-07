@@ -44,6 +44,7 @@ export default function Projetos() {
 
   return (
     <div className="pagina pagina--larga">
+      <p className="selo-pagina">Tudo que passou pela pauta</p>
       <h1 className="titulo-pagina">Projetos</h1>
       <p className="lead">
         Projetos de lei, de resolução, de decreto legislativo e emendas à Lei Orgânica que passaram pela pauta ou foram publicados no site da Câmara em 2026.
