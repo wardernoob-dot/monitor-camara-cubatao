@@ -61,6 +61,43 @@ function Linha({ v, pos, c, i }: { v: Vereador; pos: number | null; c: Criterio;
   );
 }
 
+/** Onde cada vereador está na escala (de 0 a 10, ou de 0% a 100% no pilar): avatares empilhados quando ficam perto. Cada um leva à página do vereador. */
+function Distribuicao({ lista, c, media }: { lista: Vereador[]; c: Criterio; media: number }) {
+  const reduz = useReducedMotion();
+  const GAP = 4.1;
+  const pontos = lista.map((v) => ({ v, x: valor(v, c) })).filter((p): p is { v: Vereador; x: number } => p.x != null).sort((a, b) => a.x - b.x);
+  const faixas: number[] = [];
+  const pos = pontos.map((p) => {
+    const x = 100 * p.x;
+    let f = faixas.findIndex((ult) => x - ult >= GAP);
+    if (f < 0) f = faixas.length;
+    faixas[f] = x;
+    return { ...p, pct: x, faixa: f };
+  });
+  const n = Math.max(1, faixas.length);
+  const marcas = c === "indice" ? [0, 2, 4, 6, 8, 10] : [0, 25, 50, 75, 100];
+  const fim = c === "indice" ? 10 : 100;
+  return (
+    <figure className="dist" aria-label="Distribuição dos vereadores na escala">
+      <div className="dist__area" style={{ height: `${n * 2.7 + 2.2}rem` }}>
+        {c === "indice" && <span className="dist__media" style={{ left: `${media * 10}%` }}><span>média {fmt(media)}</span></span>}
+        {pos.map(({ v, pct, faixa }) => (
+          <motion.span key={v.slug} className="dist__ponto" initial={false}
+            animate={{ left: `${pct}%`, bottom: `${2.2 + faixa * 2.7}rem` }} transition={reduz ? { duration: 0 } : { type: "spring", stiffness: 160, damping: 22 }}>
+            <Link to={`/vereadores/${v.slug}`} className="dist__av" data-rotulo={`${v.exibicao} · ${c === "indice" ? fmt(valor(v, c)! * 10) : `${Math.round(100 * valor(v, c)!)}%`}`}
+              aria-label={`${v.exibicao}: ${c === "indice" ? fmt(valor(v, c)! * 10) + " de 10" : Math.round(100 * valor(v, c)!) + "%"}`}>
+              <Avatar v={v} tamanho="m" />
+            </Link>
+          </motion.span>
+        ))}
+        <div className="dist__eixo" aria-hidden="true">
+          {marcas.map((m) => <span key={m} style={{ left: `${(100 * m) / fim}%` }}>{c === "indice" ? m : `${m}%`}</span>)}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
 export default function Ranking() {
   useTitulo("Ranking");
   const { atuais, vereadores } = useDados();
@@ -90,15 +127,26 @@ export default function Ranking() {
         <br />Média da Câmara: <strong>{fmt(media)}</strong>.
       </p>
 
-      <div className="filtros filtros--ordem" role="group" aria-label="Ordenar por">
+      <div className="rank__controle">
         <span className="filtros__rotulo">Ordenar por</span>
-        {CRITERIOS.map(([k, rot]) => (
-          <button key={k} type="button" aria-pressed={c === k}
-            onClick={() => setParams(k === "indice" ? {} : { por: k }, { replace: true, preventScrollReset: true })}>{rot}</button>
-        ))}
+        <div className="segmentado" role="group" aria-label="Ordenar por">
+          {CRITERIOS.map(([k, rot]) => (
+            <button key={k} type="button" aria-pressed={c === k}
+              onClick={() => setParams(k === "indice" ? {} : { por: k }, { replace: true, preventScrollReset: true })}>
+              {c === k && <motion.span layoutId="seg-ativo" className="segmentado__pilula" transition={{ type: "spring", stiffness: 420, damping: 38 }} />}
+              <span className="segmentado__texto">{rot}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
+      <Distribuicao lista={completos} c={c} media={media} />
+
       <LayoutGroup>
+        <div className="rank__cab" aria-hidden="true">
+          <span /><span>Vereador</span><span>{CRITERIOS.find(([k]) => k === c)![1]}</span><span className="rank__cab-nota">Nota</span>
+          <span className="rank__cab-pilares">{Object.values(CURTO).map((t) => <span key={t}>{t}</span>)}</span>
+        </div>
         <ol className="rank">
           {completos.map((v, i) => <Linha key={v.slug} v={v} pos={posicoes[i]} c={c} i={i} />)}
         </ol>

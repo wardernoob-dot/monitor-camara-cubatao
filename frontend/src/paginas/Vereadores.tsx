@@ -1,4 +1,5 @@
 import { Link, useSearchParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useDados, type Vereador } from "../dados";
 import { Avatar, TagPartido } from "../componentes";
 import { useTitulo } from "../util";
@@ -21,16 +22,26 @@ function Item({ v, compacto }: { v: Vereador; compacto?: boolean }) {
   const n = v.projetos.length;
   return (
     <li className="vereadores__item">
-      <div className="vereadores__card">
+      <div className="vereadores__card" onPointerMove={(e) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+      }}>
         <Avatar v={v} tamanho={compacto ? "m" : "retrato"} />
         <Link to={`/vereadores/${v.slug}`} className="vereadores__nome esticado">{v.exibicao}</Link>
         {(v.nome !== v.exibicao || v.partido) && (
           <span className="vereadores__civil">{v.nome !== v.exibicao ? v.nome : ""} <TagPartido sigla={v.partido} /></span>
         )}
         <IndiceMini i={v.indice} />
-        <span className="vereadores__nums">
-          {compacto ? `${v.sessoes_total} ${v.sessoes_total === 1 ? "sessão registrada" : "sessões registradas"}` : `${v.total_votacoes} votações registradas, ${n} projeto${n === 1 ? "" : "s"} de autoria`}
-        </span>
+        {compacto ? (
+          <span className="vereadores__nums">{`${v.sessoes_total} ${v.sessoes_total === 1 ? "sessão registrada" : "sessões registradas"}`}</span>
+        ) : (
+          <dl className="vereadores__stats">
+            <div><dt>presença</dt><dd>{v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0}%</dd></div>
+            <div><dt>{n === 1 ? "projeto" : "projetos"}</dt><dd>{n}</dd></div>
+            <div><dt>{v.leis === 1 ? "virou lei" : "viraram lei"}</dt><dd>{v.leis}</dd></div>
+          </dl>
+        )}
       </div>
     </li>
   );
@@ -50,12 +61,17 @@ export default function Vereadores() {
       <p className="lead">
         Os {atuais.length} vereadores em exercício na Câmara Municipal de {meta.cidade}. Abra cada um para ver como votou, quantas vezes faltou e quais projetos apresentou.
       </p>
-      <div className="filtros filtros--ordem" role="group" aria-label="Ordenar vereadores">
+      <div className="rank__controle">
         <span className="filtros__rotulo">Ordenar por</span>
-        {ORDENS.map(([o, rot]) => (
-          <button key={o} type="button" aria-pressed={ordem === o}
-            onClick={() => setParams(o === "nome" ? {} : { ordem: o }, { replace: true })}>{rot}</button>
-        ))}
+        <div className="segmentado" role="group" aria-label="Ordenar vereadores">
+          {ORDENS.map(([o, rot]) => (
+            <button key={o} type="button" aria-pressed={ordem === o}
+              onClick={() => setParams(o === "nome" ? {} : { ordem: o }, { replace: true, preventScrollReset: true })}>
+              {ordem === o && <motion.span layoutId="seg-ver" className="segmentado__pilula" transition={{ type: "spring", stiffness: 420, damping: 38 }} />}
+              <span className="segmentado__texto">{rot}</span>
+            </button>
+          ))}
+        </div>
       </div>
       <p className="nota">
         A nota de 0 a 10 é o <Link to="/como-funciona#indice">Índice de Atuação</Link>: presença, participação nas votações, projetos e fiscalização, com a conta aberta na página de cada um.
