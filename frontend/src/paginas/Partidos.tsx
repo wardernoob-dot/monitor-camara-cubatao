@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Toc } from "../toc";
 import { slugPartido, useDados, type Partido, type Vereador } from "../dados";
@@ -44,26 +45,36 @@ const luz = (e: React.PointerEvent<HTMLElement>) => {
   e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
 };
 
-/** Faixa única com a composição da Câmara: cada partido ocupa a fatia do seu número de vereadores em exercício. */
+/** Cadeiras da Câmara: cada vereador em exercício é uma foto, agrupada por partido. A cor do anel só separa os grupos (não é voto nem posição). */
 function Composicao({ partidos }: { partidos: Partido[] }) {
+  const { vereador } = useDados();
   const itens = partidos.filter((p) => p.em_exercicio.length > 0);
   const total = itens.reduce((s, p) => s + p.em_exercicio.length, 0);
   return (
-    <figure className="comp">
-      <figcaption className="comp__rotulo">Composição da Câmara em exercício <span>{total} vereadores</span></figcaption>
-      <div className="comp__barra" role="list">
-        {itens.map((p, i) => {
-          const n = p.em_exercicio.length;
-          const forca = Math.max(30, 100 - i * 11);
-          return (
-            <Link key={p.sigla} role="listitem" to={`/partidos/${slugPartido(p.sigla)}`} className={`comp__seg${forca < 55 ? " comp__seg--claro" : ""}${n <= 1 ? " comp__seg--mini" : ""}`} title={p.sigla}
-              style={{ flexGrow: n, flexBasis: 0, background: `color-mix(in srgb, var(--azul) ${forca}%, var(--color-surface-1))` }}
-              aria-label={`${p.sigla}: ${n} ${n === 1 ? "vereador" : "vereadores"} em exercício`}>
-              <span className="comp__sigla">{p.sigla}</span><span className="comp__n">{n}</span>
-            </Link>
-          );
-        })}
+    <figure className="cad">
+      <figcaption className="cad__rotulo">Composição da Câmara em exercício <span>{total} vereadores</span></figcaption>
+      <div className="cad__assentos">
+        {itens.map((p, i) => (
+          <div key={p.sigla} className="cad__grupo" style={{ ["--cat" as string]: `var(--cat-${i % 6})` }}>
+            {p.em_exercicio.map((s) => {
+              const v = vereador.get(s);
+              if (!v) return null;
+              return (
+                <Link key={s} to={`/vereadores/${v.slug}`} className="cad__assento" data-rotulo={`${v.exibicao} · ${p.sigla}`} aria-label={`${v.exibicao}, ${p.sigla}`}>
+                  <Avatar v={v} tamanho="m" />
+                </Link>
+              );
+            })}
+          </div>
+        ))}
       </div>
+      <ul className="cad__legenda">
+        {itens.map((p, i) => (
+          <li key={p.sigla} style={{ ["--cat" as string]: `var(--cat-${i % 6})` }}>
+            <Link to={`/partidos/${slugPartido(p.sigla)}`}><span className="cad__marca" aria-hidden="true" />{p.sigla}<span className="cad__n">{p.em_exercicio.length}</span></Link>
+          </li>
+        ))}
+      </ul>
     </figure>
   );
 }
@@ -126,6 +137,7 @@ function LinhaMembro({ v }: { v: Vereador }) {
 export function PaginaPartido() {
   const { sigla = "" } = useParams();
   const b = useDados();
+  const [limiteRachas, setLimiteRachas] = useState(8);
   const p: Partido | undefined = b.partido.get(sigla);
   useTitulo(p ? `Partido ${p.sigla}` : "Partido não encontrado");
   if (!p) return <NaoEncontrado />;
@@ -184,18 +196,46 @@ export function PaginaPartido() {
         <section id="divisoes" aria-labelledby="t-divisoes">
           <h2 id="t-divisoes" className="secao__titulo">Quando a bancada se dividiu</h2>
           {rachas.length ? (
-            <ul className="lista-simples rachas">
-              {rachas.slice(0, 20).map((ev) => (
-                <li key={ev.id}>
-                  <strong>{dataCurta(ev.data, true)}</strong> · <LinkMateria slug={ev.materia} /> · {ev.etapa_txt.toLowerCase()} <ResultadoTag r={ev.resultado} />
-                  <span className="rachas__votos">
-                    {p.membros.filter((s) => ev.votos[s] === "SIM" || ev.votos[s] === "NAO").map((s) => (
-                      <span key={s}>{b.vereador.get(s)?.exibicao} <VotoTag voto={ev.votos[s]} /></span>
-                    ))}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <>
+              <p className="rachas__resumo">
+                {rachas.length} {rachas.length === 1 ? "votação em que" : "votações em que"} quem votou sim ou não ficou dividido. Do mais recente para o mais antigo.
+              </p>
+              <ul className="rachas">
+                {rachas.slice(0, limiteRachas).map((ev) => {
+                  const sim = p.membros.filter((s) => ev.votos[s] === "SIM").map((s) => b.vereador.get(s)).filter(Boolean) as Vereador[];
+                  const nao = p.membros.filter((s) => ev.votos[s] === "NAO").map((s) => b.vereador.get(s)).filter(Boolean) as Vereador[];
+                  return (
+                    <li key={ev.id} className="racha">
+                      <div className="racha__cab">
+                        <span className="racha__data">{dataCurta(ev.data, true)}</span>
+                        <span className="racha__titulo"><LinkMateria slug={ev.materia} /> <span className="racha__etapa">{ev.etapa_txt.toLowerCase()}</span></span>
+                        <ResultadoTag r={ev.resultado} />
+                      </div>
+                      <div className="racha__lados">
+                        {[["sim", "Sim", sim], ["nao", "Não", nao]].map(([k, rot, lista]) => (
+                          <div key={k as string} className={`racha__lado racha__lado--${k}`}>
+                            <p className="racha__lado-rot"><span>{rot as string}</span><strong>{(lista as Vereador[]).length}</strong></p>
+                            <ul>
+                              {(lista as Vereador[]).map((v) => (
+                                <li key={v.slug}><Avatar v={v} tamanho="p" /><Link to={`/vereadores/${v.slug}`}>{v.exibicao}</Link></li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                      {ev.sentido === "inverso" && <p className="racha__aviso">Nesta votação, votar Sim era ser contra o projeto seguir.</p>}
+                    </li>
+                  );
+                })}
+              </ul>
+              {rachas.length > limiteRachas && (
+                <div className="mais">
+                  <button type="button" className="botao botao--fantasma" onClick={() => setLimiteRachas((l) => l + 8)}>
+                    Mostrar mais {Math.min(8, rachas.length - limiteRachas)} de {rachas.length - limiteRachas} restantes
+                  </button>
+                </div>
+              )}
+            </>
           ) : <p>Em todas as votações registradas, os membros do partido que votaram sim ou não votaram igual.</p>}
         </section>
       )}
