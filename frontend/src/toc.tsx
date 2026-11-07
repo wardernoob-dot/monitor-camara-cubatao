@@ -8,7 +8,8 @@ export function Toc({ itens, caminho }: { itens: readonly (readonly [string, str
   const [presentes, setPresentes] = useState<string[]>(() => itens.map(([id]) => id));
 
   useEffect(() => {
-    setPresentes(itens.map(([id]) => id).filter((id) => document.getElementById(id)));
+    const novo = itens.map(([id]) => id).filter((id) => document.getElementById(id));
+    setPresentes((ant) => (ant.join("|") === novo.join("|") ? ant : novo));
   }, [itens, caminho]);
 
   useEffect(() => {

@@ -1134,3 +1134,65 @@ html, body { overflow-x: clip; }
 .vereadores__stats dd { margin: 0; font-size: 1.2rem; font-weight: 500; letter-spacing: -0.04em; line-height: 1; }
 .vereadores .indice-mini { margin: .5rem 0 .9rem; }
 @media (prefers-reduced-motion: reduce) { .vereadores__card, .vereadores__item .avatar--retrato { transition: none; } .vereadores__card:hover { transform: none; } }
+
+/* ============================================================ partidos, projetos (chips), sessao e pagina do partido */
+.com-toc__corpo { min-width: 0; }
+
+/* composicao da Camara: uma faixa, cada partido na fatia do seu numero de vereadores */
+.comp { margin: 2.25rem 0 0; }
+.comp__rotulo { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .7rem; font: 600 .66rem/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--color-surface-3); }
+.comp__rotulo span { font-weight: 500; }
+.comp__barra { display: flex; gap: 3px; height: 3.4rem; }
+.comp__seg { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: .15rem; min-width: 0; padding: 0 .75rem; border-radius: 10px; color: #fff; text-decoration: none; overflow: hidden; transition: transform .3s var(--ease), box-shadow .3s; }
+.comp__seg--claro { color: var(--color-ink); }
+.comp__seg:hover, .comp__seg:focus-visible { transform: translateY(-3px); box-shadow: 0 12px 22px -12px rgba(28, 79, 156, .6); outline: none; z-index: 1; }
+.comp__sigla { font-weight: 600; font-size: .9rem; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
+.comp__n { font: 500 .7rem/1 var(--font-mono); opacity: .85; }
+@media (max-width: 40rem) { .comp__seg { padding: 0 .35rem; } .comp__sigla { font-size: .72rem; } .comp__n { display: none; } }
+
+/* cartoes de partido */
+.partido-card { isolation: isolate; overflow: hidden; border-radius: 18px; transition: border-color .25s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease); }
+.partido-card::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; background: radial-gradient(20rem circle at var(--mx, 50%) var(--my, 0%), color-mix(in srgb, var(--azul) 10%, transparent), transparent 62%); transition: opacity .3s; }
+.partido-card:hover, .partido-card:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 18px 40px -22px rgba(28, 79, 156, .4); transform: translateY(-2px); }
+.partido-card:hover::before, .partido-card:focus-within::before { opacity: 1; }
+.partido-card__sigla { font-size: 2rem; letter-spacing: -0.055em; }
+.partido-card__medidas { padding-top: .75rem; border-top: 1px solid var(--color-linha); margin-top: .5rem; }
+.medida dt { font: 500 .6rem/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; margin-bottom: .2rem; }
+.partido-card__exec-rot { font: 500 .6rem/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; margin-top: .6rem; }
+@media (prefers-reduced-motion: reduce) { .partido-card, .comp__seg { transition: none; } .partido-card:hover { transform: none; } }
+
+/* projetos: filtro rapido por situacao */
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 2rem 0 0; }
+.chips button { all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; align-items: center; gap: .5rem; padding: .45rem .5rem .45rem .9rem; border: 1px solid var(--color-linha); border-radius: var(--raio-pilula); background: var(--color-surface-1); font-size: .9rem; color: var(--color-secondary); transition: border-color .2s, color .2s, background .2s; }
+.chips button span { display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 .4rem; border-radius: var(--raio-pilula); background: var(--suave); font: 500 .72rem/1 var(--font-mono); color: var(--color-surface-3); transition: background .2s, color .2s; }
+.chips button:hover { border-color: var(--azul); color: var(--azul); }
+.chips button[aria-pressed="true"] { background: var(--azul); border-color: var(--azul); color: #fff; font-weight: 500; }
+.chips button[aria-pressed="true"] span { background: rgba(255, 255, 255, .22); color: #fff; }
+.chips button:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; }
+.chips + form.busca { margin-top: 1rem; }
+
+/* pagina de uma sessao */
+.sessao-cab { list-style: none; margin: 1.1rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.sessao-cab__item { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .3rem .8rem; padding: .5rem .95rem; border: 1px solid var(--color-linha); border-radius: var(--raio-pilula); background: var(--color-surface-1); font-size: .92rem; }
+.sessao-cab__hora { font: 500 .74rem/1 var(--font-mono); color: var(--color-surface-3); }
+.sessao-cab__link { font-size: .85rem; color: var(--azul); text-decoration: none; }
+.sessao-cab__link:hover { text-decoration: underline; }
+.sessao-nums { margin: 1.75rem 0 2.5rem; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); }
+.sessao-nums > div { padding: .9rem 1rem; }
+.sessao-nums dd { font-size: 2rem; }
+.sessao-nums dt { font: 500 .62rem/1.3 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.item-sessao { position: relative; margin-top: 1rem; padding: 1.6rem 1.7rem 1.7rem; border-radius: 20px; scroll-margin-top: 6rem; transition: border-color .25s, box-shadow .3s; }
+.item-sessao:target, .item-sessao:hover { border-color: color-mix(in srgb, var(--azul) 40%, var(--color-linha)); box-shadow: 0 16px 36px -24px rgba(28, 79, 156, .4); }
+.item-sessao__n { margin: 0 0 .5rem; font: 600 .66rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--azul); }
+.item-sessao__titulo { font-size: 1.7rem; letter-spacing: -0.045em; }
+.item-sessao__votacao { margin-top: 1.2rem; padding-top: 1.1rem; border-top: 1px solid var(--color-linha); }
+.item-sessao__votacao + .item-sessao__votacao { margin-top: 1.2rem; }
+
+/* pagina do partido: divisoes da bancada como cartoes */
+.rachas { display: grid; gap: .7rem; padding: 0; list-style: none; }
+.rachas li { padding: 1rem 1.2rem; border: 1px solid var(--color-linha); border-radius: 14px; background: var(--color-surface-1); line-height: 1.5; }
+.rachas__votos { margin-top: .6rem; padding-top: .6rem; border-top: 1px dashed var(--color-linha); }
+.comp__sigla { overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.comp__seg--mini { padding: 0 .45rem; }
+.comp__seg--mini .comp__sigla { font-size: .62rem; letter-spacing: -0.01em; }
+.com-toc .toc { margin-top: 1.4rem; }

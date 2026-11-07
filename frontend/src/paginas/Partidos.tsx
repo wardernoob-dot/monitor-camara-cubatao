@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { Toc } from "../toc";
 import { slugPartido, useDados, type Partido, type Vereador } from "../dados";
 import { Avatar, LinkMateria, ResultadoTag, VotoTag } from "../componentes";
 import { IndiceMini } from "../indice";
@@ -31,6 +32,42 @@ function BarraExecutivo({ com, contra }: { com: number; contra: number }) {
   );
 }
 
+const TOC_PARTIDO = [
+  ["vereadores", "Vereadores"],
+  ["lado-a-lado", "Cada um, lado a lado"],
+  ["divisoes", "Quando a bancada se dividiu"],
+] as const;
+
+const luz = (e: React.PointerEvent<HTMLElement>) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+};
+
+/** Faixa única com a composição da Câmara: cada partido ocupa a fatia do seu número de vereadores em exercício. */
+function Composicao({ partidos }: { partidos: Partido[] }) {
+  const itens = partidos.filter((p) => p.em_exercicio.length > 0);
+  const total = itens.reduce((s, p) => s + p.em_exercicio.length, 0);
+  return (
+    <figure className="comp">
+      <figcaption className="comp__rotulo">Composição da Câmara em exercício <span>{total} vereadores</span></figcaption>
+      <div className="comp__barra" role="list">
+        {itens.map((p, i) => {
+          const n = p.em_exercicio.length;
+          const forca = Math.max(30, 100 - i * 11);
+          return (
+            <Link key={p.sigla} role="listitem" to={`/partidos/${slugPartido(p.sigla)}`} className={`comp__seg${forca < 55 ? " comp__seg--claro" : ""}${n <= 1 ? " comp__seg--mini" : ""}`} title={p.sigla}
+              style={{ flexGrow: n, flexBasis: 0, background: `color-mix(in srgb, var(--azul) ${forca}%, var(--color-surface-1))` }}
+              aria-label={`${p.sigla}: ${n} ${n === 1 ? "vereador" : "vereadores"} em exercício`}>
+              <span className="comp__sigla">{p.sigla}</span><span className="comp__n">{n}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </figure>
+  );
+}
+
 export function ListaPartidos() {
   useTitulo("Partidos");
   const { partidos, vereador } = useDados();
@@ -39,11 +76,12 @@ export function ListaPartidos() {
       <p className="selo-pagina">Bancadas</p>
       <h1 className="titulo-pagina">Partidos</h1>
       <p className="lead">Como cada bancada da Câmara vota e trabalha. Clique num partido para ver os vereadores e as votações em que a bancada se dividiu.</p>
+      <Composicao partidos={partidos} />
       <ul className="partidos">
         {partidos.map((p) => {
           const membros = p.membros.map((s) => vereador.get(s)!).filter(Boolean);
           return (
-            <li key={p.sigla} className="partido-card">
+            <li key={p.sigla} className="partido-card" onPointerMove={luz}>
               <Link to={`/partidos/${slugPartido(p.sigla)}`} className="partido-card__sigla esticado">{p.sigla}</Link>
               <p className="partido-card__qtd">
                 {p.em_exercicio.length} {p.em_exercicio.length === 1 ? "vereador em exercício" : "vereadores em exercício"}
@@ -99,6 +137,7 @@ export function PaginaPartido() {
   return (
     <div className="pagina">
       <p className="migalha"><Link to="/partidos">Partidos</Link></p>
+      <p className="selo-pagina">Bancada</p>
       <h1 className="titulo-pagina">{p.sigla}</h1>
       <p className="lead">
         {p.em_exercicio.length} {p.em_exercicio.length === 1 ? "vereador em exercício" : "vereadores em exercício"} na Câmara de {b.meta.cidade}
@@ -113,7 +152,10 @@ export function PaginaPartido() {
         <div><dt>projetos / viraram lei</dt><dd>{p.projetos} / {p.leis}</dd></div>
       </dl>
 
-      <h2 className="secao__titulo">Vereadores</h2>
+      <div className="com-toc">
+      <div className="com-toc__corpo">
+      <section id="vereadores" aria-labelledby="t-vereadores">
+      <h2 id="t-vereadores" className="secao__titulo">Vereadores</h2>
       <ul className="vereadores">
         {membros.map((v) => (
           <li key={v.slug} className="vereadores__item">
@@ -126,18 +168,21 @@ export function PaginaPartido() {
           </li>
         ))}
       </ul>
+      </section>
 
-      <h2 className="secao__titulo">Cada um, lado a lado</h2>
+      <section id="lado-a-lado" aria-labelledby="t-lado">
+      <h2 id="t-lado" className="secao__titulo">Cada um, lado a lado</h2>
       <div className="tabela-rolagem">
         <table className="tabela">
           <thead><tr><th scope="col">Vereador</th><th scope="col" className="tabela__num">Índice</th><th scope="col" className="tabela__num">Com a Prefeitura</th><th scope="col" className="tabela__num">Contra a Prefeitura</th><th scope="col" className="tabela__num">Projetos</th><th scope="col" className="tabela__num">Leis</th></tr></thead>
           <tbody>{membros.map((v) => <LinhaMembro key={v.slug} v={v} />)}</tbody>
         </table>
       </div>
+      </section>
 
       {p.membros.length > 1 && (
-        <>
-          <h2 className="secao__titulo">Quando a bancada se dividiu</h2>
+        <section id="divisoes" aria-labelledby="t-divisoes">
+          <h2 id="t-divisoes" className="secao__titulo">Quando a bancada se dividiu</h2>
           {rachas.length ? (
             <ul className="lista-simples rachas">
               {rachas.slice(0, 20).map((ev) => (
@@ -152,8 +197,11 @@ export function PaginaPartido() {
               ))}
             </ul>
           ) : <p>Em todas as votações registradas, os membros do partido que votaram sim ou não votaram igual.</p>}
-        </>
+        </section>
       )}
+      </div>
+      <Toc itens={TOC_PARTIDO} caminho={`/partidos/${slugPartido(p.sigla)}`} />
+      </div>
     </div>
   );
 }
