@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 "Voto a voto": coleta o que a Câmara Municipal de Cubatão publica (resumos de sessão, pautas, projetos, vetos) e a leitura do painel de votação da transmissão no YouTube, e gera dado estruturado + um site estático. O código e os dados estão em português (sem acentos nos identificadores/docstrings do Python).
 
-Documentação longa (módulos, workflows, IA, regras de leitura de voto, segurança, estrutura): `ARQUITETURA.md`. O `README.md` é só a porta de entrada.
+Documentação longa (módulos, workflows, IA, regras de leitura de voto, segurança, estrutura): `ARQUITETURA.md`. O `README.md` é só a porta de entrada. O diagrama do pipeline é `imagens/arquitetura.svg` (SVG feito à mão, sem gerador): mudou a ordem ou os módulos do pipeline, atualize o SVG e o "Detalhamento passo a passo" do `ARQUITETURA.md`.
 
 ## Comandos
 
@@ -45,6 +45,7 @@ Pontos que exigem ler mais de um arquivo:
 - **O YouTube bloqueia IPs de nuvem.** O Actions não consegue pegar o spec do storyboard; quem faz isso é o script do PC (`pc/`, tarefa agendada no Windows) que atualiza `data/storyboard_specs.json`. `sonda-storyboard.yml` é um teste manual que escreve só no branch `amostras`.
 - **Automação:** `.github/workflows/coleta.yml` roda a cada 4 horas (minuto 17), executa os testes e `python -m camara tudo`, commita `data/` e `docs/data/` (quando há novidade em `data/`) como `monitor-camara-bot` e publica o `docs/` em https://votoavoto.surge.sh (precisa dos secrets `SURGE_LOGIN` e `SURGE_TOKEN`; sem eles o passo é pulado). Testes quebrados bloqueiam a coleta. `publicar-surge.yml` republica no Surge quando `docs/`, `fotos/` ou `camara/site.py` mudam na `main`. Nunca commite `docs/CNAME`: o Surge o cria localmente e, commitado, derruba o endereço do GitHub Pages (já está no `.gitignore`).
 - **Fotos:** `fotos/` recebe imagens com qualquer nome; `site.py:preparar_fotos` casa por apelido/nome civil (aceita extensão repetida tipo `ivan.jpg..jpg` e nome parcial único), recorta no rosto e converte para webp. Detalhes em `fotos/LEIA-ME.md`.
+- **Rotas com `#`:** o front usa `HashRouter`, então link de página precisa do `#` (`https://votoavoto.surge.sh/#/vereadores/topete`); sem ele o Surge responde 404. Decisão de manter assim: funciona nos dois hospedeiros sem arquivo de fallback.
 - Suplentes com ao menos uma sessão em 2026 ganham página de vereador.
 
 ## Skills do projeto
