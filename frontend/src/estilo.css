@@ -1429,3 +1429,8 @@ html, body { overflow-x: clip; }
 .ave--1 { top: 30%; } .ave--2 { top: 14%; } .ave--3 { top: 42%; } .ave--4 { top: 24%; } .ave--5 { top: 52%; }
 .hero__dentro { padding-top: clamp(3rem, 10vh, 6.5rem); }
 @media (max-width: 40rem) { .ave--4, .ave--5 { display: none; } .hero__dentro { padding-top: 3.2rem; } }
+
+/* serra em verdes e azul-acinzentado (nada de rosa); o manguezal volta com copas em duas fileiras */
+:root { --m1: #c4d5c9; --m3: #9dbfae; --mangue: #4a786a; }
+:root[data-tema="dark"] { --mangue: #0b2024; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --mangue: #0b2024; } }
