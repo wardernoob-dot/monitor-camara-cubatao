@@ -107,7 +107,7 @@ export default function Inicio() {
             ))}
           </h1>
           <motion.p className="hero__texto" initial={reduz ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.5 }}>
-            {b.votacoes.filter((v) => Object.keys(v.votos).length).length} votações da Câmara Municipal em 2026, com o voto de cada um dos 15 vereadores, conferidas com o <Termo chave="painel">painel eletrônico</Termo> da transmissão e os documentos oficiais.
+            O voto de cada um dos {b.atuais.length} vereadores em {b.votacoes.filter((v) => Object.keys(v.votos).length).length} votações de 2026, sempre com a fonte.
           </motion.p>
           <motion.div className="hero__acoes" initial={reduz ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65, ease: EASE }}>
             <Link className="botao botao--acao" to="/vereadores">Ver os vereadores</Link>
