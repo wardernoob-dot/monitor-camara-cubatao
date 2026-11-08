@@ -127,6 +127,9 @@ const TERMOS = {
   resumo: ["Resumo oficial", "Documento da Câmara com o resumo de cada sessão. Lista quem votou, mas não quem estava presente e não votou."],
   diario: ["Diário Oficial", "Publicação em que a Prefeitura divulga leis e atos oficiais. É onde se confirma que um projeto virou lei."],
   loa: ["Lei Orgânica", "A lei básica do município, que organiza o poder público local."],
+  indice: ["Índice de Atuação", "Nota de 0 a 10 que resume atividade registrada em documento público: presença, participação nas votações, projetos e fiscalização. Não mede a qualidade das ideias nem o trabalho que não deixa registro."],
+  posicao: ["Posição da Prefeitura", "Conta só votações em que ela tem lado claro: projetos enviados pelo prefeito (votar pela aprovação) e vetos do prefeito (votar por manter o veto). Votar diferente não é bom nem ruim."],
+  bancada: ["Bancada unida", "A parte dos votos que acompanhou a maioria do próprio partido, nas votações em que dois ou mais membros votaram."],
 } as const;
 export type ChaveTermo = keyof typeof TERMOS;
 

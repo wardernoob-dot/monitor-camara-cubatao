@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useAnalise, useDados } from "../dados";
 import { Grade, Metodo, NotaFonte, Placar, ResultadoTag, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
-import { Destaque, EtapaComDica } from "../explica";
+import { Destaque, EtapaComDica, Termo } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
 import BlocoVeto from "../veto";
 import { Secao } from "../secao";
@@ -62,7 +62,7 @@ export default function ProjetoPagina() {
         {m.pautas.length > 0 && <div><dt>Na pauta em</dt><dd>{m.pautas.map((p) => dataCurta(p, true)).join(", ")}</dd></div>}
         {m.documento && <div><dt>Texto original</dt><dd><a href={m.documento} rel="noopener">PDF no site da Câmara</a></dd></div>}
         {m.lei && <div><dt>Lei</dt><dd>Lei {m.lei.numero}, publicada no Diário Oficial em {dataExtenso(m.lei.data)}{m.lei.url && <> (<a href={m.lei.url} rel="noopener">ver publicação</a>)</>}</dd></div>}
-        {m.veto && <div><dt>Veto</dt><dd>Veto {m.veto.alcance} do prefeito{m.veto.url && <> (<a href={m.veto.url} rel="noopener">ver ofício</a>)</>}. {m.veto.resultado === "veto_mantido" ? <>A Câmara manteve o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : m.veto.resultado === "veto_derrubado" ? <>A Câmara derrubou o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : <>A Câmara ainda não votou o veto.</>}{m.veto.pagina && <> <Link to={`/projetos/${m.veto.pagina}`}>Ver a votação do veto</Link>.</>}</dd></div>}
+        {m.veto && <div><dt><Termo chave="veto">Veto</Termo></dt><dd>Veto {m.veto.alcance} do prefeito{m.veto.url && <> (<a href={m.veto.url} rel="noopener">ver ofício</a>)</>}. {m.veto.resultado === "veto_mantido" ? <>A Câmara manteve o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : m.veto.resultado === "veto_derrubado" ? <>A Câmara derrubou o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : <>A Câmara ainda não votou o veto.</>}{m.veto.pagina && <> <Link to={`/projetos/${m.veto.pagina}`}>Ver a votação do veto</Link>.</>}</dd></div>}
       </dl>
 
       {m.veto && <BlocoVeto m={m} />}

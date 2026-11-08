@@ -1335,3 +1335,5 @@ html, body { overflow-x: clip; }
 /* a regra antiga ".texto h2" empurrava os titulos para baixo */
 .como .sanfona__titulo { margin: 0; }
 .como .principio__titulo { margin: .2rem 0 0; }
+/* o balao nao herda o estilo mono/maiusculo do rotulo onde estiver */
+.dica__pop { text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-weight: 400; }

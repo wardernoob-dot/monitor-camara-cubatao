@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
 import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
-import { Destaque, Dica, DicaMateria, EtapaComDica, naPratica } from "../explica";
+import { Destaque, Dica, DicaMateria, EtapaComDica, Termo, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
 import { Funil } from "../viz";
 
@@ -157,7 +157,7 @@ export default function VereadorPagina() {
           </div>
           <Legenda />
           <p className="nota">
-            Até agosto os votos vêm do resumo oficial de cada sessão, que não registra quem estava presente e não votou. A partir de setembro vêm do painel eletrônico mostrado na transmissão, que registra.
+            Até agosto os votos vêm do <Termo chave="resumo">resumo oficial</Termo> de cada sessão, que não registra quem estava presente e não votou. A partir de setembro vêm do <Termo chave="painel">painel eletrônico</Termo> mostrado na transmissão, que registra.
           </p>
         </Secao>
       )}

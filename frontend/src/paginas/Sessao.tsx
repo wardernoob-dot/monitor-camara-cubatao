@@ -4,7 +4,7 @@ import { Toc } from "../toc";
 import { useDados } from "../dados";
 import { Grade, LinkMateria, NotaFonte, Placar, ResultadoTag } from "../componentes";
 import { dataExtenso, nomeSessao, useTitulo } from "../util";
-import { Destaque, DicaMateria, EtapaComDica } from "../explica";
+import { Destaque, DicaMateria, EtapaComDica, Termo } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
 
 export default function SessaoPagina() {
@@ -39,7 +39,7 @@ export default function SessaoPagina() {
         <div><dt>aprovadas</dt><dd>{resultados.aprovadas}</dd></div>
         <div><dt>rejeitadas</dt><dd>{resultados.rejeitadas}</dd></div>
       </dl>
-      {d.status === "provisorio_painel" && <p className="nota">O resumo oficial desta sessão ainda não foi publicado. Os dados abaixo vêm do painel exibido na transmissão.</p>}
+      {d.status === "provisorio_painel" && <p className="nota">O <Termo chave="resumo">resumo oficial</Termo> desta sessão ainda não foi publicado. Os dados abaixo vêm do <Termo chave="painel">painel</Termo> exibido na transmissão.</p>}
 
       <div className="com-toc">
       <div className="com-toc__corpo">

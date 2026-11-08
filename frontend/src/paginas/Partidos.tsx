@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Toc } from "../toc";
+import { Termo } from "../explica";
 import { slugPartido, useDados, type Partido, type Vereador } from "../dados";
 import { Avatar, ComoLer, LinkMateria, ResultadoTag } from "../componentes";
 import { IndiceMini } from "../indice";
@@ -20,7 +21,7 @@ function Medida({ valor, rotulo, nota }: { valor: string; rotulo: string; nota?:
 }
 
 /** Número da bancada com rótulo em mono, uma barra opcional e uma linha de apoio. */
-function Estat({ rotulo, valor, sufixo, barra, nota, contra }: { rotulo: string; valor: string; sufixo?: string; barra?: number; nota?: string; contra?: boolean }) {
+function Estat({ rotulo, valor, sufixo, barra, nota, contra }: { rotulo: ReactNode; valor: string; sufixo?: string; barra?: number; nota?: string; contra?: boolean }) {
   return (
     <div className="bn__item">
       <dt>{rotulo}</dt>
@@ -182,9 +183,9 @@ export function PaginaPartido() {
       <dl className="bn">
         <Estat rotulo="Índice médio da bancada" valor={p.indice_medio != null ? fmt1(p.indice_medio) : "–"} sufixo={p.indice_medio != null ? "/10" : undefined}
           barra={p.indice_medio != null ? p.indice_medio * 10 : undefined} nota="média das notas dos membros" />
-        <Estat rotulo="Na posição da Prefeitura" valor={t ? `${pct(p.executivo.com, t)}%` : "–"} barra={t ? (100 * p.executivo.com) / t : undefined}
+        <Estat rotulo={<Termo chave="posicao">Na posição da Prefeitura</Termo>} valor={t ? `${pct(p.executivo.com, t)}%` : "–"} barra={t ? (100 * p.executivo.com) / t : undefined}
           nota={`${p.executivo.com} com a Prefeitura · ${p.executivo.contra} contra`} contra />
-        <Estat rotulo="Bancada unida" valor={p.coesao != null ? `${p.coesao}%` : "–"} barra={p.coesao ?? undefined}
+        <Estat rotulo={<Termo chave="bancada">Bancada unida</Termo>} valor={p.coesao != null ? `${p.coesao}%` : "–"} barra={p.coesao ?? undefined}
           nota={p.coesao == null ? "só 1 vereador" : "acompanhou a maioria do partido"} />
         <Estat rotulo="Projetos / viraram lei" valor={`${p.projetos} / ${p.leis}`} nota="apresentados em 2026" />
       </dl>

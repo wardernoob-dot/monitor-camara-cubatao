@@ -5,6 +5,7 @@ import { Avatar, ComoLer, TagPartido } from "../componentes";
 import { useTitulo } from "../util";
 import { pctPilar } from "../indice";
 import { EASE } from "../movimento";
+import { Termo } from "../explica";
 
 type Criterio = "indice" | "assiduidade" | "participacao" | "producao" | "fiscalizacao";
 const CRITERIOS: [Criterio, string][] = [
@@ -123,7 +124,7 @@ export default function Ranking() {
       <p className="selo-pagina">Atividade registrada</p>
       <h1 className="titulo-pagina">Ranking</h1>
       <p className="lead">
-        Vereadores em exercício ordenados pelo Índice de Atuação, <span className="sem-quebra">de 0 a 10.</span>
+        Vereadores em exercício ordenados pelo <Termo chave="indice">Índice de Atuação</Termo>, <span className="sem-quebra">de 0 a 10.</span>
         <br />Média da Câmara: <strong>{fmt(media)}</strong>.
       </p>
 

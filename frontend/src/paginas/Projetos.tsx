@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useDados } from "../dados";
 import { Situacao } from "../componentes";
 import { semAcento, useTitulo } from "../util";
-import { Destaque, DicaMateria } from "../explica";
+import { Destaque, DicaMateria, Termo } from "../explica";
 
 const SITUACOES: [string, string][] = [
   ["lei", "Virou lei"],
@@ -55,7 +55,7 @@ export default function Projetos() {
       <p className="selo-pagina">Tudo que passou pela pauta</p>
       <h1 className="titulo-pagina">Projetos</h1>
       <p className="lead">
-        Projetos de lei, de resolução, de decreto legislativo e emendas à Lei Orgânica que passaram pela pauta ou foram publicados no site da Câmara em 2026.
+        Projetos de lei, de resolução, de decreto legislativo e emendas à <Termo chave="loa">Lei Orgânica</Termo> que passaram pela pauta ou foram publicados no site da Câmara em 2026.
       </p>
       <div className="chips" role="group" aria-label="Filtrar por situação">
         <button type="button" aria-pressed={!sit} onClick={() => muda("situacao", "")}>Todos <span>{lista.length}</span></button>
