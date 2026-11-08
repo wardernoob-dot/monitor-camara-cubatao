@@ -115,6 +115,8 @@ export default function ProjetoPagina() {
           <p className="analise__resumo">{a.resumo}</p>
           {a.o_que_muda.length > 0 && <><h3>O que muda</h3><ul className="lista-simples">{a.o_que_muda.map((x, i) => <li key={i}>{x}</li>)}</ul></>}
           {a.quem_e_afetado && <><h3>Quem é afetado</h3><p>{a.quem_e_afetado}</p></>}
+          {a.de_onde_sai_o_dinheiro && <><h3>De onde sai o dinheiro</h3><p>{a.de_onde_sai_o_dinheiro}</p></>}
+          {!!a.o_que_falta_definir?.length && <><h3>O que ainda falta definir</h3><ul className="lista-simples">{a.o_que_falta_definir.map((x, i) => <li key={i}>{x}</li>)}</ul></>}
           {a.pontos_de_atencao.length > 0 && (
             <>
               <h3>Pontos de atenção</h3>
@@ -126,6 +128,12 @@ export default function ProjetoPagina() {
             </>
           )}
           {a.justificativa_do_autor && <><h3>O que diz o autor</h3><p>{a.justificativa_do_autor}</p></>}
+          {!!a.palavras_dificeis?.length && (
+            <>
+              <h3>Palavras difíceis</h3>
+              <dl className="glossario">{a.palavras_dificeis.map((p, i) => <div key={i}><dt>{p.termo}</dt><dd>{p.explicacao}</dd></div>)}</dl>
+            </>
+          )}
           {a.limitacoes && <p className="nota">{a.limitacoes}</p>}
         </Secao>
       )}

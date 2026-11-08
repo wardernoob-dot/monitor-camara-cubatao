@@ -983,6 +983,8 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                     "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", an["modelo"]),
                     "fonte": an["documento"]["fonte"].split(" (")[0], **{k: an["analise"][k] for k in (
                         "resumo", "o_que_muda", "quem_e_afetado", "justificativa_do_autor", "pontos_de_atencao", "limitacoes")},
+                    **{k: an["analise"].get(k, v) for k, v in (
+                        ("de_onde_sai_o_dinheiro", ""), ("o_que_falta_definir", []), ("palavras_dificeis", []))},
                 }, ensure_ascii=False), "utf-8")
         lei_obj = {**m["lei"], "url": url_segura(m["lei"].get("url"))} if m["lei"] else None
         veto_obj = ({**m["veto"], "url": url_segura(m["veto"].get("url"))}

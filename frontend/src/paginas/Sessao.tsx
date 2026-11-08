@@ -7,6 +7,37 @@ import { dataExtenso, nomeSessao, useTitulo } from "../util";
 import { Destaque, DicaMateria, EtapaComDica, Termo } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
 
+/** "Em poucas palavras": o que a sessão decidiu, em frases simples, a partir do dado (sem IA nova). */
+function ResumoSessao({ materias, data }: { materias: string[]; data: string }) {
+  const b = useDados();
+  const itens = materias.map((s) => b.materia.get(s)).filter(Boolean).map((m) => {
+    const evs = m!.eventos.map(b.votacao).filter((e) => e.data === data);
+    const ult = evs[evs.length - 1];
+    const inverso = ult?.sentido === "inverso";
+    const veto = m!.tipo === "VETO" ? (/veto mantido/i.test(m!.situacao) ? "o veto foi mantido" : /derrubado/i.test(m!.situacao) ? "o veto foi derrubado" : null) : null;
+    const r = !ult ? "entrou na pauta" : !ult.resultado ? "não foi votado nesta sessão"
+      : veto ?? ((ult.resultado === "APROVADO") !== inverso ? "foi aprovado" : "foi rejeitado");
+    return { m: m!, r, placar: ult && ult.sim != null ? `${ult.sim} a ${ult.nao}` : null };
+  });
+  if (!itens.length) return null;
+  const ordem = [...itens].sort((x, y) => Number(y.m.relevancia.nivel === "alta") - Number(x.m.relevancia.nivel === "alta"));
+  return (
+    <section className="sessao-resumo" aria-labelledby="sessao-resumo-t">
+      <h2 id="sessao-resumo-t">Em poucas palavras</h2>
+      <p>Nesta sessão a Câmara tratou de {itens.length} {itens.length === 1 ? "assunto" : "assuntos"}. {itens.length > 1 ? "Os mais importantes primeiro:" : ""}</p>
+      <ul>
+        {ordem.slice(0, 6).map(({ m, r, placar }) => (
+          <li key={m.slug}>
+            <a href={`#${m.slug}`} onClick={(e) => { e.preventDefault(); document.getElementById(m.slug)?.scrollIntoView({ behavior: "smooth" }); }}><strong>{m.titulo}</strong></a>
+            {": "}{(m.explicacao?.texto ?? m.assunto).replace(/\.$/, "")}. <span className="sessao-resumo__res">Resultado: {r}{placar ? ` (${placar})` : ""}.</span>
+          </li>
+        ))}
+      </ul>
+      {itens.length > 6 && <p className="nota">Os outros {itens.length - 6} itens estão logo abaixo.</p>}
+    </section>
+  );
+}
+
 export default function SessaoPagina() {
   const { data = "" } = useParams();
   const b = useDados();
@@ -39,6 +70,7 @@ export default function SessaoPagina() {
         <div><dt>aprovadas</dt><dd>{resultados.aprovadas}</dd></div>
         <div><dt>rejeitadas</dt><dd>{resultados.rejeitadas}</dd></div>
       </dl>
+      <ResumoSessao materias={d.materias} data={d.data} />
       {d.status === "provisorio_painel" && <p className="nota">O <Termo chave="resumo">resumo oficial</Termo> desta sessão ainda não foi publicado. Os dados abaixo vêm do <Termo chave="painel">painel</Termo> exibido na transmissão.</p>}
 
       <div className="com-toc">
@@ -52,7 +84,12 @@ export default function SessaoPagina() {
             <p className="item-sessao__n">Item {String(idx + 1).padStart(2, "0")}</p>
             <h2 className="item-sessao__titulo"><DicaMateria m={m}><LinkMateria slug={s} /></DicaMateria> <Destaque m={m} compacto /></h2>
             {m.autoria !== "Autoria não identificada" && <p className="item-sessao__autor">{m.autoria}</p>}
-            {m.assunto && <p>{m.assunto}</p>}
+            {m.explicacao ? (
+              <>
+                <p className="item-sessao__explica">{m.explicacao.texto}</p>
+                {m.assunto && <details className="item-sessao__ementa"><summary>Texto oficial (ementa)</summary><p>{m.assunto}</p></details>}
+              </>
+            ) : m.assunto && <p>{m.assunto}</p>}
             {evs.map((ev) => (
               <div key={ev.id} className="item-sessao__votacao">
                 <div className="votacao__cab">

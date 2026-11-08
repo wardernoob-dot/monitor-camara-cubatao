@@ -128,6 +128,9 @@ export interface Analise {
   justificativa_do_autor: string;
   pontos_de_atencao: { ponto: string; trecho: string }[];
   limitacoes: string;
+  de_onde_sai_o_dinheiro?: string;
+  o_que_falta_definir?: string[];
+  palavras_dificeis?: { termo: string; explicacao: string }[];
 }
 
 export interface Partido {

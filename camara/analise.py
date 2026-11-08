@@ -224,8 +224,13 @@ def conferir(saida: dict, doc: dict) -> dict:
     base = _n(doc["texto"])
     out = {
         "resumo": str(saida.get("resumo") or "").strip(),
-        "o_que_muda": [str(x).strip() for x in (saida.get("o_que_muda") or []) if str(x).strip()][:4],
+        "o_que_muda": [str(x).strip() for x in (saida.get("o_que_muda") or []) if str(x).strip()][:10],
         "quem_e_afetado": str(saida.get("quem_e_afetado") or "").strip(),
+        "de_onde_sai_o_dinheiro": str(saida.get("de_onde_sai_o_dinheiro") or "").strip(),
+        "o_que_falta_definir": [str(x).strip() for x in (saida.get("o_que_falta_definir") or []) if str(x).strip()][:5],
+        "palavras_dificeis": [{"termo": str(p.get("termo") or "").strip(), "explicacao": str(p.get("explicacao") or "").strip()}
+                              for p in (saida.get("palavras_dificeis") or []) if isinstance(p, dict)
+                              and str(p.get("termo") or "").strip() and str(p.get("explicacao") or "").strip()][:6],
         "justificativa_do_autor": str(saida.get("justificativa_do_autor") or "").strip(),
         "natureza": saida.get("natureza") if saida.get("natureza") in NATUREZAS else "outro",
         "limitacoes": str(saida.get("limitacoes") or "").strip(),
@@ -242,7 +247,7 @@ def conferir(saida: dict, doc: dict) -> dict:
             out["pontos_de_atencao"].append({"ponto": ponto, "trecho": ""})  # ausencia: so vale com texto integral
         else:
             out["pontos_descartados"].append({"ponto": ponto, "trecho": trecho, "motivo": "trecho nao encontrado no documento"})
-    out["pontos_de_atencao"] = out["pontos_de_atencao"][:4]
+    out["pontos_de_atencao"] = out["pontos_de_atencao"][:8]
     if doc["so_ementa"]:
         out["justificativa_do_autor"] = ""
         out["limitacoes"] = out["limitacoes"] or "Analise feita so com a ementa: o texto integral do projeto esta em PDF escaneado."

@@ -1654,3 +1654,22 @@ a.rp-autor__nome:hover { text-decoration: underline; }
 .numeros__seta { position: absolute; top: .9rem; right: 1rem; color: var(--color-surface-3); font-size: .9rem; transition: color .2s, transform .25s var(--ease); }
 .numeros__item--link:hover .numeros__seta { color: var(--azul); transform: translateY(2px); }
 @media (prefers-reduced-motion: reduce) { .numeros__item--link, .numeros__seta { transition: none; } .numeros__item--link:hover { transform: none; } }
+
+/* glossario da analise do projeto */
+.glossario { display: grid; gap: .6rem; margin: 0 0 1rem; }
+.glossario > div { padding: .7rem .9rem; border-radius: 10px; background: var(--suave); }
+.glossario dt { font-weight: 600; }
+.glossario dd { margin: .15rem 0 0; color: var(--color-secondary); }
+
+/* sessao: resumo em linguagem simples */
+.sessao-resumo { margin: 1.75rem 0 1rem; padding: 1.25rem 1.4rem; border: 1px solid var(--color-linha); border-left: 4px solid var(--azul); border-radius: 14px; background: var(--color-surface-1); max-width: 56rem; }
+.sessao-resumo h2 { margin: 0 0 .5rem; font-size: 1.25rem; letter-spacing: -0.02em; }
+.sessao-resumo p { margin: 0 0 .6rem; line-height: 1.6; }
+.sessao-resumo ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .5rem; line-height: 1.55; }
+.sessao-resumo li::marker { color: var(--azul); }
+.sessao-resumo a { color: var(--color-ink); }
+.sessao-resumo__res { color: var(--color-secondary); }
+.item-sessao__explica { font-size: 1.02rem; line-height: 1.6; }
+.item-sessao__ementa { margin: .25rem 0 .75rem; font-size: .85rem; color: var(--color-surface-3); }
+.item-sessao__ementa summary { cursor: pointer; }
+.item-sessao__ementa p { margin: .35rem 0 0; }
