@@ -1,0 +1,95 @@
+# Conferência: bets
+
+Modelo: gemini-3.8-flash · prompt 2026-11-08 · documentos: tramitacao-pl-178-2025, projeto-pl-178-2025, veto-pl-178-2025, lei-4484-2026
+Frases mantidas: 44 de 44 (sem trecho achado no documento = fora do texto).
+
+- OK  [Em poucas palavras] Cubatão tem agora uma lei para combater o vício em apostas esportivas pela internet.
+    - achado em `lei-4484-2026`: "Fica criada a campanha educativa permanente de conscientização sobre os riscos e malefícios da dependência relativa a apostas esportivas"
+- OK  [Em poucas palavras] A nova norma foi sancionada em 6 de outubro de 2026 pelo prefeito César da Silva Nascimento.
+    - achado em `lei-4484-2026`: "LEI Nº 4.484, DE 06 DE OUTUBRO DE 2026 INSTITUI O PROGRAMA DE PREVENÇÃO AOS IMPACTOS DAS APOSTAS ONLINE"
+- OK  [Em poucas palavras] A proposta partiu de um projeto de lei do vereador Jair do Bar, apresentado em novembro de 2025.
+    - achado em `projeto-pl-178-2025`: "Sala Dona Helena Meletti Cunha, 18 de novembro de 2025 Jair Ferreira Lucas Jair do Bar Vereador PSDB"
+- OK  [O que muda na prática] A norma oficializa o Programa de Prevenção aos Impactos das Apostas Online (Bets) e de Combate à Ludopatia.
+    - achado em `lei-4484-2026`: "Art. 1° Fica instituído o Programa de Prevenção aos Impactos das Apostas online (Bets) e de Combate à Ludopatia no Município de Cubatão."
+- OK  [O que muda na prática] O município terá uma campanha educativa permanente sobre os malefícios das apostas esportivas e dos jogos pela internet.
+    - achado em `lei-4484-2026`: "Fica criada a campanha educativa permanente de conscientização sobre os riscos e malefícios da dependência relativa a apostas esportivas (Bets) e ao uso inadequado dos jogos online."
+- OK  [O que muda na prática] A lei lista quatro objetivos obrigatórios que a Prefeitura precisará buscar:
+    - achado em `lei-4484-2026`: "Art. 3° São objetivos do Programa: I – difundir a informação e a conscientização de que as apostas esportivas podem causar dependência"
+- OK  [O que muda na prática] Informar e conscientizar que apostas esportivas causam dependência e tiram a capacidade de agir por si mesmo.
+    - achado em `lei-4484-2026`: "difundir a informação e a conscientização de que as apostas esportivas podem causar dependência e tirar a capacidade de agir por si mesmo;"
+- OK  [O que muda na prática] Colocar em prática medidas públicas para prevenir e tratar o vício das pessoas em jogos virtuais.
+    - achado em `lei-4484-2026`: "implementar ações para a prevenção e tratamento do vício em jogos online;"
+- OK  [O que muda na prática] Evitar dívidas e descontrole financeiro de moradores e suas famílias devido aos gastos com palpites esportivos.
+    - achado em `lei-4484-2026`: "prevenir o endividamento e o comprometimento financeiro de pessoas e famílias em decorrência de apostas esportivas;"
+- OK  [O que muda na prática] Diminuir os prejuízos de quem já está com sua situação econômica abalada por causa dessas apostas.
+    - achado em `lei-4484-2026`: "reduzir os danos de pessoas que já estejam com a situação financeira comprometida em decorrência de apostas esportivas;"
+- OK  [Diretrizes do programa municipal] O programa municipal estabelece cinco princípios centrais que devem orientar o atendimento dos serviços públicos:
+    - achado em `lei-4484-2026`: "Art. 2º São diretrizes do Programa: I – princípio da dignidade humana;"
+- OK  [Diretrizes do programa municipal] O princípio da dignidade da pessoa humana em todas as frentes de auxílio.
+    - achado em `lei-4484-2026`: "Art. 2º São diretrizes do Programa: I – princípio da dignidade humana;"
+- OK  [Diretrizes do programa municipal] O princípio da liberdade e da autodeterminação (o direito fundamental de cada pessoa decidir sobre a própria vida).
+    - achado em `lei-4484-2026`: "São diretrizes do Programa: I – princípio da dignidade humana; II – princípio da liberdade e autodeterminação;"
+- OK  [Diretrizes do programa municipal] O direito universal de todos os cidadãos à saúde física e à saúde mental.
+    - achado em `lei-4484-2026`: "II – princípio da liberdade e autodeterminação; III - o direito universal à saúde física e mental;"
+- OK  [Diretrizes do programa municipal] A realização de estudos e o apoio direto às pessoas que sofrem com transtornos mentais.
+    - achado em `lei-4484-2026`: "III - o direito universal à saúde física e mental; IV – estudo e apoio às pessoas com transtornos mentais;"
+- OK  [Diretrizes do programa municipal] A proteção prioritária à saúde mental de crianças e adolescentes da cidade.
+    - achado em `lei-4484-2026`: "IV – estudo e apoio às pessoas com transtornos mentais; e V - a proteção à saúde mental de crianças e adolescentes."
+- OK  [O veto do prefeito ao parágrafo único] O prefeito César da Silva Nascimento vetou uma parte do projeto aprovado na Câmara.
+    - achado em `veto-pl-178-2025`: "decidi vetar parcialmente o Projeto de Lei nº 178/2025, que “INSTITUI O PROGRAMA DE PREVENÇÃO AOS IMPACTOS DAS APOSTAS ONLINE (BETS) E DE COMBATE À LUDOPATIA"
+- OK  [O veto do prefeito ao parágrafo único] O trecho rejeitado tentava conceituar ludopatia unicamente como a dependência causada por vícios em apostas esportivas.
+    - achado em `veto-pl-178-2025`: "Para efeito deste artigo considera-se Ludopatia a dependência ocasionada por vícios em apostas esportivas."
+- OK  [O veto do prefeito ao parágrafo único] A Procuradoria Geral do Município considerou esse trecho inconstitucional (que vai contra as leis federais e a Constituição).
+    - achado em `veto-pl-178-2025`: "A Procuradoria Geral do Município manifestou-se pela inconstitucionalidade do dispositivo citado, razão qual, nos termos do artigo 56 da Lei Orgânica do Município, cabe o veto parcial"
+- OK  [O veto do prefeito ao parágrafo único] O parecer destacou que a Lei Federal 14.790 de 2023 já trata dessa condição de saúde.
+    - achado em `veto-pl-178-2025`: "A legislação federal já emprega a expressão "ludopatia" no âmbito da proteção dos apostadores, referindo-se à pessoa diagnosticada com a condição por profissional de saúde mental habilitado"
+- OK  [O veto do prefeito ao parágrafo único] Segundo o órgão jurídico, o município não deve fixar definições médicas sem embasamento técnico e científico comprovado.
+    - achado em `veto-pl-178-2025`: "A definição de uma condição de natureza médico-sanitária por legislação municipal, sem referência aos critérios técnico-científicos e sem necessidade para o funcionamento do programa, não se mostra recomendável."
+- OK  [O veto do prefeito ao parágrafo único] O parecer apontou também que a redação limitava o problema, esquecendo outras modalidades de jogos na internet.
+    - achado em `veto-pl-178-2025`: "cria conceito próprio e, ao mesmo tempo, restritivo que o próprio campo material do projeto, que alcança também apostas online e jogos online."
+- OK  [O veto do prefeito ao parágrafo único] Por fim, a Procuradoria garantiu que cortar o parágrafo não atrapalha as ações práticas do programa de auxílio.
+    - achado em `veto-pl-178-2025`: "A retirada desse dispositivo não compromete a finalidade nem a operacionalidade do programa, uma vez que os demais artigos podem ser compreendidos e aplicados independentemente de uma definição legal municipal"
+- OK  [De onde sai o dinheiro / quanto custa] Os custos para colocar as medidas em prática serão pagos com os recursos do próprio orçamento de Cubatão.
+    - achado em `lei-4484-2026`: "Art. 5º As despesas com a execução desta Lei correrão por conta de dotações orçamentárias próprias."
+- OK  [De onde sai o dinheiro / quanto custa] A lei não criou taxas nem custos extras específicos para os moradores da cidade.
+    - achado em `projeto-pl-178-2025`: "Art. 6º As despesas com a execução desta Lei correrão por conta de dotações orçamentárias próprias."
+- OK  [O que o autor disse para justificar] Segundo o vereador Jair do Bar, as apostas pela internet e os cassinos cresceram depressa e ameaçam a saúde.
+    - achado em `projeto-pl-178-2025`: "A rápida expansão dos jogos de apostas online e a proliferação de cassinos físicos têm provocado consequências preocupantes para a saúde pública."
+- OK  [O que o autor disse para justificar] O parlamentar afirmou que a Organização Mundial da Saúde (OMS) reconhece o vício em jogos como a doença chamada ludopatia.
+    - achado em `projeto-pl-178-2025`: "Segundo a Organização Mundial da Saúde (OMS), o vício em jogos é uma doença chamada de ludopatia."
+- OK  [O que o autor disse para justificar] Ele citou levantamento do Instituto Datafolha de 2023 mostrando que 15% dos brasileiros já fizeram apostas virtuais.
+    - achado em `projeto-pl-178-2025`: "pesquisas recentes feita pelo Instituto Datafolha, em 2023, aponta que 15% dos brasileiros já realizaram algum tipo de aposta online."
+- OK  [O que o autor disse para justificar] De acordo com os dados apresentados pelo autor, a maioria das pessoas que apostam são jovens de 16 a 24 anos.
+    - achado em `projeto-pl-178-2025`: "Um fator preocupante desses dados levantados é que a maioria das pessoas que apostaram é de jovens de 16 a 24 anos."
+- OK  [O que o autor disse para justificar] O autor alertou que o endividamento extremo tem levado pessoas à falência e a atentarem contra a própria vida.
+    - achado em `projeto-pl-178-2025`: "Essa situação de falência, inclusive, tem sido apontada como causa que tem levado a muitos apostadores a atentarem contra a própria vida."
+- OK  [O que o autor disse para justificar] Ele defendeu o acolhimento dessas famílias pelas redes públicas do SUS (saúde) e do SUAS (assistência social).
+    - achado em `projeto-pl-178-2025`: "O suporte psicossocial oferecido aos dependentes e suas famílias por meio do SUS e do SUAS garante acolhimento humanizado e tratamento integral"
+- OK  [Como foi a votação] A proposta passou por duas votações no plenário da Câmara Municipal antes de se transformar em lei.
+    - achado em `tramitacao-pl-178-2025`: "2026-09-01: 1ª discussão, resultado APROVADO, 10 votos Sim e 0 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDA"
+- OK  [Como foi a votação] A primeira discussão aconteceu no dia 1º de setembro de 2026, com 10 votos a favor e nenhum contrário.
+    - achado em `tramitacao-pl-178-2025`: "2026-09-01: 1ª discussão, resultado APROVADO, 10 votos Sim e 0 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDA"
+- OK  [Como foi a votação] A segunda votação ocorreu no dia 8 de setembro de 2026, quando o texto foi aprovado por 12 a zero.
+    - achado em `tramitacao-pl-178-2025`: "2026-09-08: 2ª discussão, resultado APROVADO, 12 votos Sim e 0 votos Não. APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL"
+- OK  [O que acontece agora] A Lei 4.484 começou a valer imediatamente no dia de sua publicação oficial.
+    - achado em `lei-4484-2026`: "Art. 6º Esta Lei entra em vigor na data de sua publicação."
+- OK  [O que acontece agora] O texto foi promulgado em 6 de outubro de 2026 pelo prefeito e pelas secretarias de Saúde e Assuntos Jurídicos.
+    - achado em `lei-4484-2026`: "PREFEITURA MUNICIPAL DE CUBATÃO EM 06 DE OUTUBRO DE 2026 CÉSAR DA SILVA NASCIMENTO Prefeito Municipal"
+- OK  [O que acontece agora] Apesar do início da vigência, o veto parcial do chefe do Executivo foi remetido para análise do Legislativo.
+    - achado em `veto-pl-178-2025`: "razões que nos levaram a vetar o Parágrafo único do art. 1º do Projeto de Lei nº 178/2025, o qual ora submetemos à elevada apreciação dos Senhores Membros da Câmara Municipal."
+- OK  [O que acontece agora] Os vereadores de Cubatão terão de analisar os motivos da Prefeitura para decidir se mantêm ou derrubam o veto.
+    - achado em `veto-pl-178-2025`: "o qual ora submetemos à elevada apreciação dos Senhores Membros da Câmara Municipal. CESAR DA SILVA NASCIMENTO Prefeito Municipal"
+- OK  [O que ainda não foi definido] O documento legal não fixou prazos nem datas exatas para o início das primeiras campanhas públicas de conscientização.
+    - achado em `lei-4484-2026`: "Fica criada a campanha educativa permanente de conscientização sobre os riscos e malefícios da dependência relativa a apostas esportivas (Bets)"
+- OK  [O que ainda não foi definido] A lei também não detalhou quais unidades de saúde farão os atendimentos médicos e psicológicos dos moradores afetados.
+    - achado em `lei-4484-2026`: "implementar ações para a prevenção e tratamento do vício em jogos online;"
+- OK  [Palavras difíceis explicadas] Ludopatia: vício incontrolável em apostas ou jogos de azar, reconhecido pela medicina como transtorno de saúde mental.
+- OK  [Palavras difíceis explicadas] Veto parcial: decisão do prefeito de barrar apenas uma frase, artigo ou parágrafo, deixando valer o restante da lei.
+- OK  [Palavras difíceis explicadas] Dotação orçamentária: reserva de dinheiro já autorizada dentro do orçamento anual da cidade para bancar serviços públicos.
+- OK  [Palavras difíceis explicadas] Redação final: versão definitiva escrita de um projeto depois que todas as alterações e votos foram concluídos.
+
+## O que os documentos não respondem
+- Quais unidades de saúde ou postos da cidade farão o acolhimento prático de quem sofre com o vício.
+- Qual é o valor em reais do orçamento municipal destinado especificamente para financiar as ações do programa.
+- Qual foi a alteração exata trazida pela emenda aprovada na primeira votação da Câmara.
+- Qual é a data limite para a Câmara Municipal pautar e votar o veto parcial encaminhado pelo prefeito.

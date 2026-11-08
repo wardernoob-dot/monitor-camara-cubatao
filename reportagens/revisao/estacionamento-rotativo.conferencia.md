@@ -1,0 +1,102 @@
+# Conferência: estacionamento-rotativo
+
+Modelo: gemini-3.8-flash · prompt 2026-11-08 · documentos: tramitacao-pl-190-2025, projeto-pl-190-2025, lei-4451-2026
+Frases mantidas: 47 de 47 (sem trecho achado no documento = fora do texto).
+
+- OK  [Em poucas palavras] A Câmara aprovou e o prefeito sancionou a criação do estacionamento rotativo pago em Cubatão.
+    - achado em `lei-4451-2026`: "Fica instituído o Sistema de Estacionamento Rotativo Remunerado de Veículos em vias e logradouros públicos do Município de Cubatão"
+- OK  [Em poucas palavras] A nova cobrança nas vagas de rua não começa agora. O sistema só entrará em vigor no dia 1º de janeiro de 2027.
+    - achado em `lei-4451-2026`: "Esta Lei entra em vigor em 1º de janeiro de 2027."
+- OK  [Em poucas palavras] A proposta partiu do prefeito Cesar da Silva Nascimento. O texto final virou a Lei Municipal número 4.451.
+    - achado em `lei-4451-2026`: "CESAR DA SILVA NASCIMENTO, Prefeito Municipal de Cubatão, faço saber, que a Câmara Municipal aprovou e eu sanciono e promulgo a seguinte Lei:"
+- OK  [O que muda na prática] Quem estacionar o carro em ruas demarcadas precisará pagar uma tarifa de estacionamento rotativo pelo tempo de uso.
+    - achado em `lei-4451-2026`: "A remuneração devida pelo uso das vagas rotativas será denominada tarifa de estacionamento rotativo"
+- OK  [O que muda na prática] Ao quitar o valor, o motorista receberá um comprovante físico ou digital. O documento trará o tempo e o local da parada.
+    - achado em `lei-4451-2026`: "No ato do pagamento da tarifa, deverá ser emitido comprovante eletrônico ou físico que permita a verificação do tempo e local de permanência do veículo para fins de fiscalização."
+- OK  [O que muda na prática] Esse comprovante servirá para a fiscalização dos fiscais nas ruas. O pagamento usará meios físicos ou digitais.
+    - achado em `lei-4451-2026`: "A arrecadação da tarifa poderá ser realizada por meio de concessionária, mediante sistemas físicos ou digitais previamente aprovados pela Companhia Municipal de Trânsito de Cubatão."
+- OK  [O que muda na prática] A Companhia Municipal de Trânsito (CMT) vai fiscalizar e monitorar todo o serviço na cidade.
+    - achado em `lei-4451-2026`: "O sistema será operado, regulamentado, fiscalizado e monitorado pela Companhia Municipal de Trânsito de Cubatão, diretamente ou mediante concessão a terceiros"
+- OK  [O que muda na prática] A Prefeitura pode operar o sistema por conta própria. Ela também tem autorização para repassar o serviço a uma empresa privada.
+    - achado em `lei-4451-2026`: "O Poder Executivo fica autorizado a delegar a execução do serviço público de estacionamento rotativo remunerado por meio de concessão, precedida de licitação"
+- OK  [Regras para a empresa concessionária] Se a Prefeitura contratar uma empresa, essa firma será escolhida por licitação (uma concorrência pública oficial).
+    - achado em `lei-4451-2026`: "O Poder Executivo fica autorizado a delegar a execução do serviço público de estacionamento rotativo remunerado por meio de concessão, precedida de licitação"
+- OK  [Regras para a empresa concessionária] A vencedora terá de demonstrar capacidade técnica e financeira no processo de escolha.
+    - achado em `lei-4451-2026`: "A concessão será outorgada à pessoa jurídica que comprove capacidade técnica e econômica, conforme estabelecido no edital"
+- OK  [Regras para a empresa concessionária] A concessionária (empresa que assume serviço público) terá várias obrigações legais em Cubatão:
+    - achado em `lei-4451-2026`: "São obrigações da concessionária, entre outras previstas no contrato e na legislação:"
+- OK  [Regras para a empresa concessionária] Pagar todos os custos de sinalização, tecnologia, pessoal, equipamentos e operação das vagas rotativas.
+    - achado em `lei-4451-2026`: "arcar integralmente com os custos de equipamentos, tecnologia, pessoal, sinalização e operação;"
+- OK  [Regras para a empresa concessionária] Fazer a sinalização vertical (placas) e horizontal (pintura no chão) segundo as normas do trânsito brasileiro.
+    - achado em `lei-4451-2026`: "realizar a sinalização vertical e horizontal das áreas de estacionamento, conforme normas do Código de Trânsito Brasileiro e do CONTRAN;"
+- OK  [Regras para a empresa concessionária] Manter equipe treinada para atendimento presencial e abrir canais de atendimento direto para o cidadão.
+    - achado em `lei-4451-2026`: "manter equipe treinada para atendimento ao usuário; VI - disponibilizar canais de atendimento ao cidadão;"
+- OK  [Regras para a empresa concessionária] Cobrar apenas o valor fixado pelo governo, sem colocar taxas ou valores adicionais.
+    - achado em `lei-4451-2026`: "aplicar a tarifa autorizada pelo Poder Concedente, vedada qualquer cobrança adicional;"
+- OK  [Regras para a empresa concessionária] Prestar contas de todo o dinheiro arrecadado e avisar as autoridades sobre eventuais infrações de trânsito.
+    - achado em `lei-4451-2026`: "prestar contas da arrecadação e execução do serviço, na forma prevista em contrato; X - comunicar às autoridades competentes eventuais infrações de trânsito."
+- OK  [Regras para a empresa concessionária] Quando o contrato de concessão acabar, todas as estruturas e bens usados na operação passam a ser da Prefeitura sem indenização.
+    - achado em `lei-4451-2026`: "todos os bens vinculados ao serviço, reversíveis por natureza ou por previsão contratual, retornarão ao Município, sem direito a indenização."
+- OK  [Quem não precisa pagar a tarifa] A Lei 4.451 definiu quatro situações de isenção total da cobrança no rotativo da cidade:
+    - achado em `lei-4451-2026`: "São isentos do pagamento da tarifa os veículos:"
+- OK  [Quem não precisa pagar a tarifa] Veículos oficiais pertencentes à União, aos governos estaduais e aos municípios.
+    - achado em `lei-4451-2026`: "oficiais da União, dos Estados e dos Municípios;"
+- OK  [Quem não precisa pagar a tarifa] Veículos de socorro e emergência, categoria que engloba ambulâncias e viaturas de polícia.
+    - achado em `lei-4451-2026`: "de socorro e emergência, como ambulâncias e viaturas policiais;"
+- OK  [Quem não precisa pagar a tarifa] Veículos de transporte coletivo, de valores e de carga, apenas nas áreas especiais reservadas pela CMT.
+    - achado em `lei-4451-2026`: "de transporte coletivo, de valores e de carga, quando estacionados em áreas específicas previamente definidas por ato da Companhia Municipal de Trânsito de Cubatão;"
+- OK  [Quem não precisa pagar a tarifa] Veículos parados em frente a farmácias por até 15 minutos, exclusivamente para retirar remédios, em vagas sinalizadas.
+    - achado em `lei-4451-2026`: "estacionados diante de farmácias e drogarias, por até 15 (quinze) minutos, exclusivamente para retirada de medicamentos, mediante sinalização específica."
+- OK  [Furtos, roubos e acidentes: quem paga?] A lei tem um alerta de risco importante para quem deixar o automóvel estacionado nas vagas pagas.
+    - achado em `lei-4451-2026`: "O Município de Cubatão e a concessionária não se responsabilizam por furtos, roubos, danos ou acidentes ocorridos com os veículos estacionados nas áreas do sistema"
+- OK  [Furtos, roubos e acidentes: quem paga?] A Prefeitura e a empresa contratada não indenizarão motoristas por batidas, furtos, roubos ou danos ao veículo.
+    - achado em `lei-4451-2026`: "O Município de Cubatão e a concessionária não se responsabilizam por furtos, roubos, danos ou acidentes ocorridos com os veículos estacionados nas áreas do sistema"
+- OK  [Furtos, roubos e acidentes: quem paga?] Haverá pagamento de indenização somente se o dono do veículo provar que a concessionária causou o dano diretamente.
+    - achado em `lei-4451-2026`: "ressalvada comprovação de culpa direta pela concessionária."
+- OK  [De onde sai o dinheiro e valor da tarifa] O preço exato que o morador vai pagar por hora de estacionamento ainda não foi divulgado.
+    - achado em `lei-4451-2026`: "seu valor será fixado por decreto do Poder Executivo, observado o princípio da modicidade tarifária."
+- OK  [De onde sai o dinheiro e valor da tarifa] A lei determina que o prefeito fixará o valor por decreto, respeitando a modicidade tarifária (preço acessível a todos).
+    - achado em `lei-4451-2026`: "seu valor será fixado por decreto do Poder Executivo, observado o princípio da modicidade tarifária."
+- OK  [De onde sai o dinheiro e valor da tarifa] Os custos da Prefeitura para implantar o sistema sairão de verbas do orçamento municipal, podendo receber suplementações.
+    - achado em `lei-4451-2026`: "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
+- OK  [O que ainda não foi definido] Vários pontos práticos sobre o funcionamento diário do sistema ainda dependem de novas regras da Prefeitura e da CMT:
+    - achado em `lei-4451-2026`: "Os dias e horários de funcionamento do sistema serão definidos em regulamento."
+- OK  [O que ainda não foi definido] Quais vias e praças terão vagas pagas: a CMT publicará um ato oficial com a relação exata dos locais.
+    - achado em `lei-4451-2026`: "As vias e logradouros públicos sujeitas ao sistema de estacionamento rotativo serão definidas por ato da Companhia Municipal de Trânsito de Cubatão – CMT."
+- OK  [O que ainda não foi definido] Dias e horários da cobrança: as escalas de funcionamento serão publicadas em um regulamento próprio.
+    - achado em `lei-4451-2026`: "Os dias e horários de funcionamento do sistema serão definidos em regulamento."
+- OK  [O que ainda não foi definido] Prazo de concessão: os anos de duração do contrato com a futura empresa serão decididos no contrato de licitação.
+    - achado em `lei-4451-2026`: "O prazo da concessão será definido no contrato administrativo, podendo ser prorrogado, nos termos da legislação federal"
+- OK  [O que o autor disse para justificar] O prefeito encaminhou o projeto de lei à Câmara Municipal no dia 22 de dezembro de 2025.
+    - achado em `projeto-pl-190-2025`: "PREFEITURA MUNICIPAL DE CUBATÃO EM 22 DE DEZEMBRO DE 2025. “492º DA FUNDAÇÃO DO POVOADO 76º DA EMANCIPAÇÃO”. CESAR DA SILVA NASCIMENTO Prefeito Municipal"
+- OK  [O que o autor disse para justificar] Segundo o prefeito, a proposta busca racionalizar o uso das vagas públicas em bairros com muito fluxo de veículos.
+    - achado em `projeto-pl-190-2025`: "disciplinar o uso racional das vagas públicas de estacionamento em regiões de grande circulação e demanda, promovendo maior rotatividade"
+- OK  [O que o autor disse para justificar] Segundo a mensagem explicativa, o rodízio nas vagas trará mais fluidez ao trânsito e incentivará o comércio local.
+    - achado em `projeto-pl-190-2025`: "fluidez no trânsito, incentivo ao comércio local e melhor organização do espaço urbano."
+- OK  [O que o autor disse para justificar] O prefeito também afirmou que o modelo não pretende focar apenas em arrecadar dinheiro com tarifas de trânsito.
+    - achado em `projeto-pl-190-2025`: "Destaca-se que o modelo proposto não visa à arrecadação meramente fiscal, mas à organização do uso do espaço público viário"
+- OK  [Como foi a votação na Câmara] O Projeto de Lei número 190/2025 passou por duas rodadas de votação no dia 17 de março de 2026.
+    - achado em `tramitacao-pl-190-2025`: "2026-03-17: 1ª discussão, resultado APROVADO, 11 votos Sim e 2 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDA"
+- OK  [Como foi a votação na Câmara] Na primeira discussão, o projeto foi aprovado com emenda por 11 votos a favor e 2 votos contrários.
+    - achado em `tramitacao-pl-190-2025`: "2026-03-17: 1ª discussão, resultado APROVADO, 11 votos Sim e 2 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDA"
+- OK  [Como foi a votação na Câmara] Na segunda discussão e redação final, no mesmo dia, o plenário aprovou o projeto por 10 votos a 2.
+    - achado em `tramitacao-pl-190-2025`: "2026-03-17: 2ª discussão, resultado APROVADO, 10 votos Sim e 2 votos Não. APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL"
+- OK  [O que acontece agora] A Lei Municipal 4.451 foi sancionada pelo chefe do Executivo e publicada oficialmente em 27 de março de 2026.
+    - achado em `tramitacao-pl-190-2025`: "Virou a Lei 4.451, publicada em 2026-03-27"
+- OK  [O que acontece agora] A lei aguarda sua data de vigência para começar a produzir efeitos, marcada para 1º de janeiro de 2027.
+    - achado em `lei-4451-2026`: "Esta Lei entra em vigor em 1º de janeiro de 2027."
+- OK  [O que acontece agora] Até lá, a administração municipal precisará elaborar decretos com as tarifas e definir se fará licitação pública.
+    - achado em `projeto-pl-190-2025`: "propiciando base jurídica sólida para a futura regulamentação do serviço por meio de decreto."
+- OK  [Palavras difíceis explicadas] Concessão: contrato em que o governo autoriza uma empresa privada a operar um serviço público por um tempo determinado.
+- OK  [Palavras difíceis explicadas] Licitação: disputa pública com regras claras onde empresas concorrem para prestar serviços e obras para o município.
+- OK  [Palavras difíceis explicadas] Modicidade tarifária: regra da administração que exige cobrança de tarifas justas e acessíveis para o bolso da população.
+- OK  [Palavras difíceis explicadas] Bens reversíveis: equipamentos e estruturas usados pela empresa que viram patrimônio da cidade ao término do contrato.
+- OK  [Palavras difíceis explicadas] Dotação orçamentária suplementada: dinheiro reservado no orçamento que pode ser aumentado se a despesa exigir mais recursos.
+
+## O que os documentos não respondem
+- Qual será o valor da tarifa cobrada por hora ou fração de hora para cada tipo de veículo.
+- Quais bairros e ruas exatas de Cubatão terão estacionamento rotativo com cobrança primeiro.
+- Quais serão os horários de início e fim da cobrança e em quais dias da semana ela valerá.
+- Qual será o tempo máximo permitido de permanência de um mesmo veículo na mesma vaga rotativa.
+- Qual foi o texto exato da emenda aprovada pelos vereadores durante a primeira discussão do projeto na Câmara.
+- Se a Prefeitura vai criar uma equipe interna da CMT ou se contratará logo uma empresa concessionária.

@@ -1,0 +1,87 @@
+# Conferência: remanejamento-orcamento
+
+Modelo: gemini-3.8-flash · prompt 2026-11-08 · documentos: tramitacao-pl-92-2026, projeto-pl-92-2026, tramitacao-pl-87-2026, projeto-pl-87-2026, tramitacao-pl-74-2026, projeto-pl-74-2026, lei-4481-2026, lei-4487-2026, noticia-camara-2026-10-21
+Frases mantidas: 40 de 40 (sem trecho achado no documento = fora do texto).
+
+- OK  [Em poucas palavras] A Prefeitura de Cubatão poderá alterar uma fatia maior do orçamento municipal de 2026 sem pedir autorização prévia aos vereadores.
+    - achado em `lei-4487-2026`: "abrir créditos suplementares até 19% (dezenove por cento) do total da despesa autorizada, compreendendo-se, na Administração Direta, a soma dos valores consignados nos órgãos municipais com exceção da Câmara Municipal"
+- OK  [Em poucas palavras] A Câmara aprovou a Lei 4.487, que eleva o limite de abertura de créditos suplementares de 10% para 19%.
+    - achado em `tramitacao-pl-92-2026`: "ampliando de 10% (dez por cento) para 19% (dezenove por cento) o limite para abertura de créditos suplementares"
+- OK  [Em poucas palavras] Crédito suplementar é um dinheiro a mais colocado em uma despesa que já constava na lei orçamentária.
+    - achado em `noticia-camara-2026-10-21`: "abertura de créditos adicionais suplementares – ou seja, um reforço à dotação orçamentária já existente"
+- OK  [O que muda na prática] O orçamento da cidade funciona como uma lei anual de planejamento financeiro.
+    - achado em `projeto-pl-92-2026`: "Trata-se, portanto, de realocação dos recursos já previstos na Lei Orçamentária Anual, em consonância com o art. 165, § 8º, da Constituição Federal"
+- OK  [O que muda na prática] Antes da nova lei, o prefeito só podia reforçar contas até o teto de 10% do gasto total.
+    - achado em `projeto-pl-92-2026`: "A experiência recente da administração tem demonstrado que o limite atual de 10% (dez por cento) do total da despesa fixada tem se revelado insuficiente para atender, tempestivamente, às necessidades reais da execução orçamentária."
+- OK  [O que muda na prática] Agora, o Executivo pode remanejar até 19% das despesas totais por meio de decreto próprio.
+    - achado em `lei-4487-2026`: "abrir créditos suplementares até 19% (dezenove por cento) do total da despesa autorizada, compreendendo-se, na Administração Direta, a soma dos valores consignados nos órgãos municipais com exceção da Câmara Municipal"
+- OK  [O que muda na prática] Na Administração Direta, o limite de 19% calcula-se sobre os órgãos municipais, com exceção do Legislativo.
+    - achado em `lei-4487-2026`: "compreendendo-se, na Administração Direta, a soma dos valores consignados nos órgãos municipais com exceção da Câmara Municipal, que terá o mesmo limite aplicado à sua despesa autorizada"
+- OK  [O que muda na prática] A Câmara Municipal terá esse mesmo teto de 19% aplicado à sua própria despesa autorizada.
+    - achado em `lei-4487-2026`: "com exceção da Câmara Municipal, que terá o mesmo limite aplicado à sua despesa autorizada, e, na Administração Indireta, até 19% (dezenove por cento) do total da despesa autorizada de seus respectivos orçamentos"
+- OK  [O que muda na prática] Na Administração Indireta, que reúne autarquias e fundações, vale o índice de até 19% dos respectivos orçamentos.
+    - achado em `lei-4487-2026`: "e, na Administração Indireta, até 19% (dezenove por cento) do total da despesa autorizada de seus respectivos orçamentos"
+- OK  [O caminho das votações até o resultado final] A definição do novo índice aconteceu após três projetos tramitarem no Legislativo de Cubatão durante 2026.
+    - achado em `tramitacao-pl-92-2026`: "PL 92/2026: Altera a redação do inciso II do art. 6º da lei municipal nº 4.435, de 22 de dezembro de 2025"
+- OK  [O caminho das votações até o resultado final] Em 15 de setembro, a Câmara aprovou o Projeto de Lei 74/2026 em duas discussões, por 11 a 3.
+    - achado em `tramitacao-pl-74-2026`: "2026-09-15: 1ª discussão, resultado APROVADO, 11 votos Sim e 3 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDAS"
+    - achado em `tramitacao-pl-74-2026`: "2026-09-15: 2ª discussão, resultado APROVADO, 11 votos Sim e 3 votos Não. APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL"
+- OK  [O caminho das votações até o resultado final] Esse projeto virou a Lei 4.481, que elevou para 20% o teto na Lei de Diretrizes Orçamentárias.
+    - achado em `lei-4481-2026`: "proceder à abertura de créditos adicionais suplementares até o limite de 20% (vinte por cento) do total da despesa fixada"
+- OK  [O caminho das votações até o resultado final] Em 20 de outubro, o plenário rejeitou o Projeto de Lei 87/2026 por 8 votos a 6.
+    - achado em `tramitacao-pl-87-2026`: "2026-10-20: Parecer em conjunto favorável, resultado REJEITADO, 6 votos Sim e 8 votos Não. REJEITADO"
+- OK  [O caminho das votações até o resultado final] O PL 87 pretendia fixar o limite de 20% também na Lei Orçamentária Anual da cidade.
+    - achado em `projeto-pl-87-2026`: "ALTERA A REDAÇÃO DOS INCISOS II E III DO ART. 6º DA LEI MUNICIPAL Nº 4.435, DE 22 DE DEZEMBRO DE 2025, QUE ESTIMA A RECEITA E FIXA A DESPESA DO MUNICÍPIO DE CUBATÃO PARA O EXERCÍCIO DE 2026, AMPLIANDO DE 10% (DEZ POR CENTO) PARA 20% (VINTE POR CENTO)"
+- OK  [O caminho das votações até o resultado final] Em 29 de outubro, o prefeito apresentou nova proposta com percentual de 19%, aprovada pelos vereadores.
+    - achado em `tramitacao-pl-92-2026`: "2026-10-29: 1ª discussão, resultado APROVADO, 11 votos Sim e 3 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDA"
+- OK  [Como foi a votação do projeto final] A votação definitiva do Projeto de Lei 92/2026 ocorreu em sessão realizada no dia 29 de outubro de 2026.
+    - achado em `tramitacao-pl-92-2026`: "2026-10-29: 1ª discussão, resultado APROVADO, 11 votos Sim e 3 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDA"
+- OK  [Como foi a votação do projeto final] Primeiro, o plenário rejeitou um parecer contrário ao texto por 11 votos contra 3.
+    - achado em `tramitacao-pl-92-2026`: "2026-10-29: Parecer contrário em separado, resultado REJEITADO, 3 votos Sim e 11 votos Não (nesta votação, votar Sim era ser contra o projeto)."
+- OK  [Como foi a votação do projeto final] Na primeira discussão, o projeto acabou aprovado com emenda por 11 votos favoráveis e 3 contrários.
+    - achado em `tramitacao-pl-92-2026`: "2026-10-29: 1ª discussão, resultado APROVADO, 11 votos Sim e 3 votos Não. APROVADO EM 1ª DISCUSSÃO, COM EMENDA"
+- OK  [Como foi a votação do projeto final] Na segunda discussão e redação final, o plenário confirmou o texto por 10 votos a 3.
+    - achado em `tramitacao-pl-92-2026`: "2026-10-29: 2ª discussão, resultado APROVADO, 10 votos Sim e 3 votos Não. APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL"
+- OK  [O que o prefeito disse para justificar] Segundo o prefeito Cesar da Silva Nascimento, a trava anterior de 10% prejudicava o ritmo dos serviços municipais.
+    - achado em `projeto-pl-92-2026`: "A experiência recente da administração tem demonstrado que o limite atual de 10% (dez por cento) do total da despesa fixada tem se revelado insuficiente para atender, tempestivamente, às necessidades reais da execução orçamentária."
+- OK  [O que o prefeito disse para justificar] Segundo o chefe do Executivo, a insuficiência exigia enviar muitos projetos pontuais, atrasando políticas públicas municipais.
+    - achado em `projeto-pl-74-2026`: "obriga o Poder Executivo a submeter, reiteradamente, proposições legislativas pontuais, o que retarda a execução de políticas públicas e compromete a eficiência administrativa."
+- OK  [O que o prefeito disse para justificar] O prefeito argumentou que a proposta buscava harmonizar a lei do orçamento com as diretrizes orçamentárias.
+    - achado em `projeto-pl-92-2026`: "O presente Projeto de Lei destina-se, portanto, a harmonizar a Lei Orçamentária Anual com a nova redação da LDO, de modo a assegurar a plena compatibilidade e a efetiva aplicabilidade do percentual ampliado na execução orçamentária do exercício, agora no percentual de 19% (dezenove por cento)."
+- OK  [O que o prefeito disse para justificar] Ele afirmou no documento que a ampliação não cria despesa nova nem representa renúncia de receita.
+    - achado em `projeto-pl-92-2026`: "Importa salientar que a medida não implica aumento da despesa total autorizada, tampouco renúncia de receita."
+- OK  [De onde sai o dinheiro e quais são as regras] A abertura de créditos suplementares depende obrigatoriamente da comprovação de dinheiro disponível nos cofres públicos.
+    - achado em `projeto-pl-92-2026`: "Os créditos adicionais suplementares somente poderão ser abertos na existência de recursos disponíveis, nos termos do art. 43 da Lei Federal nº 4.320/1964"
+- OK  [De onde sai o dinheiro e quais são as regras] A lei federal exige fontes específicas para essa movimentação de valores:
+    - achado em `projeto-pl-92-2026`: "superávit financeiro apurado em balanço patrimonial do exercício anterior; excesso de arrecadação; anulação parcial ou total de dotações orçamentárias ou de créditos adicionais; e produto de operações de crédito autorizadas."
+- OK  [De onde sai o dinheiro e quais são as regras] Superávit financeiro deixado no balanço do ano anterior (saldo positivo de recursos).
+    - achado em `projeto-pl-92-2026`: "superávit financeiro apurado em balanço patrimonial do exercício anterior; excesso de arrecadação; anulação parcial ou total de dotações orçamentárias ou de créditos adicionais; e produto de operações de crédito autorizadas."
+- OK  [De onde sai o dinheiro e quais são as regras] Excesso de arrecadação quando a arrecadação superar o valor previsto originalmente.
+    - achado em `projeto-pl-92-2026`: "superávit financeiro apurado em balanço patrimonial do exercício anterior; excesso de arrecadação; anulação parcial ou total de dotações orçamentárias ou de créditos adicionais; e produto de operações de crédito autorizadas."
+- OK  [De onde sai o dinheiro e quais são as regras] Anulação parcial ou total de verbas já reservadas para outras despesas do município.
+    - achado em `projeto-pl-92-2026`: "superávit financeiro apurado em balanço patrimonial do exercício anterior; excesso de arrecadação; anulação parcial ou total de dotações orçamentárias ou de créditos adicionais; e produto de operações de crédito autorizadas."
+- OK  [De onde sai o dinheiro e quais são as regras] Recursos vindos de operações de crédito formalmente autorizadas por lei.
+    - achado em `projeto-pl-92-2026`: "superávit financeiro apurado em balanço patrimonial do exercício anterior; excesso de arrecadação; anulação parcial ou total de dotações orçamentárias ou de créditos adicionais; e produto de operações de crédito autorizadas."
+- OK  [De onde sai o dinheiro e quais são as regras] A justificativa reforça que as metas fiscais e os limites com despesa de pessoal permanecem inalterados.
+    - achado em `projeto-pl-92-2026`: "Registre-se, ainda, que a ampliação do percentual observa os princípios e regras da Lei Complementar nº 101/2000 (Lei de Responsabilidade Fiscal), não alterando metas fiscais, limites de despesa com pessoal ou de endividamento"
+- OK  [De onde sai o dinheiro e quais são as regras] Além disso, a Lei de Diretrizes Orçamentárias prevê despesas que não entram nessa conta do limite.
+    - achado em `projeto-pl-74-2026`: "permanecem excluídas do cômputo do limite as dotações destinadas a pessoal e encargos sociais, benefícios previdenciários, PASEP e vale transporte; serviços da Dívida Pública; requisitórios e precatórios judiciais; dispêndios relativos a receitas vinculadas; despesas custeadas com superávit financeiro ou excesso de arrecadação; e eventuais alterações nas Emendas Impositivas."
+- OK  [De onde sai o dinheiro e quais são as regras] Ficam de fora gastos com pessoal, encargos sociais, previdência, dívida pública, precatórios e emendas impositivas.
+    - achado em `projeto-pl-74-2026`: "permanecem excluídas do cômputo do limite as dotações destinadas a pessoal e encargos sociais, benefícios previdenciários, PASEP e vale transporte; serviços da Dívida Pública; requisitórios e precatórios judiciais; dispêndios relativos a receitas vinculadas; despesas custeadas com superávit financeiro ou excesso de arrecadação; e eventuais alterações nas Emendas Impositivas."
+- OK  [O que acontece agora] O projeto virou a Lei Municipal 4.487 e já está em pleno vigor em Cubatão.
+    - achado em `tramitacao-pl-92-2026`: "Virou a Lei 4.487, publicada em 2026-10-29"
+- OK  [O que acontece agora] A promulgação e a publicação oficial no Diário Oficial ocorreram no próprio dia 29 de outubro de 2026.
+    - achado em `lei-4487-2026`: "LEI Nº 4.487, DE 29 DE OUTUBRO DE 2026"
+    - achado em `lei-4487-2026`: "Documento publicado em 29/10/2026 - Edição 2119"
+- OK  [O que acontece agora] Com isso, a administração municipal poderá usar o limite de 19% ao longo de todo o ano de 2026.
+    - achado em `projeto-pl-92-2026`: "O presente Projeto de Lei destina-se, portanto, a harmonizar a Lei Orçamentária Anual com a nova redação da LDO, de modo a assegurar a plena compatibilidade e a efetiva aplicabilidade do percentual ampliado na execução orçamentária do exercício, agora no percentual de 19% (dezenove por cento)."
+- OK  [Palavras difíceis] Crédito suplementar: autorização para colocar dinheiro extra em um programa ou gasto já existente no orçamento.
+- OK  [Palavras difíceis] LOA (Lei Orçamentária Anual): lei que detalha as despesas e receitas da Prefeitura para o ano seguinte.
+- OK  [Palavras difíceis] LDO (Lei de Diretrizes Orçamentárias): norma que estabelece as metas e regras para a elaboração do orçamento anual.
+- OK  [Palavras difíceis] Dotação orçamentária: quantia exata de dinheiro destinada a um serviço, compra ou obra pública específica.
+- OK  [Palavras difíceis] Superávit financeiro: sobra de caixa apurada ao final do ano anterior, após pagar todas as obrigações.
+
+## O que os documentos não respondem
+- Os documentos não informam o valor total em reais do orçamento de Cubatão para 2026 nem a quantia em dinheiro que representa a fatia de 19%.
+- Não foi informado nos documentos quais áreas da administração municipal estavam enfrentando falta de verba para justificar a urgência do aumento.
+- O texto não explica detalhadamente o teor da emenda aprovada em 1ª discussão durante a tramitação do PL 92/2026.
