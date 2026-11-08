@@ -62,6 +62,9 @@ export function Paisagem() {
         </defs>
         <circle cx="1010" cy="190" r="210" fill="url(#sol-halo)" />
         <circle cx="1010" cy="190" r="46" fill="var(--sol)" />
+        <g className="lua-crateras" fill="#8fa0c8" fillOpacity=".28">
+          <circle cx="994" cy="176" r="9" /><circle cx="1024" cy="170" r="6" /><circle cx="1012" cy="196" r="12" /><circle cx="988" cy="200" r="5" />
+        </g>
         <motion.g style={p(longe)}>
           <path transform="translate(0 300) scale(1 .62) translate(0 -300)" d="M0 150 C80 120 140 96 210 112 C290 130 330 70 420 64 C520 58 560 108 650 120 C740 132 790 84 880 80 C980 76 1020 128 1110 132 C1210 136 1260 92 1340 98 C1390 102 1420 118 1440 124 V300 H0Z" fill="var(--serra-3)" />
         </motion.g>

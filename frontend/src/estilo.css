@@ -1380,14 +1380,14 @@ html, body { overflow-x: clip; }
   --serra-3: #e6b9b3; --serra-2: #c79aa8; --mangue: #6f8f88; --agua: #f2cdb0; --agua-brilho: #fff1de;
 }
 :root[data-tema="dark"] {
-  --ceu-0: var(--color-canvas); --ceu-1: #1b1736; --ceu-2: #3b2046; --ceu-3: #8a3f33; --ceu-brilho: rgba(255, 120, 60, .3);
-  --sol: #ff8f4d; --sol-halo: #ff7a3c;
-  --serra-3: #3a2a52; --serra-2: #261c3f; --mangue: #101d24; --agua: #2a1c3a; --agua-brilho: #8a4a3a;
+  --ceu-0: var(--color-canvas); --ceu-1: #0e1731; --ceu-2: #16224b; --ceu-3: #263a72; --ceu-brilho: rgba(140, 170, 255, .2);
+  --sol: #eef2fb; --sol-halo: #9db8ff;
+  --serra-3: #1d2b54; --serra-2: #141f41; --mangue: #0a1524; --agua: #16224b; --agua-brilho: #9db8ff;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) {
-  --ceu-0: var(--color-canvas); --ceu-1: #1b1736; --ceu-2: #3b2046; --ceu-3: #8a3f33; --ceu-brilho: rgba(255, 120, 60, .3);
-  --sol: #ff8f4d; --sol-halo: #ff7a3c;
-  --serra-3: #3a2a52; --serra-2: #261c3f; --mangue: #101d24; --agua: #2a1c3a; --agua-brilho: #8a4a3a;
+  --ceu-0: var(--color-canvas); --ceu-1: #0e1731; --ceu-2: #16224b; --ceu-3: #263a72; --ceu-brilho: rgba(140, 170, 255, .2);
+  --sol: #eef2fb; --sol-halo: #9db8ff;
+  --serra-3: #1d2b54; --serra-2: #141f41; --mangue: #0a1524; --agua: #16224b; --agua-brilho: #9db8ff;
 } }
 .hero { background:
   radial-gradient(46rem 24rem at 71% 84%, var(--ceu-brilho), transparent 70%),
@@ -1397,3 +1397,26 @@ main::before { background-image: none; -webkit-mask-image: none; mask-image: non
   background: radial-gradient(ellipse 60% 100% at 50% 0%, color-mix(in srgb, var(--azul) 6%, transparent), transparent 70%); }
 /* o brilho do sol nao pode ser cortado na borda da paisagem */
 .paisagem, .paisagem__svg { overflow: visible; }
+
+/* noite: o sol vira lua (com crateras) e aparecem estrelas paradas no ceu */
+.lua-crateras { opacity: 0; }
+:root[data-tema="dark"] .lua-crateras { opacity: 1; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) .lua-crateras { opacity: 1; } }
+:root[data-tema="dark"] .hero::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  -webkit-mask-image: linear-gradient(#000 25%, transparent 75%); mask-image: linear-gradient(#000 25%, transparent 75%);
+  background:
+    radial-gradient(1.4px 1.4px at 9% 18%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 17% 52%, #dfe8ff 60%, transparent 62%),
+    radial-gradient(1.6px 1.6px at 26% 12%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 34% 40%, #cfdcff 60%, transparent 62%),
+    radial-gradient(1.3px 1.3px at 43% 24%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 55% 58%, #dfe8ff 60%, transparent 62%),
+    radial-gradient(1.5px 1.5px at 63% 10%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 71% 36%, #cfdcff 60%, transparent 62%),
+    radial-gradient(1.4px 1.4px at 82% 20%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 90% 48%, #dfe8ff 60%, transparent 62%),
+    radial-gradient(1.2px 1.2px at 96% 14%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 5% 64%, #cfdcff 60%, transparent 62%); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) .hero::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  -webkit-mask-image: linear-gradient(#000 25%, transparent 75%); mask-image: linear-gradient(#000 25%, transparent 75%);
+  background:
+    radial-gradient(1.4px 1.4px at 9% 18%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 17% 52%, #dfe8ff 60%, transparent 62%),
+    radial-gradient(1.6px 1.6px at 26% 12%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 34% 40%, #cfdcff 60%, transparent 62%),
+    radial-gradient(1.3px 1.3px at 43% 24%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 55% 58%, #dfe8ff 60%, transparent 62%),
+    radial-gradient(1.5px 1.5px at 63% 10%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 71% 36%, #cfdcff 60%, transparent 62%),
+    radial-gradient(1.4px 1.4px at 82% 20%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 90% 48%, #dfe8ff 60%, transparent 62%),
+    radial-gradient(1.2px 1.2px at 96% 14%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 5% 64%, #cfdcff 60%, transparent 62%); } }
