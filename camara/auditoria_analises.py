@@ -109,12 +109,18 @@ def main(chaves: list[str]) -> None:
     _, versao = AN._prompt()
     alvos = chaves or sorted(p.stem for p in (DADOS / "analises").glob("*.json")
                              if json.loads(p.read_text("utf-8")).get("versao_prompt") == versao)
+    pausa = float(os.environ.get("PAUSA", "12"))
     for k in alvos:
-        try:
-            auditar(k, requests)
-        except Exception as e:  # noqa: BLE001
-            print(f"  ! {k}: {e!r}"[:200])
-        time.sleep(4)
+        for tentativa in range(3):
+            try:
+                auditar(k, requests)
+                break
+            except Exception as e:  # noqa: BLE001
+                print(f"  ! {k} (tentativa {tentativa + 1}): {e!r}"[:200])
+                if "429" not in str(e):
+                    break
+                time.sleep(60 * (tentativa + 1))  # cota por minuto do Gemini
+        time.sleep(pausa)
 
 
 if __name__ == "__main__":
