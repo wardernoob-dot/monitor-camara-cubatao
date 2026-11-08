@@ -35,6 +35,14 @@ const CAMINHOS = [
   { to: "/como-funciona", icone: ICONE.escudo, titulo: "Como os dados são conferidos", texto: "De onde vem cada informação, como lemos o painel e o que o site não consegue saber.", chamada: "Ver o método" },
 ];
 
+/* Rotulo mais curto so para o card; o rotulo completo continua na pagina do projeto. */
+const situacaoCurta = (t: string) => t
+  .replace(/^Parecer em conjunto favor[áa]vel: /i, "Parecer favorável ")
+  .replace(/^Parecer contr[áa]rio: /i, "Parecer contrário ")
+  .replace(/Vetado pelo prefeito \((integral|parcial)\); falta a C[âa]mara votar o veto/i, "Vetado, falta votar o veto")
+  .replace(/Vetado pelo prefeito \((integral|parcial)\); veto mantido/i, "Vetado, veto mantido")
+  .replace(/^Na pauta, sem vota[çc][ãa]o registrada$/i, "Na pauta");
+
 function Carrossel({ itens }: { itens: { m: Materia; v: Votacao | null }[] }) {
   const trilho = useRef<HTMLUListElement>(null);
   const ir = (d: number) => {
@@ -58,7 +66,7 @@ function Carrossel({ itens }: { itens: { m: Materia; v: Votacao | null }[] }) {
         {itens.map(({ m, v }) => (
           <li key={m.slug} className="proj" onPointerMove={luz}>
             <span className="proj__id">{m.titulo}</span>
-            <span className="proj__situacao">{m.situacao}</span>
+            <span className="proj__situacao">{situacaoCurta(m.situacao)}</span>
             <span className="proj__ementa">{m.explicacao?.texto ?? m.assunto.toLowerCase().replace(/cubat[ãa]o/g, "Cubatão")}</span>
             <span className="proj__rodape">
               {v && v.sim != null ? <span>{v.sim} a favor{v.nao ? ` · ${v.nao} contra` : ""} · {dataCurta(v.data)}</span> : <span>{dataCurta(m.ultima_data)}</span>}
