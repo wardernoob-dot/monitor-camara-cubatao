@@ -1,6 +1,6 @@
 ---
 id: remanejamento-orcamento
-status: rascunho
+status: publicado
 data: 2026-11-07
 ordem: 3
 chapeu: Dinheiro da cidade
@@ -14,7 +14,7 @@ foto_credito: Ulrich Peters
 foto_licenca: CC BY-SA 2.0, via Wikimedia Commons
 foto_link: https://commons.wikimedia.org/wiki/File:Vista_parcial_de_Cubat%C3%A3o_SP_a_partir_da_Serra_do_Mar.jpg
 foto_ilustrativa: não
-aprovado_por:
+aprovado_por: Reginaldo
 ---
 ## O que é esse limite
 
