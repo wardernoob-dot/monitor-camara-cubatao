@@ -318,9 +318,22 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
     corpo, versao = _prompt()
     rel = {"novas": 0, "em_cache": 0, "sem_documento": 0, "ocr": 0, "erros": []}
     vistas = set()
-    for arq in sorted((dados / "consolidado").glob("*.json"), reverse=True):  # mais recentes primeiro
-        for m in json.loads(arq.read_text("utf-8"))["materias"]:
-            if m["tipo"] not in TIPOS_ANALISADOS or m["tipo"] == "VETO" or not m.get("numero") or not m["votacoes"]:
+
+    def candidatos():
+        # 1) votadas (consolidado), mais recentes primeiro; 2) qualquer projeto publicado no site da Camara
+        for arq in sorted((dados / "consolidado").glob("*.json"), reverse=True):
+            for m in json.loads(arq.read_text("utf-8"))["materias"]:
+                if m.get("votacoes"):
+                    yield m
+        idx = json.loads((dados / "indice.json").read_text("utf-8"))
+        for meta in sorted(idx.values(), key=lambda x: x.get("baixado_em") or "", reverse=True):
+            tna = url_projeto(meta.get("url") or "") if meta.get("secao") == "projetos" else None
+            if tna and not re.search(r"(?i)of[íi]cio|of\._|veto", meta.get("url") or ""):
+                yield {"tipo": tna[0], "numero": str(int(tna[1])), "ano": tna[2], "assunto": meta.get("titulo"),
+                       "autoria": None, "votacoes": []}
+
+    for m in candidatos():
+            if m["tipo"] not in TIPOS_ANALISADOS or m["tipo"] == "VETO" or not m.get("numero"):
                 continue  # vetos: analisar_vetos(), com prompt proprio
             k = chave_materia(m["tipo"], m["numero"], m.get("ano"))
             if k in vistas:
