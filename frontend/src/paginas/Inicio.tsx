@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { useDados, type Vereador, type Votacao } from "../dados";
+import { useDados, type Materia, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda, TagPartido } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
@@ -35,6 +35,42 @@ const CAMINHOS = [
   { to: "/como-funciona", icone: ICONE.escudo, titulo: "Como os dados são conferidos", texto: "De onde vem cada informação, como lemos o painel e o que o site não consegue saber.", chamada: "Ver o método" },
 ];
 
+function Carrossel({ itens }: { itens: { m: Materia; v: Votacao | null }[] }) {
+  const trilho = useRef<HTMLUListElement>(null);
+  const ir = (d: number) => {
+    const el = trilho.current;
+    if (el) el.scrollBy({ left: d * Math.max(280, el.clientWidth * 0.8), behavior: "smooth" });
+  };
+  return (
+    <section className="carrossel" aria-labelledby="carrossel-titulo">
+      <header className="cab-secao cab-secao--lado">
+        <div>
+          <p className="cab-secao__selo">Voto a voto</p>
+          <h2 id="carrossel-titulo" className="cab-secao__titulo">Saiba quem votou o quê</h2>
+          <p className="cab-secao__texto">Os projetos mais importantes da Câmara em 2026, com o placar de cada votação. Abra um para ver como cada vereador votou.</p>
+        </div>
+        <div className="carrossel__ctl">
+          <button type="button" className="carrossel__seta" onClick={() => ir(-1)} aria-label="Projetos anteriores">←</button>
+          <button type="button" className="carrossel__seta" onClick={() => ir(1)} aria-label="Próximos projetos">→</button>
+        </div>
+      </header>
+      <ul className="carrossel__trilho" ref={trilho} tabIndex={0} aria-label="Projetos votados, role para o lado">
+        {itens.map(({ m, v }) => (
+          <li key={m.slug} className="proj" onPointerMove={luz}>
+            <span className="proj__id">{m.titulo}</span>
+            <span className="proj__situacao">{m.situacao}</span>
+            <span className="proj__ementa">{m.assunto.toLowerCase().replace(/cubat[ãa]o/g, "Cubatão")}</span>
+            <span className="proj__rodape">
+              {v && v.sim != null ? <span>{v.sim} a favor{v.nao ? ` · ${v.nao} contra` : ""} · {dataCurta(v.data)}</span> : <span>{dataCurta(m.ultima_data)}</span>}
+              <Link to={`/projetos/${m.slug}`} className="proj__link esticado" aria-label={`Ver o projeto ${m.titulo}`}><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></Link>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 const luz = (e: React.PointerEvent<HTMLElement>) => {
   const r = e.currentTarget.getBoundingClientRect();
   e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
@@ -63,6 +99,13 @@ export default function Inicio() {
   const recentes = useMemo(() => [...b.votacoes].filter((v) => v.resultado).reverse().slice(0, 20), [b]);
   const presidente = b.atuais.find((v) => v.cargo === "presidente");
   const destaques = useMemo(() => b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").slice(0, 6), [b]);
+  const votados = useMemo(() => {
+    const porId = new Map(b.votacoes.map((v) => [v.id, v]));
+    return b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta")
+      .map((m) => ({ m, v: porId.get(m.eventos[m.eventos.length - 1]) ?? null }))
+      .filter((x) => x.v && x.v.sim != null)
+      .sort((x, y) => y.v!.data.localeCompare(x.v!.data)).slice(0, 8);
+  }, [b]);
   const rolagem = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = rolagem.current;
@@ -110,10 +153,11 @@ export default function Inicio() {
       </section>
 
       <div className="pagina pagina--larga">
+        {votados.length > 2 && <Carrossel itens={votados} />}
         <section className="caminhos" aria-labelledby="caminhos-titulo">
           <header className="cab-secao">
-            <p className="cab-secao__selo">Comece por aqui</p>
-            <h2 id="caminhos-titulo" className="cab-secao__titulo">Por onde você quer começar?</h2>
+            <p className="cab-secao__selo">Explore o site</p>
+            <h2 id="caminhos-titulo" className="cab-secao__titulo">O que você quer saber?</h2>
           </header>
           <ul className="caminhos__lista">
             {CAMINHOS.map((c, i) => (
