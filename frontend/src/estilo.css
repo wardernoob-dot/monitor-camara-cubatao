@@ -1362,3 +1362,13 @@ html, body { overflow-x: clip; }
 .nota--foco { animation: nota-foco 1.8s var(--ease); }
 @keyframes nota-foco { 0%, 60% { background: var(--azul-claro); box-shadow: 0 0 0 8px var(--azul-claro); border-radius: 8px; } 100% { background: transparent; box-shadow: 0 0 0 8px transparent; } }
 @media (prefers-reduced-motion: reduce) { .nota--foco { animation: none; background: var(--azul-claro); } }
+
+/* nota de rodape da pagina do vereador: fonte do partido */
+.nota-fonte { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin: 2.5rem 0 0; padding: 1rem 1.2rem; border: 1px dashed var(--color-surface-2); border-radius: 16px; background: color-mix(in srgb, var(--color-surface-1) 60%, transparent); }
+.nota-fonte__n { flex: none; display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--azul-claro); color: var(--azul-escuro); font: 600 .78rem/1 var(--font-mono); }
+.nota-fonte__texto { flex: 1; min-width: 16rem; margin: 0; max-width: none; font-size: .9rem; line-height: 1.55; color: var(--color-secondary); }
+.nota-fonte__rotulo { display: block; margin-bottom: .15rem; font: 600 .62rem/1.2 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--color-surface-3); }
+.nota-fonte__link { margin-left: .2rem; font-weight: 500; color: var(--azul); text-decoration: none; white-space: nowrap; }
+.nota-fonte__link:hover { text-decoration: underline; }
+.nota-fonte .link-seta { font-size: .88rem; white-space: nowrap; }
+.nota-fonte.nota--foco { border-style: solid; border-color: var(--azul); }

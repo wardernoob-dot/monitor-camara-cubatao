@@ -227,10 +227,15 @@ export default function VereadorPagina() {
       </div>
 
       {v.partido && (
-        <p className="nota" id="nota-partido">
-          <sup>1</sup> Partido conforme {v.partido_fonte}{v.partido_url && <> (<a href={v.partido_url} rel="noopener noreferrer">fonte</a>)</>}.
-          {" "}<Link to={`/partidos/${slugPartido(v.partido)}`}>Ver o partido {v.partido} na Câmara</Link>.
-        </p>
+        <aside className="nota-fonte" id="nota-partido">
+          <span className="nota-fonte__n" aria-hidden="true">1</span>
+          <p className="nota-fonte__texto">
+            <span className="nota-fonte__rotulo">Fonte do partido</span>
+            Partido conforme {v.partido_fonte}.
+            {v.partido_url && <> <a href={v.partido_url} rel="noopener noreferrer" className="nota-fonte__link">Ver a fonte <span aria-hidden="true">↗</span></a></>}
+          </p>
+          <Link to={`/partidos/${slugPartido(v.partido)}`} className="link-seta">Ver o partido {v.partido} na Câmara <span aria-hidden="true">→</span></Link>
+        </aside>
       )}
     </div>
   );
