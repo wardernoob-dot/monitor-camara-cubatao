@@ -1,0 +1,78 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "16",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI O PROGRAMA CUBATÃO CONECTADA, DESTINADO À IMPLANTAÇÃO DE PONTOS DE ACESSO GRATUITO À INTERNET SEM FIO (WI-FI) EM LOCAIS PÚBLICOS ESTRATÉGICOS DO MUNICÍPIO DE CUBATÃO, MEDIANTE COOPERAÇÃO COM EMPRESAS PRESTADORAS DE SERVIÇOS DE TELECOMUNICAÇÕES, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2016.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o programa Cubatão Conectada para levar internet sem fio gratuita a locais públicos da cidade. A instalação e a manutenção ficam por conta das empresas de telecomunicação (empresas de telefone e internet), sem custo para a Prefeitura. O objetivo é garantir inclusão digital e ajudar em áreas como educação, saúde e segurança.",
+  "o_que_muda": [
+   "Cria o programa Cubatão Conectada para oferecer internet sem fio gratuita em locais públicos e estratégicos.",
+   "A instalação e a manutenção dos pontos de Wi-Fi (internet sem fio) são feitas pelas empresas de telecomunicação.",
+   "As empresas maiores podem assumir um número maior de pontos de acesso de forma proporcional.",
+   "A Prefeitura e as empresas definem juntas o cronograma (calendário) de execução, olhando a demanda e a cobertura.",
+   "Os pontos de acesso ficam prioritariamente em praças, terminais de ônibus, postos de saúde, escolas, periferias e áreas de difícil acesso.",
+   "A Secretaria Municipal de Inovação e Tecnologia faz a gestão, acompanha os relatórios e fiscaliza o serviço.",
+   "As empresas devem enviar relatórios semestrais (a cada seis meses) com dados sobre pontos ativos, velocidade, disponibilidade e manutenção.",
+   "A lei entra em vigor na data em que for publicada."
+  ],
+  "quem_e_afetado": "Os moradores ganham o direito de acessar internet gratuita em locais públicos, com foco especial em regiões periféricas (bairros mais afastados) e áreas de difícil acesso. As empresas de telecomunicação ganham a obrigação de instalar e manter os pontos de Wi-Fi, além de enviar relatórios, tendo como contrapartida o uso gratuito do solo municipal e dos postes públicos.",
+  "de_onde_sai_o_dinheiro": "Não haverá ônus financeiro (custo) para o Município de Cubatão, pois a instalação e manutenção são feitas pelas empresas como contrapartida pelo uso gratuito do solo e dos postes públicos.",
+  "o_que_falta_definir": [
+   "O cronograma exato de execução e a lista final dos locais de instalação.",
+   "A quantidade exata de pontos de acesso que cada empresa vai assumir.",
+   "Os detalhes de como o Poder Executivo (Prefeitura) vai regulamentar a lei por decreto municipal."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "ônus financeiro",
+    "explicacao": "Significa custo ou gasto em dinheiro."
+   },
+   {
+    "termo": "contrapartida",
+    "explicacao": "Algo que alguém entrega ou faz em troca de um benefício recebido."
+   },
+   {
+    "termo": "ANATEL",
+    "explicacao": "Agência Nacional de Telecomunicações, órgão do governo que fiscaliza telefonia e internet no país."
+   },
+   {
+    "termo": "ANEEL",
+    "explicacao": "Agência Nacional de Energia Elétrica, órgão do governo que regula o setor de energia elétrica."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto busca garantir inclusão digital e acesso gratuito à internet em Cubatão sem gerar custos diretos ao município, usando o solo e os postes públicos como contrapartida. Ele afirma que seguir as normas da ANATEL (Agência Nacional de Telecomunicação) e da ANEEL (Agência Nacional de Energia Elétrica) traz segurança jurídica e evita questionamentos. O autor também aponta que Cubatão tem cerca de 114.870 habitantes em 2025, distribuídos em 142,8 km², o que reforça a necessidade de levar internet gratuita para regiões periféricas e de difícil acesso.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não define quais serão os prazos exatos para o início da instalação dos pontos de Wi-Fi nem quais empresas específicas vão participar em cada bairro.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto não gera custos para a Prefeitura, pois as empresas pagam o serviço usando o solo e os postes de graça.",
+    "trecho": "não haverá ônus financeiro para o Município de Cubatão, sendo a execução considerada contrapartida pelo uso gratuito do solo municipal"
+   },
+   {
+    "ponto": "A Secretaria Municipal de Inovação e Tecnologia é responsável pela gestão e fiscalização do programa.",
+    "trecho": "O Programa Cubatão Conectada terá gestão e fiscalização da Secretaria Municipal de Inovação e Tecnologia"
+   },
+   {
+    "ponto": "As empresas devem apresentar relatórios a cada seis meses para a Prefeitura.",
+    "trecho": "acompanhar e aferir o envio dos relatórios semestrais a serem apresentados pelas empresas à Prefeitura"
+   },
+   {
+    "ponto": "O texto não traz penalidades ou multas específicas para o caso de descumprimento pelas empresas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "973165f85243bb6e",
+ "gerado_em": "2026-11-08T05:19:47Z"
+}
