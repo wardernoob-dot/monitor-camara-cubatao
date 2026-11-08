@@ -91,8 +91,6 @@ export function Paisagem() {
         <GuaraVoo tamanho={30} atraso={-0.2} className="ave ave--4" />
         <GuaraVoo tamanho={34} atraso={-0.55} className="ave ave--5" />
       </motion.div>
-      <div className="paisagem__em-pe paisagem__em-pe--a"><Guara tamanho={54} /></div>
-      <div className="paisagem__em-pe paisagem__em-pe--b"><Guara tamanho={40} /></div>
     </div>
   );
 }

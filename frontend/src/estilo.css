@@ -945,17 +945,11 @@ form.busca input, form.busca select { width: 100%; min-width: 0; }
 .guara-asa { transform-origin: 30px 21px; animation: bater .55s ease-in-out infinite alternate; animation-delay: var(--atraso, 0s); }
 .guara-asa--longe { animation-delay: calc(var(--atraso, 0s) - .14s); opacity: .85; }
 @keyframes bater { from { transform: rotate(-18deg); } to { transform: rotate(26deg); } }
-.paisagem__em-pe { position: absolute; bottom: 7%; }
-.paisagem__em-pe--a { left: 63%; }
-.paisagem__em-pe--b { left: 71%; bottom: 5%; }
-.paisagem__em-pe .guara { animation: respira 6s ease-in-out infinite; transform-origin: 50% 100%; }
-.paisagem__em-pe--b .guara { animation-delay: -2.4s; }
-@keyframes respira { 50% { transform: translateY(-1.5px) rotate(-1.5deg); } }
-@media (prefers-reduced-motion: reduce) { .ave, .guara-asa, .paisagem__em-pe .guara { animation: none; } .ave { translate: 20vw 0; } .ave--2 { translate: 52vw 0; } .ave--3 { translate: 80vw 0; } .ave--4 { translate: 36vw 0; } .ave--5 { translate: 66vw 0; } }
+@media (prefers-reduced-motion: reduce) { .ave, .guara-asa { animation: none; } .ave { translate: 20vw 0; } .ave--2 { translate: 52vw 0; } .ave--3 { translate: 80vw 0; } .ave--4 { translate: 36vw 0; } .ave--5 { translate: 66vw 0; } }
 @media (max-width: 40rem) {
   .hero__dentro { padding: 3.5rem 1.25rem 11rem; }
   .paisagem { height: 12rem; }
-  .paisagem__em-pe--a { left: 56%; } .paisagem__em-pe--b { left: 70%; }
+
   .ave--4, .ave--5 { display: none; }
 }
 
