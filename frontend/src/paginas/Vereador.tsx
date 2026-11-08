@@ -81,7 +81,14 @@ export default function VereadorPagina() {
           <h1 className="titulo-pagina">{v.exibicao}</h1>
           <p className="perfil__civil">
             {v.nome}
-            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href="#nota-partido" aria-label="Fonte do partido">1</a></sup></>}
+            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href={`#/vereadores/${v.slug}`} aria-label="Fonte do partido" onClick={(e) => {
+              // as rotas usam #; um link "#nota-partido" trocaria a rota. Aqui só rola até a nota.
+              e.preventDefault();
+              const nota = document.getElementById("nota-partido");
+              nota?.scrollIntoView({ behavior: "smooth", block: "center" });
+              nota?.classList.add("nota--foco");
+              window.setTimeout(() => nota?.classList.remove("nota--foco"), 1800);
+            }}>1</a></sup></>}
             {!v.em_exercicio && ". Não está entre os 15 em exercício hoje"}
           </p>
           {v.cargo && (

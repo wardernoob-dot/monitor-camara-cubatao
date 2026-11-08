@@ -1357,3 +1357,8 @@ html, body { overflow-x: clip; }
 .votos__seg--ilegivel { background: var(--color-surface-3); }
 .racha__lado--ilegivel { --lado: var(--color-surface-3); }
 .votos__lados { align-items: start; }
+
+/* nota de rodape em destaque por um instante, depois de clicar no numero */
+.nota--foco { animation: nota-foco 1.8s var(--ease); }
+@keyframes nota-foco { 0%, 60% { background: var(--azul-claro); box-shadow: 0 0 0 8px var(--azul-claro); border-radius: 8px; } 100% { background: transparent; box-shadow: 0 0 0 8px transparent; } }
+@media (prefers-reduced-motion: reduce) { .nota--foco { animation: none; background: var(--azul-claro); } }
