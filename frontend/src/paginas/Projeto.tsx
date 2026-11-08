@@ -106,6 +106,16 @@ export default function ProjetoPagina() {
         </Secao>
       )}
 
+      {!m.analise && ["PL", "PLC", "PR", "PDL", "PELOM"].includes(m.tipo) && (
+        <Secao id="entenda" titulo="Entenda o projeto" classe="analise" aberta>
+          <p>
+            Ainda não temos a explicação completa deste projeto: {m.documento
+              ? <>não conseguimos ler o texto integral publicado pela Câmara (o PDF é imagem escaneada ou veio incompleto). Ele está na fila para ser transcrito; quando estiver pronto, a explicação aparece aqui. Enquanto isso, o <a href={m.documento} rel="noopener">PDF oficial</a> vale.</>
+              : <>a Câmara ainda não publicou o texto integral no site. Quando publicar, a explicação aparece aqui.</>}
+          </p>
+        </Secao>
+      )}
+
       {a && (
         <Secao id="entenda" titulo="Entenda o projeto" classe="analise" aberta>
           <p className="analise__aviso">
