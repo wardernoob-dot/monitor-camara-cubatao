@@ -1,11 +1,11 @@
 ---
 id: remanejamento-orcamento
 status: publicado
-data: 2026-11-07
+data: 2026-11-08
 ordem: 3
 chapeu: Dinheiro da cidade
-manchete: Prefeito pode mexer em até 19% do orçamento de 2026 sem pedir nova lei à Câmara
-linha_fina: O limite era de 10%. A Câmara aprovou o aumento em duas leis, depois de rejeitar uma versão de 20%.
+manchete: Câmara de Cubatão amplia limite para prefeito mexer no orçamento de 2026 para 19%
+linha_fina: Após rejeitar proposta de 20%, vereadores aprovaram índice de 19% para créditos suplementares; regra anterior permitia remanejar até 10% sem nova lei.
 projetos: pl-92-2026, pl-87-2026, pl-74-2026
 votacao: pl-92-2026 2026-10-29 1a_discussao
 foto_alt: Vista de Cubatão do alto da Serra do Mar, com a mata em primeiro plano, a cidade e o mangue ao fundo
@@ -16,23 +16,90 @@ foto_link: https://commons.wikimedia.org/wiki/File:Vista_parcial_de_Cubat%C3%A3o
 foto_ilustrativa: não
 aprovado_por: equipe Voto a voto
 ---
-## O que é esse limite
+## Em poucas palavras
 
-O orçamento de cada ano é uma lei: diz quanto a Prefeitura espera arrecadar e quanto pode gastar em cada área. Durante o ano, o prefeito pode reforçar uma despesa já prevista (o chamado crédito suplementar) por decreto, sem mandar um novo projeto para a Câmara, até um limite em porcentagem do total da despesa. Em 2026, esse limite era de 10%.
+A Prefeitura de Cubatão poderá alterar uma fatia maior do orçamento municipal de 2026 sem pedir autorização prévia aos vereadores.
 
-## Como mudou, passo a passo
+A Câmara aprovou a Lei 4.487, que eleva o limite de abertura de créditos suplementares de 10% para 19%.
 
-- **15 de setembro:** a Câmara aprovou por 11 a 3 o PL 74/2026, que virou a Lei 4.481. Ela muda a Lei de Diretrizes Orçamentárias (LDO) de 2026 e sobe de 10% para 20% o limite para crédito suplementar e para passar dinheiro de uma área para outra.
-- **20 de outubro:** a Câmara rejeitou o PL 87/2026, que levava os mesmos 20% para a lei do orçamento (LOA). O parecer favorável ao projeto teve 6 votos a favor e 8 contra.
-- **29 de outubro:** a Câmara aprovou o PL 92/2026, com limite de 19%, por 11 a 3 na primeira discussão e 10 a 3 na segunda. Virou a Lei 4.487, publicada no mesmo dia.
+Crédito suplementar é um dinheiro a mais colocado em uma despesa que já constava na lei orçamentária.
 
-## Por que importa
+## O que muda na prática
 
-Quanto maior o limite, maior a parte do orçamento que pode ser reforçada ou trocada de área durante o ano sem uma nova votação dos vereadores.
+O orçamento da cidade funciona como uma lei anual de planejamento financeiro.
 
-## O que o placar mostra
+Antes da nova lei, o prefeito só podia reforçar contas até o teto de 10% do gasto total.
 
-Guilherme do Salão, Marcinho e Rony Martins votaram contra o aumento nas três vezes. Batoré, Jair do Bar, Ronaldo da Comissão, Xuxa e Allan Matias votaram contra a versão de 20% em 20 de outubro e a favor da versão de 19% nove dias depois.
+Agora, o prefeito pode reforçar despesas (abrir créditos suplementares) em até 19% da despesa total, por decreto, sem nova votação na Câmara.
+
+Na Administração Direta, o limite de 19% calcula-se sobre os órgãos municipais, com exceção do Legislativo.
+
+A Câmara Municipal terá esse mesmo teto de 19% aplicado à sua própria despesa autorizada.
+
+Na Administração Indireta, que reúne autarquias e fundações, vale o índice de até 19% dos respectivos orçamentos.
+
+## O caminho das votações até o resultado final
+
+A definição do novo índice aconteceu após três projetos tramitarem no Legislativo de Cubatão durante 2026.
+
+- Em 15 de setembro, a Câmara aprovou o Projeto de Lei 74/2026 em duas discussões, por 11 a 3.
+- Esse projeto virou a Lei 4.481, que elevou para 20% o teto na Lei de Diretrizes Orçamentárias.
+- Em 20 de outubro, o plenário rejeitou o Projeto de Lei 87/2026: o parecer favorável a ele teve 6 votos a favor e 8 contra.
+- O PL 87 pretendia fixar o limite de 20% também na Lei Orçamentária Anual da cidade.
+- Em 29 de outubro, a Câmara aprovou o Projeto de Lei 92/2026, nova proposta do prefeito com limite de 19%. Ele virou a Lei 4.487.
+
+## Como foi a votação do projeto final
+
+A votação definitiva do Projeto de Lei 92/2026 ocorreu em sessão realizada no dia 29 de outubro de 2026.
+
+Primeiro, o plenário rejeitou um parecer contrário ao texto por 11 votos contra 3.
+
+Na primeira discussão, o projeto acabou aprovado com emenda por 11 votos favoráveis e 3 contrários.
+
+Na segunda discussão e redação final, o plenário confirmou o texto por 10 votos a 3.
+
+## O que o prefeito disse para justificar
+
+Segundo o prefeito Cesar da Silva Nascimento, a trava anterior de 10% prejudicava o ritmo dos serviços municipais.
+
+Segundo o chefe do Executivo, a insuficiência exigia enviar muitos projetos pontuais, atrasando políticas públicas municipais.
+
+O prefeito argumentou que a proposta buscava harmonizar a lei do orçamento com as diretrizes orçamentárias.
+
+Ele afirmou no documento que a ampliação não cria despesa nova nem representa renúncia de receita.
+
+## De onde sai o dinheiro e quais são as regras
+
+A abertura de créditos suplementares depende obrigatoriamente da comprovação de dinheiro disponível nos cofres públicos.
+
+A lei federal exige fontes específicas para essa movimentação de valores:
+
+- Superávit financeiro deixado no balanço do ano anterior (saldo positivo de recursos).
+- Excesso de arrecadação quando a arrecadação superar o valor previsto originalmente.
+- Anulação parcial ou total de verbas já reservadas para outras despesas do município.
+- Recursos vindos de operações de crédito formalmente autorizadas por lei.
+
+A justificativa reforça que as metas fiscais e os limites com despesa de pessoal permanecem inalterados.
+
+Além disso, a Lei de Diretrizes Orçamentárias prevê despesas que não entram nessa conta do limite.
+
+Ficam de fora gastos com pessoal, encargos sociais, previdência, dívida pública, precatórios e emendas impositivas.
+
+## O que acontece agora
+
+O projeto virou a Lei Municipal 4.487 e já está em pleno vigor em Cubatão.
+
+A promulgação e a publicação oficial no Diário Oficial ocorreram no próprio dia 29 de outubro de 2026.
+
+Com isso, a administração municipal poderá usar o limite de 19% ao longo de todo o ano de 2026.
+
+## Palavras difíceis
+
+- Crédito suplementar: autorização para colocar dinheiro extra em um programa ou gasto já existente no orçamento.
+- LOA (Lei Orçamentária Anual): lei que detalha as despesas e receitas da Prefeitura para o ano seguinte.
+- LDO (Lei de Diretrizes Orçamentárias): norma que estabelece as metas e regras para a elaboração do orçamento anual.
+- Dotação orçamentária: quantia exata de dinheiro destinada a um serviço, compra ou obra pública específica.
+- Superávit financeiro: sobra de caixa apurada ao final do ano anterior, após pagar todas as obrigações.
 
 ## Documentos
 
