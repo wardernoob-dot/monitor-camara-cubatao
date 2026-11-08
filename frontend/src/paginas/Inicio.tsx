@@ -41,13 +41,6 @@ const luz = (e: React.PointerEvent<HTMLElement>) => {
   e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
 };
 
-const EXPLORAR = [
-  { area: "Vereadores", texto: "Quem são, como votaram e como atuam.", links: [["Os 15 vereadores", "/vereadores"], ["Índice de Atuação", "/ranking"]] },
-  { area: "Projetos", texto: "O que foi apresentado, votado, vetado ou virou lei.", links: [["Todos os projetos", "/projetos"], ["Projetos em destaque", "/projetos?destaque=1"]] },
-  { area: "Sessões", texto: "Pauta, presença e votações dia a dia.", links: [["Todas as sessões", "/sessoes"], ["Partidos e a Prefeitura", "/partidos"]] },
-  { area: "Método e dados", texto: "De onde vem cada informação e como baixar.", links: [["Como funciona", "/como-funciona"], ["Como o índice é calculado", "/como-funciona#indice"], ["Dados abertos (JSON)", "./data/dados.json"]] },
-] as const;
-
 const PASSOS: { n: string; titulo: string; texto: ReactNode }[] = [
   { n: "01", titulo: "Documentos oficiais", texto: <>Pautas, resumos de sessão, projetos e <Termo chave="diario">Diário Oficial</Termo>, guardados com um código de verificação (<Termo chave="sha256">SHA-256</Termo>).</> },
   { n: "02", titulo: "Painel da transmissão", texto: <>O voto de cada vereador é lido pela cor do quadrado no <Termo chave="painel">painel</Termo> do YouTube, sem IA.</> },
@@ -348,22 +341,6 @@ export default function Inicio() {
           </ul>
         </section>
 
-        <section className="explorar" aria-labelledby="explorar-titulo">
-          <header className="cab-secao"><p className="cab-secao__selo">Mapa do site</p><h2 id="explorar-titulo" className="cab-secao__titulo">Explorar o site</h2></header>
-          <div className="explorar__grade">
-            {EXPLORAR.map((e) => (
-              <div key={e.area} className="explorar__area">
-                <h3 className="explorar__nome">{e.area}</h3>
-                <p className="explorar__texto">{e.texto}</p>
-                <ul className="explorar__links">
-                  {e.links.map(([t, to]) => (
-                    <li key={t}>{to.startsWith("./") ? <a href={to}>{t}</a> : <Link to={to}>{t}</Link>}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
 
       <Modal aberto={!!par} aoFechar={fecha} titulo={par ? `${par.a.exibicao} e ${par.b.exibicao}` : ""}>

@@ -68,12 +68,6 @@ function Rodape() {
             <p className="rodape__lema">Como cada vereador de {meta.cidade} votou, com a fonte de cada voto.</p>
             <GuaraVoo tamanho={44} className="rodape__voo" />
           </div>
-          <nav className="rodape__col" aria-label="Navegar">
-            <h2 className="rodape__titulo">Navegar</h2>
-            <ul>
-              {SECOES.map(([para, nome]) => <li key={para}><Link to={para}>{nome}</Link></li>)}
-            </ul>
-          </nav>
           <nav className="rodape__col" aria-label="Método">
             <h2 className="rodape__titulo">Método</h2>
             <ul>
@@ -93,8 +87,7 @@ function Rodape() {
         </div>
         <div className="rodape__base">
           <p>
-            Dados públicos da Câmara Municipal de {meta.cidade}, reunidos automaticamente a partir do painel de votação exibido na transmissão
-            oficial, dos resumos das sessões, das pautas e do Diário Oficial. Projeto independente, sem vínculo com a Câmara.
+            Dados públicos da Câmara Municipal de {meta.cidade}. Projeto independente, sem vínculo com a Câmara. De onde vem cada informação está em <Link to="/como-funciona">Como funciona</Link>.
           </p>
           <p className="rodape__data">Atualizado em {d.toLocaleDateString("pt-BR")}</p>
         </div>
