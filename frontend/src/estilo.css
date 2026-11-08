@@ -1372,3 +1372,20 @@ html, body { overflow-x: clip; }
 .nota-fonte__link:hover { text-decoration: underline; }
 .nota-fonte .link-seta { font-size: .88rem; white-space: nowrap; }
 .nota-fonte.nota--foco { border-style: solid; border-color: var(--azul); }
+
+/* ceu de amanhecer (parado): sem grade nem fundo animado; so os guaras se mexem */
+.hero { background:
+  radial-gradient(52rem 24rem at 80% 70%, color-mix(in srgb, var(--guara) 13%, transparent), transparent 65%),
+  radial-gradient(60rem 26rem at 12% 8%, color-mix(in srgb, var(--azul) 9%, transparent), transparent 62%),
+  linear-gradient(180deg, var(--color-canvas) 20%, color-mix(in srgb, var(--serra-3) 70%, var(--color-canvas)) 100%); }
+:root[data-tema="dark"] .hero { background:
+  radial-gradient(52rem 24rem at 80% 70%, color-mix(in srgb, var(--guara) 9%, transparent), transparent 65%),
+  radial-gradient(60rem 26rem at 12% 8%, color-mix(in srgb, var(--azul) 12%, transparent), transparent 62%),
+  linear-gradient(180deg, var(--color-canvas) 20%, color-mix(in srgb, var(--serra-3) 80%, var(--color-canvas)) 100%); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) .hero { background:
+  radial-gradient(52rem 24rem at 80% 70%, color-mix(in srgb, var(--guara) 9%, transparent), transparent 65%),
+  radial-gradient(60rem 26rem at 12% 8%, color-mix(in srgb, var(--azul) 12%, transparent), transparent 62%),
+  linear-gradient(180deg, var(--color-canvas) 20%, color-mix(in srgb, var(--serra-3) 80%, var(--color-canvas)) 100%); } }
+/* paginas internas: no lugar da grade, so uma luz suave no topo */
+main::before { background-image: none; -webkit-mask-image: none; mask-image: none; opacity: 1; height: 24rem;
+  background: radial-gradient(ellipse 60% 100% at 50% 0%, color-mix(in srgb, var(--azul) 6%, transparent), transparent 70%); }

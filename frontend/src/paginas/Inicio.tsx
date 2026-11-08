@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useDados, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda, TagPartido } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
-import { Barras, COR, FeedVotacoes, Funil, GradeHero, Heatmap, Modal } from "../viz";
+import { Barras, COR, FeedVotacoes, Funil, Heatmap, Modal } from "../viz";
 import { IndiceMini } from "../indice";
 import { Painel } from "../painel";
 import { Paisagem } from "../guara";
@@ -76,9 +76,6 @@ export default function Inicio() {
     if (el) el.scrollLeft = el.scrollWidth;
   }, [colunas]);
 
-  const hero = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: hero, offset: ["start start", "end start"] });
-  const opacidadeGrade = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   const [par, setPar] = useState<{ a: Vereador; b: Vereador } | null>(null);
   const fecha = useCallback(() => setPar(null), []);
@@ -96,8 +93,7 @@ export default function Inicio() {
 
   return (
     <>
-      <section ref={hero} className="hero" aria-labelledby="titulo-inicio">
-        <motion.div className="hero__fundo" style={{ opacity: reduz ? 1 : opacidadeGrade }}><GradeHero /></motion.div>
+      <section className="hero" aria-labelledby="titulo-inicio">
         <Paisagem />
         <div className="hero__dentro">
           <p className="hero__selo">Câmara Municipal de Cubatão · 2026</p>
