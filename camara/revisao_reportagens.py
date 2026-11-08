@@ -67,7 +67,7 @@ PROVA (obrigatório)
 - Se um fato não está nos documentos, não escreva.
 
 FORMATO DA RESPOSTA: só JSON, assim:
-{{"manchete": "até 90 caracteres, informativa, sem clique fácil",
+{{"manchete": "até 80 caracteres, no estilo do site: o impacto direto na vida do morador, como ele sentiria (ex.: 'Estacionar na rua vai ser pago em parte de Cubatão a partir de 2027', 'Prefeito pode mexer em até 19% do orçamento sem pedir nova lei à Câmara'); fato verdadeiro, sem acusação nem adjetivo",
   "linha_fina": "até 200 caracteres",
   "blocos": [
     {{"tipo": "h", "texto": "Título da seção"}},
@@ -267,15 +267,16 @@ def revisar(rid: str, http=None) -> dict:
     corpo = _md_corpo(blocos) + (f"\n## Documentos\n{docs_md.group(1).rstrip()}\n" if docs_md else "")
     cab = arq.read_text("utf-8").split("\n---\n", 1)[0] + "\n"
     cab = re.sub(r"(?m)^status: .*$", "status: rascunho", cab)
-    cab = re.sub(r"(?m)^manchete: .*$", "manchete: " + str(saida.get("manchete") or r["manchete"]).strip(), cab)
-    cab = re.sub(r"(?m)^linha_fina: .*$", "linha_fina: " + str(saida.get("linha_fina") or r["linha_fina"]).strip(), cab)
+    # manchete e linha fina ficam as do arquivo (escolha editorial do dono do projeto); a sugestao vai pra conferencia
     SAIDA.mkdir(parents=True, exist_ok=True)
     (SAIDA / f"{rid}.md").write_text(cab + "---\n" + corpo, "utf-8")
 
     ok = sum(1 for x in rel if x["mantido"])
     linhas = [f"# Conferência: {rid}", "",
               f"Modelo: {modelo} · prompt {VERSAO_PROMPT} · documentos: {', '.join(docs)}",
-              f"Frases mantidas: {ok} de {len(rel)} (sem trecho achado no documento = fora do texto).", ""]
+              f"Frases mantidas: {ok} de {len(rel)} (sem trecho achado no documento = fora do texto).", "",
+              f"Sugestão de manchete (não aplicada): {saida.get('manchete', '')}",
+              f"Sugestão de linha fina (não aplicada): {saida.get('linha_fina', '')}", ""]
     for x in rel:
         linhas.append(f"- {'OK ' if x['mantido'] else 'FORA'} [{x['secao']}] {x['texto']}")
         for f in x["fontes"]:

@@ -4,8 +4,8 @@ status: publicado
 data: 2026-11-08
 ordem: 2
 chapeu: Dinheiro da cidade
-manchete: Câmara de Cubatão rejeita empréstimo de até R$ 500 milhões da Prefeitura com a Caixa
-linha_fina: Por 8 votos a 6, vereadores aprovaram parecer contrário de comissão; verba financiaria obras de drenagem, saneamento e infraestrutura urbana.
+manchete: Câmara barra empréstimo de até R$ 500 milhões com a Caixa
+linha_fina: O dinheiro iria para obras de infraestrutura e saneamento. Venceu, por 8 a 6, o parecer contrário ao projeto.
 projetos: pl-75-2026
 votacao: pl-75-2026 2026-10-20 parecer
 foto_alt: Homem entrando em uma agência da Caixa Econômica Federal, com a fachada azul e o logotipo da Caixa

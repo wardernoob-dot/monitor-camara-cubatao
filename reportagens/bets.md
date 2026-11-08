@@ -4,8 +4,8 @@ status: publicado
 data: 2026-11-08
 ordem: 4
 chapeu: Saúde
-manchete: Cubatão cria programa contra vício em apostas online e jogos virtuais
-linha_fina: A Lei 4.484 estabelece campanha permanente e ações de saúde. O prefeito vetou um trecho e a decisão segue para a Câmara.
+manchete: Cubatão cria programa contra o vício em apostas online
+linha_fina: A lei foi aprovada sem votos contrários. O prefeito vetou um trecho, e a Câmara ainda precisa votar o veto.
 projetos: pl-178-2025
 votacao: pl-178-2025 2026-09-08 2a_discussao
 foto_alt: Celular sobre a mesa com um site de apostas esportivas aberto na tela

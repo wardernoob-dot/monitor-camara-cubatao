@@ -4,8 +4,8 @@ status: publicado
 data: 2026-11-08
 ordem: 1
 chapeu: Mexe no bolso
-manchete: Cubatão cria estacionamento rotativo pago nas ruas a partir de 2027
-linha_fina: Lei municipal foi sancionada em março de 2026. Ruas escolhidas, horários e valores da tarifa ainda dependem de decretos.
+manchete: Estacionar na rua vai ser pago em parte de Cubatão a partir de 2027
+linha_fina: Lei aprovada em março cria o estacionamento rotativo. Quais ruas e quanto vai custar ainda não foram definidos.
 projetos: pl-190-2025
 votacao: pl-190-2025 2026-03-17 1a_discussao
 foto_alt: Parquímetro amarelo e cinza na calçada, com carros passando na avenida ao fundo
