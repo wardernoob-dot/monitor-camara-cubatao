@@ -1482,3 +1482,8 @@ input:not([type="checkbox"]):not([type="radio"]), textarea { cursor: text; }
 .rodape__col a:hover { color: var(--rd-hover); }
 .rodape__glifo { background: var(--rd-tile-bg); border-color: var(--rd-tile-borda); }
 .rodape__base { border-top-color: var(--rd-linha); }
+
+/* camada da frente: no claro termina numa base verde-salvia firme (da chao a paisagem); no escuro continua se desfazendo na neblina */
+:root { --m1: #bed2c5; --m3: #a6c6b5; --base-frente: #6f9784; }
+:root[data-tema="dark"] { --base-frente: var(--neblina); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --base-frente: var(--neblina); } }

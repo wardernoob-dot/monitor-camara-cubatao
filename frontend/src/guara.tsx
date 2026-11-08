@@ -119,7 +119,7 @@ export function Paisagem() {
           </linearGradient>
           <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--m3)" />
-            <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
+            <stop offset=".85" stopColor="var(--base-frente)" />
           </linearGradient>
           <linearGradient id="m4" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--m4)" />
