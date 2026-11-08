@@ -12,39 +12,56 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Cria o atendimento domiciliar em saúde para pessoas com Transtorno do Espectro Autista (TEA) com alta sensibilidade sensorial na rede pública de Cubatão.",
+  "resumo": "Este projeto cria o atendimento de saúde em casa para pessoas com autismo que têm muita sensibilidade a barulhos, luzes e cheiros. A ideia é ajudar quem não consegue ir até os postos de saúde por causa dessa condição. O atendimento inclui médicos, remédios e apoio para as famílias dentro de casa.",
   "o_que_muda": [
-   "Institui atendimento domiciliar para pessoas com TEA que têm alta sensibilidade sensorial ou necessidade médica para tal.",
-   "Permite que o atendimento inclua consultas, acompanhamento psicológico, terapias, administração de remédios e orientação a famílias.",
-   "Exige laudo médico ou relatório técnico para o encaminhamento ao atendimento domiciliar.",
-   "Dá à Secretaria Municipal de Saúde a possibilidade de criar protocolos e equipes para a execução da política."
+   "A rede pública de saúde de Cubatão passa a oferecer atendimento na casa de pessoas com autismo com alta sensibilidade sensorial.",
+   "O atendimento em casa pode incluir consultas médicas, de enfermagem, acompanhamento psicológico ou psiquiátrico.",
+   "Também podem ser oferecidos serviços de terapeutas ocupacionais, fonoaudiólogos, fisioterapeutas e administração de remédios.",
+   "O serviço inclui avaliação e orientação para as famílias e cuidadores dos pacientes.",
+   "Para conseguir o atendimento em casa, é preciso apresentar um laudo médico ou relatório de profissional habilitado."
   ],
-  "quem_e_afetado": "Pessoas com Transtorno do Espectro Autista (TEA) com alta sensibilidade sensorial em Cubatão, além de seus familiares e cuidadores.",
-  "justificativa_do_autor": "Segundo o autor, o projeto garante acesso digno à saúde para autistas que não conseguem ir a unidades clínicas convencionais devido à sensibilidade a sons, luzes e cheiros, evitando traumas e cumprindo princípios do SUS.",
+  "quem_e_afetado": "Pessoas com Transtorno do Espectro Autista que têm alta sensibilidade sensorial e não conseguem ir a ambientes externos ganham o direito ao atendimento em casa. Familiares e cuidadores também são afetados porque recebem orientação e avaliação. O texto não diz quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "Os gastos saem do próprio orçamento da prefeitura, que poderá receber reforço de dinheiro se faltar.",
+  "o_que_falta_definir": [
+   "A Secretaria Municipal de Saúde precisa definir os protocolos clínicos e os fluxos de atendimento.",
+   "O texto não define quais equipes específicas serão criadas para realizar o serviço.",
+   "A lei não traz prazos para o início do atendimento domiciliar após a sua aprovação."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Transtorno do Espectro Autista (TEA)",
+    "explicacao": "Condição do cérebro que afeta a comunicação, o comportamento e a forma como a pessoa interage com o mundo."
+   },
+   {
+    "termo": "equipe multidisciplinar",
+    "explicacao": "Grupo formado por profissionais de várias áreas da saúde trabalhando juntos."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro reservado no orçamento do governo para pagar por uma despesa."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, muitos autistas com níveis 2 e 3 de suporte sofrem com sons, luzes e cheiros dos postos de saúde, o que causa crises e pânico. O autor afirma que ir ao posto vira uma experiência traumática e que leis federais garantem atendimento humanizado e adaptado. Ele diz ainda que o projeto preenche uma lacuna na cidade e traz mais dignidade e respeito aos autistas.",
   "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber quanto a medida custará aos cofres públicos nem se há equipes suficientes na prefeitura para suprir essa demanda.",
+  "limitacoes": "O texto não define prazos para o atendimento começar, nem quais profissionais exatos farão parte das equipes.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto não define um prazo específico para que o atendimento domiciliar comece a funcionar.",
-    "trecho": ""
-   },
-   {
-    "ponto": "A Secretaria Municipal de Saúde tem a opção, mas não a obrigação imediata, de estabelecer protocolos e equipes específicas.",
-    "trecho": "A Secretaria Municipal de Saúde poderá estabelecer protocolos clínicos, fluxos de atendimento e equipes específicas"
-   },
-   {
-    "ponto": "As despesas da lei usarão o orçamento próprio da prefeitura, podendo ser suplementado se necessário.",
+    "ponto": "O projeto prevê uso de verba própria da prefeitura e reforço de dinheiro se for necessário.",
     "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
    },
    {
-    "ponto": "O texto não cita penalidades para o caso de o atendimento não ser fornecido.",
+    "ponto": "O texto não traz prazos para o início do atendimento após a publicação da lei.",
     "trecho": ""
+   },
+   {
+    "ponto": "A lei começa a valer logo no dia em que for publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação"
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "efb157e325262b37",
- "gerado_em": "2026-11-05T18:41:39Z"
+ "gerado_em": "2026-11-08T03:21:58Z"
 }

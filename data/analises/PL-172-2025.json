@@ -12,37 +12,34 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto dá o nome de \"Rua Antonio Medeiros Bezerra\" a um logradouro público localizado entre a Rua São Francisco de Assis e a Avenida Nossa Senhora da Lapa.",
+  "resumo": "Este projeto de lei dá um nome oficial a uma rua de Cubatão. A via escolhida fica entre a Rua São Francisco de Assis e a Avenida Nossa Senhora da Lapa, atrás do mercado Bonsucesso. A nova denominação passa a valer logo após a publicação da lei.",
   "o_que_muda": [
-   "A rua localizada atrás do mercado Bonsucesso passa a se chamar Rua Antonio Medeiros Bezerra.",
-   "A lei passa a valer na data de sua publicação."
+   "A rua localizada entre a Rua São Francisco de Assis, Avenida Nossa Senhora da Lapa, atrás do mercado Bonsucesso, passa a se chamar \"RUA ANTONIO MEDEIROS BEZERRA\"."
   ],
-  "quem_e_afetado": "Os moradores e quem transita pela rua que fica entre a Rua São Francisco de Assis e a Avenida Nossa Senhora da Lapa, atrás do mercado Bonsucesso.",
-  "justificativa_do_autor": "Segundo o autor, a homenagem é justa devido à trajetória de vida de Antonio Medeiros Bezerra, que chegou a Cubatão em 1990, venceu na vida com trabalho honesto, fundou empresas na Vila São José e teve sua vida ceifada tragicamente durante um assalto em 2020.",
+  "quem_e_afetado": "Os moradores e comerciantes da rua homenageada passam a ter um endereço oficial com o novo nome. O texto não menciona nenhuma outra mudança de direitos ou obrigações para a população.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não deixa pendências para regulamentação posterior."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "logradouro público",
+    "explicacao": "É o espaço da cidade que pertence a todos, como ruas, praças e avenidas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, Antonio Medeiros Bezerra nasceu em Vicência (PE) em 1972, veio para Cubatão em 1990 e trabalhou como boia-fria e ajudante até se tornar empresário no setor de refrigeração na Vila São José, gerando empregos e formando profissionais. O autor relata que ele faleceu vítima de violência durante um assalto à sua empresa em 13 de abril de 2020, no início da pandemia da Covid-19. Por sua trajetória de superação, dedicação ao bairro e preferência por contratar moradores de Cubatão, o autor propõe homenageá-lo dando seu nome à rua.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber se existem custos para a alteração de sinalização ou se a rua já possui alguma outra denominação oficial.",
+  "limitacoes": "",
   "pontos_de_atencao": [
    {
-    "ponto": "O efeito do projeto é simbólico, consistindo na atribuição de um nome a um logradouro público.",
+    "ponto": "O projeto tem caráter estritamente simbólico e de homenagem, sem prever custos ou fontes de recursos.",
     "trecho": "DENOMINA “RUA ANTONIO MEDEIROS BEZERRA O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS”"
-   },
-   {
-    "ponto": "O texto não menciona custos, fonte de recursos ou impacto financeiro.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto não estipula prazos específicos para a alteração das placas de sinalização ou cadastros.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O projeto entra em vigor imediatamente após a sua publicação oficial.",
-    "trecho": "Esta lei entra em vigor na data da sua publicação."
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "ee1cccc0dfe0f0a5",
- "gerado_em": "2026-11-06T18:49:49Z"
+ "gerado_em": "2026-11-08T03:26:53Z"
 }

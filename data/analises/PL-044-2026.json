@@ -1,0 +1,61 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "44",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "CONCEDE AUMENTO REAL NOS VENCIMENTOS DOS SERVIDORES PÚBLICOS DO MUNICÍPIO DE CUBATÃO OCUPANTES DE CARGOS DE NÍVEL MÉDIO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2044.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto dá um aumento real de 5% no salário dos servidores públicos municipais de Cubatão que têm cargo de nível médio. Esse aumento é separado do reajuste anual da data-base e vale para quem já trabalha na prefeitura, aposentados e pensionistas que têm direito à paridade. O pagamento começa a valer a partir da publicação da lei, mas o dinheiro extra retroage para o dia 1º de janeiro de 2026. A prefeitura calcula que o gasto total com esse aumento será de mais de 2,7 milhões de reais no primeiro ano.",
+  "o_que_muda": [
+   "Concede aumento real de 5% sobre as referências salariais dos cargos públicos efetivos de nível médio da Prefeitura Municipal de Cubatão.",
+   "O reajuste é independente e não se confunde com a revisão geral anual da remuneração dos servidores da data-base de 1º de maio.",
+   "Aplica-se também aos proventos de aposentadoria e às pensões que possuem direito à paridade (igualdade de reajuste com os ativos).",
+   "Os efeitos financeiros do aumento retroagem para o dia 1º de janeiro de 2026.",
+   "O custo total estimado para o ano de 2026 é de R$ 2.730.668,00, já incluindo encargos."
+  ],
+  "quem_e_afetado": "Os principais beneficiados são os servidores públicos efetivos da prefeitura que ocupam cargos de nível médio, além de aposentados e pensionistas com direito à paridade. Servidores de outros níveis de escolaridade e quem não tem cargo efetivo ficam de fora.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de dotações orçamentárias próprias da prefeitura, que podem ser suplementadas se necessário, respeitando a Lei de Responsabilidade Fiscal.",
+  "o_que_falta_definir": [
+   "O texto não deixa pontos pendentes em aberto para regulamentação posterior."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "vencimentos",
+    "explicacao": "É o salário básico pago ao servidor público pelo seu trabalho."
+   },
+   {
+    "termo": "paridade",
+    "explicacao": "Regra que garante que aposentados e pensionistas recebam os mesmos aumentos dados aos servidores que ainda estão trabalhando."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro já reservado no orçamento da prefeitura para pagar determinadas despesas."
+   }
+  ],
+  "justificativa_do_autor": "O texto não apresenta a justificativa completa do autor porque a mensagem explicativa foi cortada no final do documento.",
+  "natureza": "orcamento_financas",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O aumento salarial é de 5% e vale para servidores de cargos efetivos de nível médio.",
+    "trecho": "Fica concedido aumento real de 5% (cinco por cento) sobre as referências salariais de todos os cargos públicos de provimento efetivo do Quadro de Pessoal da Prefeitura Municipal de Cubatão cujo requisito de ingresso seja certificado de conclusão de ensino médio."
+   },
+   {
+    "ponto": "Os efeitos financeiros retroagem a 1º de janeiro de 2026.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação, retroagindo seus efeitos financeiros a 1º de janeiro de 2026."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "b4e28edd9ab3d5c9",
+ "gerado_em": "2026-11-08T03:29:06Z"
+}

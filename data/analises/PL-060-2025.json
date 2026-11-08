@@ -1,0 +1,70 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "60",
+  "ano": "2025",
+  "autoria": "GUILHERME DOS SANTOS MALAQUIAS",
+  "ementa": "DISPÕE SOBRE A INCLUSÃO PROGRESSIVA DE ÔNIBUS OU MICROÔNIBUS IMPULSIONADO POR MOTOR EXCLUSIVAMENTE ELÉTRICO NA FROTA DE TRANSPORTE PÚBLICO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_60_2025.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto obriga a troca gradual dos ônibus comuns por ônibus elétricos na cidade. As empresas de ônibus devem seguir prazos definidos para atingir metas de veículos elétricos na frota. A mudança não pode aumentar a passagem nem piorar o serviço para os passageiros. A lei entra em vigor no dia em que for publicada.",
+  "o_que_muda": [
+   "As empresas de ônibus devem ter 10% da frota elétrica até o ano de 2027.",
+   "As empresas de ônibus devem ter 50% da frota elétrica até o ano de 2035.",
+   "As empresas de ônibus devem ter 100% da frota elétrica até o ano de 2040.",
+   "A troca de ônibus velhos deve priorizar motores elétricos, salvo justificativa aceita pelo Poder Executivo (Prefeitura).",
+   "O cronograma pode mudar se houver justificativa técnica ou econômica.",
+   "A implementação não pode diminuir a oferta de ônibus, piorar a qualidade, aumentar a tarifa ou trazer prejuízos.",
+   "O Poder Executivo (Prefeitura) pode criar incentivos fiscais (descontos de impostos) e empréstimos para ajudar na transição.",
+   "Empresas que descumprirem a lei levam advertência, multas ou medidas administrativas conforme os contratos."
+  ],
+  "quem_e_afetado": "As empresas que operam o transporte público ganham a obrigação de comprar ônibus elétricos e cumprir prazos. Os passageiros ganham o direito de ter um serviço que não pode subir de preço nem piorar por causa da troca. Ficam de fora os ônibus que não forem movidos a eletricidade após o cumprimento total das metas ou em caso de exceções aceitas.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro, mas menciona que o Poder Executivo poderá criar linhas de financiamento para ajudar as empresas.",
+  "o_que_falta_definir": [
+   "Quais serão os incentivos fiscais e linhas de financiamento criados pelo Poder Executivo.",
+   "Quais são os valores exatos das multas aplicadas às empresas.",
+   "Como será feita a fiscalização detalhada do cumprimento da lei."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "concessionárias",
+    "explicacao": "Empresas privadas que ganham autorização da Prefeitura para prestar um serviço público."
+   },
+   {
+    "termo": "combustíveis fósseis",
+    "explicacao": "Combustíveis poluentes que vêm do petróleo, como a gasolina e o óleo diesel."
+   },
+   {
+    "termo": "incentivos fiscais",
+    "explicacao": "Descontos ou facilidades no pagamento de impostos dados pela Prefeitura."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a Constituição Federal determina que é dever do poder público proteger o meio ambiente e combater a poluição. O projeto visa incluir ônibus elétricos para reduzir a poluição do ar e promover um transporte sustentável em Cubatão. O autor afirma ainda que o prazo gradual ajuda as empresas a se adaptarem sem prejudicar os passageiros.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não detalha quais serão os valores das multas aplicadas nem quais impostos terão descontos.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto define prazos e percentuais rígidos para a chegada dos ônibus elétricos até o ano de 2040.",
+    "trecho": "I – 10% até o ano de 2027; II – 50% até o ano de 2035; III – 100% até o ano de 2040."
+   },
+   {
+    "ponto": "O texto não informa o custo total da transição nem a origem exata dos recursos financeiros.",
+    "trecho": ""
+   },
+   {
+    "ponto": "As punições para quem descumprir a lei seguem o que já está escrito nos contratos de concessão.",
+    "trecho": "O não cumprimento desta lei sujeitará as concessionárias às penalidades previstas nos contratos de concessão, incluindo advertência, multas e, em caso de descumprimento reiterado, medidas administrativas cabíveis."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "d1ca25653a3badfe",
+ "gerado_em": "2026-11-08T03:30:53Z"
+}

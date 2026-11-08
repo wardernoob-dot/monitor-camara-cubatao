@@ -12,39 +12,56 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto garante que gestantes em Cubatão tenham o direito de levar um fisioterapeuta particular para acompanhá-las durante o trabalho de parto, parto e pós-parto. O profissional deve ser contratado pela própria paciente ou sua família.",
+  "resumo": "O projeto garante à gestante o direito de levar um fisioterapeuta particular para o parto e o pós-parto em hospitais de Cubatão. O profissional deve ser pago pela própria família e ter especialização. A presença dele é um direito extra e não substitui o acompanhante comum.",
   "o_que_muda": [
-   "Gestantes passam a ter o direito legal de contar com fisioterapeuta particular no parto.",
-   "Hospitais e maternidades devem permitir a entrada desse profissional, respeitando seus protocolos.",
-   "O fisioterapeuta precisa ter especialização em Saúde da Mulher reconhecida pelo conselho da categoria.",
-   "O profissional contratado não substitui o direito ao acompanhante já previsto em lei federal."
+   "A gestante ganha o direito de ter um fisioterapeuta particular no trabalho de parto, parto e pós-parto em hospitais públicos ou privados.",
+   "O profissional deve ser contratado de forma livre pela gestante, pelo companheiro ou por familiares.",
+   "O fisioterapeuta precisa ter registro no conselho de classe e especialização em saúde da mulher reconhecida pelo órgão federal.",
+   "O hospital pode exigir regras próprias de credenciamento do profissional antes da entrada.",
+   "O hospital não pode usar o fisioterapeuta particular como funcionário da equipe médica, a menos que a gestante permita expressamente.",
+   "A lei entra em vigor na data em que for publicada."
   ],
-  "quem_e_afetado": "Gestantes que utilizam maternidades ou hospitais públicos e privados em Cubatão, além das próprias instituições de saúde.",
-  "justificativa_do_autor": "Segundo o autor, a medida promove o parto humanizado, auxilia no alívio da dor e na recuperação da mulher, sem gerar custos para o Poder Público, já que o profissional é contratado pela família.",
+  "quem_e_afetado": "A gestante ganha o direito de escolher ter assistência de fisioterapia. O hospital público ou privado precisa permitir a entrada do profissional escolhido. Ficam de fora os profissionais que não têm a especialização exigida ou que não foram contratados pela família.",
+  "de_onde_sai_o_dinheiro": "Segundo o autor, o projeto não traz nenhum custo ou despesa para o Poder Público, pois o profissional é contratado pela própria família.",
+  "o_que_falta_definir": [
+   "As regras exatas de credenciamento que cada hospital vai exigir do fisioterapeuta.",
+   "As normas complementares que o Poder Executivo poderá criar para aplicar a lei."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "puerperal",
+    "explicacao": "Relativo ao puerpério, que é o período logo após o parto."
+   },
+   {
+    "termo": "parturiente",
+    "explicacao": "A mulher que está em trabalho de parto."
+   },
+   {
+    "termo": "ônus",
+    "explicacao": "Custo ou despesa financeira."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a fisioterapia ajuda a aliviar a dor, melhora a postura, controla a respiração e reduz intervenções desnecessárias no parto. O autor diz que a medida não gera gastos para a prefeitura e que já existe lei parecida no Guarujá. Ele também destaca que o fisioterapeuta é um profissional diferente do acompanhante comum.",
   "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber como será a fiscalização do cumprimento da lei nem como os hospitais deverão proceder caso haja conflito entre o fisioterapeuta particular e as rotinas hospitalares.",
+  "limitacoes": "",
   "pontos_de_atencao": [
    {
-    "ponto": "O custo do profissional é de responsabilidade da paciente ou de sua família.",
+    "ponto": "O projeto não gera custos para a prefeitura porque o pagamento é feito pela família.",
     "trecho": "desde que o referido profissional seja de livre contratação da parturiente, de seu companheiro ou de familiares."
    },
    {
-    "ponto": "O texto não prevê punições específicas para estabelecimentos que descumprirem a norma.",
+    "ponto": "O texto permite que o prefeito crie regras extras para fazer a lei funcionar.",
+    "trecho": "O Poder Executivo poderá editar normas complementares destinadas à regulamentação desta Lei"
+   },
+   {
+    "ponto": "O texto não traz nenhuma multa ou punição para os hospitais que descumprirem a regra.",
     "trecho": ""
-   },
-   {
-    "ponto": "A atuação do fisioterapeuta deve respeitar as regras internas de cada hospital.",
-    "trecho": "respeitados os protocolos internos e as rotinas da unidade hospitalar."
-   },
-   {
-    "ponto": "O Poder Executivo poderá criar normas para regulamentar a lei.",
-    "trecho": "O Poder Executivo poderá editar normas complementares destinadas à regulamentação desta Lei, sempre que necessário à sua adequada aplicação."
    }
   ],
   "pontos_descartados": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "7777ff3dc69c5c29",
- "gerado_em": "2026-11-05T22:59:11Z"
+ "gerado_em": "2026-11-08T03:29:19Z"
 }

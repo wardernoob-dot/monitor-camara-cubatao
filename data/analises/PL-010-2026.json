@@ -12,41 +12,53 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria o \"Dia Municipal da Memória, Verdade e Justiça pelas Vítimas do Incêndio da Vila Socó\" no calendário oficial de Cubatão, a ser celebrado em 25 de fevereiro.",
+  "resumo": "O projeto cria o Dia Municipal da Memória, Verdade e Justiça pelas Vítimas do Incêndio da Vila Socó no calendário da cidade. A data escolhida é 25 de fevereiro para lembrar a tragédia ocorrida em 1984. O texto autoriza a Prefeitura a fazer atividades educativas e colocar placas em locais públicos.",
   "o_que_muda": [
-   "Inclui o dia 25 de fevereiro no calendário oficial do município.",
-   "Autoriza a prefeitura a realizar atividades educativas, culturais e memoriais na data.",
-   "Autoriza a prefeitura a instalar marcos, placas ou memoriais em locais públicos.",
-   "Estabelece objetivos como promover a memória das vítimas e divulgar acervo documental desclassificado em 2024."
+   "O dia 25 de fevereiro passa a ser o Dia Municipal da Memória, Verdade e Justiça pelas Vítimas do Incêndio da Vila Socó.",
+   "A Prefeitura ganha autorização para promover palestras, exposições e depoimentos na data.",
+   "A Prefeitura ganha autorização para instalar placas, marcos ou memoriais em locais públicos.",
+   "Os memoriais podem incluir o número estimado de vítimas apontado pela OAB (Ordem dos Advogados do Brasil)."
   ],
-  "quem_e_afetado": "A população de Cubatão, sobreviventes e familiares das vítimas do incêndio da Vila Socó.",
-  "justificativa_do_autor": "Segundo o autor, o projeto é uma dívida histórica com as famílias das vítimas para preservar a memória da tragédia, combater o revisionismo e reconhecer que o número real de mortos foi ocultado pela \"Operação Abafa\".",
+  "quem_e_afetado": "A população de Cubatão ganha o direito de lembrar a data oficialmente. O Poder Executivo Municipal (a Prefeitura) ganha a autorização para realizar eventos e instalar marcos. Ninguém ganha obrigações pesadas ou punições.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Quais locais públicos receberão os marcos ou placas.",
+   "Quais atividades exatas serão feitas em cada ano.",
+   "Quanto custará para realizar os eventos e instalar os memoriais."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "revisionismo histórico",
+    "explicacao": "Ação de tentar mudar ou negar fatos que já aconteceram na história."
+   },
+   {
+    "termo": "subnotificação",
+    "explicacao": "Registro de um número de casos bem menor do que o que realmente aconteceu."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto nasce de uma dívida histórica com centenas de famílias que perderam entes queridos no incêndio da Vila Socó em 25 de fevereiro de 1984, quando milhões de litros de gasolina vazaram de um oleoduto da Petrobrás. O autor afirma que a versão oficial de 93 mortos foi uma tentativa de esconder a realidade, chamada de \"Operação Abafa\", e que documentos desclassificados em 2024 pelo Ministério Público Federal e Ministério Público do Trabalho confirmam que houve mais vítimas. O autor diz que o projeto serve para fazer justiça histórica, combater o revisionismo histórico e educar sobre os riscos industriais.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber quanto a prefeitura gastará para realizar as atividades e instalar os memoriais autorizados.",
+  "limitacoes": "O texto apenas autoriza a Prefeitura a agir e criar o dia comemorativo, sem detalhar custos ou obrigatoriedade de execução.",
   "pontos_de_atencao": [
    {
-    "ponto": "A prefeitura tem autorização, mas não obrigação, de promover atividades e instalar memoriais.",
-    "trecho": "O Poder Executivo Municipal fica autorizado a promover, na data instituída por esta Lei, atividades educativas"
+    "ponto": "O projeto cria uma data comemorativa e autoriza ações, mas não obriga a Prefeitura a gastar ou realizar os eventos.",
+    "trecho": "O Poder Executivo Municipal fica autorizado a promover, na data instituída por esta Lei, atividades educativas..."
    },
    {
-    "ponto": "O texto não traz estimativa de custos para a realização das atividades ou instalação de placas.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto não cita fonte de recursos para bancar as ações previstas.",
+    "ponto": "O texto não traz nenhuma menção a custos, orçamento ou de onde virá o dinheiro.",
     "trecho": ""
    }
   ],
   "pontos_descartados": [
    {
-    "ponto": "O projeto entra em vigor na data em que for publicado.",
+    "ponto": "A lei entra em vigor no mesmo dia em que for publicada.",
     "trecho": "Esta Lei entra em vigor na data de sua publicação.",
     "motivo": "trecho nao encontrado no documento"
    }
   ]
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "ea774f873422024d",
- "gerado_em": "2026-11-05T18:45:37Z"
+ "gerado_em": "2026-11-08T03:23:24Z"
 }

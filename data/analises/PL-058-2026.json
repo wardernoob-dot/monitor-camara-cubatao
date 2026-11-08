@@ -12,41 +12,63 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto estabelece regras e critérios para a cessão de servidores públicos municipais de Cubatão para outros órgãos ou entes públicos.",
+  "resumo": "O projeto cria regras para emprestar servidores públicos municipais de Cubatão para outros órgãos ou governos. A ideia é organizar os empréstimos, garantindo que o órgão que recebe o funcionário pague todos os custos. O texto define prazos, limites e cuidados para não deixar a prefeitura sem funcionários essenciais. Com isso, a prefeitura ganha mais controle e segurança jurídica sobre onde o servidor está trabalhando.",
   "o_que_muda": [
-   "A cessão passa a exigir demonstração de interesse público e limite padrão de 12 meses.",
-   "Como regra, apenas servidores que já passaram pelo estágio probatório poderão ser cedidos.",
-   "O pagamento do salário e dos encargos previdenciários do servidor cedido fica sob responsabilidade do órgão que vai recebê-lo.",
-   "Fica proibido o desvio de função, exigindo compatibilidade entre as tarefas do novo posto e o cargo de origem."
+   "O empréstimo do servidor (cessão) passa a durar no máximo 12 meses, podendo ser renovado.",
+   "Quem recebe o servidor (ente cessionário) deve pagar todo o salário e também os impostos da aposentadoria (contribuições previdenciárias, inclusive a cota patronal).",
+   "Em regra, apenas servidores que já passaram pelo estágio probatório podem ser emprestados.",
+   "O servidor emprestado não pode fazer desvio de função, devendo exercer tarefas compatíveis com seu cargo original.",
+   "O prefeito pode revogar o empréstimo a qualquer momento, e o descumprimento das regras cancela a cessão na mesma hora.",
+   "Empréstimos atuais continuam valendo até o fim do prazo original, mas renovações devem seguir a nova lei.",
+   "O servidor emprestado poderá assumir cargo em comissão (cargo de confiança) no novo local, desde que seja de direção, chefia ou assessoramento."
   ],
-  "quem_e_afetado": "Os servidores públicos municipais efetivos de Cubatão e os órgãos da administração pública.",
-  "justificativa_do_autor": "Segundo o autor, a proposta busca conferir segurança jurídica, padronizar procedimentos e corrigir falhas passadas em cessões sem controle adequado, garantindo o interesse público e a preservação da força de trabalho municipal.",
+  "quem_e_afetado": "Os servidores públicos efetivos de Cubatão podem ser emprestados para outros órgãos públicos. O prefeito e o Secretário Municipal de Governo ganham o poder de autorizar e controlar esses empréstimos. Ficam de fora, como regra geral, os servidores que ainda estão em estágio probatório, salvo casos excepcionais autorizados pelo prefeito.",
+  "de_onde_sai_o_dinheiro": "Como regra, o custo total é pago pelo órgão ou governo que recebe o servidor emprestado. Excepcionalmente, o prefeito pode autorizar empréstimos com custos para o município de Cubatão se houver relevante interesse público.",
+  "o_que_falta_definir": [
+   "A forma de regulamentação da delegação de competência ao Secretário Municipal de Governo.",
+   "Quais serão as regras detalhadas de controle e fiscalização exercidas pela administração pública."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "cessão",
+    "explicacao": "É o empréstimo temporário de um funcionário público para trabalhar em outro órgão ou governo."
+   },
+   {
+    "termo": "estágio probatório",
+    "explicacao": "Período inicial em que o servidor recém-contratado é avaliado antes de conseguir a estabilidade no emprego."
+   },
+   {
+    "termo": "ente cessionário",
+    "explicacao": "É o órgão ou governo que recebe o servidor emprestado."
+   },
+   {
+    "termo": "cota patronal",
+    "explicacao": "A parte do imposto de previdência que o patrão (neste caso, o governo) é obrigado a pagar."
+   },
+   {
+    "termo": "desvio de função",
+    "explicacao": "Acontece quando o trabalhador é colocado para fazer um serviço totalmente diferente daquele para o qual foi contratado."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a falta de regras específicas gerava práticas desorganizadas, sem motivação clara, com falhas no pagamento de previdência e prejuízos aos serviços públicos municipais. O autor alega que a proposta busca dar segurança jurídica, cumprir a Constituição Federal e garantir que a prefeitura não fique sem força de trabalho.",
   "natureza": "organizacao_administrativa",
   "limitacoes": "",
   "pontos_de_atencao": [
    {
-    "ponto": "A regra geral é que o órgão que recebe o servidor pague todos os custos, mas há exceções com autorização do prefeito.",
-    "trecho": "A cessão será realizada com ônus integral para o ente cessionário"
-   },
-   {
-    "ponto": "Servidores em estágio probatório não podem ser cedidos, salvo em casos excepcionais com suspensão do período de avaliação.",
-    "trecho": "É vedada a cessão de servidor em estágio probatório, salvo em hipóteses excepcionais"
-   },
-   {
-    "ponto": "O texto prevê regras de transição para as cessões que já estão acontecendo quando a lei for aprovada.",
-    "trecho": "As cessões de servidores em curso na data de publicação desta Lei poderão ser mantidas"
+    "ponto": "O controle e a autorização ficam com o Chefe do Poder Executivo, podendo ser delegado ao Secretário Municipal de Governo.",
+    "trecho": "A autorização para a cessão de servidor será de competência do Chefe do Poder Executivo, admitida delegação expressa ao Secretário Municipal de Governo"
    }
   ],
   "pontos_descartados": [
    {
-    "ponto": "O prazo máximo da cessão é de um ano, podendo ser renovado mediante novos requisitos.",
-    "trecho": "O prazo da cessão será de até 12 (doze) meses, admitida renovação por iguais períodos",
+    "ponto": "O prazo máximo de cada empréstimo é de 12 meses, com possibilidade de renovação.",
+    "trecho": "O prazo da cessão sera de até 12 (doze) meses, admitida renovação por iguais períodos",
     "motivo": "trecho nao encontrado no documento"
    }
   ]
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "de46f8ee4df73fff",
- "gerado_em": "2026-11-05T18:45:31Z"
+ "gerado_em": "2026-11-08T03:23:18Z"
 }

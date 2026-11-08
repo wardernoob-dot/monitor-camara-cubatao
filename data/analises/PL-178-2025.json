@@ -12,38 +12,61 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Cria o Programa de Prevenção aos Impactos das Apostas online e de Combate à Ludopatia em Cubatão, além de instituir uma campanha educativa permanente sobre o tema.",
+  "resumo": "Este projeto cria um programa para prevenir e combater o vício em apostas online na cidade. O texto estabelece regras para conscientizar a população e evitar o endividamento das famílias. A iniciativa também cria uma campanha educativa permanente sobre os riscos dos jogos.",
   "o_que_muda": [
-   "Institui diretrizes e objetivos focados na prevenção, tratamento e conscientização sobre o vício em apostas esportivas.",
-   "Cria uma campanha educativa permanente sobre os riscos e malefícios da dependência de apostas.",
-   "Permite que o Poder Executivo firme convênios e parcerias para cumprir os objetivos da lei."
+   "Cria o Programa de Prevenção aos Impactos das Apostas online e de Combate à Ludopatia.",
+   "Cria uma campanha educativa permanente de conscientização sobre os riscos e malefícios do vício em apostas.",
+   "Autoriza o Poder Executivo (Prefeitura) a firmar convênios e parcerias para cumprir os objetivos da lei."
   ],
-  "quem_e_afetado": "A população de Cubatão, especialmente os apostadores, suas famílias e jovens vulneráveis ao vício em jogos online.",
-  "justificativa_do_autor": "Segundo o autor, a rápida expansão das apostas online causa graves problemas financeiros e emocionais, sendo a ludopatia considerada uma doença pela OMS, afetando principalmente jovens e exigindo ações de prevenção e suporte.",
-  "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber quais recursos financeiros exatos serão utilizados nem quando as ações práticas serão iniciadas pelo Executivo.",
-  "pontos_de_atencao": [
+  "quem_e_afetado": "A população de Cubatão ganha o direito a ações de prevenção e conscientização sobre o vício em apostas. O Poder Executivo ganha a autorização para criar parcerias e convênios. O texto não exclui nenhum grupo de moradores de forma explícita.",
+  "de_onde_sai_o_dinheiro": "Segundo o texto, as despesas com a execução da lei vão correr por conta de dotações orçamentárias próprias (dinheiro já previsto no orçamento da Prefeitura).",
+  "o_que_falta_definir": [
+   "Quais órgãos da Prefeitura vão executar o programa na prática.",
+   "Quais serão os parceiros nos convênios permitidos pela lei.",
+   "Como a campanha educativa permanente vai funcionar no dia a dia."
+  ],
+  "palavras_dificeis": [
    {
-    "ponto": "O texto não traz um prazo específico para a implementação ou início do programa.",
-    "trecho": ""
+    "termo": "Ludopatia",
+    "explicacao": "É a dependência ou o vício incontrolável em jogos de azar e apostas."
    },
    {
-    "ponto": "O texto prevê que as despesas correrão por conta de dotações orçamentárias próprias.",
+    "termo": "Poder Executivo",
+    "explicacao": "É a Prefeitura Municipal, responsável por administrar a cidade e colocar as leis em prática."
+   },
+   {
+    "termo": "Dotações orçamentárias",
+    "explicacao": "São os valores de dinheiro já separados no orçamento do governo para pagar por despesas específicas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a rápida expansão dos jogos de apostas online causa problemas graves de saúde pública e financeiros. O autor cita dados da Organização Mundial da Saúde de que o vício em jogos é uma doença chamada ludopatia, e uma pesquisa do Instituto Datafolha de 2023 apontando que 15% dos brasileiros já apostaram online, sendo a maioria jovens de 16 a 24 anos. O texto da justificativa defende que o vício compromete a dignidade humana e pode levar a situações de falência e risco à vida, tornando o apoio do SUS (Sistema Único de Saúde) e do SUAS (Sistema Único de Assistência Social) essenciais.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não detalha quais secretarias municipais vão cuidar da execução prática nem quanto dinheiro será gasto.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto prevê que os gastos saiam do orçamento atual da prefeitura.",
     "trecho": "As despesas com a execução desta Lei correrão por conta de dotações orçamentárias próprias."
    },
    {
-    "ponto": "O texto menciona que o Poder Executivo poderá firmar convênios, mas não obriga a sua realização.",
-    "trecho": "O Poder Executivo poderá firmar convênios e estabelecer parcerias para a implementação dos objetivos desta Lei."
-   },
-   {
-    "ponto": "O texto não define penalidades para descumprimento nem indica quais órgãos serão responsáveis pela fiscalização.",
-    "trecho": ""
+    "ponto": "A lei começa a valer logo no dia em que for publicada oficialmente.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
    }
   ],
-  "pontos_descartados": []
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não traz prazos para a prefeitura iniciar o programa ou a campanha educativa.",
+    "trecho": "O texto não informa prazos para o início das ações ou da campanha educativa.",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não define multas ou punições para quem descumprir as regras.",
+    "trecho": "O texto não prevê penalidades ou multas.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "c672798e1a5b9624",
- "gerado_em": "2026-11-06T18:29:20Z"
+ "gerado_em": "2026-11-08T03:24:33Z"
 }

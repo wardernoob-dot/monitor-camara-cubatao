@@ -12,35 +12,64 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto altera a lei orçamentária de 2026 para aumentar de 10% para 20% o limite de recursos que o Poder Executivo pode remanejar ou suplementar sem precisar de nova autorização legislativa.",
+  "resumo": "Este projeto de lei muda as regras do orçamento da Prefeitura de Cubatão para o ano de 2026. Ele aumenta de 10% para 20% o limite que o governo tem para remanejar dinheiro entre diferentes áreas. Com isso, a prefeitura ganha mais facilidade para mover verbas já aprovadas sem precisar pedir novos projetos de lei à Câmara. O objetivo é dar mais rapidez ao uso do dinheiro público durante o ano.",
   "o_que_muda": [
-   "Aumenta o limite para abertura de créditos suplementares de 10% para 20%.",
-   "Permite maior flexibilidade para remanejar verbas entre diferentes áreas do orçamento.",
-   "Alinha a Lei Orçamentária Anual com a Lei de Diretrizes Orçamentárias (LDO) já alterada.",
-   "Reduz a necessidade de enviar novos projetos de lei à Câmara para ajustes orçamentários pontuais."
+   "Amplia de 10% para 20% o limite para abrir créditos suplementares (dinheiro extra colocado em uma despesa que já existe no orçamento).",
+   "Define que, na Administração Direta (órgãos ligados direto à prefeitura), o limite de 20% vale somando os órgãos, menos a Câmara Municipal.",
+   "A Câmara Municipal continua tendo o seu próprio limite de 20% calculado sobre a sua própria despesa autorizada.",
+   "Na Administração Indireta (autarquias e fundações), o limite passa a ser de 20% do orçamento de cada uma delas.",
+   "Permite que a transposição, o remanejamento ou a transferência de recursos seja feita por decreto até o limite de 10% do total da despesa fixada."
   ],
-  "quem_e_afetado": "Toda a administração pública municipal, pois a medida altera a forma como o orçamento de 2026 é executado.",
-  "justificativa_do_autor": "Segundo o autor, o limite atual de 10% é insuficiente para as necessidades da gestão, e a mudança visa dar mais agilidade e eficiência à execução das políticas públicas, evitando o envio constante de projetos à Câmara.",
+  "quem_e_afetado": "O projeto afeta diretamente a Prefeitura Municipal e a Câmara Municipal de Cubatão, que ganham mais flexibilidade para movimentar o orçamento. Os moradores são afetados de forma indireta, pois a prefeitura passa a ter mais agilidade para remanejar recursos para as necessidades que aparecem no dia a dia. Nenhuma pessoa física ganha novas obrigações diretas ou direitos específicos com este texto.",
+  "de_onde_sai_o_dinheiro": "O texto não traz aumento de gastos e o dinheiro sai da realocação de recursos já previstos no orçamento, dependendo de sobra de dinheiro anterior, excesso de arrecadação ou corte de outras áreas.",
+  "o_que_falta_definir": [
+   "Quais dotações orçamentárias exatas vão sofrer anulação ou transferência no dia a dia.",
+   "Quais decretos específicos o prefeito vai usar para fazer as transferências de recursos.",
+   "Quais prioridades exatas do governo vão receber o dinheiro remanejado."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "créditos adicionais suplementares",
+    "explicacao": "Dinheiro extra colocado em uma despesa que já estava planejada no orçamento mas ficou curto."
+   },
+   {
+    "termo": "transposição",
+    "explicacao": "Mudar verbas de uma categoria de programação para outra."
+   },
+   {
+    "termo": "remanejamento",
+    "explicacao": "Deslocar recursos de um órgão para outro dentro da prefeitura."
+   },
+   {
+    "termo": "Administração Direta",
+    "explicacao": "O conjunto dos órgãos que formam a estrutura principal da prefeitura."
+   },
+   {
+    "termo": "Administração Indireta",
+    "explicacao": "Órgãos que têm autonomia financeira e administrativa, como autarquias e fundações públicas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a mudança serve para alinhar a Lei Orçamentária Anual com a nova regra da LDO (Lei de Diretrizes Orçamentárias). O autor alega que o limite atual de 10% é insuficiente para atender às necessidades reais da gestão pública e que o limite menor obriga o envio constante de projetos à Câmara, o que atrasa as políticas públicas. Ele também destaca que a medida não aumenta o gasto total nem reduz receitas, pois apenas realoca verbas já existentes.",
   "natureza": "orcamento_financas",
-  "limitacoes": "Não é possível saber quais projetos ou secretarias perderão ou ganharão recursos com essa flexibilização, pois isso dependerá de decretos futuros do Executivo.",
+  "limitacoes": "Não é possível saber quais áreas específicas vão perder ou ganhar verbas com esse remanejamento sem olhar os decretos futuros de execução do orçamento.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto não aumenta o gasto total da prefeitura, apenas permite realocar verbas já existentes.",
-    "trecho": "a medida não implica aumento da despesa total autorizada, tampouco renúncia de receita."
+    "ponto": "A lei entra em vigor na data em que for publicada oficialmente.",
+    "trecho": "Art. 2º Esta lei entra em vigor na data da sua publicação."
    },
    {
-    "ponto": "A abertura de créditos depende da existência de recursos disponíveis, conforme regras federais.",
-    "trecho": "Os créditos adicionais suplementares somente poderão ser abertos na existência de recursos disponíveis, nos termos do art. 43 da Lei Federal nº 4.320/1964"
+    "ponto": "O texto não estabelece multas ou penalidades para descumprimento.",
+    "trecho": ""
    },
    {
-    "ponto": "O texto não menciona quais áreas específicas serão afetadas pelas mudanças de verbas.",
+    "ponto": "O texto não define um órgão específico para fiscalizar essa movimentação além das regras legais gerais.",
     "trecho": ""
    }
   ],
   "pontos_descartados": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "2e0e84091d9638f5",
- "gerado_em": "2026-11-05T18:45:12Z"
+ "gerado_em": "2026-11-08T03:22:57Z"
 }

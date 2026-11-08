@@ -12,39 +12,59 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria o Programa de Apoio às Pessoas com Doenças Raras e seus familiares em Cubatão, focado em diagnóstico, tratamento e criação de um cadastro municipal.",
+  "resumo": "O projeto cria o Programa de Apoio às Pessoas com Doenças Raras e seus familiares em Cubatão. O programa será desenvolvido na rede pública de saúde para melhorar o diagnóstico e o tratamento precoce. Ele também prevê a criação de um cadastro municipal e campanhas de esclarecimento para a população. A lei entra em vigor na data de sua publicação.",
   "o_que_muda": [
-   "Cria um cadastro específico de pessoas com doenças raras na cidade.",
-   "Promove exames para diagnóstico e tratamento precoce na rede pública de saúde.",
-   "Estabelece uma rede de apoio multidisciplinar para pacientes e familiares.",
-   "Prevê campanhas de esclarecimento com cartilhas e cadernos técnicos."
+   "Criação do Programa de Apoio às Pessoas com Doenças Raras e seus familiares na rede pública de saúde.",
+   "Elaboração de uma linha de cuidados para pessoas com doenças raras.",
+   "Promoção de exames para diagnóstico e tratamento precoce em todas as unidades da rede pública.",
+   "Criação de um cadastro específico com os dados de todas as pessoas diagnosticadas com doença rara.",
+   "Estabelecimento de uma rede de apoio multidisciplinar (com vários profissionais) para pacientes e familiares.",
+   "Desenvolvimento de campanhas de esclarecimento sobre sintomas, tratamentos e locais de atendimento.",
+   "Uso de cadernos técnicos, cartilhas, folhetos e divulgação em locais públicos.",
+   "Permissão para o Poder Público buscar parcerias com instituições públicas e privadas, incluindo o uso de instrumentos como EIV (Estudo de Impacto de Vizinhança) e TRIMMC (Termo de Responsabilidade de Implantação de Medidas Mitigadoras e/ou Compensatórias)."
   ],
-  "quem_e_afetado": "Pessoas com doenças raras e seus familiares que utilizam a Rede Pública Municipal de Saúde de Cubatão.",
-  "justificativa_do_autor": "Segundo o autor, o projeto visa garantir melhores condições de diagnóstico, tratamento e qualidade de vida para pacientes com doenças raras e suas famílias, criando uma rede de apoio e superando os desafios dessas enfermidades crônicas.",
+  "quem_e_afetado": "As pessoas com doenças raras e seus familiares ganham direito a atendimento, cadastro e apoio multidisciplinar. Os profissionais da saúde e da educação também participam com materiais técnicos. O texto não cita quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de dotações orçamentárias (recursos do orçamento) próprias, que podem ser suplementadas (reforçadas) se necessário.",
+  "o_que_falta_definir": [
+   "Como será feita a criação prática do cadastro específico de pacientes.",
+   "Quais serão os critérios detalhados para a formação da rede de apoio multidisciplinar.",
+   "Como se darão as parcerias específicas com instituições públicas e privadas."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "multidisciplinar",
+    "explicacao": "Que envolve profissionais de várias áreas diferentes trabalhando juntos."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "O dinheiro reservado no orçamento da prefeitura para pagar as despesas."
+   },
+   {
+    "termo": "EIV (Estudo de Impacto de Vizinhança)",
+    "explicacao": "Estudo técnico que avalia os efeitos que uma obra ou atividade causa na qualidade de vida da vizinhança."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto visa garantir melhores condições de diagnóstico, tratamento e qualidade de vida para pacientes com doenças raras e suas famílias. As doenças raras são crônicas, progressivas e debilitantes, exigindo acompanhamento contínuo e especializado. A iniciativa busca criar uma rede de apoio, capacitar profissionais, criar cadastro municipal e integrar esforços com entidades públicas e privadas. Segundo o autor, os municípios de São Paulo e Valinhos já instituíram programas semelhantes pelas Leis 17.083/2019 e 6.821/2025.",
   "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber o impacto financeiro exato ou quando o cadastro e a rede de apoio começarão a funcionar na prática.",
+  "limitacoes": "O texto não detalha o cronograma de implementação do programa, nem o custo exato que a prefeitura terá para executá-lo.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto prevê que os gastos saiam do orçamento já existente ou de verbas suplementadas.",
+    "ponto": "O projeto define que os gastos sairão do orçamento municipal atual, com possibilidade de reforço de verba se preciso.",
     "trecho": "As despesas decorrentes da execução desta lei correrão por conta de dotações orçamentárias próprias, suplementadas, se necessário."
    },
    {
-    "ponto": "O texto não traz prazos específicos para a implantação do programa ou criação do cadastro.",
-    "trecho": ""
+    "ponto": "A lei começa a valer logo no dia em que for publicada.",
+    "trecho": "Esta lei entrará em vigor na data de sua publicação."
    },
    {
-    "ponto": "O texto não indica quem será o responsável por fiscalizar o cumprimento do programa.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto não define penalidades para o caso de descumprimento das regras do programa.",
+    "ponto": "O texto não traz multas ou penalidades para descumprimento.",
     "trecho": ""
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "b3e2bc3355196f5c",
- "gerado_em": "2026-11-05T18:45:55Z"
+ "gerado_em": "2026-11-08T03:23:37Z"
 }

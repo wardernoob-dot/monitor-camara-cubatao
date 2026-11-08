@@ -12,36 +12,63 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria o \"Dia da Favela\" no município de Cubatão, a ser comemorado anualmente em 4 de novembro.",
+  "resumo": "O projeto cria o \"Dia da Favela\" no calendário oficial de Cubatão. A data escolhida para a comemoração é o dia 4 de novembro de cada ano. Dois conselhos municipais vão participar das políticas públicas e programações da data. A lei entra em vigor na data em que for publicada.",
   "o_que_muda": [
    "O \"Dia da Favela\" passa a integrar o Calendário Oficial do Município de Cubatão.",
-   "A data será comemorada todos os anos no dia 4 de novembro.",
-   "Dois conselhos municipais vão participar das políticas públicas e programações da data."
+   "A data será comemorada anualmente no dia 4 de novembro.",
+   "O COMPIR (Conselho Municipal de Promoção da Igualdade Racial) e o CMJ (Conselho Municipal da Juventude) participam da criação de políticas públicas e programações da lei."
   ],
-  "quem_e_afetado": "Os moradores de favelas e a população de Cubatão em geral.",
-  "justificativa_do_autor": "Segundo o autor, o objetivo é promover a conscientização de pertencimento ao território, ressignificar a palavra favela, celebrar a potência desses lugares e alertar sobre as lutas dos moradores.",
+  "quem_e_afetado": "A população do município é afetada pela criação da data comemorativa. O COMPIR e o CMJ ganham o dever de participar das programações e políticas públicas ligadas à lei. O texto não cita grupos que fiquem de fora.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como serão feitas as programações e eventos do dia comemorativo.",
+   "Quais serão as ações práticas das políticas públicas derivadas da lei."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Calendário Oficial do Município",
+    "explicacao": "Lista oficial de datas e eventos importantes reconhecidos pela Prefeitura."
+   },
+   {
+    "termo": "COMPIR",
+    "explicacao": "Conselho Municipal de Promoção da Igualdade Racial, um grupo que debate direitos e combate o racismo na cidade."
+   },
+   {
+    "termo": "CMJ",
+    "explicacao": "Conselho Municipal da Juventude, um grupo que representa os interesses dos jovens perante o poder público."
+   },
+   {
+    "termo": "Pejorativos",
+    "explicacao": "Que têm sentido de ofensa ou que diminuem o valor de algo ou alguém."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto quer promover a conscientização de pertencimento ao território da favela e mudar o sentido negativo da palavra. O autor diz que a data lembra a potência desses lugares e alerta sobre as lutas dos moradores. Ele cita que outros estados e municípios já criaram a data em seus calendários. O objetivo é melhorar a inserção social, educacional e econômica dos moradores dessas comunidades.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber como serão as programações práticas ou se haverá gastos públicos para a data.",
+  "limitacoes": "O documento não informa quanto custará para realizar os eventos da data nem quais órgãos públicos vão organizar as atividades práticas.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto não traz informações sobre o custo da medida ou a fonte de recursos.",
+    "ponto": "A data comemorativa é fixada no dia 4 de novembro de cada ano.",
+    "trecho": "a ser comemorado no dia 04 de novembro de cada ano."
+   },
+   {
+    "ponto": "O texto não informa custos ou a origem dos recursos financeiros.",
     "trecho": ""
    },
    {
-    "ponto": "A lei entra em vigor na data de sua publicação.",
-    "trecho": "Esta Lei entra em vigor na data da sua publicação."
+    "ponto": "O texto não traz regras de fiscalização ou penalidades.",
+    "trecho": ""
    }
   ],
   "pontos_descartados": [
    {
-    "ponto": "Dois conselhos municipais vão participar efetivamente das políticas públicas e programações derivadas da lei.",
-    "trecho": "O Conselho Municipal de Promoção da Igualdade Racial - COMPIR... e o Conselho Municipal da Juventude – CMJ... participarão efetivamente da instituição",
+    "ponto": "Dois conselhos municipais participam da criação de políticas públicas e programações.",
+    "trecho": "O Conselho Municipal de Promoção da Igualdade Racial - COMPIR... e o Conselho Municipal da Juventude – CMJ... participarão efetivamente da instituição das políticas públicas e programações",
     "motivo": "trecho nao encontrado no documento"
    }
   ]
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "7d81ed984588ecb4",
- "gerado_em": "2026-11-06T18:50:34Z"
+ "gerado_em": "2026-11-08T03:32:10Z"
 }

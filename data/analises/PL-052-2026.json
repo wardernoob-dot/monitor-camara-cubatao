@@ -12,36 +12,60 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto de lei propõe declarar a Associação Cultural Filhos de Ganga Zumba como Patrimônio Cultural Imaterial do município de Cubatão.",
+  "resumo": "Este projeto declara a Associação Cultural Filhos de Ganga Zumba como patrimônio cultural imaterial (bens culturais formados por tradições e saberes) de Cubatão. O objetivo é valorizar a contribuição da entidade para a cultura afro-brasileira na cidade. A lei entra em vigor no dia em que for publicada.",
   "o_que_muda": [
-   "A associação passa a ser oficialmente reconhecida como patrimônio cultural imaterial da cidade.",
-   "O Poder Executivo (Prefeitura) deverá regulamentar a lei para sua aplicação.",
-   "Prevê o uso de verbas orçamentárias próprias para despesas decorrentes da execução da lei."
+   "A Associação Cultural Filhos de Ganga Zumba passa a ser reconhecida como patrimônio cultural imaterial do município.",
+   "O Poder Executivo (prefeitura) ganha o poder de regulamentar a lei no que couber.",
+   "Os gastos com a lei saem de dinheiro do orçamento já existente, que pode receber reforço."
   ],
-  "quem_e_afetado": "A Associação Cultural Filhos de Ganga Zumba e a administração pública municipal.",
-  "justificativa_do_autor": "Segundo o autor, o reconhecimento valoriza a atuação da associação na preservação da cultura afro-brasileira, no combate ao preconceito e na promoção da identidade cultural cubatense.",
-  "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber quais ações práticas ou benefícios financeiros concretos a associação receberá, pois o texto depende de regulamentação futura pelo Poder Executivo.",
-  "pontos_de_atencao": [
+  "quem_e_afetado": "A associação cultural é a principal afetada, pois ganha o título oficial de patrimônio. A prefeitura fica com a obrigação de organizar as regras da lei. O texto não exclui nenhum grupo específico.",
+  "de_onde_sai_o_dinheiro": "Segundo o texto, os gastos saem de verbas do próprio orçamento, que podem ser suplementadas (receber reforço).",
+  "o_que_falta_definir": [
+   "Como o Poder Executivo vai regulamentar a lei.",
+   "Quais serão os valores exatos gastos para executar a lei."
+  ],
+  "palavras_dificeis": [
    {
-    "ponto": "O texto prevê que os custos serão cobertos pelo orçamento municipal, mas não especifica valores.",
-    "trecho": "As despesas decorrentes da execução desta lei correrão por conta das dotações orçamentarias próprias, suplementadas."
+    "termo": "Imaterial",
+    "explicacao": "Refere-se a bens culturais formados por tradições, saberes, festas e expressões artísticas que não são objetos físicos."
    },
    {
-    "ponto": "O texto não estabelece prazos específicos para a regulamentação ou para a execução de ações práticas.",
-    "trecho": ""
+    "termo": "Poder Executivo",
+    "explicacao": "É a prefeitura, o grupo responsável por administrar a cidade e colocar as leis em prática."
+   },
+   {
+    "termo": "Dotações orçamentárias",
+    "explicacao": "São as partes do dinheiro do governo separadas para pagar gastos específicos."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a associação tem uma atuação muito importante na preservação e promoção da cultura afro-brasileira. Ele afirma que a entidade usa a música, a religiosidade e a arte para valorizar as tradições e marcar presença nos carnavais da cidade. O autor diz ainda que a associação combate o preconceito, a discriminação racial e a intolerância religiosa, fortalecendo a comunidade.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O texto não especifica quais ações práticas ou benefícios materiais a associação vai receber além do título de patrimônio.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto depende de regras futuras da prefeitura para ter aplicação prática.",
+    "trecho": "0 Poder Executivo regularnentará esta Lei, no que couber."
+   },
+   {
+    "ponto": "O texto não traz o valor exato dos custos, dizendo apenas que sairão de verbas do orçamento.",
+    "trecho": "As despesas decorrentes da execução desta lei correrão por conta das dotações orçamentarias próprias, suplementadas."
    }
   ],
   "pontos_descartados": [
    {
-    "ponto": "O projeto depende de regulamentação pela Prefeitura para definir como será aplicado na prática.",
-    "trecho": "O Poder Executivo regulamentará esta Lei, no que couber.",
+    "ponto": "O texto não cita nenhuma penalidade ou multa para quem desrespeitar a lei.",
+    "trecho": "O texto não prevê multas ou penalidades.",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não define quem vai fiscalizar o cumprimento da lei.",
+    "trecho": "O texto não informa quem fiscaliza a execução.",
     "motivo": "trecho nao encontrado no documento"
    }
   ]
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "665d71bbce099bb5",
- "gerado_em": "2026-11-05T18:53:50Z"
+ "gerado_em": "2026-11-08T03:24:26Z"
 }

@@ -12,34 +12,62 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Cria o selo Empresa Amiga do Jovem e do Adolescente Aprendiz para reconhecer empresas que contratam jovens e oferecem desenvolvimento profissional.",
+  "resumo": "O projeto cria o selo \"Empresa Amiga do Jovem e do Adolescente Aprendiz\" em Cubatão. O objetivo é reconhecer e incentivar empresas que contratam jovens e oferecem treinamento. As empresas que cumprem as regras ganham o direito de usar o selo em suas propagandas. O texto busca ajudar na inserção de jovens no mercado de trabalho.",
   "o_que_muda": [
-   "Empresas que cumprem regras de contratação de jovens podem receber o selo.",
-   "O selo vale por um ano e pode ser usado em materiais de divulgação da empresa.",
-   "A Prefeitura precisará definir as regras práticas da lei."
+   "Criação do Selo \"Empresa Amiga do Jovem e do Adolescente Aprendiz\" para reconhecer empresas.",
+   "Empresas devem cumprir a cota de aprendizagem da lei federal de 2000.",
+   "Empresas devem contratar jovens em situação de vulnerabilidade social, com deficiência ou assistidos.",
+   "Empresas precisam ter programas de capacitação e desenvolvimento profissional para os jovens.",
+   "Empresas devem oferecer benefícios como plano de carreira, auxílio-educação e horário flexível.",
+   "Empresas devem participar de projetos sociais para a juventude com órgãos públicos ou entidades.",
+   "O selo vale por um ano e pode ser renovado após nova avaliação.",
+   "A empresa premiada pode usar o selo em materiais impressos, embalagens, propagandas e no espaço físico."
   ],
-  "quem_e_afetado": "Empresas locais e jovens em busca de oportunidades de trabalho ou capacitação.",
-  "justificativa_do_autor": "Segundo o autor, o projeto busca combater o desemprego juvenil, incentivar a autonomia financeira dos jovens e valorizar empresas que investem nessa faixa etária.",
+  "quem_e_afetado": "As empresas (pessoas jurídicas) que querem o selo ganham a obrigação de cumprir várias regras de contratação e apoio aos jovens. Os jovens e adolescentes aprendizes ganham mais chances de emprego, treinamento e benefícios. Ficam de fora as empresas que não cumprirem os requisitos exigidos.",
+  "de_onde_sai_o_dinheiro": "O texto diz que os gastos com a lei saem do orçamento próprio da prefeitura, com reforço de dinheiro se for preciso.",
+  "o_que_falta_definir": [
+   "Como será feita a avaliação para dar o selo.",
+   "Quem na prefeitura vai fiscalizar e entregar o selo.",
+   "Quais são os documentos exatos que a empresa deve apresentar.",
+   "Como será o processo de renovação após um ano."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Pessoa jurídica",
+    "explicacao": "Empresa ou organização registrada legalmente, e não uma pessoa física."
+   },
+   {
+    "termo": "Vulnerabilidade social",
+    "explicacao": "Condição de fragilidade ou pobreza em que pessoas têm menos acesso a direitos e oportunidades."
+   },
+   {
+    "termo": "Dotações orçamentárias",
+    "explicacao": "Dinheiro reservado no orçamento do governo para pagar despesas específicas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a proposta cria o selo para reconhecer empresas que ajudam jovens a entrar no mercado de trabalho. Ele afirma que o desemprego dos jovens é um problema persistente no Brasil que prejudica a economia e o desenvolvimento pessoal. A inserção dos jovens garante autonomia financeira e integração social, além de trazer novas ideias para as empresas. Com o selo, as companhias mostram seu compromisso com a juventude, atraem talentos e ajudam a reduzir o desemprego.",
   "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber quais serão os custos exatos para a Prefeitura nem como será feita a avaliação das empresas na prática.",
+  "limitacoes": "O documento não define quais órgãos da prefeitura vão avaliar as empresas nem quais documentos serão exigidos para conceder o selo.",
   "pontos_de_atencao": [
    {
     "ponto": "O selo tem validade de um ano e pode ser renovado.",
-    "trecho": "O Selo “Empresa Amiga do Jovem e do Adolescente Aprendiz” terá validade de um ano, podendo ser renovado"
+    "trecho": "O Selo “Empresa Amiga do Jovem e do Adolescente Aprendiz” terá validade de um ano, podendo ser renovado mediante nova avaliação e comprovação do cumprimento dos requisitos."
    },
    {
-    "ponto": "O texto prevê que a Prefeitura regulamentará a lei.",
+    "ponto": "O Poder Executivo (prefeitura) vai regulamentar a lei.",
     "trecho": "O Poder Executivo regulamentará a presente Lei, no que couber."
-   },
-   {
-    "ponto": "O texto menciona que os gastos sairão do orçamento próprio, mas não traz valores.",
-    "trecho": "As despesas com a execução desta lei correrão por conta das dotações orçamentárias próprias"
    }
   ],
-  "pontos_descartados": []
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não traz penalidades ou multas para empresas que usarem o selo sem autorização.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "36bcdc08f0766635",
- "gerado_em": "2026-11-06T18:50:39Z"
+ "gerado_em": "2026-11-08T03:32:27Z"
 }

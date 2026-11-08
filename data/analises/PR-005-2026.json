@@ -12,35 +12,62 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria regras para a participação de servidores da Câmara Municipal de Cubatão em cursos de capacitação pagos pelo órgão. Ele também define como o servidor deve devolver o dinheiro aos cofres públicos caso não conclua o curso ou não tenha bom desempenho.",
+  "resumo": "O projeto cria regras para cursos pagos pela Câmara Municipal para os servidores. Ele define as obrigações de frequência e notas, e diz quando o funcionário deve devolver o dinheiro gasto caso desista ou seja reprovado. A medida busca organizar o uso do dinheiro público em treinamentos e garantir o retorno para o órgão. O texto vale para os contratos que já estão valendo e também para os futuros.",
   "o_que_muda": [
-   "Estabelece critérios de frequência e nota mínima para servidores em cursos custeados pela Câmara.",
-   "Obriga o servidor a ressarcir o valor investido em caso de abandono, reprovação ou demissão.",
-   "Define que o ressarcimento pode ser feito via desconto em folha de pagamento.",
-   "Exige que o servidor assine um termo de compromisso de permanência no cargo após o curso."
+   "O servidor que for fazer curso pago pela Câmara precisa ter frequência mínima de 75% das aulas ou o limite exigido pela escola.",
+   "A nota ou conceito do curso deve ser igual ou superior a 7,0 ou a nota equivalente definida pela escola contratada.",
+   "O servidor é obrigado a devolver todo o dinheiro investido se abandonar o curso sem justificativa aceita pela Administração.",
+   "Também há obrigação de ressarcir em caso de reprovação por falta ou por nota baixa, exoneração a pedido, demissão ou pedido de licença para tratar de interesses particulares durante o curso.",
+   "Em cursos fechados contratados por preço global, o valor da devolução é calculado dividindo o valor total do contrato pelo número máximo de vagas.",
+   "Para quem continua na Câmara, a devolução é feita em descontos na folha de pagamento de até 10% da remuneração líquida por mês.",
+   "Para quem sai da Câmara por pedido de demissão ou exoneração, o pagamento deve ser feito de uma vez só por depósito bancário em até 30 dias após a notificação.",
+   "Quem atrasar o pagamento de 3 parcelas após sair da Câmara terá a dívida vencida antes do prazo e vai para a Dívida Ativa para cobrança na justiça.",
+   "O servidor deve assinar um termo antes de começar o curso prometendo ficar na Câmara pelo mesmo tempo que durar o curso após terminá-lo."
   ],
-  "quem_e_afetado": "Servidores da Câmara Municipal de Cubatão que forem indicados para cursos de capacitação custeados pelo Legislativo.",
-  "justificativa_do_autor": "Segundo o autor, o projeto visa modernizar a administração e garantir a recomposição do dinheiro público em casos de negligência acadêmica, tratando a capacitação como um investimento que exige contrapartida de desempenho.",
-  "natureza": "organizacao_administrativa",
-  "limitacoes": "Não é possível saber o valor total que será gasto com essas capacitações ou o impacto orçamentário anual, pois o projeto trata apenas das regras de participação e ressarcimento.",
-  "pontos_de_atencao": [
+  "quem_e_afetado": "Os servidores da Câmara Municipal que forem indicados para cursos pagos pelo órgão ganham o direito à capacitação, mas também a obrigação de estudar e passar. Ficam de fora da indicação os servidores que estão de licença para tratar de interesses particulares ou que tenham punição disciplinar ou falta sem justificativa nos últimos 5 anos.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não define a origem dos recursos financeiros usados para pagar os cursos de capacitação.",
+   "O texto não especifica quais são os critérios exatos para a escolha inicial do servidor além da conveniência, oportunidade e falta de punições."
+  ],
+  "palavras_dificeis": [
    {
-    "ponto": "O projeto define que o ressarcimento será feito por desconto em folha limitado a 10% da remuneração.",
-    "trecho": "ressarcimento será efetuado mediante desconto em folha de pagamento, respeitando-se o limite de 10% (dez por cento) da remuneração liquida mensal"
+    "termo": "Edilidade",
+    "explicacao": "Palavra usada no texto para se referir à Câmara Municipal."
    },
    {
-    "ponto": "O texto não menciona o impacto financeiro total ou a fonte específica de recursos para os cursos.",
-    "trecho": ""
+    "termo": "Erário",
+    "explicacao": "Dinheiro público pertencente ao governo ou à administração."
    },
    {
-    "ponto": "A decisão sobre o que é uma justificativa aceitável para abandono do curso cabe à Presidência da Câmara.",
-    "trecho": "Compete à Presidência da Câmara, ouvida a Gestão do Legislativo e o Serviço de Recursos Humanos, e fundamentada em relatório do Fiscal Técnico do Contrato"
+    "termo": "Preço global",
+    "explicacao": "Contrato fechado por um valor total único para todos os serviços, sem cobrar por item separado."
    }
   ],
-  "pontos_descartados": []
+  "justificativa_do_autor": "Segundo o autor, o projeto baseia-se na Lei Municipal 325/1959, que já prevê desconto em folha de até 10% do salário para indenizações à Fazenda Pública. A norma define que a Presidência, com ajuda da Gestão do Legislativo e Recursos Humanos, julga as justificativas, tirando essa decisão do Fiscal de Contrato. A fórmula de cálculo protege a Câmara em turmas fechadas onde o custo é fixo, evitando dano ao erário caso a vaga seja desperdiçada. O autor alega que a capacitação é um investimento com contrapartida de desempenho, exigida pelos órgãos de controle.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não informa qual é o custo total estimado ou o orçamento reservado para o programa de capacitação institucional.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O pagamento da devolução para quem continua trabalhando é feito em parcelas mensais limitadas a 10% do salário líquido.",
+    "trecho": "O ressarcimento será efetuado mediante desconto em folha de pagamento, respeitando-se o limite de 10% (dez por cento) da remuneração liquida mensal",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "Ex-servidores que atrasarem três parcelas da dívida terão o débito cobrado na justiça por meio da Dívida Ativa.",
+    "trecho": "O atraso de 3 (três) parcelas no ressarcimento por ex-servidor implicará no vencimento antecipado da divida e inscrição imediata em Divida Ativa para cobrança judicial.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "19290626a7a9e1e0",
- "gerado_em": "2026-11-05T19:18:05Z"
+ "gerado_em": "2026-11-08T03:27:01Z"
 }

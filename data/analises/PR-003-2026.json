@@ -12,29 +12,44 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto propõe dar o nome de \"Vereador Wilson Pio dos Reis\" à sala de exposições da Câmara Municipal de Cubatão.",
+  "resumo": "Este projeto dá o nome de Vereador Wilson Pio dos Reis para a sala de exposições da Câmara Municipal de Cubatão. A sala fica no prédio sede da Câmara. O projeto serve para fazer uma homenagem ao vereador falecido. O morador não ganha novas regras nem obrigações com essa mudança.",
   "o_que_muda": [
-   "A sala de exposições da Câmara passa a ter uma denominação oficial.",
-   "Homenagem póstuma a Wilson Pio dos Reis."
+   "A sala de exposições da Câmara Municipal de Cubatão passa a se chamar \"Vereador Wilson Pio dos Reis\"."
   ],
-  "quem_e_afetado": "O público que frequenta as dependências da Câmara Municipal de Cubatão.",
-  "justificativa_do_autor": "",
-  "natureza": "homenagem_ou_data",
-  "limitacoes": "O documento apresentado contém apenas a ementa e informações técnicas de um projeto de reforma do edifício, não trazendo o texto completo da justificativa ou detalhes operacionais da homenagem.",
-  "pontos_de_atencao": [
+  "quem_e_afetado": "Nenhum morador ganha direitos ou obrigações com este projeto. O texto apenas muda o nome de um espaço público dentro do prédio da Câmara.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não diz quando a placa com o novo nome será colocada na sala."
+  ],
+  "palavras_dificeis": [
    {
-    "ponto": "O texto não menciona custos ou a fonte de recursos para a implementação da placa ou sinalização.",
-    "trecho": ""
+    "termo": "Denomina",
+    "explicacao": "Significa dar um nome oficial a um lugar, rua ou prédio."
    },
    {
-    "ponto": "O texto não estabelece prazos para a execução da mudança de nome.",
+    "termo": "Ementa",
+    "explicacao": "É o resumo que fica no começo da lei para explicar o assunto principal."
+   }
+  ],
+  "justificativa_do_autor": "",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O texto não traz a biografia do homenageado nem detalhes sobre a data de inauguração do nome.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não fala sobre custos ou de onde sai o dinheiro para eventuais placas.",
     "trecho": ""
    }
   ],
-  "pontos_descartados": []
+  "pontos_descartados": [
+   {
+    "ponto": "O efeito é apenas simbólico e de homenagem.",
+    "trecho": "DENOMINA “VEREADOR WILSON PIO DOS REIS\", A SALA DE EXPOSIÇÕES DA CÂMARA MUNICIPAL DE CUBATÃO E DÁ PROVIDÊNCIAS",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "750ebdeb98dc3943",
- "gerado_em": "2026-11-05T19:17:49Z"
+ "gerado_em": "2026-11-08T03:26:40Z"
 }

@@ -12,35 +12,56 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto altera a estrutura administrativa da Câmara Municipal de Cubatão, extinguindo cargos efetivos vagos, criando novos cargos em comissão e reorganizando funções gratificadas de compras e contratos.",
+  "resumo": "Este projeto muda a estrutura de cargos e funções da Câmara Municipal de Cubatão. Ele acaba com alguns cargos que nunca foram ocupados e cria novos postos de assessoramento administrativo. Também muda os nomes e as tarefas de funções de compras e contratos. A mudança busca organizar melhor a administração da Casa, sem criar novos gastos de pessoal.",
   "o_que_muda": [
-   "Extingue 4 cargos efetivos vagos de Especialista Legislativo (Arquitetura e Engenharia).",
-   "Extingue 2 cargos em comissão de assessoria jurídica da Presidência.",
-   "Cria 2 novos cargos em comissão: Assessor Administrativo Geral e seu Adjunto.",
-   "Altera nomes e atribuições de funções gratificadas ligadas a compras e contratos."
+   "Acaba com 2 cargos efetivos (de concurso) de Especialista Legislativo na área de Arquitetura e Urbanismo e 2 na área de Engenharia Civil.",
+   "Acaba com os cargos em comissão (de livre escolha) de Assessor Geral de Assuntos Jurídicos da Presidência e seu adjunto.",
+   "Cria 1 cargo em comissão de Assessor Administrativo Geral (nível superior, padrão S13) e 1 de Assessor Administrativo Geral Adjunto (nível superior, padrão S12).",
+   "Muda o nome da função gratificada de \"Supervisor de Monitoramento de Compras e Contratos\" para \"Supervisor do Plano de Contratações Anual e Cadastro de Licitações\".",
+   "Muda o nome da função gratificada de \"Supervisor de Cadastro de Compras e Contratos\" para \"Supervisor de Monitoramento e Cadastro de Contratos\".",
+   "Atualiza as tarefas dos novos assessores administrativos e dos supervisores de compras e contratos, detalhando deveres com sistemas de controle e tribunais."
   ],
-  "quem_e_afetado": "A estrutura administrativa e o quadro de pessoal da Câmara Municipal de Cubatão.",
-  "justificativa_do_autor": "Segundo o autor, a medida visa sanear o quadro de pessoal, adequar a estrutura do Gabinete da Presidência a precedentes do STF e aplicar o princípio da segregação de funções na gestão de contratos conforme a lei federal.",
+  "quem_e_afetado": "A mudança atinge diretamente servidores da Câmara e futuros ocupantes de cargos de confiança na chefia. Ninguém de fora da prefeitura ou da Câmara ganha direitos ou obrigações diretas. Quem pretendia concorrer às vagas extintas de engenheiro ou arquiteto não poderá mais fazer isso, pois elas deixam de existir.",
+  "de_onde_sai_o_dinheiro": "As despesas para aplicar esta resolução saem do orçamento próprio da Câmara, com reforço de dinheiro se for preciso.",
+  "o_que_falta_definir": [
+   "O texto não define os valores exatos em reais dos salários dos padrões S13, S12 e F13.",
+   "O texto não define datas específicas para a nomeação dos novos assessores."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "provimento efetivo",
+    "explicacao": "Cargo que a pessoa só consegue ocupar depois de passar em concurso público."
+   },
+   {
+    "termo": "cargo em comissão",
+    "explicacao": "Cargo de confiança que não exige concurso e pode ser livremente escolhido e demitido pelo chefe."
+   },
+   {
+    "termo": "função gratificada",
+    "explicacao": "Um trabalho extra que um servidor de carreira já concursado assume, ganhando um valor a mais por isso."
+   },
+   {
+    "termo": "inexigibilidades",
+    "explicacao": "Situações em que a lei permite contratar uma empresa sem fazer disputa de preços (licitação), porque só existe um fornecedor possível."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a extinção dos cargos de arquitetura e engenharia que nunca foram ocupados serve para sanear a administração e economizar. O autor alega que a troca dos cargos jurídicos da presidência por assessores administrativos serve para cumprir regras do Supremo Tribunal Federal, já que a parte jurídica é exclusiva da Procuradoria Legislativa. O autor diz ainda que a reorganização das funções de compras separa melhor as etapas do processo e segue a nova lei de licitações, mantendo neutralidade nos gastos.",
   "natureza": "organizacao_administrativa",
-  "limitacoes": "Não é possível verificar se a criação dos novos cargos terá impacto financeiro real a longo prazo apenas com este documento, apesar da alegação de neutralidade.",
+  "limitacoes": "O texto não informa os valores em reais dos salários dos novos cargos criados nem o impacto financeiro exato.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto alega neutralidade orçamentária ao substituir cargos extintos por novos.",
-    "trecho": "a criação dos novos cargos utiliza exatamente a mesma equivalência salarial e quantitativa dos cargos extintos"
-   },
-   {
-    "ponto": "O texto não especifica o impacto financeiro exato, apenas cita a fonte de recursos.",
-    "trecho": "As despesas decorrentes da execução desta Resolução correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
-   },
-   {
-    "ponto": "O projeto entra em vigor imediatamente após a publicação.",
+    "ponto": "O projeto entra em vigor na data em que for publicado oficialmente.",
     "trecho": "Esta Resolução entra em vigor na data de sua publicação."
+   },
+   {
+    "ponto": "Os gastos com a medida saem do orçamento da própria Câmara.",
+    "trecho": "As despesas decorrentes da execução desta Resolução correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
    }
   ],
   "pontos_descartados": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "b8bbe1c9dad2e69c",
- "gerado_em": "2026-11-05T19:12:45Z"
+ "gerado_em": "2026-11-08T03:25:32Z"
 }

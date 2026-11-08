@@ -12,30 +12,46 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto altera a estrutura administrativa da Câmara Municipal de Cubatão para criar a Função de Coordenador de Suporte Técnico.",
+  "resumo": "Este projeto muda a estrutura administrativa da Câmara Municipal de Cubatão. Ele cria uma nova função para cuidar de computadores e sistemas. O objetivo é melhorar a gestão dos serviços digitais da Câmara.",
   "o_que_muda": [
-   "Altera a Resolução nº 3.079, de 22 de julho de 2025.",
-   "Cria a Função de Coordenador de Suporte Técnico exigindo ensino superior específico.",
-   "Estabelece exigência de qualificação em Engenharia da Computação, Ciência da Computação ou Tecnologia em Análise e Desenvolvimento de Sistemas."
+   "Altera a Resolução número 3.079, de 22 de julho de 2025.",
+   "Cria a Função de Coordenador de Suporte Técnico na Câmara Municipal.",
+   "Exige que o profissional tenha curso superior em Engenharia da Computação, Ciência da Computação ou Tecnologia em Análise e Desenvolvimento de Sistemas."
   ],
-  "quem_e_afetado": "A estrutura administrativa e os servidores da Câmara Municipal de Cubatão.",
-  "justificativa_do_autor": "Segundo o autor, a criação do cargo visa ao aprimoramento da gestão administrativa, suprindo a necessidade de integração entre plataformas digitais, atendimento à transparência pública, proteção de dados e modernização.",
+  "quem_e_afetado": "A mudança afeta a organização interna da Câmara Municipal de Cubatão ao criar um novo cargo de chefia na área de tecnologia. O texto não detalha direitos ou obrigações diretas para os moradores comuns.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O salário do novo cargo.",
+   "As tarefas exatas do Coordenador de Suporte Técnico.",
+   "Quantas vagas serão abertas para essa nova função."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Resolução",
+    "explicacao": "Tipo de lei interna que serve para organizar o funcionamento da Câmara."
+   },
+   {
+    "termo": "Parque tecnológico",
+    "explicacao": "Conjunto de computadores, aparelhos e redes de uma instituição."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto melhora a gestão administrativa da Câmara Municipal de Cubatão. A criação do cargo resolve a dependência de computadores, a expansão da tecnologia e as leis de transparência e proteção de dados. O autor diz ainda que a nova função não copia o trabalho de Analista ou Administrador de Sistemas e exige faculdade específica.",
   "natureza": "organizacao_administrativa",
-  "limitacoes": "Não é possível saber o impacto financeiro, o salário do cargo ou quais dispositivos exatos da resolução anterior serão modificados, pois o texto completo das alterações não consta no documento.",
+  "limitacoes": "Não é possível saber o impacto financeiro, os salários ou a quantidade exata de vagas criadas, pois o documento não traz esses dados.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto não traz informações sobre o custo da criação da nova função ou a fonte dos recursos financeiros.",
+    "ponto": "O texto não informa o custo da nova função ou a origem dos recursos financeiros.",
     "trecho": ""
    },
    {
-    "ponto": "O projeto exige formação de nível superior específica para o novo cargo.",
-    "trecho": "exigindo qualificação de nível superior em Superior em Engenharia da Computação, Ciência da Computação ou Tecnologia em Análise e Desenvolvimento de Sistemas."
+    "ponto": "O autor aponta a necessidade de criar a função para cuidar de sistemas e transparência.",
+    "trecho": "a criação da Função de Coordenador de Suporte Técnico visa suprir a lacuna da dependência institucional de sistemas informatizados"
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "09681459baee74d7",
- "gerado_em": "2026-11-05T22:59:37Z"
+ "gerado_em": "2026-11-08T03:30:35Z"
 }

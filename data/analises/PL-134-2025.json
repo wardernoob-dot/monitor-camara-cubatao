@@ -12,29 +12,46 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto de lei propõe dar o nome de \"Amaury José Leme\" a uma rua localizada no cruzamento da Rua 2 com a faixa do Oleoduto, no bairro Pinheiro do Miranda.",
+  "resumo": "Este projeto dá o nome de Amaury José Leme a uma rua da cidade. A via escolhida fica localizada na Rua 2 com a faixa do Oleoduto- Pinheiro do Miranda. A nova regra vale logo após a publicação da lei na prefeitura. O objetivo é homenagear um antigo morador e líder político da região.",
   "o_que_muda": [
-   "A via pública passa a ser oficialmente chamada de Rua Amaury José Leme.",
-   "A identificação da rua em placas e documentos oficiais deverá ser atualizada."
+   "A Rua 2 com a faixa do Oleoduto- Pinheiro do Miranda passa a se chamar Rua 'AMAURY JOSÉ LEME'."
   ],
-  "quem_e_afetado": "Moradores e proprietários de imóveis situados na via mencionada.",
-  "justificativa_do_autor": "Segundo o autor, o projeto presta uma homenagem ao ex-vereador e líder comunitário Amaury José Leme, destacando sua atuação política e religiosa em Cubatão.",
+  "quem_e_afetado": "A mudança afeta diretamente os moradores e donos de imóveis daquela rua, que passam a ter um novo nome de logradouro (lugar público como rua ou praça) em seus endereços e documentos. Ninguém ganha obrigações financeiras ou multas com esta lei.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não aponta quem será o responsável por instalar as placas com o novo nome da rua."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "logradouro",
+    "explicacao": "Espaço público reconhecido pela prefeitura, como ruas, praças e avenidas."
+   },
+   {
+    "termo": "suplente",
+    "explicacao": "Pessoa que fica como reserva para assumir um cargo político se houver vaga."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto presta uma justa homenagem ao ex-vereador e líder comunitário Amaury José Leme, conhecido como 'Amauri Pela Porco'. Ele foi vereador de Cubatão entre 2001 e 2004, secretário regional dos Bairros Cotas de 2005 a 2008, trabalhou na prefeitura de Peruíbe e atuou como líder religioso nas igrejas da AD Cubatão.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível identificar se a rua já possui nome oficial ou se a mudança causará transtornos administrativos aos moradores locais.",
+  "limitacoes": "O documento não informa quanto custará para colocar as placas novas na rua.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto não menciona o custo para a alteração de placas ou sinalização da via.",
+    "ponto": "O efeito é puramente simbólico e de homenagem, alterando o nome de uma via pública.",
+    "trecho": "DENOMINA “AMAURY JOSÉ LEME”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS"
+   },
+   {
+    "ponto": "O texto não menciona custos ou a fonte dos recursos financeiros para eventuais trocas de placas.",
     "trecho": ""
    },
    {
-    "ponto": "O projeto entra em vigor imediatamente após ser publicado.",
-    "trecho": "Esta lei entra em vigor na data de sua publicação."
+    "ponto": "O texto não traz regras sobre penalidades ou multas.",
+    "trecho": ""
    }
   ],
   "pontos_descartados": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "045aa87905958b00",
- "gerado_em": "2026-11-06T18:50:08Z"
+ "gerado_em": "2026-11-08T03:29:12Z"
 }

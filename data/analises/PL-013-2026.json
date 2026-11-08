@@ -1,0 +1,66 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "13",
+  "ano": "2026",
+  "autoria": "DANIEL BARBOSA DE ASSIS SILVA",
+  "ementa": "ALTERA E INCLUI DISPOSITIVOS NA LEI MUNICIPAL N° 3.744, DE 11 DE AGOSTO DE 2.015, PARA DISPOR SOBRE A OBRIGATORIEDADE DE PARADAS FLEXÍVEIS PARA EMBARQUE E DESEMBARQUE DE MULHERES NO TRANSPORTE COLETIVO MUNICIPAL NO PERÍODO NOTURNO, COMO MEDIDA DE SEGURANÇA E IGUALDADE DE GÊNERO, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2013.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto muda uma lei antiga para obrigar os ônibus da cidade a parar fora do ponto oficial para mulheres à noite. A ideia é dar mais segurança para quem anda de ônibus no escuro. A passageira precisa pedir a parada com antecedência e o motorista avalia se o local é seguro. A regra vale das nove da noite até às cinco da manhã.",
+  "o_que_muda": [
+   "Permite o embarque e desembarque de passageiras mulheres fora dos pontos oficiais em veículos do transporte coletivo municipal.",
+   "A nova regra vale apenas no período noturno, das 21h às 5h do dia seguinte.",
+   "A passageira deve pedir o desembarque com antecedência mínima razoável para garantir a segurança da manobra.",
+   "O motorista tem a palavra final para avaliar as condições de trânsito e segurança antes de parar.",
+   "A lei passa a valer 90 dias após a sua publicação oficial."
+  ],
+  "quem_e_afetado": "As passageiras mulheres ganham o direito de pedir paradas mais perto de seus destinos à noite. Os motoristas de ônibus ganham a responsabilidade de avaliar os pedidos e decidir se o local é seguro para a parada. O texto não cita isenções ou quem fica de fora, além da exigência de que o pedido seja feito por passageiras do sexo feminino.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O que significa exatamente uma antecedência mínima razoável para o pedido.",
+   "Se haverá alguma punição para empresas ou motoristas que não cumprirem a regra.",
+   "Como será feita a fiscalização do cumprimento desta lei."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "discricionariedade",
+    "explicacao": "Liberdade que a pessoa tem para tomar uma decisão usando o próprio julgamento e bom senso."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a proposta é uma medida urgente de proteção contra a violência de gênero no transporte coletivo noturno. O autor cita dados do Fórum Brasileiro de Segurança Pública dizendo que três em cada quatro mulheres já sofreram assédio em locais públicos. Ele também afirma que a medida cumpre a Lei Maria da Penha e traz igualdade e dignidade para as mulheres na mobilidade urbana.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa se haverá punição para empresas de ônibus que não cumprirem a regra nem como será a fiscalização.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A lei tem prazo de noventa dias para começar a valer após a publicação.",
+    "trecho": "Esta lei entrará em vigor após 90 (noventa) dias, a partir de sua publicação."
+   },
+   {
+    "ponto": "O motorista tem liberdade para decidir se o local é seguro para a parada.",
+    "trecho": "assegurada a discricionariedade do condutor para avaliar condições de trânsito e segurança."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não informa o custo ou a fonte de recursos para aplicar a lei.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não define penalidades ou multas para quem desrespeitar a regra.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "fe3b6a1d4924c6cb",
+ "gerado_em": "2026-11-08T03:30:29Z"
+}

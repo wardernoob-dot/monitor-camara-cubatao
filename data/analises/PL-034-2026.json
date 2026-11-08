@@ -12,31 +12,50 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto propõe dar o nome de Guilherme Henrick da Silva à quadra de futebol society situada na Praça da Cidadania, no bairro Vila São José.",
+  "resumo": "Este projeto dá o nome de Guilherme Henrick da Silva para uma quadra de futebol em Cubatão. O local fica na Praça da Cidadania, no bairro Vila São José. A mudança serve para homenagear um morador conhecido na região. O efeito prático é apenas colocar uma placa com o nome no espaço público.",
   "o_que_muda": [
-   "A quadra de futebol society passa a ter um nome oficial.",
-   "O espaço público será identificado em homenagem a Guilherme Henrick da Silva."
+   "A quadra de futebol society na Praça Padre Antônio Pereira Luz ganha o nome oficial de Guilherme Henrick da Silva."
   ],
-  "quem_e_afetado": "Frequentadores da quadra de futebol society e moradores do bairro Vila São José.",
-  "justificativa_do_autor": "Segundo o autor, a homenagem atende a pedidos de moradores e reconhece o legado de carisma, dedicação e o impacto positivo de Guilherme na história e identidade da comunidade local.",
+  "quem_e_afetado": "A população do bairro Vila São José e os frequentadores da praça passam a ter um espaço com nome novo. Ninguém ganha novas obrigações ou perde direitos.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não deixa pendências para regulamentação posterior."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "society",
+    "explicacao": "Tipo de campo de futebol com grama sintética e menor que um campo tradicional."
+   },
+   {
+    "termo": "denomina",
+    "explicacao": "Atribui um nome oficial a um local ou bem público."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, Guilherme Henrick da Silva nasceu em Santos em 2003 e morou no bairro Vila São José desde os seis meses de idade. O autor afirma que ele era uma referência de dedicação, carisma e motivação para os moradores. A homenagem atende a pedidos da comunidade para valorizar a história e a identidade local.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber se haverá gastos com a confecção e instalação de placas de identificação, pois o documento não trata de custos.",
+  "limitacoes": "O texto não traz o impacto financeiro para a confecção da placa com o novo nome da quadra.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto não menciona custos para a execução da placa ou sinalização.",
+    "ponto": "O projeto tem efeito apenas simbólico, pois serve para dar nome a um espaço público.",
+    "trecho": "DENOMINA GUILHERME HENRICK DA SILVA A QUADRA DE FUTEBOL SOCIETY LOCALIZADA NA PRAÇA PADRE ANTÔNIO PEREIRA LUZ"
+   },
+   {
+    "ponto": "O texto não traz nenhuma informação sobre custos ou de onde sai o dinheiro para eventuais placas.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não indica quem vai fiscalizar a execução da lei.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não prevê nenhuma penalidade ou multa.",
     "trecho": ""
    }
   ],
-  "pontos_descartados": [
-   {
-    "ponto": "O projeto não define prazo para a instalação da identificação com o novo nome.",
-    "trecho": "",
-    "motivo": "trecho nao encontrado no documento"
-   }
-  ]
+  "pontos_descartados": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "1f632027258372ca",
- "gerado_em": "2026-11-05T18:53:17Z"
+ "gerado_em": "2026-11-08T03:24:09Z"
 }

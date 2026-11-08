@@ -12,35 +12,56 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto concede reajuste salarial de 5% aos servidores municipais e atualiza os valores dos benefícios de alimentação e refeição.",
+  "resumo": "O projeto trata da revisão geral anual e reajuste dos salários dos servidores públicos municipais, além da alteração nos valores dos benefícios de alimentação e refeição. A proposta concede um aumento de cinco por cento para servidores ativos, inativos e pensionistas, e de quatro vírgula trinta e nove por cento para agentes políticos. O texto também fixa novos valores mensais e diários para os vales e define regras sobre os efeitos financeiros e o orçamento.",
   "o_que_muda": [
-   "Reajuste de 5% nos salários e proventos de servidores ativos, inativos e pensionistas.",
-   "O valor do benefício de alimentação passa a ser R$ 525,00 mensais.",
-   "O valor do benefício de refeição passa a ser R$ 42,00 por dia trabalhado.",
-   "Reajuste de 4,39% para agentes políticos (secretários) da administração direta e autárquica."
+   "Concessão de reajuste de 5,00% sobre vencimentos, salários e proventos de abril de 2026 para servidores ativos, inativos e pensionistas da Administração Direta e Autárquica.",
+   "Reajuste de 4,39% para agentes políticos da Administração Direta e Autárquica do Poder Executivo.",
+   "O valor do benefício de alimentação passa a ser de R$ 525,00 mensais para servidores ativos.",
+   "O valor do benefício de refeição passa a ser de R$ 42,00 por dia efetivamente trabalhado para servidores ativos.",
+   "O reajuste de 5% incide sobre a Vantagem Pessoal Nominalmente Identificada (VPNI).",
+   "Acrescenta parágrafo na Lei nº 4.458/2026 determinando que o aumento salarial não se aplica aos vencimentos da Lei Complementar nº 22/2004."
   ],
-  "quem_e_afetado": "Servidores públicos municipais ativos, inativos, pensionistas e agentes políticos da administração direta e autárquica de Cubatão.",
-  "justificativa_do_autor": "Segundo o autor, a medida visa a revisão geral anual dos vencimentos para recomposição das perdas inflacionárias.",
+  "quem_e_afetado": "Os servidores públicos municipais ativos, inativos e pensionistas com direito à paridade da Administração Direta, Autárquica e Fundacional, além de agentes políticos, ganham reajuste salarial e novos valores de benefícios. Os servidores ativos ganham o direito ao vale-alimentação de R$ 525,00 e vale-refeição de R$ 42,00 por dia. Ficam de fora do aumento salarial da Lei nº 4.458/2026 os vencimentos estabelecidos na Lei Complementar nº 22/2004.",
+  "de_onde_sai_o_dinheiro": "As despesas correm por conta de dotações orçamentárias próprias do orçamento vigente, podendo ser suplementadas se necessário na forma da lei, com custo adicional bruto total estimado em R$ 23.258.921,00 para o exercício de 2026.",
+  "o_que_falta_definir": [
+   "A expedição de decretos e atos regulamentares pelo Poder Executivo para a atualização das tabelas de vencimentos dos servidores.",
+   "A definição exata de eventuais suplementações orçamentárias caso as dotações atuais não sejam suficientes."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "VPNI (Vantagem Pessoal Nominalmente Identificada)",
+    "explicacao": "Uma parcela fixa no salário do servidor que foi garantida por lei antiga e não pode ser reduzida."
+   },
+   {
+    "termo": "Agentes políticos",
+    "explicacao": "Pessoas que ocupam cargos de direção ou eleitos, como prefeito, vice-prefeito e secretários municipais."
+   },
+   {
+    "termo": "Administração Autárquica",
+    "explicacao": "Órgãos do governo que possuem autonomia para administrar seus próprios serviços e dinheiro."
+   },
+   {
+    "termo": "Suplementadas",
+    "explicacao": "Valores adicionados ao orçamento para reforçar o dinheiro disponível quando ele acaba."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o estudo tem por objetivo analisar o impacto financeiro para a revisão geral anual dos vencimentos e concessão de reajuste com aumento real nos proventos dos servidores públicos municipais ativos, inativos e pensionistas, incluindo também a concessão de reajuste aos agentes políticos da Administração Direta e Autárquica do Poder Executivo para recomposição das perdas inflacionárias.",
   "natureza": "orcamento_financas",
   "limitacoes": "",
   "pontos_de_atencao": [
    {
-    "ponto": "O custo total estimado para o exercício de 2026 é de mais de 23 milhões de reais.",
+    "ponto": "O custo total adicional estimado para o exercício de 2026 é de mais de vinte e três milhões de reais.",
     "trecho": "TOTAL PARA 0 EXERCÍCIO DE 2026 R$ 23.258.921,00"
    },
    {
-    "ponto": "As despesas correrão por conta de dotações orçamentárias próprias, podendo ser suplementadas se necessário.",
-    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias"
-   },
-   {
-    "ponto": "Os efeitos financeiros do reajuste retroagem a maio de 2025.",
-    "trecho": "Os efeitos financeiros desta Lei, salvo disposição expressa em contrário, retroagirão a 10 de maio de 2025."
+    "ponto": "O texto autoriza o Poder Executivo a expedir decretos e atos regulamentares para atualizar as tabelas de vencimentos.",
+    "trecho": "Fica o Poder Executivo autorizado a expedir os decretos e atos regulamentares necessários à fiel execução desta Lei, inclusive quanto á atualização das tabelas de vencimentos dos servidores."
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "3d48ca5fe1229661",
- "gerado_em": "2026-11-05T19:18:18Z"
+ "gerado_em": "2026-11-08T03:27:15Z"
 }

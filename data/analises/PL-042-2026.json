@@ -12,34 +12,47 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto inclui expressamente pessoas com Transtorno do Espectro Autista (TEA) como beneficiárias da lei que garante a entrega domiciliar de medicamentos e insumos médicos em Cubatão.",
+  "resumo": "Este projeto de lei inclui oficialmente as pessoas com Transtorno do Espectro Autista (TEA) entre os beneficiários de uma lei municipal de 2015. Essa lei antiga garante a entrega em casa de remédios de uso contínuo e materiais médicos. O objetivo é tirar qualquer dúvida e facilitar o acesso dessas pessoas aos produtos de saúde sem precisar ir até os postos.",
   "o_que_muda": [
-   "Pessoas com TEA passam a ser incluídas explicitamente na lei de distribuição domiciliar de remédios",
-   "Elimina dúvidas sobre o direito de pessoas com TEA ao recebimento de insumos em casa",
-   "Reforça o acesso a tratamentos contínuos para este público específico"
+   "As pessoas com Transtorno do Espectro Autista (TEA) passam a ser consideradas pessoas com deficiência para receber os benefícios da Lei nº 3.763, de 2015.",
+   "A inclusão vale independentemente de outras classificações que já existiam na lei municipal antiga.",
+   "A lei passa a valer logo no dia em que for publicada oficialmente."
   ],
-  "quem_e_afetado": "Pessoas com Transtorno do Espectro Autista (TEA) residentes em Cubatão que necessitam de medicamentos ou materiais médicos de uso contínuo.",
-  "justificativa_do_autor": "Segundo o autor, o projeto visa eliminar dúvidas interpretativas e garantir segurança jurídica, assegurando que pessoas com TEA tenham acesso facilitado à entrega domiciliar de medicamentos e insumos.",
-  "natureza": "politica_publica",
-  "limitacoes": "Não é possível avaliar o impacto orçamentário ou a capacidade logística da prefeitura para realizar as entregas domiciliares com base apenas neste documento.",
-  "pontos_de_atencao": [
+  "quem_e_afetado": "A medida afeta diretamente as pessoas com Transtorno do Espectro Autista, que ganham o direito de serem incluídas na lei de entrega de remédios em casa. O texto não fala sobre quem fica de fora ou quais exceções existem.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não define quais documentos serão exigidos para comprovar o Transtorno do Espectro Autista.",
+   "O texto não explica como será feita a solicitação ou o cadastro para a entrega em casa dos remédios."
+  ],
+  "palavras_dificeis": [
    {
-    "ponto": "O texto não menciona o custo financeiro para a implementação da medida.",
-    "trecho": ""
+    "termo": "Transtorno do Espectro Autista (TEA)",
+    "explicacao": "Condição de saúde que afeta a comunicação, o comportamento e a interação social da pessoa."
    },
    {
-    "ponto": "O texto não indica a fonte de recursos para custear a entrega domiciliar.",
-    "trecho": ""
-   },
-   {
-    "ponto": "A lei entra em vigor imediatamente após ser publicada.",
-    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+    "termo": "Insumos",
+    "explicacao": "Materiais e produtos necessários para realizar procedimentos médicos ou tratamentos."
    }
   ],
-  "pontos_descartados": []
+  "justificativa_do_autor": "Segundo o autor, o projeto melhora a lei municipal que entrega remédios e materiais em casa para garantir que pessoas com Transtorno do Espectro Autista (TEA) sejam incluídas. O autor diz que o autismo tem características específicas e que muitas vezes há dificuldades de deslocamento e barreiras sensoriais para ir até os postos de saúde. A justificativa afirma ainda que a lei federal já considera o autismo como deficiência, então a proposta municipal apenas reforça uma garantia que já existe para dar segurança jurídica e evitar barreiras burocráticas.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não traz informações sobre impacto financeiro, orçamento ou regras práticas de funcionamento do atendimento domiciliar.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A lei entra em vigor na data de sua publicação.",
+    "trecho": "Art. 2° Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não informa o custo da medida ou de onde sairá o dinheiro para pagar por ela.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "1021616c281e0e4f",
- "gerado_em": "2026-11-05T19:16:50Z"
+ "gerado_em": "2026-11-08T03:26:12Z"
 }

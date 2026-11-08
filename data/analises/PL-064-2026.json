@@ -12,35 +12,34 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria o Dia Municipal do Nordestino no calendário oficial de eventos de Cubatão, a ser celebrado anualmente em 8 de outubro.",
+  "resumo": "Este projeto cria o Dia Municipal do Nordestino na cidade de Cubatão. A data escolhida para a comemoração é o dia 8 de outubro de cada ano. O objetivo é reconhecer a importância e a cultura das pessoas que vieram do Nordeste. A lei entra em vigor no dia em que for publicada oficialmente.",
   "o_que_muda": [
-   "Institui o dia 8 de outubro como data comemorativa oficial.",
-   "Permite a realização de atividades culturais e educativas na semana da data.",
-   "Autoriza parcerias entre o Poder Público e entidades privadas para eventos.",
-   "Não obriga a prefeitura a realizar eventos ou gastar recursos."
+   "O Dia Municipal do Nordestino passa a fazer parte do Calendário Oficial de Eventos do Município de Cubatão.",
+   "A data comemorativa será celebrada todos os anos no dia 8 de outubro.",
+   "Ficam permitidas atividades culturais, educacionais, artísticas, esportivas, gastronômicas e de conscientização durante a semana da comemoração.",
+   "As atividades podem ser feitas pelo poder público junto com associações, escolas e entidades da sociedade civil.",
+   "O governo municipal não é obrigado a gastar dinheiro ou realizar eventos, pois as ações dependem do orçamento disponível."
   ],
-  "quem_e_afetado": "A comunidade nordestina residente em Cubatão e o Poder Público Municipal.",
-  "justificativa_do_autor": "Segundo o autor, o projeto homenageia a contribuição histórica, econômica e cultural dos nordestinos para o desenvolvimento de Cubatão, especialmente no período de expansão industrial.",
+  "quem_e_afetado": "A comunidade nordestina de Cubatão ganha uma homenagem oficial. O governo municipal ganha a permissão para realizar eventos, mas sem nenhuma obrigação. Ficam de fora quaisquer gastos obrigatórios para a prefeitura.",
+  "de_onde_sai_o_dinheiro": "O texto diz que a proposta não gera despesas obrigatórias e que as ações dependem da disponibilidade de orçamento da prefeitura.",
+  "o_que_falta_definir": [
+   "Quais atividades específicas serão realizadas em cada ano.",
+   "Quais entidades ou escolas vão fazer parceria com a prefeitura."
+  ],
+  "palavras_dificeis": [],
+  "justificativa_do_autor": "Segundo o autor, a proposta homenageia a comunidade nordestina que ajudou a construir a história, a economia e o desenvolvimento industrial de Cubatão. O autor afirma que os nordestinos foram fundamentais para a cidade com seu trabalho, formando famílias e tradições. Ele também diz que a escolha do dia 8 de outubro acompanha a celebração já existente no país e que o projeto não cria gastos obrigatórios para a prefeitura.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber quais eventos específicos serão realizados ou se haverá custos reais, pois a execução depende da disponibilidade orçamentária futura.",
+  "limitacoes": "O texto não traz o impacto financeiro exato que os eventos podem gerar caso a prefeitura decida realizá-los.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto não cria obrigatoriedade de gastos ou eventos pelo Poder Executivo.",
-    "trecho": "A instituição da presente data comemorativa não implica a obrigatoriedade de realização de eventos pelo Poder Executivo"
-   },
-   {
-    "ponto": "O texto não define uma fonte de recursos específica para as atividades.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto não estabelece penalidades ou órgãos responsáveis pela fiscalização.",
-    "trecho": ""
+    "ponto": "O projeto cria uma data comemorativa sem obrigar o governo a gastar dinheiro.",
+    "trecho": "A instituição da presente data comemorativa não implica a obrigatoriedade de realização de eventos pelo Poder Executivo, ficando as ações sujeitas à disponibilidade orçamentária"
    }
   ],
   "pontos_descartados": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "47eccb6feb08bd84",
- "gerado_em": "2026-11-05T18:45:44Z"
+ "gerado_em": "2026-11-08T03:23:30Z"
 }

@@ -12,28 +12,34 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto dá o nome de Geraldo Antônio Novaes à garagem da Câmara Municipal de Cubatão.",
+  "resumo": "Este projeto dá o nome de Geraldo Antônio Novaes para a garagem da Câmara Municipal de Cubatão. O local fica na Rua Pedro de Toledo, na Vila Couto. A mudança serve para homenagear um antigo motorista e servidor público da cidade. A regra começa a valer logo no dia em que for publicada.",
   "o_que_muda": [
-   "A garagem da Câmara passa a se chamar \"Geraldo Antônio Novaes\"."
+   "A garagem da Câmara Municipal de Cubatão passa a se chamar \"Geraldo Antônio Novaes\"."
   ],
-  "quem_e_afetado": "A Câmara Municipal de Cubatão e os cidadãos que frequentam ou utilizam o local.",
-  "justificativa_do_autor": "Segundo o autor, a homenagem é justa para perenizar a memória de um servidor exemplar que trabalhou como motorista e chefe de transporte na Prefeitura e na Câmara Municipal.",
+  "quem_e_afetado": "O projeto é uma homenagem e não cria novas obrigações ou direitos para os moradores. A mudança afeta o nome oficial da garagem da Câmara.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não deixa pendências para regulamentação posterior."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Denomina",
+    "explicacao": "Significa dar um nome oficial a um lugar."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, Geraldo Antônio Novaes nasceu em Minas Gerais em 1912 e trabalhou como motorista de lotação entre Cubatão e Santos. Ele começou a trabalhar na Prefeitura em 1955 e foi transferido para a Câmara em 1962, onde cuidava dos carros oficiais e depois chefiou o setor de transporte até se aposentar em 1982, sem nenhuma multa em 27 anos. O autor afirma que a homenagem é justa para eternizar a memória de um servidor dedicado.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "O documento não informa se haverá custos com placas ou eventos para a mudança de nome.",
+  "limitacoes": "O texto não informa se haverá custos com a colocação de placas com o novo nome.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto entra em vigor na data em que for publicado.",
-    "trecho": "Esta Resolução entra em vigor na data da sua publicação."
-   },
-   {
-    "ponto": "O texto não menciona custos para a realização da homenagem ou fonte de recursos.",
-    "trecho": ""
+    "ponto": "O efeito do projeto é puramente simbólico e de homenagem.",
+    "trecho": "DENOMINA “GERALDO ANTÔNIO NOVAES” O LOCAL QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS"
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "893cf036cee3b596",
- "gerado_em": "2026-11-05T19:16:36Z"
+ "gerado_em": "2026-11-08T03:25:58Z"
 }

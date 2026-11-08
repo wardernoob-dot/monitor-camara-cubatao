@@ -12,37 +12,68 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto altera a estrutura administrativa da Secretaria Municipal de Assistência Social de Cubatão, criando novos cargos e definindo suas atribuições. A proposta reorganiza departamentos, divisões e serviços dentro da pasta.",
+  "resumo": "Este projeto de lei reorganiza a estrutura da Secretaria Municipal de Assistência Social de Cubatão. Ele cria novas funções gratificadas, define chefias e estabelece as regras de trabalho para os setores que atendem a população. O objetivo é atualizar a organização interna da prefeitura na área social.",
   "o_que_muda": [
-   "Cria novos cargos de chefia e coordenação na Secretaria de Assistência Social.",
-   "Define as atribuições específicas para cada novo cargo criado.",
-   "Reorganiza a estrutura interna de departamentos e divisões da secretaria.",
-   "Estabelece requisitos de escolaridade para os novos cargos."
+   "Altera a estrutura administrativa da Secretaria Municipal de Assistência Social prevista em leis anteriores.",
+   "Cria o Gabinete do Secretário com novas assessorias, secretaria adjunta e serviços de gestão, controle e vigilância.",
+   "Cria o Departamento de Proteção Social Básica com divisões para programas comunitários, inclusão produtiva e segurança alimentar.",
+   "Cria o Departamento de Proteção Social Especial com divisões de alta e média complexidade e unidades de acolhimento.",
+   "Cria o Quadro das Funções Gratificadas no Anexo II, especificando a quantidade e os requisitos de escolaridade (nível médio ou superior) para cada chefia e coordenação.",
+   "Define detalhadamente no Anexo III as atribuições de cada função criada, como o chefe de expediente, chefes de serviço e coordenadores de CRAS e CREAS."
   ],
-  "quem_e_afetado": "Servidores públicos municipais lotados na Secretaria de Assistência Social e a estrutura administrativa da prefeitura.",
-  "justificativa_do_autor": "Segundo o autor, a alteração visa adequar a estrutura administrativa da Secretaria de Assistência Social para melhorar o funcionamento e a organização dos serviços prestados.",
+  "quem_e_afetado": "Os servidores públicos municipais que ocuparem as novas funções gratificadas são afetados diretamente, pois passam a ter obrigações específicas definidas por lei. A população que utiliza os serviços de assistência social também é indiretamente impactada pela reorganização do atendimento. O texto não menciona quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O impacto financeiro e de onde sairão os recursos para custear as novas funções gratificadas.",
+   "As datas de vigência da lei e de implementação das mudanças administrativas.",
+   "Os salários e valores exatos pagos pelas funções gratificadas criadas.",
+   "Detalhes operacionais específicos que dependem de normas e decretos futuros da prefeitura."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "SUAS",
+    "explicacao": "(Sistema Único de Assistência Social) É a rede nacional que organiza os serviços de atendimento social à população."
+   },
+   {
+    "termo": "CRAS",
+    "explicacao": "(Centro de Referência da Assistência Social) Local público onde famílias recebem apoio e orientações para superar situações de dificuldade."
+   },
+   {
+    "termo": "CREAS",
+    "explicacao": "(Centro de Referência Especializado de Assistência Social) Unidade que atende famílias e pessoas que sofreram violações de direitos ou violência."
+   },
+   {
+    "termo": "Nob-RH",
+    "explicacao": "(Norma Operacional Básica de Recursos Humanos) Regra federal que define como deve ser a gestão dos trabalhadores na assistência social."
+   },
+   {
+    "termo": "LGPD",
+    "explicacao": "(Lei Geral de Proteção de Dados) Lei que protege as informações pessoais dos cidadãos contra vazamentos ou uso indevido."
+   }
+  ],
+  "justificativa_do_autor": "",
   "natureza": "organizacao_administrativa",
-  "limitacoes": "Não é possível saber o impacto orçamentário ou o custo total com a criação desses novos cargos apenas com este documento.",
+  "limitacoes": "Não é possível saber quanto custará a criação dessas funções ou de onde sairá o orçamento para pagá-las, pois o documento não traz dados financeiros.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto não menciona o impacto financeiro ou a fonte de recursos para a criação dos novos cargos.",
+    "ponto": "O texto não informa sobre custos, dotação orçamentária ou a fonte dos recursos financeiros para manter os novos cargos e estruturas.",
     "trecho": ""
    },
    {
-    "ponto": "O texto não estabelece prazos para a implementação das mudanças ou para o preenchimento dos cargos.",
+    "ponto": "O texto não estipula prazos para a aplicação das mudanças ou para o preenchimento das funções criadas.",
     "trecho": ""
    }
   ],
   "pontos_descartados": [
    {
-    "ponto": "O projeto define os requisitos de escolaridade para os cargos, exigindo nível médio ou superior conforme a função.",
-    "trecho": "Chefe de Serviço de Expediente 1 Nível Médio",
+    "ponto": "O projeto exige requisitos de escolaridade específica, como nível médio ou superior, para que os servidores possam assumir as funções gratificadas.",
+    "trecho": "Chefe de Serviço de Expediente | 1 | Nível Médio",
     "motivo": "trecho nao encontrado no documento"
    }
   ]
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "e7be5450ee3ca1e0",
- "gerado_em": "2026-11-05T22:59:43Z"
+ "gerado_em": "2026-11-08T03:31:37Z"
 }

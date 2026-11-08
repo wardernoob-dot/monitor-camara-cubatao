@@ -12,34 +12,44 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria dois novos níveis de gratificação salarial (F18 e F19) para cargos na estrutura da Câmara Municipal de Cubatão.",
+  "resumo": "O projeto cria dois novos valores de gratificação para funcionários da Câmara Municipal de Cubatão. Ele muda uma lei anterior para incluir os padrões chamados F18 e F19. O objetivo é pagar salários maiores para cargos que exigem mais responsabilidade técnica. A lei vale logo após ser publicada.",
   "o_que_muda": [
-   "Criação do padrão de função gratificada F18 com valor de R$ 17.521,80.",
-   "Criação do padrão de função gratificada F19 com valor de R$ 21.000,00.",
-   "Alteração da Lei nº 4.391 de 2025 para incluir esses novos níveis na tabela de funções."
+   "Cria o padrão de função gratificada F18 com o valor de R$ 17.521,80.",
+   "Cria o padrão de função gratificada F19 com o valor de R$ 21.000,00."
   ],
-  "quem_e_afetado": "Servidores da Câmara Municipal de Cubatão que ocuparem as funções gratificadas nos novos padrões.",
-  "justificativa_do_autor": "Segundo o autor, a medida visa modernizar a estrutura administrativa da Câmara, permitindo remunerar adequadamente funções de alta complexidade e responsabilidade para atrair e reter profissionais qualificados.",
+  "quem_e_afetado": "Os servidores públicos da Câmara Municipal que ocuparem os novos cargos gratificados são os afetados diretamente. A população em geral não ganha novas obrigações nem direitos diretos.",
+  "de_onde_sai_o_dinheiro": "Os pagamentos saem do orçamento próprio da Câmara Municipal, com ajuda de dinheiro extra se for preciso.",
+  "o_que_falta_definir": [
+   "Quais cargos ou tarefas específicas vão receber os novos valores de gratificação.",
+   "Quais são os requisitos exatos para um funcionário alcançar os padrões F18 e F19."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "função gratificada",
+    "explicacao": "Dinheiro extra pago a um funcionário público que faz um trabalho com mais responsabilidade."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "O dinheiro que o governo separa no orçamento para pagar suas contas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto serve para aperfeiçoar e ampliar a estrutura de funcionários da Câmara. A criação das novas funções atende à necessidade de modernização administrativa do Poder Legislativo. O autor diz que isso ajuda a pagar de forma justa quem tem alta responsabilidade e atrai profissionais qualificados, sem prejudicar o equilíbrio financeiro.",
   "natureza": "organizacao_administrativa",
-  "limitacoes": "Não é possível saber, apenas pelo texto, quais cargos serão contemplados com essas gratificações ou o impacto financeiro total no orçamento anual da Câmara.",
+  "limitacoes": "Não é possível saber quais cargos específicos vão receber esses valores apenas com este texto.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto indica que o pagamento será feito com verbas já existentes no orçamento da Câmara.",
+    "ponto": "O pagamento dos novos valores sai do orçamento da própria Câmara.",
     "trecho": "As despesas decorrentes da execução desta Lei correrão por conta das dotações orçamentarias próprias, suplementadas se necessário."
    },
    {
-    "ponto": "O texto não especifica quais cargos ou quais servidores específicos receberão essas gratificações.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto não estabelece critérios ou requisitos técnicos para que um servidor seja designado para as funções F18 ou F19.",
-    "trecho": ""
+    "ponto": "A lei começa a valer no mesmo dia em que for publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
    }
   ],
   "pontos_descartados": []
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "359aba6f178e09f3",
- "gerado_em": "2026-11-05T19:18:25Z"
+ "gerado_em": "2026-11-08T03:27:22Z"
 }

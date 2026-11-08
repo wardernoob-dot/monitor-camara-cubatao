@@ -12,45 +12,55 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto regulamenta os instrumentos para o cumprimento da função social da propriedade urbana em Cubatão, estabelecendo regras para imóveis não edificados, subutilizados, não utilizados ou abandonados.",
+  "resumo": "O projeto obriga donos de terrenos vazios, imóveis abandonados ou mal utilizados a dar um uso adequado a eles. Se o proprietário não cumprir as regras, a prefeitura pode aplicar multas aumentando o valor do imposto ano a ano ou até tomar o imóvel. A medida serve para forçar o desenvolvimento urbano e evitar a especulação imobiliária na cidade.",
   "o_que_muda": [
-   "Cria regras para notificar proprietários de imóveis vazios, subutilizados ou não edificados para que deem uso a eles.",
-   "Aumenta o IPTU (Imposto sobre a Propriedade Predial e Territorial Urbana) progressivamente ao longo dos anos para quem descumprir os prazos.",
-   "Permite a desapropriação de imóveis após 5 anos de cobrança de IPTU progressivo sem regularização.",
-   "Cria regras para arrecadar imóveis abandonados e prevê a criação de uma comissão municipal específica."
+   "Donos de imóveis vazios ou subutilizados recebem uma notificação da prefeitura e devem pedir aprovação de projeto em até 1 ano.",
+   "Obras de parcelamento ou construção devem começar em até 2 anos após a aprovação do projeto.",
+   "Imóveis comerciais, industriais ou residenciais desocupados por mais de 1 ano são considerados não utilizados.",
+   "O Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU, imposto cobrado de quem tem imóvel na cidade) sobe todo ano para quem descumprir os prazos, chegando a até 15%.",
+   "Para imóveis construídos, a alíquota do IPTU sobe de 1% no primeiro ano até 15% no quinto ano.",
+   "Para imóveis não construídos, a alíquota do IPTU sobe de 6% no primeiro ano até 15% no quinto ano.",
+   "Após 5 anos de imposto progressivo sem uso do imóvel, a prefeitura pode desapropriar o bem.",
+   "Imóveis abandonados sem dono e com impostos atrasados por 5 anos viram bens vagos e passam para a prefeitura após 3 anos.",
+   "É criada uma comissão especial com 8 membros para fiscalizar e gerenciar essas regras, com gratificação de R$ 2.824,00 para os integrantes."
   ],
-  "quem_e_afetado": "Proprietários de imóveis urbanos não edificados, subutilizados, não utilizados ou considerados abandonados em Cubatão.",
+  "quem_e_afetado": "Donos de terrenos vazios, imóveis fechados ou construções sem uso ganham a obrigação de construir, parcelar ou usar o espaço. Moradores e a prefeitura ganham ferramentas para cobrar o uso social da terra. Ficam de fora da regra de subutilização locais específicos como postos de gasolina, garagens, depósitos, áreas ambientais protegidas e imóveis tombados.",
+  "de_onde_sai_o_dinheiro": "As despesas com a execução da lei saem de dotações orçamentárias próprias da prefeitura.",
+  "o_que_falta_definir": [
+   "O procedimento exato que a Comissão de Análise e Gestão vai adotar, que será criado por regulamento do Poder Executivo.",
+   "O regulamento do Poder Executivo sobre o procedimento para encampação e arrecadação de imóvel abandonado."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "IPTU",
+    "explicacao": "Imposto sobre a Propriedade Predial e Territorial Urbana, um imposto pago todo ano por quem tem imóvel na cidade."
+   },
+   {
+    "termo": "Desapropriação",
+    "explicacao": "Ato pelo qual a prefeitura toma um imóvel do proprietário por descumprimento de regras legais ou por interesse público."
+   },
+   {
+    "termo": "Encampação",
+    "explicacao": "Processo administrativo pelo qual a prefeitura assume a posse de um bem abandonado."
+   }
+  ],
   "justificativa_do_autor": "",
   "natureza": "politica_publica",
-  "limitacoes": "O documento não traz a justificativa do autor e deixa a regulamentação de procedimentos para decretos futuros do Poder Executivo.",
+  "limitacoes": "",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto define prazos para o proprietário protocolar projetos após notificação.",
-    "trecho": "deverão protocolizar pedido de aprovação de projeto de parcelamento ou edificação no prazo máximo de 1 (um) ano da notificação."
+    "ponto": "O texto prevê pagamento de gratificação para os membros da comissão responsável por aplicar a lei.",
+    "trecho": "Os integrantes da Comissão de Análise e Gestão do Cumprimento das Funções Sociais da Propriedade farão jus a uma gratificação pelo exercício de função especial, no valor de R$ 2.824,00"
    },
    {
-    "ponto": "O IPTU progressivo no tempo aplica alíquotas que chegam a 15% para imóveis construídos e não construídos.",
-    "trecho": "15% (quinze por cento) no 5° (quinto) ano."
-   },
-   {
-    "ponto": "Imóveis abandonados podem passar para a propriedade do município após três anos.",
-    "trecho": "O Município de Cubatão promoverá a arrecadação do bem imóvel abandonado como bem vago, o qual passará à sua propriedade após três anos."
-   },
-   {
-    "ponto": "O procedimento para encampação e arrecadação de imóveis abandonados depende de regulamentação posterior.",
-    "trecho": "O procedimento para encampação e arrecadação do imóvel abandonado será regulamentado pelo Poder Executivo"
+    "ponto": "O texto diz que os gastos com a lei serão pagos com o orçamento próprio da prefeitura.",
+    "trecho": "As despesas decorrentes da execução desta Lei Complementar serão suportadas por dotações orçamentárias próprias."
    }
   ],
-  "pontos_descartados": [
-   {
-    "ponto": "Cria uma comissão municipal com membros que receberão gratificação financeira.",
-    "trecho": "fará jus a uma gratificação pelo exercício de função especial, no valor de R$ 2.824,00",
-    "motivo": "trecho nao encontrado no documento"
-   }
-  ]
+  "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "ff0e4224cf7367b8",
- "gerado_em": "2026-11-05T22:58:58Z"
+ "gerado_em": "2026-11-08T03:27:46Z"
 }

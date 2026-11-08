@@ -12,39 +12,48 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria o Dia Municipal do Skate no calendário oficial de Cubatão, a ser celebrado anualmente em 21 de junho.",
+  "resumo": "O projeto cria o Dia Municipal do Skate no calendário oficial de Cubatão. A data escolhida para a comemoração é o dia 21 de junho de cada ano. O objetivo é promover a prática do esporte, a cultura e o lazer na cidade. A lei entra em vigor no dia em que for publicada.",
   "o_que_muda": [
-   "O Dia Municipal do Skate passa a integrar o calendário oficial de datas e eventos de Cubatão.",
-   "A data oficial para celebração será todo dia 21 de junho.",
-   "Ficam estabelecidos objetivos como promover a conscientização sobre o skate e difundir sua prática como esporte, cultura, lazer e turismo.",
-   "O texto autoriza a promoção de eventos e ações durante toda a semana da data."
+   "O Dia Municipal do Skate passa a fazer parte do Calendário Oficial de Datas e Eventos do Município.",
+   "A data oficial de celebração será todo dia 21 de junho.",
+   "Fica autorizado o uso de eventos e ações durante toda a semana da data para conscientizar a população sobre os benefícios do esporte."
   ],
-  "quem_e_afetado": "Os moradores de Cubatão, especialmente os praticantes de skate, jovens e pessoas interessadas em esporte, cultura e lazer.",
-  "justificativa_do_autor": "Segundo o autor, o projeto visa celebrar, preservar e promover o skate como expressão cultural e social, integrando-o às políticas públicas e promovendo inclusão social.",
-  "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber quais eventos específicos serão realizados pela prefeitura ou se haverá gastos públicos, pois o projeto apenas autoriza a programação sem detalhar custos ou obrigações financeiras.",
-  "pontos_de_atencao": [
+  "quem_e_afetado": "A população de Cubatão e os praticantes de skate ganham uma data oficial no calendário do município. O texto não obriga nenhuma pessoa ou órgão a realizar gastos ou tarefas específicas.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Quais órgãos da prefeitura vão organizar os eventos da semana.",
+   "Como será o financiamento das atividades comemorativas."
+  ],
+  "palavras_dificeis": [
    {
-    "ponto": "O texto não traz informações sobre o custo da criação da data ou a fonte de recursos para eventos.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto define a data fixa de 21 de junho para a celebração anual.",
-    "trecho": "a ser celebrado anualmente no dia 21 de junho."
-   },
-   {
-    "ponto": "O texto não estabelece obrigatoriedade de realização de eventos, indicando apenas que eles poderão ser promovidos.",
-    "trecho": "Poderão ser promovidos eventos e demais ações pertinentes durante toda a semana"
-   },
-   {
-    "ponto": "O texto não menciona órgãos fiscalizadores ou penalidades.",
-    "trecho": ""
+    "termo": "Calendário Oficial de Datas e Eventos",
+    "explicacao": "Lista oficial de datas importantes comemoradas pela cidade."
    }
   ],
-  "pontos_descartados": []
+  "justificativa_do_autor": "Segundo o autor, o projeto visa celebrar, preservar e promover o skate, que é uma importante expressão cultural e social para os jovens. O autor afirma que a prática transcende o esporte e ajuda a integrar a comunidade, incentivar hábitos saudáveis e promover a inclusão social e o turismo em Cubatão.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O documento não informa como os eventos da semana do skate serão financiados ou organizados na prática.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto tem efeito simbólico e de inclusão no calendário oficial, sem impor obrigações financeiras ou estruturais.",
+    "trecho": "Institui no Calendário Oficial de Datas e Eventos do Município o Dia Municipal do Skate"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não define de onde sairá o dinheiro para realizar os eventos.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não estabelece penalidades ou multas.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "fc28590438b1753a",
- "gerado_em": "2026-11-06T18:50:28Z"
+ "gerado_em": "2026-11-08T03:32:03Z"
 }

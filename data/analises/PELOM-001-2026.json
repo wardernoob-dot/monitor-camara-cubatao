@@ -12,37 +12,48 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto altera a Lei Orgânica de Cubatão para permitir que o subsídio público da tarifa do transporte coletivo municipal chegue a até 70% do custo total.",
+  "resumo": "O projeto muda a Lei Orgânica de Cubatão para aumentar o limite máximo de ajuda financeira que a prefeitura pode dar no valor da passagem de ônibus. Atualmente, o limite é de trinta por cento, e a proposta permite que o subsídio chegue a até setenta por cento do custo total. O objetivo é evitar que a passagem de ônibus fique cara demais para a população por causa da queda no número de passageiros pagantes. Com isso, a prefeitura ganha folga para pagar uma fatia maior dos custos do transporte público e manter o serviço funcionando.",
   "o_que_muda": [
-   "O limite máximo do subsídio público para o transporte coletivo municipal passa de 30% para até 70%.",
-   "A Prefeitura ganha margem legal para cobrir uma fatia maior dos custos do transporte público."
+   "A ajuda financeira da prefeitura (subsídio) para o transporte coletivo municipal passa do limite atual de trinta por cento para até setenta por cento do custo total.",
+   "A nova regra altera o artigo 213 da Lei Orgânica do Município."
   ],
-  "quem_e_afetado": "A população usuária do transporte coletivo municipal e o Poder Público de Cubatão.",
-  "justificativa_do_autor": "Segundo o autor, a mudança é necessária para compatibilizar a lei com diretrizes federais de mobilidade urbana e evitar um colapso no sistema, já que o transporte ficou deficitário após a pandemia com a queda de passageiros pagantes e o aumento de gratuidades, tornando o limite atual de 30% insuficiente.",
-  "natureza": "orcamento_financas",
-  "limitacoes": "Não é possível saber qual será o impacto financeiro exato no orçamento do município nem como a Prefeitura planeja redistribuir verbas para bancar o subsídio mais alto.",
+  "quem_e_afetado": "A mudança afeta toda a população de Cubatão que usa o transporte coletivo, especialmente os moradores mais carentes e os passageiros que dependem de tarifas mais baratas. As empresas que prestam o serviço de transporte também são afetadas, pois passam a contar com a possibilidade de receber um valor maior de ajuda pública para cobrir custos operacionais.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "De onde virão os recursos financeiros no orçamento municipal para bancar o aumento do subsídio.",
+   "Qual será o valor exato do subsídio aplicado em cada período dentro do novo limite de até setenta por cento."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "subsídio",
+    "explicacao": "Dinheiro que a prefeitura paga para ajudar a cobrir os custos de um serviço e evitar que ele fique muito caro para o povo."
+   },
+   {
+    "termo": "Lei Orgânica",
+    "explicacao": "A lei principal que rege o município, como se fosse a constituição da cidade."
+   },
+   {
+    "termo": "déficitário",
+    "explicacao": "Que gasta mais do que arrecada, gerando prejuízo financeiro."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o serviço de transporte público está deficitário, situação que piorou após a pandemia de Covid-19 devido à queda no número de passageiros pagantes. O autor cita motivos como novos modais, compra de veículos próprios como motos e carros, transporte compartilhado, trabalho remoto e o aumento de pessoas com direito à gratuidade. O autor também aponta que a lei federal de mobilidade urbana exige a sustentabilidade econômica do transporte e que a regra atual limita a ajuda financeira em patamares inferiores aos necessários, sendo urgente a mudança para evitar um colapso no sistema e manter o valor da tarifa de remuneração calculado em dez reais e cinquenta centavos.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não apresenta o impacto financeiro exato nos cofres da prefeitura nem indica qual dotação orçamentária vai pagar a conta.",
   "pontos_de_atencao": [
    {
-    "ponto": "O teto do subsídio tarifário passa a ser de até setenta por cento.",
-    "trecho": "A tarifa do transporte coletivo municipal será subsidiada pelo Poder Público em valores até setenta por cento do seu custo total."
+    "ponto": "O texto não informa de onde sairá o dinheiro para cobrir o aumento do subsídio para até setenta por cento.",
+    "trecho": ""
    },
    {
-    "ponto": "O texto entra em vigor na data em que for publicado.",
+    "ponto": "A emenda entra em vigor imediatamente na data em que for publicada.",
     "trecho": "Esta Emenda à Lei Orgânica entra em vigor na data de sua publicação, revogando-se as disposições em contrário."
-   },
-   {
-    "ponto": "O texto não detalha a origem exata dos recursos financeiros para arcar com o novo limite do subsídio.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto não estabelece regras sobre prazos ou obrigatoriedade de regulamentação posterior.",
-    "trecho": ""
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
- "versao_prompt": "966f8ec282",
+ "versao_prompt": "1e7596ac5d",
  "hash_documento": "a8921555b92e7065",
- "gerado_em": "2026-11-05T19:17:56Z"
+ "gerado_em": "2026-11-08T03:26:47Z"
 }
