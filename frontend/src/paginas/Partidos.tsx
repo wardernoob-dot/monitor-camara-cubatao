@@ -88,6 +88,10 @@ export function ListaPartidos() {
       <h1 className="titulo-pagina">Partidos</h1>
       <p className="lead">Como cada bancada da Câmara vota e trabalha. Clique num partido para ver os vereadores e as votações em que a bancada se dividiu.</p>
       <Composicao partidos={partidos} />
+      <header className="sub-secao">
+        <h2 className="sub-secao__titulo">Cada bancada em números</h2>
+        <p className="sub-secao__texto">Quem são, quanto votam juntos, o que apresentaram e como votaram quando a Prefeitura tinha lado claro. Clique num cartão para abrir a bancada.</p>
+      </header>
       <ul className="partidos">
         {partidos.map((p) => {
           const membros = p.membros.map((s) => vereador.get(s)!).filter(Boolean);
