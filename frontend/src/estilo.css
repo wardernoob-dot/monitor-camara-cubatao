@@ -1013,10 +1013,6 @@ form.busca input, form.busca select { width: 100%; min-width: 0; }
 
 /* ============================================================ paginas internas: topo com grade suave, indice lateral, sessoes por mes, tabela */
 main { position: relative; isolation: isolate; }
-main::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 26rem; z-index: -1; pointer-events: none;
-  background-image: linear-gradient(var(--color-linha) 1px, transparent 1px), linear-gradient(90deg, var(--color-linha) 1px, transparent 1px);
-  background-size: 40px 40px; background-position: center top;
-  -webkit-mask-image: radial-gradient(ellipse 70% 100% at 50% 0%, #000 0%, transparent 72%); mask-image: radial-gradient(ellipse 70% 100% at 50% 0%, #000 0%, transparent 72%); opacity: .75; }
 .titulo-pagina { font-size: clamp(2.5rem, 5.4vw, 3.9rem); letter-spacing: -0.065em; }
 .pagina > .lead { margin-bottom: 0; }
 
@@ -1392,9 +1388,6 @@ html, body { overflow-x: clip; }
 .hero { background:
   radial-gradient(46rem 24rem at 71% 84%, var(--ceu-brilho), transparent 70%),
   linear-gradient(180deg, var(--ceu-0) 0%, var(--ceu-1) 52%, var(--ceu-2) 78%, var(--ceu-3) 100%); }
-/* paginas internas: no lugar da grade, so uma luz suave no topo */
-main::before { background-image: none; -webkit-mask-image: none; mask-image: none; opacity: 1; height: 24rem;
-  background: radial-gradient(ellipse 60% 100% at 50% 0%, color-mix(in srgb, var(--azul) 6%, transparent), transparent 70%); }
 /* o brilho do sol nao pode ser cortado na borda da paisagem */
 .paisagem, .paisagem__svg { overflow: visible; }
 
