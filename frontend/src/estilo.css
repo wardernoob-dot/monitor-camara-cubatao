@@ -1434,3 +1434,5 @@ html, body { overflow-x: clip; }
 :root { --m1: #c4d5c9; --m3: #9dbfae; --mangue: #4a786a; }
 :root[data-tema="dark"] { --mangue: #0b2024; }
 @media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --mangue: #0b2024; } }
+.hero__dentro { padding-top: clamp(4.2rem, 14vh, 8.5rem); }
+@media (max-width: 40rem) { .hero__dentro { padding-top: 4rem; } }
