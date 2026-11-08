@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useDados } from "../dados";
 import { Situacao } from "../componentes";
 import { semAcento, useTitulo } from "../util";
-import { Destaque, DicaMateria } from "../explica";
+import { Destaque, DicaMateria, Termo } from "../explica";
 
 const SITUACOES: [string, string][] = [
   ["lei", "Virou lei"],
@@ -13,6 +13,8 @@ const SITUACOES: [string, string][] = [
   ["rejeitado", "Rejeitado"],
   ["pauta", "Sem votação registrada"],
 ];
+
+const CURTO_SIT: Record<string, string> = { lei: "Virou lei", veto: "Vetado", aprovado: "Aprovado", andamento: "Em votação", rejeitado: "Rejeitado", pauta: "Sem votação" };
 
 export default function Projetos() {
   useTitulo("Projetos");
@@ -30,6 +32,12 @@ export default function Projetos() {
   const autores = useMemo(() => [...new Set(lista.map((m) => m.autoria))].sort((a, b) => a.localeCompare(b)), [lista]);
   const textos = useMemo(() => new Map(lista.map((m) => [m.slug, semAcento(`${m.titulo} ${m.assunto} ${m.autoria}`)])), [lista]);
 
+  const contagem = useMemo(() => {
+    const c: Record<string, number> = {};
+    lista.forEach((m) => { c[m.situacao_cls] = (c[m.situacao_cls] ?? 0) + 1; });
+    return c;
+  }, [lista]);
+
   const termos = semAcento(q).split(/\s+/).filter(Boolean);
   const visiveis = lista.filter((m) =>
     (!autor || m.autoria === autor) && (!sit || m.situacao_cls === sit) && (!destaque || m.relevancia.nivel === "alta") &&
@@ -44,10 +52,17 @@ export default function Projetos() {
 
   return (
     <div className="pagina pagina--larga">
+      <p className="selo-pagina">Tudo que passou pela pauta</p>
       <h1 className="titulo-pagina">Projetos</h1>
       <p className="lead">
-        Projetos de lei, de resolução, de decreto legislativo e emendas à Lei Orgânica que passaram pela pauta ou foram publicados no site da Câmara em 2026.
+        Projetos de lei, de resolução, de decreto legislativo e emendas à <Termo chave="loa">Lei Orgânica</Termo> que passaram pela pauta ou foram publicados no site da Câmara em 2026.
       </p>
+      <div className="chips" role="group" aria-label="Filtrar por situação">
+        <button type="button" aria-pressed={!sit} onClick={() => muda("situacao", "")}>Todos <span>{lista.length}</span></button>
+        {SITUACOES.filter(([k]) => contagem[k]).map(([k]) => (
+          <button key={k} type="button" aria-pressed={sit === k} onClick={() => muda("situacao", sit === k ? "" : k)}>{CURTO_SIT[k]} <span>{contagem[k]}</span></button>
+        ))}
+      </div>
       <form className="busca" role="search" onSubmit={(e) => e.preventDefault()}>
         <label>Buscar
           <input type="search" value={q} placeholder="Número, assunto ou autor" autoComplete="off" onChange={(e) => muda("q", e.target.value)} />
@@ -56,12 +71,6 @@ export default function Projetos() {
           <select value={autor} onChange={(e) => muda("autor", e.target.value)}>
             <option value="">Todas</option>
             {autores.map((a) => <option key={a}>{a}</option>)}
-          </select>
-        </label>
-        <label>Situação
-          <select value={sit} onChange={(e) => muda("situacao", e.target.value)}>
-            <option value="">Todas</option>
-            {SITUACOES.map(([v, n]) => <option key={v} value={v}>{n}</option>)}
           </select>
         </label>
         <label>Tema

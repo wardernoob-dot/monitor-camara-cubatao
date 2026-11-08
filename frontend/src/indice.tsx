@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Indice, PilarIndice } from "./dados";
+import { Metodo } from "./componentes";
 
 const fmt = (n: number, casas = 1) => n.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
 const CURTO: Record<string, string> = { assiduidade: "Assiduidade", participacao: "Participação", producao: "Produção", fiscalizacao: "Fiscalização" };
@@ -87,7 +88,7 @@ export function CartaoIndice({ i, nome }: { i: Indice; nome: string }) {
           </div>
         ))}
         <p className="nota">
-          Nota = 10 × pontos obtidos ÷ pontos possíveis ({i.pontos_validos} neste caso). Método completo em <Link to="/como-funciona#indice">Como funciona</Link>.
+          Nota = 10 × pontos obtidos ÷ pontos possíveis ({i.pontos_validos} neste caso). Método completo em <Metodo ancora="indice">Como funciona</Metodo>.
         </p>
       </details>
       <p className="nota">

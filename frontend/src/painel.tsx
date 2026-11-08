@@ -26,6 +26,8 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
   const [params, setParams] = useSearchParams();
   const inicial = Math.max(0, abas.findIndex((a) => a.id === params.get("aba")));
   const [[atual, direcao], setEstado] = useState<[number, number]>([inicial, 0]);
+  // comeca recolhido (so os cartoes de numeros); abre ao clicar num cartao ou quando o endereco ja traz ?aba=
+  const [aberto, setAberto] = useState(() => params.has("aba"));
   const reduz = useReducedMotion();
   const [toque] = useState(() => typeof window !== "undefined" && !!window.matchMedia?.("(pointer: coarse)").matches);
   const trilho = useRef<HTMLDivElement>(null);
@@ -45,6 +47,15 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
     if (b && t) t.scrollTo({ left: b.offsetLeft - t.clientWidth / 2 + b.clientWidth / 2, behavior: reduz ? "auto" : "smooth" });
   }, [atual, reduz]);
 
+  const alternar = (i: number) => {
+    if (aberto && i === atual) {
+      setAberto(false);
+      setParams((p) => { const q = new URLSearchParams(p); q.delete("aba"); return q; }, { replace: true, preventScrollReset: true });
+    } else {
+      setAberto(true);
+      ir(i);
+    }
+  };
   const teclado = (e: KeyboardEvent) => {
     if (e.key === "ArrowRight") { e.preventDefault(); ir(atual + 1, true); }
     if (e.key === "ArrowLeft") { e.preventDefault(); ir(atual - 1, true); }
@@ -61,11 +72,11 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
     <div className="painel">
       <div className="painel__trilho" ref={trilho} role="tablist" aria-label={rotulo} onKeyDown={teclado}>
         {abas.map((a, i) => {
-          const ativo = i === atual;
+          const ativo = aberto && i === atual;
           return (
             <button key={a.id} ref={(el) => { botoes.current[i] = el; }} role="tab" type="button" id={`aba-${a.id}`}
               aria-selected={ativo} aria-controls={`painel-${a.id}`} tabIndex={ativo ? 0 : -1}
-              className={`painel__aba ${ativo ? "painel__aba--ativa" : ""}`} onClick={() => ir(i)}>
+              className={`painel__aba ${ativo ? "painel__aba--ativa" : ""}`} onClick={() => alternar(i)} aria-expanded={ativo}>
               {ativo && <motion.span layoutId="painel-realce" className="painel__realce"
                 transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
               <NumeroAba valor={a.numero} sufixo={a.sufixo} ativo={ativo} />
@@ -76,11 +87,13 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
         })}
       </div>
 
+      {!aberto && <p className="painel__dica">Toque num número para ver os detalhes.</p>}
+
       <div className="painel__pontos" aria-hidden="true">
         {abas.map((a, i) => <span key={a.id} className={i === atual ? "ativo" : ""} />)}
       </div>
 
-      <motion.div className="painel__palco" layout={!reduz} transition={{ duration: 0.35, ease: EASE }}>
+      {aberto && <motion.div className="painel__palco" layout={!reduz} transition={{ duration: 0.35, ease: EASE }}>
         <AnimatePresence mode="popLayout" initial={false} custom={direcao}>
           <motion.div
             key={aba.id}
@@ -111,6 +124,7 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
                 {aba.descricao && <p className="painel__descricao">{aba.descricao}</p>}
               </div>
               <div className="painel__setas">
+                <button type="button" className="painel__recolher" onClick={() => alternar(atual)} aria-label="Recolher os detalhes">Recolher</button>
                 <button type="button" onClick={() => ir(atual - 1)} aria-label="Assunto anterior">
                   <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </button>
@@ -122,7 +136,7 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
             {aba.conteudo}
           </motion.div>
         </AnimatePresence>
-      </motion.div>
+      </motion.div>}
     </div>
   );
 }

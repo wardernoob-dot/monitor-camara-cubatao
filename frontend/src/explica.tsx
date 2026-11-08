@@ -116,3 +116,29 @@ export function Destaque({ m, compacto = false }: { m: Materia; compacto?: boole
     </Dica>
   );
 }
+
+/* ------------------------------------------------------------------ glossario de termos (palavra com sublinhado pontilhado e explicacao curta) */
+const TERMOS = {
+  veto: ["Veto", "O prefeito pode vetar, no todo ou em parte, um projeto aprovado pela Câmara. O veto volta para a Câmara, que mantém o veto (a parte vetada não vale) ou o derruba (o texto aprovado volta a valer)."],
+  parecer: ["Parecer", "Opinião de uma comissão de vereadores sobre o projeto, votada antes do projeto em si."],
+  ementa: ["Ementa", "O resumo de uma linha que abre cada projeto e diz o que ele muda."],
+  sha256: ["SHA-256", "Um código calculado a partir do conteúdo do arquivo. Se o documento mudar, o código muda, e assim dá para provar se ele foi alterado depois de publicado."],
+  painel: ["Painel eletrônico", "A tela da transmissão que mostra o voto de cada vereador. O site lê a cor de cada quadrado do painel, sem IA."],
+  resumo: ["Resumo oficial", "Documento da Câmara com o resumo de cada sessão. Lista quem votou, mas não quem estava presente e não votou."],
+  diario: ["Diário Oficial", "Publicação em que a Prefeitura divulga leis e atos oficiais. É onde se confirma que um projeto virou lei."],
+  loa: ["Lei Orgânica", "A lei básica do município, que organiza o poder público local."],
+  indice: ["Índice de Atuação", "Nota de 0 a 10 que resume atividade registrada em documento público: presença, participação nas votações, projetos e fiscalização. Não mede a qualidade das ideias nem o trabalho que não deixa registro."],
+  posicao: ["Posição da Prefeitura", "Conta só votações em que ela tem lado claro: projetos enviados pelo prefeito (votar pela aprovação) e vetos do prefeito (votar por manter o veto). Votar diferente não é bom nem ruim."],
+  bancada: ["Bancada unida", "A parte dos votos que acompanhou a maioria do próprio partido, nas votações em que dois ou mais membros votaram."],
+} as const;
+export type ChaveTermo = keyof typeof TERMOS;
+
+/** Palavra do texto com explicação curta ao passar o mouse, focar ou tocar. Os termos ficam em TERMOS. */
+export function Termo({ chave, children }: { chave: ChaveTermo; children: ReactNode }) {
+  const [titulo, texto] = TERMOS[chave];
+  return (
+    <Dica rotulo={`O que é: ${titulo}`} conteudo={<><strong className="dica__titulo">{titulo}</strong>{texto}</>}>
+      {children}
+    </Dica>
+  );
+}

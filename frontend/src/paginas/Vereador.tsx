@@ -3,9 +3,9 @@ import { Secao } from "../secao";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
-import { Avatar, Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, TagPartido, VotoTag } from "../componentes";
+import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
-import { Destaque, Dica, DicaMateria, EtapaComDica, naPratica } from "../explica";
+import { Destaque, Dica, DicaMateria, EtapaComDica, Termo, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
 import { Funil } from "../viz";
 
@@ -15,6 +15,17 @@ function Num({ valor, rotulo, sufixo = "" }: { valor: number; rotulo: string; su
   return <div ref={ref}><dt>{rotulo}</dt><dd><span aria-hidden="true">{v}{sufixo}</span><span className="sr">{valor}{sufixo}</span></dd></div>;
 }
 import NaoEncontrado from "./NaoEncontrado";
+import { Toc } from "../toc";
+
+const TOC_VEREADOR = [
+  ["indice", "Índice de atuação"],
+  ["votos", "Como votou"],
+  ["alinhamento", "Com quem vota igual"],
+  ["prefeitura", "Posição da Prefeitura"],
+  ["projetos", "Projetos de autoria"],
+  ["requerimentos", "Requerimentos e moções"],
+  ["presenca", "Presença nas sessões"],
+] as const;
 
 type Filtro = "todos" | "destaque" | "contra" | "semvoto";
 
@@ -70,7 +81,14 @@ export default function VereadorPagina() {
           <h1 className="titulo-pagina">{v.exibicao}</h1>
           <p className="perfil__civil">
             {v.nome}
-            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href="#nota-partido" aria-label="Fonte do partido">1</a></sup></>}
+            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href={`#/vereadores/${v.slug}`} aria-label="Fonte do partido" onClick={(e) => {
+              // as rotas usam #; um link "#nota-partido" trocaria a rota. Aqui só rola até a nota.
+              e.preventDefault();
+              const nota = document.getElementById("nota-partido");
+              nota?.scrollIntoView({ behavior: "smooth", block: "center" });
+              nota?.classList.add("nota--foco");
+              window.setTimeout(() => nota?.classList.remove("nota--foco"), 1800);
+            }}>1</a></sup></>}
             {!v.em_exercicio && ". Não está entre os 15 em exercício hoje"}
           </p>
           {v.cargo && (
@@ -94,6 +112,7 @@ export default function VereadorPagina() {
         )}
       </dl>
 
+      <div className="com-toc">
       <div className="sanfonas">
       <Secao id="indice" titulo="Índice de atuação" resumo={`${v.indice.nota.toLocaleString("pt-BR", { minimumFractionDigits: 1 })} de 10`} aberta>
         <CartaoIndice i={v.indice} nome={v.exibicao} />
@@ -145,7 +164,7 @@ export default function VereadorPagina() {
           </div>
           <Legenda />
           <p className="nota">
-            Até agosto os votos vêm do resumo oficial de cada sessão, que não registra quem estava presente e não votou. A partir de setembro vêm do painel eletrônico mostrado na transmissão, que registra.
+            Até agosto os votos vêm do <Termo chave="resumo">resumo oficial</Termo> de cada sessão, que não registra quem estava presente e não votou. A partir de setembro vêm do <Termo chave="painel">painel eletrônico</Termo> mostrado na transmissão, que registra.
           </p>
         </Secao>
       )}
@@ -168,7 +187,7 @@ export default function VereadorPagina() {
 
       {v.executivo.contra > 0 && (
         <Secao id="prefeitura" titulo="Quando votou contra a posição da Prefeitura" resumo={`${v.executivo.contra} ${v.executivo.contra === 1 ? "vez" : "vezes"}`}>
-          <p className="nota">Projetos enviados pelo prefeito em que votou contra a aprovação, e vetos do prefeito em que votou para derrubar. <Link to="/como-funciona#partidos">Como é contado</Link>.</p>
+          <p className="nota">Projetos enviados pelo prefeito em que votou contra a aprovação, e vetos do prefeito em que votou para derrubar. <Metodo ancora="partidos">Como é contado</Metodo>.</p>
           <ul className="lista-simples">
             {v.executivo.contra_ids.map(b.votacao).reverse().map((ev) => (
               <li key={ev.id}><strong>{dataCurta(ev.data, true)}</strong> · <LinkMateria slug={ev.materia} /> · {ev.etapa_txt.toLowerCase()} · votou <VotoTag voto={ev.votos[v.slug]} /> · <ResultadoTag r={ev.resultado} /></li>
@@ -204,12 +223,19 @@ export default function VereadorPagina() {
         </p>
       </Secao>
       </div>
+      <Toc itens={TOC_VEREADOR} caminho={`/vereadores/${v.slug}`} />
+      </div>
 
       {v.partido && (
-        <p className="nota" id="nota-partido">
-          <sup>1</sup> Partido conforme {v.partido_fonte}{v.partido_url && <> (<a href={v.partido_url} rel="noopener noreferrer">fonte</a>)</>}.
-          {" "}<Link to={`/partidos/${slugPartido(v.partido)}`}>Ver o partido {v.partido} na Câmara</Link>.
-        </p>
+        <aside className="nota-fonte" id="nota-partido">
+          <span className="nota-fonte__n" aria-hidden="true">1</span>
+          <p className="nota-fonte__texto">
+            <span className="nota-fonte__rotulo">Fonte do partido</span>
+            Partido conforme {v.partido_fonte}.
+            {v.partido_url && <> <a href={v.partido_url} rel="noopener noreferrer" className="nota-fonte__link">Ver a fonte <span aria-hidden="true">↗</span></a></>}
+          </p>
+          <Link to={`/partidos/${slugPartido(v.partido)}`} className="link-seta">Ver o partido {v.partido} na Câmara <span aria-hidden="true">→</span></Link>
+        </aside>
       )}
     </div>
   );

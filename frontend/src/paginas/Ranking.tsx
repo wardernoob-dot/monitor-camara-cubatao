@@ -1,10 +1,11 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { useDados, type Vereador } from "../dados";
-import { Avatar, TagPartido } from "../componentes";
+import { Avatar, ComoLer, TagPartido } from "../componentes";
 import { useTitulo } from "../util";
 import { pctPilar } from "../indice";
 import { EASE } from "../movimento";
+import { Termo } from "../explica";
 
 type Criterio = "indice" | "assiduidade" | "participacao" | "producao" | "fiscalizacao";
 const CRITERIOS: [Criterio, string][] = [
@@ -61,6 +62,43 @@ function Linha({ v, pos, c, i }: { v: Vereador; pos: number | null; c: Criterio;
   );
 }
 
+/** Onde cada vereador está na escala (de 0 a 10, ou de 0% a 100% no pilar): avatares empilhados quando ficam perto. Cada um leva à página do vereador. */
+function Distribuicao({ lista, c, media }: { lista: Vereador[]; c: Criterio; media: number }) {
+  const reduz = useReducedMotion();
+  const GAP = 4.1;
+  const pontos = lista.map((v) => ({ v, x: valor(v, c) })).filter((p): p is { v: Vereador; x: number } => p.x != null).sort((a, b) => a.x - b.x);
+  const faixas: number[] = [];
+  const pos = pontos.map((p) => {
+    const x = 100 * p.x;
+    let f = faixas.findIndex((ult) => x - ult >= GAP);
+    if (f < 0) f = faixas.length;
+    faixas[f] = x;
+    return { ...p, pct: x, faixa: f };
+  });
+  const n = Math.max(1, faixas.length);
+  const marcas = c === "indice" ? [0, 2, 4, 6, 8, 10] : [0, 25, 50, 75, 100];
+  const fim = c === "indice" ? 10 : 100;
+  return (
+    <figure className="dist" aria-label="Distribuição dos vereadores na escala">
+      <div className="dist__area" style={{ height: `${n * 2.7 + 2.2}rem` }}>
+        {c === "indice" && <span className="dist__media" style={{ left: `${media * 10}%` }}><span>média {fmt(media)}</span></span>}
+        {pos.map(({ v, pct, faixa }) => (
+          <motion.span key={v.slug} className="dist__ponto" initial={false}
+            animate={{ left: `${pct}%`, bottom: `${2.2 + faixa * 2.7}rem` }} transition={reduz ? { duration: 0 } : { type: "spring", stiffness: 160, damping: 22 }}>
+            <Link to={`/vereadores/${v.slug}`} className="dist__av" data-rotulo={`${v.exibicao} · ${c === "indice" ? fmt(valor(v, c)! * 10) : `${Math.round(100 * valor(v, c)!)}%`}`}
+              aria-label={`${v.exibicao}: ${c === "indice" ? fmt(valor(v, c)! * 10) + " de 10" : Math.round(100 * valor(v, c)!) + "%"}`}>
+              <Avatar v={v} tamanho="m" />
+            </Link>
+          </motion.span>
+        ))}
+        <div className="dist__eixo" aria-hidden="true">
+          {marcas.map((m) => <span key={m} style={{ left: `${(100 * m) / fim}%` }}>{c === "indice" ? m : `${m}%`}</span>)}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
 export default function Ranking() {
   useTitulo("Ranking");
   const { atuais, vereadores } = useDados();
@@ -83,21 +121,33 @@ export default function Ranking() {
 
   return (
     <div className="pagina">
+      <p className="selo-pagina">Atividade registrada</p>
       <h1 className="titulo-pagina">Ranking</h1>
       <p className="lead">
-        Vereadores em exercício ordenados pelo Índice de Atuação, <span className="sem-quebra">de 0 a 10.</span>
+        Vereadores em exercício ordenados pelo <Termo chave="indice">Índice de Atuação</Termo>, <span className="sem-quebra">de 0 a 10.</span>
         <br />Média da Câmara: <strong>{fmt(media)}</strong>.
       </p>
 
-      <div className="filtros filtros--ordem" role="group" aria-label="Ordenar por">
+      <div className="rank__controle">
         <span className="filtros__rotulo">Ordenar por</span>
-        {CRITERIOS.map(([k, rot]) => (
-          <button key={k} type="button" aria-pressed={c === k}
-            onClick={() => setParams(k === "indice" ? {} : { por: k }, { replace: true, preventScrollReset: true })}>{rot}</button>
-        ))}
+        <div className="segmentado" role="group" aria-label="Ordenar por">
+          {CRITERIOS.map(([k, rot]) => (
+            <button key={k} type="button" aria-pressed={c === k}
+              onClick={() => setParams(k === "indice" ? {} : { por: k }, { replace: true, preventScrollReset: true })}>
+              {c === k && <motion.span layoutId="seg-ativo" className="segmentado__pilula" transition={{ type: "spring", stiffness: 420, damping: 38 }} />}
+              <span className="segmentado__texto">{rot}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
+      <Distribuicao lista={completos} c={c} media={media} />
+
       <LayoutGroup>
+        <div className="rank__cab" aria-hidden="true">
+          <span /><span>Vereador</span><span>{CRITERIOS.find(([k]) => k === c)![1]}</span><span className="rank__cab-nota">Nota</span>
+          <span className="rank__cab-pilares">{Object.values(CURTO).map((t) => <span key={t}>{t}</span>)}</span>
+        </div>
         <ol className="rank">
           {completos.map((v, i) => <Linha key={v.slug} v={v} pos={posicoes[i]} c={c} i={i} />)}
         </ol>
@@ -113,10 +163,14 @@ export default function Ranking() {
         )}
       </LayoutGroup>
 
-      <aside className="rank__aviso">
-        <p><strong>Como ler.</strong> O índice soma presença, participação nas votações, projetos e fiscalização, com pesos fixos e a conta aberta na página de cada vereador. Mede atividade registrada em documento público, não a qualidade das ideias nem trabalho que não deixa registro, como atendimento e articulação.</p>
-        <p>Método completo em <Link to="/como-funciona#indice">Como funciona</Link>.</p>
-      </aside>
+      <ComoLer
+        itens={[
+          ["O que o índice soma", "Presença, participação nas votações, projetos e fiscalização, com pesos fixos e a conta aberta na página de cada vereador."],
+          ["O que ele mede", "Atividade registrada em documento público."],
+          ["O que ele não mede", "A qualidade das ideias e o trabalho que não deixa registro, como atendimento e articulação."],
+        ]}
+        link={{ ancora: "indice", rotulo: "Método completo" }}
+      />
     </div>
   );
 }
