@@ -60,7 +60,6 @@ function Carrossel({ itens }: { itens: { m: Materia; v: Votacao | null }[] }) {
             <span className="proj__id">{m.titulo}</span>
             <span className="proj__situacao">{m.situacao}</span>
             <span className="proj__ementa">{m.explicacao?.texto ?? m.assunto.toLowerCase().replace(/cubat[ãa]o/g, "Cubatão")}</span>
-            {m.explicacao && <span className="proj__ia">Resumo feito por IA. O texto oficial vale.</span>}
             <span className="proj__rodape">
               {v && v.sim != null ? <span>{v.sim} a favor{v.nao ? ` · ${v.nao} contra` : ""} · {dataCurta(v.data)}</span> : <span>{dataCurta(m.ultima_data)}</span>}
               <Link to={`/projetos/${m.slug}`} className="proj__link esticado" aria-label={`Ver o projeto ${m.titulo}`}><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></Link>
