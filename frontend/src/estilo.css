@@ -703,7 +703,7 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 .caminhos__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .caminho { position: relative; display: flex; flex-direction: column; gap: .55rem; padding: 1.4rem 1.5rem 1.3rem; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 18px; overflow: hidden; isolation: isolate; transition: border-color .25s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease); }
 .caminho::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; background: radial-gradient(22rem circle at var(--mx, 50%) var(--my, 0%), color-mix(in srgb, var(--azul) 10%, transparent), transparent 62%); transition: opacity .3s; }
-.caminho:hover, .caminho:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 18px 40px -22px rgba(21, 78, 112, .35); transform: translateY(-2px); }
+.caminho:hover, .caminho:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 18px 40px -22px rgba(16, 24, 40, 0.14); transform: translateY(-2px); }
 .caminho:hover::before, .caminho:focus-within::before { opacity: 1; }
 .caminho__topo { display: flex; align-items: center; justify-content: space-between; margin-bottom: .6rem; }
 .caminho__icone { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 12px; border: 1px solid var(--color-linha); background: var(--color-canvas); color: var(--color-ink); transition: background .25s, color .25s, border-color .25s; }
@@ -1089,7 +1089,7 @@ html, body { overflow-x: clip; }
 .rank__cab-pilares span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: .06em; }
 .rank { margin-top: 0; }
 .rank__item { padding: .85rem 1rem; transition: border-color .2s, box-shadow .3s var(--ease), transform .3s var(--ease); }
-.rank__item:hover { border-color: color-mix(in srgb, var(--azul) 40%, var(--color-linha)); box-shadow: 0 14px 30px -20px rgba(21, 78, 112, .35); transform: translateY(-1px); }
+.rank__item:hover { border-color: color-mix(in srgb, var(--azul) 40%, var(--color-linha)); box-shadow: 0 14px 30px -20px rgba(16, 24, 40, 0.14); transform: translateY(-1px); }
 .rank__pilar-nome { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 62rem) { .rank__cab { display: none; } .rank__pilar-nome { position: static; width: auto; height: auto; clip-path: none; } }
 @media (prefers-reduced-motion: reduce) { .rank__item, .dist__av, .dist__area { transition: none; } }
@@ -1100,7 +1100,7 @@ html, body { overflow-x: clip; }
 .vereadores__item { height: 100%; }
 .vereadores__card { position: relative; display: flex; flex-direction: column; gap: .2rem; overflow: hidden; isolation: isolate; border-radius: 18px; transition: border-color .25s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease); }
 .vereadores__card::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; background: radial-gradient(20rem circle at var(--mx, 50%) var(--my, 0%), color-mix(in srgb, var(--azul) 10%, transparent), transparent 62%); transition: opacity .3s; }
-.vereadores__card:hover, .vereadores__card:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 18px 40px -22px rgba(21, 78, 112, .4); transform: translateY(-2px); }
+.vereadores__card:hover, .vereadores__card:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 18px 40px -22px rgba(16, 24, 40, 0.16); transform: translateY(-2px); }
 .vereadores__card:hover::before, .vereadores__card:focus-within::before { opacity: 1; }
 .vereadores__item .avatar--retrato { border-radius: 13px; transition: transform .6s var(--ease); }
 .vereadores__card:hover .avatar--retrato { transform: scale(1.025); }
@@ -1119,7 +1119,7 @@ html, body { overflow-x: clip; }
 /* cartoes de partido */
 .partido-card { isolation: isolate; overflow: hidden; border-radius: 18px; transition: border-color .25s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease); }
 .partido-card::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; background: radial-gradient(20rem circle at var(--mx, 50%) var(--my, 0%), color-mix(in srgb, var(--azul) 10%, transparent), transparent 62%); transition: opacity .3s; }
-.partido-card:hover, .partido-card:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 18px 40px -22px rgba(21, 78, 112, .4); transform: translateY(-2px); }
+.partido-card:hover, .partido-card:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 18px 40px -22px rgba(16, 24, 40, 0.16); transform: translateY(-2px); }
 .partido-card:hover::before, .partido-card:focus-within::before { opacity: 1; }
 .partido-card__sigla { font-size: 2rem; letter-spacing: -0.055em; }
 .partido-card__medidas { padding-top: .75rem; border-top: 1px solid var(--color-linha); margin-top: .5rem; }
@@ -1148,7 +1148,7 @@ html, body { overflow-x: clip; }
 .sessao-nums dd { font-size: 2rem; }
 .sessao-nums dt { font: 500 .62rem/1.3 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .item-sessao { position: relative; margin-top: 1rem; padding: 1.6rem 1.7rem 1.7rem; border-radius: 20px; scroll-margin-top: 6rem; transition: border-color .25s, box-shadow .3s; }
-.item-sessao:target, .item-sessao:hover { border-color: color-mix(in srgb, var(--azul) 40%, var(--color-linha)); box-shadow: 0 16px 36px -24px rgba(21, 78, 112, .4); }
+.item-sessao:target, .item-sessao:hover { border-color: color-mix(in srgb, var(--azul) 40%, var(--color-linha)); box-shadow: 0 16px 36px -24px rgba(16, 24, 40, 0.16); }
 .item-sessao__n { margin: 0 0 .5rem; font: 600 .66rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--azul); }
 .item-sessao__titulo { font-size: 1.7rem; letter-spacing: -0.045em; }
 .item-sessao__votacao { margin-top: 1.2rem; padding-top: 1.1rem; border-top: 1px solid var(--color-linha); }
@@ -1290,7 +1290,7 @@ html, body { overflow-x: clip; }
 
 .principios { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 2rem 0 0; padding: 0; }
 .principio { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.35rem 1.4rem 1.2rem; border: 1px solid var(--color-linha); border-radius: 18px; background: var(--color-surface-1); transition: border-color .25s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease); }
-.principio:hover, .principio:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 16px 36px -22px rgba(21, 78, 112, .4); transform: translateY(-2px); }
+.principio:hover, .principio:focus-within { border-color: color-mix(in srgb, var(--azul) 45%, var(--color-linha)); box-shadow: 0 16px 36px -22px rgba(16, 24, 40, 0.16); transform: translateY(-2px); }
 .principio__n { font: 600 .68rem/1 var(--font-mono); letter-spacing: .14em; color: var(--azul); }
 .principio__titulo { margin: .2rem 0 0; font-size: 1.2rem; letter-spacing: -0.035em; line-height: 1.2; }
 .principio__texto { margin: 0; flex: 1; font-size: .93rem; line-height: 1.55; color: var(--color-secondary); }
@@ -1307,7 +1307,7 @@ html, body { overflow-x: clip; }
 .como .sanfonas { margin-top: 0; }
 .como .sanfona, .como .sanfona + .sanfona, .como .sanfona:last-of-type { border: 1px solid var(--color-linha); border-radius: 16px; background: var(--color-surface-1); margin-top: .6rem; padding: 0 1.2rem; transition: border-color .25s var(--ease), box-shadow .3s var(--ease); }
 .como .sanfona:hover { border-color: var(--color-surface-2); }
-.como .sanfona--aberta { border-color: color-mix(in srgb, var(--azul) 40%, var(--color-linha)); box-shadow: 0 16px 36px -26px rgba(21, 78, 112, .45); }
+.como .sanfona--aberta { border-color: color-mix(in srgb, var(--azul) 40%, var(--color-linha)); box-shadow: 0 16px 36px -26px rgba(16, 24, 40, 0.18); }
 .como .sanfona__titulo button { padding: 1.1rem 0; }
 .como { counter-reset: secao; }
 .como .sanfona { counter-increment: secao; }
@@ -1436,3 +1436,16 @@ html, body { overflow-x: clip; }
 @media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --mangue: #0b2024; } }
 .hero__dentro { padding-top: clamp(4.2rem, 14vh, 8.5rem); }
 @media (max-width: 40rem) { .hero__dentro { padding-top: 4rem; } }
+
+/* hover discreto: sem brilho azul que segue o cursor; so a borda ganha um pouco de cor e a sombra e fina e neutra */
+.caminho::before, .vereadores__card::before, .partido-card::before { background: none; opacity: 0; }
+.destaque::before { background: var(--color-surface-1); }
+.caminho:hover, .caminho:focus-within, .vereadores__card:hover, .vereadores__card:focus-within, .partido-card:hover, .partido-card:focus-within,
+.principio:hover, .principio:focus-within, .rank__item:hover, .item-sessao:hover, .item-sessao:target {
+  border-color: color-mix(in srgb, var(--azul) 26%, var(--color-linha));
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 10px 24px -18px rgba(16, 24, 40, .22);
+  transform: translateY(-1px);
+}
+.como .sanfona--aberta { border-color: color-mix(in srgb, var(--azul) 26%, var(--color-linha)); box-shadow: 0 1px 2px rgba(16, 24, 40, .04); }
+.caminho:hover .caminho__icone, .caminho:focus-within .caminho__icone { background: var(--suave-2); border-color: var(--color-surface-2); color: var(--azul); }
+.busca-botao:hover { box-shadow: 0 1px 2px rgba(16, 24, 40, .06); }
