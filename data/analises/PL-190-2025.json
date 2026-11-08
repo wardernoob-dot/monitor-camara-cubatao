@@ -12,7 +12,7 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria o sistema de estacionamento rotativo pago nas ruas de Cubatão. O motorista precisará pagar tarifa para usar vagas públicas em locais definidos pela prefeitura. A gestão poderá ser feita pela prefeitura ou por uma empresa privada contratada. A regra vale a partir de 1º de janeiro de 2026.",
+  "resumo": "O projeto cria o sistema de estacionamento rotativo pago nas ruas de Cubatão. O motorista precisará pagar tarifa para usar vagas públicas em locais definidos pela prefeitura. A gestão poderá ser feita pela prefeitura ou por uma empresa privada contratada. O texto original previa cobrança a partir de 1º de janeiro de 2026; a lei aprovada (Lei 4.451) passou a valer em 1º de janeiro de 2027.",
   "o_que_muda": [
    "Vias públicas da cidade terão vagas de estacionamento rotativo com cobrança de tarifa.",
    "A CMT (Companhia Municipal de Trânsito de Cubatão) vai definir quais ruas terão o estacionamento rotativo.",
@@ -62,7 +62,7 @@
     "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
    },
    {
-    "ponto": "A lei começa a valer na publicação, mas produz efeitos práticos apenas em 2026.",
+    "ponto": "O texto original previa efeitos a partir de 2026; na Lei 4.451, publicada depois das emendas, a data passou para 1º de janeiro de 2027.",
     "trecho": "Esta Lei entra em vigor na data de sua publicação, produzindo efeitos a partir de 1º de janeiro de 2026."
    }
   ],
@@ -71,5 +71,17 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "beb61e2ce736dc2a",
- "gerado_em": "2026-11-08T03:31:13Z"
+ "gerado_em": "2026-11-08T03:31:13Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-08",
+   "antes": "A regra vale a partir de 1º de janeiro de 2026.",
+   "depois": "O texto original previa cobrança a partir de 1º de janeiro de 2026; a lei aprovada (Lei 4.451) passou a valer em 1º de janeiro de 2027."
+  },
+  {
+   "data": "2026-11-08",
+   "antes": "A lei começa a valer na publicação, mas produz efeitos práticos apenas em 2026.",
+   "depois": "O texto original previa efeitos a partir de 2026; na Lei 4.451, publicada depois das emendas, a data passou para 1º de janeiro de 2027."
+  }
+ ]
 }

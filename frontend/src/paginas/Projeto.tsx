@@ -112,6 +112,12 @@ export default function ProjetoPagina() {
             Texto gerado por inteligência artificial ({a.modelo}) lendo só o {a.fonte}. Não avalia vereadores nem recomenda voto.{" "}
             <Metodo>Como funciona</Metodo>.
           </p>
+          {eventos.some((e) => /emenda/i.test(e.detalhe ?? "")) && (
+            <p className="aviso-voto">
+              <strong>Atenção:</strong> esta explicação é do texto original do projeto. Ele recebeu emenda (mudança no texto) durante a votação,
+              então alguns pontos podem ter mudado{m.lei ? <>; o texto que vale é o da <a href={m.lei.url ?? undefined} rel="noopener">Lei {m.lei.numero}</a></> : ""}.
+            </p>
+          )}
           <p className="analise__resumo">{a.resumo}</p>
           {a.o_que_muda.length > 0 && <><h3>O que muda</h3><ul className="lista-simples">{a.o_que_muda.map((x, i) => <li key={i}>{x}</li>)}</ul></>}
           {a.quem_e_afetado && <><h3>Quem é afetado</h3><p>{a.quem_e_afetado}</p></>}
