@@ -2,16 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 
-/** "Nesta página": índice das seções, igual em todas as páginas longas.
- *  Telas largas: coluna ao lado, com trilha, barra que desliza até a seção em foco e as já lidas em destaque.
- *  Telas estreitas: barra recolhível fixa no topo, que mostra a seção atual.
- *  As seções são as de <Secao id=…> ou <section id=…>; clicar leva até a seção, e a Secao abre sozinha pelo #id. */
+/** "Nesta página": barra horizontal com as seções, logo abaixo do cabeçalho do site, que acompanha a rolagem.
+ *  A pílula desliza até a seção em foco; no celular a barra rola para o lado e centraliza a seção atual.
+ *  As seções são as de <Secao id=…> ou <section id=…>; clicar leva até a seção, e a Secao abre sozinha pelo #id.
+ *  O CSS põe a barra antes do conteúdo (order: -1), então ela pode ficar em qualquer lugar do contêiner. */
 export function Toc({ itens, caminho }: { itens: readonly (readonly [string, string])[]; caminho: string }) {
   const reduz = useReducedMotion();
   const [ativo, setAtivo] = useState<string>("");
   const [presentes, setPresentes] = useState<string[]>(() => itens.map(([id]) => id));
-  const [aberto, setAberto] = useState(false);
-  const movel = useRef<HTMLDivElement>(null);
+  const trilho = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const novo = itens.map(([id]) => id).filter((id) => document.getElementById(id));
@@ -24,67 +23,39 @@ export function Toc({ itens, caminho }: { itens: readonly (readonly [string, str
     const io = new IntersectionObserver((es) => {
       const visiveis = es.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
       if (visiveis[0]) setAtivo(visiveis[0].target.id);
-    }, { rootMargin: "-18% 0px -65% 0px" });
+    }, { rootMargin: "-22% 0px -62% 0px" });
     els.forEach((e) => io.observe(e));
     return () => io.disconnect();
   }, [itens, presentes]);
 
-  // a lista do celular fecha com Esc ou clique fora
+  // mantém a seção atual visível quando a barra rola para o lado (celular)
   useEffect(() => {
-    if (!aberto) return;
-    const esc = (e: KeyboardEvent) => e.key === "Escape" && setAberto(false);
-    const fora = (e: PointerEvent) => { if (!movel.current?.contains(e.target as Node)) setAberto(false); };
-    document.addEventListener("keydown", esc);
-    document.addEventListener("pointerdown", fora);
-    return () => { document.removeEventListener("keydown", esc); document.removeEventListener("pointerdown", fora); };
-  }, [aberto]);
+    const t = trilho.current;
+    const el = t?.querySelector<HTMLElement>("[aria-current='location']");
+    if (t && el) t.scrollTo({ left: el.offsetLeft - t.clientWidth / 2 + el.clientWidth / 2, behavior: reduz ? "auto" : "smooth" });
+  }, [ativo, reduz]);
 
   const lista = itens.filter(([id]) => presentes.includes(id));
   if (lista.length < 2) return null;
-  const idx = lista.findIndex(([id]) => id === ativo);
-  const atual = idx >= 0 ? lista[idx][1] : "Escolha uma seção";
   const topo = () => window.scrollTo({ top: 0, behavior: reduz ? "auto" : "smooth" });
 
   return (
-    <>
-      <aside className="toc" aria-label="Nesta página">
-        <p className="toc__titulo">
-          <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true"><path d="M3 5h14M3 10h9M3 15h12" /></svg>
-          Nesta página
-        </p>
-        <ul className="toc__lista">
-          {lista.map(([id, nome], i) => {
-            const em = id === ativo;
-            return (
-              <li key={id}>
-                <Link to={{ pathname: caminho, hash: `#${id}` }} className={`toc__link${em ? " toc__link--ativo" : idx >= 0 && i < idx ? " toc__link--lido" : ""}`}
-                  aria-current={em ? "location" : undefined}>
-                  {em && <motion.span layoutId="toc-barra" className="toc__barra" transition={reduz ? { duration: 0 } : { type: "spring", stiffness: 420, damping: 38 }} />}
-                  {nome}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        <button type="button" className="toc__topo" onClick={topo}><span aria-hidden="true">↑</span> Voltar ao topo</button>
-      </aside>
-
-      <div className="toc-movel" ref={movel}>
-        <button type="button" className="toc-movel__botao" aria-expanded={aberto} onClick={() => setAberto((a) => !a)}>
-          <span className="toc-movel__rotulo">Nesta página</span>
-          <strong className="toc-movel__atual">{atual}</strong>
-          <svg className="toc-movel__seta" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
-        </button>
-        {aberto && (
-          <ul className="toc-movel__lista">
-            {lista.map(([id, nome]) => (
-              <li key={id}>
-                <Link to={{ pathname: caminho, hash: `#${id}` }} onClick={() => setAberto(false)} aria-current={id === ativo ? "location" : undefined}>{nome}</Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </>
+    <nav className="subnav" aria-label="Nesta página">
+      <span className="subnav__rotulo">Nesta página</span>
+      <ul className="subnav__lista" ref={trilho}>
+        {lista.map(([id, nome]) => {
+          const em = id === ativo;
+          return (
+            <li key={id}>
+              <Link to={{ pathname: caminho, hash: `#${id}` }} className={`subnav__link${em ? " subnav__link--ativo" : ""}`} aria-current={em ? "location" : undefined}>
+                {em && <motion.span layoutId="subnav-pilula" className="subnav__pilula" transition={reduz ? { duration: 0 } : { type: "spring", stiffness: 420, damping: 38 }} />}
+                <span className="subnav__texto">{nome}</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      <button type="button" className="subnav__topo" onClick={topo} aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+    </nav>
   );
 }
