@@ -1229,3 +1229,21 @@ html, body { overflow-x: clip; }
 .tabela__quem { display: inline-flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
 /* divisoes: nomes em colunas quando sao muitos */
 .racha__lado ul { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: .45rem .8rem; }
+
+/* quadro "Como ler" */
+.como-ler { margin-top: 3rem; padding: 1.5rem 1.7rem 1.4rem; border: 1px solid var(--color-linha); border-radius: 22px; background: linear-gradient(180deg, var(--color-surface-1), color-mix(in srgb, var(--color-surface-1) 70%, var(--suave))); }
+.como-ler__cab { display: flex; align-items: center; gap: .7rem; margin-bottom: 1.2rem; }
+.como-ler__icone { display: grid; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: 11px; background: var(--azul-claro); color: var(--azul-escuro); }
+.como-ler__selo { margin: 0; font: 600 .7rem/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--azul); }
+.como-ler__itens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; }
+.como-ler__item { padding: 0 1.4rem; border-left: 1px solid var(--color-linha); }
+.como-ler__item:first-child { padding-left: 0; border-left: 0; }
+.como-ler__item:last-child { padding-right: 0; }
+.como-ler__item dt { margin: 0 0 .45rem; font-size: 1.02rem; font-weight: 600; letter-spacing: -0.025em; }
+.como-ler__item dd { margin: 0; font-size: .92rem; line-height: 1.55; color: var(--color-secondary); text-wrap: pretty; }
+.como-ler__rodape { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 2rem; margin-top: 1.3rem; padding-top: 1rem; border-top: 1px dashed var(--color-linha); }
+.como-ler__rodape p { margin: 0; max-width: 46rem; font-size: .86rem; line-height: 1.5; color: var(--color-surface-3); }
+@media (max-width: 56rem) {
+  .como-ler__itens { grid-template-columns: 1fr; gap: 1.1rem; }
+  .como-ler__item, .como-ler__item:first-child, .como-ler__item:last-child { padding: 0 0 0 1rem; border-left: 2px solid var(--azul-claro); }
+}

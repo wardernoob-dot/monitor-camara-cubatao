@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useDados, type Materia, type Vereador, type Votacao, type Voto, type Resultado } from "./dados";
 import { slugPartido } from "./dados";
@@ -105,5 +106,32 @@ export function TagPartido({ sigla, parar }: { sigla: string | null | undefined;
       onClick={parar ? (e) => e.stopPropagation() : undefined} aria-label={`Partido ${sigla}: ver todos os vereadores`}>
       {sigla}
     </Link>
+  );
+}
+
+/** Quadro "Como ler": explica os termos de uma tela em definições curtas, com a nota de fonte e o link para o método. */
+export function ComoLer({ itens, nota, link }: { itens: readonly (readonly [string, ReactNode])[]; nota?: ReactNode; link?: { to: string; rotulo: string } }) {
+  return (
+    <aside className="como-ler" aria-label="Como ler esta página">
+      <header className="como-ler__cab">
+        <span className="como-ler__icone" aria-hidden="true">
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="10" cy="10" r="7.5" /><path d="M10 9v4.5M10 6.4v.1" />
+          </svg>
+        </span>
+        <p className="como-ler__selo">Como ler</p>
+      </header>
+      <dl className="como-ler__itens">
+        {itens.map(([termo, texto]) => (
+          <div key={termo} className="como-ler__item"><dt>{termo}</dt><dd>{texto}</dd></div>
+        ))}
+      </dl>
+      {(nota || link) && (
+        <footer className="como-ler__rodape">
+          {nota && <p>{nota}</p>}
+          {link && <Link to={link.to} className="link-seta">{link.rotulo} <span aria-hidden="true">→</span></Link>}
+        </footer>
+      )}
+    </aside>
   );
 }

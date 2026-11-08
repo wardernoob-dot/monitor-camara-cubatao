@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Toc } from "../toc";
 import { slugPartido, useDados, type Partido, type Vereador } from "../dados";
-import { Avatar, LinkMateria, ResultadoTag, VotoTag } from "../componentes";
+import { Avatar, ComoLer, LinkMateria, ResultadoTag } from "../componentes";
 import { IndiceMini } from "../indice";
 import { dataCurta, useTitulo } from "../util";
 import NaoEncontrado from "./NaoEncontrado";
@@ -112,10 +112,15 @@ export function ListaPartidos() {
           );
         })}
       </ul>
-      <aside className="rank__aviso">
-        <p><strong>Como ler.</strong> “Posição da Prefeitura” conta só votações em que ela tem lado claro: projetos enviados pelo prefeito (votar pela aprovação) e vetos do prefeito (votar por manter o veto). Votar diferente não é bom nem ruim: mostra independência ou oposição, conforme o caso. “Bancada unida” é a parte dos votos que acompanhou a maioria do próprio partido, nas votações em que dois ou mais membros votaram.</p>
-        <p>Até agosto de 2026 os votos vêm do resumo oficial, que costuma registrar como favorável quem estava presente. <Link to="/como-funciona#partidos">Como funciona</Link>.</p>
-      </aside>
+      <ComoLer
+        itens={[
+          ["Posição da Prefeitura", "Conta só votações em que ela tem lado claro: projetos enviados pelo prefeito (votar pela aprovação) e vetos do prefeito (votar por manter o veto)."],
+          ["Votar diferente", "Não é bom nem ruim: mostra independência ou oposição, conforme o caso."],
+          ["Bancada unida", "É a parte dos votos que acompanhou a maioria do próprio partido, nas votações em que dois ou mais membros votaram."],
+        ]}
+        nota="Até agosto de 2026 os votos vêm do resumo oficial, que costuma registrar como favorável quem estava presente."
+        link={{ to: "/como-funciona#partidos", rotulo: "Como funciona" }}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { useDados, type Vereador } from "../dados";
-import { Avatar, TagPartido } from "../componentes";
+import { Avatar, ComoLer, TagPartido } from "../componentes";
 import { useTitulo } from "../util";
 import { pctPilar } from "../indice";
 import { EASE } from "../movimento";
@@ -162,10 +162,14 @@ export default function Ranking() {
         )}
       </LayoutGroup>
 
-      <aside className="rank__aviso">
-        <p><strong>Como ler.</strong> O índice soma presença, participação nas votações, projetos e fiscalização, com pesos fixos e a conta aberta na página de cada vereador. Mede atividade registrada em documento público, não a qualidade das ideias nem trabalho que não deixa registro, como atendimento e articulação.</p>
-        <p>Método completo em <Link to="/como-funciona#indice">Como funciona</Link>.</p>
-      </aside>
+      <ComoLer
+        itens={[
+          ["O que o índice soma", "Presença, participação nas votações, projetos e fiscalização, com pesos fixos e a conta aberta na página de cada vereador."],
+          ["O que ele mede", "Atividade registrada em documento público."],
+          ["O que ele não mede", "A qualidade das ideias e o trabalho que não deixa registro, como atendimento e articulação."],
+        ]}
+        link={{ to: "/como-funciona#indice", rotulo: "Método completo em Como funciona" }}
+      />
     </div>
   );
 }
