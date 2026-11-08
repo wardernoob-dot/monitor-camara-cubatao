@@ -1423,3 +1423,9 @@ html, body { overflow-x: clip; }
   radial-gradient(46rem 20rem at 71% 90%, color-mix(in srgb, var(--ceu-brilho) 55%, transparent), transparent 70%),
   linear-gradient(180deg, var(--ceu-0) 0%, var(--ceu-1) 58%, var(--ceu-2) 88%, var(--ceu-3) 100%); }
 :root { --m1: #efc9c0; --m3: #dcaab6; }
+
+/* 5 guaras de volta (mais baixos) e o bloco do titulo um pouco mais para baixo */
+.ave--4, .ave--5 { display: block; }
+.ave--1 { top: 30%; } .ave--2 { top: 14%; } .ave--3 { top: 42%; } .ave--4 { top: 24%; } .ave--5 { top: 52%; }
+.hero__dentro { padding-top: clamp(3rem, 10vh, 6.5rem); }
+@media (max-width: 40rem) { .ave--4, .ave--5 { display: none; } .hero__dentro { padding-top: 3.2rem; } }
