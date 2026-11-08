@@ -32,6 +32,7 @@ from pathlib import Path
 
 from . import analise as AN
 from . import impacto as IM
+from . import reportagens as RP
 from . import explicacao as EX
 from . import validacao as V
 from .nomes import Registro, chave, display
@@ -1002,11 +1003,13 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     dias = [{"data": d["data"], "sessoes": d["sessoes"], "status": d["status"],
              "materias": [m["slug"] for m in d["materias"] if m["slug"] in paginas],
              "noticias": [{"titulo": n["titulo"], "url": url_segura(n["url"]) or ""} for n in d["noticias"] if url_segura(n["url"])]} for d in b.dias]
+    votacoes_json = [_ev_json(e, vslug) for e in eventos]
+    reportagens = RP.exportar({m["slug"]: m for m in materias}, votacoes_json)
     pacote = {
         "meta": {"atualizado": datetime.now(timezone.utc).isoformat(timespec="minutes"), "nome_site": NOME_SITE,
                  "cidade": CIDADE, "repo": REPO},
         "vereadores": vereadores, "materias": sorted(materias, key=lambda m: (m["ultima_data"], int(m["numero"] or 0)), reverse=True),
-        "votacoes": [_ev_json(e, vslug) for e in eventos], "dias": dias,
+        "votacoes": votacoes_json, "dias": dias, "reportagens": reportagens,
         "partidos": sorted(({**{k: x for k, x in p.items() if k not in ("membros", "em_exercicio", "rachas")},
                              "membros": [vslug[k] for k in p["membros"] if k in vslug],
                              "em_exercicio": [vslug[k] for k in p["em_exercicio"] if k in vslug],

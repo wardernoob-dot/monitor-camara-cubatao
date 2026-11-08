@@ -47,6 +47,7 @@ Pontos que exigem ler mais de um arquivo:
 - **Fotos:** `fotos/` recebe imagens com qualquer nome; `site.py:preparar_fotos` casa por apelido/nome civil (aceita extensão repetida tipo `ivan.jpg..jpg` e nome parcial único), recorta no rosto e converte para webp. Detalhes em `fotos/LEIA-ME.md`.
 - **Rotas com `#`:** o front usa `HashRouter`, então link de página precisa do `#` (`https://votoavoto.surge.sh/#/vereadores/topete`); sem ele o Surge responde 404. Decisão de manter assim: funciona nos dois hospedeiros sem arquivo de fallback.
 - Suplentes com ao menos uma sessão em 2026 ganham página de vereador.
+- **Reportagens** (`reportagens/*.md` + `reportagens/fotos/`, lidas por `camara/reportagens.py`, carrossel logo abaixo do hero e `#/reportagens/<id>`): texto escrito por gente e aprovado pelo dono do projeto (`status: publicado`); rascunho só aparece com `VAV_RASCUNHOS=1`. Situação, autor e votos não vão no texto, o site lê do projeto. Toda foto precisa de crédito, licença e link de origem. Detalhes em `reportagens/LEIA-ME.md`.
 
 ## Skills do projeto
 

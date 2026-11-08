@@ -23,6 +23,7 @@ import ComoFunciona from "./paginas/ComoFunciona";
 import Ranking from "./paginas/Ranking";
 import { ListaPartidos, PaginaPartido } from "./paginas/Partidos";
 import NaoEncontrado from "./paginas/NaoEncontrado";
+import ReportagemPagina from "./paginas/Reportagem";
 
 function RolaParaTopo() {
   const { pathname, hash } = useLocation();
@@ -152,6 +153,7 @@ function App() {
             <Route path="/sessoes" element={<Sessoes />} />
             <Route path="/sessoes/:data" element={<SessaoPagina />} />
             <Route path="/como-funciona" element={<ComoFunciona />} />
+            <Route path="/reportagens/:id" element={<ReportagemPagina />} />
             <Route path="*" element={<NaoEncontrado />} />
           </Routes>
         </main>

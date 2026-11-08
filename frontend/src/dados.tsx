@@ -144,6 +144,20 @@ export interface Partido {
   contra_resultado: number;
 }
 
+export interface Reportagem {
+  id: string;
+  status: "rascunho" | "publicado";
+  data: string;
+  chapeu: string | null;
+  manchete: string;
+  linha_fina: string;
+  projetos: string[];
+  votacao: number | null;
+  foto: { g: string; p: string; alt: string; legenda: string | null; credito: string; licenca: string; link: string; ilustrativa: boolean };
+  corpo: { t: "h" | "p" | "ul"; x: string | string[] }[];
+  aprovado_por: string | null;
+}
+
 interface Bruto {
   meta: { atualizado: string; nome_site: string; cidade: string; repo: string };
   vereadores: Vereador[];
@@ -151,6 +165,7 @@ interface Bruto {
   votacoes: Votacao[];
   dias: Dia[];
   partidos: Partido[];
+  reportagens?: Reportagem[];
 }
 
 export interface Base extends Bruto {
@@ -186,6 +201,7 @@ export function ProvedorDados({ children }: { children: ReactNode }) {
       votacao: (id: number) => bruto.votacoes[id],
       atuais: bruto.vereadores.filter((v) => v.em_exercicio),
       partido: new Map((bruto.partidos ?? []).map((p) => [slugPartido(p.sigla), p])),
+      reportagens: bruto.reportagens ?? [],
     };
   }, [bruto]);
 

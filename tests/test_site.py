@@ -30,7 +30,7 @@ def test_descricao_de_requerimento():
 def test_exporta_json_do_app(tmp_path):
     S.exportar(RAIZ / "data", tmp_path)
     d = json.loads((tmp_path / "dados.json").read_text("utf-8"))
-    assert set(d) == {"meta", "vereadores", "materias", "votacoes", "dias", "partidos"}
+    assert set(d) == {"meta", "vereadores", "materias", "votacoes", "dias", "partidos", "reportagens"}
     slugs = {v["slug"] for v in d["vereadores"]}
     assert {"xuxa", "topete", "marcinho"} <= slugs
     materias = {m["slug"]: m for m in d["materias"]}

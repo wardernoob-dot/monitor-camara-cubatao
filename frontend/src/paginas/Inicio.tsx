@@ -12,6 +12,7 @@ import { Painel } from "../painel";
 import { Paisagem } from "../guara";
 import { Destaque, Termo } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
+import { CarrosselReportagens } from "../reportagens";
 
 const COLUNAS = 80;
 const LINHAS_TITULO: [string, string?][] = [["Como cada vereador"], ["de Cubatão ", "votou"]];
@@ -43,7 +44,7 @@ const situacaoCurta = (t: string) => t
   .replace(/Vetado pelo prefeito \((integral|parcial)\); veto mantido/i, "Vetado, veto mantido")
   .replace(/^Na pauta, sem vota[çc][ãa]o registrada$/i, "Na pauta");
 
-function Carrossel({ itens }: { itens: { m: Materia; v: Votacao | null }[] }) {
+function Carrossel({ itens, total }: { itens: { m: Materia; v: Votacao | null }[]; total: number }) {
   const trilho = useRef<HTMLUListElement>(null);
   const ir = (d: number) => {
     const el = trilho.current;
@@ -53,11 +54,12 @@ function Carrossel({ itens }: { itens: { m: Materia; v: Votacao | null }[] }) {
     <section className="carrossel" aria-labelledby="carrossel-titulo">
       <header className="cab-secao cab-secao--lado">
         <div>
-          <p className="cab-secao__selo">Voto a voto</p>
-          <h2 id="carrossel-titulo" className="cab-secao__titulo">Saiba quem votou o quê</h2>
-          <p className="cab-secao__texto">Os projetos mais importantes da Câmara em 2026, com o placar de cada votação. Abra um para ver como cada vereador votou.</p>
+          <p className="cab-secao__selo">Atenção</p>
+          <h2 id="carrossel-titulo" className="cab-secao__titulo">Projetos em destaque: saiba quem votou o quê</h2>
+          <p className="cab-secao__texto">Mexem no orçamento, em servidores ou na <Termo chave="loa">Lei Orgânica</Termo>, foram vetados, rejeitados ou tiveram votação dividida. Critério fixo e público, igual para todos; não diz se o projeto é bom ou ruim. Abra um para ver como cada vereador votou.</p>
         </div>
         <div className="carrossel__ctl">
+          <Link to="/projetos?destaque=1" className="link-seta carrossel__todos">Ver os {total} <span aria-hidden="true">→</span></Link>
           <button type="button" className="carrossel__seta" onClick={() => ir(-1)} aria-label="Projetos anteriores">←</button>
           <button type="button" className="carrossel__seta" onClick={() => ir(1)} aria-label="Próximos projetos">→</button>
         </div>
@@ -111,8 +113,8 @@ export default function Inicio() {
     const porId = new Map(b.votacoes.map((v) => [v.id, v]));
     return b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta")
       .map((m) => ({ m, v: porId.get(m.eventos[m.eventos.length - 1]) ?? null }))
-      .filter((x) => x.v && x.v.sim != null)
-      .sort((x, y) => y.v!.data.localeCompare(x.v!.data)).slice(0, 8);
+      .map((x) => ({ m: x.m, v: x.v && x.v.sim != null ? x.v : null }))
+      .sort((x, y) => Number(!!y.v) - Number(!!x.v) || (y.v?.data ?? y.m.ultima_data).localeCompare(x.v?.data ?? x.m.ultima_data)).slice(0, 10);
   }, [b]);
   const rolagem = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -161,7 +163,7 @@ export default function Inicio() {
       </section>
 
       <div className="pagina pagina--larga">
-        {votados.length > 2 && <Carrossel itens={votados} />}
+        <CarrosselReportagens />
         <section className="caminhos" aria-labelledby="caminhos-titulo">
           <header className="cab-secao">
             <p className="cab-secao__selo">Explore o site</p>
@@ -205,30 +207,7 @@ export default function Inicio() {
           </ol>
         </section>
 
-        {destaques.length > 0 && (
-          <section className="em-destaque" aria-labelledby="destaque-titulo">
-            <header className="cab-secao cab-secao--lado">
-              <div>
-                <p className="cab-secao__selo">Atenção</p>
-                <h2 id="destaque-titulo" className="cab-secao__titulo">Projetos em destaque</h2>
-                <p className="cab-secao__texto">Mexem no orçamento, em servidores ou na <Termo chave="loa">Lei Orgânica</Termo>, foram vetados, rejeitados ou tiveram votação dividida. Critério fixo e público, igual para todos; não diz se o projeto é bom ou ruim.</p>
-              </div>
-              <Link to="/projetos?destaque=1" className="link-seta">Ver todos <span aria-hidden="true">→</span></Link>
-            </header>
-            <ul className="destaques">
-              {destaques.slice(0, 3).map((m) => (
-                <li key={m.slug} className="destaque" onPointerMove={luz}>
-                  <span className="destaque__id">{m.titulo}</span>
-                  <span className="destaque__corpo">
-                    <span className="destaque__situacao">{m.situacao}</span>
-                    <span className="destaque__ementa">{m.assunto.toLowerCase().replace(/cubat[ãa]o/g, "Cubatão")}</span>
-                  </span>
-                  <Link to={`/projetos/${m.slug}`} className="destaque__link esticado" aria-label={`Ver o projeto ${m.titulo}`}><span aria-hidden="true">→</span></Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {votados.length > 2 && <Carrossel itens={votados} total={b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").length} />}
 
         <section className="painel-secao" aria-labelledby="painel-titulo">
           <h2 id="painel-titulo" className="sr">A Câmara em 2026</h2>
