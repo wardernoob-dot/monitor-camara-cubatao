@@ -176,3 +176,20 @@ export function NotaMetodo({ children, ancora, rotulo }: { children: ReactNode; 
     </aside>
   );
 }
+
+/** Votação de veto: o "Sim" é manter o veto do prefeito e o "Não" é derrubar. O resultado vem de `veto.resultado` da matéria (ou do texto do resumo oficial). */
+export function ResultadoVotacao({ ev, m }: { ev: Votacao; m: Pick<Materia, "tipo" | "veto"> }) {
+  if (m.tipo === "VETO" && !ev.resultado) {
+    const d = (ev.detalhe ?? "").toUpperCase();
+    const mantido = m.veto?.resultado === "veto_mantido" || (!m.veto?.resultado && d.includes("MANTID"));
+    const derrubado = m.veto?.resultado === "veto_derrubado" || (!m.veto?.resultado && d.includes("REJEITAD"));
+    if (mantido) return <span className="res">Veto mantido</span>;
+    if (derrubado) return <span className="res">Veto derrubado</span>;
+  }
+  return <ResultadoTag r={ev.resultado} />;
+}
+
+export function AvisoVeto({ m }: { m: Pick<Materia, "tipo"> }) {
+  if (m.tipo !== "VETO") return null;
+  return <p className="aviso-voto">Nesta votação, votar <strong>Sim</strong> é manter o veto do prefeito, e votar <strong>Não</strong> é derrubar o veto.</p>;
+}

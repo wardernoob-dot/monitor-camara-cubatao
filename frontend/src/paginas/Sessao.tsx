@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Toc } from "../toc";
 import { useDados } from "../dados";
-import { Grade, LinkMateria, NotaFonte, Placar, ResultadoTag } from "../componentes";
+import { AvisoVeto, Grade, LinkMateria, NotaFonte, Placar, ResultadoVotacao } from "../componentes";
 import { dataExtenso, nomeSessao, useTitulo } from "../util";
 import { Destaque, DicaMateria, EtapaComDica, Termo } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
@@ -57,9 +57,10 @@ export default function SessaoPagina() {
               <div key={ev.id} className="item-sessao__votacao">
                 <div className="votacao__cab">
                   <h3 className="linha-tempo__etapa"><EtapaComDica ev={ev} tipo={m.tipo} /></h3>
-                  <span className="votacao__res"><ResultadoTag r={ev.resultado} />{Object.keys(ev.votos).length > 0 && <Placar ev={ev} grande />}</span>
+                  <span className="votacao__res"><ResultadoVotacao ev={ev} m={m} />{Object.keys(ev.votos).length > 0 && <Placar ev={ev} grande />}</span>
                 </div>
                 {ev.sentido === "inverso" && <p className="aviso-voto">Nesta votação, votar <strong>Sim</strong> era ser contra o projeto seguir.</p>}
+                <AvisoVeto m={m} />
                 <Grade ev={ev} />
                 {ev.fonte && <NotaFonte ev={ev} />}
               </div>

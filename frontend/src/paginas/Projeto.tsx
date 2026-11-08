@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useAnalise, useDados } from "../dados";
-import { Grade, Metodo, NotaFonte, Placar, ResultadoTag, Situacao } from "../componentes";
+import { AvisoVeto, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { Destaque, EtapaComDica, Termo } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
@@ -78,8 +78,9 @@ export default function ProjetoPagina() {
                 <h3 className="linha-tempo__etapa"><EtapaComDica ev={ev} tipo={m.tipo} /></h3>
                 {ev.sentido === "inverso" && <p className="aviso-voto">Nesta votação, votar <strong>Sim</strong> era ser contra o projeto seguir, e votar <strong>Não</strong> era ser a favor.</p>}
                 {ev.sentido === "emenda" && <p className="aviso-voto">Esta votação é sobre uma mudança no texto (emenda), não sobre o projeto inteiro.</p>}
+                <AvisoVeto m={m} />
                 <p className="linha-tempo__res">
-                  <ResultadoTag r={ev.resultado} /> <Placar ev={ev} grande={Object.keys(ev.votos).length > 0} />
+                  <ResultadoVotacao ev={ev} m={m} /> <Placar ev={ev} grande={Object.keys(ev.votos).length > 0} />
                   {ev.detalhe && <span className="linha-tempo__detalhe">{ev.detalhe[0] + ev.detalhe.slice(1).toLowerCase()}</span>}
                 </p>
                 <Grade ev={ev} />
