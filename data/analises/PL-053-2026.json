@@ -20,7 +20,7 @@
    "Empresas podem patrocinar atletas, equipes ou eventos esportivos municipais e intermunicipais.",
    "Empresas participantes recebem o Selo \"Empresa Amiga do Esporte e do Lazer\".",
    "Empresas com o selo podem divulgar suas ações para fins promocionais e publicitários.",
-   "A participação não gera cobrança de impostos ou gastos extras para a prefeitura."
+   "A participação não gera gastos para a Prefeitura e não dá desconto de impostos às empresas."
   ],
   "quem_e_afetado": "As pessoas jurídicas (empresas) que desejam ajudar ganham o direito ao selo e a fazer propaganda. Os atletas, equipes e frequentadores de locais esportivos podem receber melhorias e apoio. O texto não diz quem fica de fora, pois qualquer empresa pode participar de forma voluntária.",
   "de_onde_sai_o_dinheiro": "O texto diz que a participação não traz gastos financeiros diretos para o Poder Público e o documento não cita custos ou fonte de recursos.",
@@ -81,5 +81,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "cb0e51b1d6d0d1ad",
- "gerado_em": "2026-11-08T03:23:59Z"
+ "gerado_em": "2026-11-08T03:23:59Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-08",
+   "antes": "A participação não gera cobrança de impostos ou gastos extras para a prefeitura.",
+   "depois": "A participação não gera gastos para a Prefeitura e não dá desconto de impostos às empresas."
+  }
+ ]
 }

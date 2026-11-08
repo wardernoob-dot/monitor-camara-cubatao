@@ -18,7 +18,7 @@
    "O profissional deve ser contratado de forma livre pela gestante, pelo companheiro ou por familiares.",
    "O fisioterapeuta precisa ter registro no conselho de classe e especialização em saúde da mulher reconhecida pelo órgão federal.",
    "O hospital pode exigir regras próprias de credenciamento do profissional antes da entrada.",
-   "O hospital não pode usar o fisioterapeuta particular como funcionário da equipe médica, a menos que a gestante permita expressamente.",
+   "O hospital não pode usar o fisioterapeuta contratado pela gestante como parte da sua equipe de atendimento, a menos que a gestante permita expressamente.",
    "A lei entra em vigor na data em que for publicada."
   ],
   "quem_e_afetado": "A gestante ganha o direito de escolher ter assistência de fisioterapia. O hospital público ou privado precisa permitir a entrada do profissional escolhido. Ficam de fora os profissionais que não têm a especialização exigida ou que não foram contratados pela família.",
@@ -63,5 +63,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "7777ff3dc69c5c29",
- "gerado_em": "2026-11-08T03:29:19Z"
+ "gerado_em": "2026-11-08T03:29:19Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-08",
+   "antes": "O hospital não pode usar o fisioterapeuta particular como funcionário da equipe médica, a menos que a gestante permita expressamente.",
+   "depois": "O hospital não pode usar o fisioterapeuta contratado pela gestante como parte da sua equipe de atendimento, a menos que a gestante permita expressamente."
+  }
+ ]
 }
