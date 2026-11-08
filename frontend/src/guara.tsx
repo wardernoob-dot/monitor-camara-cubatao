@@ -53,6 +53,15 @@ export function Paisagem() {
   return (
     <div className="paisagem" aria-hidden="true">
       <svg className="paisagem__svg" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" fill="none">
+        <defs>
+          <radialGradient id="sol-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stopColor="var(--sol-halo)" stopOpacity=".85" />
+            <stop offset=".45" stopColor="var(--sol-halo)" stopOpacity=".3" />
+            <stop offset="1" stopColor="var(--sol-halo)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        <circle cx="1010" cy="190" r="210" fill="url(#sol-halo)" />
+        <circle cx="1010" cy="190" r="46" fill="var(--sol)" />
         <motion.g style={p(longe)}>
           <path transform="translate(0 300) scale(1 .62) translate(0 -300)" d="M0 150 C80 120 140 96 210 112 C290 130 330 70 420 64 C520 58 560 108 650 120 C740 132 790 84 880 80 C980 76 1020 128 1110 132 C1210 136 1260 92 1340 98 C1390 102 1420 118 1440 124 V300 H0Z" fill="var(--serra-3)" />
         </motion.g>
@@ -62,6 +71,9 @@ export function Paisagem() {
         <motion.g style={p(perto)}>
           <path d="M0 232 C60 222 110 214 160 220 C200 202 250 198 292 214 C334 196 392 196 430 216 C480 204 540 204 580 222 C640 206 700 206 742 222 C800 204 870 206 914 224 C972 208 1036 208 1078 224 C1130 208 1196 210 1236 226 C1300 214 1370 214 1440 230 V300 H0Z" fill="var(--mangue)" />
           <path d="M0 262 H1440 V300 H0Z" fill="var(--agua)" />
+          <g stroke="var(--sol)" strokeWidth="2.4" strokeLinecap="round" opacity=".75">
+            <path d="M960 269h100M978 277h66M992 285h38M1002 292h18" />
+          </g>
           <g stroke="var(--agua-brilho)" strokeWidth="1.4" strokeLinecap="round" opacity=".7">
             <path d="M120 272h90M340 281h120M610 270h80M820 279h140M1100 271h100M1290 282h90" />
           </g>
