@@ -1,0 +1,17 @@
+{
+ "chave": "PL-055-2026",
+ "modelo": "gemini-3.6-flash",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "Ele também acaba com uma lei antiga que criava cargos de chefia para essa mesma função.",
+   "tipo": "confuso",
+   "explicacao": "A lei antiga criou cargos em comissão para a função de pajem, mas a justificativa do documento explica que pajem é uma função técnica e não de chefia.",
+   "trecho_documento": "o que não condiz com o cargo/função de pajem no Município de Cubatão, cuja atribuição é eminentemente técnica",
+   "correcao": "Ele também revoga uma lei antiga que criou cargos em comissão para essa mesma função.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

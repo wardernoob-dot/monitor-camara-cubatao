@@ -1,0 +1,17 @@
+{
+ "chave": "PL-004-2026",
+ "modelo": "gemini-3.8-flash",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_muda",
+   "frase": "O hospital não pode usar o fisioterapeuta particular como funcionário da equipe médica, a menos que a gestante permita expressamente.",
+   "tipo": "confuso",
+   "explicacao": "O documento refere-se à equipe assistencial regular (equipe de atendimento do hospital) e não à equipe médica, já que fisioterapeutas não integram quadros médicos.",
+   "trecho_documento": "Art. 3º.É vedado aos estabelecimentos de saúde utilizar o fisioterapeuta contratado pela gestante como integrante de sua equipe assistencial regular, salvo mediante autorização expressa da parturiente.",
+   "correcao": "O hospital não pode usar o fisioterapeuta particular como integrante de sua equipe de atendimento regular, a menos que a gestante permita expressamente.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

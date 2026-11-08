@@ -1,0 +1,17 @@
+{
+ "chave": "PELOM-001-2026",
+ "modelo": "gemini-3.8-flash",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "justificativa_do_autor",
+   "frase": "O autor também aponta que a lei federal de mobilidade urbana exige a sustentabilidade econômica do transporte e que a regra atual limita a ajuda financeira em patamares inferiores aos necessários, sendo urgente a mudança para evitar um colapso no sistema e manter o valor da tarifa de remuneração calculado em dez reais e cinquenta centavos.",
+   "tipo": "confuso",
+   "explicacao": "O objetivo do projeto não é manter a tarifa de remuneração em R$ 10,50, mas sim ampliar o subsídio para cobrir essa remuneração da concessionária sem ter que repassar o aumento para a tarifa paga pelos passageiros.",
+   "trecho_documento": "Após análise do documentos referentes a planilha GEIPOT (referente a 01/01/2025), a qual apresentaria uma tarifa de remuneração no valor de R$ 10,50 (dez reais e cinquenta centavos), bem como o fato da existência de previsão legal quanto ao Equilíbrio Econômico Financeiro do Contrato de Concessão, é obrigação da Municipalidade, -Reajustar a Tarifa de remuneração Anualmente garantindo o Equilíbrio do referido contrato.",
+   "correcao": "O autor também aponta que a lei federal de mobilidade urbana exige a sustentabilidade econômica do transporte e que a regra atual limita a ajuda financeira a patamares insuficientes, sendo urgente ampliar o subsídio para cobrir o custo de remuneração calculado em dez reais e cinquenta centavos sem repassar esse valor para a passagem paga pelos usuários.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

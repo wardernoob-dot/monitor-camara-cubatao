@@ -1,0 +1,17 @@
+{
+ "chave": "PL-087-2026",
+ "modelo": "gemini-3.5-flash",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "Ele aumenta de 10% para 20% o limite que o governo tem para remanejar dinheiro entre diferentes áreas.",
+   "tipo": "errado",
+   "explicacao": "O aumento para 20% refere-se especificamente à abertura de créditos suplementares, enquanto o limite para remanejamento, transposição e transferência é fixado em até 10%.",
+   "trecho_documento": "II - Abrir créditos suplementares até 20% (vinte por cento) do total da despesa autorizada. (...) III - Proceder por decreto à transposição, o remanejamento ou a transferência de recursos (...) até o limite de 10% (dez por cento) do total da despesa fixada",
+   "correcao": "Ele aumenta de 10% para 20% o limite que o governo tem para abrir créditos suplementares no orçamento.",
+   "trecho_achado": false
+  }
+ ],
+ "numeros_sem_base": []
+}

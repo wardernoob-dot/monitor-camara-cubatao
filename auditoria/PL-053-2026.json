@@ -1,0 +1,17 @@
+{
+ "chave": "PL-053-2026",
+ "modelo": "gemini-3.6-flash",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_muda",
+   "frase": "A participação não gera cobrança de impostos ou gastos extras para a prefeitura.",
+   "tipo": "confuso",
+   "explicacao": "O documento estabelece que o programa não concederá incentivos ou isenções tributárias, e não que haverá isenção ou ausência de cobrança de impostos.",
+   "trecho_documento": "II – concessão de incentivos fiscais, tributários ou financeiros;",
+   "correcao": "A participação não gera gastos para a prefeitura nem concede descontos de impostos às empresas.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

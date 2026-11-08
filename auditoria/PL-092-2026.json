@@ -1,0 +1,17 @@
+{
+ "chave": "PL-092-2026",
+ "modelo": "gemini-3.6-flash",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "Ele aumenta de 10% para 19% o limite que a Prefeitura tem para remanejar dinheiro entre áreas diferentes.",
+   "tipo": "exagero",
+   "explicacao": "O projeto trata de autorização para créditos suplementares, que não se restringem ao remanejamento de verbas entre áreas.",
+   "trecho_documento": "AMPLIANDO DE 10% (DEZ POR CENTO) PARA 19% (DEZENOVE POR CENTO) O LIMITE PARA ABERTURA DE CRÉDITOS ADICIONAIS SUPLEMENTARES",
+   "correcao": "Ele aumenta de 10% para 19% o limite que a Prefeitura tem para abrir créditos suplementares.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

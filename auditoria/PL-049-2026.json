@@ -1,0 +1,17 @@
+{
+ "chave": "PL-049-2026",
+ "modelo": "gemini-3.6-flash",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "quem_e_afetado",
+   "frase": "A Prefeitura tem a obrigação de manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente.",
+   "tipo": "exagero",
+   "explicacao": "O projeto apenas autoriza a Prefeitura a prorrogar o benefício, não impondo uma obrigação legal de pagamento.",
+   "trecho_documento": "Fica o Poder Executivo autorizado a prorrogar pelo período de até 12 (doze) meses, o fornecimento do \"Bolsa Moradia\"",
+   "correcao": "A Prefeitura fica autorizada a manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}
