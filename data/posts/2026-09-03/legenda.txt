@@ -4,7 +4,7 @@
 ✅ Sancionado: Lei nº 4.478 (DO de 04/09/2026).
 
 ▪️ PL 84/2026 (Prefeito Municipal): aprovado em 2ª discussão, 14 a 0.
-O projeto altera a destinação de emendas impositivas do orçamento municipal de 2026 para redirecionar recursos a diferentes entidades e finalidades.
+Este projeto de lei altera a destinação de verbas de várias emendas impositivas do orçamento municipal de Cubatão para o ano de 2026. A medida redireciona recursos para áreas como saúde, cultura, esportes e instituições locais. O objetivo é garantir a correta e eficiente execução do orçamento da prefeitura. Na prática, o dinheiro que iria para um fim passa a bancar projetos específicos em entidades parceiras.
 ✅ Sancionado: Lei nº 4.479 (DO de 04/09/2026).
 
 Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
