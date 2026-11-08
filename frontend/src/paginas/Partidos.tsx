@@ -19,6 +19,20 @@ function Medida({ valor, rotulo, nota }: { valor: string; rotulo: string; nota?:
   );
 }
 
+/** Número da bancada com rótulo em mono, uma barra opcional e uma linha de apoio. */
+function Estat({ rotulo, valor, sufixo, barra, nota, contra }: { rotulo: string; valor: string; sufixo?: string; barra?: number; nota?: string; contra?: boolean }) {
+  return (
+    <div className="bn__item">
+      <dt>{rotulo}</dt>
+      <dd><span className="bn__valor">{valor}</span>{sufixo && <span className="bn__sufixo">{sufixo}</span>}</dd>
+      {barra != null && (
+        <span className={`bn__barra${contra ? " bn__barra--contra" : ""}`} aria-hidden="true"><span style={{ width: `${Math.max(0, Math.min(100, barra))}%` }} /></span>
+      )}
+      {nota && <p className="bn__nota">{nota}</p>}
+    </div>
+  );
+}
+
 function BarraExecutivo({ com, contra }: { com: number; contra: number }) {
   const t = com + contra;
   if (!t) return <span className="nota">sem votos com posição da Prefeitura definida</span>;
@@ -123,7 +137,7 @@ export function ListaPartidos() {
           ["Bancada unida", "É a parte dos votos que acompanhou a maioria do próprio partido, nas votações em que dois ou mais membros votaram."],
         ]}
         nota="Até agosto de 2026 os votos vêm do resumo oficial, que costuma registrar como favorável quem estava presente."
-        link={{ to: "/como-funciona#partidos", rotulo: "Como funciona" }}
+        link={{ ancora: "partidos", rotulo: "Como funciona" }}
       />
     </div>
   );
@@ -165,12 +179,14 @@ export function PaginaPartido() {
         {p.membros.length > p.em_exercicio.length && `, mais ${p.membros.length - p.em_exercicio.length} que já exerceram mandato em 2026`}.
       </p>
 
-      <dl className="numeros">
-        <div><dt>índice médio da bancada</dt><dd>{p.indice_medio != null ? fmt1(p.indice_medio) : "–"}</dd></div>
-        <div><dt>dos votos na posição da Prefeitura</dt><dd>{t ? `${pct(p.executivo.com, t)}%` : "–"}</dd></div>
-        <div><dt>votos contra a posição da Prefeitura</dt><dd>{p.executivo.contra}</dd></div>
-        <div><dt>bancada unida nas votações</dt><dd>{p.coesao != null ? `${p.coesao}%` : "–"}</dd></div>
-        <div><dt>projetos / viraram lei</dt><dd>{p.projetos} / {p.leis}</dd></div>
+      <dl className="bn">
+        <Estat rotulo="Índice médio da bancada" valor={p.indice_medio != null ? fmt1(p.indice_medio) : "–"} sufixo={p.indice_medio != null ? "/10" : undefined}
+          barra={p.indice_medio != null ? p.indice_medio * 10 : undefined} nota="média das notas dos membros" />
+        <Estat rotulo="Na posição da Prefeitura" valor={t ? `${pct(p.executivo.com, t)}%` : "–"} barra={t ? (100 * p.executivo.com) / t : undefined}
+          nota={`${p.executivo.com} com a Prefeitura · ${p.executivo.contra} contra`} contra />
+        <Estat rotulo="Bancada unida" valor={p.coesao != null ? `${p.coesao}%` : "–"} barra={p.coesao ?? undefined}
+          nota={p.coesao == null ? "só 1 vereador" : "acompanhou a maioria do partido"} />
+        <Estat rotulo="Projetos / viraram lei" valor={`${p.projetos} / ${p.leis}`} nota="apresentados em 2026" />
       </dl>
 
       <div className="com-toc">

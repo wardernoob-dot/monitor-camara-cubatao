@@ -168,7 +168,7 @@ export default function Ranking() {
           ["O que ele mede", "Atividade registrada em documento público."],
           ["O que ele não mede", "A qualidade das ideias e o trabalho que não deixa registro, como atendimento e articulação."],
         ]}
-        link={{ to: "/como-funciona#indice", rotulo: "Método completo em Como funciona" }}
+        link={{ ancora: "indice", rotulo: "Método completo" }}
       />
     </div>
   );

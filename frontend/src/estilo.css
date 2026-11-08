@@ -1253,3 +1253,30 @@ html, body { overflow-x: clip; }
 .sub-secao__titulo { font-size: clamp(1.35rem, 2.4vw, 1.7rem); letter-spacing: -0.04em; }
 .sub-secao__texto { margin: .45rem 0 0; max-width: 40rem; color: var(--color-secondary); font-size: .95rem; line-height: 1.55; }
 .sub-secao + .partidos { margin-top: 1.25rem; }
+
+/* ponteiros para o metodo (Como funciona), iguais em todas as paginas */
+.metodo-link { display: inline-flex; align-items: center; gap: .4rem; font-size: .88rem; font-weight: 500; color: var(--azul); text-decoration: none; padding: .15rem .6rem .15rem .5rem; border-radius: var(--raio-pilula); background: var(--azul-claro); transition: background .2s, color .2s; white-space: nowrap; }
+.metodo-link:hover { color: #fff; background: var(--azul); }
+.metodo-link__seta { transition: transform .25s var(--ease); }
+.metodo-link:hover .metodo-link__seta { transform: translateX(3px); }
+.metodo-link svg { flex: none; }
+.nota-metodo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.5rem; margin: 1.25rem 0 0; padding: .9rem 1.1rem; border: 1px solid var(--color-linha); border-left: 3px solid var(--azul); border-radius: 14px; background: var(--color-surface-1); }
+.nota-metodo p { margin: 0; flex: 1; min-width: 16rem; max-width: 46rem; font-size: .92rem; line-height: 1.55; color: var(--color-secondary); text-wrap: pretty; }
+/* dentro de caixas coloridas e de notas, o ponteiro fica discreto */
+.por-que .metodo-link, .nota .metodo-link, .peso__motivo .metodo-link, .indice__conta .metodo-link, .analise__aviso .metodo-link { padding: 0 .1rem; background: none; border-radius: 0; text-decoration: underline; text-underline-offset: .2em; }
+.por-que .metodo-link svg, .nota .metodo-link svg, .peso__motivo .metodo-link svg, .indice__conta .metodo-link svg, .analise__aviso .metodo-link svg, .por-que .metodo-link__seta, .nota .metodo-link__seta, .peso__motivo .metodo-link__seta, .indice__conta .metodo-link__seta, .analise__aviso .metodo-link__seta { display: none; }
+.por-que .metodo-link:hover, .nota .metodo-link:hover, .peso__motivo .metodo-link:hover, .indice__conta .metodo-link:hover, .analise__aviso .metodo-link:hover { background: none; color: var(--azul-escuro); }
+
+/* numeros da bancada (pagina do partido) */
+.bn { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 1.75rem 0 0; }
+.bn__item { display: flex; flex-direction: column; gap: .35rem; padding: 1.15rem 1.2rem 1.1rem; border: 1px solid var(--color-linha); border-radius: 18px; background: var(--color-surface-1); }
+.bn__item dt { margin: 0; font: 600 .62rem/1.3 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--color-surface-3); }
+.bn__item dd { margin: .2rem 0 0; display: flex; align-items: baseline; gap: .3rem; }
+.bn__valor { font-size: 2.5rem; font-weight: 500; letter-spacing: -0.065em; line-height: 1; }
+.bn__sufixo { font-size: .95rem; color: var(--color-surface-3); }
+.bn__barra { display: block; height: 6px; margin-top: .45rem; border-radius: 3px; background: var(--azul-trilho); overflow: hidden; }
+.bn__barra > span { display: block; height: 100%; border-radius: 3px; background: var(--azul); }
+.bn__barra--contra { background: var(--color-ink); }
+.bn__nota { margin: .15rem 0 0; font-size: .82rem; line-height: 1.4; color: var(--color-surface-3); }
+@media (max-width: 62rem) { .bn { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) { .bn__valor { font-size: 2rem; } }

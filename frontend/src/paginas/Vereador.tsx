@@ -3,7 +3,7 @@ import { Secao } from "../secao";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
-import { Avatar, Celula, Fonte, Legenda, LinkMateria, Placar, ResultadoTag, Situacao, TagPartido, VotoTag } from "../componentes";
+import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
 import { Destaque, Dica, DicaMateria, EtapaComDica, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
@@ -180,7 +180,7 @@ export default function VereadorPagina() {
 
       {v.executivo.contra > 0 && (
         <Secao id="prefeitura" titulo="Quando votou contra a posição da Prefeitura" resumo={`${v.executivo.contra} ${v.executivo.contra === 1 ? "vez" : "vezes"}`}>
-          <p className="nota">Projetos enviados pelo prefeito em que votou contra a aprovação, e vetos do prefeito em que votou para derrubar. <Link to="/como-funciona#partidos">Como é contado</Link>.</p>
+          <p className="nota">Projetos enviados pelo prefeito em que votou contra a aprovação, e vetos do prefeito em que votou para derrubar. <Metodo ancora="partidos">Como é contado</Metodo>.</p>
           <ul className="lista-simples">
             {v.executivo.contra_ids.map(b.votacao).reverse().map((ev) => (
               <li key={ev.id}><strong>{dataCurta(ev.data, true)}</strong> · <LinkMateria slug={ev.materia} /> · {ev.etapa_txt.toLowerCase()} · votou <VotoTag voto={ev.votos[v.slug]} /> · <ResultadoTag r={ev.resultado} /></li>

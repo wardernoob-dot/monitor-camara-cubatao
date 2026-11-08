@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useAnalise, useDados } from "../dados";
-import { Grade, NotaFonte, Placar, ResultadoTag, Situacao } from "../componentes";
+import { Grade, Metodo, NotaFonte, Placar, ResultadoTag, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { Destaque, EtapaComDica } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
@@ -45,7 +45,7 @@ export default function ProjetoPagina() {
         <aside className={`por-que por-que--${m.relevancia.nivel}`} aria-label="Por que este projeto merece atenção">
           <p className="por-que__titulo">{m.relevancia.nivel === "alta" ? "Por que este projeto merece atenção" : "O que observar"}</p>
           <ul>{m.relevancia.motivos.map((x) => <li key={x}>{x}</li>)}</ul>
-          <p className="por-que__fonte">Critérios fixos e públicos (veja <Link to="/como-funciona">Como funciona</Link>). Não diz se o projeto é bom ou ruim.</p>
+          <p className="por-que__fonte">Critérios fixos e públicos (veja <Metodo>Como funciona</Metodo>). Não diz se o projeto é bom ou ruim.</p>
         </aside>
       )}
 
@@ -56,7 +56,7 @@ export default function ProjetoPagina() {
         {m.autores.length > 0 && (
           <div><dt>Peso no índice</dt><dd>
             <span className={`peso peso--${m.impacto.faixa}`}>{m.impacto.nome} ({m.impacto.peso.toLocaleString("pt-BR")})</span>{" "}
-            <span className="peso__motivo">{m.impacto.motivo}{m.impacto.fonte === "revisao" ? " (revisão manual)" : ""}. <Link to="/como-funciona#indice">Como é calculado</Link></span>
+            <span className="peso__motivo">{m.impacto.motivo}{m.impacto.fonte === "revisao" ? " (revisão manual)" : ""}. <Metodo ancora="indice">Como é calculado</Metodo></span>
           </dd></div>
         )}
         {m.pautas.length > 0 && <div><dt>Na pauta em</dt><dd>{m.pautas.map((p) => dataCurta(p, true)).join(", ")}</dd></div>}
@@ -109,7 +109,7 @@ export default function ProjetoPagina() {
         <Secao id="entenda" titulo="Entenda o projeto" classe="analise" aberta>
           <p className="analise__aviso">
             Texto gerado por inteligência artificial ({a.modelo}) lendo só o {a.fonte}. Não avalia vereadores nem recomenda voto.{" "}
-            <Link to="/como-funciona">Como funciona</Link>.
+            <Metodo>Como funciona</Metodo>.
           </p>
           <p className="analise__resumo">{a.resumo}</p>
           {a.o_que_muda.length > 0 && <><h3>O que muda</h3><ul className="lista-simples">{a.o_que_muda.map((x, i) => <li key={i}>{x}</li>)}</ul></>}

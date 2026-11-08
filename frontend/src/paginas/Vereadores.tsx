@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useDados, type Vereador } from "../dados";
-import { Avatar, TagPartido } from "../componentes";
+import { Avatar, NotaMetodo, TagPartido } from "../componentes";
 import { useTitulo } from "../util";
 import { IndiceMini, pctPilar } from "../indice";
 
@@ -73,10 +73,10 @@ export default function Vereadores() {
           ))}
         </div>
       </div>
-      <p className="nota">
-        A nota de 0 a 10 é o <Link to="/como-funciona#indice">Índice de Atuação</Link>: presença, participação nas votações, projetos e fiscalização, com a conta aberta na página de cada um.
+      <NotaMetodo ancora="indice" rotulo="Como é calculado">
+        A nota de 0 a 10 é o Índice de Atuação: presença, participação nas votações, projetos e fiscalização, com a conta aberta na página de cada um.
         Mede atividade registrada em documento público, não a qualidade do mandato.
-      </p>
+      </NotaMetodo>
       <ul className="vereadores">{lista.map((v) => <Item key={v.slug} v={v} />)}</ul>
       {outros.length > 0 && (
         <>

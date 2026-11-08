@@ -110,7 +110,7 @@ export function TagPartido({ sigla, parar }: { sigla: string | null | undefined;
 }
 
 /** Quadro "Como ler": explica os termos de uma tela em definições curtas, com a nota de fonte e o link para o método. */
-export function ComoLer({ itens, nota, link }: { itens: readonly (readonly [string, ReactNode])[]; nota?: ReactNode; link?: { to: string; rotulo: string } }) {
+export function ComoLer({ itens, nota, link }: { itens: readonly (readonly [string, ReactNode])[]; nota?: ReactNode; link?: { ancora?: string; rotulo: string } }) {
   return (
     <aside className="como-ler" aria-label="Como ler esta página">
       <header className="como-ler__cab">
@@ -129,9 +129,31 @@ export function ComoLer({ itens, nota, link }: { itens: readonly (readonly [stri
       {(nota || link) && (
         <footer className="como-ler__rodape">
           {nota && <p>{nota}</p>}
-          {link && <Link to={link.to} className="link-seta">{link.rotulo} <span aria-hidden="true">→</span></Link>}
+          {link && <Metodo ancora={link.ancora}>{link.rotulo}</Metodo>}
         </footer>
       )}
+    </aside>
+  );
+}
+
+/** Ponteiro para o método (Como funciona), no mesmo formato em todas as páginas: ícone de livro, texto e seta. */
+export function Metodo({ ancora, children }: { ancora?: string; children: ReactNode }) {
+  return (
+    <Link to={{ pathname: "/como-funciona", hash: ancora ? `#${ancora}` : "" }} className="metodo-link">
+      <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M4 4.5A1.5 1.5 0 015.5 3H16v12H5.5A1.5 1.5 0 004 16.5z" /><path d="M4 16.5A1.5 1.5 0 005.5 18H16" />
+      </svg>
+      <span>{children}</span><span className="metodo-link__seta" aria-hidden="true">→</span>
+    </Link>
+  );
+}
+
+/** Nota curta sobre como ler um número, com o ponteiro para o método. */
+export function NotaMetodo({ children, ancora, rotulo }: { children: ReactNode; ancora?: string; rotulo: string }) {
+  return (
+    <aside className="nota-metodo">
+      <p>{children}</p>
+      <Metodo ancora={ancora}>{rotulo}</Metodo>
     </aside>
   );
 }
