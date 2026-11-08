@@ -1,0 +1,73 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "6",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "ESTABELECE A OBRIGATORIEDADE DE PUBLICAÇÃO DE RELATÓRIO SOBRE RECURSOS ARRECADADOS COM A CONTRIBUIÇÃO PARA ILUMINAÇÃO PÚBLICA (CIP) E DOS INVESTIMENTOS REALIZADOS, CONFORME ESPECIFICA."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2006.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto obriga a Prefeitura a publicar todo mês um relatório sobre o dinheiro arrecadado e gasto com a iluminação pública. O documento deve mostrar saldo, despesas, empresas contratadas e a quantidade de postes com luz de LED. O morador poderá acompanhar esses dados no Diário Oficial e na internet para saber como o imposto da luz é usado.",
+  "o_que_muda": [
+   "A Prefeitura passa a ser obrigada a publicar um relatório mensal sobre a Contribuição para Iluminação Pública.",
+   "O relatório deve sair no Diário Oficial do Município e no Portal da Transparência.",
+   "O texto do relatório precisa ser claro e fácil de entender.",
+   "O documento deve mostrar o saldo financeiro da CIP e o valor total arrecadado.",
+   "O relatório deve detalhar as despesas pagas, como custo da energia, serviços de terceiros e compra de materiais.",
+   "Deve constar o saldo do Fundo Municipal de Iluminação Pública.",
+   "O texto deve informar a quantidade exata de postes com lâmpadas de LED e de postes sem LED."
+  ],
+  "quem_e_afetado": "A Prefeitura ganha a obrigação de preparar e publicar os relatórios mensais. O morador ganha o direito de consultar esses dados para ver como o dinheiro da iluminação pública é gasto. O texto não fala sobre quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro para criar ou publicar os relatórios.",
+  "o_que_falta_definir": [
+   "O Poder Executivo precisa definir os detalhes da lei por decreto em até sessenta dias.",
+   "O texto não informa quem vai fiscalizar o cumprimento da obrigatoriedade dos relatórios.",
+   "O projeto não traz penalidades caso a Prefeitura deixe de publicar os dados."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "CIP",
+    "explicacao": "Sigla para Contribuição para Iluminação Pública, que é um imposto cobrado para pagar a luz das ruas."
+   },
+   {
+    "termo": "Diário Oficial do Município",
+    "explicacao": "O jornal oficial da Prefeitura onde são publicados os atos e leis da cidade."
+   },
+   {
+    "termo": "Portal da Transparência",
+    "explicacao": "Site na internet onde a Prefeitura mostra os gastos e as contas públicas para qualquer morador ver."
+   },
+   {
+    "termo": "LED",
+    "explicacao": "Tipo de lâmpada mais econômica e forte usada na iluminação das ruas."
+   },
+   {
+    "termo": "FUMIP",
+    "explicacao": "Sigla para Fundo Municipal de Iluminação Pública, que é a conta onde fica guardado o dinheiro para essa finalidade."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto serve para que a população acompanhe a arrecadação da CIP e os gastos da Prefeitura com a iluminação. O autor alega que a iluminação garante segurança e comodidade à noite, e por isso o contribuinte tem o direito de saber como o dinheiro é usado, conforme garantido por leis federais e pela Constituição Federal.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa o custo financeiro para gerar esses relatórios nem quais setores da Prefeitura serão responsáveis por fazê-los.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O prazo dado para o Poder Executivo regulamentar a lei é de sessenta dias.",
+    "trecho": "O Poder Executivo regulamentará a presente Lei, no que couber, no prazo de 60 (sessenta) dias, contando a partir da publicação."
+   },
+   {
+    "ponto": "O texto não prevê nenhuma punição ou multa se a Prefeitura não publicar o relatório.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "a3d848c14ecae7bd",
+ "gerado_em": "2026-11-08T05:05:39Z"
+}

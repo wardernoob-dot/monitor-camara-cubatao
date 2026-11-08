@@ -1,0 +1,70 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "86",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "ESTIMA A RECEITA E FIXA A DESPESA DO MUNICÍPIO DE CUBATÃO PARA O EXERCÍCIO DE 2027."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-86-2026.1",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto define o orçamento de Cubatão para o ano de 2027. Ele estima quanto a prefeitura deve arrecadar e fixa como esse dinheiro será gasto em cada secretaria e órgão municipal. O objetivo é garantir o funcionamento dos serviços públicos e o pagamento de despesas ao longo do ano.",
+  "o_que_muda": [
+   "Estima a receita bruta total do município em R$ 2.239.111.518,16 para 2027.",
+   "Fixa a despesa total em R$ 2.058.175.518,16, dividida entre administração direta e indireta.",
+   "Define o orçamento específico para cada secretaria, como Saúde (R$ 280,1 milhões) e Educação (R$ 509,8 milhões).",
+   "Autoriza o Poder Executivo a abrir créditos suplementares (reforço no orçamento) de até 10% do total da despesa.",
+   "Permite ao Executivo remanejar ou transferir recursos entre órgãos por decreto, respeitando limites legais.",
+   "Autoriza a realização de operações de crédito (empréstimos) conforme a legislação vigente.",
+   "Reserva R$ 36.050.595,30 para o pagamento de Emendas Parlamentares Impositivas (verbas indicadas por vereadores).",
+   "Estabelece que a lei entra em vigor em 1º de janeiro de 2027."
+  ],
+  "quem_e_afetado": "Toda a administração pública municipal, incluindo secretarias, autarquias e a Câmara Municipal, deve seguir os limites de gastos aqui definidos. O morador é afetado indiretamente, pois o orçamento dita o volume de recursos disponíveis para serviços como saúde, educação e obras na cidade.",
+  "de_onde_sai_o_dinheiro": "O dinheiro vem da arrecadação de tributos (impostos), rendas, transferências correntes e outras receitas de capital do município.",
+  "o_que_falta_definir": [
+   "A forma exata de execução de cada programa específico, que depende de regulamentação interna.",
+   "A necessidade de projetos de lei futuros caso seja preciso ampliar transferências financeiras para órgãos autônomos.",
+   "O detalhamento das metas fiscais que poderão ser revisadas pelo Executivo conforme o artigo 9º."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Créditos suplementares",
+    "explicacao": "É uma autorização para aumentar o orçamento de uma área que recebeu menos dinheiro do que o necessário."
+   },
+   {
+    "termo": "Administração Indireta",
+    "explicacao": "São órgãos como autarquias e fundações que possuem autonomia, mas fazem parte da estrutura do governo municipal."
+   },
+   {
+    "termo": "Emendas Parlamentares Impositivas",
+    "explicacao": "Verbas do orçamento que os vereadores indicam para obras ou serviços e que a prefeitura é obrigada a executar."
+   },
+   {
+    "termo": "Contingenciar",
+    "explicacao": "É o bloqueio temporário de gastos para evitar que a prefeitura gaste mais do que arrecada."
+   }
+  ],
+  "justificativa_do_autor": "",
+  "natureza": "orcamento_financas",
+  "limitacoes": "Não é possível avaliar a qualidade da gestão ou se os valores são suficientes para as demandas reais da população apenas com este documento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto autoriza o remanejamento de verbas por decreto, o que dá flexibilidade ao prefeito para mover recursos entre secretarias.",
+    "trecho": "Proceder por decreto á transposição, o remanejamento ou a transferência de recursos de uma categoria de programação para outra ou de um órgão para outro"
+   },
+   {
+    "ponto": "O texto exclui certas despesas, como pessoal e dívidas, do limite de 10% para créditos suplementares.",
+    "trecho": "Não onerarão o limite previsto no inciso II, os créditos destinados a: I - Pessoal e encargos sociais, benefícios previdenciários, PASEP e vale transporte aos servidores"
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "94be22c556f66e15",
+ "gerado_em": "2026-11-08T05:13:01Z"
+}

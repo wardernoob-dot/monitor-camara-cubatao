@@ -1,0 +1,53 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "29",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CUBATÃO O “DIA MUNICIPAL DO DESBRAVADOR” E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2029.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o Dia Municipal do Desbravador no calendário oficial de Cubatão. A data será comemorada todo ano no segundo sábado de setembro. A proposta tem caráter simbólico e festivo para homenagear o grupo. O texto não traz novas obrigações ou gastos para a prefeitura.",
+  "o_que_muda": [
+   "O calendário oficial de eventos de Cubatão passa a incluir o Dia Municipal do Desbravador.",
+   "A data oficial de comemoração será o segundo sábado do mês de setembro de cada ano."
+  ],
+  "quem_e_afetado": "A proposta afeta os participantes do Clube de Desbravadores e a comunidade local que participa dos eventos. Nenhuma pessoa ganha obrigações ou penalidades com esta lei. Ninguém fica de fora, pois é uma comemoração pública.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como a data será comemorada na prática pela prefeitura.",
+   "Se haverá gastos públicos para organizar os eventos da data."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Calendário Oficial de Eventos",
+    "explicacao": "Lista oficial da prefeitura com as datas festivas e comemorativas da cidade."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o Clube de Desbravadores é um segmento da Igreja Adventista do Sétimo Dia focado em ações de interesse coletivo. Ele destaca que o grupo atende adolescentes de 10 a 15 anos sem distinção, promovendo cidadania e solidariedade. O autor também menciona que os Adventistas celebram a data no mundo todo em 25 de abril para reconhecer o trabalho desses jovens.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O documento não informa se haverá programação oficial da prefeitura na data criada.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto cria apenas uma data comemorativa sem custos citados ou punições.",
+    "trecho": "INSTITUI NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CUBATÃO O “DIA MUNICIPAL DO DESBRAVADOR” E DÁ OUTRAS PROVIDÊNCIAS"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não fala sobre a fiscalização da lei.",
+    "trecho": "O texto não informa sobre regras de fiscalização.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "ccbd0181a7ede25d",
+ "gerado_em": "2026-11-08T05:07:12Z"
+}

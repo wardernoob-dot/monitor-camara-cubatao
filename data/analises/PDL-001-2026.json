@@ -1,0 +1,58 @@
+{
+ "materia": {
+  "tipo": "PDL",
+  "numero": "1",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "CONCEDE TÍTULO DE \"CIDADÃO CUBATENSE\" AO EXCELENTÍSSIMO SENHOR DR. ANDRÉ BANDEIRA, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PDL_01-2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto concede o título honorífico de Cidadão Cubatense ao Doutor André Bandeira. A entrega do título vai acontecer em uma sessão solene no mês de abril de 2026. O texto define que a homenagem entra em vigor na data em que for publicada.",
+  "o_que_muda": [
+   "O Doutor André Bandeira recebe o Título de Cidadão Cubatense.",
+   "A entrega do título acontece em uma Sessão Solene (reunião especial da Câmara) no mês de abril de 2026."
+  ],
+  "quem_e_afetado": "O principal afetado é o Doutor André Bandeira, que ganha o título de Cidadão Cubatense. A população em geral não ganha novas obrigações ou direitos com esta proposta.",
+  "de_onde_sai_o_dinheiro": "Os gastos para fazer o projeto funcionar saem das dotações próprias (recursos já reservados) do orçamento vigente.",
+  "o_que_falta_definir": [
+   "O dia exato do mês de abril de 2026 em que ocorrerá a Sessão Solene."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Sessão Solene",
+    "explicacao": "Reunião especial dos vereadores para homenagens ou comemorações."
+   },
+   {
+    "termo": "Dotações próprias",
+    "explicacao": "Dinheiro que já está reservado no orçamento da Câmara para pagar despesas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, André Bandeira nasceu em Santos em 21 de dezembro de 1971 e tomou posse como Promotor de Justiça em 3 de agosto de 2007. Ele atua em Cubatão desde 1º de setembro de 2013. O autor destaca também que ele atuou no Tribunal do Júri por mais de 17 anos em Miracatu e Cubatão.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto é uma homenagem e tem efeito simbólico.",
+    "trecho": "CONCEDE TÍTULO DE \"CIDADÃO CUBATENSE\" AO EXCELENTÍSSIMO SENHOR DR. ANDRÉ BANDEIRA"
+   },
+   {
+    "ponto": "O texto define que a entrega acontece em abril de 2026.",
+    "trecho": "A outorga do título dar-se-á em Sessão Solene a ser realizada no mês de abril de 2026."
+   },
+   {
+    "ponto": "O texto não traz penalidades ou regras de fiscalização.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "f7b1763883b944c0",
+ "gerado_em": "2026-11-08T05:05:57Z"
+}

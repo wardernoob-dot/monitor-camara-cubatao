@@ -1,0 +1,77 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "19",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "AUTORIZA O PODER EXECUTIVO MUNICIPAL A FIRMAR CONVÊNIOS, CONTRATOS OU PARCERIAS COM FARMÁCIAS E DROGARIAS PRIVADAS PARA FORNECIMENTO DE MEDICAMENTOS À POPULAÇÃO EM SITUAÇÕES DE INDISPONIBILIDADE TEMPORÁRIA NA REDE PÚBLICA DE SAÚDE, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2019.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto autoriza a Prefeitura a fazer parcerias com farmácias particulares. O objetivo é entregar remédios de graça para a população quando faltar remédio nos postos públicos. O morador precisa ter cadastro no SUS e morar na cidade para receber. O texto deixa para a Prefeitura decidir as regras de funcionamento e os valores.",
+  "o_que_muda": [
+   "A Prefeitura ganha permissão para assinar contratos ou parcerias com farmácias particulares.",
+   "Farmácias particulares podem fornecer remédios gratuitos quando houver falta nos postos públicos.",
+   "O paciente precisa comprovar que mora na cidade para ter acesso ao benefício.",
+   "O paciente precisa ter cadastro no SUS em um posto de saúde do município.",
+   "Os remédios entregues pelas farmácias devem estar na lista oficial do SUS municipal, estadual ou federal."
+  ],
+  "quem_e_afetado": "Os moradores de Cubatão que precisam de remédios ganham o direito de recebê-los na rede privada se faltarem no posto público. A Prefeitura ganha a autorização para criar o programa, mas não a obrigação imediata. As farmácias particulares podem participar se quiserem fazer parceria.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro e afirma que a proposta não cria despesas automáticas para o município.",
+  "o_que_falta_definir": [
+   "A implantação e a regulamentação do programa",
+   "Os critérios de acesso e os fluxos de atendimento",
+   "Os mecanismos de controle e a forma de execução",
+   "Os valores e os limites de gastos",
+   "As regras de credenciamento das farmácias"
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "É a Prefeitura, grupo formado pelo prefeito e secretários que administra a cidade."
+   },
+   {
+    "termo": "SUS",
+    "explicacao": "Sistema Único de Saúde, a rede pública de atendimento médico gratuita."
+   },
+   {
+    "termo": "caráter meramente autorizativo",
+    "explicacao": "Significa que a lei dá permissão para a Prefeitura agir, mas não obriga a fazer."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto busca garantir remédios em situações de falta na rede pública. O autor alega que a falta de remédios ocorre por atrasos em compras, problemas logísticos ou falta de fornecedores. Segundo o autor, a medida protege o direito à saúde e evita que pacientes crônicos tenham o tratamento interrompido. O autor também afirma que a proposta é apenas autorizativa e não cria gastos automáticos.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quanto o programa vai custar, quais farmácias vão participar ou quando a Prefeitura vai criar as regras.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "Tudo sobre como o programa vai funcionar depende de um decreto futuro da Prefeitura.",
+    "trecho": "serão definidos exclusivamente pelo Poder Executivo, por meiode decretoouatonormativopróprio."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto não define de onde virá o dinheiro para pagar as farmácias.",
+    "trecho": "O texto não informa.",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não define prazos para o início da entrega dos remédios.",
+    "trecho": "O texto não informa.",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não traz regras de fiscalização nem penalidades para descumprimento.",
+    "trecho": "O texto não informa.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "f2f7ba0473629e2d",
+ "gerado_em": "2026-11-08T05:06:34Z"
+}

@@ -1,0 +1,70 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "76",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI O PROGRAMA MUNICIPAL VIVER COM AUTONOMIA E DÁ OUTRAS PROVIDÊNCIAS ."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-76.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o Programa Municipal Viver com Autonomia em Cubatão para ajudar pessoas com deficiência e mobilidade reduzida. Ele organiza o acesso a equipamentos e serviços que dão mais independência aos moradores. A ideia é juntar dados, juntar doações e cuidar da manutenção desses aparelhos. O texto entra em vigor no dia em que for publicado.",
+  "o_que_muda": [
+   "Cria o Programa Municipal Viver com Autonomia para organizar ações voltadas a tecnologias assistivas (equipamentos e serviços para dar autonomia).",
+   "Cria um Cadastro Municipal para identificar e acompanhar a necessidade de órteses, próteses, cadeiras de rodas, aparelhos auditivos, muletas, andadores, bengalas, cadeiras de banho e camas hospitalares.",
+   "Cria um Banco Municipal de Tecnologias Assistivas para receber, guardar, arrumar e emprestar equipamentos vindos de doações, convênios e campanhas.",
+   "Permite campanhas permanentes para arrecadar equipamentos que ainda sirvam para uso.",
+   "Autoriza o governo a fazer parcerias com órgãos públicos, escolas, entidades sem fins lucrativos e empresas privadas.",
+   "Define que a Prefeitura deve juntar os serviços de saúde, assistência social, educação e direitos da pessoa com deficiência.",
+   "Exige que o uso das informações siga a lei de proteção de dados pessoais."
+  ],
+  "quem_e_afetado": "As pessoas com deficiência e as pessoas com mobilidade reduzida de Cubatão ganham o direito de ter um atendimento mais organizado e acesso a equipamentos. A Prefeitura ganha a obrigação de montar o cadastro, o banco de equipamentos e de juntar as secretarias para fazer o programa funcionar. O texto não diz quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto diz que a execução vai usar o dinheiro que já está no orçamento da Prefeitura. Também poderá usar recursos de convênios, repasses voluntários, doações, fundos públicos e emendas parlamentares (indicações de dinheiro feitas por políticos).",
+  "o_que_falta_definir": [
+   "Como vai funcionar o empréstimo e a entrega dos equipamentos do Banco Municipal.",
+   "Quais serão as regras exatas do Cadastro Municipal.",
+   "Como serão feitas as campanhas permanentes de arrecadação.",
+   "De que forma o Poder Executivo (Prefeitura) vai regulamentar a lei."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "tecnologias assistivas",
+    "explicacao": "Equipamentos, produtos ou serviços criados para ajudar pessoas com deficiência a terem mais autonomia e mobilidade."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "O dinheiro que a Prefeitura já separou no orçamento para gastar com cada coisa."
+   },
+   {
+    "termo": "transparências voluntárias",
+    "explicacao": "Dinheiro enviado por outros governos para ajudar em projetos, sem ser obrigatório por lei."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto cria uma política pública permanente para organizar e fortalecer ações para pessoas com deficiência e mobilidade reduzida em Cubatão. O autor afirma que o objetivo é estruturar cadastro, banco de equipamentos, manutenção de tecnologias assistivas e integração de políticas para ampliar o acesso e promover inclusão. O autor também diz que a proposta segue a Constituição Federal, a Lei Brasileira de Inclusão e a Convenção Internacional sobre os Direitos das Pessoas com Deficiência.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não traz os custos detalhados para montar o banco de equipamentos e nem diz qual setor da Prefeitura vai comandar o programa.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto prevê várias formas de financiamento, incluindo o orçamento próprio da Prefeitura e emendas parlamentares.",
+    "trecho": "A execução observará as dotações orçamentárias próprias e poderá contar com recursos provenientes de convênios, transferências voluntárias, doações, fundos públicos e emendas parlamentares."
+   },
+   {
+    "ponto": "O texto deixa para a Prefeitura a tarefa de regulamentar a lei depois que ela for aprovada.",
+    "trecho": "O Poder Executivo regulamentará esta Lei no que couber."
+   },
+   {
+    "ponto": "A lei começa a valer logo no dia em que for publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "0025b5461d8731c7",
+ "gerado_em": "2026-11-08T05:11:39Z"
+}

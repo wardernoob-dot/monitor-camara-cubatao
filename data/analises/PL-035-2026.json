@@ -1,0 +1,64 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "35",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "ALTERA OS ARTIGOS QUE MENCIONA DA LEI Nº 4208, DE 26 DE JULHO DE 2022, REVOGANDO OS DISPOSITIVOS EM CONTRARIO E DÁ OUTRAS PROVIDÊNCIAS ."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2035.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto de lei altera regras da Semana Municipal de Ciclismo em Cubatão. O texto cria a rota de cicloturismo \"Fundo do Vale\" dentro dessa semana oficial. Ele também convida vários grupos e conselhos para participar do evento comemorativo. Por fim, a proposta revoga leis mais antigas sobre o mesmo tema.",
+  "o_que_muda": [
+   "O Poder Público Municipal passa a poder convidar escolas, empresas, comércios, associações de ciclistas e conselhos municipais para participar do evento comemorativo.",
+   "Fica instituída a rota de cicloturismo \"Fundo do Vale\" na Semana Municipal de Ciclismo.",
+   "A nova rota é o trecho cubatense da Rota de cicloturismo \"Marcia Prado\".",
+   "São revogadas duas leis municipais anteriores: a Lei nº 3.206 de 2007 e a Lei nº 2.781 de 2002."
+  ],
+  "quem_e_afetado": "Escolas públicas e particulares, empresas, comércios, associações de ciclistas e conselhos municipais podem ser convidados a participar. A população de ciclistas ganha a oficialização de uma rota turística. O texto não define punições nem exclui grupos específicos de forma direta.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como será a participação prática das escolas e empresas convidadas.",
+   "Se haverá custos ou investimentos públicos na rota de cicloturismo.",
+   "Quais serão as regras detalhadas de funcionamento da rota \"Fundo do Vale\"."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "revogando",
+    "explicacao": "Cancelando ou anulando uma lei que estava valendo."
+   },
+   {
+    "termo": "cicloturismo",
+    "explicacao": "Turismo feito usando bicicleta como meio de transporte para passeios e viagens."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a Semana Municipal do Ciclismo ocorre entre 12 e 19 de agosto para incentivar o uso da bicicleta e a preservação ambiental. O autor afirma que incluir a Rota Márcia Prado homenageia a cicloativista falecida em 2009 e reforça a luta por um trânsito seguro. O texto também aponta que a oficialização atrai cicloturistas, gera renda e destaca atrativos locais como o Cruzeiro Quinhentista e a Usina Henry Borden. Além disso, o autor destaca que a proposta inclui conselhos municipais e atualiza a iniciativa do saudoso Vereador Wilson Pio dos Reis.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não apresenta estimativas de impacto financeiro ou custos para a implementação da rota.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A lei entra em vigor na data de sua publicação oficial.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação"
+   },
+   {
+    "ponto": "O projeto revoga expressamente duas leis municipais anteriores sobre o assunto.",
+    "trecho": "revogando-se as disposições em contrário, a saber, as Leis Municipais No. 3206, de 22 de Novembro de 2007 e No. 2781, de 02 de Outubro de 2002"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não informa nenhum custo ou fonte de recursos para as mudanças propostas.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "3ed4ce1b45fa803a",
+ "gerado_em": "2026-11-08T05:07:26Z"
+}

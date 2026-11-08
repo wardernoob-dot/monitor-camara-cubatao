@@ -1,0 +1,74 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "141",
+  "ano": "2025",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A CONTRATAÇÃO DE APRENDIZES PELAS EMPRESAS VENCEDORAS DE LICITAÇÃO PÚBLICA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS\""
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20141.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto obriga empresas que ganham licitações públicas na cidade a contratarem jovens como aprendizes. A regra vale para prestação de serviços ou obras para a prefeitura. O objetivo é dar a esses jovens a primeira chance de trabalho e estudo.",
+  "o_que_muda": [
+   "Empresas que vencem licitações públicas da prefeitura devem contratar adolescentes como aprendizes.",
+   "O número de jovens contratados segue a regra da lei federal de aprendizagem.",
+   "A contratação deve ocorrer obrigatoriamente por meio de uma Entidade formadora (escola ou entidade que ensina uma profissão).",
+   "A entidade formadora precisa ter registro no CMDCA (Conselho Municipal dos Direitos da Criança e do Adolescente) de Cubatão.",
+   "Para cursos presenciais, a sede da entidade formadora precisa ficar na cidade de Cubatão.",
+   "O contrato do jovem deve cumprir todas as horas do curso aprovado pelo MTE (Ministério do Trabalho e Emprego).",
+   "Empresas com contratos atuais de serviços ou obras com a prefeitura também devem cumprir a lei.",
+   "Se a empresa não tiver espaço físico para o jovem, ela deve ceder o aprendiz para a entidade formadora cuidar do local adequado.",
+   "A lei começa a valer no dia em que for publicada."
+  ],
+  "quem_e_afetado": "As empresas que ganham licitações e contratos com a prefeitura ganham a obrigação de contratar jovens. Os adolescentes da cidade ganham a chance de trabalhar e aprender. O texto não diz quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como será feita a fiscalização das empresas.",
+   "Quais serão as multas ou punições para quem descumprir a lei."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Licitação pública",
+    "explicacao": "Concurso que a prefeitura faz para escolher a empresa que vai prestar um serviço ou fazer uma obra."
+   },
+   {
+    "termo": "Administração Pública Municipal Direta e Indireta",
+    "explicacao": "Órgãos do governo da cidade e autarquias que cuidam dos serviços públicos."
+   },
+   {
+    "termo": "ECA",
+    "explicacao": "Estatuto da Criança e do Adolescente, que é a lei que protege os direitos dos menores de idade."
+   },
+   {
+    "termo": "CMDCA",
+    "explicacao": "Conselho Municipal dos Direitos da Criança e do Adolescente, que fiscaliza e cuida de projetos para menores."
+   },
+   {
+    "termo": "MTE",
+    "explicacao": "Ministério do Trabalho e Emprego, órgão do governo federal que cuida das leis de trabalho."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto ajuda jovens e adolescentes a entrarem no mundo do trabalho e ganharem experiência. O autor diz que muitas famílias são carentes e vivem em vulnerabilidade social, e que o trabalho afasta os jovens do crime e das drogas. Ele destaca também que o jovem precisa estar matriculado na escola e mostrar boas notas.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa quais são as punições para as empresas que não contratarem os jovens nem como a prefeitura vai fiscalizar o cumprimento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não fala sobre custos, de onde sai o dinheiro ou multas para quem descumprir as regras.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A lei entra em vigor na data em que for publicada oficialmente.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação, revogadas as disposições em contrário."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "b73510542b5b1bbd",
+ "gerado_em": "2026-11-08T05:04:27Z"
+}

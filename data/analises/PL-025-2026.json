@@ -1,0 +1,59 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "25",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI NO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO A SEMANA DA EDUCAÇÃO LEGISLATIVA."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2025.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria a Semana Municipal da Educação Legislativa no calendário oficial de Cubatão. O evento será comemorado anualmente na semana do dia 15 de maio com palestras, debates e cursos sobre leis, política e cidadania. O objetivo é valorizar a educação e aproximar a população do trabalho dos vereadores e das leis. A iniciativa envolve escolas, órgãos públicos e a Câmara Municipal.",
+  "o_que_muda": [
+   "Institui a Semana Municipal da Educação Legislativa na semana do dia 15 de maio de cada ano.",
+   "Permite que o evento aconteça em outra semana do mesmo mês se houver algum problema na data principal.",
+   "Promove palestras, debates, audiências e workshops sobre o trabalho dos vereadores e as leis.",
+   "Ensina a população sobre a importância do voto, alistamento eleitoral e participação nos projetos da cidade.",
+   "Organiza as atividades em conjunto entre a prefeitura e a Câmara de Vereadores.",
+   "Garante que as ações ocorram preferencialmente em escolas municipais e na Câmara Municipal."
+  ],
+  "quem_e_afetado": "A população de Cubatão ganha o direito de participar de eventos educativos sobre política e cidadania. Alunos e professores das escolas municipais podem receber atividades ligadas ao tema. A Prefeitura e a Câmara Municipal assumem o dever de organizar e coordenar a semana temática.",
+  "de_onde_sai_o_dinheiro": "As despesas para colocar a lei em prática saem de dotações orçamentárias próprias.",
+  "o_que_falta_definir": [
+   "Qual órgão exato da prefeitura vai coordenar as atividades junto com a Câmara de Vereadores.",
+   "Quais dias e horários exatos de cada palestra ou evento dentro da semana comemorativa."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "processo legislativo",
+    "explicacao": "O conjunto de regras e passos usados para criar e aprovar novas leis."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "O dinheiro que o governo já reservou no orçamento para pagar suas despesas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a data de 15 de maio homenageia a criação da Associação das Escolas do Legislativo e de Contas em 2003, marco da educação legislativa no país. O autor destaca que a Constituição Federal de 1988 já apontava a educação como base para fortalecer as instituições públicas. Ele também lembra que Cubatão já possui a Escola do Legislativo e da Democracia, criada em 2017, que promove cursos e qualifica servidores e cidadãos.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O texto não informa quanto custará para realizar os eventos nem quais empresas ou órgãos específicos ajudarão na prática.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto prevê que os gastos saiam do orçamento próprio da cidade.",
+    "trecho": "As despesas para a consecução da presente Lei correm à conta de dotações orçamentárias próprias."
+   },
+   {
+    "ponto": "O texto não define um valor em dinheiro para os eventos.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "b2d6b1cc7a731e56",
+ "gerado_em": "2026-11-08T05:07:05Z"
+}

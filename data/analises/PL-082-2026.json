@@ -1,0 +1,56 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "82",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DENOMINA \"DR.CLERMONT SILVEIRA CASTOR\" O CENTRO MÉDICO DE ESPECIALIDADES — CME DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-82.2026-1",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto de lei dá o nome de \"Dr. Clermont Silveira Castor\" ao Ambulatório Médico de Especialidades (AME) de Cubatão. O objetivo é prestar uma homenagem póstuma ao médico e ex-prefeito da cidade. A mudança oficializa o nome do prédio localizado na Vila Nova.",
+  "o_que_muda": [
+   "O Ambulatório Médico de Especialidades (AME) passa a se chamar oficialmente \"Dr. Clermont Silveira Castor\".",
+   "A Prefeitura fica obrigada a colocar placas ou sinalização com o novo nome no prédio.",
+   "O prédio afetado fica na Avenida Martins Fontes, número 132, no bairro Vila Nova."
+  ],
+  "quem_e_afetado": "A mudança afeta a identificação oficial do prédio público. Não há alteração nos serviços de saúde prestados aos moradores ou no funcionamento do local.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro para a troca da identificação do prédio.",
+  "o_que_falta_definir": [
+   "O custo exato para a confecção e instalação das placas de identificação.",
+   "O prazo específico para que a Prefeitura realize a troca da sinalização no local."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Ambulatório Médico de Especialidades (AME)",
+    "explicacao": "Unidade de saúde que oferece consultas com médicos especialistas e exames, além do atendimento básico."
+   },
+   {
+    "termo": "Denominar",
+    "explicacao": "Dar um nome oficial a um lugar ou prédio público."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a homenagem reconhece a trajetória do Dr. Clermont Silveira Castor, que foi médico, servidor público, Secretário de Saúde, vereador e prefeito de Cubatão. O autor destaca que o médico dedicou décadas à saúde pública da cidade. A escolha do nome para o AME é considerada justa por sua ligação com a medicina e o serviço público municipal.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber o impacto financeiro da mudança de nome, pois o projeto não apresenta estimativa de custos.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A lei entra em vigor imediatamente após ser publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   },
+   {
+    "ponto": "O texto não prevê multas ou penalidades pelo descumprimento da identificação.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "e5153c4b19aa335c",
+ "gerado_em": "2026-11-08T05:12:25Z"
+}

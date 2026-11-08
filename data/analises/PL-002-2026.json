@@ -1,0 +1,65 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "2",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI O PLANO MUNICIPAL INTEGRADO DE POLÍTICAS PÚBLICAS PARA PESSOAS COM DEFICIÊNCIA – INCLUI CUBATÃO – NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2002.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o plano \"Inclui Cubatão\" para organizar ações de inclusão das pessoas com deficiência na cidade. O texto define regras para áreas como saúde, educação, assistência social, trabalho e transporte. O plano tem duração permanente e envolve vários setores da prefeitura. A prefeitura tem até 60 dias para regulamentar a lei após a publicação.",
+  "o_que_muda": [
+   "Criação do plano municipal integrado para pessoas com deficiência na cidade.",
+   "Ações na saúde, como reabilitação, atendimento odontológico especializado e programas móveis.",
+   "Ações na educação, como busca ativa de alunos fora da escola e uso de Libras.",
+   "Criação do primeiro Centro-Dia Municipal para Pessoas com Deficiência e de um centro para autistas (TEA).",
+   "Criação de programa de bolsa atleta paradesportiva e política municipal de paradesporto.",
+   "Acessibilidade urbana com rotas acessíveis, piso tátil, sinalização sonora e calçadas.",
+   "Fixação do prazo de até 60 dias para o Poder Executivo regulamentar a lei."
+  ],
+  "quem_e_afetado": "As pessoas com deficiência e suas famílias ganham direitos a serviços ampliados em várias áreas. A Administração Pública Municipal ganha a obrigação de executar as ações e metas do plano. Ninguém fica explicitamente de fora das diretrizes gerais de igualdade e acessibilidade.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "De onde sairá o dinheiro para pagar as ações e novos centros.",
+   "Quais serão os prazos específicos para cada meta e obra do plano.",
+   "Como funcionará na prática a escolha e o funcionamento dos grupos de trabalho e premiações."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "intersetorial",
+    "explicacao": "Que envolve diferentes setores ou secretarias trabalhando juntos."
+   },
+   {
+    "termo": "tecnologias assistivas",
+    "explicacao": "Produtos e equipamentos que ajudam pessoas com deficiência a ter mais autonomia."
+   },
+   {
+    "termo": "paradesporto",
+    "explicacao": "Prática de esportes adaptados para pessoas com deficiência."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, milhares de cidadãos com deficiência enfrentam barreiras diárias e cabe ao poder público agir de forma planejada. O autor afirma que a lei federal se concretiza no município e que a proposta se inspira no \"Inclui Sampa\". Ele diz ainda que o plano integra secretarias e traz ações concretas em saúde, educação, esporte e trabalho.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber quanto o plano vai custar aos cofres públicos nem de onde virá o dinheiro para criar os novos centros de atendimento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O Poder Executivo tem prazo de 60 dias para regulamentar a lei.",
+    "trecho": "O Poder Executivo regulamentará esta Lei no prazo de até 60 (sessenta) dias, contados da data de sua publicação."
+   },
+   {
+    "ponto": "O texto não indica a fonte de recursos ou o custo financeiro para colocar o plano em prática.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "0d48e53a5166b6f9",
+ "gerado_em": "2026-11-08T05:05:24Z"
+}

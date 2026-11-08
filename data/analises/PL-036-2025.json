@@ -1,0 +1,71 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "36",
+  "ano": "2025",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE O DIREITO AO ALEITAMENTO MATERNO NAS ESCOLAS DE ENSINO INFANTIL DO MUNICÍPIO, GARANTINDO CONDIÇOES ADEQUADAS PARA A AMAMENTAÇÃO E PERMANENCIA DA MÃE LACTANTE NO AMBIENTE ESCOLAR, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_36_2025_-_DIREITO_AO_ALEITAMENTO_MATERNO.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto garante o direito de mães amamentarem seus filhos nas escolas de ensino infantil da rede pública e privada de Cubatão. As escolas devem oferecer um ambiente reservado, seguro e higiênico para a amamentação. A lei entra em vigor na data em que for publicada, dando um prazo de seis meses para as escolas se adaptarem.",
+  "o_que_muda": [
+   "As escolas de ensino infantil públicas e privadas devem permitir a entrada de mães para amamentar seus filhos matriculados.",
+   "Fica proibido qualquer tipo de impedimento, restrição ou constrangimento à mãe que quiser amamentar na escola.",
+   "As escolas devem garantir um ambiente adequado, seguro, higiênico e reservado para dar tranquilidade e privacidade à mãe.",
+   "As escolas devem promover ações de conscientização sobre a importância do aleitamento materno.",
+   "As escolas não podem receber ou guardar leite materno coletado, a menos que venha de um programa governamental.",
+   "As escolas têm o prazo de seis meses, a contar da publicação da lei, para fazer as adequações e criar os espaços."
+  ],
+  "quem_e_afetado": "As mães de crianças matriculadas nas escolas infantis ganham o direito de entrar nas escolas para amamentar. As escolas infantis públicas e privadas ganham a obrigação de preparar um espaço reservado e permitir o acesso das mães. Ninguém fica de fora entre as escolas infantis da cidade.",
+  "de_onde_sai_o_dinheiro": "Os gastos para aplicar a lei saem do orçamento atual da prefeitura, que poderá receber reforço de dinheiro se for necessário.",
+  "o_que_falta_definir": [
+   "As regras exatas de como a lei vai funcionar, que serão decididas por um Decreto Municipal.",
+   "Quais serão as multas e castigos aplicados se a escola descumprir as regras."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "aleitamento materno",
+    "explicacao": "É o ato de amamentar o bebê com o leite do peito da mãe."
+   },
+   {
+    "termo": "lactante",
+    "explicacao": "É a mãe que está amamentando."
+   },
+   {
+    "termo": "vedada",
+    "explicacao": "Significa que é proibido."
+   },
+   {
+    "termo": "regulamentada",
+    "explicacao": "Significa que vai receber regras detalhadas de funcionamento."
+   },
+   {
+    "termo": "sanções",
+    "explicacao": "São os castigos ou penalidades aplicadas a quem desobedece a lei."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o aleitamento materno é reconhecido pela Organização Mundial da Saúde e pelo Ministério da Saúde como a melhor alimentação para bebês, fortalecendo a imunidade e o desenvolvimento. O autor alega que muitas mães sofrem para conciliar a rotina e que faltam locais apropriados nas escolas, o que pode desestimular a amamentação. O projeto busca evitar constrangimentos, promover a saúde infantil e tornar o ambiente escolar mais acolhedor e inclusivo para a primeira infância.",
+  "natureza": "politica_publica",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto dá um prazo de seis meses para que as unidades de ensino infantil façam as mudanças necessárias.",
+    "trecho": "As Unidades de Ensino Infantil no Município de Cubatão terão 06 (seis) meses, a contar da publicação desta Lei, para promover as adequações e disponibilizar os espaços para amamentação."
+   },
+   {
+    "ponto": "As punições e o valor das multas para quem descumprir a lei ainda serão definidos depois por um decreto do prefeito.",
+    "trecho": "Esta Lei será regulamentada por Decreto Municipal, que poderá disciplinar e fixar as sanções e multas cabíveis, em caso de descumprimento das regras impostas."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "a02626c2812956a4",
+ "gerado_em": "2026-11-08T05:04:46Z"
+}

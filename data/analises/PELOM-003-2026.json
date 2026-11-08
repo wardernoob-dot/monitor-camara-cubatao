@@ -1,0 +1,56 @@
+{
+ "materia": {
+  "tipo": "PELOM",
+  "numero": "3",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "ALTERA O ART. 31 DA LEI ORGÂNICA DO MUNICÍPIO DE CUBATÃO, PARA DISPOR SOBRE O PERÍODO DE REALIZAÇÃO DA ELEIÇÃO PARA RENOVAÇÃO DA MESA DA CÂMARA MUNICIPAL DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pelom-03.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto muda a data da eleição da Mesa da Câmara de Cubatão. A votação passa a acontecer entre 1º de outubro e 10 de dezembro do segundo ano do mandato. O objetivo é evitar problemas de falta de vereadores no final de dezembro. A posse dos eleitos continua sendo automática em 1º de janeiro.",
+  "o_que_muda": [
+   "A eleição da Mesa da Câmara para o biênio seguinte passa a ocorrer entre 1º de outubro e 10 de dezembro do segundo ano do mandato.",
+   "A sessão para a eleição é exclusiva para essa finalidade.",
+   "A posse dos eleitos continua ocorrendo de forma automática em 1º de janeiro do ano seguinte.",
+   "A Mesa da Câmara continua sendo composta por um Presidente, um Vice-Presidente, um 1º Secretário e um 2º Secretário."
+  ],
+  "quem_e_afetado": "Os vereadores da Câmara Municipal de Cubatão ganham um período fixo e antecipado para realizar a eleição da Mesa Diretora. O Poder Executivo e os moradores comuns não sofrem alterações diretas em seus direitos ou obrigações.",
+  "de_onde_sai_o_dinheiro": "O texto afirma que a alteração não gera despesa nem cria obrigação ao Poder Executivo.",
+  "o_que_falta_definir": [
+   "A forma exata de eleição da Mesa, que fica para o Regimento Interno."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Mesa",
+    "explicacao": "Grupo de vereadores que dirige os trabalhos da Câmara Municipal."
+   },
+   {
+    "termo": "biênio",
+    "explicacao": "Período de dois anos."
+   },
+   {
+    "termo": "quórum",
+    "explicacao": "Número mínimo de pessoas presentes necessário para realizar uma votação."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a mudança é necessária porque o fim do recesso de dezembro fez a última sessão do ano acontecer muito perto das festas, gerando risco de faltas e falta de quórum. Com a janela de outubro a dezembro, a Casa ganha segurança jurídica e previsibilidade, além de permitir que a nova Mesa acompanhe o orçamento e organize a transição.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto não gera custos extras ou novas despesas para o município.",
+    "trecho": "A alteração tampouco gera despesa nem cria obrigação ao Poder Executivo, pois disciplina exclusivamente o funcionamento interno do Poder Legislativo"
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "902d009e89d5ed86",
+ "gerado_em": "2026-11-08T05:13:52Z"
+}

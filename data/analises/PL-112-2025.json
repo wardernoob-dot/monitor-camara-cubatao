@@ -1,0 +1,82 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "112",
+  "ano": "2025",
+  "autoria": null,
+  "ementa": "ALTERA E INCLUI DISPOSITIVOS NA LEI MUNICIPAL N.° 3.744, DE 11 DE AGOSTO DE 2.015, PARA DISPOR SOBRE A OBRIGATORIEDADE DE PARADAS FLEXÍVEIS PARA EMBARQUE E DESEMBARQUE DE MULHERES NO TRANSPORTE COLETIVO MUNICIPAL NO PERÍODO NOTURNO, СОМО MEDIDA DE SEGURANÇA E IGUALDADE DE GÊNERO, E DÁ OUTRAS PROVIDÊNCIAS.\""
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_112_2025_-MULHERES_TRANSPORTE_PUBLICO.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto obriga os ônibus municipais de Cubatão a fazerem paradas flexíveis para mulheres entre 18h e 5h. A passageira poderá descer fora do ponto oficial em um local seguro, desde que avise o motorista com antecedência. As empresas que desrespeitarem a regra sofrerão multas e outras punições. A lei entra em vigor 90 dias após ser publicada.",
+  "o_que_muda": [
+   "Passageiras do sexo feminino podem pedir embarque e desembarque fora dos pontos oficiais nos ônibus municipais.",
+   "O horário válido para essa parada flexível é das 18h às 5h do dia seguinte.",
+   "A passageira deve pedir a parada com antecedência mínima razoável para garantir a segurança da manobra.",
+   "O motorista tem o poder de avaliar as condições de trânsito e segurança antes de parar.",
+   "As empresas de ônibus devem divulgar esse direito nos veículos e canais de comunicação.",
+   "As empresas devem treinar motoristas e cobradores para atender aos pedidos com respeito e prioridade.",
+   "As empresas devem registrar as paradas flexíveis solicitadas para monitoramento.",
+   "Empresas que descumprirem a lei levam advertência e multa de 100 UFESPs (Unidades Fiscais do Estado de São Paulo) ou o índice que a substituir.",
+   "Em caso de reincidência, a empresa pode sofrer suspensão temporária da linha ou outras penas do contrato de concessão.",
+   "A nova regra começa a valer 90 dias depois de ser publicada."
+  ],
+  "quem_e_afetado": "Todas as passageiras do sexo feminino que usam o transporte coletivo municipal ganham o direito de pedir paradas fora do ponto à noite. Os motoristas e cobradores ganham a obrigação de atender aos pedidos e passar por capacitação. As empresas de ônibus ganham novas regras de atendimento e fiscalização, além do risco de multas se não cumprirem a lei. O texto não cita quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "Segundo o autor, a implementação e a divulgação ficam por conta das empresas de ônibus sem custos para os cofres públicos.",
+  "o_que_falta_definir": [
+   "O que significa exatamente a antecedência mínima razoável para o pedido de parada.",
+   "Quais são os detalhes exatos dos mecanismos de registro das paradas flexíveis pelas empresas.",
+   "Quais são as outras penalidades previstas no contrato de concessão (permissão) em caso de reincidência."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "concessionárias e permissionárias",
+    "explicacao": "Empresas privadas que ganham autorização da prefeitura para prestar o serviço de transporte público."
+   },
+   {
+    "termo": "discricionariedade",
+    "explicacao": "Liberdade que o motorista tem para avaliar a situação e decidir se é seguro realizar a parada."
+   },
+   {
+    "termo": "UFESPs",
+    "explicacao": "Unidade Fiscal do Estado de São Paulo, uma taxa usada pelo governo para calcular valores de multas e impostos."
+   },
+   {
+    "termo": "reincidência",
+    "explicacao": "Quando alguém comete a mesma infração mais de uma vez após ser punido."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a proposta é uma medida urgente de proteção às mulheres contra a violência no período noturno. Ele cita dados do Fórum Brasileiro de Segurança Pública de que três em cada quatro mulheres já sofreram assédio em locais públicos. O autor afirma que a medida reduz riscos nos trajetos a pé até os pontos convencionais e cumpre a Constituição e a Lei Maria da Penha.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não define como será feita a fiscalização do cumprimento da lei pela prefeitura.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto não gera custos para a prefeitura.",
+    "trecho": "Ao transferir para as concessionárias a implementação e divulgação do sistema, sem custos para os cofres públicos, o projeto equilibra direitos fundamentais e viabilidade operacional."
+   },
+   {
+    "ponto": "O texto define um prazo de 90 dias para a lei entrar em vigor após a publicação.",
+    "trecho": "Esta lei entrará em vigor após 90 (noventa) dias, a partir de sua publicação."
+   },
+   {
+    "ponto": "O texto prevê multas e suspensão para as empresas que descumprirem a norma.",
+    "trecho": "O descumprimento desta Lei sujeitará os responsáveis a: I – Advertência; II – Multa no valor equivalente a 100 (cem) UFESPs ou outra unidade fiscal que a suceder; III – Em caso de reincidência, suspensão temporária da linha"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não aponta qual órgão ou pessoa da prefeitura será responsável por fiscalizar e aplicar as multas.",
+    "trecho": "O texto não informa quem fiscaliza",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "0034ece245cb0668",
+ "gerado_em": "2026-11-08T05:04:58Z"
+}

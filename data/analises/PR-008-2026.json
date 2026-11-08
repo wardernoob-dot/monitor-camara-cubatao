@@ -1,0 +1,68 @@
+{
+ "materia": {
+  "tipo": "PR",
+  "numero": "8",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "ALTERA A RESOLUÇÃO Nº 1.558, DE 13 DE DEZEMBRO DE 1991, QUE DISPÕE SOBRE O REGIMENTO INTERNO DA CÂMARA MUNICIPAL DE CUBATÃO, PARA INSTITUIR O RITO PROCESSUAL ESPECIFICO PARA A APRESENTAÇÃO DAS EMENDAS PARLAMENTARES IMPOSITIVAS INDIVIDUAIS AO PROJETO DE LEI ORÇAMENTÁRIA ANUAL, ESTABELECER PRAZOS E CRITÉRIOS OBJETIVOS PARA A ANÁLISE DE COMPATIBILIDADE FINANCEIRA E DE SANEAMENTO DE IMPEDIMENTOS TÉCNICOS, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pr-08.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto muda as regras internas da Câmara Municipal para organizar como os vereadores apresentam e aprovam suas emendas impositivas (indicações de gastos obrigatórios) no orçamento da cidade. O texto define prazos, documentos necessários, regras para entidades parceiras e etapas de correção de falhas técnicas. A medida busca dar mais transparência e evitar que propostas inviáveis sejam incluídas no planejamento financeiro do município.",
+  "o_que_muda": [
+   "Os vereadores devem entregar minutas de suas propostas de emendas à Mesa Diretora entre 1 e 15 de setembro de cada ano para uma análise prévia.",
+   "O Poder Executivo (prefeitura) tem até 10 dias para devolver um relatório técnico sobre a viabilidade das minutas enviadas.",
+   "Pelo menos 50% do valor total das emendas individuais de cada vereador deve ser destinado obrigatoriamente para ações e serviços de saúde.",
+   "É proibido apresentar emendas para pagar pessoal, encargos sociais, dívida pública ou anular gastos obrigatórios da prefeitura.",
+   "O prazo para apresentar as emendas oficiais ao projeto de lei do orçamento é de até 10 dias após a publicação de seu recebimento na Ordem do Dia.",
+   "Emendas que indiquem entidades privadas sem fins lucrativos exigem cadastro ativo, certidões regulares, estatuto e declaração de inexistência de nepotismo.",
+   "A Comissão de Finanças e Orçamento analisa os pedidos e dá até 3 dias úteis para o vereador corrigir falhas técnicas ou documentos faltando.",
+   "A prefeitura tem até 120 dias após a publicação da lei do orçamento para avisar sobre impedimentos técnicos ou jurídicos que impeçam a execução de uma emenda.",
+   "O vereador tem até 30 dias para indicar medidas de correção ou propor o remanejamento do dinheiro caso haja impedimento na emenda.",
+   "O portal eletrônico da Câmara deve ser atualizado com os dados e andamentos das emendas no prazo de até um dia útil após cada ato."
+  ],
+  "quem_e_afetado": "Os vereadores ganham regras claras e prazos para destinar recursos do orçamento municipal, tendo a obrigação de direcionar metade da verba para a saúde. A prefeitura ganha o papel de analisar a viabilidade técnica das propostas e fiscalizar a execução. As entidades privadas sem fins lucrativos que desejarem receber recursos precisam apresentar diversos documentos de regularidade. O texto não menciona restrições diretas para a população em geral, que é a beneficiária final dos serviços.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O percentual exato da Receita Corrente Líquida destinado às emendas impositivas, que fica a cargo da Lei de Diretrizes Orçamentárias.",
+   "O sistema de apoio tecnológico oficial que substituirá o atual formulário padronizado, caso venha a ser trocado.",
+   "O detalhamento de quais secretarias municipais específicas executarão cada ação proposta."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "emendas parlamentares impositivas individuais",
+    "explicacao": "Indicações feitas por cada vereador que a prefeitura é obrigada por lei a executar e pagar no orçamento."
+   },
+   {
+    "termo": "Receita Corrente Líquida",
+    "explicacao": "O dinheiro total que entra nos cofres da prefeitura após descontadas as deduções legais."
+   },
+   {
+    "termo": "nepotismo",
+    "explicacao": "Prática em que autoridades contratam ou beneficiam parentes próximos em cargos públicos ou parcerias."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto visa atualizar o Regimento Interno da Câmara para criar regras claras e transparentes para o rito das emendas impositivas ao orçamento anual. O autor alega que as emendas impositivas fortaleceram o Poder Legislativo, permitindo que os parlamentares indiquem recursos para atender aos anseios da comunidade. No entanto, ele afirma ser necessário garantir governança fiscal e respeito aos critérios técnicos para evitar desperdícios com programações inexequíveis. Por fim, o autor cita que a proposta se baseia no princípio da simetria com normas federais, na Lei de Diretrizes Orçamentárias de 2026 e em regras do Tribunal de Contas do Estado de São Paulo.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "O documento não especifica o percentual exato da receita que será usado para as emendas nem aponta de onde sairá o dinheiro para cobrir os custos operacionais do novo sistema.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto estabelece que a resolução entra em vigor após um período de quarentena de 45 dias contados da sua publicação oficial.",
+    "trecho": "Esta Resolução entra em vigor após decorridos 45 (quarenta e cinco) dias de sua publicação oficial."
+   },
+   {
+    "ponto": "O texto não informa o custo financeiro total da medida nem a fonte de recursos utilizada para arcar com as despesas da nova rotina administrativa.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "e7f881cbdc763f12",
+ "gerado_em": "2026-11-08T05:12:02Z"
+}

@@ -1,0 +1,65 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "36",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A INCLUSÃO DE SINALIZAÇÃO EM LÍNGUA BRASILEIRA DE SINAIS (LIBRAS) EM PAINÉIS INFORMATIVOS DOS SERVIÇOS PÚBLICOS NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2036.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto autoriza a inclusão de sinalização em Libras nos painéis informativos dos serviços públicos municipais. O objetivo é facilitar o acesso de pessoas com deficiência auditiva às informações. A medida usa vídeos, QR Codes e totens digitais. A regra vale para locais de grande circulação, como postos de saúde e escolas.",
+  "o_que_muda": [
+   "Fica autorizada a inclusão de sinalização acessível em Libras nos painéis informativos dos órgãos públicos.",
+   "A sinalização poderá usar vídeos com tradução em Libras, QR Codes, totens digitais e outros meios tecnológicos.",
+   "A aplicação pode ocorrer em unidades de saúde, escolas municipais, repartições com atendimento ao público e terminais de transporte."
+  ],
+  "quem_e_afetado": "A medida beneficia diretamente as pessoas com deficiência auditiva que usam os serviços públicos municipais. Os órgãos públicos municipais ganham a autorização para instalar os novos sistemas de comunicação. O texto não define quem fica de fora da regra.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Quais órgãos vão instalar a sinalização primeiro, já que o texto diz que a medida é autorizada e prioritária.",
+   "Como será feita a fiscalização do cumprimento da lei.",
+   "Quais empresas serão contratadas para fornecer os equipamentos e vídeos."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Libras",
+    "explicacao": "Língua Brasileira de Sinais, usada por pessoas surdas para a comunicação por meio de gestos."
+   },
+   {
+    "termo": "QR Code",
+    "explicacao": "Código visual em formato quadrado que a câmera do celular lê para abrir links na internet."
+   },
+   {
+    "termo": "Totens digitais",
+    "explicacao": "Aparelhos eletrônicos em pé com telas de toque para consulta de informações."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a proposta promove a acessibilidade para pessoas com deficiência auditiva nos serviços públicos de Cubatão. O autor alega que a falta de recursos em Libras cria barreiras para o acesso a informações e serviços essenciais. Ele cita que a proposta tem apoio na Lei federal nº 10.436/2002 e no Decreto nº 5.626/2005. Por fim, afirma que o uso de QR Codes e vídeos garante viabilidade técnica e financeira, além de promover a inclusão social.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa o custo total da implantação nem de onde virão os recursos financeiros.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto apenas autoriza a medida, mas não obriga a prefeitura a realizá-la imediatamente.",
+    "trecho": "Fica autorizada a inclusão de sinalização acessível em Língua Brasileira de Sinais (Libras)"
+   },
+   {
+    "ponto": "O texto não informa quanto custará a instalação dos equipamentos nem de onde sairá o dinheiro.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A lei entra em vigor logo na data em que for publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "984fba34ef539803",
+ "gerado_em": "2026-11-08T05:07:33Z"
+}

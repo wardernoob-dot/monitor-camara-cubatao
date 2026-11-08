@@ -1,0 +1,72 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "41",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE O \"PROGRAMA MÉDICO NAS CRECHES\" NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2041.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o \"Programa Médico nas Creches\" em Cubatão para cuidar da saúde das crianças. Ele busca prevenir doenças, acompanhar o crescimento e orientar os professores das creches. A execução depende da vontade da prefeitura e usa o dinheiro do orçamento atual.",
+  "o_que_muda": [
+   "Cria o Programa Médico nas Creches nas creches municipais e conveniadas.",
+   "Promove ações de saúde básica e prevenção de doenças infantis dentro das creches.",
+   "Acompanha o desenvolvimento físico e verifica a situação das vacinas das crianças.",
+   "Orienta os professores da educação sobre cuidados básicos com a saúde das crianças.",
+   "Integra as políticas públicas de saúde e educação para atender a primeira infância."
+  ],
+  "quem_e_afetado": "As crianças matriculadas nas creches municipais e conveniadas de Cubatão ganham o direito ao acompanhamento de saúde. Os professores da educação ganham a orientação sobre cuidados básicos. Ninguém fica explicitamente de fora do atendimento infantil descrito, mas a aplicação prática depende da prefeitura.",
+  "de_onde_sai_o_dinheiro": "Os gastos saem de dotações do orçamento próprio da prefeitura, que podem receber suplementações se necessário.",
+  "o_que_falta_definir": [
+   "Como o programa vai funcionar na prática no dia a dia das creches.",
+   "Quais profissionais específicos de saúde vão realizar os atendimentos.",
+   "Quais creches conveniadas serão atendidas primeiro e de que forma.",
+   "Como será feita a fiscalização do programa."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro reservado no orçamento da prefeitura para pagar custos específicos."
+   },
+   {
+    "termo": "suplementadas",
+    "explicacao": "Dinheiro adicionado ao orçamento caso o valor inicial não seja suficiente."
+   },
+   {
+    "termo": "primeira infância",
+    "explicacao": "Fase inicial da vida das crianças, que vai do nascimento até os seis anos de idade."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto foca na prevenção de doenças infantis e no acompanhamento do desenvolvimento nas creches da rede municipal e conveniadas. O autor alega que a medida reforça a atenção básica e se apoia na Constituição Federal e no Estatuto da Criança e do Adolescente, que tornam a saúde um dever do Estado e da sociedade. O autor também destaca que a lei não cria cargos nem aumenta despesas obrigatórias, e cita decisões de tribunais para mostrar que leis criadas por vereadores sobre políticas de saúde são válidas quando não interferem na estrutura administrativa do prefeito.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa quais profissionais vão prestar o atendimento médico nem o cronograma de implantação.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A execução do programa fica condicionada à conveniência da prefeitura e usa o orçamento existente.",
+    "trecho": "ficando sua execução condicionada à conveniência e oportunidade da Administração Pública."
+   },
+   {
+    "ponto": "O texto não define prazos para o início do programa nas creches.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não estabelece penalidades ou multas para descumprimento.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não especifica quem vai fiscalizar a execução das ações médicas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "61fa36a2fe3be97b",
+ "gerado_em": "2026-11-08T05:07:40Z"
+}

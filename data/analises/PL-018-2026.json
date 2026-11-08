@@ -1,0 +1,51 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "18",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI NO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO, “A FESTA EM HONRA A NOSSA SENHORA DAS GRAÇAS”, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2018.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria a \"Festa em Honra a Nossa Senhora das Graças\" no calendário oficial de Cubatão. A comemoração acontece anualmente no dia 27 de novembro. O efeito é simbólico e cultural, reconhecendo os festejos tradicionais da comunidade.",
+  "o_que_muda": [
+   "A Festa em Honra a Nossa Senhora das Graças passa a integrar o Calendário Oficial do Município de Cubatão.",
+   "A celebração oficial fica marcada anualmente para o dia 27 de novembro."
+  ],
+  "quem_e_afetado": "A comunidade religiosa e os devotos que participam dos festejos ganham o reconhecimento oficial da festa. O texto não obriga nem proíbe nada para os moradores.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como a festa será organizada pela prefeitura, caso haja apoio oficial.",
+   "Se haverá gastos públicos com o evento."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Calendário Oficial",
+    "explicacao": "Lista oficial de datas importantes reconhecidas pela prefeitura da cidade."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto visa fortalecer e promover os festejos historicamente realizados pela comunidade local. Ele conta a história da construção da capela no Bairro Vale Verde, desde as reuniões nas casas em 1996 até a inauguração da igreja em alvenaria. Também destaca a dedicação de moradores e líderes religiosos na obra e reforça que a data atrai turistas e fiéis de todo o país.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber se haverá uso de dinheiro público ou apoio logístico da prefeitura para a realização da festa.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O efeito do projeto é simbólico, pois apenas inclui um evento no calendário oficial da cidade sem definir obrigações ou gastos.",
+    "trecho": "Fica instituído no Calendário Oficial do Município de Cubatão, “ A FESTA EM HONRA A NOSSA SENHORA DAS GRAÇAS,” a ser celebrado, anualmente no dia 27 de novembro"
+   },
+   {
+    "ponto": "O texto não informa a fonte de recursos ou custos para a realização da festa.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "f4dea208ad9b1106",
+ "gerado_em": "2026-11-08T05:06:27Z"
+}
