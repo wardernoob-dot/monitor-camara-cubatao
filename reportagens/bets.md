@@ -14,7 +14,7 @@ foto_credito: Antônio Cruz/Agência Brasil
 foto_licenca: Reprodução autorizada com crédito (Agência Brasil)
 foto_link: https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/10/08/bets.jpg
 foto_ilustrativa: sim
-aprovado_por: Reginaldo
+aprovado_por: equipe Voto a voto
 ---
 ## O que a lei cria
 

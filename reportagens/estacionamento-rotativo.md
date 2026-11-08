@@ -14,7 +14,7 @@ foto_credito: Cristine Rochol/PMPA
 foto_licenca: Atribuição, Prefeitura de Porto Alegre, via Wikimedia Commons
 foto_link: https://commons.wikimedia.org/wiki/File:IBPA_22262_-_Prefeitura_de_Porto_Alegre,_por_interm%C3%A9dio_da_Empresa_P%C3%BAblica_de_-_2019-01-23_-_Cristine_Rochol-PMPA.jpg
 foto_ilustrativa: sim
-aprovado_por: Reginaldo
+aprovado_por: equipe Voto a voto
 ---
 ## O que muda
 

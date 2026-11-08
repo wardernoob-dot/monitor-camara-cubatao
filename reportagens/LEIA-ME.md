@@ -5,7 +5,7 @@ Textos curtos, em linguagem simples, sobre projetos e leis que mexem com o dia a
 - Um arquivo por reportagem: `<id>.md` (o `id` do cabeçalho é igual ao nome do arquivo).
 - Foto em `fotos/<id>.jpg` (até 2400 px). O `site.py` gera `docs/fotos/reportagens/<id>-g.webp` e `<id>-p.webp`.
 - Só aparece no site com `status: publicado`. Rascunho só aparece na prévia local (`VAV_RASCUNHOS=1`).
-- **Quem aprova o texto é o dono do projeto.** Ao publicar, preencha `aprovado_por`.
+- **Quem aprova o texto é o dono do projeto.** Ao publicar, preencha `aprovado_por: equipe Voto a voto` (registro interno; não aparece no site).
 
 ## O que NÃO vai no texto
 

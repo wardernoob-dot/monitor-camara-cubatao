@@ -14,7 +14,7 @@ foto_credito: Marcelo Camargo/Agência Brasil
 foto_licenca: Reprodução autorizada com crédito (Agência Brasil)
 foto_link: https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/caixa_fgts_mcmgo_abr_13091923081.jpg
 foto_ilustrativa: sim
-aprovado_por: Reginaldo
+aprovado_por: equipe Voto a voto
 ---
 ## O que a Prefeitura pedia
 

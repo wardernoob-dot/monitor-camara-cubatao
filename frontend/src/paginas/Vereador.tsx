@@ -1,5 +1,5 @@
 import { CartaoIndice } from "../indice";
-import { Secao } from "../secao";
+import { Secao, abrirSecao } from "../secao";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
@@ -9,10 +9,16 @@ import { Destaque, Dica, DicaMateria, EtapaComDica, Termo, naPratica } from "../
 import { useContador, useEntrou } from "../movimento";
 import { Funil } from "../viz";
 
-function Num({ valor, rotulo, sufixo = "" }: { valor: number; rotulo: string; sufixo?: string }) {
+function Num({ valor, rotulo, sufixo = "", para }: { valor: number; rotulo: string; sufixo?: string; para?: string }) {
   const [ref, entrou] = useEntrou<HTMLDivElement>();
   const v = useContador(valor, entrou, 1000);
-  return <div ref={ref}><dt>{rotulo}</dt><dd><span aria-hidden="true">{v}{sufixo}</span><span className="sr">{valor}{sufixo}</span></dd></div>;
+  return (
+    <div ref={ref} className={para ? "numeros__item--link" : undefined}>
+      <dt>{para ? <button type="button" className="numeros__botao esticado" onClick={() => abrirSecao(para)}>{rotulo}<span className="sr">: ver detalhes</span></button> : rotulo}</dt>
+      <dd><span aria-hidden="true">{v}{sufixo}</span><span className="sr">{valor}{sufixo}</span></dd>
+      {para && <span className="numeros__seta" aria-hidden="true">↓</span>}
+    </div>
+  );
 }
 import NaoEncontrado from "./NaoEncontrado";
 import { Toc } from "../toc";
@@ -101,14 +107,14 @@ export default function VereadorPagina() {
       </header>
 
       <dl className="numeros">
-        <Num valor={v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0} rotulo="% de presença nas sessões" sufixo="%" />
-        <Num valor={v.faltas} rotulo="faltas (justificadas ou não)" />
-        <Num valor={projetos.length} rotulo="projetos de lei apresentados" />
-        <Num valor={v.leis} rotulo="viraram lei" />
-        <Num valor={reqs.length} rotulo="requerimentos e moções aprovados" />
+        <Num valor={v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0} rotulo="% de presença nas sessões" sufixo="%" para="presenca" />
+        <Num valor={v.faltas} rotulo="faltas (justificadas ou não)" para="presenca" />
+        <Num valor={projetos.length} rotulo="projetos de lei apresentados" para="projetos" />
+        <Num valor={v.leis} rotulo="viraram lei" para="projetos" />
+        <Num valor={reqs.length} rotulo="requerimentos e moções aprovados" para={reqs.length ? "requerimentos" : undefined} />
         {v.executivo.com + v.executivo.contra > 0 && (
           <Num valor={Math.round((100 * v.executivo.com) / (v.executivo.com + v.executivo.contra))} sufixo="%"
-            rotulo={`dos votos na posição da Prefeitura (${v.executivo.contra} contra)`} />
+            rotulo={`dos votos na posição da Prefeitura (${v.executivo.contra} contra)`} para={v.executivo.contra > 0 ? "prefeitura" : undefined} />
         )}
       </dl>
 

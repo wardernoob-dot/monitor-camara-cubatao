@@ -155,7 +155,6 @@ export interface Reportagem {
   votacao: number | null;
   foto: { g: string; p: string; alt: string; legenda: string | null; credito: string; licenca: string; link: string; ilustrativa: boolean };
   corpo: { t: "h" | "p" | "ul"; x: string | string[] }[];
-  aprovado_por: string | null;
 }
 
 interface Bruto {
@@ -166,6 +165,7 @@ interface Bruto {
   dias: Dia[];
   partidos: Partido[];
   reportagens?: Reportagem[];
+  executivo?: { nome: string; cargo: string; foto: string | null };
 }
 
 export interface Base extends Bruto {

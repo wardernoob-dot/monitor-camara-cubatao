@@ -1009,7 +1009,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
         "meta": {"atualizado": datetime.now(timezone.utc).isoformat(timespec="minutes"), "nome_site": NOME_SITE,
                  "cidade": CIDADE, "repo": REPO},
         "vereadores": vereadores, "materias": sorted(materias, key=lambda m: (m["ultima_data"], int(m["numero"] or 0)), reverse=True),
-        "votacoes": votacoes_json, "dias": dias, "reportagens": reportagens,
+        "votacoes": votacoes_json, "dias": dias, "reportagens": reportagens, "executivo": RP.executivo(),
         "partidos": sorted(({**{k: x for k, x in p.items() if k not in ("membros", "em_exercicio", "rachas")},
                              "membros": [vslug[k] for k in p["membros"] if k in vslug],
                              "em_exercicio": [vslug[k] for k in p["em_exercicio"] if k in vslug],

@@ -69,53 +69,96 @@ export function Inline({ t }: { t: string }) {
 
 /* ------------------------------------------------------------------ pecas */
 
+const ehPrefeito = (m: Materia) => !m.autores.length && /prefeit|executivo|sejur/i.test(m.autoria);
+
+function FotoPrefeito({ tamanho }: { tamanho: "p" | "m" }) {
+  const b = useDados();
+  const e = b.executivo;
+  if (e?.foto) return <img className={`avatar avatar--${tamanho}`} src={`./${e.foto}`} alt={`Foto de ${e.nome}`} loading="lazy" decoding="async" />;
+  return <span className={`avatar avatar--${tamanho} avatar--iniciais`} aria-hidden="true">P</span>;
+}
+
+/** Quem propôs, em destaque: foto grande, nome e o que a pessoa é. */
 function Autoria({ m, claro = false }: { m: Materia; claro?: boolean }) {
   const b = useDados();
   const autores = m.autores.map((s) => b.vereador.get(s)).filter(Boolean) as Vereador[];
+  const pessoas = autores.length
+    ? autores.map((v) => ({ chave: v.slug, foto: <Avatar v={v} tamanho="m" />, nome: v.exibicao, papel: `Vereador${v.partido ? ` (${v.partido})` : ""}`, link: `/vereadores/${v.slug}` }))
+    : ehPrefeito(m)
+      ? [{ chave: "prefeito", foto: <FotoPrefeito tamanho="m" />, nome: b.executivo?.nome ?? "Prefeito", papel: b.executivo?.cargo ?? "Prefeito", link: null }]
+      : [{ chave: "outro", foto: <span className="avatar avatar--m avatar--iniciais" aria-hidden="true">?</span>, nome: m.autoria, papel: "", link: null }];
   return (
-    <span className={`rp-autor${claro ? " rp-autor--claro" : ""}`}>
-      {autores.length ? (
-        <>
-          <span className="rp-autor__fotos">{autores.slice(0, 3).map((v) => <Avatar key={v.slug} v={v} tamanho="p" />)}</span>
-          <span>{autores.map((v) => v.exibicao).join(", ")}</span>
-        </>
-      ) : (
-        <>
-          <span className="rp-autor__icone" aria-hidden="true">
-            <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8l7-4.5L17 8M4.5 8v7M8 8v7M12 8v7M15.5 8v7M3 17h14" /></svg>
-          </span>
-          <span>{/prefeit/i.test(m.autoria) ? "Prefeito (Prefeitura)" : m.autoria}</span>
-        </>
-      )}
-    </span>
+    <div className={`rp-autor${claro ? " rp-autor--claro" : ""}`}>
+      <span className="rp-autor__rot">{pessoas.length > 1 ? "Propuseram" : "Quem propôs"}</span>
+      <ul className="rp-autor__lista">
+        {pessoas.map((p) => (
+          <li key={p.chave} className="rp-autor__pessoa">
+            {p.foto}
+            <span className="rp-autor__txt">
+              {p.link && !claro ? <Link to={p.link} className="rp-autor__nome">{p.nome}</Link> : <span className="rp-autor__nome">{p.nome}</span>}
+              {p.papel && <span className="rp-autor__papel">{p.papel}</span>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-function Rostos({ lista, max }: { lista: Vereador[]; max: number }) {
-  const resto = lista.length - max;
+/** O que o prefeito fez com o projeto (sancionou, vetou, ainda não chegou nele). */
+export function acaoPrefeito(m: Materia): { texto: string; tom: "bom" | "ruim" | "alerta" | "neutro" } {
+  const dele = ehPrefeito(m);
+  const v = m.veto;
+  const depois = v?.resultado === "veto_mantido" ? "A Câmara manteve o veto." : v?.resultado === "veto_derrubado" ? "A Câmara derrubou o veto." : "Falta a Câmara votar o veto.";
+  if (v && v.alcance === "integral") return { texto: `Vetou o projeto inteiro. ${depois}`, tom: "ruim" };
+  if (v) return { texto: `Sancionou${m.lei ? ` a Lei ${m.lei.numero}` : ""}, mas vetou um trecho. ${depois}`, tom: "alerta" };
+  if (m.lei) return { texto: `${dele ? "Sancionou o próprio projeto" : "Sancionou"}: virou a Lei ${m.lei.numero}, em ${dataCurta(m.lei.data, true)}.`, tom: "bom" };
+  if (rejeitado(m)) return { texto: dele ? "Era projeto dele, mas a Câmara rejeitou." : "Não chegou a ele: a Câmara rejeitou.", tom: "neutro" };
+  if (m.situacao_cls === "aprovado") return { texto: "Aprovado pela Câmara, aguardando o prefeito sancionar ou vetar.", tom: "alerta" };
+  return { texto: dele ? "Projeto dele, ainda em tramitação na Câmara." : "Ainda não chegou ao prefeito.", tom: "neutro" };
+}
+
+function Prefeito({ m }: { m: Materia }) {
+  const b = useDados();
+  const a = acaoPrefeito(m);
   return (
-    <span className="rp-rostos">
-      {lista.slice(0, max).map((v) => <span key={v.slug} title={v.exibicao}><Avatar v={v} tamanho="p" /></span>)}
-      {resto > 0 && <span className="rp-rostos__mais">+{resto}</span>}
-    </span>
+    <div className={`rp-pref rp-pref--${a.tom}`}>
+      <FotoPrefeito tamanho="m" />
+      <span className="rp-pref__txt">
+        <span className="rp-pref__rot">E o prefeito{b.executivo ? `, ${b.executivo.nome.split(" ")[0]}` : ""}?</span>
+        <span className="rp-pref__acao">{a.texto}</span>
+      </span>
+    </div>
   );
 }
 
-function PlacarRostos({ ev, compacto = false }: { ev: Votacao; compacto?: boolean }) {
+function Rostos({ lista }: { lista: Vereador[] }) {
+  return (
+    <ul className="rp-rostos">
+      {lista.map((v) => (
+        <li key={v.slug} className="rp-rosto" title={v.exibicao}>
+          <Avatar v={v} tamanho="m" />
+          <span className="rp-rosto__nome">{v.exibicao.replace(/^Dr\. /, "")}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function PlacarRostos({ ev }: { ev: Votacao }) {
   const b = useDados();
   const { favor, contra } = ladosDaVotacao(b, ev);
-  const max = compacto ? 6 : 15;
   return (
     <div className="rp-placar">
       <div className="rp-placar__lado rp-placar__lado--favor">
         <span className="rp-placar__rot"><strong>{favor.length}</strong> a favor do projeto</span>
-        <Rostos lista={favor} max={max} />
+        <Rostos lista={favor} />
       </div>
       <div className="rp-placar__lado rp-placar__lado--contra">
         {contra.length ? (
           <>
             <span className="rp-placar__rot"><strong>{contra.length}</strong> contra</span>
-            <Rostos lista={contra} max={max} />
+            <Rostos lista={contra} />
           </>
         ) : <span className="rp-placar__rot rp-placar__nenhum">nenhum voto contra</span>}
       </div>
@@ -191,18 +234,28 @@ export function CarrosselReportagens() {
             </motion.div>
             <div className="rp__veu" aria-hidden="true" />
             <div className="rp__conteudo">
-              <p className="rp__topo">
-                {r.status === "rascunho" && <span className="rp__rascunho">Rascunho</span>}
-                {r.chapeu && <span className="rp__chapeu">{r.chapeu}</span>}
-                {m && <span className={`rp__sit rp__sit--${classeSituacao(m)}`}>{situacaoCurta(m)}</span>}
-              </p>
-              <h2 className="rp__manchete"><Link to={`/reportagens/${r.id}`} className="esticado">{r.manchete}</Link></h2>
-              <p className="rp__fina">{r.linha_fina}</p>
-              <div className="rp__fatos">
-                {m && <div className="rp__fato"><span className="rp__fato-rot">Quem propôs</span><Autoria m={m} claro /></div>}
-                {ev && <div className="rp__fato rp__fato--placar"><span className="rp__fato-rot">Como votaram · {dataCurta(ev.data)}</span><PlacarRostos ev={ev} compacto /></div>}
+              <div className="rp__texto">
+                <p className="rp__topo">
+                  {r.status === "rascunho" && <span className="rp__rascunho">Rascunho</span>}
+                  {r.chapeu && <span className="rp__chapeu">{r.chapeu}</span>}
+                  {m && <span className={`rp__sit rp__sit--${classeSituacao(m)}`}>{situacaoCurta(m)}</span>}
+                </p>
+                <h2 className="rp__manchete"><Link to={`/reportagens/${r.id}`} className="esticado">{r.manchete}</Link></h2>
+                <p className="rp__fina">{r.linha_fina}</p>
+                {m && <div className="rp__vidro rp__vidro--autor"><Autoria m={m} claro /></div>}
+                <span className="rp__ler" aria-hidden="true">Ler a reportagem <span>→</span></span>
               </div>
-              <span className="rp__ler" aria-hidden="true">Ler a reportagem <span>→</span></span>
+              {(ev || m) && (
+                <aside className="rp__vidro rp__painel" aria-label="Como votaram e o que o prefeito fez">
+                  {ev && (
+                    <>
+                      <span className="rp__fato-rot">Como votaram · {dataCurta(ev.data)}{ev.fonte === "resumo" ? " · resumo oficial" : ev.fonte === "painel" ? " · painel" : ""}</span>
+                      <PlacarRostos ev={ev} />
+                    </>
+                  )}
+                  {m && <Prefeito m={m} />}
+                </aside>
+              )}
             </div>
             <p className="rp__credito">Foto{r.foto.ilustrativa ? " ilustrativa" : ""}: {r.foto.credito}</p>
           </motion.article>
@@ -246,4 +299,4 @@ export function CorpoReportagem({ r }: { r: Reportagem }) {
   );
 }
 
-export { PlacarRostos, Autoria, Foto, situacaoCurta, classeSituacao };
+export { PlacarRostos, Autoria, Foto, Prefeito, situacaoCurta, classeSituacao };

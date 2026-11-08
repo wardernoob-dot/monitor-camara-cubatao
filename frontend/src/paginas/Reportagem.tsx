@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useDados } from "../dados";
 import { Grade, NotaFonte } from "../componentes";
-import { Autoria, CorpoReportagem, Foto, PlacarRostos, situacaoCurta, classeSituacao, votacaoDa } from "../reportagens";
+import { Autoria, CorpoReportagem, Foto, PlacarRostos, Prefeito, situacaoCurta, classeSituacao, votacaoDa } from "../reportagens";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import NaoEncontrado from "./NaoEncontrado";
 
@@ -34,6 +34,7 @@ export default function ReportagemPagina() {
           </p>
           <h1 className="titulo-pagina rp-pagina__manchete">{r.manchete}</h1>
           <p className="rp-pagina__fina">{r.linha_fina}</p>
+          {principal && <div className="rp-pagina__autor"><Autoria m={principal} /></div>}
           <p className="rp-pagina__data">Texto revisado em {dataExtenso(r.data)}. Situação, autoria e votos abaixo vêm direto dos documentos e são atualizados sozinhos.</p>
         </div>
       </header>
@@ -45,10 +46,9 @@ export default function ReportagemPagina() {
             <div key={m.slug} className="rp-ficha__projeto">
               <Link to={`/projetos/${m.slug}`} className="rp-ficha__id">{m.titulo}</Link>
               <span className={`rp__sit rp__sit--${classeSituacao(m)}`}>{situacaoCurta(m)}</span>
-              <span className="rp-ficha__rot">Quem propôs</span>
-              <Autoria m={m} />
+              {m !== principal && m.autoria !== principal?.autoria && <Autoria m={m} />}
               {m.lei && <span className="rp-ficha__lei">Lei {m.lei.numero}, de {dataCurta(m.lei.data, true)}{m.lei.url && <> · <a href={m.lei.url} rel="noopener">Diário Oficial</a></>}</span>}
-              {m.veto && <span className="rp-ficha__lei">Veto {m.veto.alcance} do prefeito{m.veto.resultado === "veto_mantido" ? ", mantido pela Câmara" : m.veto.resultado === "veto_derrubado" ? ", derrubado pela Câmara" : "; falta a Câmara votar o veto"}</span>}
+              <Prefeito m={m} />
             </div>
           ))}
           {ev && (
@@ -71,7 +71,7 @@ export default function ReportagemPagina() {
             </section>
           )}
           <p className="nota rp-pagina__nota">
-            Texto da equipe do Voto a voto, escrito a partir dos documentos oficiais linkados acima{r.aprovado_por ? ` e revisado por ${r.aprovado_por}` : ""}. Não diz se o projeto é bom ou ruim.
+            Texto da equipe do Voto a voto, escrito a partir dos documentos oficiais linkados acima. Não diz se o projeto é bom ou ruim.
             Achou um erro? <a href={`${b.meta.repo}/issues`} rel="noopener">Avise</a>.
           </p>
         </div>

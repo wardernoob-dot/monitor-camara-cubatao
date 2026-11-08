@@ -27,6 +27,11 @@ RE_DATA = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 RE_LINK_MD = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 TAMANHOS = {"g": 1600, "p": 800}
 
+# Chefe do Executivo (aparece nas reportagens: autor de projeto e quem sanciona ou veta).
+# Nome civil como assina as leis no Diario Oficial; foto enviada pelo dono do site em fotos/executivo/.
+PREFEITO = {"nome": "César da Silva Nascimento", "cargo": "Prefeito de Cubatão"}
+FOTO_PREFEITO = RAIZ / "fotos" / "executivo"
+
 
 class ReportagemInvalida(ValueError):
     pass
@@ -120,6 +125,24 @@ def _foto(id_: str) -> dict[str, str]:
     return out
 
 
+def executivo() -> dict:
+    """{"nome", "cargo", "foto"}: foto quadrada de 480 px em docs/fotos/executivo/prefeito.webp, quando houver."""
+    from PIL import Image, ImageOps
+
+    orig = next((p for p in FOTO_PREFEITO.glob("prefeito.*") if p.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")), None) \
+        if FOTO_PREFEITO.exists() else None
+    if not orig:
+        return {**PREFEITO, "foto": None}
+    final = RAIZ / "docs" / "fotos" / "executivo" / "prefeito.webp"
+    final.parent.mkdir(parents=True, exist_ok=True)
+    if not final.exists() or final.stat().st_mtime < orig.stat().st_mtime:
+        im = ImageOps.exif_transpose(Image.open(orig)).convert("RGB")
+        lado = min(im.size)
+        x, y = (im.width - lado) // 2, 0
+        im.crop((x, y, x + lado, y + lado)).resize((min(lado, 480),) * 2, Image.LANCZOS).save(final, "WEBP", quality=85)
+    return {**PREFEITO, "foto": "fotos/executivo/prefeito.webp"}
+
+
 def exportar(materias: dict[str, dict], votacoes: list[dict], rascunhos: bool | None = None) -> list[dict]:
     """materias: {slug: materia exportada}; votacoes: eventos exportados (com id, materia, data, etapa).
     Devolve a lista pronta para o dados.json, mais recente primeiro."""
@@ -153,7 +176,7 @@ def exportar(materias: dict[str, dict], votacoes: list[dict], rascunhos: bool | 
             "foto": {**_foto(r["id"]), "alt": r["foto_alt"], "legenda": r.get("foto_legenda") or None,
                      "credito": r["foto_credito"], "licenca": r["foto_licenca"], "link": r["foto_link"],
                      "ilustrativa": r.get("foto_ilustrativa", "").lower() in ("sim", "s", "true", "1")},
-            "corpo": r["corpo"], "aprovado_por": r.get("aprovado_por") or None,
+            "corpo": r["corpo"],
             "ordem": int(r["ordem"]) if r.get("ordem", "").isdigit() else 99,
         })
     out.sort(key=lambda r: (r["ordem"], r["id"]))

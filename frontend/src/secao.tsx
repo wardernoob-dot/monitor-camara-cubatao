@@ -14,6 +14,11 @@ export function Secao({ id, titulo, resumo, aberta = false, children, classe = "
   useEffect(() => {
     if (hash === `#${id}`) setAberto(true);
   }, [hash, id]);
+  useEffect(() => {
+    const abre = (e: Event) => (e as CustomEvent<string>).detail === id && setAberto(true);
+    window.addEventListener("abrir-secao", abre);
+    return () => window.removeEventListener("abrir-secao", abre);
+  }, [id]);
 
   return (
     <section id={id} className={`sanfona ${aberto ? "sanfona--aberta" : ""} ${classe}`}>
@@ -43,4 +48,22 @@ export function Secao({ id, titulo, resumo, aberta = false, children, classe = "
       </AnimatePresence>
     </section>
   );
+}
+
+/** Abre a seção retrátil e rola até ela (funciona mesmo clicando de novo no mesmo atalho). */
+export function abrirSecao(id: string) {
+  window.dispatchEvent(new CustomEvent("abrir-secao", { detail: id }));
+  const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const rola = () => document.getElementById(id)?.scrollIntoView({ behavior: reduz ? "auto" : "smooth", block: "start" });
+  requestAnimationFrame(() => {
+    rola();
+    document.getElementById(id)?.querySelector<HTMLButtonElement>(".sanfona__titulo button")?.focus({ preventScroll: true });
+  });
+  // a seção abre com animação de altura; depois que a página cresce, confere se chegou lá
+  window.setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el && Math.abs(el.getBoundingClientRect().top - parseFloat(getComputedStyle(el).scrollMarginTop || "0")) > 40) rola();
+  }, 400);
+  const base = window.location.hash.split("#").slice(0, 2).join("#");
+  window.history.replaceState(window.history.state, "", `${base}#${id}`);
 }
