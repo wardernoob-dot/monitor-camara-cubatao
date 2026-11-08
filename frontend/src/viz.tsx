@@ -16,27 +16,6 @@ export const COR = {
   papel: "#fafafa",
 };
 
-/* ------------------------------------------------------------------ grade animada do topo */
-export function GradeHero() {
-  const ref = useLacoCanvas((ctx, w, h, t) => {
-    const passo = w < 640 ? 28 : 40;
-    const off = (t * (w < 640 ? 0.25 : 0.3)) % passo;
-    const pal = paleta(temaAtual());
-    ctx.strokeStyle = `rgba(${pal.grade},${w < 640 ? 0.09 : 0.07})`;
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    for (let x = 0.5; x < w; x += passo) { ctx.moveTo(x, 0); ctx.lineTo(x, h); }
-    for (let y = h - off; y > -passo; y -= passo) { ctx.moveTo(0, Math.round(y) + 0.5); ctx.lineTo(w, Math.round(y) + 0.5); }
-    ctx.stroke();
-    const g = ctx.createLinearGradient(0, 0, 0, h);
-    g.addColorStop(0, pal.papel + "00");
-    g.addColorStop(1, pal.papel);
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, w, h);
-  });
-  return <canvas ref={ref} className="hero__grade" aria-hidden="true" />;
-}
-
 /* ------------------------------------------------------------------ sparkline */
 export function Sparkline({ serie, cor: corProp, rotulo, formato }: { serie: Ponto[]; cor?: string; rotulo: string; formato: (p: Ponto) => string }) {
   const tema = useTema();

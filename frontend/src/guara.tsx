@@ -72,19 +72,6 @@ function cordilheira(semente: number, base: number, amp: number, sela?: { x: num
   }
   return `${d} L1440 300Z`;
 }
-/** Copas do manguezal: arcos pequenos e irregulares ao longo da margem. */
-function copas(semente: number, y0: number) {
-  const r = sorteio(semente);
-  let x = 0;
-  let d = `M0 300 L0 ${y0}`;
-  while (x < 1440) {
-    const dx = 16 + r() * 22;
-    const h = 7 + r() * 15;
-    d += ` Q${(x + dx / 2).toFixed(1)} ${(y0 - h).toFixed(1)} ${(x + dx).toFixed(1)} ${y0}`;
-    x += dx;
-  }
-  return `${d} L1440 300Z`;
-}
 const SERRAS = [
   cordilheira(11, 236, 44, { x: 1010, fundo: 30, larg: 130 }),
   cordilheira(23, 256, 22),
@@ -96,7 +83,6 @@ export function Paisagem() {
   const { scrollY } = useScroll();
   const longe = useTransform(scrollY, [0, 600], [0, 36]);
   const meio = useTransform(scrollY, [0, 600], [0, 70]);
-  const perto = useTransform(scrollY, [0, 600], [0, 110]);
   const aves = useTransform(scrollY, [0, 600], [0, -40]);
   const p = (m: typeof longe) => (reduz ? undefined : { y: m });
 
@@ -113,17 +99,9 @@ export function Paisagem() {
             <stop offset="0" stopColor="var(--m1)" />
             <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
           </linearGradient>
-          <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="var(--m2)" />
-            <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
-          </linearGradient>
           <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--m3)" />
             <stop offset=".85" stopColor="var(--base-frente)" />
-          </linearGradient>
-          <linearGradient id="m4" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="var(--m4)" />
-            <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
           </linearGradient>
         </defs>
         <circle cx="1010" cy="234" r="150" fill="url(#sol-halo)" opacity=".7" />
