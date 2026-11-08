@@ -63,22 +63,41 @@ export function Fonte({ ev }: { ev: Votacao }) {
   return <>—</>;
 }
 
+/** Votação em painéis: uma barra com a proporção e, embaixo, quem votou Sim, quem votou Não, quem estava presente e não votou e quem faltou. */
+const GRUPOS_VOTO: [Voto, string, string][] = [
+  ["SIM", "sim", "Sim"],
+  ["NAO", "nao", "Não"],
+  ["BRANCO", "branco", "Presente, não votou"],
+  ["AUSENTE", "ausente", "Ausente"],
+  ["?", "ilegivel", "Ilegível"],
+];
 export function Grade({ ev }: { ev: Votacao }) {
   const { vereador } = useDados();
   const itens = Object.entries(ev.votos)
     .map(([slug, voto]) => ({ v: vereador.get(slug), voto }))
     .filter((x) => x.v)
-    .sort((a, b) => ORDEM_VOTO.indexOf(a.voto) - ORDEM_VOTO.indexOf(b.voto) || a.v!.exibicao.localeCompare(b.v!.exibicao));
+    .sort((a, b) => a.v!.exibicao.localeCompare(b.v!.exibicao, "pt-BR"));
   if (!itens.length) return null;
+  const grupos = GRUPOS_VOTO.map(([voto, k, rot]) => ({ k, rot, lista: itens.filter((x) => x.voto === voto) })).filter((g) => g.lista.length > 0);
+  const resumo = grupos.map((g) => `${g.rot}: ${g.lista.length}`).join(", ");
   return (
-    <ul className="grade">
-      {itens.map(({ v, voto }) => (
-        <li key={v!.slug} className={`grade__item grade__item--${voto.toLowerCase()}`}>
-          <Link className="grade__nome" to={`/vereadores/${v!.slug}`}><Avatar v={v!} tamanho="p" />{v!.exibicao}</Link>
-          <span className="grade__voto">{ROTULO[voto]}</span>
-        </li>
-      ))}
-    </ul>
+    <div className="votos">
+      <div className="votos__barra" role="img" aria-label={resumo}>
+        {grupos.map((g) => <span key={g.k} className={`votos__seg votos__seg--${g.k}`} style={{ flexGrow: g.lista.length, flexBasis: 0 }} />)}
+      </div>
+      <div className="racha__lados votos__lados">
+        {grupos.map((g) => (
+          <section key={g.k} className={`racha__lado racha__lado--${g.k}`}>
+            <p className="racha__lado-rot"><span>{g.rot}</span><strong>{g.lista.length}</strong></p>
+            <ul>
+              {g.lista.map(({ v }) => (
+                <li key={v!.slug}><Avatar v={v!} tamanho="p" /><Link to={`/vereadores/${v!.slug}`}>{v!.exibicao}</Link></li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </div>
   );
 }
 

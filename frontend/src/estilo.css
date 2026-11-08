@@ -1337,3 +1337,23 @@ html, body { overflow-x: clip; }
 .como .principio__titulo { margin: .2rem 0 0; }
 /* o balao nao herda o estilo mono/maiusculo do rotulo onde estiver */
 .dica__pop { text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-weight: 400; }
+
+/* votacao em paineis (sessao e projeto) */
+.votos { margin: .9rem 0 .4rem; }
+.votos__barra { display: flex; gap: 3px; height: 10px; margin-bottom: .9rem; border-radius: 5px; overflow: hidden; }
+.votos__seg { display: block; min-width: 4px; }
+.votos__seg--sim { background: var(--cor-bom); }
+.votos__seg--nao { background: var(--cor-critico); }
+.votos__seg--branco { background: var(--color-surface-2); }
+.votos__seg--ausente { background: repeating-linear-gradient(135deg, var(--color-surface-2) 0 3px, transparent 3px 6px); }
+.votos__lados { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin-top: 0; }
+.racha__lado--branco { --lado: var(--color-surface-3); }
+.racha__lado--ausente { --lado: var(--color-surface-2); border-left-style: dashed; }
+.racha__lado--ausente li, .racha__lado--ausente a { color: var(--color-surface-3); }
+.votacao__cab { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem 1rem; }
+.votacao__cab .linha-tempo__etapa { margin: 0; }
+.votacao__res { display: inline-flex; align-items: baseline; gap: .7rem; }
+.votacao__res .placar--grande { margin-left: 0; }
+.votos__seg--ilegivel { background: var(--color-surface-3); }
+.racha__lado--ilegivel { --lado: var(--color-surface-3); }
+.votos__lados { align-items: start; }

@@ -55,9 +55,11 @@ export default function SessaoPagina() {
             {m.assunto && <p>{m.assunto}</p>}
             {evs.map((ev) => (
               <div key={ev.id} className="item-sessao__votacao">
-                <h3 className="linha-tempo__etapa"><EtapaComDica ev={ev} tipo={m.tipo} /></h3>
+                <div className="votacao__cab">
+                  <h3 className="linha-tempo__etapa"><EtapaComDica ev={ev} tipo={m.tipo} /></h3>
+                  <span className="votacao__res"><ResultadoTag r={ev.resultado} />{Object.keys(ev.votos).length > 0 && <Placar ev={ev} grande />}</span>
+                </div>
                 {ev.sentido === "inverso" && <p className="aviso-voto">Nesta votação, votar <strong>Sim</strong> era ser contra o projeto seguir.</p>}
-                <p><ResultadoTag r={ev.resultado} /> {Object.keys(ev.votos).length > 0 && <Placar ev={ev} />}</p>
                 <Grade ev={ev} />
                 {ev.fonte && <NotaFonte ev={ev} />}
               </div>
