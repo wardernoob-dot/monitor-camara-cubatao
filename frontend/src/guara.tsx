@@ -61,12 +61,12 @@ function ruido(semente: number, escala: number) {
     return pts[i] * (1 - s) + pts[i + 1] * s;
   };
 }
-function cordilheira(semente: number, base: number, amp: number, sela?: { x: number; fundo: number; larg: number }) {
+function cordilheira(semente: number, base: number, amp: number, sela?: { x: number; fundo: number; larg: number }, detalhe = 1) {
   const n1 = ruido(semente, 300), n2 = ruido(semente + 1, 120), n3 = ruido(semente + 2, 46);
   const cume = (v: number) => 1 - Math.abs(2 * v - 1);
   let d = "M0 300";
   for (let x = 0; x <= 1440; x += 6) {
-    let y = base - amp * (0.55 * cume(n1(x)) + 0.3 * cume(n2(x)) + 0.15 * n3(x));
+    let y = base - amp * (0.55 * cume(n1(x)) + 0.3 * cume(n2(x)) + 0.15 * detalhe * n3(x));
     if (sela) y += sela.fundo * Math.exp(-(((x - sela.x) / sela.larg) ** 2));
     d += ` L${x} ${y.toFixed(1)}`;
   }
@@ -74,7 +74,7 @@ function cordilheira(semente: number, base: number, amp: number, sela?: { x: num
 }
 const SERRAS = [
   cordilheira(11, 236, 44, { x: 1010, fundo: 30, larg: 130 }),
-  cordilheira(23, 256, 22),
+  cordilheira(23, 256, 22, undefined, 0.2),
 ];
 
 /** Paisagem do hero: Serra do Mar ao fundo, manguezal, água e guarás. Camadas em paralaxe com a rolagem. */

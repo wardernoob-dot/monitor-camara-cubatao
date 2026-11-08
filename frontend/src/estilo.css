@@ -1448,3 +1448,8 @@ input:not([type="checkbox"]):not([type="radio"]), textarea { cursor: text; }
 :root { --m1: #bed2c5; --m3: #a6c6b5; --base-frente: #6f9784; }
 :root[data-tema="dark"] { --base-frente: var(--neblina); }
 @media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --base-frente: var(--neblina); } }
+
+/* serra da frente (tema claro): verde mais claro e acinzentado, base menos pesada */
+:root { --m3: #b4cdbf; --base-frente: #8fb2a2; }
+:root[data-tema="dark"] { --m3: #1a2652; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --m3: #1a2652; } }
