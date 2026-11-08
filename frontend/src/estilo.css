@@ -1414,3 +1414,12 @@ html, body { overflow-x: clip; }
 :root { --m1: #e6b3ad; --m2: #d19ba9; --m3: #b6849f; --m4: #8f6a8c; --neblina: #f4c1a0; --mangue: #5f7e77; }
 :root[data-tema="dark"] { --m1: #2d3d78; --m2: #233267; --m3: #1a2652; --m4: #121b3b; --neblina: #2a3f78; --mangue: #0a1524; }
 @media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --m1: #2d3d78; --m2: #233267; --m3: #1a2652; --m4: #121b3b; --neblina: #2a3f78; --mangue: #0a1524; } }
+
+/* hero discreto: a paisagem e so pano de fundo; o foco e o titulo e os botoes */
+.hero { --alt-paisagem: clamp(7rem, 20vh, 12rem); }
+.ave--4, .ave--5 { display: none; }
+.ave--1 { top: 22%; } .ave--2 { top: 8%; } .ave--3 { top: 34%; }
+.hero { background:
+  radial-gradient(46rem 20rem at 71% 90%, color-mix(in srgb, var(--ceu-brilho) 55%, transparent), transparent 70%),
+  linear-gradient(180deg, var(--ceu-0) 0%, var(--ceu-1) 58%, var(--ceu-2) 88%, var(--ceu-3) 100%); }
+:root { --m1: #efc9c0; --m3: #dcaab6; }

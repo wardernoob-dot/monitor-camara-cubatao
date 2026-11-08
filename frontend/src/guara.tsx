@@ -86,12 +86,9 @@ function copas(semente: number, y0: number) {
   return `${d} L1440 300Z`;
 }
 const SERRAS = [
-  cordilheira(11, 172, 78, { x: 1010, fundo: 52, larg: 120 }),
-  cordilheira(23, 200, 62, { x: 1010, fundo: 30, larg: 150 }),
-  cordilheira(37, 228, 46),
-  cordilheira(41, 252, 30),
+  cordilheira(11, 236, 44, { x: 1010, fundo: 30, larg: 130 }),
+  cordilheira(23, 268, 24),
 ];
-const COPAS = copas(7, 272);
 
 /** Paisagem do hero: Serra do Mar ao fundo, manguezal, água e guarás. Camadas em paralaxe com a rolagem. */
 export function Paisagem() {
@@ -129,29 +126,22 @@ export function Paisagem() {
             <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
           </linearGradient>
         </defs>
-        <circle cx="1010" cy="190" r="210" fill="url(#sol-halo)" />
-        <circle cx="1010" cy="190" r="46" fill="var(--sol)" />
+        <circle cx="1010" cy="234" r="150" fill="url(#sol-halo)" opacity=".7" />
+        <circle cx="1010" cy="236" r="32" fill="var(--sol)" />
         <g className="lua-crateras" fill="#8fa0c8" fillOpacity=".28">
-          <circle cx="994" cy="176" r="9" /><circle cx="1024" cy="170" r="6" /><circle cx="1012" cy="196" r="12" /><circle cx="988" cy="200" r="5" />
+          <circle cx="1001" cy="226" r="6" /><circle cx="1019" cy="222" r="4" /><circle cx="1011" cy="242" r="8" />
         </g>
         <motion.g style={p(longe)}>
           <path d={SERRAS[0]} fill="url(#m1)" />
-          <path d={SERRAS[1]} fill="url(#m2)" />
         </motion.g>
         <motion.g style={p(meio)}>
-          <path d={SERRAS[2]} fill="url(#m3)" />
-          <path d={SERRAS[3]} fill="url(#m4)" />
-        </motion.g>
-        <motion.g style={p(perto)}>
-          <path d={COPAS} fill="var(--mangue)" />
+          <path d={SERRAS[1]} fill="url(#m3)" />
         </motion.g>
       </svg>
       <motion.div className="paisagem__aves" style={reduz ? undefined : { y: aves }}>
-        <GuaraVoo tamanho={58} atraso={0} className="ave ave--1" />
-        <GuaraVoo tamanho={40} atraso={-0.35} className="ave ave--2" />
-        <GuaraVoo tamanho={46} atraso={-0.7} className="ave ave--3" />
-        <GuaraVoo tamanho={30} atraso={-0.2} className="ave ave--4" />
-        <GuaraVoo tamanho={34} atraso={-0.55} className="ave ave--5" />
+        <GuaraVoo tamanho={44} atraso={0} className="ave ave--1" />
+        <GuaraVoo tamanho={30} atraso={-0.35} className="ave ave--2" />
+        <GuaraVoo tamanho={36} atraso={-0.7} className="ave ave--3" />
       </motion.div>
     </div>
   );
