@@ -40,6 +40,59 @@ export function GuaraVoo({ tamanho = 48, atraso = 0, className = "", style }: { 
   );
 }
 
+/* Serra do Mar: cordilheiras geradas por ruído determinístico (sempre iguais). Cada camada tem cumes naturais e some na neblina. */
+function sorteio(semente: number) {
+  let a = semente | 0;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function ruido(semente: number, escala: number) {
+  const r = sorteio(semente);
+  const pts = Array.from({ length: Math.ceil(1440 / escala) + 3 }, () => r());
+  return (x: number) => {
+    const u = x / escala;
+    const i = Math.floor(u);
+    const f = u - i;
+    const s = f * f * (3 - 2 * f);
+    return pts[i] * (1 - s) + pts[i + 1] * s;
+  };
+}
+function cordilheira(semente: number, base: number, amp: number, sela?: { x: number; fundo: number; larg: number }) {
+  const n1 = ruido(semente, 300), n2 = ruido(semente + 1, 120), n3 = ruido(semente + 2, 46);
+  const cume = (v: number) => 1 - Math.abs(2 * v - 1);
+  let d = "M0 300";
+  for (let x = 0; x <= 1440; x += 6) {
+    let y = base - amp * (0.55 * cume(n1(x)) + 0.3 * cume(n2(x)) + 0.15 * n3(x));
+    if (sela) y += sela.fundo * Math.exp(-(((x - sela.x) / sela.larg) ** 2));
+    d += ` L${x} ${y.toFixed(1)}`;
+  }
+  return `${d} L1440 300Z`;
+}
+/** Copas do manguezal: arcos pequenos e irregulares ao longo da margem. */
+function copas(semente: number, y0: number) {
+  const r = sorteio(semente);
+  let x = 0;
+  let d = `M0 300 L0 ${y0}`;
+  while (x < 1440) {
+    const dx = 16 + r() * 22;
+    const h = 7 + r() * 15;
+    d += ` Q${(x + dx / 2).toFixed(1)} ${(y0 - h).toFixed(1)} ${(x + dx).toFixed(1)} ${y0}`;
+    x += dx;
+  }
+  return `${d} L1440 300Z`;
+}
+const SERRAS = [
+  cordilheira(11, 172, 78, { x: 1010, fundo: 52, larg: 120 }),
+  cordilheira(23, 200, 62, { x: 1010, fundo: 30, larg: 150 }),
+  cordilheira(37, 228, 46),
+  cordilheira(41, 252, 30),
+];
+const COPAS = copas(7, 272);
+
 /** Paisagem do hero: Serra do Mar ao fundo, manguezal, água e guarás. Camadas em paralaxe com a rolagem. */
 export function Paisagem() {
   const reduz = useReducedMotion();
@@ -59,6 +112,22 @@ export function Paisagem() {
             <stop offset=".45" stopColor="var(--sol-halo)" stopOpacity=".3" />
             <stop offset="1" stopColor="var(--sol-halo)" stopOpacity="0" />
           </radialGradient>
+          <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="var(--m1)" />
+            <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
+          </linearGradient>
+          <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="var(--m2)" />
+            <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
+          </linearGradient>
+          <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="var(--m3)" />
+            <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
+          </linearGradient>
+          <linearGradient id="m4" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="var(--m4)" />
+            <stop offset=".85" stopColor="var(--neblina)" stopOpacity=".95" />
+          </linearGradient>
         </defs>
         <circle cx="1010" cy="190" r="210" fill="url(#sol-halo)" />
         <circle cx="1010" cy="190" r="46" fill="var(--sol)" />
@@ -66,13 +135,15 @@ export function Paisagem() {
           <circle cx="994" cy="176" r="9" /><circle cx="1024" cy="170" r="6" /><circle cx="1012" cy="196" r="12" /><circle cx="988" cy="200" r="5" />
         </g>
         <motion.g style={p(longe)}>
-          <path transform="translate(0 300) scale(1 .62) translate(0 -300)" d="M0 150 C80 120 140 96 210 112 C290 130 330 70 420 64 C520 58 560 108 650 120 C740 132 790 84 880 80 C980 76 1020 128 1110 132 C1210 136 1260 92 1340 98 C1390 102 1420 118 1440 124 V300 H0Z" fill="var(--serra-3)" />
+          <path d={SERRAS[0]} fill="url(#m1)" />
+          <path d={SERRAS[1]} fill="url(#m2)" />
         </motion.g>
         <motion.g style={p(meio)}>
-          <path transform="translate(0 300) scale(1 .62) translate(0 -300)" d="M0 196 C90 170 170 150 260 166 C360 184 420 132 520 128 C620 124 680 176 780 176 C880 176 940 132 1040 136 C1150 140 1210 184 1320 176 C1380 172 1415 160 1440 156 V300 H0Z" fill="var(--serra-2)" />
+          <path d={SERRAS[2]} fill="url(#m3)" />
+          <path d={SERRAS[3]} fill="url(#m4)" />
         </motion.g>
         <motion.g style={p(perto)}>
-          <path transform="translate(0 14)" d="M0 232 C60 222 110 214 160 220 C200 202 250 198 292 214 C334 196 392 196 430 216 C480 204 540 204 580 222 C640 206 700 206 742 222 C800 204 870 206 914 224 C972 208 1036 208 1078 224 C1130 208 1196 210 1236 226 C1300 214 1370 214 1440 230 V300 H0Z" fill="var(--mangue)" />
+          <path d={COPAS} fill="var(--mangue)" />
         </motion.g>
       </svg>
       <motion.div className="paisagem__aves" style={reduz ? undefined : { y: aves }}>

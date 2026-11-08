@@ -1409,3 +1409,8 @@ html, body { overflow-x: clip; }
     radial-gradient(1.2px 1.2px at 96% 14%, #fff 60%, transparent 62%), radial-gradient(1px 1px at 5% 64%, #cfdcff 60%, transparent 62%); } }
 .hero__texto { font-size: clamp(1.05rem, 2.7vh, 1.3rem); max-width: 40rem; }
 .hero__texto { max-width: 48rem; }
+
+/* cores das camadas da serra (de longe para perto) e da neblina onde elas se desfazem */
+:root { --m1: #e6b3ad; --m2: #d19ba9; --m3: #b6849f; --m4: #8f6a8c; --neblina: #f4c1a0; --mangue: #5f7e77; }
+:root[data-tema="dark"] { --m1: #2d3d78; --m2: #233267; --m3: #1a2652; --m4: #121b3b; --neblina: #2a3f78; --mangue: #0a1524; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) { --m1: #2d3d78; --m2: #233267; --m3: #1a2652; --m4: #121b3b; --neblina: #2a3f78; --mangue: #0a1524; } }
