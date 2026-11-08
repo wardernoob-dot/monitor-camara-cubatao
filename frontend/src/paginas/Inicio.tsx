@@ -43,7 +43,7 @@ const luz = (e: React.PointerEvent<HTMLElement>) => {
 
 const PASSOS: { n: string; titulo: string; texto: ReactNode }[] = [
   { n: "01", titulo: "Documentos oficiais", texto: <>Pautas, resumos de sessão, projetos e <Termo chave="diario">Diário Oficial</Termo>, guardados com um código de verificação (<Termo chave="sha256">SHA-256</Termo>).</> },
-  { n: "02", titulo: "Painel da transmissão", texto: <>O voto de cada vereador é lido pela cor do quadrado no <Termo chave="painel">painel</Termo> do YouTube, sem IA.</> },
+  { n: "02", titulo: "Painel da transmissão", texto: <>Desde setembro de 2026, o voto vem da cor do quadrado no <Termo chave="painel">painel</Termo> do YouTube, sem IA. Antes disso, vem do resumo oficial.</> },
   { n: "03", titulo: "Conferência", texto: <>Painel e <Termo chave="resumo">resumo oficial</Termo> ficam lado a lado, e as divergências aparecem na tela.</> },
   { n: "04", titulo: "Fonte à vista", texto: "Todo voto mostra de onde veio: painel da transmissão ou resumo oficial." },
 ];
