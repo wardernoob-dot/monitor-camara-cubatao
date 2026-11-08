@@ -76,3 +76,18 @@ def test_reportagens_do_repo_sao_validas():
         if not arq.name.upper().startswith("LEIA"):
             RP.ler(arq)
             assert any((RP.PASTA / "fotos").glob(f"{arq.stem}.*")), f"falta foto de {arq.stem}"
+
+
+def test_revisao_derruba_frase_sem_trecho_no_documento():
+    from camara import revisao_reportagens as RV
+    docs = {"lei": "Art. 4º Fica criada a campanha educativa permanente de conscientização sobre os riscos das apostas."}
+    saida = {"blocos": [
+        {"tipo": "h", "texto": "O que muda"},
+        {"tipo": "p", "texto": "Cria campanha.", "fontes": [{"doc": "lei", "trecho": "Fica criada a campanha educativa permanente de conscientização"}]},
+        {"tipo": "p", "texto": "Inventado.", "fontes": [{"doc": "lei", "trecho": "o prefeito prometeu dez milhoes de reais"}]},
+        {"tipo": "h", "texto": "Seção vazia"},
+        {"tipo": "ul", "itens": [{"texto": "Sem fonte.", "fontes": []}]},
+    ]}
+    blocos, rel = RV.conferir(saida, docs)
+    assert blocos == [{"t": "h", "x": "O que muda"}, {"t": "p", "x": "Cria campanha."}]
+    assert [x["mantido"] for x in rel] == [True, False, False]
