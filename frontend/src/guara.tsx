@@ -73,15 +73,6 @@ export function Paisagem() {
         </motion.g>
         <motion.g style={p(perto)}>
           <path d="M0 232 C60 222 110 214 160 220 C200 202 250 198 292 214 C334 196 392 196 430 216 C480 204 540 204 580 222 C640 206 700 206 742 222 C800 204 870 206 914 224 C972 208 1036 208 1078 224 C1130 208 1196 210 1236 226 C1300 214 1370 214 1440 230 V300 H0Z" fill="var(--mangue)" />
-          <path d="M0 262 H1440 V300 H0Z" fill="var(--agua)" />
-          <g stroke="var(--agua-brilho)" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" opacity=".5">
-            <path d="M118 275q9-4 18 0t18 0t18 0" />
-            <path d="M352 284q8-3.5 16 0t16 0" />
-            <path d="M590 273q8-3.5 16 0t16 0t16 0t16 0" />
-            <path d="M846 282q9-4 18 0t18 0" />
-            <path d="M1176 274q8-3.5 16 0t16 0t16 0" />
-            <path d="M1318 285q8-3.5 16 0t16 0" />
-          </g>
         </motion.g>
       </svg>
       <motion.div className="paisagem__aves" style={reduz ? undefined : { y: aves }}>
