@@ -89,8 +89,6 @@ const SERRAS = [
   cordilheira(11, 236, 44, { x: 1010, fundo: 30, larg: 130 }),
   cordilheira(23, 256, 22),
 ];
-const COPAS_FUNDO = copas(7, 262);
-const COPAS_FRENTE = copas(19, 278);
 
 /** Paisagem do hero: Serra do Mar ao fundo, manguezal, água e guarás. Camadas em paralaxe com a rolagem. */
 export function Paisagem() {
@@ -138,10 +136,6 @@ export function Paisagem() {
         </motion.g>
         <motion.g style={p(meio)}>
           <path d={SERRAS[1]} fill="url(#m3)" />
-        </motion.g>
-        <motion.g style={p(perto)}>
-          <path d={COPAS_FUNDO} fill="var(--mangue)" opacity=".72" />
-          <path d={COPAS_FRENTE} fill="var(--mangue)" />
         </motion.g>
       </svg>
       <motion.div className="paisagem__aves" style={reduz ? undefined : { y: aves }}>
