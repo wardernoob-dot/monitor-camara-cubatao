@@ -37,22 +37,6 @@ export function GradeHero() {
   return <canvas ref={ref} className="hero__grade" aria-hidden="true" />;
 }
 
-/* ------------------------------------------------------------------ poeira do rodape */
-export function PoeiraRodape() {
-  const pts = useMemo(() => Array.from({ length: 100 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.2 + 0.3 })), []);
-  const ref = useLacoCanvas((ctx, w, h) => {
-    ctx.fillStyle = "rgba(250,250,250,0.35)";
-    for (const p of pts) {
-      p.y -= 0.2 / h;
-      if (p.y < 0) p.y = 1;
-      ctx.beginPath();
-      ctx.arc(p.x * w, p.y * h, p.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  });
-  return <canvas ref={ref} className="rodape__poeira" aria-hidden="true" />;
-}
-
 /* ------------------------------------------------------------------ sparkline */
 export function Sparkline({ serie, cor: corProp, rotulo, formato }: { serie: Ponto[]; cor?: string; rotulo: string; formato: (p: Ponto) => string }) {
   const tema = useTema();

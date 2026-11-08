@@ -7,7 +7,6 @@ import "@fontsource/geist-sans/600.css";
 import "@fontsource/geist-mono/400.css";
 import "./estilo.css";
 import { ProvedorDados, useDados } from "./dados";
-import { PoeiraRodape } from "./viz";
 import { Busca, BotaoBusca } from "./busca";
 import { BotaoTema } from "./tema";
 import { BotaoPergunta, Pergunta } from "./pergunta";
@@ -59,7 +58,6 @@ function Rodape() {
       <svg className="rodape__mangue" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0 80V46C60 38 100 30 150 38C190 18 240 16 280 36C330 16 390 16 430 38C480 26 540 26 580 42C640 26 700 26 742 42C800 24 870 26 914 44C972 28 1036 28 1078 44C1130 28 1196 30 1236 46C1300 34 1370 34 1440 50V80Z" fill="var(--rodape-mangue)" />
       </svg>
-      <PoeiraRodape />
       <div className="rodape__dentro">
         <div className="rodape__grade">
           <div className="rodape__marca">

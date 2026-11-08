@@ -75,7 +75,6 @@ main:focus { outline: none; }
 .topo nav a[aria-current="page"] { color: var(--color-ink); background: var(--suave-2); }
 
 .rodape { position: relative; overflow: hidden; background: var(--inverso); color: #a1a1a1; margin-top: 6rem; font-size: .92rem; }
-.rodape__poeira { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .rodape__dentro { position: relative; max-width: var(--larg-pagina); margin: 0 auto; padding: 3rem 1.25rem 3.5rem; }
 .rodape__dentro p { max-width: var(--larg-texto); }
 .rodape__links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
@@ -970,7 +969,6 @@ form.busca input, form.busca select { width: 100%; min-width: 0; }
 /* rodape com manguezal */
 .rodape { overflow: visible; margin-top: 8rem; color: #9b9da4; }
 .rodape__mangue { position: absolute; left: 0; top: -79px; width: 100%; height: 80px; display: block; pointer-events: none; }
-.rodape__poeira { border-radius: 0; }
 .rodape__dentro { padding: 4rem 1.25rem 2.5rem; }
 .rodape__grade { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.1fr; gap: 3rem; }
 .rodape__marca { position: relative; }
@@ -1484,6 +1482,3 @@ input:not([type="checkbox"]):not([type="radio"]), textarea { cursor: text; }
 .rodape__col a:hover { color: var(--rd-hover); }
 .rodape__glifo { background: var(--rd-tile-bg); border-color: var(--rd-tile-borda); }
 .rodape__base { border-top-color: var(--rd-linha); }
-.rodape__poeira { display: none; }
-:root[data-tema="dark"] .rodape__poeira { display: block; }
-@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) .rodape__poeira { display: block; } }
