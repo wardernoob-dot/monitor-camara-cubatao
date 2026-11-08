@@ -30,7 +30,7 @@ O orçamento da cidade funciona como uma lei anual de planejamento financeiro.
 
 Antes da nova lei, o prefeito só podia reforçar contas até o teto de 10% do gasto total.
 
-Agora, o Executivo pode remanejar até 19% das despesas totais por meio de decreto próprio.
+Agora, o prefeito pode reforçar despesas (abrir créditos suplementares) em até 19% da despesa total, por decreto, sem nova votação na Câmara.
 
 Na Administração Direta, o limite de 19% calcula-se sobre os órgãos municipais, com exceção do Legislativo.
 
@@ -44,9 +44,9 @@ A definição do novo índice aconteceu após três projetos tramitarem no Legis
 
 - Em 15 de setembro, a Câmara aprovou o Projeto de Lei 74/2026 em duas discussões, por 11 a 3.
 - Esse projeto virou a Lei 4.481, que elevou para 20% o teto na Lei de Diretrizes Orçamentárias.
-- Em 20 de outubro, o plenário rejeitou o Projeto de Lei 87/2026 por 8 votos a 6.
+- Em 20 de outubro, o plenário rejeitou o Projeto de Lei 87/2026: o parecer favorável a ele teve 6 votos a favor e 8 contra.
 - O PL 87 pretendia fixar o limite de 20% também na Lei Orçamentária Anual da cidade.
-- Em 29 de outubro, o prefeito apresentou nova proposta com percentual de 19%, aprovada pelos vereadores.
+- Em 29 de outubro, a Câmara aprovou o Projeto de Lei 92/2026, nova proposta do prefeito com limite de 19%. Ele virou a Lei 4.487.
 
 ## Como foi a votação do projeto final
 

@@ -67,7 +67,7 @@ Por fim, a Procuradoria garantiu que cortar o parágrafo não atrapalha as açõ
 
 Os custos para colocar as medidas em prática serão pagos com os recursos do próprio orçamento de Cubatão.
 
-A lei não criou taxas nem custos extras específicos para os moradores da cidade.
+A lei não cria nenhuma taxa ou cobrança para os moradores.
 
 ## O que o autor disse para justificar
 

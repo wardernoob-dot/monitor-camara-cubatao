@@ -30,7 +30,7 @@ Quem estacionar o carro em ruas demarcadas precisará pagar uma tarifa de estaci
 
 Ao quitar o valor, o motorista receberá um comprovante físico ou digital. O documento trará o tempo e o local da parada.
 
-Esse comprovante servirá para a fiscalização dos fiscais nas ruas. O pagamento usará meios físicos ou digitais.
+Esse comprovante serve para a fiscalização conferir se o carro está dentro do tempo pago. O pagamento poderá ser feito por meios físicos ou digitais.
 
 A Companhia Municipal de Trânsito (CMT) vai fiscalizar e monitorar todo o serviço na cidade.
 
@@ -67,7 +67,7 @@ A lei tem um alerta de risco importante para quem deixar o automóvel estacionad
 
 A Prefeitura e a empresa contratada não indenizarão motoristas por batidas, furtos, roubos ou danos ao veículo.
 
-Haverá pagamento de indenização somente se o dono do veículo provar que a concessionária causou o dano diretamente.
+A única exceção é quando ficar comprovado que a empresa teve culpa direta pelo problema.
 
 ## De onde sai o dinheiro e valor da tarifa
 
@@ -87,7 +87,7 @@ Vários pontos práticos sobre o funcionamento diário do sistema ainda dependem
 
 ## O que o autor disse para justificar
 
-O prefeito encaminhou o projeto de lei à Câmara Municipal no dia 22 de dezembro de 2025.
+O prefeito assinou o projeto de lei em 22 de dezembro de 2025 e o enviou à Câmara.
 
 Segundo o prefeito, a proposta busca racionalizar o uso das vagas públicas em bairros com muito fluxo de veículos.
 

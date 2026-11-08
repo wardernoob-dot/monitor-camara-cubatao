@@ -72,11 +72,14 @@ A votação final aconteceu no dia 20 de outubro de 2026. Os vereadores votaram 
 
 ## O resultado da votação e o que acontece agora
 
-Com a aprovação do parecer contrário, o projeto foi arquivado pela Câmara de Cubatão. A Prefeitura não poderá contratar o empréstimo de 500 milhões com a Caixa por essa lei. Para tentar nova dívida, o prefeito terá de apresentar uma nova proposta aos vereadores.
+Com a aprovação do parecer contrário, o projeto foi rejeitado pela Câmara de Cubatão. Sem essa lei, a Prefeitura não tem autorização para contratar o empréstimo de até 500 milhões com a Caixa.
 
 ## Palavras difíceis explicadas
 
-Operação de crédito: empréstimo bancário contratado por um órgão público junto a uma instituição financeira. Despesa de capital: gasto público voltado para obras, compra de bens ou investimentos duradouros. Contragarantia: garantia que a Prefeitura oferece à União para cobrir eventuais calotes no financiamento. Impacto plurianual: efeito financeiro que uma dívida causa nas contas públicas durante vários anos futuros.
+- Operação de crédito: empréstimo bancário contratado por um órgão público junto a uma instituição financeira.
+- Despesa de capital: gasto público voltado para obras, compra de bens ou investimentos duradouros.
+- Contragarantia: garantia que a Prefeitura oferece à União, caso a União tenha de pagar a dívida no lugar da cidade.
+- Impacto plurianual: efeito que uma dívida causa nas contas públicas durante vários anos.
 
 ## Documentos
 
