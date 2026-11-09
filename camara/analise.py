@@ -310,6 +310,43 @@ def transcrever_projetos(dados: Path, slugs_sem_autor: set[str], limite: int = 2
     return rel
 
 
+def leis_publicadas(dados: Path) -> dict[str, dict]:
+    """{chave da materia: {"numero", "texto"}} para os projetos que ja viraram lei e cujo texto esta em data/diario.
+    A analise usa o texto da LEI (o que vale, depois das emendas); o projeto original fica so para a justificativa."""
+    from . import site  # import tardio: site importa este modulo
+
+    out = {}
+    pasta = (Path(dados) / "diario").resolve()
+    for m in site.montar(dados).materias.values():
+        lei = m.get("lei") or {}
+        mid = re.search(r"[?&]id=(\d+)", lei.get("url") or "")
+        if not (mid and m.get("numero") and m.get("ano")):
+            continue
+        arq = (pasta / f"{mid.group(1)}.json").resolve()
+        if arq.is_relative_to(pasta) and arq.exists():
+            pub = json.loads(arq.read_text("utf-8"))
+            texto = flat(normalize(f"{pub.get('titulo') or ''}\n{pub.get('texto') or ''}"))
+            if len(texto) > 400:
+                out[chave_materia(m["tipo"], m["numero"], m["ano"])] = {"numero": lei.get("numero"), "texto": texto}
+    return out
+
+
+def com_lei(doc: dict, lei: dict | None) -> dict:
+    """Junta o texto da lei (primeiro, e e o que vale) ao documento do projeto."""
+    if not lei:
+        return doc
+    if not doc or doc.get("so_ementa"):  # projeto sem PDF legivel, mas a lei esta publicada: explica pela lei
+        return {"texto": f"TEXTO DA LEI {lei['numero']} (Diario Oficial): {lei['texto'][:MAX_DOC]}", "so_ementa": False,
+                "fonte": "texto da lei publicada no Diario Oficial", "url": (doc or {}).get("url")}
+    cab = (f"ATENCAO: este projeto ja virou a Lei {lei['numero']}. O TEXTO DA LEI abaixo e o que vale; quando ele diferir "
+           "do projeto original (datas, valores, artigos mudados por emenda), use o da lei. Use o PROJETO ORIGINAL "
+           "apenas para a justificativa do autor.")
+    t_lei = lei["texto"][: MAX_DOC * 2 // 3]
+    texto = f"{cab} === TEXTO DA LEI {lei['numero']} (Diario Oficial) === {t_lei} === PROJETO ORIGINAL E JUSTIFICATIVA === {doc['texto']}"
+    return {**doc, "texto": texto[: MAX_DOC + len(cab) + 200],
+            "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto"}
+
+
 def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: float = 4.0, http=None) -> dict:
     """Analisa as materias votadas que aparecem no consolidado e ainda nao tem analise valida."""
     dados = Path(dados)
@@ -318,6 +355,11 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
     corpo, versao = _prompt()
     rel = {"novas": 0, "em_cache": 0, "sem_documento": 0, "ocr": 0, "erros": []}
     vistas = set()
+    try:
+        leis = leis_publicadas(dados)
+    except Exception as e:  # noqa: BLE001 - sem o vinculo com a lei a analise segue so com o projeto
+        print(f"  ! leis publicadas: {e!r}"[:200])
+        leis = {}
 
     def candidatos():
         # 1) votadas (consolidado), mais recentes primeiro; 2) qualquer projeto publicado no site da Camara
@@ -347,7 +389,7 @@ def analisar_tudo(dados: Path, limite: int = 15, limite_ocr: int = 10, pausa: fl
                         time.sleep(pausa)
                 except Exception as e:  # noqa: BLE001
                     rel["erros"].append(f"ocr {k}: {e!r}"[:200])
-            doc = documento(dados, m["tipo"], m["numero"], m.get("ano"), m.get("assunto"))
+            doc = com_lei(documento(dados, m["tipo"], m["numero"], m.get("ano"), m.get("assunto")), leis.get(k))
             if not doc or doc["so_ementa"]:
                 # so a ementa (PDF escaneado sem transcricao ainda): nao analisa; a ementa da pauta as vezes
                 # vem cortada (PL 79/2026: "REGULAMENTADOS PELA CVM") e o modelo teria que adivinhar

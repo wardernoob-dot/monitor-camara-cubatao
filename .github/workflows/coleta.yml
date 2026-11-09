@@ -55,7 +55,7 @@ jobs:
           git config user.email "monitor-camara-bot@users.noreply.github.com"
           git add data/
           if ! git diff --cached --quiet; then
-            git add docs/data/
+            git add docs/data/ docs/r docs/v docs/p docs/fotos docs/reportagens.xml
             git commit -m "dados: coleta $(date -u +%Y-%m-%d)"
             # outro workflow (publicar-surge) pode ter commitado durante a coleta: rebase e tenta de novo
             for i in 1 2 3; do
@@ -64,6 +64,25 @@ jobs:
             done
           else
             echo "Nada novo hoje."
+          fi
+
+      # O painel de votacao so e lido se o script do PC (pc/) atualizar data/storyboard_specs.json: o YouTube
+      # bloqueia o Actions. Se o arquivo ficar parado mais de 10 dias fora do recesso, abre um aviso.
+      - name: Avisar se o script do PC parou
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mes=$(date -u +%-m)
+          if [ "$mes" = "1" ] || [ "$mes" = "7" ]; then echo "recesso; sem conferencia"; exit 0; fi
+          # o checkout e raso (so o ultimo commit), entao a data vem da API
+          quando=$(gh api "repos/$GITHUB_REPOSITORY/commits?path=data/storyboard_specs.json&per_page=1" --jq '.[0].commit.committer.date')
+          dias=$(( ( $(date -u +%s) - $(date -u -d "$quando" +%s) ) / 86400 ))
+          echo "storyboard_specs.json atualizado ha $dias dia(s)"
+          if [ "$dias" -gt 10 ]; then
+            aberta=$(gh issue list --state open --search "painel parado in:title" --json number --jq '.[0].number // empty')
+            [ -n "$aberta" ] && exit 0
+            gh issue create --title "painel parado: script do PC sem atualizar ha $dias dias" --body "O arquivo data/storyboard_specs.json nao muda ha $dias dias. Sem ele o site nao le o painel das sessoes novas e mostra so o resumo oficial. Conferir se o PC esta ligado e se a tarefa agendada (pc/LEIA-ME.md) esta rodando."
           fi
 
       # Espelho do site em votoavoto.surge.sh. Publica o docs/ recem-gerado nesta rodada.

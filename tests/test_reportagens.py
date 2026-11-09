@@ -91,3 +91,30 @@ def test_revisao_derruba_frase_sem_trecho_no_documento():
     blocos, rel = RV.conferir(saida, docs)
     assert blocos == [{"t": "h", "x": "O que muda"}, {"t": "p", "x": "Cria campanha."}]
     assert [x["mantido"] for x in rel] == [True, False, False]
+
+
+
+def test_paginas_de_previa_e_rss(tmp_path):
+    from camara import compartilhar as CP
+    pacote = {
+        "reportagens": [
+            {"id": "bets", "status": "publicado", "data": "2026-11-08", "manchete": 'Lei "nova" <b>', "linha_fina": "Linha"},
+            {"id": "rasc", "status": "rascunho", "data": "2026-11-08", "manchete": "x", "linha_fina": "y"}],
+        "vereadores": [{"slug": "fulano", "exibicao": "Fulano", "partido": "PSD", "em_exercicio": True, "foto": None,
+                        "sessoes_total": 10, "presenca": {"sim": 9}, "projetos": ["pl-1-2026"], "leis": 1}],
+        "materias": [{"slug": "pl-1-2026", "titulo": "PL 1/2026", "situacao": "Protocolado", "lista": True,
+                      "explicacao": {"texto": "Cria um programa. " * 30}, "assunto": "x"},
+                     {"slug": "rq-9-2026", "titulo": "RQ 9", "situacao": "x", "lista": False, "explicacao": None, "assunto": ""}],
+    }
+    assert CP.gerar(pacote, docs=tmp_path) == {"reportagens": 1, "vereadores": 1, "projetos": 1}
+    h = (tmp_path / "r" / "bets" / "index.html").read_text("utf-8")
+    assert 'og:image" content="https://votoavoto.surge.sh/fotos/previa/r-bets.jpg"' in h
+    assert "&lt;b&gt;" in h and "<b>" not in h                             # manchete escapada
+    assert 'url=../../#/reportagens/bets"' in h
+    assert not (tmp_path / "r" / "rasc").exists()                          # rascunho nao ganha link
+    v = (tmp_path / "v" / "fulano" / "index.html").read_text("utf-8")
+    assert "90% de presença" in v and "1 projeto apresentado, 1 virou lei" in v
+    p = (tmp_path / "p" / "pl-1-2026" / "index.html").read_text("utf-8")
+    assert "…" in p and not (tmp_path / "p" / "rq-9-2026").exists()
+    assert "<item>" in (tmp_path / "reportagens.xml").read_text("utf-8")
+    assert (tmp_path / "fotos" / "previa" / "v-fulano.jpg").exists() and (tmp_path / "fotos" / "previa" / "site.jpg").exists()

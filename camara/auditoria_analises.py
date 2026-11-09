@@ -77,10 +77,22 @@ def numeros_sem_base(analise: dict, texto: str) -> list[dict]:
     return out
 
 
+_LEIS: dict | None = None
+
+
+def _leis() -> dict:
+    global _LEIS
+    if _LEIS is None:
+        _LEIS = AN.leis_publicadas(DADOS)
+    return _LEIS
+
+
 def auditar(chave: str, http) -> dict:
     a = json.loads((DADOS / "analises" / f"{chave}.json").read_text("utf-8"))
     mt = a["materia"]
     doc = AN.documento(DADOS, mt["tipo"], mt["numero"], mt.get("ano"), mt.get("ementa"))
+    if "lei publicada" in (a.get("documento") or {}).get("fonte", ""):
+        doc = AN.com_lei(doc, _leis().get(chave))
     if not doc or doc.get("so_ementa"):
         return {"chave": chave, "pulado": "sem texto integral"}
     prompt = PROMPT.format(analise=json.dumps(a["analise"], ensure_ascii=False, indent=1), fonte=doc["fonte"],

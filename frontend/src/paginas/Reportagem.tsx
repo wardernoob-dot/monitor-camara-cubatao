@@ -4,6 +4,7 @@ import { Grade, NotaFonte } from "../componentes";
 import { Autoria, CorpoReportagem, Foto, PlacarRostos, Prefeito, situacaoCurta, classeSituacao, votacaoDa } from "../reportagens";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import NaoEncontrado from "./NaoEncontrado";
+import { Compartilhar } from "../compartilhar";
 
 export default function ReportagemPagina() {
   const { id } = useParams();
@@ -26,7 +27,7 @@ export default function ReportagemPagina() {
           </figcaption>
         </figure>
         <div className="pagina rp-pagina__cab">
-          <nav className="migalha" aria-label="Você está em"><Link to="/">Início</Link> / Reportagens</nav>
+          <nav className="migalha" aria-label="Você está em"><Link to="/reportagens">Reportagens</Link></nav>
           {r.status === "rascunho" && <p className="aviso-voto"><strong>Rascunho.</strong> Este texto ainda não foi aprovado e não aparece no site publicado.</p>}
           <p className="rp-pagina__topo-linha">
             {r.chapeu && <span className="rp__chapeu">{r.chapeu}</span>}
@@ -35,6 +36,7 @@ export default function ReportagemPagina() {
           <h1 className="titulo-pagina rp-pagina__manchete">{r.manchete}</h1>
           <p className="rp-pagina__fina">{r.linha_fina}</p>
           {principal && <div className="rp-pagina__autor"><Autoria m={principal} /></div>}
+          <Compartilhar tipo="r" id={r.id} titulo={r.manchete} />
           <p className="rp-pagina__data">Texto revisado em {dataExtenso(r.data)}. Situação, autoria e votos abaixo vêm direto dos documentos e são atualizados sozinhos.</p>
         </div>
       </header>
@@ -70,6 +72,7 @@ export default function ReportagemPagina() {
               <p><Link to={`/projetos/${ev.materia}`} className="link-seta">Ver todas as etapas do projeto <span aria-hidden="true">→</span></Link></p>
             </section>
           )}
+          <Compartilhar tipo="r" id={r.id} titulo={r.manchete} />
           <p className="nota rp-pagina__nota">
             Texto da equipe do Voto a voto, escrito a partir dos documentos oficiais linkados acima. Não diz se o projeto é bom ou ruim.
             Achou um erro? <a href={`${b.meta.repo}/issues`} rel="noopener">Avise</a>.

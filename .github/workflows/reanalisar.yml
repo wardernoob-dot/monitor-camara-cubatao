@@ -46,7 +46,7 @@ jobs:
         run: |
           git config user.name  "monitor-camara-bot"
           git config user.email "monitor-camara-bot@users.noreply.github.com"
-          git add data/ docs/data/
+          git add data/ docs/data/ docs/r docs/v docs/p docs/fotos docs/reportagens.xml
           git diff --cached --quiet && { echo "nada novo"; exit 0; }
           git commit -m "dados: analises refeitas com o prompt atual"
           for i in 1 2 3; do

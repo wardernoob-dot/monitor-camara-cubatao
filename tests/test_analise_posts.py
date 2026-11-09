@@ -80,3 +80,14 @@ def test_carregar_tipo_sem_analise_devolve_none(tmp_path):
     assert AN.carregar(tmp_path, "RQ", "2", "2026") is None
     with pytest.raises(ValueError):
         AN.chave_materia("../x", "1", "2026")
+
+
+def test_analise_de_projeto_que_virou_lei_usa_o_texto_da_lei_primeiro():
+    from camara import analise as A2
+    doc = {"texto": "PROJETO: efeitos a partir de 2026. JUSTIFICATIVA: organizar as vagas.", "fonte": "texto integral", "url": "u", "so_ementa": False}
+    r = A2.com_lei(doc, {"numero": "4.451", "texto": "LEI 4.451. Art. 15. Esta Lei entra em vigor em 1 de janeiro de 2027."})
+    assert r["texto"].index("2027") < r["texto"].index("efeitos a partir de 2026") and "lei publicada" in r["fonte"]
+    assert A2.com_lei(doc, None) is doc
+    so_lei = A2.com_lei({**doc, "so_ementa": True}, {"numero": "1", "texto": "Art. 1 cria o programa."})
+    assert so_lei["so_ementa"] is False and "cria o programa" in so_lei["texto"] and "PROJETO" not in so_lei["texto"]
+    assert A2.com_lei({}, {"numero": "1", "texto": "Art. 1"})["fonte"].startswith("texto da lei")

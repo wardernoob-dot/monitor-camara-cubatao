@@ -1,5 +1,6 @@
 import { CartaoIndice } from "../indice";
 import { Secao, abrirSecao } from "../secao";
+import { Compartilhar } from "../compartilhar";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
@@ -105,6 +106,7 @@ export default function VereadorPagina() {
           )}
         </div>
       </header>
+      <Compartilhar tipo="v" id={v.slug} titulo={`${v.exibicao}: como votou na Câmara de Cubatão`} />
 
       <dl className="numeros">
         <Num valor={v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0} rotulo="% de presença nas sessões" sufixo="%" para="presenca" />
