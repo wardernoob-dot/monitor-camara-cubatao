@@ -7,49 +7,51 @@
   "ementa": "ALTERA A REDAÇÃO DOS INCISOS I E II DO ART. 34 DA LEI MUNICIPAL Nº 4.387, DE 23 DE JULHO DE 2025, QUE DISPÕE SOBRE AS DIRETRIZES ORÇAMENTÁRIAS PARA O EXERCÍCIO FINANCEIRO DE 2026, AMPLIANDO DE 10% (DEZ POR CENTO) PARA 20% (VINTE POR CENTO) O LIMITE PARA ABERTURA DE CRÉDITOS ADICIONAIS SUPLEMENTARES E PARA TRANSPOSIÇÃO, REMANEJAMENTO E TRANSFERÊNCIA DE RECURSOS"
  },
  "documento": {
-  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-74.2026",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto de lei muda as regras do orçamento da cidade para o ano de 2026. Ele aumenta de 10% para 20% o limite que a prefeitura tem para remanejar dinheiro entre diferentes áreas. O objetivo é dar mais rapidez para a prefeitura usar os recursos já existentes. A medida não cria novos gastos e nem aumenta impostos.",
+  "resumo": "Este projeto altera a lei do orçamento da cidade para o ano de 2026. Ele aumenta de 10% para 20% o limite para a prefeitura remanejar dinheiro entre secretarias e reforçar verbas. Com isso, o prefeito ganha mais facilidade para mudar recursos de lugar sem precisar pedir autorização nova à Câmara de Vereadores. O objetivo é dar mais rapidez na execução de serviços e compras da prefeitura.",
   "o_que_muda": [
-   "O limite para abrir créditos adicionais suplementares sobe de 10% para 20% do total da despesa fixada.",
-   "O limite para transposição, remanejamento e transferência de recursos entre órgãos e categorias sobe de 10% para 20%.",
-   "A prefeitura pode fazer essas mudanças de recursos por meio de decreto."
+   "O limite para abrir créditos adicionais suplementares (dinheiro extra para reforçar uma verba que está acabando) sobe de 10% para 20% do total da despesa fixada.",
+   "O limite para fazer transposição, remanejamento ou transferência de recursos entre órgãos ou programas sobe de 10% para 20% do total da despesa fixada.",
+   "A prefeitura passa a poder fazer essas trocas de recursos diretamente por decreto do prefeito.",
+   "Continuam de fora do limite os gastos com pessoal, encargos sociais, previdência, dívida pública, precatórios e receitas vinculadas."
   ],
-  "quem_e_afetado": "A prefeitura ganha mais facilidade para mover dinheiro dentro do orçamento. Os moradores são afetados indiretamente pela velocidade na execução das políticas públicas. Despesas como pessoal, encargos sociais, benefícios previdenciários, PASEP, vale-transporte, dívida pública, precatórios e emendas impositivas ficam de fora e continuam com suas regras próprias.",
-  "de_onde_sai_o_dinheiro": "O texto não cria novos gastos. Os recursos vêm do próprio orçamento já previsto, podendo usar sobra de dinheiro do ano anterior, excesso de arrecadação, anulação de outras despesas ou empréstimos autorizados.",
+  "quem_e_afetado": "A prefeitura ganha mais liberdade para movimentar o dinheiro do orçamento municipal sem consultar os vereadores a cada mudança. A Câmara de Vereadores perde parte do controle direto sobre essas trocas pontuais de verba. Ficam de fora do limite várias despesas obrigatórias, como salários de servidores e pagamento de dívidas.",
+  "de_onde_sai_o_dinheiro": "O texto não cria novos gastos e usa o dinheiro já previsto no orçamento. As trocas saem do remanejamento de verbas existentes, de excesso de arrecadação ou de anulação de outras dotações.",
   "o_que_falta_definir": [
-   "Quais decretos específicos a prefeitura vai usar para fazer cada remanejamento de verba."
+   "Quais secretarias ou obras específicas vão receber o dinheiro remanejado em cada decreto.",
+   "Como será o detalhamento exato de cada transposição de recursos dentro do limite de 20%."
   ],
   "palavras_dificeis": [
    {
     "termo": "créditos adicionais suplementares",
-    "explicacao": "Dinheiro extra colocado em uma área do orçamento porque o valor original não foi suficiente."
+    "explicacao": "Dinheiro extra colocado em uma verba que já existe no orçamento para evitar que ela acabe antes do fim do ano."
    },
    {
     "termo": "transposição, remanejamento e transferência",
-    "explicacao": "Ato de tirar recursos de um órgão ou projeto e passar para outro."
+    "explicacao": "Ato de tirar dinheiro de uma secretaria ou projeto para colocar em outro."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Valor de dinheiro reservado no orçamento para pagar uma despesa específica."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, a experiência recente mostrou que o limite atual de 10% é insuficiente para atender às necessidades reais da gestão. O autor afirma que o limite baixo obriga a prefeitura a enviar vários projetos de lei pontuais para a Câmara, o que atrasa as políticas públicas. Ele também destaca que a mudança não aumenta a despesa total e respeita as regras da Lei de Responsabilidade Fiscal.",
+  "justificativa_do_autor": "Segundo o autor, o limite atual de 10% é insuficiente para atender às necessidades reais da gestão pública durante o ano. A falta de espaço engessa a administração e obriga o envio constante de pedidos de mudança à Câmara, o que atrasa obras e serviços. O autor destaca que a medida não aumenta os gastos totais e apenas reorganiza o dinheiro que já foi aprovado no orçamento.",
   "natureza": "orcamento_financas",
   "limitacoes": "",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto amplia de 10% para 20% a permissão para mover recursos no orçamento de 2026.",
-    "trecho": "ampliando de 10% (dez por cento) para 20% (vinte por cento) o limite para abertura de créditos adicionais suplementares"
-   },
-   {
-    "ponto": "O texto garante que gastos com pessoal, dívidas e precatórios continuam excluídos desse limite.",
-    "trecho": "permanecem excluídas do cômputo do limite as dotações destinadas a pessoal e encargos sociais, benefícios previdenciários, PASEP e vale transporte; serviços da Dívida Pública; requisitórios e precatórios judiciais"
+    "ponto": "A ampliação do limite para remanejar recursos passa a valer imediatamente na data em que a lei for publicada.",
+    "trecho": "Art. 2º Esta lei entra em vigor na data da sua publicação."
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "695630b60ba693e8",
- "gerado_em": "2026-11-08T03:24:20Z"
+ "hash_documento": "4a7dfd786ca93b10",
+ "gerado_em": "2026-11-09T23:11:19Z"
 }

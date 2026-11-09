@@ -7,53 +7,51 @@
   "ementa": "DISPÕE SOBRE A PROTEÇÃO E O BEM-ESTAR ANIMAL, VEDANDO O USO DE COLEIRAS ANTILATIDO E SIMILARES, BEM COMO COLEIRAS DO TIPO ENFORCADOR QUE POSSUAM GARRAS, PINOS OU ESPÍCULAS, NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto proíbe o uso de coleiras que machucam ou causam sofrimento aos animais em Cubatão. A regra vale para coleiras antilatido e enforcadores com pontas. O objetivo é proteger os bichos contra maus-tratos e dor.",
+  "resumo": "Esta lei proíbe o uso de coleiras que dão choques, barulhos, vibrações ou cheiros fortes nos animais em Cubatão. Também proíbe coleiras do tipo enforcador que tenham garras, pinos ou pontas machucantes. O objetivo é evitar a dor e o sofrimento dos bichos. A regra já está valendo desde o dia em que foi publicada.",
   "o_que_muda": [
-   "Fica proibido usar coleiras que emitem som, vibração, choque, luz ou cheiro para parar o latido.",
-   "Fica proibido usar qualquer coleira ou equipamento que cause sofrimento ou dano físico ao animal.",
-   "Fica proibido usar coleiras do tipo enforcador com garras, pinos ou espículas que machucam o bicho."
+   "Fica proibido o uso de coleiras antilatido ou similares com estímulos sonoros, vibratórios, elétricos, eletrônicos ou odoríferos.",
+   "Fica proibido o uso de coleiras do tipo enforcador que tenham garras, pinos, espículas ou materiais que machuquem o animal.",
+   "O dinheiro arrecadado com multas poderá ser usado para ações de proteção e bem-estar animal.",
+   "O prefeito tem um prazo de 90 dias para definir como será a fiscalização e as multas."
   ],
-  "quem_e_afetado": "Todos os donos de animais de estimação em Cubatão ganham a obrigação de não usar esses tipos de coleira. Os animais ganham o direito de não sofrer com esses aparelhos. O texto não diz quem fica de fora da regra.",
-  "de_onde_sai_o_dinheiro": "O texto diz que o dinheiro arrecadado com multas poderá pagar ações de proteção animal, mas não informa custos.",
+  "quem_e_afetado": "Todos os moradores e donos de animais de Cubatão ganham a obrigação de não usar esses tipos de coleira. Os animais ganham o direito de não sofrer com esses aparelhos. O texto não cita exceções sobre quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto diz que a prefeitura poderá usar o dinheiro arrecadado com as multas aplicadas por descumprimento para pagar ações de proteção aos animais.",
   "o_que_falta_definir": [
-   "Quais serão as multas exatas para quem descumprir a lei.",
-   "Como será feita a fiscalização no dia a dia.",
-   "O valor do dinheiro arrecadado com as punições."
+   "Quais serão os valores das multas para quem descumprir a lei.",
+   "Como a prefeitura vai fiscalizar o uso dessas coleiras no dia a dia."
   ],
   "palavras_dificeis": [
    {
     "termo": "espículas",
-    "explicacao": "Pequenas pontas agudas ou espinhos."
+    "explicacao": "Pequenas pontas ou espinhos que podem machucar."
    },
    {
     "termo": "Poder Executivo",
-    "explicacao": "A Prefeitura Municipal, responsável por administrar a cidade."
+    "explicacao": "A prefeitura, chefiada pelo prefeito."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o projeto protege o bem-estar dos animais e evita práticas cruéis. Ele afirma que latir é natural para os cães e punir isso gera dor e medo. O autor também diz que coleiras com pinos machucam o pescoço e causam estresse.",
+  "justificativa_do_autor": "Segundo o autor, o projeto protege os animais contra métodos que causam dor, sofrimento e medo de forma cruel e desnecessária. O autor afirma que latir é uma conduta natural dos cães e que reprimi-la com choques ou barulhos pune o animal. Além disso, segundo o texto, coleiras com garras ou pinos machucam a pele e o pescoço, gerando estresse e maus-tratos.",
   "natureza": "politica_publica",
-  "limitacoes": "O texto não informa quais serão os valores das multas e nem como a Prefeitura vai descobrir quem usa essas coleiras.",
+  "limitacoes": "O documento não informa quais são os valores exatos das multas nem como a fiscalização vai acontecer na prática, pois isso depende de um decreto futuro da prefeitura.",
   "pontos_de_atencao": [
    {
-    "ponto": "O Poder Executivo tem 90 dias para criar as regras de fiscalização e multas.",
+    "ponto": "O prefeito tem até 90 dias para criar as regras de fiscalização e multas.",
     "trecho": "O Poder Executivo regulamentará esta lei no prazo de 90 (noventa) dias, estabelecendo as medidas de fiscalização e as penalidades administrativas"
+   },
+   {
+    "ponto": "O dinheiro das multas pode ir para a proteção animal.",
+    "trecho": "O Poder Público poderá utilizar os valores eventualmente arrecadados com as penalidades administrativas para custear ações de proteção e bem-estar animal."
    }
   ],
-  "pontos_descartados": [
-   {
-    "ponto": "O texto não define um valor fixo para as multas aplicadas.",
-    "trecho": "O texto não informa valores de multas ou custos para aplicar a lei.",
-    "motivo": "trecho nao encontrado no documento"
-   }
-  ]
+  "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "7521d3fe39d74738",
- "gerado_em": "2026-11-08T03:31:57Z"
+ "hash_documento": "3b0462808a2c0318",
+ "gerado_em": "2026-11-09T23:16:47Z"
 }

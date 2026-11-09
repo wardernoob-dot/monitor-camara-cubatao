@@ -7,65 +7,51 @@
   "ementa": "DISPÕE SOBRE O RECONHECIMENTO DA ASSOCIAÇÃO CULTURAL FILHOS DE GANGA ZUMBA COMO PATRIMÔNIO CULTURAL IMATERIAL DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2052.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto declara a Associação Cultural Filhos de Ganga Zumba como patrimônio cultural imaterial (bens culturais formados por tradições e saberes) de Cubatão. O objetivo é valorizar a contribuição da entidade para a cultura afro-brasileira na cidade. A lei entra em vigor no dia em que for publicada.",
+  "resumo": "O projeto reconhece a Associação Cultural Filhos de Ganga Zumba como patrimônio cultural imaterial de Cubatão. O texto destaca o papel da entidade em preservar as tradições afro-brasileiras, a música e o carnaval. A lei entra em vigor logo na data da sua publicação. Na prática, a medida oficializa a importância cultural da associação para a cidade.",
   "o_que_muda": [
-   "A Associação Cultural Filhos de Ganga Zumba passa a ser reconhecida como patrimônio cultural imaterial do município.",
-   "O Poder Executivo (prefeitura) ganha o poder de regulamentar a lei no que couber.",
-   "Os gastos com a lei saem de dinheiro do orçamento já existente, que pode receber reforço."
+   "A Associação Cultural Filhos de Ganga Zumba passa a ser reconhecida oficialmente como Patrimônio Cultural Imaterial do município."
   ],
-  "quem_e_afetado": "A associação cultural é a principal afetada, pois ganha o título oficial de patrimônio. A prefeitura fica com a obrigação de organizar as regras da lei. O texto não exclui nenhum grupo específico.",
-  "de_onde_sai_o_dinheiro": "Segundo o texto, os gastos saem de verbas do próprio orçamento, que podem ser suplementadas (receber reforço).",
+  "quem_e_afetado": "A Associação Cultural Filhos de Ganga Zumba ganha o título oficial de patrimônio cultural. O texto não define obrigações novas para os moradores e nem exclui nenhum grupo específico.",
+  "de_onde_sai_o_dinheiro": "O texto da lei aprovada não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "Como o Poder Executivo vai regulamentar a lei.",
-   "Quais serão os valores exatos gastos para executar a lei."
+   "Como o Poder Executivo vai regulamentar a lei."
   ],
   "palavras_dificeis": [
    {
-    "termo": "Imaterial",
-    "explicacao": "Refere-se a bens culturais formados por tradições, saberes, festas e expressões artísticas que não são objetos físicos."
+    "termo": "imaterial",
+    "explicacao": "Algo que não tem corpo físico, como tradições, saberes e festas que a gente não consegue tocar."
    },
    {
     "termo": "Poder Executivo",
-    "explicacao": "É a prefeitura, o grupo responsável por administrar a cidade e colocar as leis em prática."
+    "explicacao": "A Prefeitura Municipal, que é quem administra a cidade e coloca as leis em prática."
    },
    {
-    "termo": "Dotações orçamentárias",
-    "explicacao": "São as partes do dinheiro do governo separadas para pagar gastos específicos."
+    "termo": "ancestralidade",
+    "explicacao": "A ligação com os antepassados, a história e as origens de um povo."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, a associação tem uma atuação muito importante na preservação e promoção da cultura afro-brasileira. Ele afirma que a entidade usa a música, a religiosidade e a arte para valorizar as tradições e marcar presença nos carnavais da cidade. O autor diz ainda que a associação combate o preconceito, a discriminação racial e a intolerância religiosa, fortalecendo a comunidade.",
+  "justificativa_do_autor": "Segundo o autor, a associação tem uma atuação muito importante na preservação e promoção da cultura afro-brasileira na cidade. O autor afirma ainda que a entidade usa a música, a religiosidade e a arte para combater o preconceito, a discriminação racial e a intolerância religiosa.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "O texto não especifica quais ações práticas ou benefícios materiais a associação vai receber além do título de patrimônio.",
+  "limitacoes": "Não é possível saber se haverá repasse de verba pública para a associação, pois a lei aprovada não menciona o orçamento.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto depende de regras futuras da prefeitura para ter aplicação prática.",
-    "trecho": "0 Poder Executivo regularnentará esta Lei, no que couber."
+    "ponto": "O texto não traz informações sobre custos ou de onde sairá o dinheiro para eventuais despesas.",
+    "trecho": ""
    },
    {
-    "ponto": "O texto não traz o valor exato dos custos, dizendo apenas que sairão de verbas do orçamento.",
-    "trecho": "As despesas decorrentes da execução desta lei correrão por conta das dotações orçamentarias próprias, suplementadas."
+    "ponto": "A lei passa a valer imediatamente no dia em que for publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
    }
   ],
-  "pontos_descartados": [
-   {
-    "ponto": "O texto não cita nenhuma penalidade ou multa para quem desrespeitar a lei.",
-    "trecho": "O texto não prevê multas ou penalidades.",
-    "motivo": "trecho nao encontrado no documento"
-   },
-   {
-    "ponto": "O texto não define quem vai fiscalizar o cumprimento da lei.",
-    "trecho": "O texto não informa quem fiscaliza a execução.",
-    "motivo": "trecho nao encontrado no documento"
-   }
-  ]
+  "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "665d71bbce099bb5",
- "gerado_em": "2026-11-08T03:24:26Z"
+ "hash_documento": "e4ace336ecc525fc",
+ "gerado_em": "2026-11-09T23:11:26Z"
 }

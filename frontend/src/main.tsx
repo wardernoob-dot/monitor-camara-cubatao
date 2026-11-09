@@ -1,4 +1,4 @@
-import { StrictMode, useEffect } from "react";
+import { lazy, Suspense,  StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { HashRouter, NavLink, Link, Route, Routes, useLocation } from "react-router-dom";
 import "@fontsource/geist-sans/400.css";
@@ -13,17 +13,19 @@ import { BotaoPergunta, Pergunta } from "./pergunta";
 import { Guara, GuaraVoo } from "./guara";
 import { motion, useScroll } from "framer-motion";
 import Inicio from "./paginas/Inicio";
-import Vereadores from "./paginas/Vereadores";
-import VereadorPagina from "./paginas/Vereador";
-import Projetos from "./paginas/Projetos";
-import ProjetoPagina from "./paginas/Projeto";
-import Sessoes from "./paginas/Sessoes";
-import SessaoPagina from "./paginas/Sessao";
-import ComoFunciona from "./paginas/ComoFunciona";
-import Ranking from "./paginas/Ranking";
-import { ListaPartidos, PaginaPartido } from "./paginas/Partidos";
+const Vereadores = lazy(() => import("./paginas/Vereadores"));
+const VereadorPagina = lazy(() => import("./paginas/Vereador"));
+const Projetos = lazy(() => import("./paginas/Projetos"));
+const ProjetoPagina = lazy(() => import("./paginas/Projeto"));
+const Sessoes = lazy(() => import("./paginas/Sessoes"));
+const SessaoPagina = lazy(() => import("./paginas/Sessao"));
+const ComoFunciona = lazy(() => import("./paginas/ComoFunciona"));
+const Ranking = lazy(() => import("./paginas/Ranking"));
+const ListaPartidos = lazy(() => import("./paginas/Partidos").then((m) => ({ default: m.ListaPartidos })));
+const PaginaPartido = lazy(() => import("./paginas/Partidos").then((m) => ({ default: m.PaginaPartido })));
+const Reportagens = lazy(() => import("./paginas/Reportagens"));
 import NaoEncontrado from "./paginas/NaoEncontrado";
-import ReportagemPagina from "./paginas/Reportagem";
+const ReportagemPagina = lazy(() => import("./paginas/Reportagem"));
 
 function RolaParaTopo() {
   const { pathname, hash } = useLocation();
@@ -37,6 +39,7 @@ function RolaParaTopo() {
 }
 
 const SECOES = [
+  ["/reportagens", "Reportagens"],
   ["/vereadores", "Vereadores"],
   ["/ranking", "Ranking"],
   ["/partidos", "Partidos"],
@@ -79,6 +82,7 @@ function Rodape() {
             <h2 className="rodape__titulo">Dados e código</h2>
             <ul>
               <li><a href="./data/dados.json">Baixar os dados (JSON)</a></li>
+              <li><a href="./reportagens.xml">Reportagens por RSS</a></li>
               <li><a href={meta.repo} rel="noopener noreferrer">Código-fonte aberto</a></li>
               <li><a href="https://www.cubatao.sp.leg.br/" rel="noopener noreferrer">Câmara Municipal de {meta.cidade}</a></li>
             </ul>
@@ -141,6 +145,7 @@ function App() {
         <RolaParaTopo />
         <Busca />
         <main id="conteudo" tabIndex={-1}>
+          <Suspense fallback={<div className="pagina carregando" aria-busy="true"><p>Carregando…</p></div>}>
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/vereadores" element={<Vereadores />} />
@@ -153,9 +158,11 @@ function App() {
             <Route path="/sessoes" element={<Sessoes />} />
             <Route path="/sessoes/:data" element={<SessaoPagina />} />
             <Route path="/como-funciona" element={<ComoFunciona />} />
+            <Route path="/reportagens" element={<Reportagens />} />
             <Route path="/reportagens/:id" element={<ReportagemPagina />} />
             <Route path="*" element={<NaoEncontrado />} />
           </Routes>
+          </Suspense>
         </main>
         <Rodape />
       </ProvedorDados>

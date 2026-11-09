@@ -1,0 +1,59 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "92",
+  "ano": "2025",
+  "autoria": "WASHINGTON LUIZ LESSA DE SOUZA",
+  "ementa": "INSTITUI NO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO A SEMANA DA SAÚDE VASCULAR E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto da lei publicada no Diario Oficial",
+  "url": null,
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto muda uma lei do orçamento da cidade. Ele aumenta o limite para a prefeitura remanejar dinheiro entre secretarias. O limite passa de 10% para 19% do total dos gastos. A medida vale para a prefeitura e para a Câmara Municipal.",
+  "o_que_muda": [
+   "O limite para abrir créditos suplementares (autorização para gastar mais em áreas que precisam de reforço) sobe de 10% para 19%.",
+   "A mudança vale para o orçamento total da despesa autorizada na Administração Direta (órgãos municipais, exceto a Câmara) e na Administração Indireta.",
+   "A Câmara Municipal passa a ter o mesmo limite de 19% aplicado à sua despesa autorizada."
+  ],
+  "quem_e_afetado": "A prefeitura e a Câmara Municipal ganham a facilidade de mover valores já previstos no orçamento entre diferentes setores com mais folga. O morador é afetado indiretamente pela forma como a gestão usa esses remanejamentos de verba. Nenhuma pessoa física fica de fora ou ganha direitos diretos.",
+  "de_onde_sai_o_dinheiro": "O texto não cria novos gastos, mas mexe em limites de remanejamento de dinheiro que já está previsto no orçamento do município para o ano de 2026.",
+  "o_que_falta_definir": [
+   "Quais secretarias ou setores exatos vão receber o dinheiro remanejado."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "créditos suplementares",
+    "explicacao": "Dinheiro extra que a prefeitura pode usar reforçando uma conta do orçamento que ficou curta."
+   },
+   {
+    "termo": "Administração Direta",
+    "explicacao": "Conjunto dos órgãos que formam a prefeitura, como as secretarias municipais."
+   },
+   {
+    "termo": "Administração Indireta",
+    "explicacao": "Autarquias e fundações ligadas à prefeitura que possuem orçamento próprio."
+   }
+  ],
+  "justificativa_do_autor": "",
+  "natureza": "orcamento_financas",
+  "limitacoes": "Não é possível saber quais obras ou serviços específicos vão receber o dinheiro remanejado com este limite maior.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto altera o limite de créditos suplementares de 10% para 19% no orçamento de 2026.",
+    "trecho": "ampliando de 10% (dez por cento) para 19% (dezenove por cento) o limite para abertura de créditos adicionais suplementares"
+   },
+   {
+    "ponto": "O texto não traz regras sobre fiscalização ou multas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "deac337f5195665b",
+ "gerado_em": "2026-11-09T23:14:43Z"
+}

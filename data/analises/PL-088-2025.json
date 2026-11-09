@@ -7,62 +7,55 @@
   "ementa": "INSTITUI A CAMPANHA DE CONSCIENTIZAÇÃO E PREVENÇÃO DA BRONQUIOLITE NA CIDADE DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2088.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto cria uma campanha anual de conscientização sobre a bronquiolite em Cubatão. A ação ocorrerá entre março e julho. O objetivo é informar famílias sobre os riscos e formas de prevenir a doença em crianças pequenas.",
+  "resumo": "O projeto cria a campanha oficial de conscientização e prevenção da bronquiolite em Cubatão. A ação acontece todos os anos, começando na primeira semana de março e terminando no último dia de julho. O objetivo é informar a população sobre os perigos da doença, formas de contágio e tratamentos. A campanha foca especialmente em famílias com grávidas e crianças de até dois anos.",
   "o_que_muda": [
-   "Criação da campanha de conscientização sobre a bronquiolite no calendário municipal.",
-   "A campanha acontece anualmente, começando na primeira semana de março e indo até o último dia de julho.",
-   "Foco especial na orientação de gestantes e famílias com crianças de zero a dois anos.",
-   "Divulgação de informações sobre como o vírus se espalha e como prevenir a doença.",
-   "Garantia de acesso da população a informações sobre medicamentos e ações de combate à bronquiolite."
+   "Criação da campanha de conscientização e prevenção da bronquiolite na cidade.",
+   "A campanha ocorre anualmente, da primeira semana de março até o último dia de julho.",
+   "Ações educativas para conscientizar famílias com gestantes e crianças de zero a dois anos.",
+   "Divulgação de informações sobre como o vírus se espalha e como evitá-lo.",
+   "Garantia de acesso a informações sobre remédios e ações de combate à doença."
   ],
-  "quem_e_afetado": "A campanha é voltada para toda a população de Cubatão, com foco principal em gestantes e pais de crianças de até dois anos. O texto não define quais órgãos públicos serão responsáveis por executar as ações educativas.",
+  "quem_e_afetado": "Toda a população de Cubatão ganha o direito de receber informações sobre a doença. As famílias com grávidas e crianças de zero a dois anos são o público principal das ações educativas. Ninguém ganha obrigações ou punições, pois a lei não prevê multas.",
   "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "Quais órgãos da prefeitura serão responsáveis por organizar as ações da campanha.",
-   "Como será feita a divulgação das informações para a população.",
-   "Se haverá gastos específicos com materiais educativos ou eventos.",
-   "Como será a fiscalização do cumprimento desta lei."
+   "Como a campanha será realizada na prática no dia a dia da cidade.",
+   "Quais órgãos ou secretarias da Prefeitura vão executar as ações da campanha.",
+   "Quais materiais ou meios de comunicação serão usados para informar a população."
   ],
   "palavras_dificeis": [
    {
-    "termo": "Bronquíolos",
-    "explicacao": "São os tubos muito finos que levam o ar para dentro dos pulmões."
+    "termo": "Bronquiolite",
+    "explicacao": "Inflamação aguda dos tubos mais finos que levam ar para dentro dos pulmões."
    },
    {
-    "termo": "PNI (Programa Nacional de Imunizações)",
-    "explicacao": "É o programa do governo federal que organiza a vacinação no Brasil."
-   },
-   {
-    "termo": "Anticorpo monoclonal",
-    "explicacao": "É um tipo de medicamento que ajuda o corpo a se defender de vírus ou doenças."
-   },
-   {
-    "termo": "Lactentes",
-    "explicacao": "São bebês que ainda estão na fase de amamentação."
+    "termo": "Gestantes",
+    "explicacao": "Mulheres grávidas."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, a bronquiolite é uma infecção viral que atinge os bronquíolos de bebês, sendo mais comum no inverno. Ele explica que o sistema imunológico de crianças menores de dois anos ainda é imaturo, facilitando o contágio. O autor cita que o PNI (Programa Nacional de Imunizações) ainda não inclui a vacina contra o vírus sincicial respiratório. Por isso, ele defende que a conscientização é o melhor caminho para a prevenção.",
+  "justificativa_do_autor": "Segundo o autor, a bronquiolite é uma infecção viral que atinge a parte mais delicada do pulmão de bebês menores de dois anos, sendo mais comum no inverno porque o sistema imunológico deles ainda é imaturo. O autor destaca que o PNI (Plano Nacional de Imunizações) ainda não colocou a vacina contra o vírus VSR (Vírus Sincicial Respiratório) no calendário de vacinação, existindo o palivizumabe (um anticorpo que protege bebês de alto risco, como prematuros). Como o remédio é distribuído pelo Estado no Hospital Guilherme Álvaro, o autor afirma que a lei serve para conscientizar que a prevenção é o melhor caminho.",
   "natureza": "politica_publica",
-  "limitacoes": "O projeto não indica qual secretaria municipal será responsável por realizar as ações nem como o orçamento será gerido.",
-  "pontos_de_atencao": [
+  "limitacoes": "Não é possível saber como a Prefeitura vai colocar a campanha nas ruas nem quanto isso vai custar aos cofres públicos.",
+  "pontos_de_atencao": [],
+  "pontos_descartados": [
    {
-    "ponto": "A campanha tem data fixa para começar e terminar todos os anos.",
-    "trecho": "iniciada anualmente na primeira semana do mês de março e com término no último dia do mês de julho."
+    "ponto": "O texto não traz nenhuma informação sobre custos ou de onde virá o dinheiro para pagar a campanha.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
    },
    {
-    "ponto": "O texto não define penalidades ou multas em caso de descumprimento.",
-    "trecho": ""
+    "ponto": "A lei não diz quem vai fiscalizar ou organizar as atividades da campanha na cidade.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
    }
-  ],
-  "pontos_descartados": []
+  ]
  },
- "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "8477b1765c8ea37d",
- "gerado_em": "2026-11-08T03:31:51Z"
+ "hash_documento": "12cbd9786b8b2d0e",
+ "gerado_em": "2026-11-09T23:16:39Z"
 }

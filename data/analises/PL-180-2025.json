@@ -7,62 +7,57 @@
   "ementa": "DISPÕE SOBRE CRIAÇÃO DO SISTEMA MUNICIPAL DE ALERTA GEOCALIZADO PARA O DESAPARECIMENTO DE CRIANÇAS, ADOLESCENTES E ADULTOS NO ÂMBITO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20180-2025.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria um sistema municipal para enviar mensagens de texto para celulares próximos ao local de desaparecimento de crianças, adolescentes e adultos em Cubatão. O objetivo é tentar achar a pessoa rápido usando a localização do telefone. O aviso deve ser enviado em até 24 horas após o registro oficial do caso.",
+  "resumo": "O projeto cria um sistema municipal para enviar mensagens de texto para celulares próximos ao local de desaparecimento de pessoas. O objetivo é ajudar a achar crianças, adolescentes e adultos de forma rápida e segura. As mensagens devem ser enviadas em até 24 horas após o registro oficial do caso. A novidade busca juntar a prefeitura com empresas de celular e órgãos públicos.",
   "o_que_muda": [
-   "Criação do Sistema Municipal de Alerta Geolocalizado para enviar mensagens de emergência para celulares perto de onde a pessoa sumiu.",
-   "As mensagens de alerta devem incluir nome, idade, características físicas e foto da pessoa desaparecida.",
-   "O disparo do aviso deve acontecer em até 24 horas após o registro oficial do desaparecimento.",
-   "A gestão do sistema fica com a Secretaria Municipal de Ciência, Inovação e Tecnologia.",
-   "Criação de uma Comissão Fiscalizadora Permanente com 1 gestor e 3 fiscais para acompanhar e validar os disparos.",
+   "Criação do Sistema Municipal de Alerta Geolocalizado para localizar pessoas desaparecidas em Cubatão.",
+   "Envio de mensagens de emergência para celulares perto de onde a pessoa sumiu, usando dados das operadoras.",
+   "As mensagens devem ter nome, idade, dados físicos e foto da pessoa desaparecida, respeitando a lei de proteção de dados.",
+   "O disparo do alerta precisa acontecer em até 24 horas após o registro oficial do desaparecimento.",
    "O sistema será ligado ao Cadastro Nacional de Pessoas Desaparecidas."
   ],
-  "quem_e_afetado": "A população de Cubatão passa a receber mensagens de alerta em seus celulares quando houver desaparecimentos por perto. A Prefeitura e órgãos de segurança ganham a obrigação de gerenciar o sistema e disparar os avisos em até 24 horas. O texto não menciona quem fica de fora das regras.",
-  "de_onde_sai_o_dinheiro": "O autor alega que o projeto não traz custo extra para o município, pois o Poder Executivo poderá usar convênios e contratos já existentes.",
+  "quem_e_afetado": "A população de Cubatão passa a receber alertas de desaparecimento em seus celulares quando estiver perto de um caso. Quem tem familiares desaparecidos ganha uma nova ferramenta de busca rápida. O texto não detalha quem fica de fora das regras.",
+  "de_onde_sai_o_dinheiro": "O texto diz que a prefeitura poderá fazer parcerias e convênios sem gastar mais dinheiro do município, aproveitando contratos que já existem.",
   "o_que_falta_definir": [
-   "Quais operadoras de telefonia móvel farão o convênio com a Prefeitura.",
-   "Como será feita a escolha dos membros da Comissão Fiscalizadora Permanente.",
-   "Os detalhes técnicos de como a geolocalização será usada pelas operadoras."
+   "Quais órgãos públicos e privados exatos vão assinar os convênios com a prefeitura.",
+   "Como será feita a troca técnica de dados com as operadoras de telefonia móvel.",
+   "Quais autoridades vão acionar o botão de disparo do alerta."
   ],
   "palavras_dificeis": [
    {
     "termo": "geolocalização",
-    "explicacao": "Tecnologia que usa o sinal do celular para descobrir a localização exata onde a pessoa está."
+    "explicacao": "Tecnologia que usa o sinal do celular para saber a localização exata de um aparelho."
    },
    {
-    "termo": "LGPD",
-    "explicacao": "Sigla para Lei Geral de Proteção de Dados Pessoais, que garante a segurança e a privacidade das informações das pessoas."
-   },
-   {
-    "termo": "auditar",
-    "explicacao": "Examinar e fiscalizar se as regras e os procedimentos estão sendo cumpridos corretamente."
+    "termo": "ônus",
+    "explicacao": "Significa custo ou despesa financeira."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o desaparecimento de pessoas é um problema crescente no país, com mais de 55 mil casos no primeiro semestre de 2025 no Brasil, sendo 15 mil de menores de idade. Ele afirma que na Baixada Santista há dezenas de casos não resolvidos e que a cidade precisa de mecanismos rápidos para mobilizar a comunidade e localizar pessoas com segurança.",
+  "justificativa_do_autor": "Segundo o autor, o desaparecimento de crianças e adolescentes cresce no Brasil, com mais de 55 mil casos no primeiro semestre de 2025. Na Baixada Santista, há estimativas de dezenas de casos não resolvidos em cidades como Cubatão, que teve cerca de 90 casos estimados no período. O autor afirma que a medida é barata, usa contratos existentes e segue exemplos de sucesso em outras cidades como Curitiba e Manaus.",
   "natureza": "politica_publica",
-  "limitacoes": "O documento corta o texto da lei federal no final, mas o restante do projeto está completo para análise.",
+  "limitacoes": "O texto não explica qual secretaria municipal vai cuidar do sistema no dia a dia, nem quais penalidades ocorrem se o prazo de 24 horas não for cumprido.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto prevê prazo limite de 24 horas após o registro oficial para disparar o alerta nos celulares.",
+    "ponto": "O texto afirma que os convênios não devem gerar custos extras para a prefeitura.",
+    "trecho": "O Poder Executivo poderá firmar convênios e parcerias com órgãos públicos e privados, sem ônus adicional ao município, aproveitando contratos já existentes."
+   },
+   {
+    "ponto": "O alerta precisa ser disparado em até um dia após o registro policial.",
     "trecho": "O disparo do alerta deverá ocorrer em até 24 (vinte e quatro) horas após o registro oficial do desaparecimento junto às autoridades competentes."
    },
    {
-    "ponto": "A gestão do sistema fica sob responsabilidade da Secretaria Municipal de Ciência, Inovação e Tecnologia.",
-    "trecho": "A gestão do sistema caberá à Secretaria Municipal de Ciência, Inovação e Tecnologia, em cooperação com a operadora conveniada"
-   },
-   {
-    "ponto": "O texto afirma que parcerias e convênios serão feitos sem custo adicional para o município.",
-    "trecho": "O Poder Executivo poderá firmar convênios e parcerias com órgãos públicos e privados, sem ônus adicional ao município"
+    "ponto": "O uso das informações deve seguir a lei federal de dados.",
+    "trecho": "observando os princípios da Lei Geral de Proteção de Dados Pessoais (Lei Federal nº 13.709/2018)."
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "17c4f3574a94afc6",
- "gerado_em": "2026-11-08T03:29:47Z"
+ "hash_documento": "183b4a63804103cf",
+ "gerado_em": "2026-11-09T23:15:23Z"
 }

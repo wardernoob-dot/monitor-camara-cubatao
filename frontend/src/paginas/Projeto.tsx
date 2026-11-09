@@ -3,6 +3,7 @@ import { useAnalise, useDados } from "../dados";
 import { AvisoVeto, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { Destaque, EtapaComDica, Termo } from "../explica";
+import { Compartilhar } from "../compartilhar";
 import NaoEncontrado from "./NaoEncontrado";
 import BlocoVeto from "../veto";
 import { Secao } from "../secao";
@@ -33,6 +34,7 @@ export default function ProjetoPagina() {
         <p className="cabeca-projeto__selos"><Situacao m={m} /> <Destaque m={m} /></p>
         {m.assunto && <p className="lead">{m.assunto}</p>}
       </header>
+      <Compartilhar tipo="p" id={m.slug} titulo={`${m.titulo}: ${m.situacao}`} />
 
       {m.explicacao && !m.analise && (
         <aside className="em-poucas" aria-label="Em palavras simples">
@@ -122,7 +124,9 @@ export default function ProjetoPagina() {
             Texto gerado por inteligência artificial ({a.modelo}) lendo só o {a.fonte}. Não avalia vereadores nem recomenda voto.{" "}
             <Metodo>Como funciona</Metodo>.
           </p>
-          {eventos.some((e) => /emenda/i.test(e.detalhe ?? "")) && (
+          {/lei publicada/i.test(a.fonte) ? (
+            <p className="nota">Esta explicação já usa o texto da lei publicada no Diário Oficial, que é o que vale depois das emendas.</p>
+          ) : eventos.some((e) => /emenda/i.test(e.detalhe ?? "")) && (
             <p className="aviso-voto">
               <strong>Atenção:</strong> esta explicação é do texto original do projeto. Ele recebeu emenda (mudança no texto) durante a votação,
               então alguns pontos podem ter mudado{m.lei ? <>; o texto que vale é o da <a href={m.lei.url ?? undefined} rel="noopener">Lei {m.lei.numero}</a></> : ""}.

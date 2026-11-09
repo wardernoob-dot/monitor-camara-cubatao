@@ -7,55 +7,48 @@
   "ementa": "INSTITUI O DIA MUNICIPAL DA ABERTURA DA CAMPANHA DA FRATERNIDADE NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2017.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto cria o Dia Municipal da Abertura da Campanha da Fraternidade em Cubatão. A data será comemorada anualmente a partir da Quarta-Feira de Cinzas. O objetivo é estimular atividades sobre o tema do ano e conscientizar os moradores sobre solidariedade. A nova data passa a integrar o calendário oficial de eventos do município.",
+  "resumo": "O projeto cria o Dia Municipal da Abertura da Campanha da Fraternidade em Cubatão. A data entra no calendário oficial de eventos da cidade e passa a ser comemorada anualmente a partir da Quarta-Feira de Cinzas. A ideia é estimular atividades sobre o tema do ano, conscientizar os moradores e promover a solidariedade. O texto entra em vigor logo após sua publicação oficial.",
   "o_que_muda": [
-   "Institui o Dia Municipal da Abertura da Campanha da Fraternidade na cidade.",
-   "A data será comemorada anualmente a partir da Quarta-Feira de Cinzas.",
-   "A data entra no calendário oficial de eventos do município de Cubatão.",
-   "Autoriza a realização de audiências públicas e programas ecumênicos durante a campanha.",
-   "Os eventos podem ser feitos em conjunto com grupos e entidades sem importar religião ou política."
+   "Cria o Dia Municipal da Abertura da Campanha da Fraternidade na cidade.",
+   "A data passa a ser comemorada anualmente a partir da Quarta-Feira de Cinzas.",
+   "A nova data entra para o calendário oficial de eventos de Cubatão.",
+   "Autoriza a realização de audiências públicas e programas ecumênicos (reunião entre diferentes crenças) durante a campanha."
   ],
-  "quem_e_afetado": "A sociedade de Cubatão ganha uma nova data oficial de conscientização. Grupos, entidades e moradores podem participar das atividades propostas. Ninguém ganha obrigações obrigatórias com multas ou punições.",
+  "quem_e_afetado": "A população de Cubatão e os setores da sociedade ganham a possibilidade de participar de debates e atividades sobre o tema da campanha. Grupos e entidades de diferentes crenças ou ideias também podem participar dos eventos. Ninguém ganha obrigações com multa ou punição.",
   "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "Quais órgãos da Prefeitura vão organizar os eventos.",
-   "Como serão escolhidos os locais das audiências públicas.",
-   "Se haverá repasse de verba pública para os programas ecumênicos."
+   "Quais órgãos da prefeitura vão organizar os eventos.",
+   "Quais serão os locais exatos das audiências públicas.",
+   "Quais entidades religiosas ou sociais vão participar de cada edição."
   ],
   "palavras_dificeis": [
    {
     "termo": "ecumênicos",
-    "explicacao": "Encontros que reúnem pessoas de diferentes religiões ou crenças."
+    "explicacao": "Encontros ou atividades que reúnem pessoas de diferentes religiões ou crenças."
    },
    {
-    "termo": "magistério",
-    "explicacao": "Ensinamentos oficiais da igreja católica."
+    "termo": "caput",
+    "explicacao": "A cabeça ou o artigo principal de uma lei, antes dos parágrafos."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, a Campanha da Fraternidade é assumida pelas Igrejas Católicas e criada na década de 1960 pela CNBB (Conferência Nacional dos Bispos do Brasil). Ele afirma que a campanha aborda questões como fome, terra, infância e moradia, unindo a igreja e apontando ações para a sociedade. O autor diz ainda que a coleta da campanha ajuda no cuidado com os pobres.",
+  "justificativa_do_autor": "Segundo o autor, a Campanha da Fraternidade foi criada na década de 1960 pela Conferência Nacional dos Bispos do Brasil (CNBB) e busca envolver a sociedade em temas importantes. O autor alega que a campanha aborda questões como fome, moradia e direitos humanos, unindo a igreja e a população para buscar o bem comum e a justiça social.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "O documento não informa se haverá gastos públicos para realizar os eventos criados.",
+  "limitacoes": "Não é possível saber se haverá gastos públicos para os eventos, pois a lei não menciona orçamento.",
   "pontos_de_atencao": [
    {
-    "ponto": "A lei entra em vigor logo após a sua publicação oficial.",
-    "trecho": "Art. 3º - Esta lei entrará em vigor após sua publicação."
+    "ponto": "O projeto cria uma data comemorativa sem indicar custos ou origem do dinheiro para eventos.",
+    "trecho": "Fica instituído o Dia Municipal da Abertura da Campanha da Fraternidade, a ser comemorado, anualmente, a partir da Quarta-Feira de Cinzas."
    }
   ],
-  "pontos_descartados": [
-   {
-    "ponto": "O projeto cria uma data comemorativa sem custos informados no texto.",
-    "trecho": "O texto não",
-    "motivo": "trecho nao encontrado no documento"
-   }
-  ]
+  "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "08f607b8fb512074",
- "gerado_em": "2026-11-08T03:24:47Z"
+ "hash_documento": "c4abf98ee273158d",
+ "gerado_em": "2026-11-09T23:11:53Z"
 }

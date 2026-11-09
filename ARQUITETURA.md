@@ -6,7 +6,7 @@ Documento técnico do [Voto a Voto](README.md): quem faz o quê, workflows, uso 
 
 1. [Visão Geral e Status](#1-visão-geral-e-status)
 2. [Dando Nome aos Bois: Quem Faz o Quê no Sistema](#2-dando-nome-aos-bois-quem-faz-o-quê-no-sistema)
-3. [O Papel Exato do GitHub Actions (Os 5 Workflows e seus Jobs)](#3-o-papel-exato-do-github-actions-os-5-workflows-e-seus-jobs)
+3. [O Papel Exato do GitHub Actions (Os Workflows e seus Jobs)](#3-o-papel-exato-do-github-actions-os-workflows-e-seus-jobs)
 4. [O Papel Exato da Gemini API e da Claude API em Cada Parte](#4-o-papel-exato-da-gemini-api-e-da-claude-api-em-cada-parte)
 5. [Fontes Oficiais e Cruzamento de Dados](#5-fontes-oficiais-e-cruzamento-de-dados)
 6. [Regras de Interpretação Legislativa](#6-regras-de-interpretação-legislativa)
@@ -82,7 +82,7 @@ Todo o fluxo é orquestrado pelo comando `python -m camara tudo` (definido em [`
 
 ---
 
-## 3. O Papel Exato do GitHub Actions (Os 5 Workflows e seus Jobs)
+## 3. O Papel Exato do GitHub Actions (Os Workflows e seus Jobs)
 
 Toda a automação de nuvem mora em [`.github/workflows/`](.github/workflows/). Veja exatamente o que cada workflow e cada job faz:
 
@@ -100,32 +100,20 @@ Toda a automação de nuvem mora em [`.github/workflows/`](.github/workflows/). 
 - **Job `publicar` (`ubuntu-latest`, timeout de 15 min):**
   1. Executa `camara.site.exportar(Path('data'))` **offline** (sem raspar a Câmara novamente), regenerando `docs/data/dados.json` e reprocessando eventuais fotos novas de vereadores em `fotos/` para `docs/fotos/*.webp`.
   2. Se `docs/data/` ou `docs/fotos/` mudaram, commita e dá `git push` na `main` (`"site: regenera docs/data e docs/fotos"`) para que o **GitHub Pages** receba os arquivos atualizados.
-  3. Publica `./docs` em `https://votoavoto.surge.sh` via `npx --yes surge@0.24.1`.
+  3. Publica `./docs` em `https://votoavoto.surge.sh` via `npx --yes surge@0.44.7`.
 
-### 3.3. `claude-rotinas.yml` — Workflow `claude-rotinas` (Auditoria, Auto-Diagnóstico e Manutenção)
-Utiliza a action oficial `anthropics/claude-code-action` autenticada com o secret `ANTHROPIC_API_KEY`. Nunca altera arquivos históricos em `data/`; atua apenas abrindo **Issues** ou **Pull Requests** para revisão humana. Possui **3 jobs distintos**:
+### 3.3. `conferir-coleta.yml` — Workflow `conferir-coleta` (Conferência diária, sem IA)
+- **Quando roda:** todo dia às `21:30 UTC` (`18:30` de Brasília) ou manualmente.
+- **O que faz:** roda `.claude/skills/conferir-coleta-do-dia/resumo.py` e abre uma issue só se houver pendência para olho humano (aviso do parser, PDF sem texto, divergência nova). Não altera `data/`.
 
-1. **Job `conferir-coleta` (Auditoria Diária):**
-   - **Quando roda:** Todos os dias às `21:30 UTC` (`18:30` de Brasília, logo após a coleta noturna) ou via `workflow_dispatch`.
-   - **O que faz:** Executa o script `.claude/skills/conferir-coleta-do-dia/resumo.py` e segue o roteiro `SKILL.md` sobre as coletas das últimas 24h. Se encontrar avisos do parser, PDF escaneado sem OCR, votação do painel não identificada ou divergência incomum entre painel e resumo, abre (ou comenta em) uma Issue intitulada `"conferir coleta AAAA-MM-DD"`. Se estiver tudo limpo, encerra em silêncio.
-2. **Job `diagnosticar-falha` (Auto-Recuperação de Quebras):**
-   - **Quando roda:** Automaticamente (`workflow_run`) sempre que o workflow `coleta-diaria` terminar com status `failure`.
-   - **O que faz:** Baixa o log da falha (`gh run view --log-failed`) sob regras estritas contra *Prompt Injection*.
-     - Se a falha foi causada por **mudança no PDF/HTML da Câmara** (nova grafia de vereador, variante nova de negrito falso, layout novo): reproduz o erro com `pytest`, corrige o código em `camara/`, adiciona teste unitário e abre um **Pull Request** na branch `fix/coleta-AAAA-MM-DD`.
-     - Se a falha foi **infraestrutura externa** (portal da Câmara fora do ar, timeout de rede, bloqueio do YouTube): não toca no código e abre uma **Issue** relatando o incidente.
-3. **Job `manutencao` (Atualização Semanal):**
-   - **Quando roda:** Toda segunda-feira às `11:00 UTC` (`08:00` de Brasília) ou via `workflow_dispatch`.
-   - **O que faz:** Inspeciona `pip list --outdated` e `npm outdated`, aplica atualizações *minor/patch* seguras (com `--only-binary=:all:` e `--ignore-scripts`), roda `python -m pytest -q` e `npm run build`, verifica se a documentação (`README.md`, `CLAUDE.md`, `fotos/LEIA-ME.md`) continua fiel ao código e abre um **Pull Request** na branch `manutencao/AAAA-MM-DD`.
+### 3.4. `conferir-tela.yml` — Workflow `conferir-tela` (O site abre e dá para ler?)
+- **Quando roda:** em `push`/PR que mexa em `frontend/**` ou no build, toda segunda-feira e manualmente.
+- **O que faz:** compila os tipos do front (`tsc`) e roda `scripts/conferir_tela.py`, que abre 13 páginas do `docs/` num Chromium (tema claro e escuro) e falha se houver erro de JavaScript, texto com contraste abaixo de 3:1, imagem quebrada ou página mais larga que a tela de um celular de 360 px. Falhou, abre a issue "tela com problema".
 
-### 3.4. `claude.yml` — Workflow `claude` (Assistente `@claude` e Revisor Regimental de PRs)
-Também baseado em `anthropics/claude-code-action` + `ANTHROPIC_API_KEY`, dividido em **2 jobs**:
-
-1. **Job `responder`:**
-   - **Quando roda:** Quando um comentário ou issue contém `@claude`, **exclusivamente se o autor do evento for o dono do repositório (`github.actor == 'wardernoob-dot'`)**.
-   - **O que faz:** Atende pedidos de manutenção (ex.: cadastrar foto nova, ajustar regra de parser, melhorar texto de interface) abrindo uma branch e um Pull Request.
-2. **Job `revisar`:**
-   - **Quando roda:** Automaticamente sempre que um Pull Request é aberto ou atualizado tocando em arquivos críticos de voto ou interface (`camara/parser_resumo.py`, `camara/consolidar.py`, `camara/site.py`, `camara/posts.py`, `camara/painel.py`, `prompts/analise.md`, `frontend/src/**`).
-   - **O que faz:** Revisa o `git diff` contra as **Regras de Interpretação de Voto** (verificando se "não consta" não virou voto contrário, se parecer contrário e veto mantêm a semântica correta, se `docs/` foi recompilado e se `docs/CNAME` não foi incluído) e comenta no PR apenas se encontrar problemas reais.
+### 3.4.1. Workflows de texto de IA (todos gravam rascunho ou pedem conferência humana)
+- **`reanalisar.yml`** (manual): refaz de uma vez as análises "Entenda o projeto" cujo documento ou prompt mudou (a coleta faz 15 por rodada), regenera o site e publica.
+- **`auditar-analises.yml`** (push no branch `auditoria-analises`): segunda leitura das análises por outro modelo (`camara/auditoria_analises.py`), que aponta frase errada, sem base ou exagerada com o trecho do documento, e uma conferência sem IA de todo número citado. Grava `auditoria/` no próprio branch; nada é corrigido sozinho.
+- **`revisar-reportagens.yml`** (push no branch `revisao-reportagens`): reescreve as reportagens a partir dos documentos (`camara/revisao_reportagens.py`), cada frase com trecho literal conferido. Saída sempre `status: rascunho`.
 
 ### 3.5. `sonda-storyboard.yml` — Workflow `sonda-storyboard` (Laboratório de Conectividade)
 - **Quando roda:** Apenas manualmente (`workflow_dispatch`).
@@ -190,6 +178,8 @@ Se o primeiro modelo da fila retornar erro ou limite de cota (`HTTP 429/503`), o
 - **Cache inteligente:** O resultado é salvo em `data/analises/<TIPO>-<NNN>-<ANO>.json` junto com `hash_documento` (SHA-256 do texto) e `versao_prompt` (SHA-256 de `prompts/analise.md`). A API só é chamada novamente se o documento ou o prompt mudarem.
 
 ---
+
+**Projeto que já virou lei:** `analise.leis_publicadas()` acha o texto da lei em `data/diario/` e `analise.com_lei()` o coloca na frente do projeto, avisando o modelo de que é a lei que vale (emendas mudam datas e valores: o PL 190/2025 previa 2026 e a Lei 4.451 saiu com 2027). O projeto original fica só para a justificativa. Sem PDF legível mas com lei publicada, a análise é feita só pela lei.
 
 ### 4.4. Ponto 4: Explicações Curtas em Linguagem Simples (`camara/explicacao.py`)
 - **Quem chama:** `camara/site.py:exportar()` → `camara/explicacao.py:gerar()` → `_gemini()`.
@@ -290,7 +280,6 @@ O projeto conta com blindagem em profundidade cobrindo coleta externa, processam
 - **Pinagem Imutável por Commit SHA:** Todas as Actions de terceiros (`actions/checkout`, `actions/setup-python`, `actions/setup-node`, `anthropics/claude-code-action`) são referenciadas pelo hash SHA completo de 40 caracteres, nunca por tags mutáveis.
 - **Privilégio Mínimo:** Todos os workflows declaram `permissions: contents: read` no topo, concedendo `contents: write` apenas no job específico que realiza commit.
 - **Hardening de Pacotes:** Instalações `npm` rodam com `--ignore-scripts` (bloqueando execução de scripts `postinstall` maliciosos), `surge` é fixado em versão exata (`surge@0.24.1`) e `pip` prioriza pacotes binários (`--only-binary=:all:`).
-- **Controle de Acesso e Anti-Prompt Injection nos Workflows do Claude:** O workflow interativo (`claude.yml`) exige `github.actor == 'wardernoob-dot'` e restringe ferramentas via `--allowedTools`, enquanto a rotina de diagnóstico (`claude-rotinas.yml`) inclui guardrails explícitos contra *Indirect Prompt Injection* oriundo de títulos/textos externos nos logs.
 
 ---
 
@@ -304,7 +293,6 @@ monitor-camara-cubatao/
 │   ├── textclean.py         # Limpeza de "negrito falso", homógrafos cirílicos e normalização
 │   ├── nomes.py             # Catálogo e normalização canônica dos vereadores e suplentes
 │   ├── parser_resumo.py     # Parser estruturado dos Resumos das Sessões
-│   ├── pauta.py             # Parser das Pautas das Sessões
 │   ├── processar.py         # Orquestra resumos + pautas -> data/sessoes/ e data/vereadores.json
 │   ├── youtube.py           # Cliente seguro do feed RSS e folhas de storyboard do YouTube
 │   ├── painel.py            # Visão computacional determinística do painel eletrônico
@@ -317,21 +305,30 @@ monitor-camara-cubatao/
 │   ├── analise.py           # Análise imparcial de projetos + OCR + filtro anti-alucinação
 │   ├── explicacao.py        # Explicações curtas em linguagem simples (Gemini API) -> data/explicacoes.json
 │   ├── posts.py             # Geração de cards PNG para carrossel do Instagram -> data/posts/
+│   ├── impacto.py           # Faixa de impacto de cada projeto (regra fixa, sem IA) para o Índice de Atuação
+│   ├── vetos.py             # Liga ofícios de veto aos projetos e ao resultado da votação do veto
+│   ├── reportagens.py       # Lê reportagens/*.md (texto aprovado por gente) e gera as fotos -> dados.json
+│   ├── revisao_reportagens.py  # Revisão das reportagens pelo Gemini com trecho por frase (sempre rascunho)
+│   ├── auditoria_analises.py   # Segunda leitura das análises + conferência de números sem IA
+│   ├── compartilhar.py      # Páginas de prévia de link (docs/r, docs/v, docs/p), cartões 1200x630 e RSS
 │   └── site.py              # Exportador de dados e fotos para o frontend -> docs/data/ e docs/fotos/
 ├── frontend/                # Aplicação web em React 18 + TypeScript + Vite
 │   └── src/
-│       ├── paginas/         # Sessões, Projetos, Projeto, Vereadores, Vereador, Busca, ComoFunciona
+│       ├── paginas/         # Início, Reportagens, Vereadores, Ranking, Partidos, Projetos, Sessões, Como funciona
+│       ├── reportagens.tsx  # Carrossel de reportagens e peças (quem propôs, como votaram, o que o prefeito fez)
+│       ├── compartilhar.tsx # Botões de compartilhar com link de prévia
 │       ├── dados.tsx        # Hooks de carregamento e validação de dados
 │       └── util.tsx         # Utilitários de formatação e navegação
 ├── docs/                    # Build estático publicado no GitHub Pages e no Surge
 ├── data/                    # Base de dados auditável versionada em Git (JSONs e textos extraídos)
 ├── fotos/                   # Fotos originais dos vereadores (convertidas para WebP em docs/fotos/)
+├── reportagens/             # Reportagens em Markdown, fotos com crédito e fontes (leis, notícias) usadas na revisão
 ├── prompts/
 │   └── analise.md           # Prompt público usado na análise imparcial de projetos
 ├── pc/                      # Agente PowerShell para Windows (coleta de storyboard_specs em IP residencial)
-├── scripts/                 # Scripts utilitários e sonda de storyboard
-├── tests/                   # Suíte automatizada de testes (pytest — 53 testes de regressão e segurança)
-└── .github/workflows/       # 5 workflows: coleta.yml, publicar-surge.yml, claude.yml, claude-rotinas.yml, sonda-storyboard.yml
+├── scripts/                 # Sonda de storyboard, validação do painel e conferir_tela.py (teste de tela)
+├── tests/                   # Suíte automatizada de testes (pytest: regras de voto, consolidação, índice, reportagens, segurança)
+└── .github/workflows/       # coleta, publicar-surge, conferir-coleta, conferir-tela, reanalisar, auditar-analises, revisar-reportagens, sonda-storyboard
 ```
 
 ---

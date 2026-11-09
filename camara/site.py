@@ -1025,6 +1025,9 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                             for p in b.partidos.values()), key=lambda p: (-len(p["em_exercicio"]), p["sigla"])),
     }
     (saida / "dados.json").write_text(json.dumps(pacote, ensure_ascii=False, separators=(",", ":")), "utf-8")
+    if saida.resolve() == (RAIZ / "docs" / "data").resolve():
+        from . import compartilhar
+        compartilhar.gerar(pacote)  # paginas de previa (WhatsApp etc.) para reportagens, vereadores e projetos
     tam = (saida / "dados.json").stat().st_size // 1024
     print(f"  site: dados.json ({tam} KB), {len(vereadores)} vereadores, {len(materias)} materias, "
           f"{len(eventos)} votacoes, {len(list((saida / 'analises').glob('*.json')))} analises")

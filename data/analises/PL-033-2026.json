@@ -7,46 +7,45 @@
   "ementa": "DISPÕE SOBRE A INCLUSÃO DA CONFERÊNCIA PINK NO CALENDÁRIO OFICIAL DE EVENTOS DO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%20No%2033.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto coloca o evento Conferência Pink no calendário oficial da cidade de Cubatão. O evento passa a acontecer todo ano, sempre na última segunda-feira de março. Ele é realizado pela Igreja Assembleia de Deus Ministério Plenitude do Espírito.",
+  "resumo": "O projeto inclui um evento religioso no calendário oficial da cidade. A Conferência Pink passa a acontecer todo ano na última segunda-feira de março. O evento é organizado pela Igreja Assembleia de Deus Ministério Plenitude do Espírito. A lei vale desde a data em que foi publicada.",
   "o_que_muda": [
-   "A Conferência Pink passa a fazer parte do Calendário Oficial de Eventos do Município de Cubatão.",
-   "O evento passa a ser realizado anualmente na última segunda-feira de março."
+   "A Conferência Pink entra no Calendário Oficial de Eventos do Município de Cubatão.",
+   "O evento passa a acontecer todos os anos na última segunda-feira de março."
   ],
-  "quem_e_afetado": "O evento é voltado para o público feminino e organizado por uma igreja específica, mas o texto não cria obrigações diretas para a população nem exclui ninguém de participar.",
+  "quem_e_afetado": "O texto não define obrigações ou punições para os moradores. A Igreja Assembleia de Deus Ministério Plenitude do Espírito passa a ter seu evento oficializado no calendário da cidade. O público feminino que participa do evento também é afetado pela visibilidade institucional.",
   "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "O texto não define regras sobre quem paga os custos do evento."
+   "O texto não define se haverá ajuda financeira da prefeitura para o evento.",
+   "O texto não define regras sobre o uso de espaços públicos."
   ],
   "palavras_dificeis": [
    {
     "termo": "interdenominacional",
-    "explicacao": "Que une pessoas de diferentes igrejas ou denominações cristãs."
+    "explicacao": "Que reúne pessoas de diferentes igrejas ou denominações cristãs."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o evento começou em 2017 para atender o público feminino evangélico com temas de saúde física, emocional e espiritual. O autor diz que a conferência tem impacto social, faz campanhas para ONGs e reuniu mais de 500 mulheres na última edição.",
+  "justificativa_do_autor": "Segundo o autor, o evento começou em 2017 porque faltavam eventos grandes para o público feminino evangélico. Segundo o autor, a conferência ajuda na saúde física, emocional e espiritual das mulheres e promove campanhas para ONGs e trabalhos missionários. Segundo o autor, a última edição reuniu mais de 500 mulheres e a inclusão no calendário vai trazer mais organização e visibilidade.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "Não é possível saber se haverá gasto de dinheiro público com a oficialização do evento, pois o projeto não menciona custos.",
+  "limitacoes": "O documento não informa se o evento receberá apoio financeiro da prefeitura ou se haverá custos para os cofres públicos.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto não traz nenhuma informação sobre custos ou de onde virá o dinheiro para o evento.",
+    "ponto": "O efeito é simbólico e oficializa a data no calendário da cidade, sem citar gastos.",
+    "trecho": "Fica incluída no Calendário Oficial de Eventos do Município de Cubatão a Conferência Pink"
+   },
+   {
+    "ponto": "O texto não traz regras sobre custos ou repasse de verbas públicas para o evento.",
     "trecho": ""
    }
   ],
-  "pontos_descartados": [
-   {
-    "ponto": "O efeito do projeto é incluir um evento em uma data fixa anual no calendário da cidade.",
-    "trecho": "Fica incluída no Calendário Oficial de Eventos do Município de Cubatão a Conferência Pink... a ser realizada, anualmente, na última segunda feira de março.",
-    "motivo": "trecho nao encontrado no documento"
-   }
-  ]
+  "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "37d1387eb62f498a",
- "gerado_em": "2026-11-08T03:27:34Z"
+ "hash_documento": "9add8b972f836525",
+ "gerado_em": "2026-11-09T23:13:50Z"
 }

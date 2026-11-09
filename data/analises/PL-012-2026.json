@@ -1,0 +1,71 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "12",
+  "ano": "2026",
+  "autoria": "RONALDO ARAÚJO QUEIROZ",
+  "ementa": "INSTITUI O SERVIÇO DE VACINAÇÃO DOMICILIAR PARA PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA (TEA) E OUTRAS DEFICIÊNCIAS QUE DIFICULTEM A LOCOMOÇÃO OU O ACESSO À REDE REGULAR DE SAÚDE NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto da lei publicada no Diario Oficial",
+  "url": null,
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o serviço de vacinação em casa para pessoas com autismo e outras deficiências em Cubatão. O objetivo é garantir o acesso à vacina para quem tem dificuldade de ir até os postos de saúde. O atendimento deve ser humanizado e seguir o Calendário Nacional de Vacinação. A prefeitura ainda precisa organizar como o serviço vai funcionar na prática.",
+  "o_que_muda": [
+   "Cria o serviço de vacinação em casa para pessoas com TEA (Transtorno do Espectro Autista, um tipo de alteração no desenvolvimento que afeta a comunicação e o comportamento) e outras deficiências.",
+   "Exige que o paciente tenha dificuldade comprovada de locomoção ou de acesso aos postos de saúde.",
+   "Exige um cadastro prévio em órgão da prefeitura para ter acesso ao serviço.",
+   "O atendimento deve seguir as regras do Calendário Nacional de Vacinação.",
+   "A lei entra em vigor na data em que for publicada."
+  ],
+  "quem_e_afetado": "Pessoas com autismo ou outras deficiências que moram em Cubatão e têm dificuldade de locomoção ganham o direito de receber vacinas em casa. O Poder Executivo (prefeitura) ganha a obrigação de organizar e oferecer esse serviço.",
+  "de_onde_sai_o_dinheiro": "O texto diz que os gastos vão sair de dinheiro do orçamento já existente ou que poderá ser complementado se precisar.",
+  "o_que_falta_definir": [
+   "Qual órgão da prefeitura vai cuidar do cadastro.",
+   "Como será feita a comprovação da deficiência e da residência no município.",
+   "As regras detalhadas sobre como o serviço vai funcionar na prática."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "TEA",
+    "explicacao": "Transtorno do Espectro Autista, que é uma condição que afeta a comunicação e o comportamento."
+   },
+   {
+    "termo": "imunização",
+    "explicacao": "Vacinação para proteger a pessoa contra doenças."
+   },
+   {
+    "termo": "isonomia",
+    "explicacao": "Igualdade de tratamento para todas as pessoas."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro reservado no orçamento do governo para pagar despesas."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "A prefeitura, que é quem administra a cidade e executa as leis."
+   }
+  ],
+  "justificativa_do_autor": "",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não informa quando o cadastro vai começar a funcionar nem como será o atendimento na prática.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto deixa para a prefeitura a tarefa de definir as regras de regulamentação.",
+    "trecho": "O Poder Executivo regulamentará a presente Lei, no que couber."
+   },
+   {
+    "ponto": "O texto não traz valores de custo ou de multas para o projeto.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "f4ad7ac0a66ed4d6",
+ "gerado_em": "2026-11-09T23:14:36Z"
+}

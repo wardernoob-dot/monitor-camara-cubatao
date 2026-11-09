@@ -7,67 +7,67 @@
   "ementa": "DISPÕE SOBRE A REMISSÃO DE DÉBITOS TRIBUTÁRIOS IMOBILIÁRIOS PARA A ENTIDADE ESPORTIVA ESPORTE CLUBE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PLC_09-2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto perdoa dívidas antigas de impostos de dois imóveis do Esporte Clube Cubatão. Ele também dispensa o clube de pagar esses mesmos impostos nos anos de 2027 e 2028. O valor total do perdão chega a mais de um milhão e meio de reais. A ideia é ajudar o clube a continuar com suas atividades esportivas e sociais na cidade.",
+  "resumo": "O projeto perdoa dívidas antigas de impostos de dois imóveis do Esporte Clube Cubatão. Ele também isenta o pagamento do IPTU e da taxa de lixo dos anos de 2027 e 2028. O valor total do perdão chega a mais de 1,5 milhão de reais. Em troca, o clube precisa manter a propriedade dos imóveis por 15 anos.",
   "o_que_muda": [
-   "Perdoa dívidas de IPTU (Imposto Predial e Territorial Urbano, imposto pago por quem tem imóvel) e TCRS (Taxa de Coleta de Resíduos Sólidos, a taxa do lixo) até o ano de 2026, somando R$ 1.285.176,45.",
-   "Isenta o pagamento de IPTU e TCRS dos anos de 2027 e 2028, somando R$ 118.715,00 para 2027 e R$ 122.870,00 para 2028.",
-   "O valor total do perdão de impostos atinge a quantia de R$ 1.526.761,00.",
-   "O perdão vale exclusivamente para os dois imóveis do Esporte Clube Cubatão, com números de inscrição 01-06-0012-0060-000 e 01-07-0064-0293-000."
+   "Perdão de dívidas de IPTU e taxa de lixo do Esporte Clube Cubatão até o ano de 2026, no valor de R$ 1.285.176,45.",
+   "Isenção dos pagamentos de IPTU e taxa de lixo dos anos de 2027 e 2028.",
+   "O valor total do perdão de impostos soma R$ 1.526.761,00.",
+   "O clube fica obrigado a não vender, doar ou trocar os imóveis pelo prazo de 15 anos.",
+   "A regra de manter o imóvel por 15 anos deve ser anotada na matrícula do imóvel no cartório.",
+   "Se o clube desrespeitar a regra dos 15 anos, perde o perdão e a dívida volta inteira com juros e multas.",
+   "O perdão só começa a valer após a assinatura de um termo administrativo e a anotação no cartório do imóvel.",
+   "Os honorários de advogados da cobrança das dívidas não entram no perdão e devem ser pagos conforme a lei."
   ],
-  "quem_e_afetado": "O único beneficiado é o Esporte Clube Cubatão, que deixa de pagar dívidas e impostos futuros de seus imóveis. Ficam de fora do perdão os honorários advocatícios, que são os custos de advogados ou da cobrança judicial, que continuam tendo de ser pagos. A população que frequenta o clube ganha com a manutenção das atividades esportivas e sociais.",
-  "de_onde_sai_o_dinheiro": "O texto não tira dinheiro do cofre para gastar, mas abre mão de receber impostos. A prefeitura compensa essa perda de arrecadação usando o aumento de dinheiro gerado por uma mudança na cobrança de IPTU de estacionamentos e pátios de contêineres, aprovada por outra lei.",
+  "quem_e_afetado": "O único beneficiado é o Esporte Clube Cubatão, que deixa de pagar suas dívidas de impostos dos imóveis. A Prefeitura abre mão de receber esse dinheiro. Moradores em geral e outros contribuintes continuam pagando seus impostos normalmente.",
+  "de_onde_sai_o_dinheiro": "O dinheiro que a Prefeitura deixa de arrecadar (renúncia de receita) será compensado pelo aumento na arrecadação do IPTU de pátios de contêineres, transportadoras e estacionamentos de veículos pesados, criado pela Lei Complementar nº 151/2025.",
   "o_que_falta_definir": [
-   "O texto não define a data exata em que o clube deve fazer o requerimento formal para conseguir o benefício.",
-   "O texto não explica como será o pagamento separado dos honorários de advogado que ficaram de fora do perdão."
+   "A assinatura do termo administrativo exigido para o início da validade da lei.",
+   "A averbação da obrigação na matrícula do imóvel no Cartório de Registro de Imóveis."
   ],
   "palavras_dificeis": [
    {
     "termo": "remissão",
-    "explicacao": "É o perdão de uma dívida."
+    "explicacao": "Significa o perdão de uma dívida."
    },
    {
-    "termo": "IPTU",
-    "explicacao": "Imposto Predial e Territorial Urbano, um imposto que quem tem casa, prédio ou terreno paga todo ano para a prefeitura."
+    "termo": "alienação",
+    "explicacao": "Ato de vender, passar para o nome de outro ou doar um bem."
    },
    {
-    "termo": "TCRS",
-    "explicacao": "Taxa de Coleta de Resíduos Sólidos, que é a taxa cobrada pelo serviço de recolhimento de lixo."
+    "termo": "propter rem",
+    "explicacao": "Obrigação que acompanha o imóvel, não importando quem seja o dono."
    },
    {
-    "termo": "honorários advocatícios",
-    "explicacao": "Dinheiro pago pelo serviço dos advogados que trabalham na cobrança da dívida."
-   },
-   {
-    "termo": "renúncia de receita",
-    "explicacao": "Quando o governo abre mão de receber um dinheiro de impostos que teria direito."
+    "termo": "averbada",
+    "explicacao": "Anotação oficial feita na certidão ou matrícula de um imóvel."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, a entidade esportiva desempenha um papel essencial na construção de uma sociedade mais saudável, inclusiva e desenvolvida. O autor alega que o clube não apenas organiza campeonatos ou forma atletas, mas também promove a saúde física e mental, previne doenças, combate o tempo ocioso e a violência, e apoia a inclusão social na comunidade.",
+  "justificativa_do_autor": "Segundo o autor, a medida serve para ajudar a continuidade das atividades esportivas do clube, que promovem saúde, inclusão social e bem-estar à comunidade. O autor diz ainda que a entidade tem relevância social e atende crianças, jovens e famílias em vulnerabilidade social.",
   "natureza": "orcamento_financas",
   "limitacoes": "",
   "pontos_de_atencao": [
    {
-    "ponto": "O valor total da renúncia de receita é de mais de um milhão e meio de reais.",
+    "ponto": "O valor total do perdão de impostos é de mais de um milhão e meio de reais.",
     "trecho": "O valor total da remissão de que trata o caput deste artigo corresponde a R$ 1.526.761,00 (um milhão, quinhentos e vinte e seis mil, setecentos e sessenta e um reais)."
    },
    {
-    "ponto": "O perdão não inclui os gastos com advogados e cobranças judiciais.",
-    "trecho": "A remissão prevista neste artigo não abrange os honorários advocatícios decorrentes da cobrança judicial ou administrativa dos débitos mencionados"
+    "ponto": "O clube beneficiado deve manter a propriedade dos imóveis por 15 anos sem vender ou transferir.",
+    "trecho": "condicionada à manutenção da propriedade do imóvel em nome do beneficiário pelo prazo de 15 (quinze) anos, sendo vedada sua alienação"
    },
    {
-    "ponto": "A compensação da perda de dinheiro da prefeitura vem do aumento do IPTU de pátios de veículos e contêineres.",
-    "trecho": "Alíquota 2% para pátios: Art. 6º da LC 151/2025 previsão aumento de R$ 2 MM na arrecadação de 2026."
+    "ponto": "A fonte de compensação do dinheiro que deixa de entrar na prefeitura é o aumento do IPTU de pátios de veículos pesados.",
+    "trecho": "modificou a alíquota do IPTU para 2% aplicada a estacionamentos de veículos pesados, transportadoras de cargas e pátios de contêineres"
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "bc9c383a15331fac",
- "gerado_em": "2026-11-08T03:30:12Z"
+ "hash_documento": "901f43dd1a4ea73f",
+ "gerado_em": "2026-11-09T23:15:35Z"
 }

@@ -1,0 +1,71 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "26",
+  "ano": "2026",
+  "autoria": "PREFEITO MUNICIPAL",
+  "ementa": "ACRESCENTA OS §§ 1º E 2º AO ARTIGO 5º DA LEI MUNICIPAL Nº3.404, DE 17 DE AGOSTO DE 2010, QUE DISPÕE SOBRE A INSTITUIÇÃO DO VALE TRANSPORTE PARA OS SERVIDORES PÚBLICOS DO MUNICÍPIO DE CUBATÃO"
+ },
+ "documento": {
+  "fonte": "texto da lei publicada no Diario Oficial",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2026.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto muda a regra do vale-transporte para os guardas municipais que andam armados. A prefeitura poderá pagar o benefício em dinheiro vivo quando o ônibus for perigoso ou inadequado para eles. Esse dinheiro não entra no salário do guarda e não sofre descontos de impostos. A lei vale a partir do dia em que for publicada.",
+  "o_que_muda": [
+   "A prefeitura e as autarquias compram o vale-transporte para os servidores irem e voltarem do trabalho.",
+   "Os guardas municipais que usam arma de fogo podem receber o vale-transporte em dinheiro vivo (pecúnia).",
+   "Isso acontece quando andar de ônibus for considerado inadequado ou inseguro por causa da arma.",
+   "O dinheiro pago em espécie serve apenas para pagar o transporte de casa para o trabalho e do trabalho para casa.",
+   "O valor pago em dinheiro não se junta ao salário do servidor.",
+   "O dinheiro pago não serve para calcular impostos nem previdência.",
+   "O pagamento em dinheiro respeita os limites de valores e quantidades da lei antiga."
+  ],
+  "quem_e_afetado": "Os guardas civis municipais que possuem porte de arma de fogo ganham o direito de receber o vale-transporte em dinheiro. Os demais servidores continuam recebendo o vale-transporte normal. A Administração Pública Direta e as autarquias têm a obrigação de fornecer o benefício.",
+  "de_onde_sai_o_dinheiro": "Os gastos saem do orçamento próprio da prefeitura, que pode receber dinheiro extra (suplementado) se for preciso.",
+  "o_que_falta_definir": [
+   "O texto não define quem vai decidir se o ônibus é inseguro ou inadequado para cada guarda.",
+   "O texto não diz qual será o valor exato pago em dinheiro aos guardas.",
+   "O texto não traz regras sobre como o guarda deve comprovar que gastou o dinheiro com o transporte."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "pecúnia",
+    "explicacao": "Significa pagamento em dinheiro vivo."
+   },
+   {
+    "termo": "autarquias",
+    "explicacao": "São serviços públicos que funcionam separados da prefeitura mas pertencem ao governo."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "É o dinheiro reservado no orçamento da prefeitura para pagar as contas."
+   }
+  ],
+  "justificativa_do_autor": "",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa como será feito o pedido nem quem aprova o pagamento em dinheiro para cada guarda.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O dinheiro extra pago aos guardas não conta como salário e não paga impostos.",
+    "trecho": "não se incorporará à remuneração para quaisquer efeitos, não constituirá base de incidência de contribuição previdenciária ou tributária"
+   },
+   {
+    "ponto": "A lei começa a valer imediatamente no dia de sua publicação.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não define um órgão específico para fiscalizar o uso correto do dinheiro pago aos guardas.",
+    "trecho": "O texto não informa quem vai fiscalizar se o dinheiro do vale-transporte em pecúnia está sendo usado corretamente pelos guardas.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "09b73115abf69c13",
+ "gerado_em": "2026-11-09T23:15:05Z"
+}

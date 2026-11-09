@@ -7,61 +7,65 @@
   "ementa": "DISPÕE SOBRE A REVISÃO GERAL ANUAL DOS VENCIMENTOS E SALÁRIOS DOS SERVIDORES PÚBLICOS MUNICIPAIS DA ADMINISTRAÇÃO DIRETA E AUTÁRQUICA DO PODER EXECUTIVO; ALTERA OS VALORES DOS BENEFÍCIOS DE ALIMENTAÇÃO E REFEIÇÃO; ACRESCENTA PARÁGRAFO AO ARTIGO 1° DA LEI N° 4.458, DE 14 DE MAIO DE 2026; E DÁ OUTRAS PROVIDÊNCIAS CORRELATAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2059.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto trata da revisão geral anual e reajuste dos salários dos servidores públicos municipais, além da alteração nos valores dos benefícios de alimentação e refeição. A proposta concede um aumento de cinco por cento para servidores ativos, inativos e pensionistas, e de quatro vírgula trinta e nove por cento para agentes políticos. O texto também fixa novos valores mensais e diários para os vales e define regras sobre os efeitos financeiros e o orçamento.",
+  "resumo": "Esta lei concede um reajuste de 5% nos salários e proventos dos servidores públicos municipais de Cubatão. Também aumenta os valores dos benefícios de alimentação e refeição pagos aos trabalhadores da ativa. A medida vale para a administração direta e autárquica do Poder Executivo. Os efeitos financeiros retroagem a 1º de maio de 2026.",
   "o_que_muda": [
-   "Concessão de reajuste de 5,00% sobre vencimentos, salários e proventos de abril de 2026 para servidores ativos, inativos e pensionistas da Administração Direta e Autárquica.",
-   "Reajuste de 4,39% para agentes políticos da Administração Direta e Autárquica do Poder Executivo.",
-   "O valor do benefício de alimentação passa a ser de R$ 525,00 mensais para servidores ativos.",
-   "O valor do benefício de refeição passa a ser de R$ 42,00 por dia efetivamente trabalhado para servidores ativos.",
-   "O reajuste de 5% incide sobre a Vantagem Pessoal Nominalmente Identificada (VPNI).",
-   "Acrescenta parágrafo na Lei nº 4.458/2026 determinando que o aumento salarial não se aplica aos vencimentos da Lei Complementar nº 22/2004."
+   "Concede reajuste de 5% nos salários, vencimentos e proventos de servidores ativos, inativos e pensionistas.",
+   "O reajuste de 5% incide sobre os valores do mês de abril de 2026 e afeta também a Vantagem Pessoal Nominalmente Identificada (VPNI).",
+   "Aumenta o valor do benefício de alimentação para R$ 525,00 mensais para servidores ativos.",
+   "Aumenta o valor do benefício de refeição para R$ 42,00 por dia efetivamente trabalhado para servidores ativos.",
+   "Mantém a participação dos servidores (contrapartida) no custeio do vale-alimentação e vale-refeição conforme as regras de 2026.",
+   "Altera a Lei nº 4.458 para definir que o aumento salarial anterior não se aplica aos cargos da Lei Complementar nº 22 de 2004, com efeito retroativo a 1º de janeiro de 2026."
   ],
-  "quem_e_afetado": "Os servidores públicos municipais ativos, inativos e pensionistas com direito à paridade da Administração Direta, Autárquica e Fundacional, além de agentes políticos, ganham reajuste salarial e novos valores de benefícios. Os servidores ativos ganham o direito ao vale-alimentação de R$ 525,00 e vale-refeição de R$ 42,00 por dia. Ficam de fora do aumento salarial da Lei nº 4.458/2026 os vencimentos estabelecidos na Lei Complementar nº 22/2004.",
-  "de_onde_sai_o_dinheiro": "As despesas correm por conta de dotações orçamentárias próprias do orçamento vigente, podendo ser suplementadas se necessário na forma da lei, com custo adicional bruto total estimado em R$ 23.258.921,00 para o exercício de 2026.",
+  "quem_e_afetado": "Os servidores públicos municipais ativos, inativos e pensionistas com direito à paridade da administração direta e autárquica ganham o reajuste salarial e os novos valores de alimentação e refeição. Ficam de fora os cargos estabelecidos na Lei Complementar nº 22 de 2004, que não recebem o aumento salarial mencionado no artigo 6º.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de dotações do orçamento vigente, que podem ser suplementadas se necessário, conforme a lei.",
   "o_que_falta_definir": [
-   "A expedição de decretos e atos regulamentares pelo Poder Executivo para a atualização das tabelas de vencimentos dos servidores.",
-   "A definição exata de eventuais suplementações orçamentárias caso as dotações atuais não sejam suficientes."
+   "A atualização detalhada das tabelas de vencimentos dos servidores.",
+   "Outros decretos e atos regulamentares que o Poder Executivo achar necessários para aplicar a lei."
   ],
   "palavras_dificeis": [
    {
-    "termo": "VPNI (Vantagem Pessoal Nominalmente Identificada)",
-    "explicacao": "Uma parcela fixa no salário do servidor que foi garantida por lei antiga e não pode ser reduzida."
+    "termo": "proventos",
+    "explicacao": "Dinheiro recebido por aposentados e pensionistas do serviço público."
    },
    {
-    "termo": "Agentes políticos",
-    "explicacao": "Pessoas que ocupam cargos de direção ou eleitos, como prefeito, vice-prefeito e secretários municipais."
+    "termo": "autárquica",
+    "explicacao": "Relativo a autarquia, que é um serviço público autônomo criado por lei para realizar tarefas específicas do Estado."
    },
    {
-    "termo": "Administração Autárquica",
-    "explicacao": "Órgãos do governo que possuem autonomia para administrar seus próprios serviços e dinheiro."
+    "termo": "paridade",
+    "explicacao": "Regra que garante aos aposentados e pensionistas os mesmos reajustes dados aos servidores que continuam trabalhando."
    },
    {
-    "termo": "Suplementadas",
-    "explicacao": "Valores adicionados ao orçamento para reforçar o dinheiro disponível quando ele acaba."
+    "termo": "suplementadas",
+    "explicacao": "Valores adicionados ao orçamento para cobrir gastos que passaram do previsto."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o estudo tem por objetivo analisar o impacto financeiro para a revisão geral anual dos vencimentos e concessão de reajuste com aumento real nos proventos dos servidores públicos municipais ativos, inativos e pensionistas, incluindo também a concessão de reajuste aos agentes políticos da Administração Direta e Autárquica do Poder Executivo para recomposição das perdas inflacionárias.",
+  "justificativa_do_autor": "",
   "natureza": "orcamento_financas",
-  "limitacoes": "",
+  "limitacoes": "O texto cortado ao final não permite ver os números completos do impacto financeiro total da medida.",
   "pontos_de_atencao": [
    {
-    "ponto": "O custo total adicional estimado para o exercício de 2026 é de mais de vinte e três milhões de reais.",
-    "trecho": "TOTAL PARA 0 EXERCÍCIO DE 2026 R$ 23.258.921,00"
+    "ponto": "O reajuste geral anual fixado para os servidores é de cinco por cento.",
+    "trecho": "no percentual de 5,00% (cinco por cento), incidente sobre os vencimentos, salários e proventos relativos ao mês de abril de 2026."
    },
    {
-    "ponto": "O texto autoriza o Poder Executivo a expedir decretos e atos regulamentares para atualizar as tabelas de vencimentos.",
-    "trecho": "Fica o Poder Executivo autorizado a expedir os decretos e atos regulamentares necessários à fiel execução desta Lei, inclusive quanto á atualização das tabelas de vencimentos dos servidores."
+    "ponto": "O benefício de alimentação passa a ser de quinhentos e vinte e cinco reais mensais.",
+    "trecho": "é reajustado para R$ 525,00 (quinhentos e vinte e cinco reais) mensais."
+   },
+   {
+    "ponto": "O benefício de refeição passa a valer quarenta e dois reais por dia trabalhado.",
+    "trecho": "é reajustado para R$ 42,00 (quarenta e dois reais) por dia efetivamente trabalhado."
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "3d48ca5fe1229661",
- "gerado_em": "2026-11-08T03:27:15Z"
+ "hash_documento": "a70e1fabf5a56e12",
+ "gerado_em": "2026-11-09T23:13:44Z"
 }

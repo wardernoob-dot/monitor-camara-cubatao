@@ -1,0 +1,62 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "139",
+  "ano": "2025",
+  "autoria": "DANIEL BARBOSA DE ASSIS SILVA",
+  "ementa": "DISPÕE SOBRE A CRIAÇÃO DO SELO EMPRESA AMIGA DA MULHER E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto da lei publicada no Diario Oficial",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_139-2025_-_Selo_Empresa_Amiga_da_Mulher.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o selo Empresa Amiga da Mulher para premiar empresas públicas e privadas de Cubatão. O objetivo é reconhecer práticas que ajudam e valorizam as mulheres no trabalho. As empresas vencedoras podem usar o selo em seus produtos e propagandas. O texto não diz de onde vem o dinheiro para cuidar disso.",
+  "o_que_muda": [
+   "Cria o selo Empresa Amiga da Mulher para empresas públicas e privadas.",
+   "O selo é entregue uma vez por ano.",
+   "A empresa precisa ter regularidade fiscal ambiental (documentos que provam que ela está em dia com as leis do ambiente).",
+   "A empresa deve seguir pelo menos três regras de proteção e valorização da mulher no trabalho.",
+   "A empresa premiada pode colocar o desenho do selo em sua marca e em materiais de propaganda.",
+   "Se a empresa parar de seguir as regras, perde o direito de usar o selo antes do prazo acabar."
+  ],
+  "quem_e_afetado": "Empresas públicas e privadas de Cubatão podem ganhar o selo se cumprirem as regras. Mulheres que trabalham nessas empresas ganham mais ações de proteção e apoio. Quem não quiser participar ou não cumprir os requisitos fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Qual será a secretaria competente que vai receber as inscrições e cuidar do selo.",
+   "Qual é o tempo de validade do selo antes de expirar.",
+   "Como o Poder Executivo (prefeitura) vai regulamentar e organizar os detalhes da lei."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "equidade de gênero",
+    "explicacao": "Igualdade de direitos e oportunidades entre homens e mulheres."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "A prefeitura, que é quem governa a cidade e aplica as leis."
+   }
+  ],
+  "justificativa_do_autor": "",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não diz qual secretaria faz a gestão, quanto tempo o selo vale ou quanto custa para a prefeitura.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A lei depende de regras futuras criadas pelo prefeito para funcionar por completo.",
+    "trecho": "O Poder Executivo regulamentará esta Lei, no que couber."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não informa os custos ou a fonte de recursos para bancar a entrega do selo.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "962a5c5d4f520789",
+ "gerado_em": "2026-11-09T23:17:18Z"
+}
