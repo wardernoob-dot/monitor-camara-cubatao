@@ -1,0 +1,67 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "88",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A INCLUSÃO DO \"FESTIVAL OCUPACENA\" NO CALENDÁRIO OFICIAL DO MUNICÍPIO DE CUBATÃO, A SER REALIZADO, ANUALMENTE, NO MÊS DE JUNHO, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-88.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto inclui o \"Festival Ocupacena\" no calendário oficial da cidade de Cubatão. O festival passa a acontecer todos os anos no mês de junho. Ele busca promover a cultura, as artes e a economia criativa sem ter caráter competitivo.",
+  "o_que_muda": [
+   "O \"Festival Ocupacena\" entra oficialmente no calendário do município de Cubatão.",
+   "O festival passa a ser realizado todos os anos durante o mês de junho.",
+   "O evento terá foco em teatro, música, dança, capoeira, oficinas e feiras de economia solidária.",
+   "O festival não terá caráter competitivo, valorizando a troca de experiências.",
+   "Haverá ações de acessibilidade para pessoas com deficiência."
+  ],
+  "quem_e_afetado": "Artistas, grupos culturais e empreendedores locais ganham espaço para mostrar seus trabalhos e produtos. O público geral ganha opções de lazer e cultura inclusiva. Ninguém sofre obrigações ou punições pelo texto.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Quais dias específicos de junho o festival vai acontecer.",
+   "Como será feita a parceria com a iniciativa privada ou órgãos públicos.",
+   "Se haverá repasse de dinheiro da prefeitura para os organizadores."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "artes cênicas",
+    "explicacao": "Artes ligadas a apresentações ao vivo, como teatro e dança."
+   },
+   {
+    "termo": "economia criativa",
+    "explicacao": "Atividades econômicas baseadas na criatividade e no talento cultural."
+   },
+   {
+    "termo": "perenidade",
+    "explicacao": "Qualidade do que dura por muito tempo ou para sempre."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o festival foi criado em 2017 pelo Coletivo Valsa Pra Lua e já atraiu participantes de vários estados. Ele afirma que o evento traz impacto cultural e responsabilidade social com recursos de inclusão. O autor também diz que colocar o evento no calendário oficial garante sua perenidade e facilita a busca por recursos.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O projeto não detalha custos, valores ou responsabilidades financeiras da prefeitura com o evento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não fala sobre custos ou de onde virá o dinheiro para o evento.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O festival não tem caráter competitivo e foca na troca de experiências.",
+    "trecho": "caráter não competitivo, visando à valorização da experimentação artística e da troca de experiências entre os participantes"
+   },
+   {
+    "ponto": "O evento deve ocorrer todos os anos no mês de junho.",
+    "trecho": "a ser realizado, anualmente, no mês de junho."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "53cc03c00b8a2f18",
+ "gerado_em": "2026-11-08T05:13:11Z"
+}

@@ -1,0 +1,71 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "65",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A OBRIGATORIEDADE DE ACEITAÇÃO DE RECEITAS MÉDICAS EMITIDAS POR PROFISSIONAIS DA REDE PRIVADA, CONVÊNIOS OU PLANOS DE SAÚDE PARA O FORNECIMENTO DE MEDICAMENTOS NA REDE PÚBLICA MUNICIPAL DE SAÚDE DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-65.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto obriga a rede pública de saúde de Cubatão a aceitar receitas médicas de médicos particulares ou de planos de saúde. O morador poderá pegar remédios de graça na farmácia pública mesmo tendo passado por atendimento privado. O texto exige que o remédio esteja na lista oficial do município e haja estoque disponível. A lei vale a partir do dia em que for publicada.",
+  "o_que_muda": [
+   "A rede pública de saúde passa a aceitar receitas de clínicas particulares, planos de saúde e de outras cidades, desde que o paciente more em Cubatão.",
+   "O paciente não precisa ter sido atendido pelo SUS (Sistema Único de Saúde) para conseguir o remédio.",
+   "A receita médica deve ter nome do paciente, documento, nome do remédio, quantidade, data, nome do médico, número no conselho profissional, assinatura e carimbo.",
+   "O atendimento com receita particular não dá prioridade na fila e respeita a disponibilidade de estoque e dinheiro da prefeitura."
+  ],
+  "quem_e_afetado": "Todos os moradores de Cubatão que possuem receita médica de médicos particulares ou de convênios ganham o direito de tentar pegar remédios de graça na rede pública. Ficam de fora os remédios que não estão na lista oficial da prefeitura ou que faltam no estoque. Os pacientes do SUS continuam com as mesmas regras e não perdem o direito.",
+  "de_onde_sai_o_dinheiro": "Segundo o texto, os gastos para aplicar a lei saem de dinheiro já reservado no orçamento próprio da prefeitura.",
+  "o_que_falta_definir": [
+   "O prazo de validade exato da receita médica conforme as normas sanitárias.",
+   "As regras para o cadastramento prévio dos usuários, caso a prefeitura decida fazer.",
+   "Os critérios técnicos que a Secretaria Municipal de Saúde poderá criar caso falte remédio no estoque.",
+   "Como a Secretaria Municipal de Saúde vai fazer a fiscalização para evitar fraudes ou falta de remédios."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "fármaco",
+    "explicacao": "É o mesmo que remédio ou medicamento."
+   },
+   {
+    "termo": "posologia",
+    "explicacao": "É a indicação de como o remédio deve ser tomado, como a dose e os horários."
+   },
+   {
+    "termo": "REMUME",
+    "explicacao": "Sigla para Relação Municipal de Medicamentos, que é a lista oficial de remédios que a prefeitura fornece de graça."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "É o dinheiro que o governo já separou no orçamento para pagar por despesas específicas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a proposta segue a Constituição Federal para garantir saúde como direito de todos. O objetivo é eliminar a exigência de o cidadão passar por uma fila do SUS só para copiar uma receita que ele já conseguiu no médico particular. O autor alega que muitas famílias não conseguem pagar remédios contínuos e que a medida não cria gastos novos, pois usa apenas os remédios que o município já tem no estoque.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa quanto custará no total nem se há remédio suficiente no estoque atual para atender a nova demanda.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto depende de o remédio estar na lista oficial e ter estoque.",
+    "trecho": "O acesso aos medicamentos fica estritamente condicionado à presença do fármaco na Relação Municipal de Medicamentos (REMUME) e à disponibilidade de estoque"
+   },
+   {
+    "ponto": "A Secretaria Municipal de Saúde vai cuidar das regras e da fiscalização.",
+    "trecho": "Caberá à Secretaria Municipal de Saúde a regulamentação dos procedimentos operacionais, a fiscalização para evitar fraudes ou desabastecimento"
+   },
+   {
+    "ponto": "O texto não traz penalidades ou multas para quem descumprir a lei.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "6acca2241c5f8d5a",
+ "gerado_em": "2026-11-08T05:09:46Z"
+}

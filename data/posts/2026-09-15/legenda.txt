@@ -1,16 +1,17 @@
 🏛️ Câmara de Cubatão — votações de 15/09/2026
 
 ▪️ PL 34/2026 (Cléber do Cavaco): aprovado em 2ª discussão, 10 a 0. Não votaram: Topete, Jair do Bar, Ronaldo da Comissão, Rony Martins e Dr. Anderson de Lana.
-O projeto propõe dar o nome de Guilherme Henrick da Silva à quadra de futebol society situada na Praça da Cidadania, no bairro Vila São José.
+Este projeto dá o nome de Guilherme Henrick da Silva para uma quadra de futebol em Cubatão. O local fica na Praça da Cidadania, no bairro Vila São José. A mudança serve para homenagear um morador conhecido na região. O efeito prático é apenas colocar uma placa com o nome no espaço público.
 ✅ Sancionado: Lei nº 4.482 (DO de 23/09/2026).
 ℹ️ Painel x resumo oficial da sessão: 1ª discussão: Alessandro Oliveira não registrou voto no painel e consta como favorável no resumo; 1ª discussão: Rony Martins não registrou voto no painel e consta como favorável no resumo; 1ª discussão: Afonsinho não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Jair do Bar não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Ronaldo da Comissão não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Rony Martins não registrou voto no painel e consta como favorável no resumo; 2ª discussão: Dr. Anderson de Lana não registrou voto no painel e consta como favorável no resumo.
 
 ▪️ PL 74/2026 (Prefeito Municipal): aprovado em 2ª discussão, 11 a 3. Contra: Guilherme do Salão, Marcinho e Rony Martins. Não votaram: Topete.
-O projeto altera a Lei de Diretrizes Orçamentárias de 2026 para dobrar, de 10% para 20%, o limite para remanejamento e suplementação de recursos no orçamento municipal.
+Este projeto de lei muda as regras do orçamento da cidade para o ano de 2026. Ele aumenta de 10% para 20% o limite que a prefeitura tem para remanejar dinheiro entre diferentes áreas. O objetivo é dar mais rapidez para a prefeitura usar os recursos já existentes. A medida não cria novos gastos e nem aumenta impostos.
 ✅ Sancionado: Lei nº 4.481 (DO de 16/09/2026).
 
 ▪️ PL 75/2026 (Prefeito Municipal): retornou_comissoes, 0 a 0.
-O projeto autoriza a Prefeitura de Cubatão a contratar um empréstimo de até R$ 500 milhões junto à Caixa Econômica Federal. O valor será destinado a investimentos em infraestrutura e saneamento através do programa FINISA.
+
+(continua nos cards)
 
 Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
 

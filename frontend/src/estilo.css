@@ -1673,3 +1673,19 @@ a.rp-autor__nome:hover { text-decoration: underline; }
 .item-sessao__ementa { margin: .25rem 0 .75rem; font-size: .85rem; color: var(--color-surface-3); }
 .item-sessao__ementa summary { cursor: pointer; }
 .item-sessao__ementa p { margin: .35rem 0 0; }
+
+/* balao de dica (tooltip): contraste nos dois temas. No escuro, --suave e escuro, entao o texto usa tokens proprios. */
+:root { --dica-bg: #171717; --dica-texto: #ececec; --dica-titulo: #ffffff; --dica-fonte: #b3b3b3; --dica-borda: transparent; }
+:root[data-tema="dark"] { --dica-bg: #2a2d33; --dica-texto: #e6e7ea; --dica-titulo: #ffffff; --dica-fonte: #a9acb3; --dica-borda: #3d4148; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="light"]) { --dica-bg: #2a2d33; --dica-texto: #e6e7ea; --dica-titulo: #ffffff; --dica-fonte: #a9acb3; --dica-borda: #3d4148; }
+}
+.dica__pop { background: var(--dica-bg); color: var(--dica-texto); border: 1px solid var(--dica-borda); }
+.dica__titulo { color: var(--dica-titulo); }
+.dica__fonte { color: var(--dica-fonte); }
+.dica__lista, .dica__pop li, .dica__pop p { color: var(--dica-texto); }
+/* contraste no tema escuro: numero dos caminhos, selo "virou lei" e rotulo dos ausentes */
+.caminho__n { color: var(--color-surface-3); }
+:root[data-tema="dark"] .sit--lei { color: var(--color-canvas); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) .sit--lei { color: var(--color-canvas); } }
+.racha__lado--ausente .racha__lado-rot, .racha__lado--ausente .racha__lado-rot span { color: var(--color-surface-3); }

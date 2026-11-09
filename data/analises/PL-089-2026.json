@@ -1,0 +1,74 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "89",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "AUTORIZA O PODER EXECUTIVO A ADQUIRIR O IMÓVEL QUE MENCIONA E DÁ OUTRA PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-89.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto autoriza a Prefeitura a comprar um imóvel específico na Vila Couto. O local será usado para instalar a nova sede do Conselho Tutelar (órgão que protege crianças e adolescentes). O dinheiro para a compra virá de um fundo especial da área da infância. Com isso, o órgão ganha um espaço fixo, próprio e adequado para atendimento.",
+  "o_que_muda": [
+   "A Prefeitura recebe autorização para comprar o imóvel na Rua Armando Sales de Oliveira, nº 509, Vila Couto, Cubatão/SP (matrícula nº 21.434).",
+   "O imóvel comprado deve vir livre e desembaraçado de quaisquer ônus, dívidas ou dúvidas.",
+   "O local adquirido será destinado para a instalação da sede do Conselho Tutelar de Cubatão.",
+   "O pagamento da compra sairá do FMDCA (Fundo Municipal dos Direitos da Criança e do Adolescente), após autorização do CMDCA."
+  ],
+  "quem_e_afetado": "A Prefeitura ganha a permissão para fazer a compra. Os conselheiros tutelares ganham um espaço físico próprio e permanente para trabalhar. As crianças, adolescentes e famílias em situação de vulnerabilidade ganham um atendimento mais digno, reservado e eficiente. O texto não exclui nenhuma pessoa ou grupo específico.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de recursos do FMDCA (Fundo Municipal dos Direitos da Criança e do Adolescente), que são autorizados pelo CMDCA (Conselho Municipal dos Direitos da Criança e do Adolescente). O projeto afirma que isso não mexe no orçamento comum da Prefeitura.",
+  "o_que_falta_definir": [
+   "O valor exato da compra do imóvel.",
+   "A data em que a compra será fechada e o imóvel entregue.",
+   "A resolução específica do CMDCA que vai liberar os recursos."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "É a Prefeitura, a parte da administração pública que governa a cidade e executa as leis."
+   },
+   {
+    "termo": "ônus",
+    "explicacao": "São obrigações, encargos ou problemas jurídicos que pesam sobre um bem, como uma dívida."
+   },
+   {
+    "termo": "Conselho Tutelar",
+    "explicacao": "Órgão que zela pelos direitos das crianças e dos adolescentes."
+   },
+   {
+    "termo": "CMDCA",
+    "explicacao": "Conselho Municipal dos Direitos da Criança e do Adolescente, órgão que gerencia políticas e fundos da área."
+   },
+   {
+    "termo": "FMDCA",
+    "explicacao": "Fundo Municipal dos Direitos da Criança e do Adolescente, que é a conta onde ficam guardados os recursos financeiros para essa finalidade."
+   },
+   {
+    "termo": "vulnerabilidade",
+    "explicacao": "Situação de fragilidade ou risco social em que pessoas precisam de mais proteção do Estado."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, estudos técnicos e pesquisa prévia mostraram que o Conselho Tutelar precisa de um espaço físico próprio, permanente e de fácil localização. O autor alega que o imóvel atende aos requisitos de estrutura e acessibilidade, garantindo melhores condições de trabalho aos conselheiros e atendimento digno às famílias. Além disso, diz que a compra é mais vantajosa do ponto de vista administrativo e financeiro, sem gastar o dinheiro comum da Prefeitura.",
+  "natureza": "organizacao_administrativa",
+  "limitacoes": "O documento não informa o preço de compra do imóvel nem os detalhes do contrato imobiliário.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A compra será paga com recursos do Fundo Municipal dos Direitos da Criança e do Adolescente.",
+    "trecho": "correrão por conta de recursos previamente autorizados pelo CMDCA - Conselho Municipal dos Direitos da Criança e do Adolescente e disponibilizados através do FMDCA"
+   },
+   {
+    "ponto": "O texto não informa o valor que será pago pelo imóvel.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "6ba18b9966e7d6b8",
+ "gerado_em": "2026-11-08T05:14:26Z"
+}

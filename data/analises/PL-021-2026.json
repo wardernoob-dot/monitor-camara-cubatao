@@ -1,0 +1,64 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "21",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A SUSPENSÃO TEMPORÁRIA DA COBRANÇA DA CONTRIBUIÇÃO PARA CUSTEIO DO SERVIÇO DE ILUMINAÇÃO PÚBLICA - CIP, NO MUNICÍPIO DE CUBATÃO/SP E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2021.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto suspende temporariamente a cobrança de uma taxa de luz da população. Isso acontece se faltar contrato com empresa ou materiais para consertar as lâmpadas da rua. A cobrança volta ao normal quando o serviço for consertado e regularizado. Enquanto durar a suspensão, a prefeitura deve enviar relatórios mensais para a Câmara de Vereadores.",
+  "o_que_muda": [
+   "A cobrança da CIP (Contribuição para Custeio do Serviço de Iluminação Pública) fica suspensa se faltar prestação dos serviços de manutenção, troca, reposição e expansão.",
+   "A suspensão ocorre se não houver contrato com empresa habilitada ou se faltarem insumos para atender a demanda.",
+   "A prefeitura deve avisar oficialmente a Câmara Municipal em até 10 dias quando o serviço for restabelecido regularmente.",
+   "A cobrança da taxa é retomada logo após o restabelecimento do serviço.",
+   "Durante a suspensão, a prefeitura apresenta um relatório mensal com valores arrecadados, saldo, destinação do dinheiro, andamento de licitação ou contrato e prazo estimado para normalizar o serviço."
+  ],
+  "quem_e_afetado": "O morador ganha o direito de não pagar a taxa de iluminação pública enquanto o serviço de reparos estiver parado. A prefeitura ganha a obrigação de suspender essa cobrança e de prestar contas todo mês com relatórios. O texto não fala sobre quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Qual é a Secretaria Municipal competente para enviar o relatório para a Câmara.",
+   "Como será feita a devolução ou compensação de valores caso ocorra cobrança indevida durante o período."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "CIP",
+    "explicacao": "É a Contribuição para Custeio do Serviço de Iluminação Pública, um imposto ou taxa cobrada para pagar a luz das ruas."
+   },
+   {
+    "termo": "Insumos",
+    "explicacao": "São os materiais e produtos necessários para realizar um trabalho ou serviço."
+   },
+   {
+    "termo": "Licitatório",
+    "explicacao": "Relativo a licitação, que é o concurso público de preços para a prefeitura contratar empresas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a cobrança do tributo depende da execução do serviço e a Constituição Federal autoriza a taxa. O autor alega que a cidade está sem contrato de manutenção ou insumos, impedindo consertos. A população paga a taxa mas não tem o atendimento mínimo, gerando cobrança sem contraprestação. O objetivo não é acabar com a taxa, mas suspender a cobrança durante a falta do serviço.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não informa o impacto financeiro da suspensão da taxa para os cofres da prefeitura.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto não traz o custo da medida ou fonte de recursos.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto prevê prazo de dez dias para a prefeitura avisar a Câmara quando o serviço for restabelecido.",
+    "trecho": "devendo a Secretaria Municipal competente informar oficialmente à Câmara Municipal, no prazo de até 10 (dez) dias, quando restabelecido o serviço",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "dcbb425a096e1af1",
+ "gerado_em": "2026-11-08T05:06:51Z"
+}

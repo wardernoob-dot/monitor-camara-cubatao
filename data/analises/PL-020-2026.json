@@ -1,0 +1,68 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "20",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI, NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, PROGRAMA DE DISPONIBILIZAÇÃO DE SENSORES DE MONITORAMENTO CONTÍNUO DE GLICOSE A PACIENTES COM DIAGNÓSTICO DE DIABETES MELLITUS TIPO 1 NO ÂMBITO DO MUNICÍPIO DE CUBATÃO, E DÁOUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2020.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto cria um programa para entregar aparelhos que medem o açúcar no sangue sem picadas na pele. O benefício é para quem tem diabetes tipo 1 e usa a rede pública de saúde de Cubatão. O objetivo é melhorar a saúde dos pacientes e evitar internações em hospitais. O projeto diz que a Prefeitura está autorizada a fazer isso, mas não obriga a Prefeitura a começar o programa de imediato.",
+  "o_que_muda": [
+   "A Prefeitura ganha autorização para criar o programa de entrega de sensores de glicose.",
+   "Pacientes com diabetes tipo 1 poderão receber os sensores de monitoramento contínuo.",
+   "Para receber, o paciente deve morar em Cubatão, estar cadastrado na saúde pública e apresentar receita ou laudo de um profissional."
+  ],
+  "quem_e_afetado": "Quem ganha o direito de tentar receber o aparelho são os moradores de Cubatão que têm diabetes tipo 1 e usam a rede pública de saúde. O texto não diz quem fica de fora, além de exigir o cadastro e a receita médica.",
+  "de_onde_sai_o_dinheiro": "O texto diz que os gastos vão sair do orçamento da Prefeitura que já existe, com dinheiro extra se for preciso.",
+  "o_que_falta_definir": [
+   "As regras específicas de como o aparelho vai ser distribuído aos pacientes.",
+   "Como será o acompanhamento dos pacientes que ganharem o aparelho.",
+   "De que forma a Prefeitura vai controlar o uso correto dos sensores."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "É a Prefeitura, que administra a cidade e coloca as leis em prática."
+   },
+   {
+    "termo": "glicose",
+    "explicacao": "É o açúcar que está no sangue e serve de energia para o nosso corpo."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "É o dinheiro que já está separado no cofre da Prefeitura para pagar as despesas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o diabetes é uma doença que impede o corpo de produzir insulina e controlar o açúcar no sangue. O autor diz que a diabetes tipo 1 exige controle constante para evitar crises graves e problemas de saúde a longo prazo. Ele afirma que o sensor é um avanço na saúde pública porque reduz custos com hospitais e melhora a vida dos pacientes, especialmente crianças e jovens. Por fim, o autor defende que a medida é humanitária e justa.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não dá para saber quando o programa vai sair do papel, quantas pessoas serão atendidas ou quanto isso vai custar de verdade aos cofres públicos.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto apenas autoriza a Prefeitura, o que significa que o programa pode não acontecer de imediato.",
+    "trecho": "Fica o Poder Executivo autorizado a instituir programa de disponibilização de sensores de monitoramento contínuo de glicose"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não define prazos para o programa começar a funcionar.",
+    "trecho": "O texto não informa prazos para o início da distribuição dos sensores.",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não traz penalidades ou regras de fiscalização.",
+    "trecho": "O texto não prevê multas, penalidades ou regras específicas de fiscalização.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "89afea28b85d286e",
+ "gerado_em": "2026-11-08T05:06:41Z"
+}

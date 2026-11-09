@@ -1,0 +1,71 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "72",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI DIRETRIZES PARA A POLÍTICA MUNICIPAL DE PROTEÇÃO AOS ACOLHEDORES DE ANIMAIS E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-72.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria regras e ideias para cuidar de quem ajuda animais abandonados em Cubatão. Ele traz diretrizes para proteger os bichos, evitar o abandono e prevenir o acúmulo de animais. O texto permite que a prefeitura crie um cadastro de protetores e faça parcerias. A lei vale a partir do dia em que for publicada.",
+  "o_que_muda": [
+   "Cria as diretrizes para a Política Municipal de Proteção aos Acolhedores de Animais e Guarda Responsável.",
+   "Define como acolhedor a pessoa voluntária que sem lucro acolhe animais abandonados ou vulneráveis.",
+   "Permite que a prefeitura promova campanhas educativas, de conscientização e orientação técnica.",
+   "Permite que o Poder Executivo crie um cadastro voluntário de acolhedores e lares temporários.",
+   "Determina que a prefeitura pode fazer parcerias com entidades públicas e privadas.",
+   "Define que o acúmulo de animais não pode ser decidido só pela quantidade de bichos, mas por avaliação técnica."
+  ],
+  "quem_e_afetado": "Quem acolhe animais de forma voluntária ganha a chance de participar de um cadastro oficial. A prefeitura ganha autorização para fazer campanhas e parcerias. Ficam de fora atividades com fins lucrativos.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como vai funcionar o cadastro voluntário de acolhedores e lares temporários.",
+   "Quais órgãos municipais vão fazer a avaliação técnica para definir o acúmulo de animais.",
+   "Quais entidades públicas e privadas vão fazer parcerias com a prefeitura."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "zoonoses",
+    "explicacao": "Doenças que podem ser transmitidas dos animais para os seres humanos."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "A prefeitura, que é quem administra a cidade e executa as leis."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto reconhece a importância dos cidadãos que ajudam animais abandonados ou vítimas de maus-tratos sem cobrar nada. Ele afirma que a falta de orientação pode gerar problemas para a saúde pública e para os próprios acolhedores. O autor também diz que a proposta não cria despesas obrigatórias nem cargos públicos, apenas define diretrizes e instrumentos facultativos para ajudar o município.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa como o cadastro será feito na prática nem quais recursos financeiros serão usados.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A prefeitura tem a opção de manter um cadastro voluntário, mas não a obrigação imediata.",
+    "trecho": "O Poder Executivo poderá manter cadastro voluntário de acolhedores e lares temporários"
+   },
+   {
+    "ponto": "As ações previstas dependem do dinheiro disponível na prefeitura.",
+    "trecho": "observadas as competências dos órgãos municipais e a disponibilidade orçamentária."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não define prazos para o cumprimento das ações ou criação do cadastro.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O projeto não prevê multas ou penalidades para descumprimento.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "42ff271997aad141",
+ "gerado_em": "2026-11-08T05:11:12Z"
+}

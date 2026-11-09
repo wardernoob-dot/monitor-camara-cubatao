@@ -1,0 +1,68 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "89",
+  "ano": "2025",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A INCLUSÃO DO SÍMBOLO MUNDIAL DE CONSCIENTIZAÇÃO DO TRANSTORNO DO ESPECTRO AUTISTA (TEA) NAS SINALIZAÇÕES DE VAGAS ESPECIAIS DE ESTACIONAMENTO EM TODO O TERRITÓRIO DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2089.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto obriga a colocar o símbolo mundial do autismo nas vagas de estacionamento especiais de Cubatão. O desenho deve aparecer nas placas em pé e também na pintura do chão. A regra vale para locais públicos e privados de uso coletivo.",
+  "o_que_muda": [
+   "As vagas de estacionamento para pessoas com deficiência devem receber o símbolo de conscientização do autismo.",
+   "O símbolo deve aparecer nas placas verticais e nas sinalizações horizontais do chão.",
+   "A regra vale para órgãos públicos, vias públicas e estabelecimentos privados de uso coletivo em Cubatão.",
+   "Supermercados, bancos, farmácias, bares, restaurantes e comércios com estacionamento precisam seguir a regra.",
+   "O poder público pode demarcar vagas em vias públicas de zonas comerciais usando o símbolo na totalidade da área.",
+   "A lei passa a valer na data em que for publicada."
+  ],
+  "quem_e_afetado": "Os órgãos públicos e os donos de estabelecimentos privados com estacionamento ganham a obrigação de atualizar as placas e pinturas. As pessoas com Transtorno do Espectro Autista ganham maior visibilidade e direitos nas vagas especiais. O texto não cita quem fica de fora da regra.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como será feita a fiscalização e quais serão as multas para quem descumprir a lei.",
+   "De onde sairá o dinheiro para pintar e colocar as placas novas.",
+   "O prazo exato para órgãos públicos e empresas se adequarem à nova regra."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Transtorno do Espectro Autista (TEA)",
+    "explicacao": "Condição de saúde que afeta o desenvolvimento e a comunicação, exigindo cuidados específicos."
+   },
+   {
+    "termo": "Sinalizações horizontais",
+    "explicacao": "Pinturas feitas diretamente no chão para orientar motoristas e pedestres."
+   },
+   {
+    "termo": "Sinalizações verticais",
+    "explicacao": "Placas de trânsito colocadas em postes ou paredes."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto busca promover a inclusão, a acessibilidade e a visibilidade das pessoas com Transtorno do Espectro Autista. O autor afirma que muitos autistas não têm deficiências físicas aparentes, mas sofrem grandes desafios em locais agitados. Ele diz ainda que a medida traz respeito, reconhecimento social e segurança para essas pessoas e suas famílias.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa o custo financeiro para a prefeitura e os comércios, nem define prazos e punições para quem não cumprir a lei.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto deixa para o governo municipal a responsabilidade de regulamentar a lei.",
+    "trecho": "O Poder Executivo regulamentará a presente Lei, no que couber."
+   },
+   {
+    "ponto": "O texto não informa o custo da medida nem de onde sairá o dinheiro.",
+    "trecho": ""
+   },
+   {
+    "ponto": "A lei entra em vigor imediatamente após a sua publicação.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "a5a2de3025c3a72b",
+ "gerado_em": "2026-11-08T05:04:20Z"
+}

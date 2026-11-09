@@ -1,0 +1,59 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "77",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "ALTERA O ARTIGO 1º DA LEI ORDINÁRIA MUNICIPAL Nº 3.070, DE 16 DE MARÇO DE 2006, PARA MODIFICAR A DATA DE REALIZAÇÃO DO TORNEIO DE PESCA DA TAINHA DO RIO CUBATÃO, E DÁ OUTRAS PROVID ÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-77.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto muda a data do Torneio de Pesca da Tainha do Rio Cubatão. O evento passa a acontecer na semana do dia 15 de julho de cada ano. Antes, a data era na semana do dia 21 de abril. O objetivo é ajustar o evento para o período de inverno, que é a época certa da tainha.",
+  "o_que_muda": [
+   "O Torneio de Pesca da Tainha do Rio Cubatão muda de data para a semana do dia 15 de julho todos os anos.",
+   "O evento continua sendo realizado na Comunidade dos Moradores da Vila Beira Rio.",
+   "A lei anterior de 2006 é atualizada para oficializar essa nova data no calendário da cidade."
+  ],
+  "quem_e_afetado": "Os moradores da Vila Beira Rio, pescadores e pessoas que gostam de turismo e pesca esportiva são os principais envolvidos. O texto não fala sobre quem ganha obrigações diretas ou fica de fora das regras.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Como será a organização prática do evento na nova data.",
+   "Quais serão os custos e os responsáveis pelo gasto financeiro do torneio.",
+   "Se haverá regras específicas de premiação ou inscrição para os participantes."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "estuarina",
+    "explicacao": "Relativo a estuário, que é a área onde o rio se encontra com o mar."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a lei antiga marcava o torneio para abril, mas nessa época não tem tainha na região. O autor explica que o inverno, com destaque para julho, é o período ideal de migração dos cardumes para o Rio Cubatão. Assim, mudar a data garante o sucesso do evento, ajuda o turismo e valoriza a tradição da comunidade.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber quanto o evento vai custar aos cofres públicos ou como será a estrutura montada para a nova data.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto muda a data do torneio para o mês de julho na Vila Beira Rio.",
+    "trecho": "a ser realizado anualmente na semana do dia 15 de julho, na Comunidade dos Moradores da Vila Beira Rio."
+   },
+   {
+    "ponto": "O texto não traz nenhuma informação sobre custos ou de onde sairá o dinheiro para o evento.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto não define regras de fiscalização ou penalidades.",
+    "trecho": "",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "0fc5e537b0a3a873",
+ "gerado_em": "2026-11-08T05:11:50Z"
+}

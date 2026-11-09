@@ -1,0 +1,71 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "63",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A CRIAÇÃO DO CADASTRO MUNICIPAL UNIFICADO E DA CARTEIRA DE IDENTIFICAÇÃO DA MÃE ATÍPICA E DO RESPONSÁVEL ATÍPICO NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-63.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria um cadastro municipal unificado e uma carteira de identificação para mães e responsáveis atípicos em Cubatão. O objetivo é mapear esses cuidadores e garantir atendimento prioritário, além de vagas na escola para os dependentes. A carteira é gratuita, tem validade de cinco anos e o projeto entra em vigor na data de sua publicação.",
+  "o_que_muda": [
+   "Cria o Cadastro Municipal Unificado das Mães e Responsáveis Atípicos em Cubatão.",
+   "Emite gratuitamente a Carteira de Identificação da Mãe Atípica e do Responsável Atípico após o registro.",
+   "A carteira tem validade de 5 (cinco) anos e precisa ser renovada de forma simplificada após esse prazo.",
+   "Garante atendimento prioritário em locais públicos e privados do município para quem possui a carteira.",
+   "Garante prioridade em vagas e matrículas na rede municipal de ensino para os dependentes, preferencialmente perto de casa e no turno desejado.",
+   "Garante a inclusão em programas municipais de acolhimento psicológico e capacitação profissional para cuidadores.",
+   "Estabelece que o cadastro exige documento com foto, comprovante de residência, laudo médico com CID (Código Internacional de Doenças) do dependente e prova de vínculo ou tutela.",
+   "Estabelece punições de advertência e multa para estabelecimentos públicos e privados que desrespeitarem a prioridade.",
+   "Define que os dados coletados devem seguir a LGPD (Lei Geral de Proteção de Dados)."
+  ],
+  "quem_e_afetado": "A medida afeta mulheres e tutores legais que cuidam de forma contínua de pessoas com deficiência, transtornos do neurodesenvolvimento ou doenças raras em Cubatão, que ganham direitos de prioridade e apoio. Também afeta estabelecimentos públicos e privados da cidade, que passam a ser obrigados a dar atendimento prioritário sob risco de multa e advertência.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de dotações orçamentárias próprias, que poderão ser suplementadas se for necessário.",
+  "o_que_falta_definir": [
+   "As regras de regulamentação das penalidades de advertência e multa para os estabelecimentos que descumprirem a prioridade.",
+   "O formato exato da renovação simplificada da carteira.",
+   "Os detalhes de funcionamento dos programas municipais de acolhimento psicológico e capacitação profissional."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "CID",
+    "explicacao": "Código Internacional de Doenças, que é um código usado para identificar doenças e problemas de saúde."
+   },
+   {
+    "termo": "LGPD",
+    "explicacao": "Lei Geral de Proteção de Dados, que protege as informações pessoais dos cidadãos."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "A Prefeitura Municipal, responsável por administrar a cidade e colocar as leis em prática."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a rotina de mães e responsáveis por pessoas com deficiência exige cuidados contínuos. O autor alega que o cadastro vai além da identificação, pois fornece dados estatísticos reais para planejar serviços públicos eficientes na saúde, educação e assistência social, tirando essas pessoas da invisibilidade social.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa os valores das multas nem quais serão os critérios detalhados para a regulamentação pelo Executivo.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A carteira tem validade de cinco anos e sua renovação deve ser simplificada.",
+    "trecho": "O documento terá validade de 5 (cinco) anos, devendo ser renovado após esse período de forma simplificada."
+   },
+   {
+    "ponto": "As multas e advertências para quem descumprir a lei ainda precisam ser regulamentadas pelo Poder Executivo.",
+    "trecho": "Os estabelecimentos públicos e privados que descumprirem a prioridade assegurada estarão sujeitos a penalidades de advertência e multa, a serem regulamentadas pelo Poder Executivo."
+   },
+   {
+    "ponto": "O texto não informa o valor das multas que serão aplicadas aos estabelecimentos.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "7ed66047a9d3ed7c",
+ "gerado_em": "2026-11-08T05:09:39Z"
+}

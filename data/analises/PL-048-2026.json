@@ -1,0 +1,74 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "48",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A OBRIGATORIEDADE DA DISPONIBILIZAÇÃO DE APARELHOS ABAFADORES DE RUÍDOS PARA PESSOAS PORTADORAS DO TRANSTORNO DO ESPECTRO AUTISTA (TEA) NO ÂMBITO DO MUNICÍPIO DE CUBATÃO."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2048.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto obriga estabelecimentos públicos e privados em Cubatão a fornecerem aparelhos abafadores de ruído gratuitamente para pessoas com TEA. O objetivo é diminuir o impacto de barulhos e evitar crises causadas por sensibilidade a sons. Para usar o aparelho, a pessoa precisa apresentar laudo médico ou carteira de identificação. A medida busca facilitar a inclusão de pessoas neurodivergentes em locais barulhentos como escolas, supermercados, shoppings e cinemas.",
+  "o_que_muda": [
+   "Estabelecimentos públicos e privados de Cubatão devem disponibilizar abafadores de ruído gratuitamente.",
+   "A regra vale para escolas, supermercados, restaurantes, auditórios, shoppings, galerias, casas de shows, teatros, cinemas, arenas esportivas, feiras livres e parques.",
+   "Os locais precisam colocar avisos visíveis sobre a disponibilidade dos abafadores.",
+   "Os funcionários e servidores devem ser orientados para dar assistência aos portadores de TEA.",
+   "O uso do abafador exige a apresentação de laudo médico ou carteira de identificação, junto com a identificação pessoal.",
+   "Os aparelhos devem seguir normas técnicas nacionais de qualidade, desempenho, higienização e segurança sanitária.",
+   "O Poder Executivo pode fazer parcerias com órgãos públicos, universidades, entidades e ONGs para comprar os aparelhos."
+  ],
+  "quem_e_afetado": "Quem tem Transtorno do Espectro Autista ganha o direito de pegar abafadores de ruído emprestados nos estabelecimentos. Escolas, comércios, locais de lazer e órgãos públicos ganham a obrigação de comprar, guardar, higienizar os aparelhos, avisar o público e treinar os funcionários. O texto não diz quem fica de fora, pois abrange qualquer espaço onde o barulho seja uma barreira para quem tem sensibilidade a sons.",
+  "de_onde_sai_o_dinheiro": "Segundo o texto, as despesas vão sair de dotações orçamentárias próprias, mas o projeto também diz que a Prefeitura poderá fazer parcerias com outras instituições para conseguir comprar os aparelhos.",
+  "o_que_falta_definir": [
+   "A quantidade exata de aparelhos que cada estabelecimento deve manter.",
+   "Como será feita a fiscalização do cumprimento da lei e quem vai aplicar multas caso haja descumprimento.",
+   "Quais são as regras específicas para o treinamento dos funcionários.",
+   "Quais serão os órgãos ou parceiros específicos na compra dos abafadores."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "TEA",
+    "explicacao": "Transtorno do Espectro Autista, uma condição que altera o desenvolvimento do cérebro e afeta a comunicação e a forma como a pessoa lida com os sentidos."
+   },
+   {
+    "termo": "hipersensibilidade",
+    "explicacao": "Sensibilidade exagerada a estímulos do corpo, como sons muito altos ou agudos."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro já reservado no orçamento do governo para pagar por certas despesas."
+   },
+   {
+    "termo": "neurodivergentes",
+    "explicacao": "Pessoas cujo cérebro funciona de um jeito diferente do que é considerado padrão, como quem tem autismo."
+   },
+   {
+    "termo": "estereotipias",
+    "explicacao": "Movimentos repetidos que a pessoa faz para tentar se acalmar ou lidar com o estresse."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o Censo do IBGE de 2022 aponta 2,4 milhões de brasileiros com TEA, e de 40% a 80% deles sofrem de hipersensibilidade auditiva. O autor afirma que o barulho excessivo cria uma barreira invisível que afasta essas pessoas de locais públicos e privados, gerando estresse e crises. Ele diz ainda que o uso de abafadores é simples e eficaz para promover a dignidade e a inclusão, citando exemplos de leis aprovadas nas cidades do Rio de Janeiro e Marilac.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa o custo total estimado para os cofres públicos nem detalha como será cobrada a higienização dos aparelhos pelos estabelecimentos privados.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto prevê que a lei entra em vigor logo no dia em que for publicada.",
+    "trecho": "Art. 4º Esta lei entra em vigor na data de sua publicação."
+   },
+   {
+    "ponto": "O texto não define multas ou penalidades para os estabelecimentos que descumprirem a regra.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "83496a67c6711a8c",
+ "gerado_em": "2026-11-08T05:08:43Z"
+}

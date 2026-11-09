@@ -1,0 +1,72 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "51",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A CONCESSÃO DE GRATUIDADE NO TRANSPORTE COLETIVO MUNICIPAL PARA GESTANTES E PUÉRPERAS NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2051.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto cria passe livre nos ônibus de Cubatão para grávidas e mulheres que acabaram de ter bebês. O objetivo é ajudar essas mães a irem aos exames de saúde e consultas médicas. Para ter o direito, a mulher precisa comprovar a gravidez ou o nascimento do filho. A prefeitura ainda vai organizar como o benefício será entregue e usado no dia a dia.",
+  "o_que_muda": [
+   "Grávidas ganham passe livre nos ônibus municipais após confirmar a gravidez com documento médico ou cadastro na rede de saúde.",
+   "Mulheres que tiveram bebê (puérperas) ganham passe livre nos ônibus por até 180 dias após o parto, comprovado por certidão de nascimento ou documento de unidade de saúde.",
+   "A prefeitura emitirá um cartão eletrônico específico ou outro meio para liberar a viagem de graça.",
+   "A lei entra em vigor na data em que for publicada."
+  ],
+  "quem_e_afetado": "Todas as grávidas e mulheres no pós-parto de Cubatão ganham o direito de andar de ônibus sem pagar. Ficam de fora as mulheres que não comprovarem a gravidez ou o nascimento do bebê pelas regras exigidas. A Prefeitura de Cubatão ganha a obrigação de organizar e pagar pelo benefício.",
+  "de_onde_sai_o_dinheiro": "Os gastos vão sair de dinheiro do orçamento da prefeitura que já está reservado para isso, e esses valores podem ser aumentados se faltar dinheiro.",
+  "o_que_falta_definir": [
+   "Como será o cartão eletrônico ou o outro meio definido para usar o transporte de graça.",
+   "Quais serão as regras detalhadas de funcionamento que o Poder Executivo (prefeitura) vai criar no decreto de regulamentação."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "puérperas",
+    "explicacao": "Mulheres que acabaram de dar à luz e estão no período pós-parto."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro separado no orçamento da prefeitura para pagar despesas específicas."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "A prefeitura, que é quem administra a cidade e executa as leis."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto quer garantir o direito de ir e vir das grávidas e mães de Cubatão, facilitando o acesso aos postos de saúde. O texto diz que a Constituição Federal protege a maternidade e a infância como direitos fundamentais. A gratuidade ajuda a evitar que a mãe falte às consultas do pré-natal e do pós-parto, prevenindo riscos à saúde da mãe e do bebê.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa quanto isso vai custar aos cofres públicos nem quando os cartões de ônibus começarão a ser entregues.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto prevê que os gastos saiam do orçamento da própria prefeitura, com possibilidade de suplementação.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, podendo ser suplementadas, se necessário."
+   },
+   {
+    "ponto": "A lei precisa de regras criadas pela prefeitura para começar a funcionar de fato.",
+    "trecho": "O Poder Executivo regulamentará esta Lei no que couber"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não traz prazos específicos para a prefeitura começar a emitir os cartões gratuitos.",
+    "trecho": "O texto não informa prazos para a emissão do cartão eletrônico ou início da entrega do benefício.",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não define multas ou punições para empresas de ônibus que descumprirem a lei.",
+    "trecho": "O texto não prevê penalidades ou multas para o caso de descumprimento da gratuidade.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "322e00b4b1e512d2",
+ "gerado_em": "2026-11-08T05:09:01Z"
+}

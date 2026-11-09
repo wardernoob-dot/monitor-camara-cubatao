@@ -37,7 +37,7 @@
     "explicacao": "Que gasta mais do que arrecada, gerando prejuízo financeiro."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o serviço de transporte público está deficitário, situação que piorou após a pandemia de Covid-19 devido à queda no número de passageiros pagantes. O autor cita motivos como novos modais, compra de veículos próprios como motos e carros, transporte compartilhado, trabalho remoto e o aumento de pessoas com direito à gratuidade. O autor também aponta que a lei federal de mobilidade urbana exige a sustentabilidade econômica do transporte e que a regra atual limita a ajuda financeira em patamares inferiores aos necessários, sendo urgente a mudança para evitar um colapso no sistema e manter o valor da tarifa de remuneração calculado em dez reais e cinquenta centavos.",
+  "justificativa_do_autor": "Segundo o autor, o serviço de transporte público está deficitário, situação que piorou após a pandemia de Covid-19 devido à queda no número de passageiros pagantes. O autor cita motivos como novos modais, compra de veículos próprios como motos e carros, transporte compartilhado, trabalho remoto e o aumento de pessoas com direito à gratuidade. O autor também aponta que a lei federal de mobilidade urbana exige a sustentabilidade econômica do transporte e que a regra atual limita a ajuda financeira abaixo do necessário. Segundo ele, é urgente ampliar o subsídio para cobrir a tarifa de remuneração da empresa, calculada em R$ 10,50, sem repassar esse valor para a passagem paga pelos usuários.",
   "natureza": "politica_publica",
   "limitacoes": "O documento não apresenta o impacto financeiro exato nos cofres da prefeitura nem indica qual dotação orçamentária vai pagar a conta.",
   "pontos_de_atencao": [
@@ -55,5 +55,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "a8921555b92e7065",
- "gerado_em": "2026-11-08T03:26:47Z"
+ "gerado_em": "2026-11-08T03:26:47Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-08",
+   "antes": "O autor também aponta que a lei federal de mobilidade urbana exige a sustentabilidade econômica do transporte e que a regra atual limita a ajuda financeira em patamares inferiores aos necessários, sendo urgente a mudança para evitar um colapso no sistema e manter o valor da tarifa de remuneração calculado em dez reais e cinquenta centavos.",
+   "depois": "O autor também aponta que a lei federal de mobilidade urbana exige a sustentabilidade econômica do transporte e que a regra atual limita a ajuda financeira abaixo do necessário. Segundo ele, é urgente ampliar o subsídio para cobrir a tarifa de remuneração da empresa, calculada em R$ 10,50, sem repassar esse valor para a passagem paga pelos usuários."
+  }
+ ]
 }

@@ -12,7 +12,7 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto muda a lei do orçamento da cidade para o ano de 2026. Ele aumenta de 10% para 19% o limite que a Prefeitura tem para remanejar dinheiro entre áreas diferentes. O objetivo é dar mais rapidez para a administração pública pagar suas contas e tocar serviços. A mudança vale assim que a nova lei for publicada.",
+  "resumo": "Este projeto muda a lei do orçamento da cidade para o ano de 2026. Ele aumenta de 10% para 19% o limite para a Prefeitura abrir créditos suplementares (reforçar por decreto despesas que já estão no orçamento). O objetivo é dar mais rapidez para a administração pública pagar suas contas e tocar serviços. A mudança vale assim que a nova lei for publicada.",
   "o_que_muda": [
    "O limite para a Prefeitura abrir créditos suplementares (reforços de dinheiro em gastos já previstos) sobe de 10% para 19% do total da despesa autorizada.",
    "Na Administração Direta (órgãos da Prefeitura), o cálculo de 19% exclui a Câmara Municipal, que terá o mesmo limite em sua própria despesa.",
@@ -22,7 +22,7 @@
   "de_onde_sai_o_dinheiro": "O texto não cria gastos novos, pois trata apenas de realocar recursos que já estão previstos no orçamento do município.",
   "o_que_falta_definir": [
    "Quais dotações específicas do orçamento serão reduzidas para receber o reforço de verba.",
-   "Em quais secretarias ou serviços exatos o dinheiro remanejado será aplicado no dia a dia."
+   "Em quais secretarias ou serviços exatos o dinheiro extra será aplicado no dia a dia."
   ],
   "palavras_dificeis": [
    {
@@ -60,5 +60,17 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "ecfd6897cdb44a51",
- "gerado_em": "2026-11-08T03:22:09Z"
+ "gerado_em": "2026-11-08T03:22:09Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-08",
+   "antes": "Ele aumenta de 10% para 19% o limite que a Prefeitura tem para remanejar dinheiro entre áreas diferentes.",
+   "depois": "Ele aumenta de 10% para 19% o limite para a Prefeitura abrir créditos suplementares (reforçar por decreto despesas que já estão no orçamento)."
+  },
+  {
+   "data": "2026-11-08",
+   "antes": "Em quais secretarias ou serviços exatos o dinheiro remanejado será aplicado no dia a dia.",
+   "depois": "Em quais secretarias ou serviços exatos o dinheiro extra será aplicado no dia a dia."
+  }
+ ]
 }

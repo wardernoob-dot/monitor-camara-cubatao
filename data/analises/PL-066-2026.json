@@ -1,0 +1,70 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "66",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A REESTRUTURAÇÃO DO CONSELHO MUNICIPAL DE POLÍTICAS PARA AS MULHERES, CRIA O FUNDO MUNICIPAL DE POLÍTICAS PARA AS MULHERES E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2066.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto reestrutura o antigo conselho de mulheres de Cubatão, que agora se chama Conselho Municipal de Políticas para las Mulheres. Ele cria regras de funcionamento, define os 16 membros que participam e cria um fundo financeiro próprio. O objetivo é ajudar a criar, fiscalizar e financiar políticas públicas voltadas para as mulheres na cidade.",
+  "o_que_muda": [
+   "O atual Conselho Municipal da Condição Feminina passa a se chamar Conselho Municipal de Políticas para as Mulheres (CMPM).",
+   "O conselho passa a ter 16 membros titulares e seus suplentes, divididos meio a meio entre o Poder Público e a sociedade civil.",
+   "O mandato dos conselheiros é de dois anos, podendo ser reconduzidos.",
+   "A participação no conselho é considerada de relevante interesse público e não é remunerada.",
+   "A mesa diretora do conselho tem presidente, vice-presidente, secretária e 2ª secretária, eleitas por maioria simples para dois anos.",
+   "É criado o Fundo Municipal de Políticas para as Mulheres (FMPM), com duração indeterminada, para financiar projetos voltados ao público feminino."
+  ],
+  "quem_e_afetado": "O conselho afeta diretamente as mulheres de Cubatão, que ganham mais espaço de participação e novos programas financiados. O Poder Público e entidades da sociedade civil indicam representantes para formar o conselho. Ninguém recebe salário para participar do conselho, pois o trabalho não é remunerado.",
+  "de_onde_sai_o_dinheiro": "O texto cita que o fundo recebe verbas do orçamento do município, repasses do estado e da união, convênios, doações e outras receitas legais.",
+  "o_que_falta_definir": [
+   "As regras detalhadas do regimento interno do conselho.",
+   "A data exata de início vigência da lei, pois o texto termina cortado.",
+   "As normas específicas de funcionamento e reuniões, já que o texto foi cortado no final."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "paritária",
+    "explicacao": "Significa divisão igualitária, ou seja, mesma quantidade de vagas para lados diferentes."
+   },
+   {
+    "termo": "deliberativo",
+    "explicacao": "Que tem o poder de decidir, discutir e votar sobre regras e rumos de um assunto."
+   },
+   {
+    "termo": "suplentes",
+    "explicacao": "Pessoas que entram no lugar dos titulares quando eles faltam ou se afastam."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a proposta atualiza o conselho criado em 1986 para adequá-lo às transformações sociais e às diretrizes atuais de igualdade de gênero. O autor afirma que a medida fortalece o controle social e cria o fundo financeiro para viabilizar projetos e combater a violência contra as mulheres.",
+  "natureza": "politica_publica",
+  "limitacoes": "Não é possível saber a data exata de vigência ou os detalhes finais de funcionamento, pois o texto oficial recebido está cortado no final.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "A participação no conselho não é paga.",
+    "trecho": "A participação no Conselho Municipal de Políticas para as Mulheres – CMPM será considerada de relevante interesse público, não remunerada."
+   },
+   {
+    "ponto": "O texto não informa a data exata em que a lei entra em vigor.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O conselho é formado por 16 membros divididos igualmente entre governo e sociedade civil.",
+    "trecho": "será composto de forma paritária, com 16 (dezesseis) membros titulares e respectivos suplentes, sendo: I – 8 (oito) representantes do Poder Público: [...] II – 8 (oito) representantes da Sociedade Civil:",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "3136469d6d734781",
+ "gerado_em": "2026-11-08T05:10:03Z"
+}

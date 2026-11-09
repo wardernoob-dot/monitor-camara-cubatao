@@ -4,8 +4,8 @@ status: publicado
 data: 2026-11-08
 ordem: 3
 chapeu: Dinheiro da cidade
-manchete: Câmara de Cubatão amplia limite para prefeito mexer no orçamento de 2026 para 19%
-linha_fina: Após rejeitar proposta de 20%, vereadores aprovaram índice de 19% para créditos suplementares; regra anterior permitia remanejar até 10% sem nova lei.
+manchete: Prefeito pode mexer em até 19% do orçamento de 2026 sem pedir nova lei à Câmara
+linha_fina: O limite era de 10%. A Câmara aprovou o aumento em duas leis, depois de rejeitar uma versão de 20%.
 projetos: pl-92-2026, pl-87-2026, pl-74-2026
 votacao: pl-92-2026 2026-10-29 1a_discussao
 foto_alt: Vista de Cubatão do alto da Serra do Mar, com a mata em primeiro plano, a cidade e o mangue ao fundo

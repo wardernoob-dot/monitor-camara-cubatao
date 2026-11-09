@@ -7,6 +7,12 @@ Textos curtos, em linguagem simples, sobre projetos e leis que mexem com o dia a
 - Só aparece no site com `status: publicado`. Rascunho só aparece na prévia local (`VAV_RASCUNHOS=1`).
 - **Quem aprova o texto é o dono do projeto.** Ao publicar, preencha `aprovado_por: equipe Voto a voto` (registro interno; não aparece no site).
 
+## Manchete
+
+Estilo do site (decisão do dono do projeto): a manchete mostra o impacto direto na vida do morador, do jeito que ele sentiria.
+Exemplos: "Estacionar na rua vai ser pago em parte de Cubatão a partir de 2027", "Prefeito pode mexer em até 19% do orçamento de 2026 sem pedir nova lei à Câmara".
+Sempre fato verdadeiro e com documento; sem acusação nem adjetivo sobre pessoa. A revisão automática (`camara/revisao_reportagens.py`) não troca manchete nem linha fina, só sugere na conferência.
+
 ## O que NÃO vai no texto
 
 Situação do projeto, autor, placar e voto de cada vereador: o site lê isso do próprio projeto (`projetos:`) e mostra com a fonte. Assim a reportagem nunca fica desatualizada nem contradiz o dado. O texto explica o que muda, para quem, o que ainda não se sabe, e linka os documentos.

@@ -1,0 +1,69 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "32",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A IMPLANTAÇÃO DE ESPAÇOS SENSORIAIS EM PRAÇAS E PARQUES PÚBLICOS DO MUNICÍPIO DE CUBATÃO, DESTINADOS AO ACOLHIMENTO, INCLUSÃO E BEM-ESTAR DE PESSOAS COM TRANSTORNO DO ESPECTRO AUTISTA (TEA), E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2032.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria regras para criar espaços sensoriais em praças e parques públicos de Cubatão. O objetivo é acolher pessoas com autismo e outras dificuldades sensoriais. O texto traz orientações de segurança, materiais e parcerias, mas deixa a implantação dependendo do dinheiro da prefeitura.",
+  "o_que_muda": [
+   "Ficam criadas diretrizes para instalar Espaços Sensoriais Inclusivos em praças e parques públicos de Cubatão.",
+   "Os locais devem ter equipamentos seguros, materiais atóxicos, superfícies macias e sem quinas.",
+   "O projeto prevê estímulos para tato, visão, audição, olfato, equilíbrio e acessibilidade conforme a norma ABNT NBR 9050.",
+   "A instalação pode ser feita aos poucos, dando preferência a locais com muita circulação ou perto de escolas.",
+   "A prefeitura pode fazer parcerias com escolas, organizações, associações de autismo e empresas privadas."
+  ],
+  "quem_e_afetado": "As pessoas com Transtorno do Espectro Autista e disfunções sensoriais ganham o direito a espaços planejados para o lazer. O Poder Executivo (prefeitura) ganha a autorização para criar esses locais. O texto não define quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O dinheiro pode vir de recursos próprios da prefeitura, emendas parlamentares, convênios e parcerias institucionais, sempre conforme a disponibilidade financeira do município.",
+  "o_que_falta_definir": [
+   "Quais praças e parques vão receber os espaços e em que datas.",
+   "Como serão feitos os acordos e parcerias com empresas e entidades.",
+   "Qual será o valor exato gasto em cada espaço."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Transtorno do Espectro Autista (TEA)",
+    "explicacao": "Condição de saúde que afeta a comunicação, o comportamento e a forma como a pessoa processa os sentidos."
+   },
+   {
+    "termo": "atóxicos",
+    "explicacao": "Materiais que não são venenosos ou tóxicos para quem usa."
+   },
+   {
+    "termo": "propriocepção",
+    "explicacao": "Capacidade do corpo de entender sua própria posição e movimento no espaço."
+   },
+   {
+    "termo": "ABNT NBR 9050",
+    "explicacao": "Regra oficial brasileira que define como garantir a acessibilidade para pessoas com deficiência ou mobilidade reduzida."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a iniciativa atende à necessidade de adaptar praças e parques para pessoas que sofrem com sobrecarga sensorial em ambientes comuns. O autor afirma que os espaços sensoriais ajudam na autorregulação emocional e na redução da ansiedade. Ele diz ainda que o projeto traz diretrizes para respeitar a separação dos poderes e que as parcerias ajudam a viabilizar a ideia sem grande impacto financeiro imediato.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa datas, prazos ou quais praças exatas vão receber as melhorias.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto não obriga a prefeitura a gastar de imediato, pois depende do dinheiro disponível.",
+    "trecho": "A implementação desta Lei observará a disponibilidade orçamentária e financeira do Município"
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não define prazos para a criação dos espaços sensoriais nas praças e parques.",
+    "trecho": "O texto não informa prazos para a execução.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "5c6646d6386dd164",
+ "gerado_em": "2026-11-08T05:07:19Z"
+}

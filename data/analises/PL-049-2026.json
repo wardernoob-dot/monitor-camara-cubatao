@@ -19,7 +19,7 @@
    "Para o pagamento antes dos 12 meses se a Prefeitura construir e entregar casas para as famílias atingidas.",
    "Para o pagamento se o Governo Estadual suspender ou cortar o Auxílio Moradia que ele paga para o mesmo fim."
   ],
-  "quem_e_afetado": "As 23 famílias que foram atingidas por escorregamentos e deslizamentos na área de Pilões ganham o direito de continuar recebendo o auxílio. A Prefeitura tem a obrigação de manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente. Nenhuma outra pessoa de fora dessa lista de 23 famílias é citada como beneficiada.",
+  "quem_e_afetado": "As 23 famílias que foram atingidas por escorregamentos e deslizamentos na área de Pilões ganham o direito de continuar recebendo o auxílio. A Prefeitura fica autorizada (pode, mas não é obrigada) a manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente. Nenhuma outra pessoa de fora dessa lista de 23 famílias é citada como beneficiada.",
   "de_onde_sai_o_dinheiro": "As despesas saem das dotações próprias do Orçamento vigente da Prefeitura, com suplementações se necessário.",
   "o_que_falta_definir": [
    "Como será feita a convocação ou recadastramento das famílias beneficiadas.",
@@ -60,5 +60,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "98b4cbfff06470ff",
- "gerado_em": "2026-11-08T03:28:30Z"
+ "gerado_em": "2026-11-08T03:28:30Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-08",
+   "antes": "A Prefeitura tem a obrigação de manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente.",
+   "depois": "A Prefeitura fica autorizada (pode, mas não é obrigada) a manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente."
+  }
+ ]
 }

@@ -1,0 +1,63 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "68",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI E INCLUI NO CALENDÁRIO OFICIAL O DIA MUNICIPAL DE PREVENÇÃO DA ASFIXIA PERINATAL, NO ÂMBITO DA CAMPANHA \"SETEMBRO VERDE ESPERANÇA\" E DISPÕE SOBRE A ORIENTAÇÃO E TREINAMENTO DE PAIS E RESPONSÁVEIS SOBRE PRIMEIROS SOCORROS EM CASOS DE ASFIXIA, ENGASGAMENTO E MORTE SÚBITA DE BEBÊS NO MUNICÍPIO DE CUBATÃO/SP."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2068.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o Dia Municipal de Prevenção da Asfixia Perinatal em 25 de setembro. Ele também obriga hospitais e unidades de saúde a orientar pais sobre primeiros socorros em bebês. A medida busca reduzir mortes de recém-nascidos e ensinar prevenção de engasgamentos. O texto entra em vigor na data em que for publicado.",
+  "o_que_muda": [
+   "Cria o Dia Municipal de Prevenção da Asfixia Perinatal em 25 de setembro, dentro da campanha Setembro Verde Esperança.",
+   "Maternidades públicas, hospitais municipais e unidades de saúde devem oferecer treinamento básico de primeiros socorros para pais e responsáveis.",
+   "O treinamento deve focar em engasgamento, asfixia e prevenção da morte súbita de bebês.",
+   "A orientação aos pais deve acontecer, de preferência, antes da alta hospitalar da mãe e do recém-nascido.",
+   "As aulas podem ser práticas, teóricas, presenciais ou virtuais, usando cartilhas, vídeos e materiais educativos.",
+   "O poder público pode fazer parcerias com bombeiros, universidades, entidades civis e instituições de saúde para dar os treinamentos."
+  ],
+  "quem_e_afetado": "Pais, mães e responsáveis legais ganham o direito de receber treinamento de primeiros socorros. Maternidades públicas, hospitais municipais e postos de saúde que fazem partos ou atendimentos infantis ganham a obrigação de oferecer essa orientação. O texto não fala sobre quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de dotações orçamentárias próprias, que poderão receber suplementação se for necessário.",
+  "o_que_falta_definir": [
+   "Quais serão os valores exatos usados para pagar as despesas do projeto.",
+   "Como serão feitas as cobranças ou suplementações do orçamento, caso o dinheiro próprio não seja suficiente."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "asfixia perinatal",
+    "explicacao": "Falta de oxigênio no cérebro e no corpo do bebê que acontece perto da hora do parto."
+   },
+   {
+    "termo": "mortalidade neonatal",
+    "explicacao": "Morte de bebês logo nos primeiros dias de vida."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro reservado no orçamento do governo para pagar despesas específicas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a asfixia perinatal ocorre quando o bebê fica sem oxigenação perto do parto e atinge cerca de 20 mil crianças por ano no Brasil. A Organização Mundial da Saúde aponta que o problema é a terceira causa de morte de recém-nascidos no mundo. O autor também destaca que a Sociedade Brasileira de Pediatria afirma que 10% dos recém-nascidos e mais de 60% dos prematuros precisam de ventilação na sala de parto. Por fim, o autor defende que treinar pais e criar a data oficial protege a vida dos bebês e orienta as famílias contra sequelas graves.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não especifica quais secretarias ou órgãos exatos vão gerenciar e fiscalizar a execução das aulas nos hospitais.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto define que o dinheiro para pagar as ações virá do orçamento municipal.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta das dotações orçamentárias próprias, suplementadas se necessário."
+   },
+   {
+    "ponto": "O texto não traz regras sobre multas ou punições para quem descumprir as orientações.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "1b5cf51eaa182629",
+ "gerado_em": "2026-11-08T05:10:37Z"
+}

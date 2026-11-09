@@ -1,0 +1,67 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "56",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE AS SALAS DE ACOMODAÇÃO SENSORIAL NAS ESCOLAS DA REDE MUNICIPAL DE ENSINO, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2056.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria regras para montar Salas de Acomodação Sensorial nas escolas municipais de Cubatão. O objetivo é acolher alunos com autismo e outros perfis neuroatípicos que sofrem com sobrecarga nos sentidos. O espaço serve para ajudar o estudante a se acalmar e voltar para a aula. A lei vale assim que for publicada no jornal oficial.",
+  "o_que_muda": [
+   "Ficam criadas as diretrizes para implantar Salas de Acomodação Sensorial nas escolas da rede municipal.",
+   "O espaço terá recursos para ajudar na autorregulação e organização emocional de alunos com autismo e neuroatípicos.",
+   "A Prefeitura poderá fazer parcerias, convênios ou acordos com órgãos públicos e privados para montar e cuidar das salas.",
+   "A Prefeitura define como os espaços serão estruturados e qual órgão faz a análise técnica."
+  ],
+  "quem_e_afetado": "Os principais beneficiados são os estudantes com Transtorno do Espectro Autista e outros alunos neuroatípicos matriculados na rede municipal de ensino de Cubatão. O texto não define punições nem lista quem fica de fora das regras.",
+  "de_onde_sai_o_dinheiro": "Os gastos com a lei saem do orçamento próprio da Prefeitura, que poderá receber reforço de dinheiro (suplementação) se for necessário.",
+  "o_que_falta_definir": [
+   "Quais escolas vão receber as salas e quando isso acontece.",
+   "Quais materiais e móveis vão existir dentro de cada sala.",
+   "Quais serão as regras exatas definidas por decreto da Prefeitura.",
+   "Quais empresas ou órgãos públicos vão fazer parcerias com a cidade."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Neuroatípicos",
+    "explicacao": "Pessoas cujo cérebro funciona de um jeito diferente do padrão mais comum da sociedade."
+   },
+   {
+    "termo": "Autorregulação",
+    "explicacao": "A capacidade da pessoa de controlar suas próprias emoções e reações no dia a dia."
+   },
+   {
+    "termo": "Dotações orçamentárias",
+    "explicacao": "O dinheiro reservado no orçamento público para pagar por uma despesa específica."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto cria ambientes de descompressão para ajudar alunos que reagem de forma intensa a barulhos, luzes e aglomerações. O autor diz que isso evita problemas no aprendizado e na convivência, dando um espaço seguro para o aluno recuperar o equilíbrio. Ele também afirma que a medida fortalece a educação inclusiva e se baseia na Constituição Federal.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não diz quais escolas vão receber as salas nem quando o atendimento começa a funcionar na prática.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto deixa para a Prefeitura decidir quando e como vai regulamentar a lei.",
+    "trecho": "O Poder Executivo regulamentará esta Lei no que couber."
+   },
+   {
+    "ponto": "O texto não traz prazos para a criação das salas nas escolas.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não cita penalidades para descumprimento.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "091b69e2bc9f8ee0",
+ "gerado_em": "2026-11-08T05:09:08Z"
+}

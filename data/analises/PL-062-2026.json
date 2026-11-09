@@ -1,0 +1,67 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "62",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE A CONCESSÃO DE GRATUIDADE NO TRANSPORTE COLETIVO MUNICIPAL ÀS GESTANTES, PUÉRPERAS E PACIENTES EM TRATAMENTO ONCOLÓGICO NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2062.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria passe livre no ônibus da cidade para grávidas, mulheres que acabaram de ter filhos e pessoas fazendo tratamento contra o câncer. O objetivo é ajudar essas pessoas a chegarem aos postos de saúde, exames e hospitais. O morador precisará fazer um cadastro e usar um cartão especial para conseguir o benefício. A prefeitura ainda vai decidir como o sistema vai funcionar na prática.",
+  "o_que_muda": [
+   "Grávidas ganham passe livre no ônibus da cidade após comprovar a gravidez com documento médico ou cadastro na saúde.",
+   "Mulheres que tiveram filho ganham passe livre por até 180 dias após o parto, comprovado por certidão de nascimento ou documento de saúde.",
+   "Pessoas com câncer em tratamento ganham passe livre mediante apresentação de laudo médico ou relatório de unidade pública ou privada.",
+   "O benefício exige cadastro prévio na Secretaria Municipal de Saúde ou órgão indicado.",
+   "Será emitido um cartão eletrônico específico ou outro meio definido pelo Poder Executivo (prefeitura) para usar no ônibus."
+  ],
+  "quem_e_afetado": "As beneficiadas são as gestantes, puérperas (mulheres até 180 dias após o parto) e pacientes com neoplasia maligna (câncer) em tratamento. Ficam de fora quem não fizer o cadastro prévio na Secretaria Municipal de Saúde e quem não comprovar a condição médica ou o parto por documento.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de dotações orçamentárias próprias (verbas já previstas no orçamento da prefeitura), que podem receber suplementação (reforço de dinheiro) se faltar.",
+  "o_que_falta_definir": [
+   "A forma de controle e a fiscalização do benefício.",
+   "Os critérios operacionais exatos definidos pelo Poder Executivo.",
+   "Se será usado um cartão eletrônico específico ou outro meio para liberar a viagem."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Puérperas",
+    "explicacao": "Mulheres que estão no período de até 180 dias após o parto."
+   },
+   {
+    "termo": "Neoplasia maligna",
+    "explicacao": "Nome técnico para o câncer."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "A prefeitura, que é quem administra a cidade e executa as leis."
+   },
+   {
+    "termo": "Dotações orçamentárias",
+    "explicacao": "O dinheiro reservado no orçamento do governo para pagar despesas."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto assegura o direito de ir e vir e garante acesso a exames, consultas, quimioterapia e radioterapia. O autor alega que a Constituição Federal exige proteção à maternidade, à infância e à saúde. Ele diz também que pacientes com câncer enfrentam alto impacto financeiro e que a gratuidade é uma medida de justiça social e apoio humanitário.",
+  "natureza": "politica_publica",
+  "limitacoes": "O texto não informa qual será o custo total da medida para a prefeitura nem qual empresa de transporte vai operar os cartões.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto prevê que o dinheiro sai do orçamento da prefeitura, podendo ter reforço se necessário.",
+    "trecho": "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, podendo ser suplementadas, se necessário."
+   },
+   {
+    "ponto": "O projeto depende de regras futuras da prefeitura para definir como o benefício vai funcionar.",
+    "trecho": "O Poder Executivo regulamentará esta Lei definindo critérios operacionais e forma de controle e fiscalização do benefício."
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "5ff0e391c2dc3568",
+ "gerado_em": "2026-11-08T05:09:26Z"
+}

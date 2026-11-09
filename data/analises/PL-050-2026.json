@@ -1,0 +1,74 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "50",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "INSTITUI O PROGRAMA MUNICIPAL DE TRANSPORTE HUMANITÁRIO PEDIÁTRICO NO MUNICÍPIO DE CUBATÃO TRANSPORTE GRATUITO, HUMANIZADO E ACESSÍVEL DE CRIANÇAS E ADOLESCENTES EM TRATAMENTO MÉDICO, TERAPÊUTICO E HOSPITALAR."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2050.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o Programa Municipal de Transporte Humanitário Pediátrico em Cubatão. O objetivo é dar transporte gratuito e acessível para crianças e adolescentes em tratamento médico. Isso ajuda famílias que precisam levar filhos para hospitais, clínicas e tratamentos fora da cidade. O texto garante deslocamento seguro para crianças com deficiência, doenças raras e câncer.",
+  "o_que_muda": [
+   "Cria o Programa Municipal de Transporte Humanitário Pediátrico para crianças e adolescentes em tratamento médico ou terapêutico.",
+   "Atende com prioridade crianças com deficiência, doenças raras, câncer, mobilidade reduzida, vulnerabilidade social e acompanhamento terapêutico contínuo.",
+   "Realiza transporte para hospitais, clínicas, centros de reabilitação, consultas, exames e tratamentos fora do município.",
+   "Exige que os veículos tenham acessibilidade, equipamentos de segurança, conforto, higiene, acompanhamento responsável e identificação visual.",
+   "Permite que o Poder Executivo (prefeitura) faça convênios com o Governo do Estado, instituições filantrópicas, hospitais, empresas privadas e organizações sociais.",
+   "Define que o cadastro das famílias será feito pela Secretaria Municipal de Saúde e Secretaria de Assistência Social."
+  ],
+  "quem_e_afetado": "Crianças e adolescentes de Cubatão que precisam de tratamento médico contínuo, terapias ou exames ganham o direito ao transporte gratuito. A Secretaria Municipal de Saúde e a Secretaria de Assistência Social ganham a obrigação de fazer o cadastro das famílias. O Poder Executivo ganha a possibilidade de firmar convênios. O texto não fala quem fica de fora do programa.",
+  "de_onde_sai_o_dinheiro": "As despesas decorrentes desta Lei correrão por dotações orçamentárias próprias.",
+  "o_que_falta_definir": [
+   "Como será feito o processo prático de cadastramento das famílias.",
+   "Quais são os critérios detalhados para definir a vulnerabilidade social.",
+   "Quais documentos as famílias precisam apresentar.",
+   "Quais empresas ou órgãos vão fornecer os veículos e como serão os convênios.",
+   "Quais são os horários e rotas do transporte."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "É a prefeitura, o grupo que governa a cidade e coloca as leis em prática."
+   },
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "É o dinheiro reservado no orçamento da prefeitura para pagar as despesas."
+   },
+   {
+    "termo": "oncologista",
+    "explicacao": "Médico que cuida de pacientes com câncer."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, o projeto visa garantir dignidade, acessibilidade e cuidado às crianças do município de Cubatão que dependem diariamente de transporte para tratamentos médicos e terapêuticos. O autor alega que muitas famílias enfrentam dificuldades financeiras e estruturais para garantir o deslocamento adequado de seus filhos, especialmente crianças cadeirantes, autistas, pacientes oncológicos e crianças com doenças raras. Ainda segundo o autor, o programa nasce como uma política pública de inclusão, proteção social e valorização da vida, promovendo acolhimento humanizado às famílias cubatenses.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa quanto o programa vai custar, quais os prazos para começar o atendimento nem o número de veículos disponíveis.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto diz que os gastos com a lei saem do orçamento próprio da prefeitura, mas não cita valores.",
+    "trecho": "As despesas decorrentes desta Lei correrão por dotações orçamentárias próprias."
+   },
+   {
+    "ponto": "A lei começa a valer logo no dia em que for publicada.",
+    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+   },
+   {
+    "ponto": "O texto não informa quem vai fiscalizar o cumprimento do programa.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não traz nenhuma multa ou penalidade para descumprimento.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "50620d91054617c3",
+ "gerado_em": "2026-11-08T05:08:50Z"
+}

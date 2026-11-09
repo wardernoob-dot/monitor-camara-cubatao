@@ -1,0 +1,72 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "166",
+  "ano": "2025",
+  "autoria": null,
+  "ementa": "DISPÕE SOBRE INSTALAÇÃO DE EQUIPAMENTO ELIMINADOR DE AR NA TUBULAÇÃO SISTEMA DE ABASTECIMENTO DE ÁGUA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_166_2025_-_Instalacao_redutor_de_ar_sabesp_assinado_assinado.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto obriga a empresa que fornece água em Cubatão a instalar um aparelho que elimina o ar dos canos antes do relógio de medição. O morador pode pedir o aparelho, mas há regras de quem paga por ele dependendo de testes técnicos. A lei também vale para relógios novos e exige aviso nas contas de água e propaganda da empresa. A prefeitura tem prazo de noventa dias para organizar os detalhes da nova regra.",
+  "o_que_muda": [
+   "A empresa de água deve instalar o eliminador de ar antes do relógio se o morador pedir.",
+   "A empresa paga pelo aparelho e pela instalação se for provado tecnicamente que há ar nos canos.",
+   "O morador paga pela compra e instalação se quiser o aparelho e não houver comprovação técnica.",
+   "O aparelho deve seguir a Portaria número duzentos e quarenta e seis, item nove ponto quatro, do Inmetro (Instituto Nacional de Metrologia, Qualidade e Tecnologia) e ter patente.",
+   "Os novos relógios de água instalados após a lei já devem vir com o eliminador de ar sem custo extra para o morador.",
+   "A instalação pode ser feita pela empresa de água ou por lojas que vendem esses aparelhos.",
+   "A empresa de água deve avisar sobre a lei nas contas dos três meses seguintes e em seus materiais de propaganda."
+  ],
+  "quem_e_afetado": "A empresa que cuida da água na cidade ganha a obrigação de instalar os aparelhos e avisar os clientes. Os moradores ganham o direito de solicitar o eliminador de ar para evitar pagar pelo ar que passa pelos canos. Ficam de fora os moradores que não fizerem o pedido ou cuja instalação não seja comprovada tecnicamente como necessária para a empresa pagar.",
+  "de_onde_sai_o_dinheiro": "O texto diz que a compra e a instalação ficam por conta da empresa de água quando houver comprovação técnica de ar, ou por conta do consumidor nos demais casos se ele desejar o aparelho. O texto não informa o impacto financeiro para a prefeitura.",
+  "o_que_falta_definir": [
+   "Como será feita a comprovação técnica de ar na tubulação para definir quem paga pela conta.",
+   "Quais serão as regras exatas de regulamentação que a prefeitura vai criar no prazo de noventa dias."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "concessionaria",
+    "explicacao": "Empresa privada que ganhou o direito de prestar um serviço público."
+   },
+   {
+    "termo": "hidrometro",
+    "explicacao": "O relógio que mede quanta água a casa gasta."
+   },
+   {
+    "termo": "patenteado",
+    "explicacao": "Produto que tem o registro oficial de invenção garantido por órgão competente."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "A prefeitura, responsável por administrar a cidade e fazer as leis funcionarem."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, os moradores pagam por ar na tubulação como se fosse água, o que representaria de vinte a trinta por cento do consumo cobrado. O autor cita que a Escola Federal de Engenharia de Itajubá garante uma economia de trinta e cinco por cento nas contas de água com o aparelho. Ele afirma que o problema acontece mais em regiões altas e perto do final da rede por causa do rodízio no abastecimento. O autor conclui que o projeto protege os consumidores e melhora a gestão da água na cidade.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa os custos operacionais para a prefeitura nem os detalhes técnicos de como será feita a comprovação do ar nos canos.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O Poder Executivo tem noventa dias para regulamentar a lei.",
+    "trecho": "O Poder Executivo regulamentará esta Lei no prazo de noventa dias, contados a partir da data de sua publicação."
+   },
+   {
+    "ponto": "O texto não define penalidades ou multas para a empresa caso ela descumpra a lei.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não indica quem vai fiscalizar se a empresa está cumprindo a instalação dos eliminadores de ar.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "990e90c67add0bd7",
+ "gerado_em": "2026-11-08T05:05:06Z"
+}

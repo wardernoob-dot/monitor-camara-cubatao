@@ -12,7 +12,7 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto de lei muda as regras do orçamento da Prefeitura de Cubatão para o ano de 2026. Ele aumenta de 10% para 20% o limite que o governo tem para remanejar dinheiro entre diferentes áreas. Com isso, a prefeitura ganha mais facilidade para mover verbas já aprovadas sem precisar pedir novos projetos de lei à Câmara. O objetivo é dar mais rapidez ao uso do dinheiro público durante o ano.",
+  "resumo": "Este projeto de lei muda as regras do orçamento da Prefeitura de Cubatão para o ano de 2026. Ele aumenta de 10% para 20% o limite para a Prefeitura abrir créditos suplementares (reforçar por decreto despesas que já estão no orçamento). Com isso, a prefeitura ganha mais facilidade para mover verbas já aprovadas sem precisar pedir novos projetos de lei à Câmara. O objetivo é dar mais rapidez ao uso do dinheiro público durante o ano.",
   "o_que_muda": [
    "Amplia de 10% para 20% o limite para abrir créditos suplementares (dinheiro extra colocado em uma despesa que já existe no orçamento).",
    "Define que, na Administração Direta (órgãos ligados direto à prefeitura), o limite de 20% vale somando os órgãos, menos a Câmara Municipal.",
@@ -71,5 +71,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "2e0e84091d9638f5",
- "gerado_em": "2026-11-08T03:22:57Z"
+ "gerado_em": "2026-11-08T03:22:57Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-08",
+   "antes": "Ele aumenta de 10% para 20% o limite que o governo tem para remanejar dinheiro entre diferentes áreas.",
+   "depois": "Ele aumenta de 10% para 20% o limite para a Prefeitura abrir créditos suplementares (reforçar por decreto despesas que já estão no orçamento)."
+  }
+ ]
 }

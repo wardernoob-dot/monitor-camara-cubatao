@@ -519,6 +519,16 @@
   "titulo": "PAUTA DA 37ª SESSÃO ORDINÁRIA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/37a%20%2003.11.2026.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/38a-10-11.2026": {
+  "baixado_em": "2026-11-09T18:51:00+00:00",
+  "bytes": 11639307,
+  "paginas": 28,
+  "precisa_ocr": false,
+  "secao": "pauta",
+  "sha256": "0521bc28e5e8a79c4cb2c239a1a8aa485f1a7ef738662b356eb42c94a50d740e",
+  "titulo": "PAUTA DA 38ª SESSÃO ORDINÁRIA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/38a-10-11.2026"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/3a-19-02-2026.pdf": {
   "baixado_em": "2026-11-05T15:32:01+00:00",
   "bytes": 23558947,
@@ -2158,6 +2168,16 @@
   "sha256": "ba51fe16853a1e3d30bf4a238f4c517b3c60500da5aeed8b9e239a5c2e1ea5ad",
   "titulo": "ALTERA DISPOSITIVO DA LEI COMPLEMENTAR 23, DE 25 DE JUNHO DE 2004, QUE REGULAMENTA O ART. 86 DA LEI ORGÂNICA DO MUNICÍPIO, REORGANIZA A ESTRUTURA E ÓRGÃOS DA PROCURADORIA GERAL DO MUNICÍPIO, REDEFINE A CARREIRA DE PROCURADOR MUNICIPAL E DÁ OUTRAS PROVIDÊNCIAS.",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-93.2026"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-94.2026": {
+  "baixado_em": "2026-11-09T18:51:08+00:00",
+  "bytes": 410610,
+  "paginas": 3,
+  "precisa_ocr": false,
+  "secao": "projetos",
+  "sha256": "0ff0f1edf0650cab72ca3afb47a56fd0a6a95cb49eedc6d4f52a9372ec8b96ac",
+  "titulo": "INSTITUI A CAMPANHA “NOVEMBRO LARANJA”, DEDICADA À PREVENÇÃO E CONSCIENTIZAÇÃO PELO FIM DA VIOLÊNCIA CONTRA A MULHER NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS.",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-94.2026"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pr-08.2026": {
   "baixado_em": "2026-11-05T15:39:11+00:00",

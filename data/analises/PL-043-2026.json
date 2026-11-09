@@ -1,0 +1,67 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "43",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DECLARA DE UTILIDADE PÚBLICA A ASSOCIAÇÃO ESPORTIVA E CULTURAL ALCATEIA - AECA E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2043.2026.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto declara que a Associação Esportiva e Cultural Alcateia é de utilidade pública municipal. Essa declaração é um título que ajuda grupos sem fins lucrativos a conseguir parcerias e recursos. O texto traz as regras de funcionamento da associação e exige a entrega de relatórios anuais.",
+  "o_que_muda": [
+   "A Associação Esportiva e Cultural Alcateia ganha o título oficial de Utilidade Pública Municipal.",
+   "A associação passa a ter o dever de entregar todo ano um relatório com suas atividades para a Prefeitura.",
+   "A lei entra em vigor no dia em que for publicada."
+  ],
+  "quem_e_afetado": "A única afetada diretamente é a Associação Esportiva e Cultural Alcateia, que ganha o título e a obrigação de prestar contas todos os anos. A população da cidade pode ser beneficiada pelas ações sociais, esportivas e culturais da entidade.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não define qual setor da Prefeitura vai receber o relatório anual de atividades.",
+   "O texto não diz qual é o prazo exato do ano para a entrega do relatório."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "utilidade pública",
+    "explicacao": "Título que o governo dá para entidades que ajudam a sociedade, facilitando parcerias e doações."
+   },
+   {
+    "termo": "pessoa jurídica de direito privado",
+    "explicacao": "Empresa ou organização formada por pessoas, e não pelo governo."
+   },
+   {
+    "termo": "sem fins lucrativos",
+    "explicacao": "Organização que não divide lucro entre donos; todo dinheiro arrecadado é usado para manter o trabalho."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a associação foi fundada em 2017 e atua na promoção de esporte, cultura e inclusão social na comunidade. O autor alega que o título vai permitir que a entidade amplie suas ações, capte recursos e faça parcerias com o governo e com empresas privadas.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "O documento não informa o CNPJ correto de forma completa e não detalha como será a fiscalização da entidade.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto exige que a entidade entregue um relatório de suas ações todos os anos para a Prefeitura.",
+    "trecho": "A entidade deverá apresentar anualmente relatório de atividades desenvolvidas ao Poder Público Municipal."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não fala sobre multas ou punições caso a associação não entregue o relatório.",
+    "trecho": "O texto não informa penalidades ou multas para o caso de descumprimento da entrega do relatório anual.",
+    "motivo": "trecho nao encontrado no documento"
+   },
+   {
+    "ponto": "O texto não traz nenhuma informação sobre custos ou gastos públicos com a medida.",
+    "trecho": "O texto não traz valores, custos ou previsão de gastos para os cofres públicos municipais.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "cbf334c30aa778f7",
+ "gerado_em": "2026-11-08T05:07:51Z"
+}
