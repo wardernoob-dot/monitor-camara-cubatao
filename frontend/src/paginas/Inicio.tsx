@@ -33,6 +33,9 @@ const CAMINHOS = [
   { to: "/sessoes", icone: ICONE.agenda, titulo: "O que aconteceu nas sessões", texto: "Pauta, presença e votações de cada sessão da Câmara em 2026.", chamada: "Ver as sessões" },
   { to: "/ranking", icone: ICONE.barras, titulo: "Índice de Atuação", texto: "Nota de 0 a 10 por presença, participação, projetos e fiscalização, com a conta aberta.", chamada: "Ver o ranking" },
   { to: "/partidos", icone: ICONE.predio, titulo: "Partidos e a Prefeitura", texto: "Como cada bancada vota e com que frequência acompanha a posição da Prefeitura.", chamada: "Ver os partidos" },
+  { to: "/temas", icone: ICONE.pessoas, titulo: "Votos por assunto", texto: "Saúde, bolso, transporte: escolha o tema e veja quem votou a favor e contra em cada projeto.", chamada: "Escolher um tema" },
+  { to: "/leis", icone: ICONE.doc, titulo: "O que virou lei", texto: "As leis de 2026 em ordem, com quem propôs e a data em que cada uma começa a valer.", chamada: "Ver as leis" },
+  { to: "/em-aberto", icone: ICONE.agenda, titulo: "O que ficou pendente", texto: "Vetos sem votação, projetos esperando o prefeito e leis que ainda dependem de regulamentação.", chamada: "Ver as pendências" },
   { to: "/como-funciona", icone: ICONE.escudo, titulo: "Como os dados são conferidos", texto: "De onde vem cada informação, como lemos o painel e o que o site não consegue saber.", chamada: "Ver o método" },
 ];
 

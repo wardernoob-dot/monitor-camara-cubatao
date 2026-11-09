@@ -86,7 +86,11 @@ export interface Materia {
   situacao_cls: "lei" | "veto" | "aprovado" | "andamento" | "rejeitado" | "pauta";
   pautas: string[];
   documento: string | null;
-  lei: { numero: string; data: string; url: string | null } | null;
+  lei: {
+    numero: string; data: string; url: string | null;
+    vigencia?: { data: string; trecho: string; regra: "data" | "dias" | "publicacao" };
+    depende?: { trecho: string; prazo_dias?: number; vence?: string }[];
+  } | null;
   veto: {
     alcance: string; url?: string | null; resultado?: "veto_mantido" | "veto_derrubado" | null; data?: string; pagina?: string;
     oficio?: string | null; data_oficio?: string | null; leitura?: LeituraVeto;
@@ -161,7 +165,7 @@ export interface Reportagem {
 }
 
 interface Bruto {
-  meta: { atualizado: string; nome_site: string; cidade: string; repo: string };
+  meta: { atualizado: string; nome_site: string; cidade: string; repo: string; contato?: { email: string | null; formulario: string | null } };
   vereadores: Vereador[];
   materias: Materia[];
   votacoes: Votacao[];

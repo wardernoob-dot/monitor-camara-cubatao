@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { AvisarErro } from "../avisar";
 import { Link, useParams } from "react-router-dom";
 import { Toc } from "../toc";
 import { useDados } from "../dados";
@@ -112,6 +113,7 @@ export default function SessaoPagina() {
           <ul className="lista-simples">{d.noticias.map((n) => <li key={n.url}><a href={n.url} rel="noopener">{n.titulo}</a></li>)}</ul>
         </>
       )}
+      <AvisarErro sobre={`Sessão de ${dataExtenso(d.data)}`} />
       </div>
       <Toc itens={toc} caminho={`/sessoes/${d.data}`} />
       </div>

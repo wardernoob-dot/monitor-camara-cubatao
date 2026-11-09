@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { AvisarErro } from "../avisar";
 import { useDados } from "../dados";
 import { Grade, NotaFonte } from "../componentes";
 import { Autoria, CorpoReportagem, Foto, PlacarRostos, Prefeito, situacaoCurta, classeSituacao, votacaoDa } from "../reportagens";
@@ -75,8 +76,8 @@ export default function ReportagemPagina() {
           <Compartilhar tipo="r" id={r.id} titulo={r.manchete} />
           <p className="nota rp-pagina__nota">
             Texto da equipe do Voto a voto, escrito a partir dos documentos oficiais linkados acima. Não diz se o projeto é bom ou ruim.
-            Achou um erro? <a href={`${b.meta.repo}/issues`} rel="noopener">Avise</a>.
           </p>
+          <AvisarErro sobre={`Reportagem: ${r.manchete}`} />
         </div>
       </div>
     </article>

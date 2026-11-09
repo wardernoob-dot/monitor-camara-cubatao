@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { AvisarErro } from "../avisar";
 import { useAnalise, useDados } from "../dados";
 import { AvisoVeto, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
@@ -157,6 +158,7 @@ export default function ProjetoPagina() {
           {a.limitacoes && <p className="nota">{a.limitacoes}</p>}
         </Secao>
       )}
+      <AvisarErro sobre={m.titulo} />
       </div>
       <Toc itens={TOC_PROJETO} caminho={`/projetos/${m.slug}`} />
       </div>
