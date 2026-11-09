@@ -121,7 +121,7 @@ def main(chaves: list[str]) -> None:
     _, versao = AN._prompt()
     alvos = chaves or sorted(p.stem for p in (DADOS / "analises").glob("*.json")
                              if json.loads(p.read_text("utf-8")).get("versao_prompt") == versao)
-    pausa = float(os.environ.get("PAUSA", "12"))
+    pausa = float(os.environ.get("PAUSA", "25"))
     for k in alvos:
         for tentativa in range(3):
             try:
