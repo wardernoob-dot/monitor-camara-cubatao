@@ -7,44 +7,31 @@
   "ementa": "DENOMINA “AMAURY JOSÉ LEME”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20134.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto dá o nome de Amaury José Leme a uma rua da cidade. A via escolhida fica localizada na Rua 2 com a faixa do Oleoduto- Pinheiro do Miranda. A nova regra vale logo após a publicação da lei na prefeitura. O objetivo é homenagear um antigo morador e líder político da região.",
+  "resumo": "O projeto dá o nome de \"Rua Amauri José Leme\" a uma rua específica na cidade. A via fica entre a Rua do Alojamento e a Rua Faixa do Oleoduto, no bairro Fabril. A lei começa a valer logo no dia em que for publicada.",
   "o_que_muda": [
-   "A Rua 2 com a faixa do Oleoduto- Pinheiro do Miranda passa a se chamar Rua 'AMAURY JOSÉ LEME'."
+   "A via pública situada entre a Rua do Alojamento e a Rua Faixa do Oleoduto, no bairro Fabril, passa a se chamar Rua Amauri José Leme."
   ],
-  "quem_e_afetado": "A mudança afeta diretamente os moradores e donos de imóveis daquela rua, que passam a ter um novo nome de logradouro (lugar público como rua ou praça) em seus endereços e documentos. Ninguém ganha obrigações financeiras ou multas com esta lei.",
+  "quem_e_afetado": "A lei afeta quem mora ou transita na rua que recebeu o novo nome, pois o endereço passa a ter uma identificação oficial nova. Ninguém ganha obrigações financeiras ou multas com esta mudança.",
   "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "O texto não aponta quem será o responsável por instalar as placas com o novo nome da rua."
+   "O texto não deixa pendente nenhuma regulamentação posterior."
   ],
-  "palavras_dificeis": [
-   {
-    "termo": "logradouro",
-    "explicacao": "Espaço público reconhecido pela prefeitura, como ruas, praças e avenidas."
-   },
-   {
-    "termo": "suplente",
-    "explicacao": "Pessoa que fica como reserva para assumir um cargo político se houver vaga."
-   }
-  ],
-  "justificativa_do_autor": "Segundo o autor, o projeto presta uma justa homenagem ao ex-vereador e líder comunitário Amaury José Leme, conhecido como 'Amauri Pela Porco'. Ele foi vereador de Cubatão entre 2001 e 2004, secretário regional dos Bairros Cotas de 2005 a 2008, trabalhou na prefeitura de Peruíbe e atuou como líder religioso nas igrejas da AD Cubatão.",
+  "palavras_dificeis": [],
+  "justificativa_do_autor": "Segundo o autor, a lei presta uma justa homenagem ao ex-vereador e líder comunitário Amaury José Leme, também conhecido como \"Amauri Pela Porco\". O homenageado morava no bairro Água Fria, foi vereador entre 2001 e 2004, secretário regional dos bairros Cotas entre 2005 e 2008, trabalhou na administração de Peruíbe em 2009 e atuou como líder religioso em igrejas locais.",
   "natureza": "homenagem_ou_data",
-  "limitacoes": "O documento não informa quanto custará para colocar as placas novas na rua.",
+  "limitacoes": "O documento não informa os custos para a sinalização da rua com o novo nome.",
   "pontos_de_atencao": [
    {
-    "ponto": "O efeito é puramente simbólico e de homenagem, alterando o nome de uma via pública.",
-    "trecho": "DENOMINA “AMAURY JOSÉ LEME”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS"
+    "ponto": "O projeto tem efeito puramente simbólico para dar nome a uma rua.",
+    "trecho": "DENOMINA “RUA AMAURI JOSÉ LEME”, A VIA PÚBLICA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS."
    },
    {
-    "ponto": "O texto não menciona custos ou a fonte dos recursos financeiros para eventuais trocas de placas.",
-    "trecho": ""
-   },
-   {
-    "ponto": "O texto não traz regras sobre penalidades ou multas.",
+    "ponto": "O texto não menciona custos ou a fonte dos recursos financeiros para a colocação de placas.",
     "trecho": ""
    }
   ],
@@ -52,6 +39,6 @@
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "045aa87905958b00",
- "gerado_em": "2026-11-08T03:29:12Z"
+ "hash_documento": "8b28851feb4a5ea5",
+ "gerado_em": "2026-11-09T23:14:49Z"
 }

@@ -7,74 +7,74 @@
   "ementa": "DISPÕE SOBRE AS CONSIGNAÇÕES EM FOLHA DE PAGAMENTO DOS SERVIDORES PÚBLICOS DA CÂMARA MUNICIPAL DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%20No%2028.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto organiza os descontos de empréstimos direto no salário dos funcionários da Câmara de Cubatão. Ele permite que vários bancos ofereçam crédito aos servidores, desde que passem por um chamamento público. A lei define que o limite total de desconto no salário é de quarenta por cento. O texto também cancela uma regra antiga de dois mil e sete sobre o mesmo assunto.",
+  "resumo": "A lei autoriza os servidores da Câmara Municipal de Cubatão a fazerem empréstimos com desconto direto no salário. O texto define que até 40% do salário líquido pode ser comprometido com essas dívidas. Além disso, a norma exige um chamamento público para escolher os bancos e cooperativas que vão participar. Com isso, os servidores ganham mais opções de bancos para buscar melhores taxas de juros.",
   "o_que_muda": [
-   "O limite total dos descontos no salário passa a ser de 40% (quarenta por cento).",
-   "Até 35% do salário podem ser usados para empréstimos e financiamentos comuns.",
-   "Até 5% do salário são exclusivos para pagar despesas com cartão de crédito consignado.",
-   "Os bancos e cooperativas interessados precisam participar de um chamamento público.",
-   "A Câmara não pode dar exclusividade a nenhum banco e deve garantir a livre concorrência.",
-   "A Câmara não assume dívidas dos servidores e funciona apenas para descontar e repassar o dinheiro.",
-   "Fica cancelado o Ato da Mesa número 5, de 6 de julho de 2007."
+   "Os servidores da Câmara podem comprometer até 40% da remuneração líquida com consignações.",
+   "Destina-se 35% exclusivamente para empréstimos e financiamentos.",
+   "Destina-se 5% exclusivamente para pagar despesas com cartão de crédito consignado.",
+   "O выбираемые bancos e cooperativas devem passar por Chamamento Público, sem exclusividade.",
+   "A Câmara Municipal não responde pelas dívidas dos servidores e não atua como fiadora.",
+   "Fica revogado o antigo Ato da Mesa nº 5, de 6 de julho de 2007."
   ],
-  "quem_e_afetado": "Os servidores públicos da Câmara Municipal de Cubatão ganham o direito de escolher entre vários bancos credenciados para fazer empréstimos descontados em folha. As instituições financeiras e cooperativas de crédito ganham a chance de participar do chamamento público para oferecer serviços. A própria Câmara ganha a obrigação de fazer os descontos e repasses, mas fica totalmente de fora de qualquer dívida ou papel de fiador.",
+  "quem_e_afetado": "Os servidores públicos da Câmara Municipal de Cubatão ganham o direito de usar até 40% do salário líquido para empréstimos com desconto em folha e podem escolher entre vários bancos credenciados. As instituições financeiras e cooperativas de crédito também são afetadas, pois podem se candidatar para oferecer crédito. Ficam de fora da responsabilidade pelo pagamento a própria Câmara Municipal, que apenas desconta e repassa o dinheiro.",
   "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "O conceito exato de remuneração líquida para o cálculo da margem de desconto.",
-   "O detalhamento operacional que será regulamentado por ato da Mesa, portaria ou documento equivalente."
+   "O conceito exato de remuneração líquida para o cálculo da margem de empréstimo.",
+   "O detalhamento operacional da folha de pagamento.",
+   "As regras específicas e o edital do Chamamento Público para as instituições financeiras."
   ],
   "palavras_dificeis": [
    {
     "termo": "consignações",
-    "explicacao": "Descontos feitos direto no contracheque ou folha de pagamento do trabalhador."
+    "explicacao": "Descontos feitos diretamente no salário do trabalhador para pagar empréstimos ou serviços."
+   },
+   {
+    "termo": "instituições consignatárias",
+    "explicacao": "Bancos e cooperativas de crédito autorizados a fazer empréstimos com desconto em folha."
    },
    {
     "termo": "chamamento público",
-    "explicacao": "Convocação que o governo faz para que empresas interessadas possam se candidatar a prestar um serviço."
+    "explicacao": "Concurso ou chamada aberta para que empresas interessadas possam participar em igualdade de condições."
    },
    {
     "termo": "isonomia",
-    "explicacao": "Igualdade de tratamento para todos os concorrentes."
+    "explicacao": "Tratamento igual para todos os concorrentes, sem preferências."
    },
    {
     "termo": "averbação",
-    "explicacao": "O ato de registrar oficialmente o desconto do empréstimo no sistema da folha de pagamento."
+    "explicacao": "Ato de registrar oficialmente o desconto do empréstimo no sistema da folha de pagamento."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o projeto serve para modernizar e dar segurança jurídica ao Legislativo, seguindo recomendações do Tribunal de Contas do Estado de São Paulo. O autor alega que a regra anterior de 2007 era antiga e que a lei exige regras formais para mexer na remuneração. Ele diz que permitir vários bancos gera concorrência e baixa os juros, além de atualizar o limite de desconto para 40%, alinhando a Câmara com leis federais e ajudando o servidor a renegociar dívidas.",
+  "justificativa_do_autor": "Segundo o autor, a proposta moderniza as regras de 2007 para dar segurança jurídica e seguir recomendações do Tribunal de Contas do Estado de São Paulo. O autor alega que a exclusividade de um único banco prejudicava os servidores com juros altos e que o sistema de credenciamento traz livre concorrência. Também afirma que o aumento da margem para 40% alinha o município às leis federais e ajuda o funcionário a reorganizar suas dívidas.",
   "natureza": "organizacao_administrativa",
-  "limitacoes": "Não é possível saber quais serão os custos operacionais para a Câmara implementar os novos sistemas de desconto ou como será o edital detalhado do chamamento público.",
+  "limitacoes": "O texto não traz o edital de chamamento público nem o detalhamento de como o cálculo da remuneração líquida será feito na prática.",
   "pontos_de_atencao": [
    {
-    "ponto": "A lei entra em vigor imediatamente no dia em que for publicada.",
-    "trecho": "Esta Lei entra em vigor na data de sua publicação."
+    "ponto": "A soma dos empréstimos e cartões não pode ultrapassar 40% do salário líquido do servidor.",
+    "trecho": "A soma mensal das consignações facultativas não poderá exceder a 40% (quarenta por cento) da remuneração líquida do servidor"
+   },
+   {
+    "ponto": "A Câmara Municipal não assume nenhuma dívida do servidor e funciona apenas como intermediária.",
+    "trecho": "A Câmara Municipal de Cubatão não responderá, a qualquer título, por dívidas assumidas pelos servidores, nem atuará como fiadora ou avalista"
+   },
+   {
+    "ponto": "O texto não define multas ou penalidades para descumprimento das regras.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não informa custos ou dotação orçamentária para a execução da lei.",
+    "trecho": ""
    }
   ],
-  "pontos_descartados": [
-   {
-    "ponto": "O texto deixa para regulamentação posterior a definição exata de como calcular a margem líquida do salário.",
-    "trecho": "o conceito de remuneração líquida a ser considerado para fins de cálculo da margem consignável... será oportunamente regulamentado por meio de ato da Mesa",
-    "motivo": "trecho nao encontrado no documento"
-   },
-   {
-    "ponto": "O texto não cita penalidades ou multas para descumprimento das regras.",
-    "trecho": "O texto não",
-    "motivo": "trecho nao encontrado no documento"
-   },
-   {
-    "ponto": "O texto não menciona custos financeiros ou a origem de recursos para aplicar a lei.",
-    "trecho": "O texto não",
-    "motivo": "trecho nao encontrado no documento"
-   }
-  ]
+  "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "4f8a166b6dfd01c8",
- "gerado_em": "2026-11-08T03:28:37Z"
+ "hash_documento": "f76149f2eae65a65",
+ "gerado_em": "2026-11-09T23:14:19Z"
 }

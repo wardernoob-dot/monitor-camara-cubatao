@@ -7,65 +7,53 @@
   "ementa": "AUTORIZA O PODER EXECUTIVO A PRORROGAR O \"BOLSA MORADIA\", INSTITUÍDO PELA LEI N° 3.442, DE 22 DE MARÇO DE 2011, ÀS FAMÍLIAS ATINGIDAS PELO ESCORREGAMENTO E/OU DESLIZAMENTOS HAVIDOS NA ÁREA DENOMINADA \"PILÕES\" E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2049.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto autoriza a Prefeitura a prorrogar por até 12 meses o pagamento do \"Bolsa Moradia\" para 23 famílias que sofreram com deslizamentos na região de Pilões. O valor do benefício municipal é de R$ 100,00 por mês para cada família. O auxílio serve para ajudar os moradores enquanto novas moradias não são entregues. A medida começa a valer em 23 de maio de 2026.",
+  "resumo": "Este projeto prorroga o programa Bolsa Moradia por até doze meses para famílias atingidas por deslizamentos em Pilões. O valor do benefício é de cem reais mensais por família. O auxílio garante apoio financeiro temporário enquanto casas definitivas não são entregues. A medida evita que os moradores fiquem desamparados.",
   "o_que_muda": [
-   "Prorroga o Bolsa Moradia por até 12 meses para 23 famílias da área de Pilões.",
-   "Garante o valor mensal de R$ 100,00 (cem reais) por família.",
-   "Para o pagamento antes dos 12 meses se a Prefeitura construir e entregar casas para as famílias atingidas.",
-   "Para o pagamento se o Governo Estadual suspender ou cortar o Auxílio Moradia que ele paga para o mesmo fim."
+   "Prorroga o Bolsa Moradia por até 12 meses.",
+   "Mantém o valor de R$ 100,00 por mês para cada família.",
+   "Atende as famílias atingidas por deslizamentos na área de Pilões.",
+   "Para o pagamento se casas forem construídas antes de 12 meses.",
+   "Para o pagamento se o Auxílio Moradia do Estado for interrompido.",
+   "Entra em vigor na data de 23 de maio de 2026."
   ],
-  "quem_e_afetado": "As 23 famílias que foram atingidas por escorregamentos e deslizamentos na área de Pilões ganham o direito de continuar recebendo o auxílio. A Prefeitura fica autorizada (pode, mas não é obrigada) a manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente. Nenhuma outra pessoa de fora dessa lista de 23 famílias é citada como beneficiada.",
-  "de_onde_sai_o_dinheiro": "As despesas saem das dotações próprias do Orçamento vigente da Prefeitura, com suplementações se necessário.",
+  "quem_e_afetado": "As 23 famílias da região de Pilões atingidas pelos deslizamentos ganham o direito de continuar recebendo o auxílio. A Prefeitura de Cubatão assume a obrigação de pagar o benefício. Ficam de fora famílias de outras regiões ou aquelas que já receberam moradia definitiva.",
+  "de_onde_sai_o_dinheiro": "As despesas saem de dotações próprias do orçamento vigente, com suplementação se necessário.",
   "o_que_falta_definir": [
-   "Como será feita a convocação ou recadastramento das famílias beneficiadas.",
-   "Quais serão os critérios exatos para a entrega futura das unidades habitacionais."
+   "A forma exata de cadastro ou comprovação das 23 famílias contempladas.",
+   "Os critérios para a entrega das futuras unidades habitacionais."
   ],
   "palavras_dificeis": [
    {
-    "termo": "dotações próprias",
-    "explicacao": "Dinheiro que já está reservado no orçamento da Prefeitura para essa finalidade."
+    "termo": "dotações",
+    "explicacao": "Dinheiro reservado no orçamento da prefeitura para pagar determinadas despesas."
    },
    {
     "termo": "suplementadas",
-    "explicacao": "Valores que podem receber um reforço de dinheiro caso o orçamento inicial não seja suficiente."
+    "explicacao": "Completadas com mais dinheiro caso o valor inicial não seja suficiente."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, chuvas intensas em março de 2011 causaram deslizamentos em áreas como Grotão, Pilões e Cotas. Como essas áreas participam de um projeto de recuperação ambiental, a Prefeitura pediu ajuda ao Governo do Estado na época para pagar aluguel às famílias desabrigadas.",
+  "justificativa_do_autor": "Segundo o autor, a prorrogação é necessária devido à ausência de unidades habitacionais prontas para atender às 23 famílias atingidas pelas chuvas e deslizamentos na região de Pilões.",
   "natureza": "politica_publica",
-  "limitacoes": "O texto cortou o final da mensagem justificativa do autor, mas isso não impede de entender as regras principais da prorrogação.",
+  "limitacoes": "O documento não traz a lista com o nome dos beneficiários ou detalhes sobre a construção das novas moradias.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto entra em vigor em 23 de maio de 2026.",
-    "trecho": "Esta Lei entra em vigor na data de 23 de maio de 2026."
-   }
-  ],
-  "pontos_descartados": [
-   {
-    "ponto": "O custo total estimado é de R$ 16.100,00 para 2026 e R$ 27.600,00 para os anos de 2027 e 2028.",
-    "trecho": "estão presentes na referida folha os custos de R$ 16.100,00 [...] para 2026, R$ 27.600,00 [...] para 2027 e novamente R$ 27.600 [...] para 2028",
-    "motivo": "trecho nao encontrado no documento"
+    "ponto": "O texto indica que o dinheiro sai do orçamento atual da prefeitura.",
+    "trecho": "As despesas decorrentes com a execução da presente Lei correrão por conta das dotações próprias do Orçamento vigente suplementadas se necessário."
    },
    {
-    "ponto": "O benefício é cancelado caso as casas definitivas fiquem prontas antes do prazo ou se o Estado cortar o auxílio estadual.",
-    "trecho": "Cessará o benefício previsto no caput deste artigo nas seguintes hipóteses: I - caso sejam construídas e disponibilizadas unidades habitacionais [...] II - em razão da suspensão ou interrupção do pagamento do Auxílio Moradia concedido pelo Governo Estadual",
-    "motivo": "trecho nao encontrado no documento"
+    "ponto": "O texto não cita penalidades para descumprimento.",
+    "trecho": ""
    }
-  ]
+  ],
+  "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "98b4cbfff06470ff",
- "gerado_em": "2026-11-08T03:28:30Z",
- "revisao_humana": [
-  {
-   "data": "2026-11-08",
-   "antes": "A Prefeitura tem a obrigação de manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente.",
-   "depois": "A Prefeitura fica autorizada (pode, mas não é obrigada) a manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente."
-  }
- ]
+ "hash_documento": "b332034fd4dfbeeb",
+ "gerado_em": "2026-11-09T23:14:12Z"
 }

@@ -7,57 +7,72 @@
   "ementa": "INSTITUI DIRETRIZES PARA A PROMOÇÃO DO BEM-ESTAR SONORO DE PESSOAS COM HIPERSENSIBILIDADE AUDITIVA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto publicado no site da Camara",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2039.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto cria regras para ajudar pessoas que têm sensibilidade exagerada a barulhos em Cubatão. O texto sugere que a prefeitura forneça abafadores de som para quem precisa e não tem dinheiro. A ideia é melhorar a inclusão e a qualidade de vida dessas pessoas na cidade. A lei entra em vigor logo no dia em que for publicada.",
+  "resumo": "O projeto cria regras para cuidar do barulho excessivo que afeta pessoas com sensibilidade nos ouvidos em Cubatão. A prefeitura poderá entregar abafadores de som para quem precisa e não tem dinheiro. A lei também quer fazer campanhas de conscientização e deixar os locais mais acessíveis. O texto entra em vigor no dia em que for publicado.",
   "o_que_muda": [
-   "A prefeitura ganha permissão para dar equipamentos de proteção contra barulho, como abafadores auditivos, para pessoas carentes.",
-   "O município poderá criar campanhas educativas para conscientizar a população sobre a sensibilidade auditiva e o respeito às pessoas neurodivergentes.",
-   "A prefeitura poderá incentivar ações para deixar os ambientes com menos barulho e mais acessíveis.",
-   "O governo municipal poderá se juntar com órgãos públicos, empresas privadas ou entidades para colocar as ações em prática."
+   "A prefeitura poderá dar abafadores de som e outros equipamentos para quem tem sensibilidade auditiva e vive em vulnerabilidade social (situação de pobreza ou fraqueza social).",
+   "A prefeitura poderá fazer campanhas de educação para ensinar sobre o respeito às pessoas neurodivergentes (pessoas com o cérebro que funciona de um jeito diferente).",
+   "A prefeitura poderá incentivar locais mais acessíveis e calmos em relação aos barulhos.",
+   "A prefeitura poderá criar ações para ajudar essas pessoas a participarem mais da vida em sociedade.",
+   "A prefeitura poderá juntar vários órgãos públicos ou fazer parcerias com empresas privadas, órgãos públicos e o terceiro setor (associações sem fins lucrativos que ajudam a sociedade) para colocar as ações em prática."
   ],
-  "quem_e_afetado": "As pessoas com sensibilidade auditiva e neurodivergentes podem ser beneficiadas com campanhas e equipamentos. Pessoas carentes com essa condição podem receber abafadores de som de graça. O texto não obriga a prefeitura a fazer tudo imediatamente, pois as ações dependem de dinheiro e de escolha do governo.",
-  "de_onde_sai_o_dinheiro": "O texto diz que a prefeitura só vai gastar se tiver dinheiro disponível no orçamento.",
+  "quem_e_afetado": "Quem ganha o direito de receber atenção são as pessoas com hipersensibilidade auditiva (sensibilidade exagerada a barulhos), especialmente as de baixa renda que precisam de abafadores. Quem ganha a possibilidade de agir é o Poder Executivo (a prefeitura). O texto não obriga a prefeitura a fazer tudo imediatamente, pois as ações dependem se há dinheiro no caixa e se a prefeitura acha que é o momento certo.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro, mas avisa que as ações dependem da disponibilidade orçamentária e financeira (se a prefeitura tem dinheiro guardado no orçamento para gastar com isso).",
   "o_que_falta_definir": [
-   "Quais órgãos da prefeitura vão cuidar de cada parte da lei.",
-   "Como será feita a escolha das pessoas carentes que vão receber os abafadores auditivos.",
-   "Quais serão as regras exatas das campanhas educativas.",
-   "Quais empresas ou entidades vão fazer parcerias com a prefeitura."
+   "Como a prefeitura vai escolher quem tem direito de receber os abafadores de som.",
+   "Quais órgãos da prefeitura vão trabalhar juntos para cuidar disso.",
+   "Como serão feitas as parcerias com empresas e entidades de fora da prefeitura.",
+   "Quais serão as regras detalhadas que vão aparecer no decreto do prefeito."
   ],
   "palavras_dificeis": [
    {
     "termo": "hipersensibilidade auditiva",
-    "explicacao": "Sensibilidade exagerada a barulhos do dia a dia."
+    "explicacao": "É quando a pessoa sente um incômodo ou dor muito forte ao ouvir barulhos comuns do dia a dia."
    },
    {
     "termo": "neurodivergentes",
-    "explicacao": "Pessoas cujo cérebro funciona de um jeito diferente, como quem tem autismo."
+    "explicacao": "São pessoas que possuem o cérebro funcionando de um jeito diferente, como quem tem autismo ou TDAH."
    },
    {
-    "termo": "Poder Executivo",
-    "explicacao": "A prefeitura, que é quem governa a cidade e executa as leis."
+    "termo": "terceiro setor",
+    "explicacao": "São entidades e associações sem fins lucrativos que ajudam a sociedade, como ONGs."
+   },
+   {
+    "termo": "regulamentada",
+    "explicacao": "É quando o prefeito escreve um decreto explicando os detalhes de como a lei vai funcionar no dia a dia."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o projeto busca criar regras para ajudar quem tem sensibilidade exagerada a barulhos e garantir mais inclusão e qualidade de vida. Ele explica que esse problema atinge pessoas com autismo, TDAH e outras condições, gerando muito desconforto no dia a dia. O autor também afirma que a proposta é apenas uma diretriz e não obriga a prefeitura a gastar imediatamente, respeitando as leis e a disponibilidade de dinheiro.",
+  "justificativa_do_autor": "Segundo o autor, o projeto ajuda a incluir e dar qualidade de vida para quem tem sensibilidade auditiva. Segundo o autor, essa sensibilidade é comum em pessoas com Autismo, TDAH e outras condições neurodivergentes, causando dor com barulhos do dia a dia. Segundo o autor, a lei é um guia que respeita o dinheiro da prefeitura e segue a Lei Brasileira de Inclusão da Pessoa com Deficiência.",
   "natureza": "politica_publica",
-  "limitacoes": "Não é possível saber quando ou se a prefeitura realmente vai comprar os abafadores e fazer as campanhas, pois o texto deixa isso como uma opção.",
+  "limitacoes": "O texto não diz quanto dinheiro será gasto, nem quais marcas de abafadores serão distribuídas ou quantas pessoas serão atendidas.",
   "pontos_de_atencao": [
    {
-    "ponto": "O projeto diz que a prefeitura só vai agir se tiver dinheiro e se achar que é o momento certo.",
+    "ponto": "A prefeitura só faz as ações se quiser e se tiver dinheiro disponível no orçamento.",
     "trecho": "o Poder Executivo poderá, observados os critérios de conveniência e oportunidade e a disponibilidade orçamentária e financeira, adotar, entre outras, as seguintes ações"
    },
    {
     "ponto": "O texto não define prazos para a prefeitura começar a entregar os abafadores ou fazer as campanhas.",
     "trecho": ""
+   },
+   {
+    "ponto": "O texto não traz nenhuma punição ou multa para quem descumprir as regras.",
+    "trecho": ""
    }
   ],
-  "pontos_descartados": []
+  "pontos_descartados": [
+   {
+    "ponto": "A lei precisa de um decreto do prefeito para explicar como vai funcionar na prática.",
+    "trecho": "A presente lei será regulamentada por decreto do Prefeito Municipal.",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "3bf923d1396777c6",
- "gerado_em": "2026-11-08T03:23:52Z"
+ "hash_documento": "a37b18e84a1deb3b",
+ "gerado_em": "2026-11-09T23:10:58Z"
 }

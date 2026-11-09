@@ -1,0 +1,71 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "188",
+  "ano": "2025",
+  "autoria": "DANIEL BARBOSA DE ASSIS SILVA",
+  "ementa": "INSTITUI O PROGRAMA DE DEFESA PESSOAL PARA MULHERES - “EU ME DEFENDO”, E DÁ OUTRAS PROVIDÊNCIAS"
+ },
+ "documento": {
+  "fonte": "texto da lei publicada no Diario Oficial",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_188-2025.pdf",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "O projeto cria o programa de defesa pessoal para mulheres chamado \"Eu Me Defendo\" na cidade. A ideia é preparar e fortalecer as mulheres contra situações de violência com aulas práticas. O programa usa simulações de ataques masculinos para ensinar a autodefesa. As aulas vão se ligar com outras políticas de proteção à mulher quando precisar.",
+  "o_que_muda": [
+   "Cria o programa de defesa pessoal para mulheres chamado \"Eu Me Defendo\".",
+   "Promove aulas práticas de defesa pessoal com simulação de ataque masculino para exercitar a autodefesa.",
+   "Permite parcerias com organizações da sociedade civil para ajudar a colocar o programa em prática.",
+   "A lei entra em vigor na data em que for publicada."
+  ],
+  "quem_e_afetado": "As mulheres de Cubatão ganham o direito de participar das aulas de defesa pessoal. O texto não diz quem fica de fora ou quais os requisitos para participar.",
+  "de_onde_sai_o_dinheiro": "As despesas com a execução desta Lei correrão por conta de dotações orçamentárias próprias.",
+  "o_que_falta_definir": [
+   "Como o programa vai funcionar no dia a dia.",
+   "Quais órgãos da prefeitura vão cuidar das aulas.",
+   "Como as mulheres podem se inscrever.",
+   "Quais organizações da sociedade civil podem fazer parceria."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "dotações orçamentárias",
+    "explicacao": "Dinheiro reservado no orçamento da prefeitura para pagar gastos."
+   },
+   {
+    "termo": "Poder Executivo",
+    "explicacao": "O prefeito e sua equipe que administram a cidade."
+   },
+   {
+    "termo": "regulamentar",
+    "explicacao": "Criar regras detalhadas para fazer uma lei funcionar."
+   }
+  ],
+  "justificativa_do_autor": "",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa como o programa será na prática, quem vai dar as aulas ou quais os locais de atendimento.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O texto diz que os gastos saem de verbas próprias do orçamento.",
+    "trecho": "As despesas com a execução desta Lei correrão por conta de dotações orçamentárias próprias."
+   },
+   {
+    "ponto": "O prefeito pode criar regras para a lei funcionar, mas não é obrigatório.",
+    "trecho": "O Poder Executivo poderá regulamentar esta Lei no que couber."
+   },
+   {
+    "ponto": "O texto não traz prazos para o programa começar a funcionar.",
+    "trecho": ""
+   },
+   {
+    "ponto": "O texto não define penalidades ou multas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "d19856b8902e282b",
+ "gerado_em": "2026-11-09T23:12:40Z"
+}
