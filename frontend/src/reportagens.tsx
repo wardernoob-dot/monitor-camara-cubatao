@@ -219,7 +219,7 @@ export function CarrosselReportagens() {
   };
 
   return (
-    <section ref={raiz} className="rp" aria-roledescription="carrossel" aria-label="Reportagens sobre projetos que mexem com a cidade"
+    <section ref={raiz} className="rp" aria-roledescription="carrossel" aria-label="O que muda: projetos e leis que mexem com a cidade"
       onMouseEnter={() => setPausa(true)} onMouseLeave={() => setPausa(false)}
       onFocus={() => setPausa(true)} onBlur={(e) => !e.currentTarget.contains(e.relatedTarget as Node) && setPausa(false)}
       onKeyDown={(e) => { if (e.key === "ArrowRight") ir(1); if (e.key === "ArrowLeft") ir(-1); }}>
@@ -240,10 +240,10 @@ export function CarrosselReportagens() {
                   {r.chapeu && <span className="rp__chapeu">{r.chapeu}</span>}
                   {m && <span className={`rp__sit rp__sit--${classeSituacao(m)}`}>{situacaoCurta(m)}</span>}
                 </p>
-                <h2 className="rp__manchete"><Link to={`/reportagens/${r.id}`} className="esticado">{r.manchete}</Link></h2>
+                <h2 className="rp__manchete"><Link to={`/o-que-muda/${r.id}`} className="esticado">{r.manchete}</Link></h2>
                 <p className="rp__fina">{r.linha_fina}</p>
                 {m && <div className="rp__vidro rp__vidro--autor"><Autoria m={m} claro /></div>}
-                <span className="rp__ler" aria-hidden="true">Ler a reportagem <span>→</span></span>
+                <span className="rp__ler" aria-hidden="true">Entender o que muda <span>→</span></span>
               </div>
               {(ev || m) && (
                 <aside className="rp__vidro rp__painel" aria-label="Como votaram e o que o prefeito fez">
@@ -263,7 +263,7 @@ export function CarrosselReportagens() {
       </div>
       {n > 1 && (
         <div className="rp__ctl">
-          <div className="rp__pontos" role="group" aria-label="Escolher reportagem">
+          <div className="rp__pontos" role="group" aria-label="Escolher o assunto">
             {itens.map((x, k) => (
               <button key={x.id} type="button" className={`rp__ponto${k === i ? " rp__ponto--atual" : ""}`} onClick={() => para(k)}
                 aria-label={`${k + 1}: ${x.manchete}`} aria-current={k === i ? "true" : undefined}>
@@ -274,8 +274,8 @@ export function CarrosselReportagens() {
             ))}
           </div>
           <div className="rp__setas">
-            <button type="button" className="carrossel__seta" onClick={() => ir(-1)} aria-label="Reportagem anterior">←</button>
-            <button type="button" className="carrossel__seta" onClick={() => ir(1)} aria-label="Próxima reportagem">→</button>
+            <button type="button" className="carrossel__seta" onClick={() => ir(-1)} aria-label="Assunto anterior">←</button>
+            <button type="button" className="carrossel__seta" onClick={() => ir(1)} aria-label="Próximo assunto">→</button>
           </div>
         </div>
       )}

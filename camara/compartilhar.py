@@ -155,7 +155,7 @@ def gerar(pacote: dict, docs: Path | None = None) -> dict:
             _og_da_foto(orig, previa / f"r-{r['id']}.jpg")
             img = f"{SITE_URL}/fotos/previa/r-{r['id']}.jpg"
         _pagina(docs / "r" / r["id"], tipo="article", titulo=r["manchete"], descricao=r["linha_fina"],
-                url=f"{SITE_URL}/r/{r['id']}/", imagem=img, destino=f"../../#/reportagens/{r['id']}")
+                url=f"{SITE_URL}/r/{r['id']}/", imagem=img, destino=f"../../#/o-que-muda/{r['id']}")
     for v in pacote["vereadores"]:
         _cartao_vereador(v, docs, previa / f"v-{v['slug']}.jpg")
         _pagina(docs / "v" / v["slug"], tipo="profile", titulo=f"{v['exibicao']}: como votou na Câmara de Cubatão",
@@ -176,7 +176,7 @@ def gerar(pacote: dict, docs: Path | None = None) -> dict:
         for r in publicadas)
     (docs / "reportagens.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>'
-        f"<title>{NOME}: reportagens</title><link>{SITE_URL}/</link>"
+        f"<title>{NOME}: o que muda</title><link>{SITE_URL}/</link>"
         "<description>Projetos e leis que mexem com o dia a dia de Cubatão, em linguagem simples.</description>"
         f"<language>pt-BR</language>\n{itens}</channel></rss>\n", "utf-8")
     return {"reportagens": len(publicadas), "vereadores": len(pacote["vereadores"]), "projetos": n_p}

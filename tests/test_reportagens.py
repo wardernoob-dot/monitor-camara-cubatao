@@ -110,7 +110,7 @@ def test_paginas_de_previa_e_rss(tmp_path):
     h = (tmp_path / "r" / "bets" / "index.html").read_text("utf-8")
     assert 'og:image" content="https://votoavoto.surge.sh/fotos/previa/r-bets.jpg"' in h
     assert "&lt;b&gt;" in h and "<b>" not in h                             # manchete escapada
-    assert 'url=../../#/reportagens/bets"' in h
+    assert 'url=../../#/o-que-muda/bets"' in h
     assert not (tmp_path / "r" / "rasc").exists()                          # rascunho nao ganha link
     v = (tmp_path / "v" / "fulano" / "index.html").read_text("utf-8")
     assert "90% de presença" in v and "1 projeto apresentado, 1 virou lei" in v

@@ -49,7 +49,7 @@ Pontos que exigem ler mais de um arquivo:
 - **Link compartilhado:** rota com `#` não tem prévia em WhatsApp/redes; `camara/compartilhar.py` gera `docs/r/<id>/`, `docs/v/<slug>/` e `docs/p/<slug>/` (HTML só com as tags de prévia, que redireciona para o app) e o RSS. O botão "Compartilhar" (`compartilhar.tsx`) usa esses endereços. `SITE_URL` aponta para o Surge.
 - **Teste de tela:** `scripts/conferir_tela.py` (workflow `conferir-tela`) abre as páginas no Chromium e falha com erro de JS, contraste baixo, imagem quebrada ou largura estourada no celular. Mexeu em tela, rode antes de subir.
 - Suplentes com ao menos uma sessão em 2026 ganham página de vereador.
-- **Reportagens** (`reportagens/*.md` + `reportagens/fotos/`, lidas por `camara/reportagens.py`, carrossel logo abaixo do hero e `#/reportagens/<id>`): texto escrito por gente e aprovado pelo dono do projeto (`status: publicado`); rascunho só aparece com `VAV_RASCUNHOS=1`. Situação, autor e votos não vão no texto, o site lê do projeto. Toda foto precisa de crédito, licença e link de origem. Detalhes em `reportagens/LEIA-ME.md`.
+- **Reportagens** (`reportagens/*.md` + `reportagens/fotos/`, lidas por `camara/reportagens.py`, seção "O que muda" no site: carrossel logo abaixo do hero e `#/o-que-muda/<id>`; o nome interno continua "reportagens"): texto escrito por gente e aprovado pelo dono do projeto (`status: publicado`); rascunho só aparece com `VAV_RASCUNHOS=1`. Situação, autor e votos não vão no texto, o site lê do projeto. Toda foto precisa de crédito, licença e link de origem. Detalhes em `reportagens/LEIA-ME.md`.
 
 ## Skills do projeto
 

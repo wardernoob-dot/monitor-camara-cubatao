@@ -44,11 +44,11 @@ def rotas() -> list[str]:
     v = next(x["slug"] for x in d["vereadores"] if x["em_exercicio"])
     com_voto = next(m["slug"] for m in d["materias"] if m["eventos"] and m["analise"])
     r = ["/", "/vereadores", f"/vereadores/{v}", "/ranking", "/partidos", "/projetos", f"/projetos/{com_voto}",
-         "/sessoes", f"/sessoes/{d['dias'][0]['data']}", "/como-funciona", "/reportagens", "/temas", "/leis", "/em-aberto"]
+         "/sessoes", f"/sessoes/{d['dias'][0]['data']}", "/como-funciona", "/o-que-muda", "/reportagens", "/temas", "/leis", "/em-aberto"]
     if d["partidos"]:
         r.append("/partidos/" + d["partidos"][0]["sigla"].lower())
     if d.get("reportagens"):
-        r.append(f"/reportagens/{d['reportagens'][0]['id']}")
+        r.append(f"/o-que-muda/{d['reportagens'][0]['id']}")
     return r
 
 

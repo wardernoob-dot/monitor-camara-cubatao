@@ -1,6 +1,6 @@
 import { lazy, Suspense,  StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter, NavLink, Link, Route, Routes, useLocation } from "react-router-dom";
+import { HashRouter, NavLink, Link, Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import "@fontsource/geist-sans/400.css";
 import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-sans/600.css";
@@ -30,6 +30,12 @@ const EmAberto = lazy(() => import("./paginas/EmAberto"));
 import NaoEncontrado from "./paginas/NaoEncontrado";
 const ReportagemPagina = lazy(() => import("./paginas/Reportagem"));
 
+/** Links antigos (#/reportagens/<id>) continuam valendo. */
+function AntigaReportagem() {
+  const { id } = useParams();
+  return <Navigate to={`/o-que-muda/${id}`} replace />;
+}
+
 function RolaParaTopo() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
@@ -42,7 +48,7 @@ function RolaParaTopo() {
 }
 
 const SECOES = [
-  ["/reportagens", "Reportagens"],
+  ["/o-que-muda", "O que muda"],
   ["/vereadores", "Vereadores"],
   ["/ranking", "Ranking"],
   ["/partidos", "Partidos"],
@@ -93,7 +99,7 @@ function Rodape() {
             <h2 className="rodape__titulo">Dados e código</h2>
             <ul>
               <li><a href="./data/dados.json">Baixar os dados (JSON)</a></li>
-              <li><a href="./reportagens.xml">Reportagens por RSS</a></li>
+              <li><a href="./reportagens.xml">“O que muda” por RSS</a></li>
               <li><a href={meta.repo} rel="noopener noreferrer">Código-fonte aberto</a></li>
               <li><a href="https://www.cubatao.sp.leg.br/" rel="noopener noreferrer">Câmara Municipal de {meta.cidade}</a></li>
             </ul>
@@ -172,8 +178,10 @@ function App() {
             <Route path="/temas" element={<Temas />} />
             <Route path="/leis" element={<Leis />} />
             <Route path="/em-aberto" element={<EmAberto />} />
-            <Route path="/reportagens" element={<Reportagens />} />
-            <Route path="/reportagens/:id" element={<ReportagemPagina />} />
+            <Route path="/o-que-muda" element={<Reportagens />} />
+            <Route path="/reportagens" element={<Navigate to="/o-que-muda" replace />} />
+            <Route path="/o-que-muda/:id" element={<ReportagemPagina />} />
+            <Route path="/reportagens/:id" element={<AntigaReportagem />} />
             <Route path="*" element={<NaoEncontrado />} />
           </Routes>
           </Suspense>

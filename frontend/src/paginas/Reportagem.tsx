@@ -11,7 +11,7 @@ export default function ReportagemPagina() {
   const { id } = useParams();
   const b = useDados();
   const r = (b.reportagens ?? []).find((x) => x.id === id);
-  useTitulo(r ? r.manchete : "Reportagem não encontrada");
+  useTitulo(r ? r.manchete : "Página não encontrada");
   if (!r) return <NaoEncontrado />;
   const ev = votacaoDa(b, r);
   const projetos = r.projetos.map((s) => b.materia.get(s)).filter(Boolean) as NonNullable<ReturnType<typeof b.materia.get>>[];
@@ -28,7 +28,7 @@ export default function ReportagemPagina() {
           </figcaption>
         </figure>
         <div className="pagina rp-pagina__cab">
-          <nav className="migalha" aria-label="Você está em"><Link to="/reportagens">Reportagens</Link></nav>
+          <nav className="migalha" aria-label="Você está em"><Link to="/o-que-muda">O que muda</Link></nav>
           {r.status === "rascunho" && <p className="aviso-voto"><strong>Rascunho.</strong> Este texto ainda não foi aprovado e não aparece no site publicado.</p>}
           <p className="rp-pagina__topo-linha">
             {r.chapeu && <span className="rp__chapeu">{r.chapeu}</span>}
@@ -77,7 +77,7 @@ export default function ReportagemPagina() {
           <p className="nota rp-pagina__nota">
             Texto da equipe do Voto a voto, escrito a partir dos documentos oficiais linkados acima. Não diz se o projeto é bom ou ruim.
           </p>
-          <AvisarErro sobre={`Reportagem: ${r.manchete}`} />
+          <AvisarErro sobre={`O que muda: ${r.manchete}`} />
         </div>
       </div>
     </article>
