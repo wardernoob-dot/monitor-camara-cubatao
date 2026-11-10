@@ -7,60 +7,68 @@
   "ementa": "INSTITUI, NOS TERMOS DO ART. 182, § 4° DA CONSTITUIÇÃO FEDERAL, DA LEI FEDERAL N° 10.257, DE 10 DE JULHO DE 2001 (ESTATUTO DAS CIDADES) E DO ART. 47 DA LEI COMPLEMENTAR MUNICIPAL N° 134, DE 28 DE DEZEMBRO DE 2023 (PLANO DIRETOR), OS INSTRUMENTOS PARA O CUMPRIMENTO DA FUNÇÃO SOCIAL DA PROPRIEDADE URBANA NO MUNICÍPIO DE CUBATÃO, E DÁ OUTRAS PROVIDÊNCIAS"
  },
  "documento": {
-  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "fonte": "texto da lei publicada no Diario Oficial e texto original do projeto",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PLC%2031.2026.pdf",
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto obriga donos de terrenos vazios, imóveis abandonados ou mal utilizados a dar um uso adequado a eles. Se o proprietário não cumprir as regras, a prefeitura pode aplicar multas aumentando o valor do imposto ano a ano ou até tomar o imóvel. A medida serve para forçar o desenvolvimento urbano e evitar a especulação imobiliária na cidade.",
+  "resumo": "A lei obriga donos de terrenos vazios ou imóveis abandonados na cidade a dar uso a eles. Quem descumprir as regras sofre multas com aumento nos impostos ano a ano. Se o dono continuar sem usar o local, a prefeitura pode tomar a propriedade.",
   "o_que_muda": [
-   "Donos de imóveis vazios ou subutilizados recebem uma notificação da prefeitura e devem pedir aprovação de projeto em até 1 ano.",
-   "Obras de parcelamento ou construção devem começar em até 2 anos após a aprovação do projeto.",
-   "Imóveis comerciais, industriais ou residenciais desocupados por mais de 1 ano são considerados não utilizados.",
-   "O Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU, imposto cobrado de quem tem imóvel na cidade) sobe todo ano para quem descumprir os prazos, chegando a até 15%.",
-   "Para imóveis construídos, a alíquota do IPTU sobe de 1% no primeiro ano até 15% no quinto ano.",
-   "Para imóveis não construídos, a alíquota do IPTU sobe de 6% no primeiro ano até 15% no quinto ano.",
-   "Após 5 anos de imposto progressivo sem uso do imóvel, a prefeitura pode desapropriar o bem.",
-   "Imóveis abandonados sem dono e com impostos atrasados por 5 anos viram bens vagos e passam para a prefeitura após 3 anos.",
-   "É criada uma comissão especial com 8 membros para fiscalizar e gerenciar essas regras, com gratificação de R$ 2.824,00 para os integrantes."
+   "Donos de imóveis vazios ou mal usados recebem ordem para construir, usar ou dividir o terreno em até um ano.",
+   "A construção deve começar em até dois anos após a aprovação do projeto.",
+   "Imóveis grandes com mais de 20 mil metros quadrados podem construir por etapas.",
+   "O imposto (IPTU) sobe todo ano para quem não cumprir as regras, chegando a até 15% do valor do imóvel.",
+   "Para imóveis construídos, o IPTU progressivo começa em 1% no primeiro ano e vai até 15% no quinto ano.",
+   "Para imóveis não construídos, o IPTU progressivo começa em 6% no primeiro ano e chega a 15% no quinto ano.",
+   "Após cinco anos de imposto mais caro sem uso do imóvel, a prefeitura pode desapropriar o local.",
+   "Imóveis totalmente abandonados, sem pagar impostos por cinco anos, viram propriedade da prefeitura após três anos.",
+   "Imóveis tomados pela prefeitura vão para moradia popular ou leilão."
   ],
-  "quem_e_afetado": "Donos de terrenos vazios, imóveis fechados ou construções sem uso ganham a obrigação de construir, parcelar ou usar o espaço. Moradores e a prefeitura ganham ferramentas para cobrar o uso social da terra. Ficam de fora da regra de subutilização locais específicos como postos de gasolina, garagens, depósitos, áreas ambientais protegidas e imóveis tombados.",
-  "de_onde_sai_o_dinheiro": "As despesas com a execução da lei saem de dotações orçamentárias próprias da prefeitura.",
+  "quem_e_afetado": "Donos de terrenos vazios, imóveis abandonados ou locais mal aproveitados ganham a obrigação de dar uso a eles. Ficam de fora terrenos com restrições ambientais, imóveis tombados por lei, áreas sob decisão da Justiça e locais que exercem atividades que não precisam de prédios, como hortas e postos de combustíveis.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "O procedimento exato que a Comissão de Análise e Gestão vai adotar, que será criado por regulamento do Poder Executivo.",
-   "O regulamento do Poder Executivo sobre o procedimento para encampação e arrecadação de imóvel abandonado."
+   "Como será o procedimento exato da prefeitura para tomar os imóveis abandonados.",
+   "Os detalhes de como funcionam as notificações oficiais aos donos."
   ],
   "palavras_dificeis": [
    {
-    "termo": "IPTU",
-    "explicacao": "Imposto sobre a Propriedade Predial e Territorial Urbana, um imposto pago todo ano por quem tem imóvel na cidade."
+    "termo": "subutilizado",
+    "explicacao": "Imóvel que é pouco usado ou tem aproveitamento menor do que a lei exige."
    },
    {
-    "termo": "Desapropriação",
-    "explicacao": "Ato pelo qual a prefeitura toma um imóvel do proprietário por descumprimento de regras legais ou por interesse público."
+    "termo": "desapropriação",
+    "explicacao": "Quando a prefeitura toma um imóvel do dono por interesse público."
    },
    {
-    "termo": "Encampação",
-    "explicacao": "Processo administrativo pelo qual a prefeitura assume a posse de um bem abandonado."
+    "termo": "tombados",
+    "explicacao": "Bens protegidos por lei por causa de seu valor histórico ou cultural."
+   },
+   {
+    "termo": "encampação",
+    "explicacao": "Ato em que a prefeitura toma posse de um bem abandonado."
    }
   ],
   "justificativa_do_autor": "",
   "natureza": "politica_publica",
-  "limitacoes": "",
+  "limitacoes": "O documento não informa os custos operacionais nem o orçamento necessário para a prefeitura fiscalizar e aplicar as punições.",
   "pontos_de_atencao": [
    {
-    "ponto": "O texto prevê pagamento de gratificação para os membros da comissão responsável por aplicar a lei.",
-    "trecho": "Os integrantes da Comissão de Análise e Gestão do Cumprimento das Funções Sociais da Propriedade farão jus a uma gratificação pelo exercício de função especial, no valor de R$ 2.824,00"
+    "ponto": "O texto prevê o aumento anual do IPTU para quem não construir ou usar o imóvel.",
+    "trecho": "Imóvel construído: a) 1% (um por cento) no 1° (primeiro) ano; b) 2% (dois por cento) no 2° (segundo) ano"
    },
    {
-    "ponto": "O texto diz que os gastos com a lei serão pagos com o orçamento próprio da prefeitura.",
-    "trecho": "As despesas decorrentes da execução desta Lei Complementar serão suportadas por dotações orçamentárias próprias."
+    "ponto": "Imóveis abandonados sem pagar impostos por cinco anos podem virar propriedade da prefeitura.",
+    "trecho": "inadimplência dos tributos municipais incidentes sobre a propriedade imóvel pelo prazo igual ou superior a 5 (cinco) anos."
+   },
+   {
+    "ponto": "O texto não informa o custo total nem a fonte dos recursos para aplicar a lei.",
+    "trecho": ""
    }
   ],
   "pontos_descartados": []
  },
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
- "hash_documento": "ff0e4224cf7367b8",
- "gerado_em": "2026-11-08T03:27:46Z"
+ "hash_documento": "3b3bc485835345c6",
+ "gerado_em": "2026-11-10T02:49:23Z"
 }
