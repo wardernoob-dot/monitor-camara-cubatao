@@ -5,7 +5,7 @@ O projeto autoriza a prefeitura a prorrogar a ajuda em dinheiro chamada Bolsa Mo
 ✅ Sancionado: Lei nº 4.478 (DO de 04/09/2026).
 
 ▪️ PL 84/2026 (Prefeito Municipal): aprovado em 2ª discussão, 14 a 0.
-Este projeto muda a forma como o dinheiro público das emendas de vereadores será gasto em Cubatão. Ele altera o destino de verbas para várias entidades que cuidam de saúde, cultura, esportes e assistência social. O objetivo é ajustar o orçamento para garantir que os valores sejam aplicados corretamente em projetos sociais e serviços médicos.
+Esta lei muda o destino de verbas de emendas impositivas que já tinham sido aprovadas no final do ano passado. O texto redireciona milhões de reais para várias entidades que prestam serviços nas áreas de saúde, cultura, esporte e lazer na cidade. Com isso, mudam os valores e os projetos que serão pagos com o dinheiro público em cada uma dessas entidades.
 ✅ Sancionado: Lei nº 4.479 (DO de 04/09/2026).
 
 Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).

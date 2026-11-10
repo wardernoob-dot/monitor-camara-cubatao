@@ -534,6 +534,11 @@
   "modelo": "gemini-3.1-flash-lite",
   "texto": "Altera o regimento interno da Câmara para fixar um prazo limite para que a Prefeitura retire projetos de lei de sua autoria."
  },
+ "pr-3-2026": {
+  "hash": "3a3131d63fec",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Batiza a sala de exposições da Câmara Municipal de Cubatão com o nome de \"Vereador Wilson Pio dos Reis\"."
+ },
  "pr-7-2026": {
   "hash": "0864061da1e2",
   "modelo": "gemini-3.5-flash-lite",
