@@ -57,7 +57,9 @@ def documento(dados: Path, tipo: str, numero: str, ano: str | None, ementa: str 
             p = dados / "texto" / arq
             if p.exists() and (arq.endswith(".ocr.txt") or not achado.get("precisa_ocr")):
                 t = flat(normalize(p.read_text("utf-8")))
-                if len(t) > 300:
+                # PDF publicado no lugar errado (planta de obra no PR 3/2026) ou so a justificativa: sem "Art. 1"
+                # nao e o texto do projeto, e o modelo acabaria explicando pela ementa como se tivesse lido
+                if len(t) > 300 and re.search(r"(?i)\bArt(igo)?\.?\s*1\s*[ºo°]?", t):
                     return {"texto": t[:MAX_DOC], "fonte": fonte, "url": achado["url"], "so_ementa": False}
     if not ementa:
         return {}

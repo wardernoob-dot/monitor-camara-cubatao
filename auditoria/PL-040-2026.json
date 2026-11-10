@@ -1,0 +1,35 @@
+{
+ "chave": "PL-040-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "de_onde_sai_o_dinheiro",
+   "frase": "O texto não diz de onde sai o dinheiro.",
+   "tipo": "errado",
+   "explicacao": "O documento possui anexos com tabela salarial e valores detalhados para os cargos e funções criados.",
+   "trecho_documento": "ANEXO I TABELA SALARIAL – CARGOS DE LIVRE PROVIMENTO",
+   "correcao": "O documento traz tabelas salariais com os valores dos cargos e funções criados, mas a lei não especifica a dotação orçamentária exata de onde sairão os recursos.",
+   "trecho_achado": true
+  },
+  {
+   "campo": "o_que_falta_definir",
+   "frase": "As atribuições de alguns cargos em comissão (remetidas ao Anexo III, que foi cortado no final do documento).",
+   "tipo": "errado",
+   "explicacao": "O Anexo III está presente no documento fornecido e define as atribuições dos cargos.",
+   "trecho_documento": "ANEXO III DAS ATRIBUIÇÕES DOS CARGOS EM COMISSÃO",
+   "correcao": "As atribuições dos cargos em comissão estão detalhadas no Anexo III do documento.",
+   "trecho_achado": true
+  },
+  {
+   "campo": "limitacoes",
+   "frase": "Não é possível saber o impacto financeiro total nem ler os anexos citados (Anexo III e Anexo VI) pois o texto fornecido está incompleto.",
+   "tipo": "errado",
+   "explicacao": "O texto do documento inclui o Anexo III e as tabelas salariais dos Anexos I e II.",
+   "trecho_documento": "ANEXO I TABELA SALARIAL",
+   "correcao": "O texto fornecido contém os Anexos I, II e III, embora o Anexo VI de atribuições dos cargos efetivos não esteja detalhado no texto base.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

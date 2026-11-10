@@ -28,7 +28,6 @@
   "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
    "As atribuições exatas dos cargos de Analista I, Engenheiro, Agente de Trânsito e Agente de Transportes (remetidas ao Anexo VI, que não consta no trecho).",
-   "As atribuições de alguns cargos em comissão (remetidas ao Anexo III, que foi cortado no final do documento).",
    "O regimento interno da autarquia que vai organizar os trabalhos do Controle Interno.",
    "A origem dos recursos financeiros para cobrir os custos com os novos cargos criados."
   ],
@@ -52,7 +51,7 @@
   ],
   "justificativa_do_autor": "",
   "natureza": "organizacao_administrativa",
-  "limitacoes": "Não é possível saber o impacto financeiro total nem ler os anexos citados (Anexo III e Anexo VI) pois o texto fornecido está incompleto.",
+  "limitacoes": "O documento é longo e a leitura automática foi só até parte dos anexos. O impacto financeiro total não aparece no trecho lido.",
   "pontos_de_atencao": [
    {
     "ponto": "A criação do Sistema de Controle Interno depende da elaboração de um regimento interno próprio da autarquia.",
@@ -70,5 +69,17 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "808dd7e1b2650a8f",
- "gerado_em": "2026-11-09T23:12:51Z"
+ "gerado_em": "2026-11-09T23:12:51Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "As atribuições de alguns cargos em comissão (remetidas ao Anexo III, que foi cortado no final do documento).",
+   "depois": ""
+  },
+  {
+   "data": "2026-11-10",
+   "antes": "Não é possível saber o impacto financeiro total nem ler os anexos citados (Anexo III e Anexo VI) pois o texto fornecido está incompleto.",
+   "depois": "O documento é longo e a leitura automática foi só até parte dos anexos. O impacto financeiro total não aparece no trecho lido."
+  }
+ ]
 }

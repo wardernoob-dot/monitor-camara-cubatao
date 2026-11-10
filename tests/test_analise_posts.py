@@ -91,3 +91,19 @@ def test_analise_de_projeto_que_virou_lei_usa_o_texto_da_lei_primeiro():
     so_lei = A2.com_lei({**doc, "so_ementa": True}, {"numero": "1", "texto": "Art. 1 cria o programa."})
     assert so_lei["so_ementa"] is False and "cria o programa" in so_lei["texto"] and "PROJETO" not in so_lei["texto"]
     assert A2.com_lei({}, {"numero": "1", "texto": "Art. 1"})["fonte"].startswith("texto da lei")
+
+
+def test_pdf_sem_artigo_nao_vale_como_texto_do_projeto(tmp_path):
+    """PR 3/2026: o PDF publicado era a planta de uma reforma. Sem 'Art. 1' nao e texto de projeto: cai pra ementa."""
+    import json
+    from camara import analise as A
+    sha = "a" * 64
+    (tmp_path / "texto").mkdir()
+    (tmp_path / "indice.json").write_text(json.dumps({"u": {
+        "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PR%2003.2026.pdf",
+        "secao": "projetos", "sha256": sha, "paginas": 2, "precisa_ocr": False, "titulo": "x"}}), "utf-8")
+    (tmp_path / "texto" / f"{sha}.txt").write_text("PROJETO PARA REFORMA DO EDIFICIO SEDE " * 30, "utf-8")
+    d = A.documento(tmp_path, "PR", "3", "2026", "Denomina a sala de exposicoes")
+    assert d["so_ementa"] is True
+    (tmp_path / "texto" / f"{sha}.txt").write_text("Art. 1º Fica denominada a sala de exposicoes. " * 20, "utf-8")
+    assert A.documento(tmp_path, "PR", "3", "2026", "x")["so_ementa"] is False

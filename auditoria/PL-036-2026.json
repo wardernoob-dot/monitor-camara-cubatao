@@ -1,0 +1,17 @@
+{
+ "chave": "PL-036-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_falta_definir",
+   "frase": "Quais órgãos vão instalar a sinalização primeiro, já que o texto diz que a medida é autorizada e prioritária.",
+   "tipo": "sem_base",
+   "explicacao": "O documento define os locais prioritários no Art. 2º (saúde, escolas, repartições, terminais e grandes espaços), logo não falta definir quais órgãos.",
+   "trecho_documento": "Art. 2º A aplicação desta medida poderá ocorrer, prioritariamente, nos seguintes locais: I – unidades de saúde; II – escolas e instituições de ensino municipais; III – repartições públicas com atendimento ao público; IV – terminais de transporte público; V – demais espaços públicos de grande circulação.",
+   "correcao": "Como a lei define locais prioritários como saúde e escolas, o texto não especifica um cronograma exato de quais órgãos farão a instalação primeiro.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

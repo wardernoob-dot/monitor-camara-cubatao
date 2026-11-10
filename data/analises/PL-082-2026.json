@@ -15,7 +15,7 @@
   "resumo": "Este projeto de lei dá o nome de \"Dr. Clermont Silveira Castor\" ao Ambulatório Médico de Especialidades (AME) de Cubatão. O objetivo é prestar uma homenagem póstuma ao médico e ex-prefeito da cidade. A mudança oficializa o nome do prédio localizado na Vila Nova.",
   "o_que_muda": [
    "O Ambulatório Médico de Especialidades (AME) passa a se chamar oficialmente \"Dr. Clermont Silveira Castor\".",
-   "A Prefeitura fica obrigada a colocar placas ou sinalização com o novo nome no prédio.",
+   "A Prefeitura adotará as providências para identificar a unidade com o novo nome.",
    "O prédio afetado fica na Avenida Martins Fontes, número 132, no bairro Vila Nova."
   ],
   "quem_e_afetado": "A mudança afeta a identificação oficial do prédio público. Não há alteração nos serviços de saúde prestados aos moradores ou no funcionamento do local.",
@@ -52,5 +52,12 @@
  "modelo": "Gemini (gemini-3.1-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "e5153c4b19aa335c",
- "gerado_em": "2026-11-08T05:12:25Z"
+ "gerado_em": "2026-11-08T05:12:25Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "A Prefeitura fica obrigada a colocar placas ou sinalização com o novo nome no prédio.",
+   "depois": "A Prefeitura adotará as providências para identificar a unidade com o novo nome."
+  }
+ ]
 }

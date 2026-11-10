@@ -12,7 +12,7 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto cria o Dia de São Pedro e São Paulo no calendário de Cubatão. A data será comemorada todo dia 29 de junho. O objetivo é reconhecer a importância histórica, cultural e religiosa da data. O texto avisa que a lei não cria feriado na cidade.",
+  "resumo": "Este projeto cria o Dia de São Pedro e São Paulo no calendário de Cubatão. A data será comemorada todo dia 29 de junho. O objetivo é reconhecer a importância histórica, cultural e religiosa da data. Segundo a justificativa do autor, a proposta não cria feriado na cidade.",
   "o_que_muda": [
    "A cidade passa a ter o Dia de São Pedro e São Paulo no calendário oficial.",
    "A data oficial de comemoração é o dia 29 de junho de cada ano.",
@@ -43,5 +43,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "557651f71d39614f",
- "gerado_em": "2026-11-08T05:11:05Z"
+ "gerado_em": "2026-11-08T05:11:05Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "O texto avisa que a lei não cria feriado na cidade.",
+   "depois": "Segundo a justificativa do autor, a proposta não cria feriado na cidade."
+  }
+ ]
 }

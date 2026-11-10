@@ -167,14 +167,15 @@ def _gemini(prompt: str, http) -> tuple[str, str]:
              if "generateContent" in x.get("supportedGenerationMethods", [])]
     estaveis = [n for n in nomes if not re.search(r"preview|exp|image|tts|live|audio|embedding|pro", n)]
     chave_ord = lambda n: [int(x) for x in re.findall(r"\d+", n)]  # noqa: E731
-    ordem = sorted((n for n in estaveis if re.search(r"flash$|flash-latest$", n)), key=chave_ord, reverse=True) + \
-        sorted((n for n in estaveis if "flash-lite" in n), key=chave_ord, reverse=True)
+    cheios = sorted((n for n in estaveis if re.search(r"flash$|flash-latest$", n)), key=chave_ord, reverse=True)
+    leves = sorted((n for n in estaveis if "flash-lite" in n), key=chave_ord, reverse=True)
+    ordem = cheios[:2] + leves[:3] + cheios[2:]  # cota e por modelo: estourou nos "flash", tenta os "lite"
     if os.environ.get("MODELO_GEMINI"):
         ordem.insert(0, os.environ["MODELO_GEMINI"])
     corpo = {"contents": [{"parts": [{"text": prompt}]}],
              "generationConfig": {"temperature": 0.3, "response_mime_type": "application/json"}}
     erros = []
-    for modelo in ordem[:4]:
+    for modelo in ordem[:6]:
         r = http.post(f"{GEMINI}/models/{modelo}:generateContent", headers={"x-goog-api-key": chave}, json=corpo, timeout=300)
         if r.status_code != 200:
             erros.append(f"{modelo}: HTTP {r.status_code}")

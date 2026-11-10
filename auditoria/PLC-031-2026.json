@@ -1,0 +1,17 @@
+{
+ "chave": "PLC-031-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_muda",
+   "frase": "Imóveis abandonados sem dono e com impostos atrasados por 5 anos viram bens vagos e passam para a prefeitura após 3 anos.",
+   "tipo": "sem_base",
+   "explicacao": "O documento fala em imóveis abandonados com tributos atrasados, mas não menciona que sejam \"sem dono\".",
+   "trecho_documento": "Art. 4° O Município de Cubatão promoverá a arrecadação do bem imóvel abandonado como bem vago, o qual passará à sua propriedade após três anos.",
+   "correcao": "Imóveis abandonados e com impostos atrasados por 5 anos viram bens vagos e passam para a propriedade da prefeitura após 3 anos.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

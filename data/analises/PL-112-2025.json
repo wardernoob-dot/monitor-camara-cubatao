@@ -12,7 +12,7 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "O projeto obriga os ônibus municipais de Cubatão a fazerem paradas flexíveis para mulheres entre 18h e 5h. A passageira poderá descer fora do ponto oficial em um local seguro, desde que avise o motorista com antecedência. As empresas que desrespeitarem a regra sofrerão multas e outras punições. A lei entra em vigor 90 dias após ser publicada.",
+  "resumo": "O projeto autoriza os ônibus municipais de Cubatão a fazerem paradas fora dos pontos para mulheres entre 18h e 5h. A passageira poderá descer fora do ponto oficial em um local seguro, desde que avise o motorista com antecedência. As empresas que desrespeitarem a regra sofrerão multas e outras punições. A lei entra em vigor 90 dias após ser publicada.",
   "o_que_muda": [
    "Passageiras do sexo feminino podem pedir embarque e desembarque fora dos pontos oficiais nos ônibus municipais.",
    "O horário válido para essa parada flexível é das 18h às 5h do dia seguinte.",
@@ -78,5 +78,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "0034ece245cb0668",
- "gerado_em": "2026-11-08T05:04:58Z"
+ "gerado_em": "2026-11-08T05:04:58Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "O projeto obriga os ônibus municipais de Cubatão a fazerem paradas flexíveis para mulheres entre 18h e 5h.",
+   "depois": "O projeto autoriza os ônibus municipais de Cubatão a fazerem paradas fora dos pontos para mulheres entre 18h e 5h."
+  }
+ ]
 }

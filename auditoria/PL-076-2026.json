@@ -1,0 +1,17 @@
+{
+ "chave": "PL-076-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "palavras_dificeis",
+   "frase": "transparências voluntárias",
+   "tipo": "errado",
+   "explicacao": "O termo correto no documento e na lei é transferências voluntárias, não transparências.",
+   "trecho_documento": "transferências voluntárias",
+   "correcao": "transferências voluntárias",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

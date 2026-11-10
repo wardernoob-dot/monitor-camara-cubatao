@@ -20,7 +20,6 @@
   "quem_e_afetado": "A comunidade religiosa e os devotos que participam dos festejos ganham o reconhecimento oficial da festa. O texto não obriga nem proíbe nada para os moradores.",
   "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
   "o_que_falta_definir": [
-   "Como a festa será organizada pela prefeitura, caso haja apoio oficial.",
    "Se haverá gastos públicos com o evento."
   ],
   "palavras_dificeis": [
@@ -47,5 +46,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "f4dea208ad9b1106",
- "gerado_em": "2026-11-08T05:06:27Z"
+ "gerado_em": "2026-11-08T05:06:27Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "Como a festa será organizada pela prefeitura, caso haja apoio oficial.",
+   "depois": ""
+  }
+ ]
 }

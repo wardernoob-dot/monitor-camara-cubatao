@@ -1,0 +1,17 @@
+{
+ "chave": "PL-091-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_muda",
+   "frase": "Se o serviço precisar, a folga não usada por necessidade da prefeitura pode ser acumulada por até 12 meses.",
+   "tipo": "errado",
+   "explicacao": "O documento original diz que a acumulação é para a folga não utilizada por necessidade do serviço, mas há uma contradição interna no próprio projeto de lei (Art. 1º proíbe acumulação e Art. 4º autoriza por até 12 meses), e a frase da análise omite a contradição ou traz confusão sobre a regra real.",
+   "trecho_documento": "A não utilização da folga compensatória por necessidade do serviço autoriza sua acumulação por até 12 meses.",
+   "correcao": "Se o serviço precisar e a folga não for usada por necessidade da prefeitura, ela pode ser acumulada por até 12 meses, embora o artigo primeiro proíba a acumulação em geral.",
+   "trecho_achado": false
+  }
+ ],
+ "numeros_sem_base": []
+}

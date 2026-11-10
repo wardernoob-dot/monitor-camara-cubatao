@@ -19,7 +19,7 @@
    "A chefia avisa a data da folga com pelo menos 3 dias úteis de antecedência na escala mensal.",
    "A prefeitura pode mudar a data da folga avisando com 48 horas de antecedência, remarcando em até 30 dias.",
    "Quem tiver mais de 1 falta no mês perde o direito à folga daquele período.",
-   "Se o serviço precisar, a folga não usada por necessidade da prefeitura pode ser acumulada por até 12 meses.",
+   "Pelo artigo 4º, a folga não usada por necessidade do serviço pode ser acumulada por até 12 meses. Já o artigo 1º proíbe acumular a folga; o texto traz as duas regras.",
    "A folga pode ser somada com as férias normais, desde que a chefia aceite e não atrapalhe o trabalho.",
    "A Secretaria Municipal de Segurança Pública e Cidadania deve enviar a lista dos contemplados ao RH até o terceiro dia útil de cada mês."
   ],
@@ -60,5 +60,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "cf527a8a32410808",
- "gerado_em": "2026-11-08T05:14:56Z"
+ "gerado_em": "2026-11-08T05:14:56Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "Se o serviço precisar, a folga não usada por necessidade da prefeitura pode ser acumulada por até 12 meses.",
+   "depois": "Pelo artigo 4º, a folga não usada por necessidade do serviço pode ser acumulada por até 12 meses. Já o artigo 1º proíbe acumular a folga; o texto traz as duas regras."
+  }
+ ]
 }

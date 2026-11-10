@@ -52,7 +52,7 @@
     "explicacao": "Ministério do Trabalho e Emprego, órgão do governo federal que cuida das leis de trabalho."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, o projeto ajuda jovens e adolescentes a entrarem no mundo do trabalho e ganharem experiência. O autor diz que muitas famílias são carentes e vivem em vulnerabilidade social, e que o trabalho afasta os jovens do crime e das drogas. Ele destaca também que o jovem precisa estar matriculado na escola e mostrar boas notas.",
+  "justificativa_do_autor": "Segundo o autor, o projeto ajuda jovens e adolescentes a entrarem no mundo do trabalho e ganharem experiência. O autor diz que muitas famílias são carentes e vivem em vulnerabilidade social, e que o trabalho afasta os jovens do crime e das drogas. Ele destaca também que o jovem precisa estar matriculado e frequentando a escola.",
   "natureza": "politica_publica",
   "limitacoes": "O documento não informa quais são as punições para as empresas que não contratarem os jovens nem como a prefeitura vai fiscalizar o cumprimento.",
   "pontos_de_atencao": [
@@ -70,5 +70,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "b73510542b5b1bbd",
- "gerado_em": "2026-11-08T05:04:27Z"
+ "gerado_em": "2026-11-08T05:04:27Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "Ele destaca também que o jovem precisa estar matriculado na escola e mostrar boas notas.",
+   "depois": "Ele destaca também que o jovem precisa estar matriculado e frequentando a escola."
+  }
+ ]
 }

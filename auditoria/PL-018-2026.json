@@ -1,0 +1,17 @@
+{
+ "chave": "PL-018-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_falta_definir",
+   "frase": "Como a festa será organizada pela prefeitura, caso haja apoio oficial.",
+   "tipo": "sem_base",
+   "explicacao": "O documento não menciona que a prefeitura organizará a festa ou prestará apoio oficial.",
+   "trecho_documento": "",
+   "correcao": "",
+   "trecho_achado": false
+  }
+ ],
+ "numeros_sem_base": []
+}

@@ -1,0 +1,17 @@
+{
+ "chave": "PL-045-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_muda",
+   "frase": "O texto permite a instalação de piso tátil e outros recursos de acessibilidade junto com o som.",
+   "tipo": "errado",
+   "explicacao": "O documento fala em sinalização tátil, não em piso tátil.",
+   "trecho_documento": "III – promover a instalação de sinalização tátil e outros recursos de acessibilidade complementares;",
+   "correcao": "O texto permite a instalação de sinalização tátil e outros recursos de acessibilidade junto com o som.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

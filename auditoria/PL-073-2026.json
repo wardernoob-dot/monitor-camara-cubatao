@@ -1,0 +1,26 @@
+{
+ "chave": "PL-073-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "Este projeto dá o nome de Rua José Roberto de Campos para uma praça na cidade.",
+   "tipo": "errado",
+   "explicacao": "O projeto dá o nome de rua para uma praça, mas o título e o texto do documento usam o termo 'RUA' para denominar o local, embora diga que é uma praça.",
+   "trecho_documento": "DENOMINA “RUA JOSÉ ROBERTO DE CAMPOS O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS” Art. 1º - Fica denominada “RUA JOSÉ ROBERTO DE CAMPOS O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS”, a praça",
+   "correcao": "",
+   "trecho_achado": true
+  },
+  {
+   "campo": "o_que_muda",
+   "frase": "A praça na esquina entre a Rua Antônio Lopes dos Santos e a Rua José Costa, no Jardim Costa e Silva, passa a se chamar Rua José Roberto de Campos.",
+   "tipo": "errado",
+   "explicacao": "O documento diz que a praça passa a se chamar 'RUA JOSÉ ROBERTO DE CAMPOS O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS', que é o nome completo proposto.",
+   "trecho_documento": "Fica denominada “RUA JOSÉ ROBERTO DE CAMPOS O LOGRADOURO PÚBLICO QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS”, a praça na esquina entre Rua Antônio Lopes dos Santos e Rua José Costa",
+   "correcao": "",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

@@ -40,7 +40,7 @@
     "explicacao": "O dinheiro que a Prefeitura já separou no orçamento para gastar com cada coisa."
    },
    {
-    "termo": "transparências voluntárias",
+    "termo": "transferências voluntárias",
     "explicacao": "Dinheiro enviado por outros governos para ajudar em projetos, sem ser obrigatório por lei."
    }
   ],
@@ -66,5 +66,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "0025b5461d8731c7",
- "gerado_em": "2026-11-08T05:11:39Z"
+ "gerado_em": "2026-11-08T05:11:39Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "transparências voluntárias",
+   "depois": "transferências voluntárias"
+  }
+ ]
 }

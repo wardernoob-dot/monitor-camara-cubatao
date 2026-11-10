@@ -12,7 +12,7 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto dá o nome de Guilherme Henrick da Silva a uma quadra de futebol em Cubatão. O local homenageado é a quadra de futebol society (com grama sintética) da Praça da Cidadania. A praça fica no bairro Vila São José. A lei vale desde o dia em que foi publicada.",
+  "resumo": "Este projeto dá o nome de Guilherme Henrick da Silva a uma quadra de futebol em Cubatão. O local homenageado é a quadra de futebol society da Praça da Cidadania. A praça fica no bairro Vila São José. A lei vale desde o dia em que foi publicada.",
   "o_que_muda": [
    "A quadra de futebol society na Praça Padre Antônio Pereira Luz passa a se chamar Guilherme Henrick da Silva."
   ],
@@ -24,10 +24,10 @@
   "palavras_dificeis": [
    {
     "termo": "society",
-    "explicacao": "Tipo de quadra de futebol que usa grama sintética."
+    "explicacao": "Quadra para o futebol society, com times menores que os do futebol de campo."
    }
   ],
-  "justificativa_do_autor": "Segundo o autor, Guilherme Henrick da Silva nasceu em Santos em 2003 e morou na Vila São José desde os seis meses de idade. O autor afirma que Guilherme foi uma referência de dedicação, carisma e ajuda aos outros no bairro. Moradores e cidadãos pediram a homenagem para valorizar a história e a identidade da comunidade.",
+  "justificativa_do_autor": "Segundo o autor, Guilherme Henrick da Silva nasceu em Santos em 2003, morou no bairro Água Fria até os seis meses de idade e depois foi morar na Vila São José. O autor afirma que Guilherme foi uma referência de dedicação, carisma e ajuda aos outros no bairro. Moradores e cidadãos pediram a homenagem para valorizar a história e a identidade da comunidade.",
   "natureza": "homenagem_ou_data",
   "limitacoes": "",
   "pontos_de_atencao": [
@@ -45,5 +45,22 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "5e9d89e9829a6434",
- "gerado_em": "2026-11-09T23:11:08Z"
+ "gerado_em": "2026-11-09T23:11:08Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "Tipo de quadra de futebol que usa grama sintética.",
+   "depois": "Quadra para o futebol society, com times menores que os do futebol de campo."
+  },
+  {
+   "data": "2026-11-10",
+   "antes": "O local homenageado é a quadra de futebol society (com grama sintética) da Praça da Cidadania.",
+   "depois": "O local homenageado é a quadra de futebol society da Praça da Cidadania."
+  },
+  {
+   "data": "2026-11-10",
+   "antes": "Segundo o autor, Guilherme Henrick da Silva nasceu em Santos em 2003 e morou na Vila São José desde os seis meses de idade.",
+   "depois": "Segundo o autor, Guilherme Henrick da Silva nasceu em Santos em 2003, morou no bairro Água Fria até os seis meses de idade e depois foi morar na Vila São José."
+  }
+ ]
 }

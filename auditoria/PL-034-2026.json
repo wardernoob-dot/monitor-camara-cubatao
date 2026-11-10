@@ -1,0 +1,35 @@
+{
+ "chave": "PL-034-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "O local homenageado é a quadra de futebol society (com grama sintética) da Praça da Cidadania.",
+   "tipo": "sem_base",
+   "explicacao": "O documento oficial menciona apenas a quadra de futebol society, mas não traz a informação sobre grama sintética.",
+   "trecho_documento": "",
+   "correcao": "O local homenageado é a quadra de futebol society da Praça da Cidadania.",
+   "trecho_achado": false
+  },
+  {
+   "campo": "justificativa_do_autor",
+   "frase": "Segundo o autor, Guilherme Henrick da Silva nasceu em Santos em 2003 e morou na Vila São José desde os seis meses de idade.",
+   "tipo": "errado",
+   "explicacao": "O documento diz que ele morou no bairro Água Fria até os seis meses de idade e depois foi para a Vila São José.",
+   "trecho_documento": "Guilherme morou no bairro Água Fria até os seis meses de idade e depois foi morar com sua família no bairro Vila São José.",
+   "correcao": "Segundo o autor, Guilherme Henrick da Silva nasceu em Santos em 2003, morou no bairro Água Fria até os seis meses de idade e depois foi morar na Vila São José.",
+   "trecho_achado": true
+  },
+  {
+   "campo": "palavras_dificeis",
+   "frase": "Tipo de quadra de futebol que usa grama sintética.",
+   "tipo": "sem_base",
+   "explicacao": "A explicação usa o termo grama sintética que não está presente no documento oficial.",
+   "trecho_documento": "",
+   "correcao": "Quadra de futebol destinada à modalidade society.",
+   "trecho_achado": false
+  }
+ ],
+ "numeros_sem_base": []
+}

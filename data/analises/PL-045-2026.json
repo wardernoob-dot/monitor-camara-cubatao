@@ -17,7 +17,7 @@
    "A prefeitura ganha autorização para colocar mecanismos sonoros nos semáforos de pedestres de forma gradual.",
    "Fica definido que a instalação deve priorizar áreas com maior circulação de pessoas e maior vulnerabilidade.",
    "A prefeitura poderá usar tecnologias assistivas (equipamentos que ajudam pessoas com deficiência) para orientar pedestres.",
-   "O texto permite a instalação de piso tátil e outros recursos de acessibilidade junto com o som.",
+   "O texto permite a instalação de sinalização tátil e outros recursos de acessibilidade junto com o som.",
    "A prefeitura poderá firmar parcerias com empresas e órgãos públicos para conseguir colocar as medidas em prática."
   ],
   "quem_e_afetado": "A lei afeta diretamente as pessoas com deficiência visual e mobilidade reduzida, que ganham regras para facilitar a travessia. Os motoristas também são afetados, pois o som serve de alerta para redobrar a atenção na faixa. O texto não fala sobre quem fica de fora.",
@@ -58,5 +58,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "e482bd07bf7823b4",
- "gerado_em": "2026-11-08T05:08:02Z"
+ "gerado_em": "2026-11-08T05:08:02Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "O texto permite a instalação de piso tátil e outros recursos de acessibilidade junto com o som.",
+   "depois": "O texto permite a instalação de sinalização tátil e outros recursos de acessibilidade junto com o som."
+  }
+ ]
 }

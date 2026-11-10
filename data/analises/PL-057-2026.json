@@ -12,7 +12,7 @@
   "so_ementa": false
  },
  "analise": {
-  "resumo": "Este projeto obriga o uso de rastreador por GPS nas ambulâncias do SAMU em Cubatão. O objetivo é permitir que a prefeitura e a população saibam onde a viatura está em tempo real. A medida busca dar mais transparência e ajudar no tempo de chegada dos socorros.",
+  "resumo": "Este projeto institui o uso de rastreador por GPS nas ambulâncias do SAMU em Cubatão. Na justificativa, o autor diz que o projeto é programático e não impõe execução imediata. O objetivo é permitir que a prefeitura e a população saibam onde a viatura está em tempo real. A medida busca dar mais transparência e ajudar no tempo de chegada dos socorros.",
   "o_que_muda": [
    "As ambulâncias do SAMU passam a usar sistema de geolocalização ou tecnologia equivalente.",
    "A localização das viaturas poderá ser mostrada em um site oficial ou aplicativo.",
@@ -57,5 +57,12 @@
  "modelo": "Gemini (gemini-3.5-flash-lite)",
  "versao_prompt": "1e7596ac5d",
  "hash_documento": "972e315a1b8fe56a",
- "gerado_em": "2026-11-08T05:09:15Z"
+ "gerado_em": "2026-11-08T05:09:15Z",
+ "revisao_humana": [
+  {
+   "data": "2026-11-10",
+   "antes": "Este projeto obriga o uso de rastreador por GPS nas ambulâncias do SAMU em Cubatão.",
+   "depois": "Este projeto institui o uso de rastreador por GPS nas ambulâncias do SAMU em Cubatão. Na justificativa, o autor diz que o projeto é programático e não impõe execução imediata."
+  }
+ ]
 }
