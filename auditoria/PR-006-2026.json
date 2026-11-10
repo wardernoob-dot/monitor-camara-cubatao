@@ -1,0 +1,17 @@
+{
+ "chave": "PR-006-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_muda",
+   "frase": "Cria a função de Secretária da Comissão de Planejamento de Compras e Contratações, com 1 vaga no padrão F18.",
+   "tipo": "errado",
+   "explicacao": "O documento não especifica o padrão F18 para a Secretária, apenas indica a forma de designação por portaria do presidente e exigência de superior e servidor efetivo.",
+   "trecho_documento": "Secretária da Comissão de Planejamento de Compras e Contratações | 1 | Portaria do Presidente | Superior / Servidor efetivo",
+   "correcao": "Cria a função de Secretária da Comissão de Planejamento de Compras e Contratações, com 1 vaga destinada a servidor efetivo com nível superior.",
+   "trecho_achado": false
+  }
+ ],
+ "numeros_sem_base": []
+}

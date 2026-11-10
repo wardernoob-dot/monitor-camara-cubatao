@@ -1,0 +1,17 @@
+{
+ "chave": "PL-190-2025",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "pontos_de_atencao",
+   "frase": "A lei entra em vigor em 1º de janeiro de 2027.",
+   "tipo": "errado",
+   "explicacao": "A lei da versão final aprovada entra em vigor em 1º de janeiro de 2027, mas o documento oficial mostra essa data corretamente; contudo, a análise acertou, logo não há erro neste campo específico do texto gerado.",
+   "trecho_documento": "Esta Lei entra em vigor em 1º de janeiro de 2027.",
+   "correcao": "",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

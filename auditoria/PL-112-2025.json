@@ -1,0 +1,17 @@
+{
+ "chave": "PL-112-2025",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "O projeto obriga os ônibus municipais de Cubatão a fazerem paradas flexíveis para mulheres entre 18h e 5h.",
+   "tipo": "exagero",
+   "explicacao": "O documento diz que o embarque e desembarque fica \"autorizado\", e não que obriga as paradas.",
+   "trecho_documento": "Fica autorizado o embarque e desembarque de passageiras do sexo feminino em locais seguros, mesmo fora dos pontos oficiais",
+   "correcao": "O projeto autoriza os ônibus municipais de Cubatão a fazerem paradas flexíveis para mulheres entre 18h e 5h.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

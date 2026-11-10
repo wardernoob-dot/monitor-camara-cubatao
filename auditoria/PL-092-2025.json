@@ -1,0 +1,26 @@
+{
+ "chave": "PL-092-2025",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "A medida vale para a prefeitura e para a Câmara Municipal.",
+   "tipo": "errado",
+   "explicacao": "O documento diz explicitamente que a Administração Direta exclui a Câmara Municipal, embora a Câmara tenha o mesmo limite aplicado à sua despesa.",
+   "trecho_documento": "com exceção da Câmara Municipal, que terá o mesmo limite aplicado à sua despesa autorizada",
+   "correcao": "A medida vale para a prefeitura (Administração Direta e Indireta) e também se aplica à Câmara Municipal separadamente.",
+   "trecho_achado": true
+  },
+  {
+   "campo": "o_que_muda",
+   "frase": "A mudança vale para o orçamento total da despesa autorizada na Administração Direta (órgãos municipais, exceto a Câmara) e na Administração Indireta.",
+   "tipo": "errado",
+   "explicacao": "O texto da análise deixa de fora a menção correta à Câmara que também recebe o limite, gerando confusão sobre a aplicação da regra.",
+   "trecho_documento": "compreendendo-se, na Administração Direta, a soma dos valores consignados nos órgãos municipais com exceção da Câmara Municipal, que terá o mesmo limite aplicado à sua despesa autorizada",
+   "correcao": "A mudança vale para a Administração Direta (excluindo a Câmara, que tem regra própria com o mesmo limite) e para a Administração Indireta.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

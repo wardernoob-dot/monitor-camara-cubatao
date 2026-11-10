@@ -1,0 +1,17 @@
+{
+ "chave": "PL-082-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "o_que_muda",
+   "frase": "A Prefeitura fica obrigada a colocar placas ou sinalização com o novo nome no prédio.",
+   "tipo": "exagero",
+   "explicacao": "O documento diz apenas que o Poder Executivo adotará providências, sem usar o termo obrigada.",
+   "trecho_documento": "O Poder Executivo adotará as providências necessárias à identificação da unidade com a denominação prevista nesta Lei.",
+   "correcao": "A Prefeitura adotará as providências para identificar a unidade com o novo nome.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

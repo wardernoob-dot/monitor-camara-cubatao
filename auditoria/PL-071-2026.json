@@ -1,0 +1,17 @@
+{
+ "chave": "PL-071-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "O texto avisa que a lei não cria feriado na cidade.",
+   "tipo": "sem_base",
+   "explicacao": "O projeto não possui nenhum aviso expresso sobre feriado no seu corpo normativo (artigos); essa informação só consta na justificativa.",
+   "trecho_documento": "",
+   "correcao": "",
+   "trecho_achado": false
+  }
+ ],
+ "numeros_sem_base": []
+}

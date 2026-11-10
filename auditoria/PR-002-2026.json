@@ -1,0 +1,7 @@
+{
+ "chave": "PR-002-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [],
+ "numeros_sem_base": []
+}

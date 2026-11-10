@@ -1,0 +1,17 @@
+{
+ "chave": "PL-141-2025",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "justificativa_do_autor",
+   "frase": "Ele destaca também que o jovem precisa estar matriculado na escola e mostrar boas notas.",
+   "tipo": "sem_base",
+   "explicacao": "O documento menciona a matrícula escolar, mas não exige expressamente \"mostrar boas notas\".",
+   "trecho_documento": "Um benefício claramente visível neste projeto, está no fato de que uma das exigências dessa Lei é que o jovem esteja devidamente matriculado e frequentando uma instituição de ensino conforme a lei da aprendizagem 10.097/2000.",
+   "correcao": "Ele destaca também que o jovem precisa estar matriculado e frequentando a escola.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

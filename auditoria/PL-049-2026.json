@@ -1,15 +1,15 @@
 {
  "chave": "PL-049-2026",
- "modelo": "gemini-3.6-flash",
+ "modelo": "gemini-3.5-flash-lite",
  "versao_prompt_analise": "1e7596ac5d",
  "problemas": [
   {
-   "campo": "quem_e_afetado",
-   "frase": "A Prefeitura tem a obrigação de manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente.",
-   "tipo": "exagero",
-   "explicacao": "O projeto apenas autoriza a Prefeitura a prorrogar o benefício, não impondo uma obrigação legal de pagamento.",
-   "trecho_documento": "Fica o Poder Executivo autorizado a prorrogar pelo período de até 12 (doze) meses, o fornecimento do \"Bolsa Moradia\"",
-   "correcao": "A Prefeitura fica autorizada a manter o pagamento, desde que o Estado não cancele o auxílio estadual correspondente.",
+   "campo": "resumo",
+   "frase": "O valor do benefício é de cem reais mensais por família.",
+   "tipo": "confuso",
+   "explicacao": "O valor de R$ 100,00 é por mês a cada família, mas o documento traz um total de R$ 2.300,00 por mês para o conjunto das 23 famílias, o que pode confundir o leitor.",
+   "trecho_documento": "na importância de R$ 100,00 (cem reais) ao mês, a cada família atingida pelos escorregamentos e/ou deslizamentos havidos na área denominada \"Pilões\".",
+   "correcao": "O valor do benefício é de cem reais mensais por família, totalizando duas mil e trezentas reais por mês para o grupo.",
    "trecho_achado": true
   }
  ],

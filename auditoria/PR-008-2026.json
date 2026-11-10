@@ -1,0 +1,23 @@
+{
+ "chave": "PR-008-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [],
+ "numeros_sem_base": [
+  {
+   "campo": "o_que_muda",
+   "frase": "Pelo menos 50% do valor total das emendas individuais de cada vereador deve ser destinado obrigatoriamente para ações e serviços de saúde.",
+   "numero": "50"
+  },
+  {
+   "campo": "o_que_muda",
+   "frase": "A prefeitura tem até 120 dias após a publicação da lei do orçamento para avisar sobre impedimentos técnicos ou jurídicos que impeçam a execução de uma emenda.",
+   "numero": "120"
+  },
+  {
+   "campo": "o_que_muda",
+   "frase": "O vereador tem até 30 dias para indicar medidas de correção ou propor o remanejamento do dinheiro caso haja impedimento na emenda.",
+   "numero": "30"
+  }
+ ]
+}

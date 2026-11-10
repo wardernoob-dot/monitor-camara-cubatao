@@ -1,7 +1,17 @@
 {
  "chave": "PL-013-2026",
- "modelo": "gemini-3.8-flash",
+ "modelo": "gemini-3.5-flash-lite",
  "versao_prompt_analise": "1e7596ac5d",
- "problemas": [],
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "A lei autoriza mulheres a embarcar e desembarcar fora dos pontos oficiais nos ônibus de Cubatão durante a noite.",
+   "tipo": "exagero",
+   "explicacao": "O documento diz que o texto trata de embarque e desembarque, mas o parágrafo único da lei estabelece a exigência de antecedência apenas para o desembarque.",
+   "trecho_documento": "A parada para desembarque deverá ser solicitada pela passageira com antecedência mínima razoável",
+   "correcao": "A lei autoriza mulheres a embarcar e desembarcar fora dos pontos oficiais nos ônibus de Cubatão durante a noite, sendo o pedido antecipado obrigatório para o desembarque.",
+   "trecho_achado": true
+  }
+ ],
  "numeros_sem_base": []
 }

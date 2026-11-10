@@ -1,0 +1,17 @@
+{
+ "chave": "PL-057-2026",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "Este projeto obriga o uso de rastreador por GPS nas ambulâncias do SAMU em Cubatão.",
+   "tipo": "exagero",
+   "explicacao": "O projeto institui e autoriza o uso (Art. 1º), mas o autor destaca na justificativa que o projeto possui caráter programático e sua implementação é facultativa, dependendo da conveniência administrativa.",
+   "trecho_documento": "O Poder Executivo poderá regulamentar a presente Lei no que couber.",
+   "correcao": "Este projeto autoriza o uso de rastreador por GPS nas ambulâncias do SAMU em Cubatão.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}

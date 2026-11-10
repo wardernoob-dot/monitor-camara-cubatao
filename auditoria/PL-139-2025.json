@@ -1,0 +1,44 @@
+{
+ "chave": "PL-139-2025",
+ "modelo": "gemini-3.5-flash-lite",
+ "versao_prompt_analise": "1e7596ac5d",
+ "problemas": [
+  {
+   "campo": "resumo",
+   "frase": "O texto não diz de onde vem o dinheiro para cuidar disso.",
+   "tipo": "sem_base",
+   "explicacao": "O documento não menciona custos, mas a análise afirma desnecessariamente a ausência de previsão financeira.",
+   "trecho_documento": "",
+   "correcao": "",
+   "trecho_achado": false
+  },
+  {
+   "campo": "o_que_muda",
+   "frase": "A empresa precisa ter regularidade fiscal ambiental (documentos que provam que ela está em dia com as leis do ambiente).",
+   "tipo": "exagero",
+   "explicacao": "O documento exige apenas regularidade fiscal ambiental, sem detalhar obrigações ambientais complexas.",
+   "trecho_documento": "A empresa interessada deverá comprovar regularidade fiscal ambiental por meio de certidões emitidas pelos órgãos competentes.",
+   "correcao": "A empresa interessada deve comprovar regularidade fiscal ambiental.",
+   "trecho_achado": true
+  },
+  {
+   "campo": "o_que_muda",
+   "frase": "A empresa deve seguir pelo menos três regras de proteção e valorização da mulher no trabalho.",
+   "tipo": "confuso",
+   "explicacao": "A lei diz que a empresa deve cumprir três ou mais critérios de uma lista específica, e não apenas regras gerais.",
+   "trecho_documento": "comprovar o cumprimento de três ou mais dos critérios a seguir elencados",
+   "correcao": "A empresa deve cumprir pelo menos três dos critérios definidos na lei para receber o selo.",
+   "trecho_achado": true
+  },
+  {
+   "campo": "o_que_falta_definir",
+   "frase": "Qual é o tempo de validade do selo antes de expirar.",
+   "tipo": "sem_base",
+   "explicacao": "O art. 5º fala em expiração do tempo de validade, indicando que a regulamentação definirá o prazo, mas o texto da análise trata isso como lacuna total quando o art. 5º já prevê validade.",
+   "trecho_documento": "antes da expiração do seu tempo de validade",
+   "correcao": "O tempo exato de validade do selo que será definido na regulamentação.",
+   "trecho_achado": true
+  }
+ ],
+ "numeros_sem_base": []
+}
