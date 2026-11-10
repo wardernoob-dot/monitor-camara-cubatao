@@ -514,6 +514,11 @@
   "modelo": "gemini-3.1-flash-lite",
   "texto": "Muda a estrutura, os órgãos e a carreira dos procuradores da Procuradoria Geral do Município."
  },
+ "pl-95-2026": {
+  "hash": "2c9d0b36cdc7",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Autoriza a Prefeitura a pegar um empréstimo com a Caixa Econômica Federal."
+ },
  "plc-70-2026": {
   "hash": "4aa86ba70daf",
   "modelo": "gemini-3.5-flash-lite",
