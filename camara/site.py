@@ -32,6 +32,7 @@ from pathlib import Path
 
 from . import analise as AN
 from . import impacto as IM
+from . import pendencias as PD
 from . import reportagens as RP
 from . import explicacao as EX
 from . import validacao as V
@@ -935,6 +936,15 @@ def _explicacao(m: dict, explic: dict) -> dict | None:
     return None
 
 
+def _contato(dados: Path) -> dict:
+    """data/contato.json: por onde o morador avisa um erro ({"email": ..., "formulario": https://...}). Vazio = so GitHub."""
+    arq = Path(dados) / "contato.json"
+    c = json.loads(arq.read_text("utf-8")) if arq.exists() else {}
+    email = str(c.get("email") or "").strip()
+    return {"email": email if re.fullmatch(r"[^@\s<>\"']+@[^@\s<>\"']+\.[a-z]{2,}", email) else None,
+            "formulario": url_segura(c.get("formulario"))}
+
+
 def exportar(dados: Path, saida: Path | None = None) -> dict:
     """Grava docs/data/dados.json (tudo que o app precisa) e docs/data/analises/<projeto>.json (sob demanda)."""
     dados = Path(dados)
@@ -992,7 +1002,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                     **{k: an["analise"].get(k, v) for k, v in (
                         ("de_onde_sai_o_dinheiro", ""), ("o_que_falta_definir", []), ("palavras_dificeis", []))},
                 }, ensure_ascii=False), "utf-8")
-        lei_obj = {**m["lei"], "url": url_segura(m["lei"].get("url"))} if m["lei"] else None
+        lei_obj = {**m["lei"], "url": url_segura(m["lei"].get("url")), **(PD.da_lei(dados, m["lei"]) or {})} if m["lei"] else None
         veto_obj = ({**m["veto"], "url": url_segura(m["veto"].get("url"))}
                     if m["veto"] and "url" in m["veto"] else m["veto"])
         materias.append({
@@ -1015,7 +1025,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     reportagens = RP.exportar({m["slug"]: m for m in materias}, votacoes_json)
     pacote = {
         "meta": {"atualizado": datetime.now(timezone.utc).isoformat(timespec="minutes"), "nome_site": NOME_SITE,
-                 "cidade": CIDADE, "repo": REPO},
+                 "cidade": CIDADE, "repo": REPO, "contato": _contato(dados)},
         "vereadores": vereadores, "materias": sorted(materias, key=lambda m: (m["ultima_data"], int(m["numero"] or 0)), reverse=True),
         "votacoes": votacoes_json, "dias": dias, "reportagens": reportagens, "executivo": RP.executivo(),
         "partidos": sorted(({**{k: x for k, x in p.items() if k not in ("membros", "em_exercicio", "rachas")},

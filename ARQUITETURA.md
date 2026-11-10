@@ -332,3 +332,13 @@ monitor-camara-cubatao/
 ```
 
 ---
+
+## Páginas derivadas do texto da lei (sem IA)
+
+`camara/pendencias.py` lê o texto da lei em `data/diario/<id>.json` e extrai, por regra fixa, (a) quando a lei passa a valer
+(data explícita, "N dias após a publicação" ou a data da publicação) e (b) os dispositivos que mandam regulamentar, definir
+ou fixar algo depois, sempre com o trecho literal e, quando a lei dá prazo, a data de vencimento. `site.py` anexa isso em
+`materia.lei.vigencia` e `materia.lei.depende`. O front usa em `#/leis` (linha do tempo) e `#/em-aberto` (vetos sem votação,
+aprovados sem lei nem veto, leis que pedem regulamentação). `#/temas` mostra, por tema, quem votou a favor e contra em cada
+projeto (ordem por data, sem nota). `frontend/src/avisar.tsx` é o "Achou um erro?"; o e-mail ou formulário vem de
+`data/contato.json`.

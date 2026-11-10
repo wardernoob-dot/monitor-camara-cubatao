@@ -24,6 +24,9 @@ const Ranking = lazy(() => import("./paginas/Ranking"));
 const ListaPartidos = lazy(() => import("./paginas/Partidos").then((m) => ({ default: m.ListaPartidos })));
 const PaginaPartido = lazy(() => import("./paginas/Partidos").then((m) => ({ default: m.PaginaPartido })));
 const Reportagens = lazy(() => import("./paginas/Reportagens"));
+const Temas = lazy(() => import("./paginas/Temas"));
+const Leis = lazy(() => import("./paginas/Leis"));
+const EmAberto = lazy(() => import("./paginas/EmAberto"));
 import NaoEncontrado from "./paginas/NaoEncontrado";
 const ReportagemPagina = lazy(() => import("./paginas/Reportagem"));
 
@@ -70,6 +73,14 @@ function Rodape() {
             <p className="rodape__lema">Como cada vereador de {meta.cidade} votou, com a fonte de cada voto.</p>
             <GuaraVoo tamanho={44} className="rodape__voo" />
           </div>
+          <nav className="rodape__col" aria-label="Mais no site">
+            <h2 className="rodape__titulo">Mais no site</h2>
+            <ul>
+              <li><Link to="/temas">Votos por tema</Link></li>
+              <li><Link to="/leis">Leis de 2026</Link></li>
+              <li><Link to="/em-aberto">O que ficou pendente</Link></li>
+            </ul>
+          </nav>
           <nav className="rodape__col" aria-label="Método">
             <h2 className="rodape__titulo">Método</h2>
             <ul>
@@ -158,6 +169,9 @@ function App() {
             <Route path="/sessoes" element={<Sessoes />} />
             <Route path="/sessoes/:data" element={<SessaoPagina />} />
             <Route path="/como-funciona" element={<ComoFunciona />} />
+            <Route path="/temas" element={<Temas />} />
+            <Route path="/leis" element={<Leis />} />
+            <Route path="/em-aberto" element={<EmAberto />} />
             <Route path="/reportagens" element={<Reportagens />} />
             <Route path="/reportagens/:id" element={<ReportagemPagina />} />
             <Route path="*" element={<NaoEncontrado />} />

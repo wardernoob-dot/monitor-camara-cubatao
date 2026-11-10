@@ -1,4 +1,5 @@
 import { CartaoIndice } from "../indice";
+import { AvisarErro } from "../avisar";
 import { Secao, abrirSecao } from "../secao";
 import { Compartilhar } from "../compartilhar";
 import { useMemo, useState } from "react";
@@ -230,6 +231,7 @@ export default function VereadorPagina() {
           {v.presenca.justificada ?? 0} e ausência sem justificativa em {v.presenca.ausente ?? 0}.
         </p>
       </Secao>
+      <AvisarErro sobre={`Vereador ${v.exibicao}`} />
       </div>
       <Toc itens={TOC_VEREADOR} caminho={`/vereadores/${v.slug}`} />
       </div>
