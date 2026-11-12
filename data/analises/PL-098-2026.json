@@ -1,0 +1,66 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "98",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "ALTERA A LEI MUNICIPAL Nº 4.403, DE 19 DE SETEMBRO DE 2025, QUE INSTITUI A DIÁRIA ESPECIAL POR JORNADA EXTRAORDINÁRIA DE TRABALHO - DEJET AOS INTEGRANTES DA GUARDA CIVIL MUNICIPAL DE CUBATÃO - GCMC, E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-98.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto muda a forma como é pago o valor da DEJET (Diária Especial por Jornada Extraordinária de Trabalho) para os guardas civis municipais. O texto troca o cálculo baseado em taxas variáveis por um valor fixo em dinheiro, que passa a ser de R$ 291,99. A mudança serve para obedecer a leis maiores e decisões da Justiça. O projeto entra em vigor logo no dia de sua publicação.",
+  "o_que_muda": [
+   "O valor da DEJET (Diária Especial por Jornada Extraordinária de Trabalho) passa a ser fixo em R$ 291,99.",
+   "O pagamento da DEJET só acontece quando o guarda cumpre de fato a jornada de trabalho extra autorizada.",
+   "O valor em dinheiro só poderá ser mudado no futuro através de uma nova lei específica.",
+   "Revogam-se todas as regras anteriores que dizem o contrário sobre este assunto."
+  ],
+  "quem_e_afetado": "Os guardas civis municipais de Cubatão são os principais afetados, pois passam a receber um valor fixo e definido em lei para o trabalho extra. Quem não faz parte da Guarda Civil Municipal fica de fora dessa gratificação.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "Quais são os requisitos e condições exatos exigidos no regulamento para o pagamento da diária."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "DEJET",
+    "explicacao": "Sigla para Diária Especial por Jornada Extraordinária de Trabalho, que é o pagamento extra dado ao guarda por trabalhar horas a mais."
+   },
+   {
+    "termo": "GCMC",
+    "explicacao": "Sigla para Guarda Civil Municipal de Cubatão, que é a força de segurança da cidade."
+   },
+   {
+    "termo": "UFESP",
+    "explicacao": "Sigla para Unidade Fiscal do Estado de São Paulo, um índice usado pelo governo para calcular taxas e impostos."
+   },
+   {
+    "termo": "inconstitucional",
+    "explicacao": "Algo que vai contra o que manda a Constituição, que é a lei maior do país."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, a regra antiga que calculava o valor usando a UFESP (Unidade Fiscal do Estado de São Paulo) é inconstitucional e contraria uma decisão recente do STF (Supremo Tribunal Federal). O autor explica que o STF decidiu que o Poder Executivo não pode fixar ou alterar sozinho o valor de pagamentos. Por isso, a proposta coloca um valor fixo em reais, que já equivale ao cálculo antigo de 0,95 UFESP multiplicado por 8 horas de serviço.",
+  "natureza": "politica_publica",
+  "limitacoes": "O documento não informa o impacto financeiro total dessa mudança no orçamento da prefeitura.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O pagamento depende de regras complementares e de regulamento próprio.",
+    "trecho": "observados os requisitos e condições estabelecidos nesta Lei e em seu regulamento."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O projeto não traz informações sobre o impacto financeiro ou de onde virão os recursos para pagar o valor fixado.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "fd293f75a9361174",
+ "gerado_em": "2026-11-12T16:56:26Z"
+}
