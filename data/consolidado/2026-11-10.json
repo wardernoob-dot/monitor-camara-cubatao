@@ -1,0 +1,536 @@
+{
+ "data": "2026-11-10",
+ "status": "so_oficial",
+ "sessoes": [
+  {
+   "numero": 31,
+   "tipo": "extraordinaria",
+   "data": "2026-11-10",
+   "inicio": "17:29",
+   "fim": "17:36",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-31a-sessao-extraordinaria-10-11-2026/at_download/file"
+  },
+  {
+   "numero": 38,
+   "tipo": "ordinaria",
+   "data": "2026-11-10",
+   "inicio": "14:32",
+   "fim": "17:28",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file"
+  }
+ ],
+ "transmissoes": [],
+ "noticias": [
+  {
+   "titulo": "Câmara aprova veto parcial ao projeto de prevenção às bets",
+   "url": "https://www.cubatao.sp.leg.br/camara-aprova-veto-parcial-ao-projeto-de-combate-e-prevencao-a-ludopatia",
+   "publicado": "2026-11-11T20:14:39Z"
+  }
+ ],
+ "materias": [
+  {
+   "tipo": "PL",
+   "numero": "58",
+   "ano": "2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "DISPÕE SOBRE A CESSÃO DE SERVIDORES PÚBLICOS NO ÂMBITO DA ADMINISTRAÇÃO PÚBLICA DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": true,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "2a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 31,
+       "tipo": "extraordinaria",
+       "data": "2026-11-10",
+       "inicio": "17:29",
+       "fim": "17:36"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-31a-sessao-extraordinaria-10-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    },
+    {
+     "etapa": "1a_discussao",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 38,
+       "tipo": "ordinaria",
+       "data": "2026-11-10",
+       "inicio": "14:32",
+       "fim": "17:28"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-veto-parcial-ao-projeto-de-combate-e-prevencao-a-ludopatia",
+     "titulo": "Câmara aprova veto parcial ao projeto de prevenção às bets",
+     "resultado": "aprovado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ]
+  },
+  {
+   "tipo": "PL",
+   "numero": "178",
+   "ano": null,
+   "autoria": null,
+   "assunto": null,
+   "na_pauta": false,
+   "resultado_oficial": null,
+   "votacoes": [],
+   "sem_painel": false,
+   "noticias": [
+    {
+     "url": "https://www.cubatao.sp.leg.br/camara-aprova-veto-parcial-ao-projeto-de-combate-e-prevencao-a-ludopatia",
+     "titulo": "Câmara aprova veto parcial ao projeto de prevenção às bets",
+     "resultado": "retirado",
+     "votos": [],
+     "nomes_nao_reconhecidos": []
+    }
+   ],
+   "diario_oficial": [
+    {
+     "titulo": "LEI Nº 4.484, DE 06 DE OUTUBRO DE 2026",
+     "data": "2026-10-06",
+     "edicao": "2100",
+     "url": "https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=26005",
+     "tipo": "lei",
+     "numero": "4484",
+     "similaridade_ementa": 1.0
+    }
+   ]
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "17",
+   "ano": null,
+   "autoria": "Guilherme dos Santos Malaquias",
+   "assunto": "Aprovada a Moção nº 17, de autoria do Vereador Guilherme dos Santos Malaquias, Moção de Aplausos ao Corpo de Baile Infantojuvenil da Escola Técnica de Dança Ivanildo Rebouças da Silva, em reconhecimento às importantes conquistas alcançadas no cenário nacional e internacional da dança, levando o nome de Cubatão a novos patamares de destaque.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 38,
+       "tipo": "ordinaria",
+       "data": "2026-11-10",
+       "inicio": "14:32",
+       "fim": "17:28"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "18",
+   "ano": null,
+   "autoria": "Márcio Silva Nascimento",
+   "assunto": "Aprovada a Moção nº 18, de autoria do Vereador Márcio Silva Nascimento, Moção de Aplausos ao STUDIO TATIANA CARVALHO, em reconhecimento à sua trajetória e os expressivos resultados alcançados na competição Internacional PETIPÁ DANCE FESTIVAL que levaram o nome de Cubatão ao cenário internacional da dança.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 38,
+       "tipo": "ordinaria",
+       "data": "2026-11-10",
+       "inicio": "14:32",
+       "fim": "17:28"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "19",
+   "ano": null,
+   "autoria": "Marcos Roberto Silva",
+   "assunto": "Aprovada a Moção nº 19, de autoria do Vereador Marcos Roberto Silva, Moção de Aplausos ao lutador, atleta de Wrestling, Davi Giovanetti por sua trajetória vitoriosa e por levar o nome de Cubatão e do Brasil mundo afora.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 38,
+       "tipo": "ordinaria",
+       "data": "2026-11-10",
+       "inicio": "14:32",
+       "fim": "17:28"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 11,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva",
+        "marcio silva nascimento"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "20",
+   "ano": null,
+   "autoria": "Roniele Martins da Silva",
+   "assunto": "Aprovada a Moção nº 20, de autoria do Vereador Roniele Martins da Silva, Moção de Aplausos ao Assistente Social Walter Rodrigues Lemos, em reconhecimento à sua trajetória profissional, ao compromisso com a defesa dos Direitos Humanos, à promoção da equidade social e à valorização da cultura e da arte.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 38,
+       "tipo": "ordinaria",
+       "data": "2026-11-10",
+       "inicio": "14:32",
+       "fim": "17:28"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 13,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": false
+  }
+ ],
+ "votacoes_nao_identificadas": [],
+ "divergencias": [],
+ "nomes": {
+  "alessandro donizete de oliveira": {
+   "nome": "Alessandro Donizete de Oliveira",
+   "bancada_declarada": "REPUBLICANOS",
+   "presenca": {
+    "sim": 66,
+    "justificada": 2
+   }
+  },
+  "alexandre mendes da silva": {
+   "nome": "Alexandre Mendes da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 63,
+    "ausente": 3,
+    "justificada": 2
+   }
+  },
+  "allan matias barboza de souza": {
+   "nome": "Allan Matias Barboza de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 59,
+    "justificada": 6,
+    "ausente": 2
+   }
+  },
+  "anderson de lana andrade": {
+   "nome": "Anderson de Lana Andrade",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 40,
+    "justificada": 4
+   }
+  },
+  "daniel barbosa de assis silva": {
+   "nome": "Daniel Barbosa de Assis Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 67,
+    "ausente": 1
+   }
+  },
+  "edson menezes mota": {
+   "nome": "Edson Menezes Mota",
+   "bancada_declarada": "UNIÃO BRASIL",
+   "presenca": {
+    "sim": 60,
+    "justificada": 8
+   }
+  },
+  "guilherme amaral belo nogueira": {
+   "nome": "Guilherme Amaral Belo Nogueira",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "guilherme dos santos malaquias": {
+   "nome": "Guilherme dos Santos Malaquias",
+   "bancada_declarada": null,
+   "presenca": {
+    "justificada": 1,
+    "sim": 66,
+    "ausente": 1
+   }
+  },
+  "ivan da silva": {
+   "nome": "Ivan da Silva",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 7
+   }
+  },
+  "jair ferreira lucas": {
+   "nome": "Jair Ferreira Lucas",
+   "bancada_declarada": "PSDB",
+   "presenca": {
+    "sim": 67,
+    "ausente": 1
+   }
+  },
+  "joemerson alves de souza": {
+   "nome": "Joemerson Alves de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 64,
+    "justificada": 4
+   }
+  },
+  "jose afonso": {
+   "nome": "José Afonso",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "sim": 65,
+    "justificada": 2
+   }
+  },
+  "jose elan dos santos gomes": {
+   "nome": "José Elan dos Santos Gomes",
+   "bancada_declarada": "AGIR",
+   "presenca": {
+    "sim": 65,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcio silva nascimento": {
+   "nome": "Márcio Silva Nascimento",
+   "bancada_declarada": "PSB",
+   "presenca": {
+    "sim": 65,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "marcos roberto silva": {
+   "nome": "Marcos Roberto Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "justificada": 3
+   }
+  },
+  "maria jaqueline da silva": {
+   "nome": "Maria Jaqueline da Silva",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 1
+   }
+  },
+  "ronaldo araujo queiroz": {
+   "nome": "Ronaldo Araújo Queiroz",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 65,
+    "justificada": 2,
+    "ausente": 1
+   }
+  },
+  "roniele martins da silva": {
+   "nome": "Roniele Martins da Silva",
+   "bancada_declarada": "PSD",
+   "presenca": {
+    "justificada": 5,
+    "sim": 62,
+    "ausente": 1
+   }
+  },
+  "washington luiz lessa de souza": {
+   "nome": "Washington Luiz Lessa de Souza",
+   "bancada_declarada": null,
+   "presenca": {
+    "sim": 15
+   }
+  }
+ }
+}

@@ -370,7 +370,7 @@
    "nome": "Alessandro Donizete de Oliveira",
    "bancada_declarada": "REPUBLICANOS",
    "presenca": {
-    "sim": 64,
+    "sim": 66,
     "justificada": 2
    }
   },
@@ -378,7 +378,7 @@
    "nome": "Alexandre Mendes da Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 61,
+    "sim": 63,
     "ausente": 3,
     "justificada": 2
    }
@@ -387,7 +387,7 @@
    "nome": "Allan Matias Barboza de Souza",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 57,
+    "sim": 59,
     "justificada": 6,
     "ausente": 2
    }
@@ -396,7 +396,7 @@
    "nome": "Anderson de Lana Andrade",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 38,
+    "sim": 40,
     "justificada": 4
    }
   },
@@ -404,7 +404,7 @@
    "nome": "Daniel Barbosa de Assis Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 65,
+    "sim": 67,
     "ausente": 1
    }
   },
@@ -412,7 +412,7 @@
    "nome": "Edson Menezes Mota",
    "bancada_declarada": "UNIÃO BRASIL",
    "presenca": {
-    "sim": 58,
+    "sim": 60,
     "justificada": 8
    }
   },
@@ -428,7 +428,7 @@
    "bancada_declarada": null,
    "presenca": {
     "justificada": 1,
-    "sim": 64,
+    "sim": 66,
     "ausente": 1
    }
   },
@@ -443,7 +443,7 @@
    "nome": "Jair Ferreira Lucas",
    "bancada_declarada": "PSDB",
    "presenca": {
-    "sim": 65,
+    "sim": 67,
     "ausente": 1
    }
   },
@@ -451,7 +451,7 @@
    "nome": "Joemerson Alves de Souza",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 62,
+    "sim": 64,
     "justificada": 4
    }
   },
@@ -459,7 +459,7 @@
    "nome": "José Afonso",
    "bancada_declarada": "PSD",
    "presenca": {
-    "sim": 63,
+    "sim": 65,
     "justificada": 2
    }
   },
@@ -467,7 +467,7 @@
    "nome": "José Elan dos Santos Gomes",
    "bancada_declarada": "AGIR",
    "presenca": {
-    "sim": 63,
+    "sim": 65,
     "justificada": 2,
     "ausente": 1
    }
@@ -476,7 +476,7 @@
    "nome": "Márcio Silva Nascimento",
    "bancada_declarada": "PSB",
    "presenca": {
-    "sim": 63,
+    "sim": 65,
     "justificada": 2,
     "ausente": 1
    }
@@ -485,7 +485,7 @@
    "nome": "Marcos Roberto Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 63,
+    "sim": 65,
     "justificada": 3
    }
   },
@@ -500,7 +500,7 @@
    "nome": "Ronaldo Araújo Queiroz",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 63,
+    "sim": 65,
     "justificada": 2,
     "ausente": 1
    }
@@ -510,7 +510,7 @@
    "bancada_declarada": "PSD",
    "presenca": {
     "justificada": 5,
-    "sim": 60,
+    "sim": 62,
     "ausente": 1
    }
   },

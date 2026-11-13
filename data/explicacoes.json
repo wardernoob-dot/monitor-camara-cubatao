@@ -39,10 +39,30 @@
   "modelo": "gemini-3.5-flash-lite",
   "texto": "Homenageia o Encontro de Carros Antigos, Baixos & Turbos de Cubatão, organizado pela Equipe Baixos Cubatão."
  },
+ "mocao-17-2026": {
+  "hash": "39e88ece8c8c",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia o Corpo de Baile Infantojuvenil da Escola Técnica de Dança Ivanildo Rebouças da Silva pelas conquistas na dança."
+ },
+ "mocao-18-2026": {
+  "hash": "bc7d320336b6",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia o Studio Tatiana Carvalho pela trajetória e resultados na competição internacional Petipá Dance Festival."
+ },
+ "mocao-19-2026": {
+  "hash": "1864b2d13202",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia o lutador de Wrestling Davi Giovanetti por sua trajetória vitoriosa no esporte."
+ },
  "mocao-2-2026": {
   "hash": "69d3c9351fcf",
   "modelo": "gemini-3.1-flash-lite",
   "texto": "Homenageia Kalleby Pietro Ribeiro de Simone por sua trajetória, espírito empreendedor e amor por Cubatão."
+ },
+ "mocao-20-2026": {
+  "hash": "8a9810734662",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia o assistente social Walter Rodrigues Lemos por sua trajetória profissional e defesa dos Direitos Humanos."
  },
  "mocao-3-2026": {
   "hash": "ac0e07296a80",

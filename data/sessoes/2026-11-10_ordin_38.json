@@ -1,0 +1,472 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file",
+ "sessao": {
+  "numero": 38,
+  "tipo": "ordinaria",
+  "data": "2026-11-10",
+  "inicio": "14:32",
+  "fim": "17:28"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 38ª SESSÃO ORDINÁRIA - 10/11/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "expediente_mesa",
+   "ordem": "a",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "17",
+   "autoria": "Guilherme dos Santos Malaquias",
+   "descricao": "Aprovada a Moção nº 17, de autoria do Vereador Guilherme dos Santos Malaquias, Moção de Aplausos ao Corpo de Baile Infantojuvenil da Escola Técnica de Dança Ivanildo Rebouças da Silva, em reconhecimento às importantes conquistas alcançadas no cenário nacional e internacional da dança, levando o nome de Cubatão a novos patamares de destaque.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "marcio silva nascimento": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 12,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "b",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "18",
+   "autoria": "Márcio Silva Nascimento",
+   "descricao": "Aprovada a Moção nº 18, de autoria do Vereador Márcio Silva Nascimento, Moção de Aplausos ao STUDIO TATIANA CARVALHO, em reconhecimento à sua trajetória e os expressivos resultados alcançados na competição Internacional PETIPÁ DANCE FESTIVAL que levaram o nome de Cubatão ao cenário internacional da dança.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "marcio silva nascimento": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "c",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "19",
+   "autoria": "Marcos Roberto Silva",
+   "descricao": "Aprovada a Moção nº 19, de autoria do Vereador Marcos Roberto Silva, Moção de Aplausos ao lutador, atleta de Wrestling, Davi Giovanetti por sua trajetória vitoriosa e por levar o nome de Cubatão e do Brasil mundo afora.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcos roberto silva",
+        "marcio silva nascimento"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "marcos roberto silva": "favor",
+      "marcio silva nascimento": "favor"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "d",
+   "tipo": "deliberacao",
+   "resultado": "aprovado",
+   "especie": "Moção",
+   "numero": "20",
+   "autoria": "Roniele Martins da Silva",
+   "descricao": "Aprovada a Moção nº 20, de autoria do Vereador Roniele Martins da Silva, Moção de Aplausos ao Assistente Social Walter Rodrigues Lemos, em reconhecimento à sua trajetória profissional, ao compromisso com a defesa dos Direitos Humanos, à promoção da equidade social e à valorização da cultura e da arte.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "aprovado",
+     "detalhe": null,
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "marcio silva nascimento": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 13,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "e",
+   "tipo": "deliberacao",
+   "resultado": "comunicado",
+   "especie": null,
+   "numero": null,
+   "autoria": null,
+   "descricao": "Comunicado que se encontra à disposição, na Divisão Administrativa, a súmula da correspondência expedida e recebida.",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "expediente_mesa",
+   "ordem": "f",
+   "tipo": "indicacoes",
+   "resultado": "lido",
+   "especie": "Indicações",
+   "numero": null,
+   "autoria": null,
+   "descricao": "Leitura das Indicações encaminhadas à Mesa sugerindo aos órgãos competentes: Do Vereador Joemerson Alves de Souza - “Cleber do Cavaco”, nºs: 1324, solicitação à Sancetur - SOU Cubatão para que disponibilize ônibus natalino (iluminação em Led na parte externa do veículo) no período das comemorações d",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "votacoes": []
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "1126/2025",
+   "especie": "OFÍCIO Nº 123/2026/SEJUR",
+   "numero": "123/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO PARCIAL AO PROJETO DE LEI QUE INSTITUI O PROGRAMA DE PREVENCÃO AOS IMPACTOS DAS APOSTAS ONLINE (BETS) E DE COMBATE À LUDOPATIA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "06/10/2026",
+   "objeto_votado": "veto",
+   "rotulos": {
+    "favor": "manter o veto",
+    "contra": "derrubar o veto"
+   },
+   "resultado": "veto_mantido",
+   "votacoes": [
+    {
+     "turno": "discussao_unica",
+     "resultado": "veto_mantido",
+     "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+     "grupos": [
+      {
+       "acao": "rejeição",
+       "alvo": "Veto",
+       "sentido": "contra",
+       "vereadores": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ]
+      },
+      {
+       "acao": "manutenção",
+       "alvo": "Veto",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "guilherme dos santos malaquias": "contra",
+      "marcio silva nascimento": "contra",
+      "roniele martins da silva": "contra",
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor"
+     },
+     "placar": {
+      "favor": 11,
+      "contra": 3
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "503/2026",
+   "especie": "PROJETO DE LEI Nº 58/2026",
+   "numero": "58/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "DISPÕE SOBRE A CESSÃO DE SERVIDORES PÚBLICOS NO ÂMBITO DA ADMINISTRAÇÃO PÚBLICA DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "25/05/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "1a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose afonso": "José Afonso",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "b8b2dd6aacac7956fe230029e40c8102d64a644f43887cbda6cc1c7ff4b75cf9"
+}

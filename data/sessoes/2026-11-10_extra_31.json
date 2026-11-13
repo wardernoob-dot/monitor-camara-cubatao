@@ -1,0 +1,120 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-31a-sessao-extraordinaria-10-11-2026/at_download/file",
+ "sessao": {
+  "numero": 31,
+  "tipo": "extraordinaria",
+  "data": "2026-11-10",
+  "inicio": "17:29",
+  "fim": "17:36"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 31ª SESSÃO EXTRAORDINÁRIA - 10/11/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": false,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "503/2026",
+   "especie": "PROJETO DE LEI Nº 58/2026",
+   "numero": "58/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "DISPÕE SOBRE A CESSÃO DE SERVIDORES PÚBLICOS NO ÂMBITO DA ADMINISTRAÇÃO PÚBLICA DO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "25/05/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "aprovado",
+   "votacoes": [
+    {
+     "turno": "2a_discussao",
+     "resultado": "aprovado",
+     "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+     "grupos": [
+      {
+       "acao": "aprovação",
+       "alvo": "Propositura",
+       "sentido": "favor",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "favor",
+      "allan matias barboza de souza": "favor",
+      "anderson de lana andrade": "favor",
+      "daniel barbosa de assis silva": "favor",
+      "edson menezes mota": "favor",
+      "guilherme dos santos malaquias": "favor",
+      "jair ferreira lucas": "favor",
+      "joemerson alves de souza": "favor",
+      "jose afonso": "favor",
+      "jose elan dos santos gomes": "favor",
+      "marcio silva nascimento": "favor",
+      "marcos roberto silva": "favor",
+      "ronaldo araujo queiroz": "favor",
+      "roniele martins da silva": "favor"
+     },
+     "placar": {
+      "favor": 14,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose afonso": "José Afonso",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [],
+ "notas": [],
+ "sha256_pdf": "bac815a4142fc864c88cb7c2dc73cd14e01138ee85ca529dc840c7c77118cc31"
+}

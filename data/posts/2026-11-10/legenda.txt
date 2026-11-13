@@ -1,0 +1,10 @@
+🏛️ Câmara de Cubatão — votações de 10/11/2026
+
+▪️ PL 58/2026 (Prefeito Municipal): aprovado em 1ª discussão, 14 a 0.
+O projeto cria regras para emprestar servidores públicos municipais de Cubatão para outros órgãos ou governos. A ideia é organizar os empréstimos, garantindo que o órgão que recebe o funcionário pague todos os custos. O texto define prazos, limites e cuidados para não deixar a prefeitura sem funcionários essenciais. Com isso, a prefeitura ganha mais controle e segurança jurídica sobre onde o servidor está trabalhando.
+
+Também aprovados/votados: Moção 17 (aprovado); Moção 18 (aprovado); Moção 19 (aprovado); Moção 20 (aprovado).
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência
