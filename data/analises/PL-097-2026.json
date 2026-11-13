@@ -1,0 +1,44 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "97",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DENOMINA “JULIA MARIA DA CONCEIÇÃO”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto (transcricao automatica do PDF escaneado)",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-97.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto dá o nome de \"Júlia Maria da Conceição\" a uma rua da cidade. A via escolhida é a atual Rua 1 do Conjunto Habitacional Cubatão K na Ilha Caraguatá. A lei começa a valer logo no dia em que for publicada.",
+  "o_que_muda": [
+   "A Rua 1 do Conjunto Habitacional Cubatão K na Ilha Caraguatá passa a se chamar Rua \"JULIA MARIA DA CONCEIÇÃO\"."
+  ],
+  "quem_e_afetado": "Os moradores e quem precisa se localizar na antiga Rua 1 passam a usar o novo nome da rua. O texto não fala sobre exclusões ou quem ganha direitos diretos além da homenagem.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não deixa pendências para regulamentação posterior."
+  ],
+  "palavras_dificeis": [],
+  "justificativa_do_autor": "Segundo o autor, Dona Júlia Maria da Conceição nasceu em 15 de julho de 1934 em Pernambuco e chegou a Cubatão há cerca de 55 anos. Ela criou seis filhos, trabalhou de forma autônoma vendendo produtos, ajudou a construir a igreja Jesus e a Paz e foi uma pioneira que enfrentou falta de água e energia na comunidade. O autor afirma que a história dela é um exemplo de força e merece ser homenageada.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não há limitações para entender este projeto, pois trata-se apenas de dar nome a uma rua.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O efeito do projeto é puramente simbólico e de homenagem, alterando o nome de um logradouro público.",
+    "trecho": "DENOMINA “JULIA MARIA DA CONCEIÇÃO”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS."
+   },
+   {
+    "ponto": "O texto não traz informações sobre custos ou de onde sai o dinheiro para a troca de placas.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "f0c7829f930466ca",
+ "gerado_em": "2026-11-13T01:11:00Z"
+}
