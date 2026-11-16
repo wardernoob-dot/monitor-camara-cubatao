@@ -1,0 +1,53 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "100",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DENOMINA “IVANILDO FERREIRA LIMA”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-100.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto de lei dá o nome de Ivanildo Ferreira Lima a uma rua da cidade. A via escolhida é a atual Rua 1, que fica no Conjunto Habitacional Cubatão K, na Ilha Caraguatá. A mudança serve para homenagear o cidadão citado.",
+  "o_que_muda": [
+   "A via pública conhecida como Rua 1, no Conjunto Habitacional Cubatão K, passa a se chamar Rua Ivanildo Ferreira Lima."
+  ],
+  "quem_e_afetado": "Os moradores e proprietários de imóveis localizados na antiga Rua 1 serão afetados pela mudança do nome do endereço. Não há outras pessoas ou empresas atingidas por esta medida.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não detalha quem será responsável pela troca das placas de sinalização da rua."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Denomina",
+    "explicacao": "Significa dar um nome oficial a um lugar ou via pública."
+   },
+   {
+    "termo": "Revogam-se",
+    "explicacao": "Significa que leis anteriores que diziam o contrário perdem a validade."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, Ivanildo Ferreira de Lima nasceu em Pernambuco e mudou-se para Cubatão em 1959. Ele trabalhou em obras da Rodovia dos Imigrantes, no Polo Industrial e no Hospital da Fundação Cubatense. O autor destaca sua trajetória de trabalho e dedicação à família como motivo para a homenagem. O documento menciona que a homenagem seria uma Moção de Aplausos, embora o projeto seja de denominação de rua.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "Não é possível saber se o nome da rua já foi alterado anteriormente ou se há outras leis sobre o mesmo local.",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto define a localização exata da homenagem.",
+    "trecho": "Fica denominada Rua “Ivanildo Ferreira Lima”, a Rua localizada na Rua 1 do Conjunto Habitacional Cubatão K na Ilha Caraguatá."
+   },
+   {
+    "ponto": "O texto não menciona custos ou prazos para a implementação da mudança.",
+    "trecho": ""
+   }
+  ],
+  "pontos_descartados": []
+ },
+ "modelo": "Gemini (gemini-3.1-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "decc28d3290d2c96",
+ "gerado_em": "2026-11-16T18:41:03Z"
+}
