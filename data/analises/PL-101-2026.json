@@ -1,0 +1,55 @@
+{
+ "materia": {
+  "tipo": "PL",
+  "numero": "101",
+  "ano": "2026",
+  "autoria": null,
+  "ementa": "DENOMINA “IVANILDO FERREIRA LIMA”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS."
+ },
+ "documento": {
+  "fonte": "texto integral do projeto publicado no site da Camara",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-101.2026",
+  "so_ementa": false
+ },
+ "analise": {
+  "resumo": "Este projeto dá o nome de Ivanildo Ferreira Lima para a Rua 1 do Conjunto Habitacional Cubatão K na Ilha Caraguatá. A lei serve para homenagear um antigo morador da cidade. A mudança afeta o endereço oficial da via pública. A lei começa a valer no dia em que for publicada.",
+  "o_que_muda": [
+   "A Rua 1 do Conjunto Habitacional Cubatão K na Ilha Caraguatá passa a se chamar Rua Ivanildo Ferreira Lima."
+  ],
+  "quem_e_afetado": "Os moradores da Rua 1 do Conjunto Habitacional Cubatão K passam a ter um novo nome em seu endereço. O texto não menciona quem ganha direitos específicos ou quem fica de fora.",
+  "de_onde_sai_o_dinheiro": "O texto não diz de onde sai o dinheiro.",
+  "o_que_falta_definir": [
+   "O texto não deixa pendências para regulamentação posterior."
+  ],
+  "palavras_dificeis": [
+   {
+    "termo": "Denomina",
+    "explicacao": "Significa dar um nome oficial a um lugar."
+   }
+  ],
+  "justificativa_do_autor": "Segundo o autor, Ivanildo Ferreira Lima nasceu em Recife em 13 de outubro de 1950 e veio para Cubatão em 1959 em busca de trabalho. O autor afirma que ele trabalhou nas obras da Rodovia dos Imigrantes, no Polo Industrial, na Fundação Cubatense e em empresas de vigilância. Também cita que ele era casado, pai de sete filhos e avô, representando a história de quem ajudou a crescer o município.",
+  "natureza": "homenagem_ou_data",
+  "limitacoes": "",
+  "pontos_de_atencao": [
+   {
+    "ponto": "O projeto tem efeito puramente simbólico e de homenagem, pois apenas muda o nome de uma rua.",
+    "trecho": "DENOMINA “IVANILDO FERREIRA LIMA”, A RUA QUE MENCIONA E DÁ OUTRAS PROVIDÊNCIAS."
+   },
+   {
+    "ponto": "A lei entra em vigor na data em que for publicada.",
+    "trecho": "Esta lei entra em vigor na data de sua publicação."
+   }
+  ],
+  "pontos_descartados": [
+   {
+    "ponto": "O texto não informa custos ou de onde sai o dinheiro.",
+    "trecho": "O texto não",
+    "motivo": "trecho nao encontrado no documento"
+   }
+  ]
+ },
+ "modelo": "Gemini (gemini-3.5-flash-lite)",
+ "versao_prompt": "1e7596ac5d",
+ "hash_documento": "a69ff44a060d7d07",
+ "gerado_em": "2026-11-17T13:39:35Z"
+}
