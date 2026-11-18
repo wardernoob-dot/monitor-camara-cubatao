@@ -189,6 +189,11 @@
   "modelo": "gemini-3.1-flash-lite",
   "texto": "Cria o programa Cubatão Conectada para oferecer internet sem fio (Wi-Fi) gratuita em locais públicos, com apoio de empresas."
  },
+ "pl-164-2025": {
+  "hash": "1f2d67f0ee7c",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Cria o projeto Banco Vermelho para conscientizar e prevenir a violência contra a mulher e o feminicídio."
+ },
  "pl-166-2025": {
   "hash": "d25c6c818f61",
   "modelo": "gemini-3.5-flash-lite",

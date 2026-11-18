@@ -449,6 +449,16 @@
   "titulo": "PAUTA DA 30ª SESSÃO ORDINÁRIA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/30a%20%2015.09.2026.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/30a-sessao-extraordinaria": {
+  "baixado_em": "2026-11-18T15:42:07+00:00",
+  "bytes": 90440,
+  "paginas": 1,
+  "precisa_ocr": false,
+  "secao": "pauta",
+  "sha256": "748cbce659757737ca5368e012fbc1b3e9630a38968592368041646b25b8ed4b",
+  "titulo": "PAUTA DA 30ª SESSÃO EXTRAORDINÁRIA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/30a-sessao-extraordinaria"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/31a%20%2022.09.2026.pdf": {
   "baixado_em": "2026-11-05T15:37:02+00:00",
   "bytes": 5101733,
@@ -458,6 +468,16 @@
   "sha256": "0909e16a51a58e2303316c0da52d5107057d4932c8ed39e95d55b5d7e9f0826c",
   "titulo": "PAUTA DA 31ª SESSÃO ORDINÁRIA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/31a%20%2022.09.2026.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/31a-sessao-extraordinaria": {
+  "baixado_em": "2026-11-18T15:42:09+00:00",
+  "bytes": 202741,
+  "paginas": 1,
+  "precisa_ocr": false,
+  "secao": "pauta",
+  "sha256": "9890d822b6c2d50b4b6fb6b6ab08a453400b832a5cb5183764ea1f4f377eb2e4",
+  "titulo": "PAUTA DA 31ª SESSÃO EXTRAORDINÁRIA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/31a-sessao-extraordinaria"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/32a%20%2029.09.2026.pdf": {
   "baixado_em": "2026-11-05T15:37:08+00:00",
@@ -528,6 +548,16 @@
   "sha256": "0521bc28e5e8a79c4cb2c239a1a8aa485f1a7ef738662b356eb42c94a50d740e",
   "titulo": "PAUTA DA 38ª SESSÃO ORDINÁRIA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/38a-10-11.2026"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/3917.pdf": {
+  "baixado_em": "2026-11-18T15:42:12+00:00",
+  "bytes": 13750374,
+  "paginas": 29,
+  "precisa_ocr": false,
+  "secao": "pauta",
+  "sha256": "d21ebfd29cf75667a7a5fcffbbec3395900ebf1eaa9b3d2893660ac957089538",
+  "titulo": "PAUTA DA 39º SESSÃO ORDINÁRIA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/3917.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/3a-19-02-2026.pdf": {
   "baixado_em": "2026-11-05T15:32:01+00:00",

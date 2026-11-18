@@ -1,0 +1,78 @@
+{
+ "video_id": "40GWkJQCu1c",
+ "titulo": "39ª SESSÃO ORDINÁRIA DIA 17 DE NOVEMBRO DE 2026",
+ "sessao": {
+  "numero": 39,
+  "tipo": "ordinaria",
+  "data": "2026-11-17"
+ },
+ "url": "https://www.youtube.com/watch?v=40GWkJQCu1c",
+ "fonte": "painel eletronico exibido na transmissao oficial da TV Camara (miniaturas do YouTube)",
+ "processado_em": "2026-11-18T15:42:51+00:00",
+ "votacoes": [
+  {
+   "n": 1,
+   "confianca_rostos": 0.97,
+   "inicio_s": 11150,
+   "fim_s": 11250,
+   "quadros": 11,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 11,
+    "NAO": 0,
+    "BRANCO": 4,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "BRANCO",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "SIM",
+    "roniele martins da silva": "BRANCO",
+    "marcos roberto silva": "BRANCO",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "3:05:50",
+   "link": "https://youtu.be/40GWkJQCu1c?t=11220",
+   "evidencia": "painel/img/40GWkJQCu1c_01.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "39ª SESSÃO",
+    "texto": "PL nº 62/2026 - 1ª Discussão - Autor: Allan Matias",
+    "tipo": "PL",
+    "numero": "62",
+    "ano": "2026",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Allan Matias",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "62"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "62",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "1ª Discussão"
+    }
+   }
+  }
+ ]
+}
