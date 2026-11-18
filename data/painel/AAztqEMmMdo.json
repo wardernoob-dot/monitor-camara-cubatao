@@ -1,0 +1,270 @@
+{
+ "video_id": "AAztqEMmMdo",
+ "titulo": "38ª SESSÃO ORDINÁRIA DIA 10 DE NOVEMBRO DE 2026",
+ "sessao": {
+  "numero": 38,
+  "tipo": "ordinaria",
+  "data": "2026-11-10"
+ },
+ "url": "https://www.youtube.com/watch?v=AAztqEMmMdo",
+ "fonte": "painel eletronico exibido na transmissao oficial da TV Camara (miniaturas do YouTube)",
+ "processado_em": "2026-11-18T02:29:52+00:00",
+ "votacoes": [
+  {
+   "n": 1,
+   "confianca_rostos": 0.97,
+   "inicio_s": 8930,
+   "fim_s": 9000,
+   "quadros": 8,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 14,
+    "NAO": 0,
+    "BRANCO": 1,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "SIM",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "2:28:50",
+   "link": "https://youtu.be/AAztqEMmMdo?t=8970",
+   "evidencia": "painel/img/AAztqEMmMdo_01.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "38ª SESSÃO",
+    "texto": "PL nº 58/2026 - Parecer das emendas",
+    "tipo": "PL",
+    "numero": "58",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "58"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "58",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": null
+    }
+   }
+  },
+  {
+   "n": 2,
+   "confianca_rostos": 0.97,
+   "inicio_s": 9060,
+   "fim_s": 9100,
+   "quadros": 5,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 13,
+    "NAO": 0,
+    "BRANCO": 2,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "SIM",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "BRANCO"
+   },
+   "horario_video": "2:31:00",
+   "link": "https://youtu.be/AAztqEMmMdo?t=9070",
+   "evidencia": "painel/img/AAztqEMmMdo_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "38ª SESSÃO",
+    "texto": "PL nº 58/2026 - Emendas",
+    "tipo": "PL",
+    "numero": "58",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "58"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "58",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": null
+    }
+   }
+  },
+  {
+   "n": 3,
+   "confianca_rostos": 0.96,
+   "inicio_s": 11060,
+   "fim_s": 11090,
+   "quadros": 4,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 12,
+    "NAO": 0,
+    "BRANCO": 3,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "SIM",
+    "roniele martins da silva": "BRANCO",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "BRANCO",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "3:04:20",
+   "link": "https://youtu.be/AAztqEMmMdo?t=11060",
+   "evidencia": "painel/img/AAztqEMmMdo_03.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "38ª SESSÃO",
+    "texto": "PL nº 58/2026 - Parecer",
+    "tipo": "PL",
+    "numero": "58",
+    "ano": "2026",
+    "turno": null,
+    "parecer": null,
+    "autor": null,
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "58"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "58",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": null
+    }
+   }
+  },
+  {
+   "n": 4,
+   "confianca_rostos": 0.98,
+   "inicio_s": 12440,
+   "fim_s": 12450,
+   "quadros": 2,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 13,
+    "NAO": 0,
+    "BRANCO": 2,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "BRANCO",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "SIM",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "3:27:20",
+   "link": "https://youtu.be/AAztqEMmMdo?t=12420",
+   "evidencia": "painel/img/AAztqEMmMdo_04.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "38ª SESSÃO",
+    "texto": "PL nº 58/2026 - 1ª Discussão - Autor: Prefeito Municipal",
+    "tipo": "PL",
+    "numero": "58",
+    "ano": "2026",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Prefeito Municipal",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "58"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "58",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "1ª Discussão"
+    }
+   }
+  }
+ ]
+}
