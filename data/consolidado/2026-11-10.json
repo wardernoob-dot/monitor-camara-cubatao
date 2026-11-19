@@ -34,6 +34,68 @@
  ],
  "materias": [
   {
+   "tipo": "VETO",
+   "numero": "178",
+   "ano": "2025",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO PARCIAL AO PROJETO DE LEI QUE INSTITUI O PROGRAMA DE PREVENCÃO AOS IMPACTOS DAS APOSTAS ONLINE (BETS) E DE COMBATE À LUDOPATIA NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "na_pauta": false,
+   "resultado_oficial": "veto_mantido",
+   "votacoes": [
+    {
+     "etapa": "discussao_unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 38,
+       "tipo": "ordinaria",
+       "data": "2026-11-10",
+       "inicio": "14:32",
+       "fim": "17:28"
+      },
+      "resultado": "veto_mantido",
+      "detalhe": "MANTIDO EM DISCUSSÃO ÚNICA",
+      "placar": {
+       "favor": 11,
+       "contra": 3
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file",
+      "por_acao": {
+       "rejeição": [
+        "guilherme dos santos malaquias",
+        "marcio silva nascimento",
+        "roniele martins da silva"
+       ],
+       "manutenção": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true,
+   "projeto_vetado": {
+    "tipo": "PL",
+    "numero": "178",
+    "ano": "2025",
+    "ligacao": "processo"
+   }
+  },
+  {
    "tipo": "PL",
    "numero": "58",
    "ano": "2026",

@@ -1,12 +1,12 @@
 ---
 id: bets
 status: publicado
-data: 2026-11-08
+data: 2026-11-19
 ordem: 4
 chapeu: Saúde
 manchete: Cubatão cria programa contra o vício em apostas online
-linha_fina: A lei foi aprovada sem votos contrários. O prefeito vetou um trecho, e a Câmara ainda precisa votar o veto.
-projetos: pl-178-2025
+linha_fina: A lei foi aprovada sem votos contrários. O prefeito vetou um trecho, e a Câmara manteve o veto em 10 de novembro.
+projetos: pl-178-2025, veto-178-2025
 votacao: pl-178-2025 2026-09-08 2a_discussao
 foto_alt: Celular sobre a mesa com um site de apostas esportivas aberto na tela
 foto_legenda: Site de apostas aberto no celular.
@@ -97,9 +97,11 @@ A Lei 4.484 começou a valer imediatamente no dia de sua publicação oficial.
 
 O texto foi promulgado em 6 de outubro de 2026 pelo prefeito e pelas secretarias de Saúde e Assuntos Jurídicos.
 
-Apesar do início da vigência, o veto parcial do chefe do Executivo foi remetido para análise do Legislativo.
+O veto parcial do prefeito foi votado pela Câmara na sessão de 10 de novembro de 2026, e os vereadores decidiram manter o veto.
 
-Os vereadores de Cubatão terão de analisar os motivos da Prefeitura para decidir se mantêm ou derrubam o veto.
+Com isso, o parágrafo que definia ludopatia só como vício em apostas esportivas fica fora da lei de vez.
+
+O restante da lei continua valendo do jeito que foi publicado.
 
 ## O que ainda não foi definido
 
@@ -118,3 +120,4 @@ A lei também não detalhou quais unidades de saúde farão os atendimentos méd
 
 - [Lei 4.484/2026 no Diário Oficial](https://diariooficial.cubatao.sp.gov.br/imprimir.php?acao=materia&id=26005)
 - [Ofício 123/2026/SEJUR, com o veto](https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/of-123-2026-sejur)
+- [Resumo oficial da 38ª Sessão Ordinária (10/11/2026), com a votação do veto](https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file)

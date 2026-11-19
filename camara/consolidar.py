@@ -47,12 +47,39 @@ def _turno_painel(m: dict) -> str | None:
     return None
 
 
-def _chave_item_resumo(it: dict) -> tuple[str, str] | None:
+def _processo(p: str | None) -> str:
+    """'1.126/2025' e '1126/2025' sao o mesmo processo."""
+    return re.sub(r"[.\s]", "", p or "")
+
+
+def processos_de_projeto(dados: Path) -> dict[str, tuple[str, str, str]]:
+    """Numero do processo -> (numero, ano, tipo) do PL/PLC, lido de todas as sessoes ja processadas.
+    Usado quando o resumo escreve 'VETO ... AO PROJETO DE LEI QUE ...' sem o numero do projeto:
+    o processo do oficio de veto e o mesmo do projeto vetado."""
+    out: dict[str, tuple[str, str, str]] = {}
+    for f in sorted((Path(dados) / "sessoes").glob("*.json")):
+        for it in json.loads(f.read_text("utf-8")).get("itens", []):
+            esp = _u(it.get("especie"))
+            mn = re.match(r"0*(\d+)/(\d{4})", (it.get("numero") or "").replace(".", ""))
+            if esp.startswith("PROJETO DE LEI") and mn and _processo(it.get("processo")):
+                tipo = "PLC" if esp.startswith("PROJETO DE LEI COMPLEMENTAR") else "PL"
+                out.setdefault(_processo(it["processo"]), (mn.group(1), mn.group(2), tipo))
+    return out
+
+
+def _projeto_vetado(it: dict, processos: dict | None = None) -> tuple[str, str, str] | None:
+    """(numero, ano, tipo) do projeto vetado: do texto do assunto ou, sem numero no texto, pelo processo."""
+    if mv := V.RE_VETO.search(_u(it.get("assunto") or it.get("descricao"))):
+        return mv.group(1).lstrip("0"), mv.group(2), "PL"
+    return (processos or {}).get(_processo(it.get("processo")))
+
+
+def _chave_item_resumo(it: dict, processos: dict | None = None) -> tuple[str, str] | None:
     esp = _u(it.get("especie"))
     tipo = next((t for k, t in ESPECIE_TIPO if esp.startswith(k)), None)
     if tipo == "VETO" or it.get("objeto_votado") == "veto":
-        mv = V.RE_VETO.search(_u(it.get("assunto") or it.get("descricao")))
-        return ("VETO", mv.group(1).lstrip("0")) if mv else None
+        pv = _projeto_vetado(it, processos)
+        return ("VETO", pv[0]) if pv else None
     num = re.match(r"(\d+)", (it.get("numero") or "").replace(".", ""))
     if not tipo or not num:
         return (tipo, "") if tipo == "RELATORIO" else None
@@ -185,9 +212,10 @@ def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
         m.update({"ano": c["ano"], "autoria": c["autoria"], "assunto": c["assunto"], "na_pauta": True})
 
     resumo_vots: dict[tuple, list] = {}
+    processos = processos_de_projeto(dados) if resumos else {}
     for r in resumos:
         for it in r["itens"]:
-            k = _chave_item_resumo(it)
+            k = _chave_item_resumo(it, processos)
             if not k or (it.get("tipo") != "deliberacao"):
                 continue
             m = mat(k)
@@ -197,7 +225,13 @@ def consolidar_dia(dados: Path, data: str, apel: dict | None = None) -> dict:
                 m["assunto"] = it["assunto"]
             elif not m["assunto"] and it.get("descricao"):
                 m["assunto"] = it["descricao"]
-            if mn := re.search(r"/(\d{4})", it.get("numero") or ""):
+            if k[0] == "VETO":
+                # o ano do veto e o do projeto vetado, nao o do oficio (Oficio 123/2026 veta o PL 178/2025)
+                pv = _projeto_vetado(it, processos)
+                m["ano"] = m["ano"] or pv[1]
+                if not V.RE_VETO.search(_u(m["assunto"])):
+                    m["projeto_vetado"] = {"tipo": pv[2], "numero": pv[0], "ano": pv[1], "ligacao": "processo"}
+            elif mn := re.search(r"/(\d{4})", it.get("numero") or ""):
                 m["ano"] = m["ano"] or mn.group(1)
             m["resultado_oficial"] = it.get("resultado")
             for vt in it.get("votacoes") or []:

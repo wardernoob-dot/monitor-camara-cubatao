@@ -477,7 +477,9 @@ def gerar_dia(dados: Path, data: str, forcar: bool = False) -> dict | None:
         m["_veto"] = veto_do_prefeito(dados, m)
     analises = {}
     for m in principais:
-        if (an := AN.carregar(dados, m["tipo"], m["numero"], m.get("ano"))) and not an["documento"]["so_ementa"]:
+        an = AN.carregar(dados, m["tipo"], m["numero"], m.get("ano"))
+        # leitura de oficio de veto (tipo_analise "veto") tem outro formato e nao e analise do projeto
+        if an and an.get("tipo_analise") != "veto" and not an["documento"].get("so_ementa"):
             analises[(m["tipo"], m["numero"])] = an
     pasta = dados / "posts" / data
     h = hashlib.sha256(json.dumps([c, sorted((k, v["hash_documento"], v["analise"]["resumo"]) for k, v in analises.items())],

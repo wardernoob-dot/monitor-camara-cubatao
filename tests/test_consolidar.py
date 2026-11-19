@@ -124,3 +124,19 @@ def test_dia_so_com_painel_fica_provisorio(tmp_path):
     r = _dia(tmp_path, {A: "SIM"}, com_resumo=False)
     assert r["status"] == "provisorio_painel"
     assert r["materias"][0]["votacoes"][0]["conferencia"]["status"] == "aguardando_resumo"
+
+
+def test_veto_sem_numero_do_projeto_liga_pelo_processo(tmp_path):
+    # resumo de 10/11/2026: "VETO PARCIAL AO PROJETO DE LEI QUE INSTITUI ..." sem o numero do PL;
+    # o processo do oficio (1126/2025) e o mesmo do PL 178/2025 nas sessoes anteriores
+    (tmp_path / "sessoes").mkdir()
+    (tmp_path / "sessoes" / "2026-09-08_ordin_01.json").write_text(json.dumps({"itens": [
+        {"tipo": "deliberacao", "processo": "1.126/2025", "especie": "PROJETO DE LEI Nº 178/2025", "numero": "178/2025"}]}), "utf-8")
+    procs = C.processos_de_projeto(tmp_path)
+    assert procs == {"1126/2025": ("178", "2025", "PL")}
+    veto = {"tipo": "deliberacao", "processo": "1126/2025", "especie": "OFÍCIO Nº 123/2026/SEJUR", "numero": "123/2026",
+            "objeto_votado": "veto", "assunto": "VETO PARCIAL AO PROJETO DE LEI QUE INSTITUI O PROGRAMA ..."}
+    assert C._chave_item_resumo(veto, procs) == ("VETO", "178")
+    assert C._chave_item_resumo(veto) is None  # sem o mapa de processos continua sem casar (nao inventa)
+    # com o numero no texto, vale o texto
+    assert C._chave_item_resumo({**veto, "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 61/2026 QUE ..."}, procs) == ("VETO", "61")

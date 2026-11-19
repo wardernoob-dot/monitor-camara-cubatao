@@ -265,8 +265,9 @@ class Base:
                         m["veto"] = {"alcance": pub.get("alcance") or "", "url": pub.get("url")}
                 if mc["tipo"] == "VETO":
                     mv = re.search(r"PROJETO DE LEI(?: COMPLEMENTAR)?\s+N\S?\s*0*(\d{1,4})/(\d{4})", V._sem_acento_maiusc(mc.get("assunto") or ""))
-                    if mv:
-                        pl = self.materia("PL", mv.group(1), mv.group(2))
+                    pv = mc.get("projeto_vetado")  # resumo sem o numero do projeto: ligado pelo processo (consolidar)
+                    if mv or pv:
+                        pl = self.materia("PL", mv.group(1), mv.group(2)) if mv else self.materia(pv["tipo"], pv["numero"], pv["ano"])
                         alc = re.search(r"VETO (INTEGRAL|PARCIAL|TOTAL)", V._sem_acento_maiusc(mc.get("assunto") or ""))
                         pl["veto"] = {**(pl["veto"] or {}), "alcance": (alc.group(1).lower() if alc else (pl["veto"] or {}).get("alcance", "")),
                                       "resultado": mc.get("resultado_oficial") or (pl["veto"] or {}).get("resultado"),
