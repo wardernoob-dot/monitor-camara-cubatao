@@ -57,7 +57,7 @@ Segundo a justificativa, a Constituição protege a maternidade, a infância e a
 
 O texto afirma que a passagem gratuita ajuda a fazer o pré-natal direito e reduz riscos para a mãe e o bebê.
 
-Sobre os pacientes com câncer, a justificativa diz que o tratamento exige muitas idas ao médico e pesa no bolso da família.
+Sobre os pacientes com câncer, a justificativa diz que o tratamento exige muitas idas ao médico e pesa no bolso do paciente.
 
 ## O que ainda não foi definido
 
