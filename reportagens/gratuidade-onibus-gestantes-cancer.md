@@ -1,19 +1,19 @@
 ---
 id: gratuidade-onibus-gestantes-cancer
-status: rascunho
-data: 2026-11-19
+status: publicado
+data: 2026-11-21
 chapeu: Saúde
 manchete: Gestantes, mães de recém-nascidos e pacientes com câncer podem andar de ônibus de graça em Cubatão
 linha_fina: O projeto cria passe livre no ônibus municipal para quem fizer cadastro na Secretaria de Saúde. Ainda falta mais uma votação na Câmara e a decisão do prefeito.
 projetos: pl-62-2026
 votacao: pl-62-2026 2026-11-17 1a_discussao
-# FOTO PENDENTE: escolher uma foto com crédito, licença e link (ex.: Agência Brasil), salvar em reportagens/fotos/gratuidade-onibus-gestantes-cancer.jpg e trocar os campos abaixo
-foto_alt: PENDENTE
-foto_credito: PENDENTE
-foto_licenca: PENDENTE
-foto_link: https://agenciabrasil.ebc.com.br/
+foto_alt: Passageiros descem pela porta de um ônibus urbano
+foto_legenda: Passageiros descem de ônibus urbano. Foto ilustrativa, não é de Cubatão.
+foto_credito: Marcelo Camargo/Agência Brasil
+foto_licenca: Reprodução autorizada com crédito (Agência Brasil)
+foto_link: https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-04/onibus-urbanos-do-rio-ter%C3%A3o-orientacoes-de-combate-ao-assedio
 foto_ilustrativa: sim
-aprovado_por:
+aprovado_por: equipe Voto a voto
 ---
 ## Em poucas palavras
 

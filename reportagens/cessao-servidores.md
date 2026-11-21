@@ -1,20 +1,19 @@
 ---
 id: cessao-servidores
-status: rascunho
-data: 2026-11-19
+status: publicado
+data: 2026-11-21
 chapeu: Dinheiro público
 manchete: Servidor de Cubatão emprestado a outro órgão terá salário e previdência pagos por quem o recebe
 linha_fina: Projeto da Prefeitura cria regras para ceder funcionários concursados a outros órgãos públicos. Foi aprovado pela Câmara com emendas e agora depende do prefeito.
 projetos: pl-58-2026
 votacao: pl-58-2026 2026-11-10 2a_discussao
-# FOTO PENDENTE: escolher uma foto com crédito, licença e link, salvar em reportagens/fotos/cessao-servidores.jpg e trocar os campos abaixo
-# ATENCAO: o texto descreve o projeto ORIGINAL da Prefeitura; as emendas aprovadas em 10/11 nao foram encontradas publicadas
-foto_alt: PENDENTE
-foto_credito: PENDENTE
-foto_licenca: PENDENTE
-foto_link: https://agenciabrasil.ebc.com.br/
+foto_alt: Prédios de órgãos públicos ao longo de um gramado, sob céu azul
+foto_legenda: Prédios da administração pública em Brasília. Foto ilustrativa, não é de Cubatão.
+foto_credito: Antônio Cruz/Agência Brasil
+foto_licenca: Reprodução autorizada com crédito (Agência Brasil)
+foto_link: https://agenciabrasil.ebc.com.br/geral/noticia/2023-07/governo-define-regras-para-dispensa-do-ponto-de-servidores
 foto_ilustrativa: sim
-aprovado_por:
+aprovado_por: equipe Voto a voto
 ---
 ## Em poucas palavras
 
