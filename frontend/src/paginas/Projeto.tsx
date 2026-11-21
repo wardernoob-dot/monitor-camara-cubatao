@@ -48,6 +48,8 @@ export default function ProjetoPagina() {
   return (
     <div className="pagina">
       <p className="migalha"><Link to="/projetos">Projetos</Link></p>
+      {/* no PC: resumo à esquerda, ficha e "por que atenção" numa coluna à direita (antes ficava tudo numa faixa estreita) */}
+      <div className="projeto-topo">
       <header className="cabeca-projeto">
         <p className="cabeca-projeto__tipo">{m.tipo_nome}</p>
         <h1 className="titulo-pagina">{m.titulo}</h1>
@@ -60,6 +62,7 @@ export default function ProjetoPagina() {
           </>
         ) : m.assunto && <p className="lead">{m.assunto}</p>}
       </header>
+      <div className="projeto-lado">
       <Compartilhar tipo="p" id={m.slug} titulo={`${m.titulo}: ${m.situacao}`} />
 
       {m.relevancia.nivel !== "baixa" && (
@@ -71,6 +74,11 @@ export default function ProjetoPagina() {
       )}
 
       <dl className="ficha">
+        {dec && dec.sim != null && (
+          <div><dt>Votação que decidiu</dt><dd>
+            <ResultadoVotacao ev={dec} m={m} /> <strong>{dec.sim} a {dec.nao ?? 0}</strong>, {dec.etapa_txt.toLowerCase()}, <Link to={`/sessoes/${dec.data}`}>{dataCurta(dec.data, true)}</Link>
+          </dd></div>
+        )}
         <div><dt>Autoria</dt><dd>
           {autores.length ? autores.map((v, i) => <span key={v.slug}>{i > 0 && ", "}<Link to={`/vereadores/${v.slug}`}>{v.exibicao}</Link></span>) : m.autoria}
         </dd></div>
@@ -83,8 +91,10 @@ export default function ProjetoPagina() {
         {m.pautas.length > 0 && <div><dt>Na pauta em</dt><dd>{m.pautas.map((p) => dataCurta(p, true)).join(", ")}</dd></div>}
         {m.documento && <div><dt>Texto original</dt><dd><a href={m.documento} rel="noopener">PDF no site da Câmara</a></dd></div>}
         {m.lei && <div><dt>Lei</dt><dd>Lei {m.lei.numero}, publicada no Diário Oficial em {dataExtenso(m.lei.data)}{m.lei.url && <> (<a href={m.lei.url} rel="noopener">ver publicação</a>)</>}</dd></div>}
-        {m.veto && <div><dt><Termo chave="veto">Veto</Termo></dt><dd>Veto {m.veto.alcance} do prefeito{m.veto.url && <> (<a href={m.veto.url} rel="noopener">ver ofício</a>)</>}. {m.veto.resultado === "veto_mantido" ? <>A Câmara manteve o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : m.veto.resultado === "veto_derrubado" ? <>A Câmara derrubou o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : <>A Câmara ainda não votou o veto.</>}{m.veto.pagina && <> <Link to={`/projetos/${m.veto.pagina}`}>Ver a votação do veto</Link>.</>}</dd></div>}
+        {m.veto && <div><dt><Termo chave="veto">Veto</Termo></dt><dd>Veto {m.veto.alcance} do prefeito{m.veto.url && <> (<a href={m.veto.url} rel="noopener">ver ofício</a>)</>}. {m.veto.resultado === "veto_mantido" ? <>A Câmara manteve o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : m.veto.resultado === "veto_derrubado" ? <>A Câmara derrubou o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : m.veto.fora_da_cobertura ? <>O veto é de antes de 2026; o site não acompanha votações anteriores e não sabe se a Câmara já votou.</> : <>A Câmara ainda não votou o veto.</>}{m.veto.pagina && <> <Link to={`/projetos/${m.veto.pagina}`}>Ver a votação do veto</Link>.</>}</dd></div>}
       </dl>
+      </div>
+      </div>
 
       {m.veto && <BlocoVeto m={m} />}
 

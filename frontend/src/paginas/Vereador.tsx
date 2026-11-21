@@ -5,7 +5,7 @@ import { Compartilhar } from "../compartilhar";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
-import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, ResultadoVotacao, Situacao, TagPartido, VotoTag } from "../componentes";
+import { ACESSORIAS, Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, ResultadoVotacao, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
 import { Destaque, Dica, DicaMateria, EtapaComDica, Termo, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
@@ -69,10 +69,12 @@ export default function VereadorPagina() {
   if (!v) return <NaoEncontrado />;
 
   const recentes = [...votos].reverse();
-  const nDestaque = votos.filter(({ ev }) => b.materia.get(ev.materia)?.relevancia.nivel === "alta").length;
+  // destaque = votação que decide projeto em destaque; emendas e pareceres sem lado ficam só em "Todos"
+  const ehDestaque = (ev: Votacao) => b.materia.get(ev.materia)?.relevancia.nivel === "alta" && !ACESSORIAS.includes(ev.etapa);
+  const nDestaque = votos.filter(({ ev }) => ehDestaque(ev)).length;
   const filtro: Filtro = escolhido ?? (nDestaque > 0 ? "destaque" : "todos");
   const visiveis = recentes.filter(({ ev, voto, contra }) =>
-    filtro === "todos" || (filtro === "destaque" && b.materia.get(ev.materia)?.relevancia.nivel === "alta") || (filtro === "contra" && contra) ||
+    filtro === "todos" || (filtro === "destaque" && ehDestaque(ev)) || (filtro === "contra" && contra) ||
     (filtro === "semvoto" && (voto === "BRANCO" || voto === "AUSENTE")));
   const projetos = v.projetos.map((s) => b.materia.get(s)!).filter(Boolean);
   const reqs = v.requerimentos.map((s) => b.materia.get(s)!).filter(Boolean);

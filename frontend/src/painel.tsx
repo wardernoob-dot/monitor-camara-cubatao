@@ -87,7 +87,7 @@ export function Painel({ abas, rotulo }: { abas: Aba[]; rotulo: string }) {
         })}
       </div>
 
-      {!aberto && <p className="painel__dica">Toque num número para ver os detalhes.</p>}
+      {!aberto && <p className="painel__dica">Toque ou clique num número para ver os detalhes.</p>}
 
       <div className="painel__pontos" aria-hidden="true">
         {abas.map((a, i) => <span key={a.id} className={i === atual ? "ativo" : ""} />)}

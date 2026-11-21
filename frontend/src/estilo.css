@@ -1405,7 +1405,7 @@ input:not([type="checkbox"]):not([type="radio"]), textarea { cursor: text; }
 @media (pointer: coarse) { html, body { cursor: auto; } }
 
 /* rodape sem a coluna Navegar (o menu do topo ja e fixo): marca + duas colunas */
-.rodape__grade { grid-template-columns: 1.8fr 1fr 1fr; }
+.rodape__grade { grid-template-columns: 1.6fr 1fr 1fr 1fr; } /* 4 colunas: "Dados e código" caía sozinho numa segunda linha */
 @media (max-width: 62rem) { .rodape__grade { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 40rem) { .rodape__grade { grid-template-columns: 1fr; } }
 .rodape__base a { color: #e6e6e8; }
@@ -1811,3 +1811,39 @@ a.rp-autor__nome:hover { text-decoration: underline; }
   }
 }
 @media (pointer: coarse) { .rp__ponto::after { width: 100%; } }
+
+/* ============================================================ revisão 21/11: tela grande */
+/* hero: no PC ocupava a tela inteira e empurrava o "O que muda" pra baixo da dobra */
+@media (min-width: 56rem) { .hero { min-height: min(calc(100svh - 4.2rem), 38rem); } }
+
+/* home: os 4 caminhos numa linha só (com 3 colunas sobrava um cartão órfão) */
+@media (min-width: 62rem) { .caminhos__lista { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* 15 vereadores em 3 linhas de 5 (com 4 colunas a última linha ficava capenga e as fotos dominavam a página) */
+@media (min-width: 62rem) { .cartoes { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.cartao__nums { flex-wrap: wrap; gap: .2rem .9rem; }
+.cartao__nums > span { white-space: nowrap; }
+
+/* nomes embaixo das fotos: célula mais larga, nome inteiro em até duas linhas */
+.rp-rostos { grid-template-columns: repeat(auto-fill, minmax(4.4rem, 1fr)); }
+@media (max-width: 40rem) { .rp-rostos { grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr)); } }
+
+/* página do projeto: resumo à esquerda, ficha à direita */
+.projeto-lado > :first-child { margin-top: 1.5rem; }
+@media (min-width: 62rem) {
+  .projeto-topo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem); gap: 0 3rem; align-items: start; }
+  .projeto-lado { position: sticky; top: 6rem; }
+  .projeto-lado > :first-child { margin-top: .5rem; }
+  .projeto-lado .ficha, .projeto-lado .por-que { max-width: none; }
+  .projeto-lado .ficha > div { grid-template-columns: 1fr; gap: .15rem; }
+}
+
+/* "Como votou": resumo do projeto em duas linhas (antes cada linha da tabela repetia um parágrafo inteiro) */
+.tabela--votos .tabela__assunto { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* índice de atuação no PC: nota à esquerda, pilares ocupando o resto (antes tudo cabia em meia tela) */
+@media (min-width: 62rem) {
+  .indice { max-width: none; display: grid; grid-template-columns: 14rem minmax(0, 1fr); column-gap: 3rem; align-items: start; }
+  .indice > .indice__topo { grid-column: 1; grid-row: 1 / span 6; }
+  .indice > :not(.indice__topo) { grid-column: 2; }
+}
