@@ -1,4 +1,4 @@
-import { lazy, Suspense,  StrictMode, useEffect } from "react";
+import { lazy, Suspense, StrictMode, useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { HashRouter, NavLink, Link, Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import "@fontsource/geist-sans/400.css";
@@ -56,6 +56,40 @@ const SECOES = [
   ["/sessoes", "Sessões"],
   ["/como-funciona", "Como funciona"],
 ] as const;
+
+const OUTRAS = [
+  ["/temas", "Votos por tema"],
+  ["/leis", "Leis de 2026"],
+  ["/em-aberto", "O que ficou pendente"],
+] as const;
+
+/** Celular: a barra de seções rola de lado e esconde metade dos itens. Este botão abre a lista inteira. */
+function MenuCelular() {
+  const ref = useRef<HTMLDetailsElement>(null);
+  const { pathname } = useLocation();
+  useEffect(() => { if (ref.current) ref.current.open = false; }, [pathname]);
+  useEffect(() => {
+    const fora = (e: MouseEvent) => { if (ref.current?.open && !ref.current.contains(e.target as Node)) ref.current.open = false; };
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape" && ref.current?.open) { ref.current.open = false; ref.current.querySelector("summary")?.focus(); } };
+    document.addEventListener("click", fora);
+    document.addEventListener("keydown", esc);
+    return () => { document.removeEventListener("click", fora); document.removeEventListener("keydown", esc); };
+  }, []);
+  return (
+    <details className="menu-celular" ref={ref}>
+      <summary className="tema-botao menu-celular__botao" aria-label="Todas as páginas">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" /></svg>
+      </summary>
+      {/* div com role, não <nav>: as regras de ".topo nav" (barra que rola de lado) não podem pegar aqui */}
+      <div role="navigation" className="menu-celular__lista" aria-label="Todas as páginas">
+        <ul>
+          <li><Link to="/">Início</Link></li>
+          {[...SECOES, ...OUTRAS].map(([para, nome]) => <li key={para}><Link to={para}>{nome}</Link></li>)}
+        </ul>
+      </div>
+    </details>
+  );
+}
 
 /** Barra fina de leitura no pé do cabeçalho. */
 function Progresso() {
@@ -152,6 +186,7 @@ function App() {
               <BotaoBusca />
               <BotaoTema />
               <BotaoPergunta />
+              <MenuCelular />
             </div>
           </div>
         </div>

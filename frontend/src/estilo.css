@@ -10,6 +10,7 @@
 :root {
   /* azul: cor de interacao (clique, selecao, foco) e de medida (barras de quantidade e de nota) */
   --azul: #1f6a96;
+  --azul-botao: var(--azul); /* fundo de botão e selo com texto branco: no escuro fica mais fechado para dar 4,5:1 */
   --azul-escuro: #154e70;
   --azul-claro: #e0eef5;
   --azul-trilho: #d6e6ee;
@@ -328,11 +329,9 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 .selo--compacto { font-size: .7rem; padding: .1rem .45rem; }
 .dica > span:first-child:has(.selo) { text-decoration: none; }
 .cabeca-projeto__selos { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
-.em-poucas, .por-que { max-width: var(--larg-texto); margin: 1.25rem 0 0; padding: 1rem 1.1rem; border-radius: 12px; }
-.em-poucas { background: var(--suave); }
-.em-poucas__titulo, .por-que__titulo { font-weight: 600; margin: 0 0 .3rem; }
-.em-poucas__texto { margin: 0; font-size: 1.05rem; }
-.em-poucas__fonte, .por-que__fonte { margin: .5rem 0 0; font-size: .8rem; color: var(--color-surface-3); }
+.por-que { max-width: var(--larg-texto); margin: 1.25rem 0 0; padding: 1rem 1.1rem; border-radius: 12px; }
+.por-que__titulo { font-weight: 600; margin: 0 0 .3rem; }
+.por-que__fonte { margin: .5rem 0 0; font-size: .8rem; color: var(--color-surface-3); }
 .por-que { background: var(--aviso-bg); border: 1px solid var(--aviso-borda); }
 .por-que--media { background: var(--color-surface-1); border-color: var(--color-linha); }
 .por-que ul { margin: 0; padding-left: 1.1rem; }
@@ -543,7 +542,7 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 /* ---------- quebra de linha: titulos e textos curtos com linhas equilibradas, paragrafos sem palavra sozinha */
 h1, h2, h3, .titulo-pagina, .sanfona__texto, .painel__titulo, .rank__nome, .cartao__nome, .vereadores__nome, .tile__titulo { text-wrap: balance; }
 .hero__texto, .painel__descricao { text-wrap: balance; }
-.lead, .em-poucas__texto { text-wrap: pretty; }
+.lead { text-wrap: pretty; }
 p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__assunto { text-wrap: pretty; }
 .lead { max-width: 48rem; }
 .nota, .tile__nota { text-wrap: balance; }
@@ -772,7 +771,7 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 }
 :root[data-tema="dark"] {
   color-scheme: dark;
-  --azul: #3a8cb9; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-trilho: #213f4f;
+  --azul: #3a8cb9; --azul-botao: #2f7aa5; --azul-botao-hover: #2a6d93; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-trilho: #213f4f;
   --cor-bom: #4fbf6a; --cor-critico: #ef6b6b; --cor-alerta: #f0b43a; --cor-andamento: #3a6479;
   --seq-0: #3a7a9f; --seq-1: #4a93b8; --seq-2: #6aadcc; --seq-3: #a2d0e6;
   --color-accent: #4fbf6a; --color-secondary: #b9bac0; --color-canvas: #0f1012; --color-ink: #ececee;
@@ -786,7 +785,7 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="light"]) {
     color-scheme: dark;
-    --azul: #3a8cb9; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-trilho: #213f4f;
+    --azul: #3a8cb9; --azul-botao: #2f7aa5; --azul-botao-hover: #2a6d93; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-trilho: #213f4f;
     --cor-bom: #4fbf6a; --cor-critico: #ef6b6b; --cor-alerta: #f0b43a; --cor-andamento: #3a6479;
     --seq-0: #3a7a9f; --seq-1: #4a93b8; --seq-2: #6aadcc; --seq-3: #a2d0e6;
     --color-accent: #4fbf6a; --color-secondary: #b9bac0; --color-canvas: #0f1012; --color-ink: #ececee;
@@ -1413,16 +1412,16 @@ input:not([type="checkbox"]):not([type="radio"]), textarea { cursor: text; }
 
 /* rodape: claro no tema claro (verde-acinzentado suave, como o manguezal) e escuro no tema escuro */
 :root {
-  --rd-bg: #e3eae4; --rd-nome: #16181a; --rd-texto: #566058; --rd-titulo: #738077; --rd-link: #1d2321; --rd-hover: var(--azul);
+  --rd-bg: #e3eae4; --rd-nome: #16181a; --rd-texto: #566058; --rd-titulo: #566058; --rd-link: #1d2321; --rd-hover: var(--azul);
   --rd-linha: rgba(25, 45, 35, .14); --rd-tile-bg: #ffffff; --rd-tile-borda: rgba(25, 45, 35, .12);
   --rodape-mangue: var(--rd-bg);
 }
 :root[data-tema="dark"] {
-  --rd-bg: var(--inverso); --rd-nome: #f4f4f5; --rd-texto: #9b9da4; --rd-titulo: #7c7f86; --rd-link: #e6e6e8; --rd-hover: #ffffff;
+  --rd-bg: var(--inverso); --rd-nome: #f4f4f5; --rd-texto: #9b9da4; --rd-titulo: #a3a6ad; --rd-link: #e6e6e8; --rd-hover: #ffffff;
   --rd-linha: rgba(255, 255, 255, .1); --rd-tile-bg: rgba(255, 255, 255, .05); --rd-tile-borda: rgba(255, 255, 255, .1);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) {
-  --rd-bg: var(--inverso); --rd-nome: #f4f4f5; --rd-texto: #9b9da4; --rd-titulo: #7c7f86; --rd-link: #e6e6e8; --rd-hover: #ffffff;
+  --rd-bg: var(--inverso); --rd-nome: #f4f4f5; --rd-texto: #9b9da4; --rd-titulo: #a3a6ad; --rd-link: #e6e6e8; --rd-hover: #ffffff;
   --rd-linha: rgba(255, 255, 255, .1); --rd-tile-bg: rgba(255, 255, 255, .05); --rd-tile-borda: rgba(255, 255, 255, .1);
 } }
 .rodape { background: var(--rd-bg); color: var(--rd-texto); }
@@ -1752,3 +1751,63 @@ a.rp-autor__nome:hover { text-decoration: underline; }
 .aberto__meta { color: var(--color-surface-3); font-size: .9rem; }
 .aberto__prazo { display: inline-block; margin-top: .25rem; font-size: .85rem; font-weight: 500; color: var(--color-secondary); }
 .aberto__prazo--passou { color: var(--color-nao); }
+
+/* ============================================================ revisão 21/11: celular primeiro */
+/* "Como votou" no celular: cada votação vira um cartão, com o voto e a data em cima (antes a coluna do voto ficava fora da tela) */
+@media (max-width: 40rem) {
+  .tabela--votos thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .tabela--votos, .tabela--votos tbody, .tabela--votos tr, .tabela--votos td { display: block; }
+  .tabela--votos tr { display: grid; grid-template-columns: 1fr auto; gap: .45rem .75rem; padding: 1rem; border-bottom: 1px solid var(--color-linha); }
+  .tabela--votos tr:last-child { border-bottom: 0; }
+  .tabela--votos td { padding: 0; border: 0; line-height: 1.45; }
+  .tabela--votos .c-voto { grid-column: 1; grid-row: 1; }
+  .tabela--votos .c-data { grid-column: 2; grid-row: 1; text-align: right; font-size: .85rem; color: var(--color-surface-3); }
+  .tabela--votos .c-projeto { grid-column: 1 / -1; }
+  .tabela--votos .c-etapa, .tabela--votos .c-res, .tabela--votos .c-fonte { grid-column: 1 / -1; font-size: .85rem; }
+  .tabela--votos td[data-rotulo]::before { content: attr(data-rotulo) ": "; color: var(--color-surface-3); }
+  .tabela--votos .tabela__assunto { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+}
+
+/* menu do celular: lista com todas as páginas (a barra de seções esconde metade dos itens) */
+.menu-celular { display: none; position: relative; }
+.menu-celular__botao { list-style: none; }
+.menu-celular__botao::-webkit-details-marker { display: none; }
+.menu-celular[open] .menu-celular__botao { border-color: var(--azul); color: var(--azul-escuro); }
+.menu-celular__lista { position: absolute; right: 0; top: calc(100% + .5rem); z-index: 70; min-width: 15rem; padding: .4rem; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 14px; box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .35); }
+.menu-celular__lista ul { list-style: none; margin: 0; padding: 0; }
+.menu-celular__lista a { display: block; padding: .75rem .9rem; border-radius: 10px; color: var(--color-ink); text-decoration: none; font-size: 1rem; }
+.menu-celular__lista a:hover, .menu-celular__lista a:focus-visible { background: var(--suave); }
+@media (max-width: 56rem) { .menu-celular { display: block; } }
+
+/* página do projeto: resumo simples em cima, ementa oficial recolhida, emendas e pareceres numa sanfona */
+.cabeca-projeto__fonte { margin: .35rem 0 0; font-size: .82rem; color: var(--color-surface-3); }
+.cabeca-projeto__ementa { margin-top: .75rem; font-size: .92rem; }
+.cabeca-projeto__ementa summary { cursor: pointer; color: var(--azul); font-weight: 500; padding: .35rem 0; }
+.cabeca-projeto__ementa p { margin: .4rem 0 0; color: var(--color-surface-3); }
+.votacoes-extra { margin-top: 1.25rem; border-top: 1px solid var(--color-linha); padding-top: .75rem; }
+.votacoes-extra > summary { cursor: pointer; font-weight: 500; color: var(--azul); padding: .5rem 0; }
+.votacoes-extra > .nota { margin: .25rem 0 1rem; }
+
+/* letra mínima de 12px (antes havia rótulos de 9 a 11px; o público lê no celular, muita gente com mais de 50 anos) */
+.heat__col, .selo--compacto, .selo-cinza, .rank__pilar-nome, .medida__nota, .destaque__situacao, .cmd__grupo, form.busca label,
+.rodape__titulo, .sessao__selo, .tabela th, .rank__controle .filtros__rotulo, .dist__eixo span, .dist__media span, .rank__cab-pilares span,
+.sessao-nums dt, .item-sessao__n, .cad__rotulo, .racha__lado-rot, .como-ler__selo, .bn__item dt, .subnav__rotulo, .principio__n,
+.nota-fonte__rotulo, .proj__situacao, .rp__chapeu, .rp__sit, .rp__rascunho, .rp__credito, .rp-ficha__rot, .rp__fato-rot,
+.rp-autor__rot, .rp-pref__rot, .compartilhar__rot, .lei-item__tema, .cab-secao__selo, .selo-pagina { font-size: .75rem; }
+/* nomes embaixo das fotos na grade de votos: 13px e até duas linhas, em vez de 10px cortado */
+.rp-rosto__nome { font-size: .8rem; white-space: normal; text-overflow: clip; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.2; }
+
+/* texto branco sobre azul: no tema escuro o azul de link (#3a8cb9) dava 3,7:1; o de botão dá 4,6:1 */
+.botao--acao, .rp__chapeu, .pergunta-botao, .chips button[aria-pressed="true"], .filtros button[aria-pressed="true"] { background: var(--azul-botao); }
+.botao--acao:hover { background: var(--azul-escuro); }
+:root[data-tema="dark"] .botao--acao:hover { background: var(--azul-botao-hover); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="light"]) .botao--acao:hover { background: var(--azul-botao-hover); } }
+
+/* alvo de toque de 44px no celular, sem mudar o desenho: a área clicável cresce para fora do ícone */
+@media (pointer: coarse) {
+  .dica__botao, .carrossel__ponto, .rp__ponto, .tema-botao, .busca-botao, .pergunta-botao { position: relative; }
+  .dica__botao::after, .carrossel__ponto::after, .rp__ponto::after, .tema-botao::after, .busca-botao::after, .pergunta-botao::after {
+    content: ""; position: absolute; left: 50%; top: 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%);
+  }
+}
+@media (pointer: coarse) { .rp__ponto::after { width: 100%; } }

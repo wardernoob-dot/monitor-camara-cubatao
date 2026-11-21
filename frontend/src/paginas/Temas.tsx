@@ -24,9 +24,11 @@ export default function Temas() {
       if (!ev) continue;
       g.set(m.tema, [...(g.get(m.tema) ?? []), { m, ev }]);
     }
-    return [...g.entries()].sort((a, c) => c[1].length - a[1].length);
+    // homenagens, datas e nomes de lugares vão pro fim: é o tema com mais projetos e o que menos mexe na vida de alguém
+    const peso = (t: string) => (t.startsWith("Homenagens") ? 1 : 0) + (t === "Outros" ? 2 : 0);
+    return [...g.entries()].sort((a, c) => peso(a[0]) - peso(c[0]) || c[1].length - a[1].length);
   }, [b]);
-  const tema = params.get("tema") ?? porTema[0]?.[0] ?? "";
+  const tema = params.get("tema") ?? (porTema.find(([t]) => t === "Saúde") ?? porTema[0])?.[0] ?? "";
   const itens = (porTema.find(([t]) => t === tema)?.[1] ?? []).slice().sort((a, c) => c.ev.data.localeCompare(a.ev.data));
 
   return (

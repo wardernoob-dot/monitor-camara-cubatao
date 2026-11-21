@@ -16,7 +16,7 @@ export interface Aba {
 
 function NumeroAba({ valor, sufixo = "", ativo }: { valor: number; sufixo?: string; ativo: boolean }) {
   const [ref, entrou] = useEntrou<HTMLSpanElement>();
-  const v = useContador(valor, entrou, 900);
+  const v = useContador(valor, entrou);
   return <span ref={ref} className={`painel__num ${ativo ? "painel__num--ativo" : ""}`} aria-hidden="true">{v}{sufixo}</span>;
 }
 

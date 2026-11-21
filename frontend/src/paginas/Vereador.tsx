@@ -5,7 +5,7 @@ import { Compartilhar } from "../compartilhar";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
-import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, Situacao, TagPartido, VotoTag } from "../componentes";
+import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, ResultadoVotacao, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
 import { Destaque, Dica, DicaMateria, EtapaComDica, Termo, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
@@ -13,7 +13,7 @@ import { Funil } from "../viz";
 
 function Num({ valor, rotulo, sufixo = "", para }: { valor: number; rotulo: string; sufixo?: string; para?: string }) {
   const [ref, entrou] = useEntrou<HTMLDivElement>();
-  const v = useContador(valor, entrou, 1000);
+  const v = useContador(valor, entrou);
   return (
     <div ref={ref} className={para ? "numeros__item--link" : undefined}>
       <dt>{para ? <button type="button" className="numeros__botao esticado" onClick={() => abrirSecao(para)}>{rotulo}<span className="sr">: ver detalhes</span></button> : rotulo}</dt>
@@ -42,7 +42,8 @@ export default function VereadorPagina() {
   const b = useDados();
   const v = b.vereador.get(slug);
   useTitulo(v ? v.exibicao : "Vereador não encontrado");
-  const [filtro, setFiltro] = useState<Filtro>("todos");
+  // null = ainda não escolheu: abre em "Projetos em destaque" (sem moções de aplauso), se houver algum
+  const [escolhido, setFiltro] = useState<Filtro | null>(null);
   const [limite, setLimite] = useState(10);
 
   const votos = useMemo(() => {
@@ -68,14 +69,16 @@ export default function VereadorPagina() {
   if (!v) return <NaoEncontrado />;
 
   const recentes = [...votos].reverse();
+  const nDestaque = votos.filter(({ ev }) => b.materia.get(ev.materia)?.relevancia.nivel === "alta").length;
+  const filtro: Filtro = escolhido ?? (nDestaque > 0 ? "destaque" : "todos");
   const visiveis = recentes.filter(({ ev, voto, contra }) =>
     filtro === "todos" || (filtro === "destaque" && b.materia.get(ev.materia)?.relevancia.nivel === "alta") || (filtro === "contra" && contra) ||
     (filtro === "semvoto" && (voto === "BRANCO" || voto === "AUSENTE")));
   const projetos = v.projetos.map((s) => b.materia.get(s)!).filter(Boolean);
   const reqs = v.requerimentos.map((s) => b.materia.get(s)!).filter(Boolean);
   const filtros: [Filtro, string, number][] = [
-    ["todos", "Todos", votos.length],
-    ["destaque", "Projetos em destaque", votos.filter(({ ev }) => b.materia.get(ev.materia)?.relevancia.nivel === "alta").length],
+    ["destaque", "Projetos em destaque", nDestaque],
+    ["todos", "Todos, com moções e requerimentos", votos.length],
     ["contra", "Diferente do resultado", v.contra_resultado],
     ["semvoto", "Não votou ou ausente", v.contagem.BRANCO + v.contagem.AUSENTE],
   ];
@@ -117,7 +120,7 @@ export default function VereadorPagina() {
         <Num valor={reqs.length} rotulo="requerimentos e moções aprovados" para={reqs.length ? "requerimentos" : undefined} />
         {v.executivo.com + v.executivo.contra > 0 && (
           <Num valor={Math.round((100 * v.executivo.com) / (v.executivo.com + v.executivo.contra))} sufixo="%"
-            rotulo={`dos votos na posição da Prefeitura (${v.executivo.contra} contra)`} para={v.executivo.contra > 0 ? "prefeitura" : undefined} />
+            rotulo={`das vezes votou como a Prefeitura (${v.executivo.contra} ${v.executivo.contra === 1 ? "vez" : "vezes"} contra)`} para={v.executivo.contra > 0 ? "prefeitura" : undefined} />
         )}
       </dl>
 
@@ -128,32 +131,32 @@ export default function VereadorPagina() {
       </Secao>
 
       {votos.length > 0 && (
-        <Secao id="votos" titulo="Como votou" resumo={`${votos.length} votos`}>
+        <Secao id="votos" titulo="Como votou" resumo={`${votos.length} votos`} aberta>
           <div className="filtros" role="group" aria-label="Filtrar votos">
               {filtros.map(([f, nome, n]) => (
                 <button key={f} type="button" aria-pressed={filtro === f} onClick={() => { setFiltro(f); setLimite(10); }}>{nome} ({n})</button>
               ))}
           </div>
             <div className="tabela-rolagem">
-            <table className="tabela">
+            <table className="tabela tabela--votos">
               <thead>
                 <tr><th scope="col">Data</th><th scope="col">Projeto</th><th scope="col">Etapa</th><th scope="col">Voto</th><th scope="col">Resultado</th><th scope="col">Fonte</th></tr>
               </thead>
               <tbody>
                 {visiveis.slice(0, limite).map(({ ev, voto, contra }: { ev: Votacao; voto: Voto; contra: boolean }) => (
                   <tr key={ev.id}>
-                    <td className="tabela__data">{dataCurta(ev.data, true)}</td>
-                    <td>
-                      {(() => { const mt = b.materia.get(ev.materia); return mt ? <><DicaMateria m={mt}><LinkMateria slug={ev.materia} /></DicaMateria> <Destaque m={mt} compacto /><span className="tabela__assunto">{mt.assunto}</span></> : null; })()}
+                    <td className="tabela__data c-data">{dataCurta(ev.data, true)}</td>
+                    <td className="c-projeto">
+                      {(() => { const mt = b.materia.get(ev.materia); return mt ? <><DicaMateria m={mt}><LinkMateria slug={ev.materia} /></DicaMateria> <Destaque m={mt} compacto /><span className="tabela__assunto">{mt.explicacao?.texto ?? mt.assunto}</span></> : null; })()}
                     </td>
-                    <td><EtapaComDica ev={ev} tipo={b.materia.get(ev.materia)?.tipo} /></td>
-                    <td>
+                    <td className="c-etapa" data-rotulo="Etapa"><EtapaComDica ev={ev} tipo={b.materia.get(ev.materia)?.tipo} /></td>
+                    <td className="c-voto">
                       <VotoTag voto={voto} />
                       {naPratica(ev.sentido, voto) && <span className="na-pratica">na prática: {naPratica(ev.sentido, voto)}</span>}
                       {contra && <> <Dica rotulo="O que é votar diferente do resultado" conteudo="O voto foi para o lado que perdeu: votou sim e a proposta foi rejeitada, ou votou não e foi aprovada."><span className="marca-contra">diferente do resultado</span></Dica></>}
                     </td>
-                    <td><ResultadoTag r={ev.resultado} />{Object.keys(ev.votos).length > 0 && <> <Placar ev={ev} /></>}</td>
-                    <td className="tabela__fonte"><Fonte ev={ev} /></td>
+                    <td className="c-res" data-rotulo="Resultado">{(() => { const mt = b.materia.get(ev.materia); return mt ? <ResultadoVotacao ev={ev} m={mt} /> : <ResultadoTag r={ev.resultado} />; })()}{Object.keys(ev.votos).length > 0 && <> <Placar ev={ev} /></>}</td>
+                    <td className="tabela__fonte c-fonte" data-rotulo="Fonte"><Fonte ev={ev} /></td>
                   </tr>
                 ))}
               </tbody>

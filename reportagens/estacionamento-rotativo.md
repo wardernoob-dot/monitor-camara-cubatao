@@ -22,7 +22,7 @@ A Câmara aprovou e o prefeito sancionou a criação do estacionamento rotativo 
 
 A nova cobrança nas vagas de rua não começa agora. O sistema só entrará em vigor no dia 1º de janeiro de 2027.
 
-A proposta partiu do prefeito Cesar da Silva Nascimento. O texto final virou a Lei Municipal número 4.451.
+A proposta partiu do prefeito César da Silva Nascimento. O texto final virou a Lei Municipal número 4.451.
 
 ## O que muda na prática
 

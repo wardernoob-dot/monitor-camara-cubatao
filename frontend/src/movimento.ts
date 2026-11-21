@@ -74,7 +74,7 @@ export function useLacoCanvas(desenha: (ctx: CanvasRenderingContext2D, w: number
 }
 
 /** Numero que rola de 0 ate o alvo quando aparece. */
-export function useContador(alvo: number, ligado: boolean, ms = 1200) {
+export function useContador(alvo: number, ligado: boolean, ms = 500) {
   const reduz = useReducedMotion();
   const [v, setV] = useState(reduz ? alvo : 0);
   useEffect(() => {

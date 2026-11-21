@@ -36,6 +36,7 @@ from . import pendencias as PD
 from . import reportagens as RP
 from . import explicacao as EX
 from . import validacao as V
+from .textclean import sem_homoglifos
 from .nomes import Registro, chave, display
 from .painel import LAYOUT_2026
 from .posts import APELIDO, ETAPA, NOME_TIPO, frase, lei_num, rotulo_etapa
@@ -48,6 +49,9 @@ MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "a
          "novembro", "dezembro"]
 MESES_CURTO = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
 FINAIS = ("2a_discussao", "discussao_unica", "redacao_final", "unica")
+ANO_INICIO = 2026  # primeiro ano coletado (resumos, pautas, painel)
+ACESSORIAS = ("parecer", "parecer_emenda", "emenda", "parecer_comissao")
+RE_ACESSORIA = re.compile(r"\s[-–]\s*(Parecer das emendas|Parecer da emenda|Emendas?|Parecer)\s*$", re.I)
 APELIDO_EXTRA = {"washington luiz lessa de souza": "Carioca", "maria jaqueline da silva": "Jaque Barbosa", "guilherme amaral belo nogueira": "Guilherme Amaral"}  # Jaque: confirmado pelo responsavel do site
 ROTULO = {"SIM": "Sim", "NAO": "Não", "BRANCO": "Não votou", "AUSENTE": "Ausente", "?": "Ilegível"}
 
@@ -343,8 +347,17 @@ class Base:
             sim, nao = r["placar"].get("favor"), r["placar"].get("contra")
         else:
             sim = nao = None
+        etapa, etapa_txt = x["etapa"], rotulo_etapa(x)
+        if etapa == "unica" and (ma := RE_ACESSORIA.search(p.get("lido") or "")):
+            # painel: "PL nº 58/2026 - Parecer das emendas" e uma votacao de emenda/parecer, nao do projeto
+            etapa_txt = ma.group(1)[:1].upper() + ma.group(1)[1:].lower()
+            # "Parecer" sozinho: o painel nao diz se e favoravel ou contrario, entao o SIM fica sem sentido definido
+            etapa = "parecer_emenda" if "emend" in etapa_txt.lower() and etapa_txt.lower().startswith("parecer") \
+                else "emenda" if "emend" in etapa_txt.lower() else "parecer_comissao"
+            if etapa == "parecer_comissao":
+                etapa_txt = "Parecer da comissão"
         ev = {
-            "data": c["data"], "materia": m, "etapa": x["etapa"], "etapa_txt": rotulo_etapa(x),
+            "data": c["data"], "materia": m, "etapa": etapa, "etapa_txt": etapa_txt,
             "resultado": res, "sim": sim, "nao": nao, "votos": votos, "fonte": fonte,
             "link": p.get("link"), "detalhe": r.get("detalhe"), "resumo_url": r.get("fonte"), "lido": p.get("lido"),
             "grade": [], "ordem": len(self.votacoes),
@@ -383,6 +396,8 @@ class Base:
                             m["autores"].append(k)
                 m["autoria"] = (", ".join(self.vereadores[k]["exibicao"] for k in m["autores"]) + " (relator)"
                                 if m["autores"] else "Comissão de vereadores")
+            if m["assunto"]:
+                m["assunto"] = sem_homoglifos(m["assunto"])
             m["assunto_txt"] = frase(m["assunto"]) if m["assunto"] else ""
             m["situacao"], m["situacao_cls"] = _situacao(m)
             an = AN.carregar(self.dados, m["tipo"], m["numero"], m["ano"]) if m["numero"] and m["ano"] else None
@@ -515,6 +530,8 @@ def sentido(e: dict) -> str | None:
         return "emenda"
     if e["etapa"] == "parecer":
         return "inverso" if "contr" in t else "direto" if "favor" in t else None
+    if e["etapa"] == "parecer_comissao":
+        return None
     if e["materia"]["tipo"] == "VETO":
         return None
     return "direto"
@@ -835,8 +852,12 @@ def _situacao(m: dict) -> tuple[str, str]:
             return "Veto do prefeito derrubado pela Câmara", "veto"
         if r == "veto_mantido":
             return f"Vetado pelo prefeito ({m['veto']['alcance']}); veto mantido", "veto"
+        if not m["eventos"] and not m["pautas"] and (m["veto"].get("data_oficio") or "9999") < f"{ANO_INICIO}-01-01":
+            # veto de antes da cobertura: a votacao pode ter acontecido e o site nao tem como saber
+            m["veto"]["fora_da_cobertura"] = True
+            return f"Vetado pelo prefeito ({m['veto']['alcance']}) antes de {ANO_INICIO}; o site não acompanha votações anteriores", "veto"
         return f"Vetado pelo prefeito ({m['veto']['alcance']}); falta a Câmara votar o veto", "veto"
-    decisivos = [e for e in m["eventos"] if e["etapa"] not in ("parecer", "parecer_emenda", "emenda") and e["resultado"]]
+    decisivos = [e for e in m["eventos"] if e["etapa"] not in ACESSORIAS and e["resultado"]]
     if decisivos:
         u = decisivos[-1]
         if u["resultado"] == "REJEITADO":
@@ -851,6 +872,29 @@ def _situacao(m: dict) -> tuple[str, str]:
     if m["pautas"]:
         return "Na pauta, sem votação registrada", "pauta"
     return "Protocolado", "pauta"
+
+
+_ACENTOS = {"Camara": "Câmara", "Diario Oficial": "Diário Oficial", "oficio": "ofício", "transcricao": "transcrição", "automatica": "automática"}
+
+
+def _com_acento(t: str) -> str:
+    """As fontes gravadas no cache da analise vem sem acento (identificador); na tela vao com acento."""
+    for a, b in _ACENTOS.items():
+        t = re.sub(rf"\b{a}\b", b, t)
+    return t
+
+
+def decisiva(m: dict) -> dict | None:
+    """A votacao que decidiu a materia (a que cartao, resumo e carrossel mostram).
+    Nunca emenda nem parecer; prefere a etapa final (2a discussao, discussao unica, veto); so com placar."""
+    evs = sorted((e for e in m["eventos"] if e["etapa"] not in ACESSORIAS and e["sim"] is not None),
+                 key=lambda e: (e["data"], e.get("ordem", 0)))
+    if not evs:
+        par = sorted((e for e in m["eventos"] if e["etapa"] == "parecer" and e["sim"] is not None
+                      and e.get("sentido") in ("direto", "inverso")), key=lambda e: (e["data"], e.get("ordem", 0)))
+        return par[-1] if par else None
+    finais = [e for e in evs if e["etapa"] in FINAIS or m["tipo"] == "VETO"]
+    return (finais or evs)[-1]
 
 
 def montar(dados: Path) -> Base:
@@ -938,11 +982,14 @@ def _explicacao(m: dict, explic: dict) -> dict | None:
 
 
 def _contato(dados: Path) -> dict:
-    """data/contato.json: por onde o morador avisa um erro ({"email": ..., "formulario": https://...}). Vazio = so GitHub."""
+    """data/contato.json: por onde o morador avisa um erro ({"email": ..., "whatsapp": "5513...", "formulario": https://...}).
+    Vazio = so copiar o texto e GitHub."""
     arq = Path(dados) / "contato.json"
     c = json.loads(arq.read_text("utf-8")) if arq.exists() else {}
     email = str(c.get("email") or "").strip()
+    zap = re.sub(r"\D", "", str(c.get("whatsapp") or ""))
     return {"email": email if re.fullmatch(r"[^@\s<>\"']+@[^@\s<>\"']+\.[a-z]{2,}", email) else None,
+            "whatsapp": zap if 12 <= len(zap) <= 13 else None,
             "formulario": url_segura(c.get("formulario"))}
 
 
@@ -998,7 +1045,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             if arq_an.is_relative_to(pasta_an):
                 arq_an.write_text(json.dumps({
                     "modelo": re.sub(r"^\w+ \((.+)\)$", r"\1", an["modelo"]),
-                    "fonte": an["documento"]["fonte"].split(" (")[0], **{k: an["analise"][k] for k in (
+                    "fonte": _com_acento(an["documento"]["fonte"].split(" (")[0]), **{k: an["analise"][k] for k in (
                         "resumo", "o_que_muda", "quem_e_afetado", "justificativa_do_autor", "pontos_de_atencao", "limitacoes")},
                     **{k: an["analise"].get(k, v) for k, v in (
                         ("de_onde_sai_o_dinheiro", ""), ("o_que_falta_definir", []), ("palavras_dificeis", []))},
@@ -1012,6 +1059,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "autores": [vslug[k] for k in m["autores"] if k in vslug], "situacao": m["situacao"],
             "situacao_cls": m["situacao_cls"], "pautas": m["pautas"], "documento": url_segura(m["documento"]),
             "lei": lei_obj, "veto": veto_obj, "ultima_data": m["ultima_data"], "eventos": [e["id"] for e in m["eventos"]],
+            "decisiva": (dv := decisiva(m)) and dv["id"],
             "divergencias": [{"etapa": d["etapa"], "data": d["data"], "vereador": vslug.get(d["vereador"]),
                               "vereador_txt": d["vereador_txt"], "painel": d["painel"], "resumo": d["resumo"]}
                              for d in m["divergencias"]],

@@ -60,7 +60,7 @@ Na segunda discussão e redação final, o plenário confirmou o texto por 10 vo
 
 ## O que o prefeito disse para justificar
 
-Segundo o prefeito Cesar da Silva Nascimento, a trava anterior de 10% prejudicava o ritmo dos serviços municipais.
+Segundo o prefeito César da Silva Nascimento, a trava anterior de 10% prejudicava o ritmo dos serviços municipais.
 
 Segundo o chefe do Executivo, a insuficiência exigia enviar muitos projetos pontuais, atrasando políticas públicas municipais.
 

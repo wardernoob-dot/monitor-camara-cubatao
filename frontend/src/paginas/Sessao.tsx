@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import { AvisarErro } from "../avisar";
 import { Link, useParams } from "react-router-dom";
 import { Toc } from "../toc";
-import { useDados } from "../dados";
-import { AvisoVeto, Grade, LinkMateria, NotaFonte, Placar, ResultadoVotacao } from "../componentes";
+import { useDados, votacaoDecisiva, type Materia } from "../dados";
+import { ACESSORIAS, AvisoVeto, Grade, LinkMateria, NotaFonte, Placar, ResultadoVotacao, resultadoVeto } from "../componentes";
 import { dataExtenso, nomeSessao, useTitulo } from "../util";
 import { Destaque, DicaMateria, EtapaComDica, Termo } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
@@ -13,28 +13,40 @@ function ResumoSessao({ materias, data }: { materias: string[]; data: string }) 
   const b = useDados();
   const itens = materias.map((s) => b.materia.get(s)).filter(Boolean).map((m) => {
     const evs = m!.eventos.map(b.votacao).filter((e) => e.data === data);
-    const ult = evs[evs.length - 1];
+    // a votacao que decidiu, se foi neste dia; senao a ultima do dia que nao e emenda nem parecer sem lado
+    const dec = votacaoDecisiva(b, m!);
+    const ult = dec && dec.data === data ? dec : [...evs].reverse().find((e) => !ACESSORIAS.includes(e.etapa)) ?? evs[evs.length - 1];
     const inverso = ult?.sentido === "inverso";
-    const veto = m!.tipo === "VETO" ? (/veto mantido/i.test(m!.situacao) ? "o veto foi mantido" : /derrubado/i.test(m!.situacao) ? "o veto foi derrubado" : null) : null;
-    const r = !ult ? "entrou na pauta" : !ult.resultado ? "não foi votado nesta sessão"
-      : veto ?? ((ult.resultado === "APROVADO") !== inverso ? "foi aprovado" : "foi rejeitado");
-    return { m: m!, r, placar: ult && ult.sim != null ? `${ult.sim} a ${ult.nao}` : null };
+    // veto: o resultado vem do detalhe do resumo ("MANTIDO EM DISCUSSÃO ÚNICA"), o evento fica sem "resultado"
+    const veto = m!.tipo === "VETO" ? resultadoVeto(ult, m!) : null;
+    const r = veto ? (veto === "mantido" ? "o veto foi mantido" : "o veto foi derrubado")
+      : !ult ? "entrou na pauta" : !ult.resultado ? "não foi votado nesta sessão"
+      : (ult.resultado === "APROVADO") !== inverso ? "foi aprovado" : "foi rejeitado";
+    const etapa = ult && ult.etapa !== "unica" ? ` na ${ult.etapa_txt.toLowerCase()}` : "";
+    return { m: m!, r: r + (ult?.resultado || veto ? etapa : ""), placar: ult && ult.sim != null ? `${ult.sim} a ${ult.nao ?? 0}` : null };
   });
   if (!itens.length) return null;
-  const ordem = [...itens].sort((x, y) => Number(y.m.relevancia.nivel === "alta") - Number(x.m.relevancia.nivel === "alta"));
+  const menores = (m: Materia) => ["RQ", "MOCAO"].includes(m.tipo);
+  const principais = [...itens.filter((x) => !menores(x.m))]
+    .sort((x, y) => Number(y.m.relevancia.nivel === "alta") - Number(x.m.relevancia.nivel === "alta"));
+  const outros = itens.filter((x) => menores(x.m));
+  const mostrados = (principais.length ? principais : outros).slice(0, 6);
+  const resto = itens.length - mostrados.length;
   return (
     <section className="sessao-resumo" aria-labelledby="sessao-resumo-t">
       <h2 id="sessao-resumo-t">Em poucas palavras</h2>
-      <p>Nesta sessão a Câmara tratou de {itens.length} {itens.length === 1 ? "assunto" : "assuntos"}. {itens.length > 1 ? "Os mais importantes primeiro:" : ""}</p>
+      <p>Nesta sessão a Câmara tratou de {itens.length} {itens.length === 1 ? "assunto" : "assuntos"}. {principais.length > 1 ? "Os mais importantes primeiro:" : ""}</p>
       <ul>
-        {ordem.slice(0, 6).map(({ m, r, placar }) => (
+        {mostrados.map(({ m, r, placar }) => (
           <li key={m.slug}>
             <a href={`#${m.slug}`} onClick={(e) => { e.preventDefault(); document.getElementById(m.slug)?.scrollIntoView({ behavior: "smooth" }); }}><strong>{m.titulo}</strong></a>
             {": "}{(m.explicacao?.texto ?? m.assunto).replace(/\.$/, "")}. <span className="sessao-resumo__res">Resultado: {r}{placar ? ` (${placar})` : ""}.</span>
           </li>
         ))}
       </ul>
-      {itens.length > 6 && <p className="nota">Os outros {itens.length - 6} itens estão logo abaixo.</p>}
+      {resto > 0 && <p className="nota">{principais.length && outros.length
+        ? `E mais ${outros.length} ${outros.length === 1 ? "moção ou requerimento" : "moções e requerimentos"}${resto > outros.length ? `, além de ${resto - outros.length} outro${resto - outros.length === 1 ? "" : "s"} item${resto - outros.length === 1 ? "" : "s"}` : ""}, logo abaixo.`
+        : `Os outros ${resto} itens estão logo abaixo.`}</p>}
     </section>
   );
 }

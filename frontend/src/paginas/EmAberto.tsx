@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useDados } from "../dados";
 import { dataExtenso, useTitulo } from "../util";
@@ -12,7 +12,9 @@ export default function EmAberto() {
   const g = useMemo(() => {
     const ms = b.materias.filter((m) => m.lista);
     return {
-      vetos: ms.filter((m) => m.veto && !m.veto.resultado && m.tipo !== "VETO").sort((x, y) => (x.veto!.data_oficio ?? "").localeCompare(y.veto!.data_oficio ?? "")),
+      vetos: ms.filter((m) => m.veto && !m.veto.resultado && !m.veto.fora_da_cobertura && m.tipo !== "VETO").sort((x, y) => (x.veto!.data_oficio ?? "").localeCompare(y.veto!.data_oficio ?? "")),
+      // veto comunicado antes de 2026: a votação pode ter acontecido antes de o site começar a coletar
+      antigos: ms.filter((m) => m.veto?.fora_da_cobertura && m.tipo !== "VETO"),
       sancao: ms.filter((m) => m.situacao_cls === "aprovado" && ["PL", "PLC"].includes(m.tipo) && !m.lei && !m.veto).sort((x, y) => x.ultima_data.localeCompare(y.ultima_data)),
       regul: ms.filter((m) => m.lei?.depende?.length).sort((x, y) => x.lei!.data.localeCompare(y.lei!.data)),
     };
@@ -44,6 +46,9 @@ export default function EmAberto() {
               </li>
             ))}
           </ul>
+        )}
+        {g.antigos.length > 0 && (
+          <p className="nota">Fora da lista: {g.antigos.map((m, i) => <Fragment key={m.slug}>{i ? ", " : ""}<Link to={`/projetos/${m.slug}`}>{m.titulo}</Link></Fragment>)}. {g.antigos.length === 1 ? "O veto foi comunicado" : "Os vetos foram comunicados"} antes de 2026, e o site só acompanha as votações a partir de 2026. {g.antigos.length === 1 ? "Ele pode ter sido votado" : "Eles podem ter sido votados"} antes disso.</p>
         )}
       </section>
 

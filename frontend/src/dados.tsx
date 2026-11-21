@@ -94,9 +94,13 @@ export interface Materia {
   veto: {
     alcance: string; url?: string | null; resultado?: "veto_mantido" | "veto_derrubado" | null; data?: string; pagina?: string;
     oficio?: string | null; data_oficio?: string | null; leitura?: LeituraVeto;
+    /** veto comunicado antes de 2026: o site não sabe se foi votado */
+    fora_da_cobertura?: boolean;
   } | null;
   ultima_data: string;
   eventos: number[];
+  /** A votação que decidiu a matéria (nunca emenda nem parecer sem lado); null quando não teve placar. */
+  decisiva: number | null;
   divergencias: Divergencia[];
   analise: boolean;
   lista: boolean;
@@ -165,7 +169,7 @@ export interface Reportagem {
 }
 
 interface Bruto {
-  meta: { atualizado: string; nome_site: string; cidade: string; repo: string; contato?: { email: string | null; formulario: string | null } };
+  meta: { atualizado: string; nome_site: string; cidade: string; repo: string; contato?: { email: string | null; whatsapp?: string | null; formulario: string | null } };
   vereadores: Vereador[];
   materias: Materia[];
   votacoes: Votacao[];
@@ -226,6 +230,11 @@ export function ProvedorDados({ children }: { children: ReactNode }) {
       </div>
     );
   return <Ctx.Provider value={base}>{children}</Ctx.Provider>;
+}
+
+/** Votação que decidiu a matéria: é a que cartão, resumo e carrossel mostram com placar. */
+export function votacaoDecisiva(b: Pick<Base, "votacao">, m: Pick<Materia, "decisiva">): Votacao | null {
+  return m.decisiva != null ? b.votacao(m.decisiva) ?? null : null;
 }
 
 export function useDados(): Base {

@@ -86,6 +86,12 @@ def normalize(text: str) -> str:
     return "\n".join(out)
 
 
+def sem_homoglifos(text: str) -> str:
+    """Troca letra cirilica/grega de cara identica pela latina ("autistа" -> "autista").
+    Sem isso a busca do site nao acha a palavra."""
+    return text.translate(_HOMOGLYPHS) if text else text
+
+
 def flat(text: str) -> str:
     """Junta tudo numa linha so (pra regex que atravessa quebra de linha)."""
     return re.sub(r"\s+", " ", text).strip()

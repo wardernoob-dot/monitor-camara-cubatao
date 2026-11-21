@@ -178,14 +178,21 @@ export function NotaMetodo({ children, ancora, rotulo }: { children: ReactNode; 
 }
 
 /** Votação de veto: o "Sim" é manter o veto do prefeito e o "Não" é derrubar. O resultado vem de `veto.resultado` da matéria (ou do texto do resumo oficial). */
+/** Etapas que não decidem o projeto: emenda e parecer (o resultado final é outra votação). */
+export const ACESSORIAS = ["parecer", "parecer_emenda", "emenda", "parecer_comissao"];
+
+/** Votação de veto: o resumo oficial diz "MANTIDO"/"REJEITADO" no detalhe e deixa o resultado vazio. */
+export function resultadoVeto(ev: Votacao | undefined | null, m: Pick<Materia, "tipo" | "veto">): "mantido" | "derrubado" | null {
+  if (m.tipo !== "VETO" || !ev || ev.resultado) return null;
+  const d = (ev.detalhe ?? "").toUpperCase();
+  if (m.veto?.resultado === "veto_mantido" || (!m.veto?.resultado && d.includes("MANTID"))) return "mantido";
+  if (m.veto?.resultado === "veto_derrubado" || (!m.veto?.resultado && d.includes("REJEITAD"))) return "derrubado";
+  return null;
+}
+
 export function ResultadoVotacao({ ev, m }: { ev: Votacao; m: Pick<Materia, "tipo" | "veto"> }) {
-  if (m.tipo === "VETO" && !ev.resultado) {
-    const d = (ev.detalhe ?? "").toUpperCase();
-    const mantido = m.veto?.resultado === "veto_mantido" || (!m.veto?.resultado && d.includes("MANTID"));
-    const derrubado = m.veto?.resultado === "veto_derrubado" || (!m.veto?.resultado && d.includes("REJEITAD"));
-    if (mantido) return <span className="res">Veto mantido</span>;
-    if (derrubado) return <span className="res">Veto derrubado</span>;
-  }
+  const veto = resultadoVeto(ev, m);
+  if (veto) return <span className="res">{veto === "mantido" ? "Veto mantido" : "Veto derrubado"}</span>;
   return <ResultadoTag r={ev.resultado} />;
 }
 
