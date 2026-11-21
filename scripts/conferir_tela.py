@@ -1,5 +1,6 @@
 """Conferencia automatica de tela: abre as paginas do site (docs/) num navegador de verdade e falha se achar
-erro de JavaScript, texto com contraste baixo (claro e escuro), pagina estourando a largura no celular
+erro de JavaScript, texto com contraste baixo (claro e escuro), pagina estourando a largura no celular,
+texto espremido numa coluna estreita no celular
 ou imagem quebrada. Roda no Actions (conferir-tela.yml) e na mao:
 
     python -m http.server 8765 -d docs &   e depois   python scripts/conferir_tela.py
@@ -86,6 +87,12 @@ async def main() -> int:
             sobra = await pg.evaluate("document.documentElement.scrollWidth - window.innerWidth")
             if sobra > 2:
                 falhas.append(f"[celular] {rota}: pagina {sobra}px mais larga que a tela")
+            # o contrario de estourar: coluna de texto esmagada (ja aconteceu no "O que muda": 0px, uma palavra por linha)
+            espremidos = await pg.evaluate("""[...document.querySelectorAll('main p, main li')]
+                .filter(e => e.innerText.trim().length > 60 && e.offsetParent && e.getBoundingClientRect().width < 160)
+                .map(e => e.innerText.trim().slice(0, 40))""")
+            if espremidos:
+                falhas.append(f"[celular] {rota}: texto espremido em coluna estreita: '{espremidos[0]}...'")
         await br.close()
     for f in sorted(set(falhas)):
         print("FALHA", f)

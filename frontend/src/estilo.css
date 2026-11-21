@@ -1617,7 +1617,9 @@ a.rp-autor__nome:hover { text-decoration: underline; }
 .rp-ficha .rp__sit--rejeitado, .rp-ficha .rp__sit--veto { background: var(--ruim-bg); border-color: var(--ruim-borda); color: var(--ruim-texto); }
 .rp-ficha__voto { display: grid; gap: .6rem; }
 .rp-ficha .rp-pref { width: 100%; }
-.rp-pagina__grade { grid-template-columns: minmax(0, 1fr) 23rem; }
+/* só no PC: fora da media query esta regra anulava a coluna única do celular e o texto do "O que muda"
+   ficava com 0px de largura (uma palavra por linha) */
+@media (min-width: 901px) { .rp-pagina__grade { grid-template-columns: minmax(0, 1fr) 23rem; } }
 
 @media (max-width: 1000px) {
   .rp__conteudo { grid-template-columns: minmax(0, 1fr); }
