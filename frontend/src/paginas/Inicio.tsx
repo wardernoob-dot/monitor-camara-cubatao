@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { useDados, type Materia, type Vereador, type Votacao } from "../dados";
+import { useDados, votacaoDecisiva, type Materia, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda, TagPartido } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
@@ -29,15 +29,11 @@ const ICONE = {
 
 const CAMINHOS = [
   { to: "/vereadores", icone: ICONE.pessoas, titulo: "Como meu vereador votou", texto: "Votos, presença e projetos de cada um dos 15 vereadores, com a fonte de cada voto.", chamada: "Ver os vereadores" },
-  { to: "/projetos", icone: ICONE.doc, titulo: "Quero achar um projeto", texto: "Busque por tema ou número e acompanhe as etapas, o placar e se virou lei ou foi vetado.", chamada: "Buscar um projeto" },
-  { to: "/sessoes", icone: ICONE.agenda, titulo: "O que aconteceu nas sessões", texto: "Pauta, presença e votações de cada sessão da Câmara em 2026.", chamada: "Ver as sessões" },
-  { to: "/ranking", icone: ICONE.barras, titulo: "Índice de Atuação", texto: "Nota de 0 a 10 por presença, participação, projetos e fiscalização, com a conta aberta.", chamada: "Ver o ranking" },
-  { to: "/partidos", icone: ICONE.predio, titulo: "Partidos e a Prefeitura", texto: "Como cada bancada vota e com que frequência acompanha a posição da Prefeitura.", chamada: "Ver os partidos" },
-  { to: "/temas", icone: ICONE.pessoas, titulo: "Votos por assunto", texto: "Saúde, bolso, transporte: escolha o tema e veja quem votou a favor e contra em cada projeto.", chamada: "Escolher um tema" },
-  { to: "/leis", icone: ICONE.doc, titulo: "O que virou lei", texto: "As leis de 2026 em ordem, com quem propôs e a data em que cada uma começa a valer.", chamada: "Ver as leis" },
+  { to: "/projetos", icone: ICONE.doc, titulo: "Quero achar um projeto", texto: "Busque por assunto ou número e acompanhe as etapas, o placar e se virou lei ou foi vetado.", chamada: "Buscar um projeto" },
+  { to: "/temas", icone: ICONE.barras, titulo: "Votos por assunto", texto: "Saúde, bolso, transporte: escolha o tema e veja quem votou a favor e contra em cada projeto.", chamada: "Escolher um tema" },
   { to: "/em-aberto", icone: ICONE.agenda, titulo: "O que ficou pendente", texto: "Vetos sem votação, projetos esperando o prefeito e leis que ainda dependem de regulamentação.", chamada: "Ver as pendências" },
-  { to: "/como-funciona", icone: ICONE.escudo, titulo: "Como os dados são conferidos", texto: "De onde vem cada informação, como lemos o painel e o que o site não consegue saber.", chamada: "Ver o método" },
 ];
+// Sessões, ranking, partidos, leis e método estão no menu e no rodapé; a home fica com os quatro caminhos mais procurados.
 
 /* Rotulo mais curto so para o card; o rotulo completo continua na pagina do projeto. */
 const situacaoCurta = (t: string) => t
@@ -74,7 +70,7 @@ function Carrossel({ itens, total }: { itens: { m: Materia; v: Votacao | null }[
             <span className="proj__situacao">{situacaoCurta(m.situacao)}</span>
             <span className="proj__ementa">{m.explicacao?.texto ?? m.assunto.toLowerCase().replace(/cubat[ãa]o/g, "Cubatão")}</span>
             <span className="proj__rodape">
-              {v && v.sim != null ? <span>{v.sim} a favor{v.nao ? ` · ${v.nao} contra` : ""} · {dataCurta(v.data)}</span> : <span>{dataCurta(m.ultima_data)}</span>}
+              {v && v.sim != null ? <span>{v.sim} a {v.nao ?? 0} · {v.etapa_txt} · {dataCurta(v.data)}</span> : <span>{dataCurta(m.ultima_data)}</span>}
               <Link to={`/projetos/${m.slug}`} className="proj__link esticado" aria-label={`Ver o projeto ${m.titulo}`}><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></Link>
             </span>
           </li>
@@ -113,10 +109,8 @@ export default function Inicio() {
   const presidente = b.atuais.find((v) => v.cargo === "presidente");
   const destaques = useMemo(() => b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").slice(0, 6), [b]);
   const votados = useMemo(() => {
-    const porId = new Map(b.votacoes.map((v) => [v.id, v]));
     return b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta")
-      .map((m) => ({ m, v: porId.get(m.eventos[m.eventos.length - 1]) ?? null }))
-      .map((x) => ({ m: x.m, v: x.v && x.v.sim != null ? x.v : null }))
+      .map((m) => ({ m, v: votacaoDecisiva(b, m) }))
       .sort((x, y) => Number(!!y.v) - Number(!!x.v) || (y.v?.data ?? y.m.ultima_data).localeCompare(x.v?.data ?? x.m.ultima_data)).slice(0, 10);
   }, [b]);
   const rolagem = useRef<HTMLDivElement>(null);
@@ -158,7 +152,7 @@ export default function Inicio() {
           <motion.p className="hero__texto" initial={reduz ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.5 }}>
             O voto de cada um dos {b.atuais.length} vereadores em {b.votacoes.filter((v) => Object.keys(v.votos).length).length} votações de 2026, sempre com a fonte.
           </motion.p>
-          <motion.div className="hero__acoes" initial={reduz ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65, ease: EASE }}>
+          <motion.div className="hero__acoes" initial={reduz ? false : { opacity: 0.4, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65, ease: EASE }}>
             <Link className="botao botao--acao" to="/vereadores">Ver os vereadores</Link>
             <Link className="botao botao--fantasma" to="/projetos">Buscar um projeto</Link>
           </motion.div>
@@ -174,8 +168,8 @@ export default function Inicio() {
           </header>
           <ul className="caminhos__lista">
             {CAMINHOS.map((c, i) => (
-              <motion.li key={c.to} className="caminho" onPointerMove={luz} initial={reduz ? false : { opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-8% 0px" }} transition={{ duration: 0.55, delay: (i % 3) * 0.07, ease: EASE }}>
+              <motion.li key={c.to} className="caminho" onPointerMove={luz} initial={reduz ? false : { opacity: 0.4, y: 6 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-8% 0px" }} transition={{ duration: 0.25, delay: (i % 3) * 0.03, ease: EASE }}>
                 <div className="caminho__topo">
                   <span className="caminho__icone">{c.icone}</span>
                   <span className="caminho__n" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
@@ -188,27 +182,6 @@ export default function Inicio() {
           </ul>
         </section>
 
-        <section className="passos" aria-labelledby="passos-titulo">
-          <header className="cab-secao cab-secao--lado">
-            <div>
-              <p className="cab-secao__selo">Método</p>
-              <h2 id="passos-titulo" className="cab-secao__titulo">Como cada voto chega até aqui</h2>
-            </div>
-            <Link to="/como-funciona" className="link-seta">Ver o método completo <span aria-hidden="true">→</span></Link>
-          </header>
-          <ol className="passos__lista">
-            <motion.span className="passos__linha" aria-hidden="true" initial={reduz ? false : { scaleX: 0 }} whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 1.4, ease: EASE }} />
-            {PASSOS.map((x, i) => (
-              <motion.li key={x.n} className="passo" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.6, delay: 0.15 + i * 0.18, ease: EASE }}>
-                <span className="passo__n">{x.n}</span>
-                <h3 className="passo__titulo">{x.titulo}</h3>
-                <p className="passo__texto">{x.texto}</p>
-              </motion.li>
-            ))}
-          </ol>
-        </section>
 
         {votados.length > 2 && <Carrossel itens={votados} total={b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").length} />}
 
@@ -355,8 +328,8 @@ export default function Inicio() {
           <h2 id="ver-titulo" className="secao__titulo">Os 15 vereadores</h2>
           <ul className="cartoes">
             {b.atuais.map((v, i) => (
-              <motion.li key={v.slug} className="cartao" initial={reduz ? false : { opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.5, delay: (i % 4) * 0.06, ease: EASE }}>
+              <motion.li key={v.slug} className="cartao" initial={reduz ? false : { opacity: 0.4, y: 6 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.25, delay: (i % 4) * 0.03, ease: EASE }}>
                 <div className="cartao__link">
                   <Avatar v={v} tamanho="retrato" />
                   <span>
@@ -373,6 +346,28 @@ export default function Inicio() {
               </motion.li>
             ))}
           </ul>
+        </section>
+
+        <section className="passos" aria-labelledby="passos-titulo">
+          <header className="cab-secao cab-secao--lado">
+            <div>
+              <p className="cab-secao__selo">Método</p>
+              <h2 id="passos-titulo" className="cab-secao__titulo">Como cada voto chega até aqui</h2>
+            </div>
+            <Link to="/como-funciona" className="link-seta">Ver o método completo <span aria-hidden="true">→</span></Link>
+          </header>
+          <ol className="passos__lista">
+            <motion.span className="passos__linha" aria-hidden="true" initial={reduz ? false : { scaleX: 0 }} whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 1.4, ease: EASE }} />
+            {PASSOS.map((x, i) => (
+              <motion.li key={x.n} className="passo" initial={reduz ? false : { opacity: 0.4, y: 6 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 0.3, delay: i * 0.05, ease: EASE }}>
+                <span className="passo__n">{x.n}</span>
+                <h3 className="passo__titulo">{x.titulo}</h3>
+                <p className="passo__texto">{x.texto}</p>
+              </motion.li>
+            ))}
+          </ol>
         </section>
 
       </div>

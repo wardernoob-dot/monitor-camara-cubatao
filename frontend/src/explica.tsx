@@ -78,6 +78,7 @@ export function explicaEtapa(etapa: string, tipo?: string): string {
     if (t.includes("separado")) s += " “Em separado” quer dizer que é a opinião de parte da comissão, diferente da maioria.";
     if (t.includes("conjunto")) s += " “Em conjunto” quer dizer que mais de uma comissão deu o parecer junta.";
     if (t.includes("emenda")) s += " Aqui o parecer é sobre uma emenda, uma mudança proposta no texto.";
+    else if (!t.includes("contr") && !t.includes("favor")) s += " O painel não mostra se este parecer é favorável ou contrário, então não dá para dizer o que o SIM significa para o projeto.";
     return s;
   }
   if (t.includes("emenda")) return "Emenda é uma mudança proposta no texto do projeto. Votar SIM aprova a mudança; o projeto ainda é votado depois.";

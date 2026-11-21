@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useDados } from "../dados";
 import { Situacao } from "../componentes";
-import { semAcento, useTitulo } from "../util";
+import { casaBusca, semAcento, useTitulo } from "../util";
 import { Destaque, DicaMateria, Termo } from "../explica";
 
 const SITUACOES: [string, string][] = [
@@ -29,8 +29,15 @@ export default function Projetos() {
   const temaSel = params.get("tema") ?? "";
   const lista = useMemo(() => b.materias.filter((m) => m.lista), [b]);
   const temas = useMemo(() => [...new Set(lista.map((m) => m.tema))].sort((a, b) => a.localeCompare(b)), [lista]);
-  const autores = useMemo(() => [...new Set(lista.map((m) => m.autoria))].sort((a, b) => a.localeCompare(b)), [lista]);
-  const textos = useMemo(() => new Map(lista.map((m) => [m.slug, semAcento(`${m.titulo} ${m.assunto} ${m.autoria}`)])), [lista]);
+  // cada coautor vira uma opção: "Guilherme do Salão, Marcinho" entra em Guilherme do Salão e em Marcinho
+  const autoresDe = (m: { autoria: string }) => m.autoria.replace(/\s*\(relator\)$/, "").split(/,\s*/).filter(Boolean);
+  const autores = useMemo(() => [...new Set(lista.flatMap(autoresDe))].sort((a, b) => a.localeCompare(b, "pt-BR")), [lista]);
+  // busca no número, na ementa, na autoria, na explicação simples e nos títulos do "O que muda" sobre o projeto
+  const textos = useMemo(() => {
+    const doQueMuda = new Map<string, string>();
+    for (const r of b.reportagens ?? []) for (const s of r.projetos) doQueMuda.set(s, `${doQueMuda.get(s) ?? ""} ${r.manchete} ${r.linha_fina}`);
+    return new Map(lista.map((m) => [m.slug, semAcento(`${m.titulo} ${m.assunto} ${m.autoria} ${m.explicacao?.texto ?? ""} ${doQueMuda.get(m.slug) ?? ""}`)]));
+  }, [lista, b]);
 
   const contagem = useMemo(() => {
     const c: Record<string, number> = {};
@@ -40,8 +47,8 @@ export default function Projetos() {
 
   const termos = semAcento(q).split(/\s+/).filter(Boolean);
   const visiveis = lista.filter((m) =>
-    (!autor || m.autoria === autor) && (!sit || m.situacao_cls === sit) && (!destaque || m.relevancia.nivel === "alta") &&
-    (!temaSel || m.tema === temaSel) && termos.every((t) => textos.get(m.slug)!.includes(t)));
+    (!autor || autoresDe(m).includes(autor)) && (!sit || m.situacao_cls === sit) && (!destaque || m.relevancia.nivel === "alta") &&
+    (!temaSel || m.tema === temaSel) && casaBusca(textos.get(m.slug)!, termos));
 
   function muda(chave: string, valor: string) {
     const p = new URLSearchParams(params);

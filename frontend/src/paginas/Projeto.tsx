@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { AvisarErro } from "../avisar";
-import { useAnalise, useDados } from "../dados";
-import { AvisoVeto, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";
+import { useAnalise, useDados, votacaoDecisiva, type Votacao } from "../dados";
+import { ACESSORIAS, AvisoVeto, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { Destaque, EtapaComDica, Termo } from "../explica";
 import { Compartilhar } from "../compartilhar";
@@ -11,9 +11,9 @@ import { Secao } from "../secao";
 import { Toc } from "../toc";
 
 const TOC_PROJETO = [
+  ["entenda", "Entenda o projeto"],
   ["votacoes", "Votações"],
   ["divergencias", "Painel e resumo não batem"],
-  ["entenda", "Entenda o projeto"],
 ] as const;
 
 export default function ProjetoPagina() {
@@ -25,6 +25,25 @@ export default function ProjetoPagina() {
   if (!m) return <NaoEncontrado />;
   const eventos = m.eventos.map(b.votacao);
   const autores = m.autores.map((s) => b.vereador.get(s)!).filter(Boolean);
+  const dec = votacaoDecisiva(b, m);
+  // emendas e pareceres sem lado ficam numa sanfona; o parecer que decidiu o projeto (ex.: parecer contrário aprovado) fica à vista
+  const acessorias = eventos.filter((e) => ACESSORIAS.includes(e.etapa) && e.id !== dec?.id);
+  const principais = eventos.filter((e) => !acessorias.includes(e));
+  const itemVotacao = (ev: Votacao) => (
+              <li key={ev.id} className="linha-tempo__item">
+                <p className="linha-tempo__quando"><Link to={`/sessoes/${ev.data}`}>{dataExtenso(ev.data)}</Link></p>
+                <h3 className="linha-tempo__etapa"><EtapaComDica ev={ev} tipo={m.tipo} /></h3>
+                {ev.sentido === "inverso" && <p className="aviso-voto">Nesta votação, votar <strong>Sim</strong> era ser contra o projeto seguir, e votar <strong>Não</strong> era ser a favor.</p>}
+                {ev.sentido === "emenda" && <p className="aviso-voto">Esta votação é sobre uma mudança no texto (emenda), não sobre o projeto inteiro.</p>}
+                <AvisoVeto m={m} />
+                <p className="linha-tempo__res">
+                  <ResultadoVotacao ev={ev} m={m} /> <Placar ev={ev} grande={Object.keys(ev.votos).length > 0} />
+                  {ev.detalhe && <span className="linha-tempo__detalhe">{ev.detalhe[0] + ev.detalhe.slice(1).toLowerCase()}</span>}
+                </p>
+                <Grade ev={ev} />
+                {ev.fonte && <NotaFonte ev={ev} />}
+              </li>
+  );
 
   return (
     <div className="pagina">
@@ -33,17 +52,16 @@ export default function ProjetoPagina() {
         <p className="cabeca-projeto__tipo">{m.tipo_nome}</p>
         <h1 className="titulo-pagina">{m.titulo}</h1>
         <p className="cabeca-projeto__selos"><Situacao m={m} /> <Destaque m={m} /></p>
-        {m.assunto && <p className="lead">{m.assunto}</p>}
+        {m.explicacao ? (
+          <>
+            <p className="lead">{m.explicacao.texto}</p>
+            <p className="cabeca-projeto__fonte">Resumo de IA ({m.explicacao.modelo}) feito só com {m.explicacao.base}. Pode simplificar demais: o texto oficial vale.</p>
+            {m.assunto && <details className="cabeca-projeto__ementa"><summary>Texto oficial (ementa)</summary><p>{m.assunto}</p></details>}
+          </>
+        ) : m.assunto && <p className="lead">{m.assunto}</p>}
       </header>
       <Compartilhar tipo="p" id={m.slug} titulo={`${m.titulo}: ${m.situacao}`} />
 
-      {m.explicacao && !m.analise && (
-        <aside className="em-poucas" aria-label="Em palavras simples">
-          <p className="em-poucas__titulo">Em palavras simples</p>
-          <p className="em-poucas__texto">{m.explicacao.texto}</p>
-          <p className="em-poucas__fonte">Texto de IA ({m.explicacao.modelo}) feito só com {m.explicacao.base}. Pode simplificar demais: o texto oficial vale.</p>
-        </aside>
-      )}
       {m.relevancia.nivel !== "baixa" && (
         <aside className={`por-que por-que--${m.relevancia.nivel}`} aria-label="Por que este projeto merece atenção">
           <p className="por-que__titulo">{m.relevancia.nivel === "alta" ? "Por que este projeto merece atenção" : "O que observar"}</p>
@@ -72,43 +90,6 @@ export default function ProjetoPagina() {
 
       <div className="com-toc">
       <div className="sanfonas">
-      {eventos.length > 0 && (
-        <Secao id="votacoes" titulo="Votações" resumo={`${eventos.length} ${eventos.length === 1 ? "votação" : "votações"}`} aberta>
-          <ol className="linha-tempo">
-            {eventos.map((ev) => (
-              <li key={ev.id} className="linha-tempo__item">
-                <p className="linha-tempo__quando"><Link to={`/sessoes/${ev.data}`}>{dataExtenso(ev.data)}</Link></p>
-                <h3 className="linha-tempo__etapa"><EtapaComDica ev={ev} tipo={m.tipo} /></h3>
-                {ev.sentido === "inverso" && <p className="aviso-voto">Nesta votação, votar <strong>Sim</strong> era ser contra o projeto seguir, e votar <strong>Não</strong> era ser a favor.</p>}
-                {ev.sentido === "emenda" && <p className="aviso-voto">Esta votação é sobre uma mudança no texto (emenda), não sobre o projeto inteiro.</p>}
-                <AvisoVeto m={m} />
-                <p className="linha-tempo__res">
-                  <ResultadoVotacao ev={ev} m={m} /> <Placar ev={ev} grande={Object.keys(ev.votos).length > 0} />
-                  {ev.detalhe && <span className="linha-tempo__detalhe">{ev.detalhe[0] + ev.detalhe.slice(1).toLowerCase()}</span>}
-                </p>
-                <Grade ev={ev} />
-                {ev.fonte && <NotaFonte ev={ev} />}
-              </li>
-            ))}
-          </ol>
-        </Secao>
-      )}
-
-      {m.divergencias.length > 0 && (
-        <Secao id="divergencias" titulo="Painel e resumo oficial não batem" resumo={`${m.divergencias.length}`}>
-          <p>O voto mostrado no painel eletrônico durante a transmissão é diferente do que o resumo oficial da sessão registra nestes casos:</p>
-          <ul className="lista-simples">
-            {m.divergencias.map((d, i) => (
-              <li key={i}>
-                {d.etapa}, {dataCurta(d.data)}: {d.vereador ? <Link to={`/vereadores/${d.vereador}`}>{d.vereador_txt}</Link> : d.vereador_txt} aparece no painel como{" "}
-                <strong>{d.painel === "nao votou" ? "não votou" : d.painel === "ausente" ? "ausente" : d.painel === "SIM" ? "sim" : "não"}</strong> e no resumo como{" "}
-                <strong>{d.resumo === "SIM" ? "favorável" : "contrário"}</strong>.
-              </li>
-            ))}
-          </ul>
-        </Secao>
-      )}
-
       {!m.analise && ["PL", "PLC", "PR", "PDL", "PELOM"].includes(m.tipo) && (
         <Secao id="entenda" titulo="Entenda o projeto" classe="analise" aberta>
           <p>
@@ -133,7 +114,7 @@ export default function ProjetoPagina() {
               então alguns pontos podem ter mudado{m.lei ? <>; o texto que vale é o da <a href={m.lei.url ?? undefined} rel="noopener">Lei {m.lei.numero}</a></> : ""}.
             </p>
           )}
-          <p className="analise__resumo">{a.resumo}</p>
+          {a.resumo.trim() !== m.explicacao?.texto.trim() && <p className="analise__resumo">{a.resumo}</p>}
           {a.o_que_muda.length > 0 && <><h3>O que muda</h3><ul className="lista-simples">{a.o_que_muda.map((x, i) => <li key={i}>{x}</li>)}</ul></>}
           {a.quem_e_afetado && <><h3>Quem é afetado</h3><p>{a.quem_e_afetado}</p></>}
           {a.de_onde_sai_o_dinheiro && <><h3>De onde sai o dinheiro</h3><p>{a.de_onde_sai_o_dinheiro}</p></>}
@@ -158,6 +139,36 @@ export default function ProjetoPagina() {
           {a.limitacoes && <p className="nota">{a.limitacoes}</p>}
         </Secao>
       )}
+      {eventos.length > 0 && (
+        <Secao id="votacoes" titulo="Votações" resumo={`${eventos.length} ${eventos.length === 1 ? "votação" : "votações"}`} aberta>
+          <ol className="linha-tempo">
+            {principais.map(itemVotacao)}
+          </ol>
+          {acessorias.length > 0 && (
+            <details className="votacoes-extra">
+              <summary>Votações de emendas e pareceres ({acessorias.length})</summary>
+              <p className="nota">Antes da votação do projeto, a Câmara vota mudanças no texto (emendas) e a opinião das comissões (pareceres). Elas não decidem se o projeto passa.</p>
+              <ol className="linha-tempo">{acessorias.map(itemVotacao)}</ol>
+            </details>
+          )}
+        </Secao>
+      )}
+
+      {m.divergencias.length > 0 && (
+        <Secao id="divergencias" titulo="Painel e resumo oficial não batem" resumo={`${m.divergencias.length}`}>
+          <p>O voto mostrado no painel eletrônico durante a transmissão é diferente do que o resumo oficial da sessão registra nestes casos:</p>
+          <ul className="lista-simples">
+            {m.divergencias.map((d, i) => (
+              <li key={i}>
+                {d.etapa}, {dataCurta(d.data)}: {d.vereador ? <Link to={`/vereadores/${d.vereador}`}>{d.vereador_txt}</Link> : d.vereador_txt} aparece no painel como{" "}
+                <strong>{d.painel === "nao votou" ? "não votou" : d.painel === "ausente" ? "ausente" : d.painel === "SIM" ? "sim" : "não"}</strong> e no resumo como{" "}
+                <strong>{d.resumo === "SIM" ? "favorável" : "contrário"}</strong>.
+              </li>
+            ))}
+          </ul>
+        </Secao>
+      )}
+
       <AvisarErro sobre={m.titulo} />
       </div>
       <Toc itens={TOC_PROJETO} caminho={`/projetos/${m.slug}`} />

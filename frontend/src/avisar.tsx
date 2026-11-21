@@ -27,10 +27,11 @@ export function AvisarErro({ sobre }: { sobre: string }) {
           <div className="avisar__acoes">
             <button type="button" className="botao botao--fantasma" onClick={copiar}>{copiou ? "Copiado" : "Copiar o texto"}</button>
             {c?.email && <a className="botao botao--acao" href={`mailto:${c.email}?subject=${encodeURIComponent("Erro no Voto a voto: " + sobre)}&body=${encodeURIComponent(msg)}`}>Enviar por e-mail</a>}
+            {c?.whatsapp && <a className="botao botao--acao" href={`https://wa.me/${c.whatsapp}?text=${encodeURIComponent(msg)}`} rel="noopener noreferrer" target="_blank">Mandar pelo WhatsApp</a>}
             {c?.formulario && <a className="botao botao--acao" href={c.formulario} rel="noopener noreferrer" target="_blank">Abrir o formulário</a>}
-            <a className="link-seta" href={`${meta.repo}/issues/new?title=${encodeURIComponent("Erro: " + sobre)}&body=${encodeURIComponent(msg)}`} rel="noopener noreferrer">Avisar pelo GitHub <span aria-hidden="true">→</span></a>
+            <a className="link-seta avisar__github" href={`${meta.repo}/issues/new?title=${encodeURIComponent("Erro: " + sobre)}&body=${encodeURIComponent(msg)}`} rel="noopener noreferrer">Avisar pelo GitHub <span aria-hidden="true">→</span></a>
           </div>
-          {!c?.email && !c?.formulario && <p className="nota">Copie o texto e mande para quem cuida do site, ou use o GitHub se tiver conta.</p>}
+          {!c?.email && !c?.formulario && !c?.whatsapp && <p className="nota">Copie o texto e mande para quem cuida do site, ou use o GitHub se tiver conta.</p>}
         </div>
       )}
     </aside>

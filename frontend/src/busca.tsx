@@ -3,12 +3,13 @@ import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { useDados } from "./dados";
 import { ABRIR_PERGUNTA } from "./pergunta";
+import { casaBusca, semAcento } from "./util";
 
 /** Busca global (Ctrl K ou /): vereadores, projetos e páginas. O botão fica no cabeçalho, fora do provedor de dados,
  *  e avisa a janela por um evento; a janela fica dentro do provedor, onde os dados existem. */
 export const ABRIR_BUSCA = "abrir-busca";
 
-const sem = (s: string) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+const sem = semAcento;
 
 interface Item { id: string; grupo: string; rotulo: string; sub?: string; to: string; acao?: () => void }
 
@@ -80,14 +81,14 @@ export function Busca() {
     })),
     projetos: b.materias.map((m) => ({
       item: { id: `m-${m.slug}`, grupo: "Projetos", rotulo: m.titulo, sub: m.assunto.toLowerCase(), to: `/projetos/${m.slug}` } as Item,
-      hay: sem(`${m.titulo} ${m.tipo_nome} ${m.numero} ${m.assunto} ${m.autoria}`),
+      hay: sem(`${m.titulo} ${m.tipo_nome} ${m.numero} ${m.assunto} ${m.autoria} ${m.explicacao?.texto ?? ""}`),
     })),
   }), [b]);
 
   const resultados = useMemo(() => {
     const t = sem(q).split(/\s+/).filter(Boolean);
     if (!t.length) return PAGINAS;
-    const filtra = (xs: { item: Item; hay: string }[], n: number) => xs.filter((x) => t.every((w) => x.hay.includes(w))).slice(0, n).map((x) => x.item);
+    const filtra = (xs: { item: Item; hay: string }[], n: number) => xs.filter((x) => casaBusca(x.hay, t)).slice(0, n).map((x) => x.item);
     const pags = PAGINAS.filter((p) => t.every((w) => sem(`${p.rotulo} ${p.sub}`).includes(w)));
     const ia: Item = { id: "ia", grupo: "Assistente", rotulo: `Perguntar à IA: “${q.trim()}”`, sub: "abre num assistente externo", to: "",
       acao: () => window.dispatchEvent(new CustomEvent(ABRIR_PERGUNTA, { detail: q.trim() })) };

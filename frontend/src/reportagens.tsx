@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion, type PanInfo } from "framer-motion";
-import { useDados, type Base, type Materia, type Reportagem, type Vereador, type Votacao } from "./dados";
+import { useDados, votacaoDecisiva, type Base, type Materia, type Reportagem, type Vereador, type Votacao } from "./dados";
 import { Avatar } from "./componentes";
 import { EASE } from "./movimento";
 import { dataCurta } from "./util";
@@ -29,12 +29,12 @@ export function ladosDaVotacao(b: Base, ev: Votacao) {
   return { favor: favor.sort(ord), contra: contra.sort(ord) };
 }
 
-/** Votação que aparece no cartão: a escolhida no texto ou a última com placar do projeto principal. */
+/** Votação que aparece no cartão: a escolhida no texto ou a que decidiu o projeto principal (nunca emenda nem parecer sem lado). */
 export function votacaoDa(b: Base, r: Reportagem): Votacao | null {
   if (r.votacao != null && b.votacoes[r.votacao]) return b.votacoes[r.votacao];
   const m = b.materia.get(r.projetos[0]);
-  const evs = (m?.eventos ?? []).map((id) => b.votacoes[id]).filter((e) => e && Object.keys(e.votos).length);
-  return evs.length ? evs[evs.length - 1] : null;
+  const ev = m ? votacaoDecisiva(b, m) : null;
+  return ev && Object.keys(ev.votos).length ? ev : null;
 }
 
 /** Situação em linguagem de quem não acompanha a Câmara. Parecer contrário aprovado = projeto rejeitado. */

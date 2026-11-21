@@ -34,7 +34,7 @@ export default function Sessoes() {
     <div className="pagina">
       <p className="selo-pagina">Dia a dia</p>
       <h1 className="titulo-pagina">Sessões</h1>
-      <p className="lead">Cada dia em que a Câmara votou alguma coisa em 2026. Ordinárias e extraordinárias do mesmo dia aparecem juntas.</p>
+      <p className="lead">Cada dia de sessão da Câmara em 2026, com o que foi votado. Ordinárias e extraordinárias do mesmo dia aparecem juntas.</p>
 
       <div className="sessoes">
         {meses.map((m) => (
@@ -44,15 +44,16 @@ export default function Sessoes() {
               {m.itens.map((d, i) => {
                 const itens = d.materias.length;
                 return (
-                  <motion.li key={d.data} className="sessao" initial={reduz ? false : { opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-4% 0px" }} transition={{ duration: 0.45, delay: Math.min(i, 5) * 0.04, ease: EASE }}>
+                  <motion.li key={d.data} className="sessao" initial={reduz ? false : { opacity: 0.4, y: 6 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-4% 0px" }} transition={{ duration: 0.25, delay: Math.min(i, 5) * 0.02, ease: EASE }}>
                     <span className="sessao__data" aria-hidden="true">
                       <span className="sessao__dia">{d.data.slice(8)}</span>
                       <span className="sessao__semana">{diaSemana(d.data)}</span>
                     </span>
                     <span className="sessao__corpo">
                       <Link to={`/sessoes/${d.data}`} className="sessao__link esticado"><span className="sr">{dataExtenso(d.data)}: </span>
-                        {d.sessoes.map((s) => `${s.numero}ª ${nomeSessao(s.tipo)}`).join(" e ")}
+                        {d.sessoes.length ? d.sessoes.map((s) => `${s.numero}ª ${nomeSessao(s.tipo)}`).join(" e ")
+                          : "Sessão (resumo oficial ainda não publicado)"}
                       </Link>
                       <span className="sessao__info">
                         {itens > 0 ? `${itens} ${itens === 1 ? "item votado" : "itens votados"}` : "sem itens votados"}
