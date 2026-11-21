@@ -9,6 +9,8 @@ export interface Vereador {
   nome: string;
   iniciais: string;
   foto: string | null;
+  /** telefone e e-mail oficiais do gabinete (SAPL da Câmara); só de quem está em exercício */
+  contato?: { telefone?: string; email?: string } | null;
   partido: string | null;
   partido_fonte: string | null;
   partido_url?: string | null;
@@ -61,6 +63,8 @@ export interface Votacao {
   detalhe: string | null;
   votos: Record<string, Voto>;
   sentido: "direto" | "inverso" | "emenda" | null;
+  /** quem estava na cadeira de presidente nesta votação (painel); quem preside não vota */
+  presidia?: string | null;
 }
 
 export interface Divergencia {
@@ -169,7 +173,9 @@ export interface Reportagem {
 }
 
 interface Bruto {
-  meta: { atualizado: string; nome_site: string; cidade: string; repo: string; contato?: { email: string | null; whatsapp?: string | null; formulario: string | null } };
+  meta: { atualizado: string; nome_site: string; cidade: string; repo: string; contato?: { email: string | null; whatsapp?: string | null; formulario: string | null; instagram?: string | null; canal_whatsapp?: string | null };
+    camara?: { telefone: string; email: string; endereco: string; expediente: string; ouvidoria: string; transmissao: string; canal: string;
+      pautas: string; tribuna_popular: string; banco_de_ideias: string; fonte: string | null; conferido_em: string } | null };
   vereadores: Vereador[];
   materias: Materia[];
   votacoes: Votacao[];

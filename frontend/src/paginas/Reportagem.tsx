@@ -6,6 +6,7 @@ import { Autoria, CorpoReportagem, Foto, PlacarRostos, Prefeito, situacaoCurta, 
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import NaoEncontrado from "./NaoEncontrado";
 import { Compartilhar } from "../compartilhar";
+import { BotaoSeguir, EAgora } from "../agora";
 
 export default function ReportagemPagina() {
   const { id } = useParams();
@@ -77,6 +78,8 @@ export default function ReportagemPagina() {
           <p className="nota rp-pagina__nota">
             Texto da equipe do Voto a voto, escrito a partir dos documentos oficiais linkados acima. Não diz se o projeto é bom ou ruim.
           </p>
+          {principal && <BotaoSeguir m={principal} />}
+          <EAgora m={principal} />
           <AvisarErro sobre={`O que muda: ${r.manchete}`} />
         </div>
       </div>

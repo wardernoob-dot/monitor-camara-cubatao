@@ -8,13 +8,15 @@ const CURTO: Record<string, string> = { assiduidade: "Assiduidade", participacao
 export const pctPilar = (p: PilarIndice) => (p.max ? p.pontos / p.max : 0);
 
 /** Nota em destaque + 4 barrinhas, para os cards da lista. */
-export function IndiceMini({ i }: { i: Indice }) {
+/** media = média da Câmara: a nota sozinha ("5,2") parece reprovação; com a média do lado ela se explica. */
+export function IndiceMini({ i, media }: { i: Indice; media?: number }) {
   return (
     <span className="indice-mini">
       <span className="indice-mini__nota">
         <strong>{fmt(i.nota)}</strong>
         <span> / 10</span>
         {i.parcial && <span className="selo-cinza">Amostra parcial</span>}
+        {media != null && !i.parcial && <span className="indice-mini__media">média {fmt(media)}</span>}
       </span>
       <span className="indice-mini__barras" aria-hidden="true">
         {i.pilares.map((p) => (

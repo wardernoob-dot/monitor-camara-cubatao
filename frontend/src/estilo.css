@@ -1849,3 +1849,73 @@ a.rp-autor__nome:hover { text-decoration: underline; }
   .indice > .indice__topo { grid-column: 1; grid-row: 1 / span 6; }
   .indice > :not(.indice__topo) { grid-column: 2; }
 }
+
+/* quem preside a sessão não vota: rótulo neutro, sem a cor de "não votou" */
+.voto--presidindo { color: var(--color-surface-3); font-weight: 500; }
+.votos__presidindo { color: var(--color-surface-3); font-size: .85rem; }
+
+/* ============================================================ revisão 21/11: o visitante */
+/* rótulos em letra de máquina e maiúscula ("COMO VOTARAM · 10/11") viram texto normal: menos cara de painel de empresa */
+.cab-secao__selo, .selo-pagina, .rp-ficha__rot, .rp__fato-rot, .rp-autor__rot, .rp-pref__rot, .compartilhar__rot, .nota-fonte__rotulo,
+.item-sessao__n, .sessao-nums dt, .bn__item dt, .tabela th, form.busca label, .rodape__titulo, .como-ler__selo, .cad__rotulo,
+.racha__lado-rot, .lei-item__tema, .proj__situacao, .destaque__situacao, .rp__chapeu, .rp__sit, .subnav__rotulo, .rank__controle .filtros__rotulo {
+  font-family: var(--font-body); text-transform: none; letter-spacing: 0; font-size: .85rem; font-weight: 600;
+}
+.cab-secao__selo, .selo-pagina { font-size: .9rem; }
+
+/* "Perguntar" leva pra fora do site: contorno, sem o azul cheio que o fazia o botão mais chamativo do topo */
+.pergunta-botao { background: transparent; color: var(--azul-escuro); box-shadow: inset 0 0 0 1px var(--color-linha); }
+.pergunta-botao:hover { background: var(--suave); color: var(--color-ink); box-shadow: inset 0 0 0 1px var(--color-surface-2); }
+
+/* Essa semana na Câmara */
+.semana { max-width: var(--larg-pagina); margin: 2.5rem auto 0; padding: 0 1.25rem; }
+.semana__dentro { background: var(--color-surface-1); border: 1px solid var(--color-linha); border-left: 4px solid var(--guara); border-radius: 18px; padding: 1.5rem 1.5rem 1.25rem; }
+.semana__selo { margin: 0 0 .3rem; font-weight: 600; color: var(--azul-escuro); }
+.semana__titulo { margin: 0 0 1rem; font-size: clamp(1.4rem, 3vw, 1.9rem); letter-spacing: -0.03em; }
+.semana__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.semana__item { display: grid; gap: .2rem; padding: .85rem 1rem; border-radius: 12px; background: var(--suave); color: var(--color-ink); text-decoration: none; }
+.semana__item:hover, .semana__item:focus-visible { background: var(--suave-2); }
+.semana__frase { font-size: 1.05rem; line-height: 1.4; }
+.semana__res { font-size: .88rem; color: var(--color-surface-3); }
+.semana__mais { margin: .9rem 0 0; }
+.semana__proxima { margin: .9rem 0 0; padding-top: .9rem; border-top: 1px solid var(--color-linha); font-size: .92rem; color: var(--color-secondary); }
+@media (min-width: 62rem) { .semana__lista { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* dado-manchete */
+.manchete-dado { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.5rem; align-items: center; margin: 4rem 0 0; padding: 1.75rem; border-radius: 18px; background: var(--azul-claro); }
+.manchete-dado__num { margin: 0; font-size: clamp(3rem, 8vw, 5rem); font-weight: 600; letter-spacing: -0.05em; line-height: 1; color: var(--azul-escuro); }
+.manchete-dado__num span { font-size: .35em; letter-spacing: 0; font-weight: 500; }
+.manchete-dado__titulo { margin: 0 0 .5rem; font-size: clamp(1.2rem, 2.4vw, 1.6rem); letter-spacing: -0.03em; }
+.manchete-dado p { margin: 0 0 .75rem; max-width: var(--larg-texto); }
+@media (max-width: 40rem) { .manchete-dado { grid-template-columns: 1fr; gap: .75rem; padding: 1.25rem; } }
+
+/* seguir um projeto e lista dos seguidos */
+.seguir { margin-top: 1rem; }
+.seguir .botao { width: 100%; justify-content: center; }
+.seguir__nota { margin: .5rem 0 0; font-size: .82rem; color: var(--color-surface-3); }
+.seguidos { max-width: var(--larg-pagina); margin: 2rem auto 0; padding: 0 1.25rem; }
+.seguidos__titulo { font-size: 1.2rem; margin: 0 0 .6rem; }
+.seguidos__lista { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.seguidos__item { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .8rem; border: 1px solid var(--color-linha); border-radius: var(--raio-pilula); background: var(--color-surface-1); }
+.seguidos__item--novo { border-color: var(--guara); }
+.seguidos__novo { font-size: .78rem; font-weight: 600; color: var(--branco); background: var(--guara-sombra); border-radius: var(--raio-pilula); padding: .1rem .5rem; }
+.seguidos__sit { font-size: .85rem; color: var(--color-surface-3); }
+
+/* E agora? */
+.e-agora { max-width: var(--larg-texto); margin: 3rem 0 0; padding: 1.5rem; border-radius: 18px; background: var(--color-surface-1); border: 1px solid var(--color-linha); }
+.e-agora__titulo { margin: 0 0 .4rem; font-size: 1.5rem; letter-spacing: -0.03em; }
+.e-agora__lead { margin: 0 0 1rem; color: var(--color-secondary); }
+.e-agora__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; }
+.e-agora__lista li { display: grid; gap: .15rem; padding-left: .9rem; border-left: 3px solid var(--azul-claro); }
+.e-agora__lista span { font-size: .92rem; color: var(--color-secondary); overflow-wrap: anywhere; }
+.e-agora__fonte { margin: 1rem 0 0; font-size: .8rem; color: var(--color-surface-3); }
+
+/* média da Câmara do lado do número */
+.numeros__media, .indice-mini__media { display: block; font-size: .78rem; color: var(--color-surface-3); font-weight: 400; }
+.indice-mini__media { margin-left: .4rem; display: inline; }
+.projetos__resumo { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* quem faz */
+.quem-faz h2 { margin: 2rem 0 .5rem; font-size: 1.3rem; }
+.quem-faz__assina { margin-top: 2rem; font-weight: 600; }
+.hero__selo { font-family: var(--font-body); text-transform: none; letter-spacing: 0; font-size: .95rem; font-weight: 600; }

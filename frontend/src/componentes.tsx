@@ -36,7 +36,9 @@ export function Legenda() {
   );
 }
 
-export function VotoTag({ voto }: { voto: Voto }) {
+/** presidindo = estava na cadeira de presidente: quem conduz a votação não vota (não é falta nem omissão). */
+export function VotoTag({ voto, presidindo = false }: { voto: Voto; presidindo?: boolean }) {
+  if (presidindo && voto === "BRANCO") return <span className="voto voto--presidindo">Presidindo a sessão</span>;
   return <span className={`voto voto--${voto.toLowerCase()}`}>{ROTULO[voto]}</span>;
 }
 
@@ -91,7 +93,7 @@ export function Grade({ ev }: { ev: Votacao }) {
             <p className="racha__lado-rot"><span>{g.rot}</span><strong>{g.lista.length}</strong></p>
             <ul>
               {g.lista.map(({ v }) => (
-                <li key={v!.slug}><Avatar v={v!} tamanho="p" /><Link to={`/vereadores/${v!.slug}`}>{v!.exibicao}</Link></li>
+                <li key={v!.slug}><Avatar v={v!} tamanho="p" /><Link to={`/vereadores/${v!.slug}`}>{v!.exibicao}</Link>{ev.presidia === v!.slug && <span className="votos__presidindo"> (presidindo; quem preside não vota)</span>}</li>
               ))}
             </ul>
           </section>

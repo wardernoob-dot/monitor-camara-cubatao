@@ -1,0 +1,34 @@
+{
+ "_leia": "Contato oficial do gabinete de cada vereador em exercicio, copiado do SAPL da Camara (api/parlamentares/parlamentar). Conferir de tempos em tempos: muda quando entra suplente ou troca gabinete. Vazio = o SAPL nao informa.",
+ "fonte": "https://sapl.cubatao.sp.leg.br/parlamentar/",
+ "conferido_em": "2026-11-21",
+ "camara": {
+  "telefone": "(13) 3362-1000",
+  "email": "protocolo@cubatao.sp.leg.br",
+  "endereco": "Praça dos Emancipadores, s/nº, Bloco Legislativo, Cubatão",
+  "expediente": "segunda a sexta, das 9h às 18h",
+  "ouvidoria": "https://www.cubatao.sp.leg.br/ouvidoria",
+  "transmissao": "https://www.youtube.com/playlist?list=PLR5DmBS9lf2xdr_ZgRvDeO_xEiRqcDW_I",
+  "canal": "https://www.youtube.com/c/TvC%C3%A2maraCubat%C3%A3o1",
+  "pautas": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1",
+  "tribuna_popular": "https://www.cubatao.sp.leg.br/institucional/noticias/tribuna-popular",
+  "banco_de_ideias": "https://www.cubatao.sp.leg.br/banco-de-ideias-legislativas"
+ },
+ "vereadores": {
+  "afonsinho": {"sapl": 26, "telefone": "(13) 3362-1038", "email": "vereadorafonsinho@cubatao.sp.leg.br"},
+  "alessandro-oliveira": {"sapl": 18, "telefone": "(13) 3362-1018", "email": "vereadoralessandrooliveira@cubatao.sp.leg.br"},
+  "allan-matias": {"sapl": 20, "telefone": "", "email": "vereadorallanmatias@cubatao.sp.leg.br"},
+  "batore": {"sapl": 34, "telefone": "(13) 3362-1026", "email": "vereadorbatore@cubatao.sp.leg.br"},
+  "cleber-do-cavaco": {"sapl": 12, "telefone": "(13) 3362-1030", "email": "vereadorcleberdocavaco@cubatao.sp.leg.br"},
+  "dr-anderson-de-lana": {"sapl": 6, "telefone": "(13) 3362-1020", "email": "vereadoranderson@cubatao.sp.leg.br"},
+  "edson-mota": {"sapl": 32, "telefone": "(13) 3362-1028", "email": "vereadoredsonmota@cubatao.sp.leg.br"},
+  "guilherme-do-salao": {"sapl": 21, "telefone": "(13) 3362-1024", "email": "vereadorguilhermedosalao@cubatao.sp.leg.br"},
+  "jair-do-bar": {"sapl": 11, "telefone": "(13) 3362-1008", "email": "vereadorjairdobar@cubatao.sp.leg.br"},
+  "marcinho": {"sapl": 3, "telefone": "(13) 3362-1016", "email": "vereadormarcinho@cubatao.sp.leg.br"},
+  "ronaldo-da-comissao": {"sapl": 35, "telefone": "(13) 3362-1034", "email": "vereadorronaldo@cubatao.sp.leg.br"},
+  "rony-martins": {"sapl": 24, "telefone": "(13) 3362-1032", "email": "vereadorronymartins@cubatao.sp.leg.br"},
+  "tinho": {"sapl": 22, "telefone": "(13) 3362-1036", "email": "vereadortinho@cubatao.sp.leg.br"},
+  "topete": {"sapl": 19, "telefone": "(13) 3362-1003", "email": "vereadortopete@cubatao.sp.leg.br"},
+  "xuxa": {"sapl": 31, "telefone": "(13) 3362-1040", "email": "vereadorxuxa@cubatao.sp.leg.br"}
+ }
+}

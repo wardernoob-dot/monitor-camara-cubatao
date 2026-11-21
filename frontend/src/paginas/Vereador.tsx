@@ -4,26 +4,28 @@ import { Secao, abrirSecao } from "../secao";
 import { Compartilhar } from "../compartilhar";
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
+import { slugPartido, useDados, type Vereador, type Votacao, type Voto } from "../dados";
 import { ACESSORIAS, Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, ResultadoVotacao, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
 import { Destaque, Dica, DicaMateria, EtapaComDica, Termo, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
 import { Funil } from "../viz";
 
-function Num({ valor, rotulo, sufixo = "", para }: { valor: number; rotulo: string; sufixo?: string; para?: string }) {
+function Num({ valor, rotulo, sufixo = "", para, media }: { valor: number; rotulo: string; sufixo?: string; para?: string; media?: number }) {
   const [ref, entrou] = useEntrou<HTMLDivElement>();
   const v = useContador(valor, entrou);
   return (
     <div ref={ref} className={para ? "numeros__item--link" : undefined}>
       <dt>{para ? <button type="button" className="numeros__botao esticado" onClick={() => abrirSecao(para)}>{rotulo}<span className="sr">: ver detalhes</span></button> : rotulo}</dt>
       <dd><span aria-hidden="true">{v}{sufixo}</span><span className="sr">{valor}{sufixo}</span></dd>
+      {media != null && <span className="numeros__media">média da Câmara: {media.toLocaleString("pt-BR", { maximumFractionDigits: 0 })}{sufixo}</span>}
       {para && <span className="numeros__seta" aria-hidden="true">↓</span>}
     </div>
   );
 }
 import NaoEncontrado from "./NaoEncontrado";
 import { Toc } from "../toc";
+import { EAgora } from "../agora";
 
 const TOC_VEREADOR = [
   ["indice", "Índice de atuação"],
@@ -67,22 +69,34 @@ export default function VereadorPagina() {
   }, [b, v]);
 
   if (!v) return <NaoEncontrado />;
+  // média dos 15 em exercício, para o número ter com o que comparar (sem dizer se é bom ou ruim)
+  const media = (f: (x: Vereador) => number | null) => { const xs = b.atuais.map(f).filter((n): n is number => n != null); return xs.length ? xs.reduce((a, c) => a + c, 0) / xs.length : 0; };
+  const med = {
+    presenca: media((x) => (x.sessoes_total ? (100 * (x.presenca.sim ?? 0)) / x.sessoes_total : null)),
+    faltas: media((x) => x.faltas),
+    projetos: media((x) => x.projetos.length),
+    leis: media((x) => x.leis),
+    reqs: media((x) => x.requerimentos.length),
+    prefeitura: media((x) => (x.executivo.com + x.executivo.contra ? (100 * x.executivo.com) / (x.executivo.com + x.executivo.contra) : null)),
+  };
 
   const recentes = [...votos].reverse();
   // destaque = votação que decide projeto em destaque; emendas e pareceres sem lado ficam só em "Todos"
   const ehDestaque = (ev: Votacao) => b.materia.get(ev.materia)?.relevancia.nivel === "alta" && !ACESSORIAS.includes(ev.etapa);
   const nDestaque = votos.filter(({ ev }) => ehDestaque(ev)).length;
   const filtro: Filtro = escolhido ?? (nDestaque > 0 ? "destaque" : "todos");
+  // presidindo a sessão não conta como "não votou": quem conduz a votação não vota
+  const semVoto = (ev: Votacao, voto: Voto) => voto === "AUSENTE" || (voto === "BRANCO" && ev.presidia !== v.slug);
   const visiveis = recentes.filter(({ ev, voto, contra }) =>
     filtro === "todos" || (filtro === "destaque" && ehDestaque(ev)) || (filtro === "contra" && contra) ||
-    (filtro === "semvoto" && (voto === "BRANCO" || voto === "AUSENTE")));
+    (filtro === "semvoto" && semVoto(ev, voto)));
   const projetos = v.projetos.map((s) => b.materia.get(s)!).filter(Boolean);
   const reqs = v.requerimentos.map((s) => b.materia.get(s)!).filter(Boolean);
   const filtros: [Filtro, string, number][] = [
     ["destaque", "Projetos em destaque", nDestaque],
     ["todos", "Todos, com moções e requerimentos", votos.length],
     ["contra", "Diferente do resultado", v.contra_resultado],
-    ["semvoto", "Não votou ou ausente", v.contagem.BRANCO + v.contagem.AUSENTE],
+    ["semvoto", "Não votou ou ausente", votos.filter(({ ev, voto }) => semVoto(ev, voto)).length],
   ];
 
   return (
@@ -114,14 +128,14 @@ export default function VereadorPagina() {
       </header>
       <Compartilhar tipo="v" id={v.slug} titulo={`${v.exibicao}: como votou na Câmara de Cubatão`} />
 
-      <dl className="numeros">
-        <Num valor={v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0} rotulo="% de presença nas sessões" sufixo="%" para="presenca" />
-        <Num valor={v.faltas} rotulo="faltas (justificadas ou não)" para="presenca" />
-        <Num valor={projetos.length} rotulo="projetos de lei apresentados" para="projetos" />
-        <Num valor={v.leis} rotulo="viraram lei" para="projetos" />
-        <Num valor={reqs.length} rotulo="requerimentos e moções aprovados" para={reqs.length ? "requerimentos" : undefined} />
+      <dl className="numeros numeros--com-media">
+        <Num media={med.presenca} valor={v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0} rotulo="% de presença nas sessões" sufixo="%" para="presenca" />
+        <Num media={med.faltas} valor={v.faltas} rotulo="faltas (justificadas ou não)" para="presenca" />
+        <Num media={med.projetos} valor={projetos.length} rotulo="projetos de lei apresentados" para="projetos" />
+        <Num media={med.leis} valor={v.leis} rotulo="viraram lei" para="projetos" />
+        <Num media={med.reqs} valor={reqs.length} rotulo="requerimentos e moções aprovados" para={reqs.length ? "requerimentos" : undefined} />
         {v.executivo.com + v.executivo.contra > 0 && (
-          <Num valor={Math.round((100 * v.executivo.com) / (v.executivo.com + v.executivo.contra))} sufixo="%"
+          <Num media={med.prefeitura} valor={Math.round((100 * v.executivo.com) / (v.executivo.com + v.executivo.contra))} sufixo="%"
             rotulo={`das vezes votou como a Prefeitura (${v.executivo.contra} ${v.executivo.contra === 1 ? "vez" : "vezes"} contra)`} para={v.executivo.contra > 0 ? "prefeitura" : undefined} />
         )}
       </dl>
@@ -153,7 +167,7 @@ export default function VereadorPagina() {
                     </td>
                     <td className="c-etapa" data-rotulo="Etapa"><EtapaComDica ev={ev} tipo={b.materia.get(ev.materia)?.tipo} /></td>
                     <td className="c-voto">
-                      <VotoTag voto={voto} />
+                      <VotoTag voto={voto} presidindo={ev.presidia === v.slug} />
                       {naPratica(ev.sentido, voto) && <span className="na-pratica">na prática: {naPratica(ev.sentido, voto)}</span>}
                       {contra && <> <Dica rotulo="O que é votar diferente do resultado" conteudo="O voto foi para o lado que perdeu: votou sim e a proposta foi rejeitada, ou votou não e foi aprovada."><span className="marca-contra">diferente do resultado</span></Dica></>}
                     </td>
@@ -236,6 +250,7 @@ export default function VereadorPagina() {
           {v.presenca.justificada ?? 0} e ausência sem justificativa em {v.presenca.ausente ?? 0}.
         </p>
       </Secao>
+      <EAgora v={v} />
       <AvisarErro sobre={`Vereador ${v.exibicao}`} />
       </div>
       <Toc itens={TOC_VEREADOR} caminho={`/vereadores/${v.slug}`} />

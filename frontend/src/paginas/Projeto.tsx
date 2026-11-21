@@ -9,6 +9,7 @@ import NaoEncontrado from "./NaoEncontrado";
 import BlocoVeto from "../veto";
 import { Secao } from "../secao";
 import { Toc } from "../toc";
+import { BotaoSeguir, EAgora } from "../agora";
 
 const TOC_PROJETO = [
   ["entenda", "Entenda o projeto"],
@@ -57,19 +58,20 @@ export default function ProjetoPagina() {
         {m.explicacao ? (
           <>
             <p className="lead">{m.explicacao.texto}</p>
-            <p className="cabeca-projeto__fonte">Resumo de IA ({m.explicacao.modelo}) feito só com {m.explicacao.base}. Pode simplificar demais: o texto oficial vale.</p>
+            <p className="cabeca-projeto__fonte">Resumo em palavras simples feito por IA a partir d{m.explicacao.base.startsWith("a ") ? "a" : "o"} {m.explicacao.base.replace(/^(o|a) /, "")}. O texto oficial é o que vale.</p>
             {m.assunto && <details className="cabeca-projeto__ementa"><summary>Texto oficial (ementa)</summary><p>{m.assunto}</p></details>}
           </>
         ) : m.assunto && <p className="lead">{m.assunto}</p>}
       </header>
       <div className="projeto-lado">
       <Compartilhar tipo="p" id={m.slug} titulo={`${m.titulo}: ${m.situacao}`} />
+      <BotaoSeguir m={m} />
 
       {m.relevancia.nivel !== "baixa" && (
         <aside className={`por-que por-que--${m.relevancia.nivel}`} aria-label="Por que este projeto merece atenção">
           <p className="por-que__titulo">{m.relevancia.nivel === "alta" ? "Por que este projeto merece atenção" : "O que observar"}</p>
           <ul>{m.relevancia.motivos.map((x) => <li key={x}>{x}</li>)}</ul>
-          <p className="por-que__fonte">Critérios fixos e públicos (veja <Metodo>Como funciona</Metodo>). Não diz se o projeto é bom ou ruim.</p>
+          <p className="por-que__fonte">Mesmo critério para todos os projetos (<Metodo>como funciona</Metodo>).</p>
         </aside>
       )}
 
@@ -179,6 +181,7 @@ export default function ProjetoPagina() {
         </Secao>
       )}
 
+      <EAgora m={m} />
       <AvisarErro sobre={m.titulo} />
       </div>
       <Toc itens={TOC_PROJETO} caminho={`/projetos/${m.slug}`} />

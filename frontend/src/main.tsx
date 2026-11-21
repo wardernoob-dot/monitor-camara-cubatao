@@ -27,6 +27,7 @@ const Reportagens = lazy(() => import("./paginas/Reportagens"));
 const Temas = lazy(() => import("./paginas/Temas"));
 const Leis = lazy(() => import("./paginas/Leis"));
 const EmAberto = lazy(() => import("./paginas/EmAberto"));
+const QuemFaz = lazy(() => import("./paginas/QuemFaz"));
 import NaoEncontrado from "./paginas/NaoEncontrado";
 const ReportagemPagina = lazy(() => import("./paginas/Reportagem"));
 
@@ -61,6 +62,7 @@ const OUTRAS = [
   ["/temas", "Votos por tema"],
   ["/leis", "Leis de 2026"],
   ["/em-aberto", "O que ficou pendente"],
+  ["/quem-faz", "Quem faz o Voto a voto"],
 ] as const;
 
 /** Celular: a barra de seções rola de lado e esconde metade dos itens. Este botão abre a lista inteira. */
@@ -124,6 +126,7 @@ function Rodape() {
           <nav className="rodape__col" aria-label="Método">
             <h2 className="rodape__titulo">Método</h2>
             <ul>
+              <li><Link to="/quem-faz">Quem faz o Voto a voto</Link></li>
               <li><Link to="/como-funciona">Como os dados são conferidos</Link></li>
               <li><Link to={{ pathname: "/como-funciona", hash: "#indice" }}>Como o índice é calculado</Link></li>
               <li><Link to={{ pathname: "/como-funciona", hash: "#limites" }}>O que o site não sabe</Link></li>
@@ -213,6 +216,7 @@ function App() {
             <Route path="/temas" element={<Temas />} />
             <Route path="/leis" element={<Leis />} />
             <Route path="/em-aberto" element={<EmAberto />} />
+            <Route path="/quem-faz" element={<QuemFaz />} />
             <Route path="/o-que-muda" element={<Reportagens />} />
             <Route path="/reportagens" element={<Navigate to="/o-que-muda" replace />} />
             <Route path="/o-que-muda/:id" element={<ReportagemPagina />} />

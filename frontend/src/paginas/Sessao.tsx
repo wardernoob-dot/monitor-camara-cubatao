@@ -2,8 +2,9 @@ import { useMemo } from "react";
 import { AvisarErro } from "../avisar";
 import { Link, useParams } from "react-router-dom";
 import { Toc } from "../toc";
-import { useDados, votacaoDecisiva, type Materia } from "../dados";
-import { ACESSORIAS, AvisoVeto, Grade, LinkMateria, NotaFonte, Placar, ResultadoVotacao, resultadoVeto } from "../componentes";
+import { useDados, type Materia } from "../dados";
+import { resumoDoDia } from "../agora";
+import { AvisoVeto, Grade, LinkMateria, NotaFonte, Placar, ResultadoVotacao } from "../componentes";
 import { dataExtenso, nomeSessao, useTitulo } from "../util";
 import { Destaque, DicaMateria, EtapaComDica, Termo } from "../explica";
 import NaoEncontrado from "./NaoEncontrado";
@@ -11,20 +12,7 @@ import NaoEncontrado from "./NaoEncontrado";
 /** "Em poucas palavras": o que a sessão decidiu, em frases simples, a partir do dado (sem IA nova). */
 function ResumoSessao({ materias, data }: { materias: string[]; data: string }) {
   const b = useDados();
-  const itens = materias.map((s) => b.materia.get(s)).filter(Boolean).map((m) => {
-    const evs = m!.eventos.map(b.votacao).filter((e) => e.data === data);
-    // a votacao que decidiu, se foi neste dia; senao a ultima do dia que nao e emenda nem parecer sem lado
-    const dec = votacaoDecisiva(b, m!);
-    const ult = dec && dec.data === data ? dec : [...evs].reverse().find((e) => !ACESSORIAS.includes(e.etapa)) ?? evs[evs.length - 1];
-    const inverso = ult?.sentido === "inverso";
-    // veto: o resultado vem do detalhe do resumo ("MANTIDO EM DISCUSSÃO ÚNICA"), o evento fica sem "resultado"
-    const veto = m!.tipo === "VETO" ? resultadoVeto(ult, m!) : null;
-    const r = veto ? (veto === "mantido" ? "o veto foi mantido" : "o veto foi derrubado")
-      : !ult ? "entrou na pauta" : !ult.resultado ? "não foi votado nesta sessão"
-      : (ult.resultado === "APROVADO") !== inverso ? "foi aprovado" : "foi rejeitado";
-    const etapa = ult && ult.etapa !== "unica" ? ` na ${ult.etapa_txt.toLowerCase()}` : "";
-    return { m: m!, r: r + (ult?.resultado || veto ? etapa : ""), placar: ult && ult.sim != null ? `${ult.sim} a ${ult.nao ?? 0}` : null };
-  });
+  const itens = resumoDoDia(b, materias, data);
   if (!itens.length) return null;
   const menores = (m: Materia) => ["RQ", "MOCAO"].includes(m.tipo);
   const principais = [...itens.filter((x) => !menores(x.m))]

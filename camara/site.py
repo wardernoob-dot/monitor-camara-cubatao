@@ -682,6 +682,7 @@ def calcular_indice(b: "Base") -> None:
         for x in v["votos"]:
             if x["ev"]["fonte"] == "painel" and id(x["ev"]) not in presidiu:
                 presidiu[id(x["ev"])] = quem_presidia(x["ev"], pres, vice)
+                x["ev"]["presidia"] = presidiu[id(x["ev"])]  # o site mostra "presidindo" no lugar de "nao votou"
 
     base_norm = [k for k, v in vs.items() if v["em_exercicio"] and v["sessoes_total"] >= MIN_SESSOES]
     def teto(d, campo):
@@ -917,6 +918,7 @@ def _ev_json(ev: dict, vslug: dict) -> dict:
         "detalhe": ev["detalhe"],
         "votos": {vslug[k]: v for k, v in ev["votos"].items() if k in vslug},
         "sentido": ev.get("sentido"),
+        "presidia": vslug.get(ev["presidia"]) if ev.get("presidia") else None,
     }
 
 
@@ -990,7 +992,23 @@ def _contato(dados: Path) -> dict:
     zap = re.sub(r"\D", "", str(c.get("whatsapp") or ""))
     return {"email": email if re.fullmatch(r"[^@\s<>\"']+@[^@\s<>\"']+\.[a-z]{2,}", email) else None,
             "whatsapp": zap if 12 <= len(zap) <= 13 else None,
-            "formulario": url_segura(c.get("formulario"))}
+            "formulario": url_segura(c.get("formulario")),
+            "instagram": url_segura(c.get("instagram")), "canal_whatsapp": url_segura(c.get("canal_whatsapp"))}
+
+
+def _contatos_vereadores(dados: Path) -> dict:
+    """data/contatos_vereadores.json: telefone e e-mail oficiais do gabinete (copiados do SAPL), por slug do site."""
+    arq = Path(dados) / "contatos_vereadores.json"
+    return json.loads(arq.read_text("utf-8")) if arq.exists() else {}
+
+
+def _camara(dados: Path) -> dict | None:
+    c = _contatos_vereadores(dados)
+    if not c.get("camara"):
+        return None
+    out = {k: (url_segura(v) if str(v).startswith("http") else v) for k, v in c["camara"].items()}
+    out.update({"fonte": url_segura(c.get("fonte")), "conferido_em": c.get("conferido_em")})
+    return out
 
 
 def exportar(dados: Path, saida: Path | None = None) -> dict:
@@ -1017,6 +1035,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
                      for m in b.materias.values() if m["tem_pagina"] and not m["analise"]])
     explic = EX.carregar(dados)
     vereadores = []
+    contatos = _contatos_vereadores(dados).get("vereadores", {})
     for v in sorted(b.vereadores.values(), key=lambda v: v["exibicao"]):
         if not v["em_exercicio"] and v["sessoes_total"] < 1:
             vslug.pop(v["chave"], None)  # suplente de 1 ou 2 sessoes: aparece so pelo nome, sem pagina
@@ -1031,6 +1050,8 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
             "faltas": v["faltas"], "leis": v["leis"], "indice": v["indice"],
             "foto": fotos.get(v["slug"]),
+            "contato": ({k: c[k] for k in ("telefone", "email") if c.get(k)} or None)
+            if v["em_exercicio"] and (c := contatos.get(v["slug"])) else None,
             "projetos": [m["slug"] for m in v["projetos"] if m["slug"] in paginas],
             "requerimentos": [m["slug"] for m in v["requerimentos"] if m["slug"] in paginas],
         })
@@ -1074,7 +1095,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     reportagens = RP.exportar({m["slug"]: m for m in materias}, votacoes_json)
     pacote = {
         "meta": {"atualizado": datetime.now(timezone.utc).isoformat(timespec="minutes"), "nome_site": NOME_SITE,
-                 "cidade": CIDADE, "repo": REPO, "contato": _contato(dados)},
+                 "cidade": CIDADE, "repo": REPO, "contato": _contato(dados), "camara": _camara(dados)},
         "vereadores": vereadores, "materias": sorted(materias, key=lambda m: (m["ultima_data"], int(m["numero"] or 0)), reverse=True),
         "votacoes": votacoes_json, "dias": dias, "reportagens": reportagens, "executivo": RP.executivo(),
         "partidos": sorted(({**{k: x for k, x in p.items() if k not in ("membros", "em_exercicio", "rachas")},

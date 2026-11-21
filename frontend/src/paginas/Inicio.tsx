@@ -13,6 +13,7 @@ import { Paisagem } from "../guara";
 import { Destaque, Termo } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { CarrosselReportagens } from "../reportagens";
+import { EssaSemana, ProjetosSeguidos } from "../agora";
 
 const COLUNAS = 80;
 const LINHAS_TITULO: [string, string?][] = [["Como cada vereador"], ["de Cubatão ", "votou"]];
@@ -94,6 +95,27 @@ const PASSOS: { n: string; titulo: string; texto: ReactNode }[] = [
 ];
 
 
+/** O dado que mais faz pensar, dito sem opinião: quase toda votação de projeto termina sem voto contra. */
+function QuaseSempreIgual() {
+  const b = useDados();
+  const evs = b.votacoes.filter((e) => e.sim != null && !["emenda", "parecer_emenda", "parecer_comissao"].includes(e.etapa)
+    && ["PL", "PLC", "PR", "PDL", "PELOM", "VETO"].includes(b.materia.get(e.materia)?.tipo ?? ""));
+  if (evs.length < 20) return null;
+  const sem = evs.filter((e) => !e.nao).length;
+  const dez = Math.round((10 * sem) / evs.length);
+  const divididas = evs.length - sem;
+  return (
+    <section className="manchete-dado" aria-labelledby="manchete-dado-t">
+      <p className="manchete-dado__num" aria-hidden="true">{dez}<span> em 10</span></p>
+      <div>
+        <h2 id="manchete-dado-t" className="manchete-dado__titulo">{dez} em cada 10 votações de projetos em 2026 terminaram sem nenhum voto contra registrado</h2>
+        <p>Foram {evs.length} votações de projetos e vetos; em {sem}, ninguém votou contra. Nas {divididas} votações divididas dá pra ver onde os vereadores pensam diferente.</p>
+        <Link to="/projetos?destaque=1" className="link-seta">Ver os projetos com votação dividida e outros destaques <span aria-hidden="true">→</span></Link>
+      </div>
+    </section>
+  );
+}
+
 export default function Inicio() {
   useTitulo("Como cada vereador votou");
   const b = useDados();
@@ -107,6 +129,7 @@ export default function Inicio() {
   }, [colunas]);
   const recentes = useMemo(() => [...b.votacoes].filter((v) => v.resultado).reverse().slice(0, 20), [b]);
   const presidente = b.atuais.find((v) => v.cargo === "presidente");
+  const mediaIndice = useMemo(() => b.atuais.reduce((a, v) => a + v.indice.nota, 0) / Math.max(1, b.atuais.length), [b]);
   const destaques = useMemo(() => b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").slice(0, 6), [b]);
   const votados = useMemo(() => {
     return b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta")
@@ -160,6 +183,8 @@ export default function Inicio() {
       </section>
 
       <div className="pagina pagina--larga">
+        <ProjetosSeguidos />
+        <EssaSemana />
         <CarrosselReportagens />
         <section className="caminhos" aria-labelledby="caminhos-titulo">
           <header className="cab-secao">
@@ -183,7 +208,7 @@ export default function Inicio() {
         </section>
 
 
-        {votados.length > 2 && <Carrossel itens={votados} total={b.materias.filter((m) => m.lista && m.relevancia.nivel === "alta").length} />}
+        <QuaseSempreIgual />
 
         <section className="painel-secao" aria-labelledby="painel-titulo">
           <h2 id="painel-titulo" className="sr">A Câmara em 2026</h2>
@@ -336,7 +361,7 @@ export default function Inicio() {
                     <Link to={`/vereadores/${v.slug}`} className="cartao__nome esticado">{v.exibicao}</Link>
                     <span className="cartao__civil">{v.nome}{v.cargo === "presidente" ? ", presidente da Câmara" : ""} <TagPartido sigla={v.partido} /></span>
                   </span>
-                  <IndiceMini i={v.indice} />
+                  <IndiceMini i={v.indice} media={mediaIndice} />
                   <span className="cartao__nums">
                     <span><strong>{v.sessoes_total ? Math.round((100 * (v.presenca.sim ?? 0)) / v.sessoes_total) : 0}%</strong> presença</span>
                     <span><strong>{v.projetos.length}</strong> {v.projetos.length === 1 ? "projeto" : "projetos"}</span>

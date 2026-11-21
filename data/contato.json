@@ -1,6 +1,8 @@
 {
- "_leia": "Por onde o morador avisa um erro. Preencha o que tiver (e-mail, WhatsApp com DDI e DDD, ex.: 5513999999999, ou formulario). Vazio: o site so mostra o texto pronto para copiar e o link do GitHub.",
+ "_leia": "Por onde o morador avisa um erro e segue o Voto a voto. Preencha o que tiver: e-mail, WhatsApp com DDI e DDD (ex.: 5513999999999), formulario (link), instagram (link do perfil) e canal_whatsapp (link do canal). Vazio: o item nao aparece no site.",
  "email": "",
  "whatsapp": "",
- "formulario": ""
+ "formulario": "",
+ "instagram": "",
+ "canal_whatsapp": ""
 }

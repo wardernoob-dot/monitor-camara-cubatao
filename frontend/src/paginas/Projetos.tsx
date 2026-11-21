@@ -93,12 +93,12 @@ export default function Projetos() {
       </form>
       <div className="tabela-rolagem">
         <table className="tabela">
-          <thead><tr><th scope="col">Projeto</th><th scope="col">Assunto</th><th scope="col">Autoria</th><th scope="col">Situação</th></tr></thead>
+          <thead><tr><th scope="col">Projeto</th><th scope="col">Do que trata</th><th scope="col">Autoria</th><th scope="col">Situação</th></tr></thead>
           <tbody>
             {visiveis.slice(0, limite).map((m) => (
               <tr key={m.slug}>
                 <td className="tabela__projeto"><DicaMateria m={m}><Link to={`/projetos/${m.slug}`}>{m.titulo}</Link></DicaMateria> <Destaque m={m} compacto /></td>
-                <td>{m.assunto}</td>
+                <td><span className="projetos__resumo">{m.explicacao?.texto.match(/^.+?[.!?](\s|$)/)?.[0] ?? m.assunto}</span></td>
                 <td>{m.autoria}</td>
                 <td><Situacao m={m} /></td>
               </tr>
