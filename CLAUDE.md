@@ -65,6 +65,27 @@ Ficam em `.claude/skills/<nome>/SKILL.md`. São roteiros sugeridos, não regras.
 
 Ordem sugerida para uma mudança que vai pra `main`: `revisar-regra-de-voto` (se tocou em voto) → `conferir-fonte` → `clareza-pro-leitor` (se tocou em tela) → revisão do dono do projeto.
 
+**Skills de terceiros** (origem, commit, licença e regras de atualização em `.claude/skills/FONTES.md`). Elas não substituem as regras deste arquivo: se uma delas sugerir ranking por voto, adjetivo sobre vereador ou dado sem fonte, vale o `CLAUDE.md`.
+
+| Quando | Skill |
+|---|---|
+| Auditar o site (Lighthouse, WCAG, SEO, performance) | `web-quality-audit`, `accessibility`, `seo`, `performance`, `core-web-vitals`, `best-practices` |
+| Checar texto do "O que muda" antes de publicar | `fact-check-workflow`, `source-verification`, `data-journalism` |
+| Guardar prova de PDF da Câmara / detectar mudança no site dela | `web-archiving`, `page-monitoring` |
+| Newsletter ou explicação visual | `newsletter-publishing`, `visual-explainer` |
+| Testes do parser e do `textclean.py` por propriedade | `property-based-testing` |
+| Revisar dependências npm/pip ou um PR de risco | `supply-chain-risk-auditor`, `differential-review` |
+| Entender um módulo antes de mexer | `audit-context-building`, `improve-codebase-architecture`, `codebase-design` |
+| Bug difícil | `diagnosing-bugs` |
+| Decisão grande (ADR) | `grill-with-docs`, `grill-me` |
+| Testar fluxo de tela no navegador | `webapp-testing` (complementa `scripts/conferir_tela.py`) |
+| Direção visual, crítica e variações de tela | `frontend-design`, `impeccable`, `emil-design-eng`, `prototype` |
+| Dado extremo na tela (apelido enorme, sem foto, sem voto) | `break-ui` |
+| Animação | `find-animation-opportunities`, `choreograph`, `review-animations`, `remove-animations` |
+| Gráficos e narrativa com dados | `visualization-strategy-and-critique`, `scrollytelling-and-parallax-data-visualization`, `statistical-and-uncertainty-visualization`, `accessibility-and-inclusive-visualization`, `testing-data-visualizations`, `react-and-nextjs-data-visualization` |
+| Criar ou testar skill nova do projeto | `skill-creator` |
+| Registrar o gosto de design do projeto | `learn-taste` |
+
 ## Regras de interpretação de voto (ler antes de mexer em parser/consolidação/site)
 
 - O resumo só lista quem votou. Presente e ausente da lista = "não consta", **nunca** voto contrário. Na maioria das votações só aparecem os votos a favor; contrário só em votação dividida, veto e parecer.
