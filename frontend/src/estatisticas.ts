@@ -1,4 +1,11 @@
-import type { Base, Materia, Vereador } from "./dados";
+import type { Base, Materia, Vereador, Votacao } from "./dados";
+
+/** Votação em que a Câmara se dividiu: entre quem votou sim ou não, houve os dois. Na unânime todo mundo
+ * vota igual, então ela não diz nada sobre quem vota com quem (mesma regra de camara/site.py:dividida). */
+export function dividida(ev: Votacao): boolean {
+  const vs = Object.values(ev.votos);
+  return vs.includes("SIM") && vs.includes("NAO");
+}
 
 export interface Painel {
   apresentados: number;
@@ -11,6 +18,9 @@ export interface Painel {
   temas: { rotulo: string; aprovados: number; outros: number }[];
   faltas: { v: Vereador; justificada: number; ausente: number }[];
   alinhamento: { a: Vereador; b: Vereador; iguais: number; total: number }[][];
+  /** votações do painel e, entre elas, as divididas (as únicas que entram no alinhamento) */
+  votacoesPainel: number;
+  votacoesDivididas: number;
 }
 
 const APROVADO = new Set(["aprovado", "lei", "veto"]);
@@ -65,11 +75,12 @@ export function calcular(b: Base): Painel {
     .sort((x, y) => y.justificada + y.ausente - (x.justificada + x.ausente) || x.v.exibicao.localeCompare(y.v.exibicao));
 
   const painel = b.votacoes.filter((v) => v.fonte === "painel");
+  const divididas = painel.filter(dividida);
   const alinhamento = b.atuais.map((a) =>
     b.atuais.map((c) => {
       let iguais = 0;
       let total = 0;
-      for (const ev of painel) {
+      for (const ev of divididas) {
         const x = ev.votos[a.slug];
         const y = ev.votos[c.slug];
         if ((x === "SIM" || x === "NAO") && (y === "SIM" || y === "NAO")) {
@@ -97,5 +108,7 @@ export function calcular(b: Base): Painel {
     temas,
     faltas,
     alinhamento,
+    votacoesPainel: painel.length,
+    votacoesDivididas: divididas.length,
   };
 }

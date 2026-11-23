@@ -73,6 +73,14 @@ def test_sentido_do_voto():
     assert S.sentido({**base, "etapa": "1a_discussao", "etapa_txt": "1ª discussão"}) == "direto"
 
 
+def test_votacao_dividida():
+    # unanime (com ausente e branco no meio) nao conta; basta um nao contra os sim para contar
+    assert not S.dividida({"votos": {"a": "SIM", "b": "SIM", "c": "AUSENTE", "d": "BRANCO"}})
+    assert not S.dividida({"votos": {"a": "NAO", "b": "NAO"}})
+    assert not S.dividida({"votos": {}})
+    assert S.dividida({"votos": {"a": "SIM", "b": "NAO", "c": "AUSENTE"}})
+
+
 def test_hardening_url_slug_e_npz(tmp_path):
     assert S.url_segura("https://www.cubatao.sp.leg.br/doc.pdf") == "https://www.cubatao.sp.leg.br/doc.pdf"
     assert S.url_segura("javascript:alert(1)") is None

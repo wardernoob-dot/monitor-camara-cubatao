@@ -1,13 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import { AvisarErro } from "../avisar";
 import { useAnalise, useDados, votacaoDecisiva, type Votacao } from "../dados";
-import { ACESSORIAS, AvisoVeto, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";
+import { ACESSORIAS, AvisoVeto, Fonte, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import { Destaque, EtapaComDica, Termo } from "../explica";
 import { Compartilhar } from "../compartilhar";
 import NaoEncontrado from "./NaoEncontrado";
 import BlocoVeto from "../veto";
-import { Secao } from "../secao";
+import { Secao, abrirSecao } from "../secao";
 import { Toc } from "../toc";
 
 const TOC_PROJETO = [
@@ -52,6 +52,15 @@ export default function ProjetoPagina() {
         <p className="cabeca-projeto__tipo">{m.tipo_nome}</p>
         <h1 className="titulo-pagina">{m.titulo}</h1>
         <p className="cabeca-projeto__selos"><Situacao m={m} /> <Destaque m={m} /></p>
+        {/* placar so quando Sim = a favor do projeto (sentido "direto"); em parecer contrario, emenda e veto o Sim muda
+            de sentido e a explicacao fica na linha do tempo, entao aqui vai so o atalho */}
+        {dec && Object.keys(dec.votos).length > 0 && (
+          <p className="cabeca-projeto__placar">
+            {dec.sim != null && dec.sentido === "direto" && <><Placar ev={dec} />{" "}</>}
+            <a href={`#/projetos/${m.slug}`} onClick={(e) => { e.preventDefault(); abrirSecao("votacoes"); }}>ver como cada um votou ↓</a>
+            {dec.fonte && <span className="cabeca-projeto__placar-fonte">fonte: <Fonte ev={dec} /></span>}
+          </p>
+        )}
         {m.explicacao ? (
           <>
             <p className="lead">{m.explicacao.texto}</p>

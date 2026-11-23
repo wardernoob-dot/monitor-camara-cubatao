@@ -64,6 +64,7 @@ def test_exporta_so_publicado_e_confere_projeto_e_votacao(tmp_path, monkeypatch)
     out = RP.exportar(mats, vots, rascunhos=False)
     assert [r["id"] for r in out] == ["teste"]
     assert out[0]["votacao"] == 7 and out[0]["foto"]["ilustrativa"] is True
+    assert out[0]["destaque"] is False
     assert (tmp_path / "saida" / "teste-g.webp").exists()
     with pytest.raises(RP.ReportagemInvalida):
         RP.exportar({}, vots, rascunhos=False)                 # projeto que nao existe
@@ -118,3 +119,13 @@ def test_paginas_de_previa_e_rss(tmp_path):
     assert "…" in p and not (tmp_path / "p" / "rq-9-2026").exists()
     assert "<item>" in (tmp_path / "reportagens.xml").read_text("utf-8")
     assert (tmp_path / "fotos" / "previa" / "v-fulano.jpg").exists() and (tmp_path / "fotos" / "previa" / "site.jpg").exists()
+
+
+def test_destaque_marca_a_manchete_principal(tmp_path, monkeypatch):
+    from PIL import Image
+    monkeypatch.setattr(RP, "PASTA", tmp_path)
+    monkeypatch.setattr(RP, "DESTINO_FOTOS", tmp_path / "saida")
+    _escreve(tmp_path, CAB.replace("foto_ilustrativa: sim", "foto_ilustrativa: sim\ndestaque: sim"))
+    Image.new("RGB", (40, 30), "white").save(tmp_path / "fotos" / "teste.jpg")
+    vots = [{"id": 7, "materia": "pl-1-2026", "data": "2026-03-17", "etapa": "1a_discussao"}]
+    assert RP.exportar({"pl-1-2026": {}}, vots, rascunhos=False)[0]["destaque"] is True

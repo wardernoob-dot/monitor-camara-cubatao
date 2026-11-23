@@ -7,6 +7,7 @@ import { Link, useParams } from "react-router-dom";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
 import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, ResultadoVotacao, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";
+import { dividida } from "../estatisticas";
 import { Destaque, Dica, DicaMateria, EtapaComDica, Termo, naPratica } from "../explica";
 import { useContador, useEntrou } from "../movimento";
 import { Funil } from "../viz";
@@ -58,12 +59,13 @@ export default function VereadorPagina() {
     return b.atuais.filter((o) => o.slug !== v.slug).map((o) => {
       let iguais = 0, total = 0;
       for (const ev of b.votacoes) {
-        if (ev.fonte !== "painel") continue;
+        // so as divididas: na unanime todo mundo vota igual e isso nao diz nada sobre afinidade
+        if (ev.fonte !== "painel" || !dividida(ev)) continue;
         const x = ev.votos[v.slug], y = ev.votos[o.slug];
         if ((x === "SIM" || x === "NAO") && (y === "SIM" || y === "NAO")) { total++; if (x === y) iguais++; }
       }
       return { nome: o.exibicao, iguais, total };
-    }).filter((x) => x.total >= 10).sort((a, c) => c.iguais / c.total - a.iguais / a.total);
+    }).filter((x) => x.total >= 5).sort((a, c) => c.iguais / c.total - a.iguais / a.total);
   }, [b, v]);
 
   if (!v) return <NaoEncontrado />;
@@ -76,6 +78,7 @@ export default function VereadorPagina() {
     (filtro === "semvoto" && (voto === "BRANCO" || voto === "AUSENTE")));
   const projetos = v.projetos.map((s) => b.materia.get(s)!).filter(Boolean);
   const reqs = v.requerimentos.map((s) => b.materia.get(s)!).filter(Boolean);
+  const divExec = (v.executivo.div_com ?? 0) + (v.executivo.div_contra ?? 0);
   const filtros: [Filtro, string, number][] = [
     ["destaque", "Projetos em destaque", nDestaque],
     ["todos", "Todos, com moções e requerimentos", votos.length],
@@ -92,7 +95,7 @@ export default function VereadorPagina() {
           <h1 className="titulo-pagina">{v.exibicao}</h1>
           <p className="perfil__civil">
             {v.nome}
-            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href={`#/vereadores/${v.slug}`} aria-label="Fonte do partido" onClick={(e) => {
+            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href={`#/vereadores/${v.slug}`} aria-label="1: fonte do partido" onClick={(e) => {
               // as rotas usam #; um link "#nota-partido" trocaria a rota. Aqui só rola até a nota.
               e.preventDefault();
               const nota = document.getElementById("nota-partido");
@@ -118,9 +121,11 @@ export default function VereadorPagina() {
         <Num valor={projetos.length} rotulo="projetos de lei apresentados" para="projetos" />
         <Num valor={v.leis} rotulo="viraram lei" para="projetos" />
         <Num valor={reqs.length} rotulo="requerimentos e moções aprovados" para={reqs.length ? "requerimentos" : undefined} />
-        {v.executivo.com + v.executivo.contra > 0 && (
-          <Num valor={Math.round((100 * v.executivo.com) / (v.executivo.com + v.executivo.contra))} sufixo="%"
-            rotulo={`das vezes votou como a Prefeitura (${v.executivo.contra} ${v.executivo.contra === 1 ? "vez" : "vezes"} contra)`} para={v.executivo.contra > 0 ? "prefeitura" : undefined} />
+        {divExec >= 5 ? (
+          <Num valor={Math.round((100 * (v.executivo.div_com ?? 0)) / divExec)} sufixo="%"
+            rotulo={`votou como a Prefeitura nas ${divExec} votações divididas em que ela tinha lado (${v.executivo.contra} ${v.executivo.contra === 1 ? "vez" : "vezes"} contra)`} para={v.executivo.contra > 0 ? "prefeitura" : undefined} />
+        ) : v.executivo.com + v.executivo.contra > 0 && (
+          <Num valor={v.executivo.contra} rotulo={`${v.executivo.contra === 1 ? "vez" : "vezes"} votou contra a Prefeitura (${v.executivo.com + v.executivo.contra} votações em que ela tinha lado, ${divExec} ${divExec === 1 ? "dividida" : "divididas"})`} para={v.executivo.contra > 0 ? "prefeitura" : undefined} />
         )}
       </dl>
 
@@ -182,7 +187,7 @@ export default function VereadorPagina() {
       )}
 
       {alinhados.length > 0 && (
-        <Secao id="alinhamento" titulo="Com quem vota igual" resumo={`mais igual: ${alinhados[0].nome}`}>
+        <Secao id="alinhamento" titulo="Com quem vota igual" resumo={`nas votações divididas`}>
           <div className="duas-colunas">
             <div>
               <h3 className="sub-titulo">Vota mais igual a</h3>
@@ -192,7 +197,7 @@ export default function VereadorPagina() {
               <h3 className="sub-titulo">Vota mais diferente de</h3>
               <Funil etapas={[...alinhados].reverse().slice(0, 4).map((x) => ({ rotulo: `${x.nome} (${x.iguais} de ${x.total})`, valor: Math.round((100 * x.iguais) / x.total) }))} max={100} sufixo="%" />
             </div>
-            <p className="nota">Porcentagem das votações do painel em que os dois votaram igual, contando só as que ambos votaram sim ou não.</p>
+            <p className="nota">Conta só as votações do painel em que a Câmara se dividiu (teve sim e não) e os dois votaram sim ou não. Nas unânimes todo mundo vota igual, então elas ficam de fora. Com poucas votações divididas, uma diferença de um voto já muda a ordem: leia os números, não só a posição.</p>
           </div>
         </Secao>
       )}

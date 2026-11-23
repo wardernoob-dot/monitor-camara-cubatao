@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { useDados, votacaoDecisiva, type Materia, type Vereador, type Votacao } from "../dados";
+import { ComDados, useDados, votacaoDecisiva, type Materia, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda, TagPartido } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
@@ -12,7 +12,7 @@ import { Painel } from "../painel";
 import { Paisagem } from "../guara";
 import { Destaque, Termo } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
-import { CarrosselReportagens } from "../reportagens";
+import { CapaOQueMuda, Letreiro } from "../reportagens";
 
 const COLUNAS = 80;
 const LINHAS_TITULO: [string, string?][] = [["Como cada vereador"], ["de Cubatão ", "votou"]];
@@ -94,6 +94,39 @@ const PASSOS: { n: string; titulo: string; texto: ReactNode }[] = [
 ];
 
 
+/** Topo da home. Nao depende do dados.json: o main.tsx o coloca fora do <ComDados>, entao ele pinta antes dos dados
+ * chegarem e nao e remontado depois (o maior texto da tela pinta cedo: LCP). Anima so na primeira vez. */
+let heroJaAnimou = false;
+export function HeroInicio() {
+  const reduz = useReducedMotion();
+  const [anima] = useState(() => !reduz && !heroJaAnimou);
+  useEffect(() => { heroJaAnimou = true; }, []);
+  return (
+    <section className="hero" aria-labelledby="titulo-inicio">
+      <Paisagem />
+      <div className="hero__dentro">
+        <p className="hero__selo">Câmara Municipal de Cubatão · 2026</p>
+        <h1 id="titulo-inicio" className="hero__titulo">
+          {LINHAS_TITULO.map((l, i) => (
+            <span key={l[0]} className="hero__linha">
+              <motion.span initial={anima ? { y: "110%" } : false} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.1 + i * 0.08, ease: EASE }}>
+                {l[0]}{l[1] && <span className="hero__destaque">{l[1]}</span>}
+              </motion.span>
+            </span>
+          ))}
+        </h1>
+        <p className="hero__texto">O voto de cada vereador nas votações de 2026, sempre com a fonte.</p>
+        <motion.div className="hero__acoes" initial={anima ? { opacity: 0.4, y: 6 } : false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65, ease: EASE }}>
+          <Link className="botao botao--acao" to="/vereadores">Ver os vereadores</Link>
+          <Link className="botao botao--fantasma" to="/projetos">Buscar um projeto</Link>
+        </motion.div>
+        {/* a vaga existe desde a primeira pintura; o letreiro entra quando os dados chegam, sem empurrar nada (CLS) */}
+        <div className="letreiro-vaga"><ComDados><Letreiro /></ComDados></div>
+      </div>
+    </section>
+  );
+}
+
 export default function Inicio() {
   useTitulo("Como cada vereador votou");
   const b = useDados();
@@ -132,35 +165,13 @@ export default function Inicio() {
     const pares = p.alinhamento.flat().filter((c) => c.a !== c.b && c.total);
     return pares.length ? Math.round((100 * pares.reduce((s, c) => s + c.iguais / c.total, 0)) / pares.length) : 0;
   }, [p]);
-  const corAlinh = (v: number | null) => v == null ? "var(--suave-2)" : `color-mix(in srgb, var(--color-accent) ${Math.round(Math.max(0, (v - 0.6) / 0.4) * 100)}%, var(--suave))`;
+  const corAlinh = (v: number | null) => v == null ? "var(--suave-2)" : `color-mix(in srgb, var(--color-accent) ${Math.round(Math.max(0, Math.min(1, v)) * 100)}%, var(--suave))`;
 
   return (
     <>
-      <section className="hero" aria-labelledby="titulo-inicio">
-        <Paisagem />
-        <div className="hero__dentro">
-          <p className="hero__selo">Câmara Municipal de Cubatão · 2026</p>
-          <h1 id="titulo-inicio" className="hero__titulo">
-            {LINHAS_TITULO.map((l, i) => (
-              <span key={l[0]} className="hero__linha">
-                <motion.span initial={reduz ? false : { y: "110%" }} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.1 + i * 0.08, ease: EASE }}>
-                  {l[0]}{l[1] && <span className="hero__destaque">{l[1]}</span>}
-                </motion.span>
-              </span>
-            ))}
-          </h1>
-          <motion.p className="hero__texto" initial={reduz ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.5 }}>
-            O voto de cada um dos {b.atuais.length} vereadores em {b.votacoes.filter((v) => Object.keys(v.votos).length).length} votações de 2026, sempre com a fonte.
-          </motion.p>
-          <motion.div className="hero__acoes" initial={reduz ? false : { opacity: 0.4, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65, ease: EASE }}>
-            <Link className="botao botao--acao" to="/vereadores">Ver os vereadores</Link>
-            <Link className="botao botao--fantasma" to="/projetos">Buscar um projeto</Link>
-          </motion.div>
-        </div>
-      </section>
 
       <div className="pagina pagina--larga">
-        <CarrosselReportagens />
+        <CapaOQueMuda />
         <section className="caminhos" aria-labelledby="caminhos-titulo">
           <header className="cab-secao">
             <p className="cab-secao__selo">Explore o site</p>
@@ -269,8 +280,8 @@ export default function Inicio() {
                 />
             </div>
               </>) },
-            { id: "alinhamento", numero: mediaAlinh, sufixo: "%", rotulo: "das vezes votam igual", titulo: "Quem vota igual a quem", arrastavel: false,
-              descricao: "Votações do painel em que os dois votaram igual. Toque num quadrado para ver onde discordaram.", conteudo: (
+            { id: "alinhamento", numero: mediaAlinh, sufixo: "%", rotulo: "das vezes votam igual quando a Câmara se divide", titulo: "Quem vota igual a quem", arrastavel: false,
+              descricao: `Conta só as ${p.votacoesDivididas} votações do painel em que a Câmara se dividiu. Nas outras ${p.votacoesPainel - p.votacoesDivididas}, todos que votaram votaram igual, então elas não mostram quem vota com quem. Toque num quadrado para ver onde discordaram.`, conteudo: (
               <>
 <div className="tile-solto">
                 <Heatmap
@@ -282,7 +293,7 @@ export default function Inicio() {
                   aoClicar={(c) => c.a !== c.b && setPar({ a: c.a, b: c.b })}
                   rotuloLinha={(i) => b.atuais[i].exibicao}
                   rotuloColuna={(j) => b.atuais[j].iniciais}
-                  legenda={<p className="tile__nota heat__legenda"><span className="heat__amostra" style={{ background: corAlinh(0.6) }} /> 60% ou menos <span className="heat__amostra" style={{ background: corAlinh(1) }} /> 100%</p>}
+                  legenda={<p className="tile__nota heat__legenda"><span className="heat__amostra" style={{ background: corAlinh(0) }} /> 0% <span className="heat__amostra" style={{ background: corAlinh(0.5) }} /> 50% <span className="heat__amostra" style={{ background: corAlinh(1) }} /> 100%</p>}
                 />
             </div>
               </>) },

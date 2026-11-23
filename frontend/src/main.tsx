@@ -6,13 +6,13 @@ import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-sans/600.css";
 import "@fontsource/geist-mono/400.css";
 import "./estilo.css";
-import { ProvedorDados, useDados } from "./dados";
+import { ComDados, ProvedorDados, useDados } from "./dados";
 import { Busca, BotaoBusca } from "./busca";
 import { BotaoTema } from "./tema";
 import { BotaoPergunta, Pergunta } from "./pergunta";
 import { Guara, GuaraVoo } from "./guara";
 import { motion, useScroll } from "framer-motion";
-import Inicio from "./paginas/Inicio";
+import Inicio, { HeroInicio } from "./paginas/Inicio";
 const Vereadores = lazy(() => import("./paginas/Vereadores"));
 const VereadorPagina = lazy(() => import("./paginas/Vereador"));
 const Projetos = lazy(() => import("./paginas/Projetos"));
@@ -151,6 +151,7 @@ function Rodape() {
 }
 
 function App() {
+  const naInicial = useLocation().pathname === "/";
   return (
     <>
       <a className="pular" href="#conteudo" onClick={(e) => { e.preventDefault(); document.getElementById("conteudo")?.focus(); }}>
@@ -195,8 +196,10 @@ function App() {
       <Pergunta />
       <ProvedorDados>
         <RolaParaTopo />
-        <Busca />
+        <ComDados><Busca /></ComDados>
         <main id="conteudo" tabIndex={-1}>
+          {naInicial && <HeroInicio />}
+          <ComDados aviso>
           <Suspense fallback={<div className="pagina carregando" aria-busy="true"><p>Carregando…</p></div>}>
           <Routes>
             <Route path="/" element={<Inicio />} />
@@ -220,8 +223,9 @@ function App() {
             <Route path="*" element={<NaoEncontrado />} />
           </Routes>
           </Suspense>
+          </ComDados>
         </main>
-        <Rodape />
+        <ComDados><Rodape /></ComDados>
       </ProvedorDados>
     </>
   );

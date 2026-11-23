@@ -130,7 +130,7 @@ const TERMOS = {
   loa: ["Lei Orgânica", "A lei básica do município, que organiza o poder público local."],
   indice: ["Índice de Atuação", "Nota de 0 a 10 que resume atividade registrada em documento público: presença, participação nas votações, projetos e fiscalização. Não mede a qualidade das ideias nem o trabalho que não deixa registro."],
   posicao: ["Posição da Prefeitura", "Conta só votações em que ela tem lado claro: projetos enviados pelo prefeito (votar pela aprovação) e vetos do prefeito (votar por manter o veto). Votar diferente não é bom nem ruim."],
-  bancada: ["Bancada unida", "A parte dos votos que acompanhou a maioria do próprio partido, nas votações em que dois ou mais membros votaram."],
+  bancada: ["Bancada unida", "A parte dos votos que acompanhou a maioria do próprio partido, nas votações divididas (com sim e não) em que dois ou mais membros votaram. As unânimes ficam de fora: nelas todo mundo vota igual."],
 } as const;
 export type ChaveTermo = keyof typeof TERMOS;
 

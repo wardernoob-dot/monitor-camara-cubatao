@@ -3,6 +3,7 @@ id: estacionamento-rotativo
 status: publicado
 data: 2026-11-08
 ordem: 1
+destaque: sim
 chapeu: Mexe no bolso
 manchete: Estacionar na rua vai ser pago em parte de Cubatão a partir de 2027
 linha_fina: Lei aprovada em março cria o estacionamento rotativo. Quais ruas e quanto vai custar ainda não foram definidos.

@@ -34,9 +34,14 @@ function Estat({ rotulo, valor, sufixo, barra, nota, contra }: { rotulo: ReactNo
   );
 }
 
+/** Votos com e contra a Prefeitura só nas votações divididas (na unânime todo mundo vota igual). */
+function execDiv(e: { com: number; contra: number; div_com?: number; div_contra?: number }) {
+  return e.div_com == null ? { com: e.com, contra: e.contra } : { com: e.div_com, contra: e.div_contra ?? 0 };
+}
+
 function BarraExecutivo({ com, contra }: { com: number; contra: number }) {
   const t = com + contra;
-  if (!t) return <span className="nota">sem votos com posição da Prefeitura definida</span>;
+  if (!t) return <span className="nota">sem votação dividida com posição da Prefeitura definida</span>;
   return (
     <span className="exec" title={`${com} com a Prefeitura, ${contra} contra`}>
       <span className="exec__trilho" aria-hidden="true">
@@ -122,11 +127,12 @@ export function ListaPartidos() {
               </span>
               <dl className="partido-card__medidas">
                 <Medida rotulo="Índice médio" valor={p.indice_medio != null ? `${fmt1(p.indice_medio)}` : "–"} />
-                <Medida rotulo="Bancada unida" valor={p.coesao != null ? `${p.coesao}%` : "–"} nota={p.coesao == null ? "1 vereador" : undefined} />
+                <Medida rotulo="Bancada unida" valor={p.coesao_div != null ? `${p.coesao_div}%` : p.coesao != null ? `${p.coesao}%` : "–"}
+                  nota={p.coesao == null ? "1 vereador" : p.coesao_div != null ? `nas ${p.votacoes_coesao_div} divididas` : undefined} />
                 <Medida rotulo="Projetos / leis" valor={`${p.projetos} / ${p.leis}`} />
               </dl>
-              <p className="partido-card__exec-rot">Votos na posição da Prefeitura</p>
-              <BarraExecutivo com={p.executivo.com} contra={p.executivo.contra} />
+              <p className="partido-card__exec-rot">Votos na posição da Prefeitura, nas votações divididas</p>
+              <BarraExecutivo {...execDiv(p.executivo)} />
             </li>
           );
         })}
@@ -135,7 +141,8 @@ export function ListaPartidos() {
         itens={[
           ["Posição da Prefeitura", "Conta só votações em que ela tem lado claro: projetos enviados pelo prefeito (votar pela aprovação) e vetos do prefeito (votar por manter o veto)."],
           ["Votar diferente", "Não é bom nem ruim: mostra independência ou oposição, conforme o caso."],
-          ["Bancada unida", "É a parte dos votos que acompanhou a maioria do próprio partido, nas votações em que dois ou mais membros votaram."],
+          ["Bancada unida", "É a parte dos votos que acompanhou a maioria do próprio partido, nas votações divididas em que dois ou mais membros votaram."],
+          ["Votações divididas", "As que tiveram sim e não. Nas unânimes todo mundo vota igual, então elas não mostram se uma bancada anda junta ou se alguém acompanha a Prefeitura."],
         ]}
         nota="Até agosto de 2026 os votos vêm do resumo oficial, que costuma registrar como favorável quem estava presente."
         link={{ ancora: "partidos", rotulo: "Como funciona" }}
@@ -145,12 +152,13 @@ export function ListaPartidos() {
 }
 
 function LinhaMembro({ v }: { v: Vereador }) {
-  const t = v.executivo.com + v.executivo.contra;
+  const e = execDiv(v.executivo);
+  const t = e.com + e.contra;
   return (
     <tr>
       <th scope="row"><span className="tabela__quem"><Avatar v={v} tamanho="p" /> <Link to={`/vereadores/${v.slug}`}>{v.exibicao}</Link>{!v.em_exercicio && <span className="selo-cinza">não está em exercício</span>}</span></th>
       <td className="tabela__num">{v.indice.parcial ? "–" : fmt1(v.indice.nota)}</td>
-      <td className="tabela__num">{t ? `${pct(v.executivo.com, t)}%` : "–"}</td>
+      <td className="tabela__num">{t ? `${pct(e.com, t)}% de ${t}` : "–"}</td>
       <td className="tabela__num">{v.executivo.contra}</td>
       <td className="tabela__num">{v.projetos.length}</td>
       <td className="tabela__num">{v.leis}</td>
@@ -168,7 +176,8 @@ export function PaginaPartido() {
   const membros = p.membros.map((s) => b.vereador.get(s)!).filter(Boolean)
     .sort((a, c) => Number(c.em_exercicio) - Number(a.em_exercicio) || c.indice.nota - a.indice.nota);
   const rachas = p.rachas.map(b.votacao).reverse();
-  const t = p.executivo.com + p.executivo.contra;
+  const ex = execDiv(p.executivo);
+  const t = ex.com + ex.contra;
 
   return (
     <div className="pagina">
@@ -183,10 +192,10 @@ export function PaginaPartido() {
       <dl className="bn">
         <Estat rotulo="Índice médio da bancada" valor={p.indice_medio != null ? fmt1(p.indice_medio) : "–"} sufixo={p.indice_medio != null ? "/10" : undefined}
           barra={p.indice_medio != null ? p.indice_medio * 10 : undefined} nota="média das notas dos membros" />
-        <Estat rotulo={<Termo chave="posicao">Na posição da Prefeitura</Termo>} valor={t ? `${pct(p.executivo.com, t)}%` : "–"} barra={t ? (100 * p.executivo.com) / t : undefined}
-          nota={`${p.executivo.com} com a Prefeitura · ${p.executivo.contra} contra`} contra />
-        <Estat rotulo={<Termo chave="bancada">Bancada unida</Termo>} valor={p.coesao != null ? `${p.coesao}%` : "–"} barra={p.coesao ?? undefined}
-          nota={p.coesao == null ? "só 1 vereador" : "acompanhou a maioria do partido"} />
+        <Estat rotulo={<Termo chave="posicao">Na posição da Prefeitura</Termo>} valor={t ? `${pct(ex.com, t)}%` : "–"} barra={t ? (100 * ex.com) / t : undefined}
+          nota={`${ex.com} com a Prefeitura · ${ex.contra} contra, nas votações divididas`} contra />
+        <Estat rotulo={<Termo chave="bancada">Bancada unida</Termo>} valor={(p.coesao_div ?? p.coesao) != null ? `${p.coesao_div ?? p.coesao}%` : "–"} barra={p.coesao_div ?? p.coesao ?? undefined}
+          nota={p.coesao == null ? "só 1 vereador" : p.coesao_div != null ? `acompanhou a maioria do partido nas ${p.votacoes_coesao_div} votações divididas (em todas, com as unânimes: ${p.coesao}%)` : "acompanhou a maioria do partido"} />
         <Estat rotulo="Projetos / viraram lei" valor={`${p.projetos} / ${p.leis}`} nota="apresentados em 2026" />
       </dl>
 
@@ -212,7 +221,7 @@ export function PaginaPartido() {
       <h2 id="t-lado" className="secao__titulo">Cada um, lado a lado</h2>
       <div className="tabela-rolagem">
         <table className="tabela">
-          <thead><tr><th scope="col">Vereador</th><th scope="col" className="tabela__num">Índice</th><th scope="col" className="tabela__num">Com a Prefeitura</th><th scope="col" className="tabela__num">Contra a Prefeitura</th><th scope="col" className="tabela__num">Projetos</th><th scope="col" className="tabela__num">Leis</th></tr></thead>
+          <thead><tr><th scope="col">Vereador</th><th scope="col" className="tabela__num">Índice</th><th scope="col" className="tabela__num">Com a Prefeitura (divididas)</th><th scope="col" className="tabela__num">Contra a Prefeitura</th><th scope="col" className="tabela__num">Projetos</th><th scope="col" className="tabela__num">Leis</th></tr></thead>
           <tbody>{membros.map((v) => <LinhaMembro key={v.slug} v={v} />)}</tbody>
         </table>
       </div>

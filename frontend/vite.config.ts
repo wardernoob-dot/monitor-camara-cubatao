@@ -25,6 +25,7 @@ const dadosDoDocs = (): Plugin => ({
 export default defineConfig({
   plugins: [react(), dadosDoDocs()],
   base: "./",
-  build: { outDir: "../docs", emptyOutDir: false, assetsDir: "assets", sourcemap: false },
+  // assetsInlineLimit 0: fonte pequena virava data: no CSS, e o CSP (font-src 'self') bloqueava
+  build: { outDir: "../docs", emptyOutDir: false, assetsDir: "assets", sourcemap: false, assetsInlineLimit: 0 },
   server: { fs: { allow: [".."] } },
 });
