@@ -43,10 +43,17 @@ jobs:
           git add docs/data/ docs/fotos/
           if ! git diff --cached --quiet; then
             git commit -m "site: regenera docs/data e docs/fotos"
-            git push
+            # se alguem mesclou outro PR enquanto este rodava, a main andou: rebase e tenta de novo
+            # (em 23/11 o merge do #25 logo depois do #26 derrubou este passo e o Surge nao publicou)
+            for i in 1 2 3; do
+              git pull --rebase -X theirs -q && git push && break
+              sleep 10
+            done
           fi
 
       - name: Publicar no Surge
+        # publica mesmo se o commit acima falhar: o docs/ do checkout ja tem o front novo
+        if: ${{ !cancelled() }}
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
