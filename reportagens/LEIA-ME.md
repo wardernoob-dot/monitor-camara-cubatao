@@ -1,9 +1,10 @@
 # Reportagens
 
-Textos curtos, em linguagem simples, sobre projetos e leis que mexem com o dia a dia de Cubatão. Aparecem no carrossel logo abaixo do topo da página inicial e em `#/reportagens/<id>`.
+Textos curtos, em linguagem simples, sobre projetos e leis que mexem com o dia a dia de Cubatão. Aparecem na capa "O que muda", logo abaixo do topo da página inicial, e em `#/reportagens/<id>`.
 
 - Um arquivo por reportagem: `<id>.md` (o `id` do cabeçalho é igual ao nome do arquivo).
 - Foto em `fotos/<id>.jpg` (até 2400 px). O `site.py` gera `docs/fotos/reportagens/<id>-g.webp` e `<id>-p.webp`.
+- `destaque: sim` faz a reportagem virar a manchete principal da capa "O que muda" na página inicial (com mais de uma marcada, vale a mais recente; sem nenhuma, a mais recente). As outras aparecem por data.
 - Só aparece no site com `status: publicado`. Rascunho só aparece na prévia local (`VAV_RASCUNHOS=1`).
 - **Quem aprova o texto é o dono do projeto.** Ao publicar, preencha `aprovado_por: equipe Voto a voto` (registro interno; não aparece no site).
 
