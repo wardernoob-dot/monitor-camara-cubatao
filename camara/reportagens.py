@@ -178,6 +178,8 @@ def exportar(materias: dict[str, dict], votacoes: list[dict], rascunhos: bool | 
                      "ilustrativa": r.get("foto_ilustrativa", "").lower() in ("sim", "s", "true", "1")},
             "corpo": r["corpo"],
             "ordem": int(r["ordem"]) if r.get("ordem", "").isdigit() else 99,
+            # manchete principal da capa "O que muda"; com mais de uma marcada, o site usa a mais recente
+            "destaque": r.get("destaque", "").lower() in ("sim", "s", "true", "1"),
         })
     out.sort(key=lambda r: (r["ordem"], r["id"]))
     out.sort(key=lambda r: r["data"], reverse=True)  # mais recente primeiro; no mesmo dia, pela ordem

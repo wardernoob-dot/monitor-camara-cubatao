@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { useDados, votacaoDecisiva, type Materia, type Vereador, type Votacao } from "../dados";
+import { ComDados, useDados, votacaoDecisiva, type Materia, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda, TagPartido } from "../componentes";
 import { calcular } from "../estatisticas";
 import { EASE, useEntrou } from "../movimento";
@@ -12,7 +12,7 @@ import { Painel } from "../painel";
 import { Paisagem } from "../guara";
 import { Destaque, Termo } from "../explica";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
-import { CarrosselReportagens } from "../reportagens";
+import { CapaOQueMuda, Letreiro } from "../reportagens";
 
 const COLUNAS = 80;
 const LINHAS_TITULO: [string, string?][] = [["Como cada vereador"], ["de Cubatão ", "votou"]];
@@ -120,6 +120,8 @@ export function HeroInicio() {
           <Link className="botao botao--acao" to="/vereadores">Ver os vereadores</Link>
           <Link className="botao botao--fantasma" to="/projetos">Buscar um projeto</Link>
         </motion.div>
+        {/* a vaga existe desde a primeira pintura; o letreiro entra quando os dados chegam, sem empurrar nada (CLS) */}
+        <div className="letreiro-vaga"><ComDados><Letreiro /></ComDados></div>
       </div>
     </section>
   );
@@ -169,7 +171,7 @@ export default function Inicio() {
     <>
 
       <div className="pagina pagina--larga">
-        <CarrosselReportagens />
+        <CapaOQueMuda />
         <section className="caminhos" aria-labelledby="caminhos-titulo">
           <header className="cab-secao">
             <p className="cab-secao__selo">Explore o site</p>

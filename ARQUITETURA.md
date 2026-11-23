@@ -315,7 +315,7 @@ monitor-camara-cubatao/
 ├── frontend/                # Aplicação web em React 18 + TypeScript + Vite
 │   └── src/
 │       ├── paginas/         # Início, Reportagens, Vereadores, Ranking, Partidos, Projetos, Sessões, Como funciona
-│       ├── reportagens.tsx  # Carrossel de reportagens e peças (quem propôs, como votaram, o que o prefeito fez)
+│       ├── reportagens.tsx  # Capa "O que muda", letreiro "Últimas votações" e peças da reportagem (quem propôs, como votaram, o que o prefeito fez)
 │       ├── compartilhar.tsx # Botões de compartilhar com link de prévia
 │       ├── dados.tsx        # Hooks de carregamento e validação de dados
 │       └── util.tsx         # Utilitários de formatação e navegação

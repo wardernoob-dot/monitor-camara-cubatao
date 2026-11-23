@@ -169,6 +169,8 @@ export interface Reportagem {
   votacao: number | null;
   foto: { g: string; p: string; alt: string; legenda: string | null; credito: string; licenca: string; link: string; ilustrativa: boolean };
   corpo: { t: "h" | "p" | "ul"; x: string | string[] }[];
+  /** manchete principal da capa "O que muda" */
+  destaque?: boolean;
 }
 
 interface Bruto {
