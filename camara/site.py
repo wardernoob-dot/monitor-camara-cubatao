@@ -550,20 +550,34 @@ def posicao_executivo(ev: dict) -> str | None:
     return "SIM" if ev["sentido"] == "direto" else "NAO"
 
 
+def dividida(ev: dict) -> bool:
+    """Votacao em que a Camara se dividiu: entre quem votou sim ou nao, houve os dois.
+    Na unanime todos votam igual, entao ela nao diz nada sobre afinidade entre vereadores,
+    partidos ou com a Prefeitura; as contagens '_div' abaixo usam so as divididas."""
+    vs = set(ev["votos"].values())
+    return "SIM" in vs and "NAO" in vs
+
+
 def calcular_executivo(b: "Base") -> None:
-    """v['executivo'] = votos com e contra a posicao da Prefeitura; b.partidos = metricas por partido."""
+    """v['executivo'] = votos com e contra a posicao da Prefeitura (todas e so as divididas);
+    b.partidos = metricas por partido."""
     for v in b.vereadores.values():
-        com, contra, contra_lista = 0, 0, []
+        com, contra, contra_lista, div_com, div_contra = 0, 0, [], 0, 0
         for x in v["votos"]:
             pos = posicao_executivo(x["ev"])
             if pos is None or x["voto"] not in ("SIM", "NAO"):
                 continue
-            if x["voto"] == pos:
+            junto = x["voto"] == pos
+            if junto:
                 com += 1
             else:
                 contra += 1
                 contra_lista.append(x["ev"])
-        v["executivo"] = {"com": com, "contra": contra, "contra_lista": contra_lista}
+            if dividida(x["ev"]):
+                div_com += junto
+                div_contra += not junto
+        v["executivo"] = {"com": com, "contra": contra, "contra_lista": contra_lista,
+                          "div_com": div_com, "div_contra": div_contra}
 
     grupos: dict[str, list[str]] = defaultdict(list)
     for k, v in b.vereadores.items():
@@ -572,7 +586,7 @@ def calcular_executivo(b: "Base") -> None:
     partidos = {}
     for sigla, ks in grupos.items():
         # coesao: em cada votacao com 2+ membros votando sim/nao, quantos acompanharam a maioria do partido
-        coes, n_vot, rachas = [], 0, []
+        coes, n_vot, rachas, coes_div = [], 0, [], []
         for ev in b.votacoes:
             vs = [ev["votos"].get(k) for k in ks if ev["votos"].get(k) in ("SIM", "NAO")]
             if len(vs) < 2:
@@ -580,17 +594,23 @@ def calcular_executivo(b: "Base") -> None:
             n_vot += 1
             c = Counter(vs)
             coes.append(c.most_common(1)[0][1] / len(vs))
+            if dividida(ev):
+                coes_div.append(coes[-1])
             if len(c) > 1:
                 rachas.append(ev)
         com = sum(b.vereadores[k]["executivo"]["com"] for k in ks)
         contra = sum(b.vereadores[k]["executivo"]["contra"] for k in ks)
+        div_com = sum(b.vereadores[k]["executivo"]["div_com"] for k in ks)
+        div_contra = sum(b.vereadores[k]["executivo"]["div_contra"] for k in ks)
         titulares = [k for k in ks if b.vereadores[k]["em_exercicio"]]
         notas = [b.vereadores[k]["indice"]["nota"] for k in titulares if not b.vereadores[k]["indice"]["parcial"]]
         partidos[sigla] = {
             "sigla": sigla, "membros": ks, "em_exercicio": titulares,
             "indice_medio": round(sum(notas) / len(notas), 1) if notas else None,
-            "executivo": {"com": com, "contra": contra},
+            "executivo": {"com": com, "contra": contra, "div_com": div_com, "div_contra": div_contra},
             "coesao": round(100 * sum(coes) / len(coes)) if coes else None, "votacoes_coesao": n_vot,
+            "coesao_div": round(100 * sum(coes_div) / len(coes_div)) if coes_div else None,
+            "votacoes_coesao_div": len(coes_div),
             "rachas": rachas,
             "projetos": len({m["slug"] for k in ks for m in b.vereadores[k]["projetos"]}),
             "leis": len({m["slug"] for k in ks for m in b.vereadores[k]["projetos"] if m["lei"]}),
@@ -1026,7 +1046,8 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "partido": v["partido"], "partido_fonte": v.get("partido_fonte"), "partido_url": v.get("partido_url"),
             "cargo": v.get("cargo"),
             "executivo": {"com": v["executivo"]["com"], "contra": v["executivo"]["contra"],
-                          "contra_ids": [e["id"] for e in v["executivo"]["contra_lista"]]},
+                          "contra_ids": [e["id"] for e in v["executivo"]["contra_lista"]],
+                          "div_com": v["executivo"]["div_com"], "div_contra": v["executivo"]["div_contra"]},
             "em_exercicio": v["em_exercicio"], "contagem": v["contagem"], "total_votacoes": v["total_votacoes"],
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
             "faltas": v["faltas"], "leis": v["leis"], "indice": v["indice"],

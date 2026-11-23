@@ -55,7 +55,9 @@ strong { font-weight: 600; }
 .pular { position: absolute; left: -999px; top: 0; background: var(--inverso); color: var(--branco); padding: .5rem 1rem; z-index: 50; border-radius: var(--raio); }
 .pular:focus { left: 1rem; top: .5rem; }
 main:focus { outline: none; }
-.carregando { min-height: 60vh; color: var(--color-surface-3); }
+/* ocupa a tela inteira: o rodape nasce fora da vista e nao "pula" quando a pagina chega (CLS) */
+.carregando { min-height: 100vh; min-height: 100svh; color: var(--color-surface-3); }
+.hero ~ .carregando { min-height: 0; }
 
 /* ---------------------------------------------------------------- botões */
 .botao { display: inline-flex; align-items: center; gap: .4rem; font: 500 .95rem/1 var(--font-body); padding: .8rem 1.15rem; border-radius: var(--raio); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: background .2s, border-color .2s; }
@@ -222,6 +224,15 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 .perfil { display: flex; gap: 1.25rem; align-items: center; margin-bottom: 2rem; }
 .perfil .titulo-pagina { margin-bottom: .15rem; }
 .perfil__civil { color: var(--color-surface-3); margin: 0; }
+/* nome longo no celular (Ivan Hildebrando em 360 px, Alessandro Oliveira em 320 px): a coluna do texto pode
+   encolher, foto e titulo diminuem e, so se ainda nao couber, a palavra quebra */
+.perfil > div { min-width: 0; }
+.perfil .titulo-pagina { overflow-wrap: break-word; }
+@media (max-width: 420px) {
+  .perfil { gap: 1rem; }
+  .perfil .avatar--g { width: 4.5rem; height: 4.5rem; font-size: 1.5rem; flex-shrink: 0; }
+  .perfil .titulo-pagina { font-size: 2.1rem; }
+}
 .perfil__cargo { margin: .3rem 0 0; font-size: .92rem; color: var(--color-secondary); }
 .perfil sup a { text-decoration: none; color: var(--color-surface-3); }
 
@@ -329,6 +340,9 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 .selo--compacto { font-size: .7rem; padding: .1rem .45rem; }
 .dica > span:first-child:has(.selo) { text-decoration: none; }
 .cabeca-projeto__selos { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.cabeca-projeto__placar { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; margin: .5rem 0 0; }
+.cabeca-projeto__placar a { min-height: 24px; display: inline-flex; align-items: center; }
+.cabeca-projeto__placar-fonte { font-size: .85rem; color: var(--color-surface-3); }
 .por-que { max-width: var(--larg-texto); margin: 1.25rem 0 0; padding: 1rem 1.1rem; border-radius: 12px; }
 .por-que__titulo { font-weight: 600; margin: 0 0 .3rem; }
 .por-que__fonte { margin: .5rem 0 0; font-size: .8rem; color: var(--color-surface-3); }

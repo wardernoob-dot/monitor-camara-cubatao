@@ -12,7 +12,7 @@ export interface Vereador {
   partido: string | null;
   partido_fonte: string | null;
   partido_url?: string | null;
-  executivo: { com: number; contra: number; contra_ids: number[] };
+  executivo: { com: number; contra: number; contra_ids: number[]; div_com?: number; div_contra?: number };
   cargo: "presidente" | "vice" | null;
   em_exercicio: boolean;
   contagem: Record<"SIM" | "NAO" | "BRANCO" | "AUSENTE", number>;
@@ -146,9 +146,12 @@ export interface Partido {
   membros: string[];
   em_exercicio: string[];
   indice_medio: number | null;
-  executivo: { com: number; contra: number };
+  executivo: { com: number; contra: number; div_com?: number; div_contra?: number };
   coesao: number | null;
   votacoes_coesao: number;
+  /** coesão só nas votações em que a Câmara se dividiu (null sem amostra) */
+  coesao_div?: number | null;
+  votacoes_coesao_div?: number;
   rachas: number[];
   projetos: number;
   leis: number;
@@ -187,8 +190,10 @@ export interface Base extends Bruto {
   partido: Map<string, Partido>;
 }
 
-const Ctx = createContext<Base | null>(null);
+const Ctx = createContext<{ base: Base | null; erro: string | null }>({ base: null, erro: null });
 
+/** Busca o dados.json uma vez. Sempre renderiza os filhos: quem precisa dos dados fica dentro de <ComDados>,
+ * e o que nao precisa (o topo da home) aparece ja na primeira pintura e nao e remontado quando os dados chegam. */
 export function ProvedorDados({ children }: { children: ReactNode }) {
   const [bruto, setBruto] = useState<Bruto | null>(null);
   const [erro, setErro] = useState<string | null>(null);
@@ -215,7 +220,15 @@ export function ProvedorDados({ children }: { children: ReactNode }) {
       reportagens: bruto.reportagens ?? [],
     };
   }, [bruto]);
+  const valor = useMemo(() => ({ base, erro }), [base, erro]);
+  return <Ctx.Provider value={valor}>{children}</Ctx.Provider>;
+}
 
+/** Mostra os filhos so com os dados carregados. `aviso` = mostra o erro e o "Carregando" (so na area principal). */
+export function ComDados({ children, aviso = false }: { children: ReactNode; aviso?: boolean }) {
+  const { base, erro } = useContext(Ctx);
+  if (base) return <>{children}</>;
+  if (!aviso) return null;
   if (erro)
     return (
       <div className="pagina">
@@ -223,13 +236,11 @@ export function ProvedorDados({ children }: { children: ReactNode }) {
         <p>O arquivo de dados não respondeu ({erro}). Recarregue a página em alguns minutos.</p>
       </div>
     );
-  if (!base)
-    return (
-      <div className="pagina carregando" aria-busy="true">
-        <p>Carregando votações…</p>
-      </div>
-    );
-  return <Ctx.Provider value={base}>{children}</Ctx.Provider>;
+  return (
+    <div className="pagina carregando" aria-busy="true">
+      <p>Carregando votações…</p>
+    </div>
+  );
 }
 
 /** Votação que decidiu a matéria: é a que cartão, resumo e carrossel mostram com placar. */
@@ -238,8 +249,8 @@ export function votacaoDecisiva(b: Pick<Base, "votacao">, m: Pick<Materia, "deci
 }
 
 export function useDados(): Base {
-  const b = useContext(Ctx);
-  if (!b) throw new Error("useDados fora do ProvedorDados");
+  const b = useContext(Ctx).base;
+  if (!b) throw new Error("useDados fora do ComDados (dados ainda nao carregados)");
   return b;
 }
 
