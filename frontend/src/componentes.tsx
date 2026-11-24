@@ -53,8 +53,52 @@ export function Placar({ ev, grande = false }: { ev: Votacao; grande?: boolean }
   return <span className={`placar${grande ? " placar--grande" : ""}`}>{ev.sim} a {ev.nao}</span>;
 }
 
-export function Situacao({ m }: { m: Materia }) {
-  return <span className={`sit sit--${m.situacao_cls}`}>{m.situacao}</span>;
+/** "PLACAR 14 a 0": o mesmo desenho na capa, no carrossel e nas listas. Só aparece em votação direta. */
+export function PlacarRotulado({ ev }: { ev: Votacao | null | undefined }) {
+  const p = placarDireto(ev);
+  return p ? <span className="placar-linha"><span className="placar-linha__rot">Placar</span> <span className="placar">{p}</span></span> : null;
+}
+
+/** Placar só quando votar Sim é ser a favor do projeto; em parecer contrário, emenda ou veto o número solto confunde. */
+export function placarDireto(ev: Votacao | null | undefined): string | null {
+  return ev && ev.sim != null && ev.nao != null && ev.sentido === "direto" && Object.keys(ev.votos).length ? `${ev.sim} a ${ev.nao}` : null;
+}
+
+/** Parecer contrário aprovado ou favorável rejeitado = projeto rejeitado. */
+export function rejeitado(m: Pick<Materia, "situacao" | "situacao_cls">) {
+  return (m.situacao_cls as string) === "rejeitado" || /parecer contr[áa]rio[^:]*: aprovado/i.test(m.situacao) || /parecer[^:]*favor[áa]vel[^:]*: rejeitado/i.test(m.situacao);
+}
+
+/** Situação em linguagem de quem não acompanha a Câmara, curta o bastante para caber num selo. A única do site. */
+export function situacaoCurta(m: Pick<Materia, "situacao" | "situacao_cls" | "tipo" | "lei">): string {
+  if (m.lei) return `Virou a Lei ${m.lei.numero}`;
+  if (rejeitado(m)) return "Rejeitado pela Câmara";
+  // "Aprovado pela Câmara" num projeto de lei ainda vai para o prefeito sancionar ou vetar
+  if (m.situacao_cls === "aprovado" && /^(PL|PLC)$/.test(m.tipo)) return "Aprovado, falta o prefeito";
+  if (/veto mantido/i.test(m.situacao)) return "Vetado, veto mantido";
+  if (/derrubad/i.test(m.situacao)) return "Veto derrubado";
+  if (/falta a C[âa]mara votar o veto/i.test(m.situacao)) return "Vetado, falta votar o veto";
+  if (/^Na pauta, sem vota[çc][ãa]o registrada$/i.test(m.situacao)) return "Na pauta";
+  return m.situacao.replace(/;.*$/, "");
+}
+
+/** Cor da bolinha: virou lei (verde), andando (azul), parou (vermelho: rejeitado ou vetado), só na pauta (cinza). */
+export function tomSituacao(m: Pick<Materia, "situacao" | "situacao_cls" | "lei">): "lei" | "anda" | "parou" | "pauta" {
+  if (m.lei) return "lei";
+  if (rejeitado(m) || m.situacao_cls === "veto") return /derrubad/i.test(m.situacao) ? "anda" : "parou";
+  if (m.situacao_cls === "pauta") return "pauta";
+  return "anda";
+}
+export const classeSituacao = (m: Pick<Materia, "situacao" | "situacao_cls" | "lei">) => (m.lei ? "lei" : rejeitado(m) ? "rejeitado" : m.situacao_cls);
+
+/** Selo de situação, o mesmo em todas as telas. `completa` mostra o texto inteiro (cabeçalho do projeto). */
+export function Situacao({ m, completa = false }: { m: Materia; completa?: boolean }) {
+  return <span className={`sit sit--${tomSituacao(m)}`}>{completa ? m.situacao : situacaoCurta(m)}</span>;
+}
+
+/** Chapéu (editoria) da reportagem: texto azul em caixa alta, sem fundo, igual na capa, na lista e na página. */
+export function Chapeu({ texto }: { texto: string | null | undefined }) {
+  return texto ? <span className="chapeu">{texto}</span> : null;
 }
 
 export function Fonte({ ev }: { ev: Votacao }) {

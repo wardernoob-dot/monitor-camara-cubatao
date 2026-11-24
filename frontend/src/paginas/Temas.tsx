@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Link, useSearchParams } from "react-router";
 import { useDados, type Materia, type Votacao } from "../dados";
-import { Avatar, Fonte } from "../componentes";
+import { Avatar, Fonte, Situacao } from "../componentes";
 import { ladosDaVotacao } from "../reportagens";
 import { dataCurta, useTitulo } from "../util";
 
@@ -52,7 +52,7 @@ export default function Temas() {
               <li key={m.slug} className="tema-item">
                 <div className="tema-item__cab">
                   <Link to={`/projetos/${m.slug}`} className="tema-item__id">{m.titulo}</Link>
-                  <span className={`sit sit--${m.situacao_cls}`}>{m.situacao}</span>
+                  <Situacao m={m} />
                 </div>
                 <p className="tema-item__txt">{m.explicacao?.texto ?? m.assunto}</p>
                 <div className="rp-placar tema-item__placar">

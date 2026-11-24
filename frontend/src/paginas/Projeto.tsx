@@ -51,7 +51,7 @@ export default function ProjetoPagina() {
       <header className="cabeca-projeto">
         <p className="cabeca-projeto__tipo">{m.tipo_nome}</p>
         <h1 className="titulo-pagina">{m.titulo}</h1>
-        <p className="cabeca-projeto__selos"><Situacao m={m} /> <Destaque m={m} /></p>
+        <p className="cabeca-projeto__selos"><Situacao m={m} completa /> <Destaque m={m} /></p>
         {/* placar so quando Sim = a favor do projeto (sentido "direto"); em parecer contrario, emenda e veto o Sim muda
             de sentido e a explicacao fica na linha do tempo, entao aqui vai so o atalho */}
         {dec && Object.keys(dec.votos).length > 0 && (
