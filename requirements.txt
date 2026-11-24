@@ -5,4 +5,5 @@ numpy>=1.26
 pillow>=10
 scipy>=1.11
 pytest>=8
+hypothesis>=6.100  # so pros testes por propriedade (tests/test_propriedades.py)
 reportlab>=4  # so pros testes (gera PDF falso)
