@@ -100,7 +100,7 @@ Toda a automação de nuvem mora em [`.github/workflows/`](.github/workflows/). 
 ### 3.2. `publicar-surge.yml` — Workflow `publicar-surge` (Sincronizador do Site e Fotos)
 - **Quando roda:** Automaticamente em qualquer `push` na `main` que modifique arquivos em `docs/**`, `fotos/**` ou `camara/site.py` (ou via `workflow_dispatch`).
 - **Job `publicar` (`ubuntu-latest`, timeout de 15 min):**
-  1. Executa `camara.site.exportar(Path('data'))` **offline** (sem raspar a Câmara novamente), regenerando `docs/data/dados.json` e reprocessando eventuais fotos novas de vereadores em `fotos/` para `docs/fotos/*.webp`.
+  1. Executa `camara.site.exportar(Path('data'))` **offline** (sem raspar a Câmara novamente), regenerando `docs/data/dados.json`, as prévias de link (`compartilhar.py`), as páginas em HTML pronto pra buscador com o `docs/sitemap.xml` (`paginas.py`) e reprocessando eventuais fotos novas de vereadores em `fotos/` para `docs/fotos/*.webp`.
   2. Se `docs/data/` ou `docs/fotos/` mudaram, commita e dá `git push` na `main` (`"site: regenera docs/data e docs/fotos"`) para que o **GitHub Pages** receba os arquivos atualizados.
   3. Publica `./docs` em `https://votoavoto.surge.sh` via `npx --yes surge@0.44.7`.
 
@@ -293,6 +293,7 @@ monitor-camara-cubatao/
 │   ├── __main__.py          # CLI: `python -m camara [coletar|processar|tudo]`
 │   ├── coletor.py           # Coleta educada de PDFs e páginas Plone da Câmara
 │   ├── vigia.py             # Cópia no Wayback (confere SHA-256) e aviso de PDF que sumiu ou mudou
+│   ├── paginas.py           # HTML pronto por vereador, projeto e reportagem + sitemap.xml (busca no Google)
 │   ├── textclean.py         # Limpeza de "negrito falso", homógrafos cirílicos e normalização
 │   ├── nomes.py             # Catálogo e normalização canônica dos vereadores e suplentes
 │   ├── parser_resumo.py     # Parser estruturado dos Resumos das Sessões

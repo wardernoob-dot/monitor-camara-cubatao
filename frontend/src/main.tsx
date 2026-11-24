@@ -132,6 +132,7 @@ function Rodape() {
           <nav className="rodape__col" aria-label="Dados e código">
             <h2 className="rodape__titulo">Dados e código</h2>
             <ul>
+              <li><a href="./vereadores/">Versão em texto simples</a></li>
               <li><a href="./data/dados.json">Baixar os dados (JSON)</a></li>
               <li><a href="./reportagens.xml">“O que muda” por RSS</a></li>
               <li><a href={meta.repo} rel="noopener noreferrer">Código-fonte aberto</a></li>

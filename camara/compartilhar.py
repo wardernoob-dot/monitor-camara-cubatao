@@ -26,6 +26,8 @@ RAIZ = Path(__file__).resolve().parent.parent
 DOCS = RAIZ / "docs"
 FONTES = RAIZ / "assets" / "fonts"
 SITE_URL = "https://votoavoto.surge.sh"
+# canonical das previas aponta pra pagina em HTML pronto (camara/paginas.py) no endereco que buscador indexa
+from .paginas import SITE_INDEXAVEL  # noqa: E402
 NOME = "Voto a voto"
 L, A = 1200, 630
 COR = {"fundo": "#fafafa", "tinta": "#171717", "cinza": "#666666", "azul": "#1f6a96", "guara": "#ee4b36"}
@@ -47,7 +49,7 @@ MODELO = """<!doctype html>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="{url}">
+<link rel="canonical" href="{canonico}">
 <meta http-equiv="refresh" content="0; url={destino}">
 </head>
 <body>
@@ -155,11 +157,12 @@ def gerar(pacote: dict, docs: Path | None = None) -> dict:
             _og_da_foto(orig, previa / f"r-{r['id']}.jpg")
             img = f"{SITE_URL}/fotos/previa/r-{r['id']}.jpg"
         _pagina(docs / "r" / r["id"], tipo="article", titulo=r["manchete"], descricao=r["linha_fina"],
-                url=f"{SITE_URL}/r/{r['id']}/", imagem=img, destino=f"../../#/o-que-muda/{r['id']}")
+                url=f"{SITE_URL}/r/{r['id']}/", canonico=f"{SITE_INDEXAVEL}/o-que-muda/{r['id']}/", imagem=img, destino=f"../../#/o-que-muda/{r['id']}")
     for v in pacote["vereadores"]:
         _cartao_vereador(v, docs, previa / f"v-{v['slug']}.jpg")
         _pagina(docs / "v" / v["slug"], tipo="profile", titulo=f"{v['exibicao']}: como votou na Câmara de Cubatão",
                 descricao=" · ".join(_linhas_vereador(v)), url=f"{SITE_URL}/v/{v['slug']}/",
+                canonico=f"{SITE_INDEXAVEL}/vereadores/{v['slug']}/",
                 imagem=f"{SITE_URL}/fotos/previa/v-{v['slug']}.jpg", destino=f"../../#/vereadores/{v['slug']}")
     n_p = 0
     for m in pacote["materias"]:
@@ -168,7 +171,7 @@ def gerar(pacote: dict, docs: Path | None = None) -> dict:
         n_p += 1
         desc = (m.get("explicacao") or {}).get("texto") or m.get("assunto") or ""
         _pagina(docs / "p" / m["slug"], tipo="article", titulo=f"{m['titulo']}: {m['situacao']}", descricao=_corta(desc, 220),
-                url=f"{SITE_URL}/p/{m['slug']}/", imagem=padrao, destino=f"../../#/projetos/{m['slug']}")
+                url=f"{SITE_URL}/p/{m['slug']}/", canonico=f"{SITE_INDEXAVEL}/projetos/{m['slug']}/", imagem=padrao, destino=f"../../#/projetos/{m['slug']}")
     itens = "".join(
         f"<item><title>{_e(r['manchete'])}</title><link>{SITE_URL}/r/{r['id']}/</link>"
         f"<guid>{SITE_URL}/r/{r['id']}/</guid><description>{_e(r['linha_fina'])}</description>"
