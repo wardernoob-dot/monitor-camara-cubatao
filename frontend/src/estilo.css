@@ -68,7 +68,7 @@ main:focus { outline: none; }
 .botao--fantasma:hover { border-color: var(--color-surface-2); }
 
 /* ---------------------------------------------------------------- topo e rodapé */
-.topo { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-canvas) 85%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--color-linha); }
+.topo { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-canvas) 85%, transparent); -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--color-linha); }
 .topo__dentro { max-width: var(--larg-pagina); margin: 0 auto; padding: .8rem 1.25rem; display: flex; flex-wrap: wrap; gap: .5rem 2rem; align-items: center; justify-content: space-between; }
 .marca { color: inherit; text-decoration: none; display: flex; align-items: baseline; gap: .6rem; }
 .marca__nome { font-weight: 600; font-size: 1.15rem; letter-spacing: -0.03em; }
@@ -481,7 +481,7 @@ a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-
 
 /* ---------- painel interativo da pagina inicial */
 .painel-secao { margin-top: -4.5rem; position: relative; z-index: 2; }
-.painel__trilho { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; padding: 6px; background: color-mix(in srgb, var(--color-surface-1) 82%, transparent); backdrop-filter: blur(10px); border: 1px solid var(--color-linha); border-radius: 20px; box-shadow: 0 12px 40px -18px rgba(0,0,0,.18); scrollbar-width: none; }
+.painel__trilho { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; padding: 6px; background: color-mix(in srgb, var(--color-surface-1) 82%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--color-linha); border-radius: 20px; box-shadow: 0 12px 40px -18px rgba(0,0,0,.18); scrollbar-width: none; }
 .painel__trilho::-webkit-scrollbar { display: none; }
 .painel__aba { all: unset; box-sizing: border-box; position: relative; display: flex; flex-direction: column; gap: .2rem; padding: .9rem 1rem; border-radius: 14px; cursor: pointer; min-width: 0; transition: background .2s var(--ease); }
 .painel__aba:hover:not(.painel__aba--ativa) { background: var(--suave); }
@@ -732,7 +732,7 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 .busca-botao__tecla { margin-left: .35rem; }
 
 /* busca (Ctrl K) */
-.cmd { position: fixed; inset: 0; z-index: 60; display: flex; justify-content: center; align-items: flex-start; padding: min(14vh, 8rem) 1rem 1rem; background: rgba(23, 23, 23, .38); backdrop-filter: blur(6px); animation: busca-entra .18s ease-out; }
+.cmd { position: fixed; inset: 0; z-index: 60; display: flex; justify-content: center; align-items: flex-start; padding: min(14vh, 8rem) 1rem 1rem; background: rgba(23, 23, 23, .38); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); animation: busca-entra .18s ease-out; }
 .cmd__caixa { width: min(40rem, 100%); max-height: min(34rem, 80vh); display: flex; flex-direction: column; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 18px; box-shadow: 0 30px 80px -20px rgba(0,0,0,.35); overflow: hidden; animation: busca-sobe .22s var(--ease); }
 .cmd__campo { display: flex; align-items: center; gap: .75rem; padding: .95rem 1.1rem; border-bottom: 1px solid var(--color-linha); color: var(--color-surface-3); }
 .cmd__entrada { all: unset; flex: 1; min-width: 0; font-size: 1.05rem; color: var(--color-ink); }
@@ -1230,7 +1230,7 @@ html, body { overflow-x: clip; }
 .como > .texto { max-width: var(--larg-texto); }
 
 .subnav { order: -1; position: sticky; top: calc(var(--alt-topo) + .55rem); z-index: 15; display: flex; align-items: center; gap: .4rem; margin: 1.75rem 0 1.5rem; padding: 5px 5px 5px 1.1rem;
-  border: 1px solid var(--color-linha); border-radius: var(--raio-pilula); background: color-mix(in srgb, var(--color-surface-1) 88%, transparent); backdrop-filter: saturate(1.4) blur(12px); box-shadow: 0 12px 28px -20px rgba(0, 0, 0, .4); }
+  border: 1px solid var(--color-linha); border-radius: var(--raio-pilula); background: color-mix(in srgb, var(--color-surface-1) 88%, transparent); -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px); box-shadow: 0 12px 28px -20px rgba(0, 0, 0, .4); }
 .subnav__rotulo { flex: none; padding-right: .8rem; margin-right: .2rem; border-right: 1px solid var(--color-linha); font: 600 .62rem/1 var(--font-mono); letter-spacing: .13em; text-transform: uppercase; color: var(--color-surface-3); white-space: nowrap; }
 .subnav__lista { flex: 1; min-width: 0; display: flex; gap: 2px; margin: 0; padding: 0; list-style: none; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, var(--preto) 94%, transparent); mask-image: linear-gradient(90deg, var(--preto) 94%, transparent); }
 .subnav__lista::-webkit-scrollbar { display: none; }
@@ -1493,7 +1493,7 @@ input:not([type="checkbox"]):not([type="radio"]), textarea { cursor: text; }
 .rp__topo { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; }
 .rp__chapeu, .rp__sit, .rp__rascunho { display: inline-flex; align-items: center; font: 600 .7rem/1 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; padding: .45rem .7rem; border-radius: var(--raio-pilula); }
 .rp__chapeu { background: var(--azul); color: var(--rp-texto); }
-.rp__sit { background: var(--rp-vidro); border: 1px solid var(--rp-vidro-borda); color: var(--rp-texto); backdrop-filter: blur(6px); }
+.rp__sit { background: var(--rp-vidro); border: 1px solid var(--rp-vidro-borda); color: var(--rp-texto); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 .rp__rascunho { background: var(--aviso-bg); color: var(--aviso-texto); }
 
 
@@ -1575,15 +1575,14 @@ a.rp-autor__nome:hover { text-decoration: underline; }
 .rp-pref__acao { font-size: .92rem; font-weight: 500; line-height: 1.35; }
 
 .rp-pagina__autor { margin: .25rem 0 1rem; padding: .9rem 1.1rem; border: 1px solid var(--color-linha); border-left: 4px solid var(--azul); border-radius: 12px; background: var(--color-surface-1); display: inline-block; }
-.rp-pagina__topo-linha .rp__sit, .rp-ficha .rp__sit { background: var(--suave); border-color: var(--color-linha); color: var(--color-ink); backdrop-filter: none; }
+.rp-pagina__topo-linha .rp__sit, .rp-ficha .rp__sit { background: var(--suave); border-color: var(--color-linha); color: var(--color-ink); -webkit-backdrop-filter: none; backdrop-filter: none; }
 .rp-ficha .rp__sit--lei { background: var(--bom-bg); border-color: var(--bom-borda); color: var(--bom-texto); }
 .rp-ficha .rp__sit--rejeitado, .rp-ficha .rp__sit--veto { background: var(--ruim-bg); border-color: var(--ruim-borda); color: var(--ruim-texto); }
 .rp-ficha__voto { display: grid; gap: .6rem; }
 .rp-ficha .rp-pref { width: 100%; }
-.rp-pagina__grade { grid-template-columns: minmax(0, 1fr) 23rem; }
-
-@media (max-width: 1000px) {
-}
+/* so no computador: solto, este 23rem vinha depois do @media (max-width: 900px) e voltava a ter 2 colunas no celular
+   (a ficha "Em resumo" espremida numa coluna estreita e o texto embaixo dela) */
+@media (min-width: 900.02px) { .rp-pagina__grade { grid-template-columns: minmax(0, 1fr) 23rem; } }
 @media (max-width: 640px) {
   .rp-autor__pessoa .avatar--m { width: 2.8rem; height: 2.8rem; }
   .rp-rostos { grid-template-columns: repeat(auto-fill, minmax(3.1rem, 1fr)); }
@@ -1649,7 +1648,7 @@ a.rp-autor__nome:hover { text-decoration: underline; }
 .rp-lista__foto { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 12px; background: var(--suave-2); }
 .rp-lista__txt { display: grid; gap: .6rem; min-width: 0; }
 .rp-lista__topo { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; }
-.rp-lista__topo .rp__sit { background: var(--suave); border-color: var(--color-linha); color: var(--color-ink); backdrop-filter: none; }
+.rp-lista__topo .rp__sit { background: var(--suave); border-color: var(--color-linha); color: var(--color-ink); -webkit-backdrop-filter: none; backdrop-filter: none; }
 .rp-lista__manchete { margin: 0; font-size: clamp(1.3rem, 2.4vw, 1.8rem); letter-spacing: -0.04em; line-height: 1.1; }
 .rp-lista__fina { margin: 0; color: var(--color-secondary); line-height: 1.5; }
 .rp-lista__data { margin: 0; font-size: .8rem; color: var(--color-surface-3); }
@@ -1905,4 +1904,16 @@ a.rp-autor__nome:hover { text-decoration: underline; }
   .letreiro__janela { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   .capa__lead-img, .capa__foto img, .capa__ler span { transition: none; }
   .capa__item:hover .capa__foto img, .capa__lead:hover .capa__lead-img { transform: none; }
+}
+
+/* celular: cartao do vereador em linha (foto ao lado do nome), como diz o bloco de 640px la em cima.
+   O .vereadores__card virou flex coluna depois daquele bloco e passou a centralizar tudo sem querer;
+   nome civil longo quebrava alinhado a esquerda no meio do cartao centralizado. */
+@media (max-width: 640px) {
+  .vereadores__card { display: grid; grid-template-columns: var(--foto-card, 72px) minmax(0, 1fr); column-gap: .9rem; row-gap: .2rem; align-items: center; text-align: left; }
+  .vereadores--compacto { --foto-card: 56px; }
+  .vereadores__card > .avatar { grid-column: 1; grid-row: 1 / span 2; width: var(--foto-card, 72px); height: var(--foto-card, 72px); margin: 0; }
+  .vereadores__card > .vereadores__nome, .vereadores__card > .vereadores__civil { grid-column: 2; }
+  .vereadores__card > .indice-mini, .vereadores__card > .vereadores__stats, .vereadores__card > .vereadores__nums { grid-column: 1 / -1; }
+  .vereadores__card > .indice-mini { margin: .7rem 0 .2rem; }
 }
