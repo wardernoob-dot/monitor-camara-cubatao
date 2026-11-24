@@ -1921,6 +1921,8 @@ a.rp-autor__nome:hover { text-decoration: underline; }
   .vereadores__card > .indice-mini { margin: .7rem 0 .2rem; }
 }
 
+/* aviso de PDF que sumiu ou mudou no site da Camara (camara/vigia.py) */
+.ficha__alerta { display: block; margin-top: .35rem; padding: .45rem .6rem; border-radius: 8px; background: var(--aviso-bg); color: var(--aviso-texto); font-size: .82rem; line-height: 1.4; }
 /* acabamento da auditoria (break-ui e accessibility) */
 .mx__data a { display: inline-block; padding: .25rem 0; color: inherit; text-decoration-color: var(--color-surface-2); }
 .mx__data a:hover { color: var(--color-ink); }

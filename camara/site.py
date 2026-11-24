@@ -61,6 +61,11 @@ def slug(t: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
 
 
+def _host_ok(u: str | None, host: str) -> bool:
+    from urllib.parse import urlparse
+    return bool(u) and urlparse(u).hostname == host
+
+
 def url_segura(u: str | None) -> str | None:
     """Garante que URLs exportadas para o front usam apenas http(s), evitando XSS via javascript:/data:."""
     if not u or not isinstance(u, str):
@@ -1048,6 +1053,21 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     for m in b.materias.values():
         m["tem_pagina"] = bool(m["eventos"]) or (bool(m["numero"]) and m["id"] in ids_publicas)
     paginas = {m["slug"] for m in b.materias.values() if m["tem_pagina"]}
+    # camara/vigia.py: copia no Wayback (so a que confere com o sha256 coletado) e documento que sumiu ou mudou
+    arquivo = json.loads((dados / "arquivo.json").read_text("utf-8")) if (dados / "arquivo.json").exists() else {}
+    vigia = json.loads((dados / "vigia.json").read_text("utf-8")) if (dados / "vigia.json").exists() else {}
+
+    def doc_arquivo(u: str | None) -> str | None:
+        a = arquivo.get(u or "") or {}
+        return url_segura(a.get("wayback")) if a.get("confere") and _host_ok(a.get("wayback"), "web.archive.org") else None
+
+    def doc_alerta(u: str | None) -> dict | None:
+        reg = vigia.get(u or "") or {}
+        if reg.get("estado") not in ("sumiu", "mudou") or not reg.get("historico"):
+            return None
+        ev = reg["historico"][-1]
+        return {"tipo": ev["tipo"], "quando": ev["quando"][:10]}
+
     if saida.exists():
         shutil.rmtree(saida)
     (saida / "analises").mkdir(parents=True)
@@ -1103,6 +1123,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "numero": m["numero"], "ano": m["ano"], "assunto": m["assunto_txt"], "autoria": m["autoria"],
             "autores": [vslug[k] for k in m["autores"] if k in vslug], "situacao": m["situacao"],
             "situacao_cls": m["situacao_cls"], "pautas": m["pautas"], "documento": url_segura(m["documento"]),
+            "documento_arquivo": doc_arquivo(m["documento"]), "documento_alerta": doc_alerta(m["documento"]),
             "lei": lei_obj, "veto": veto_obj, "ultima_data": m["ultima_data"], "eventos": [e["id"] for e in m["eventos"]],
             "decisiva": (dv := decisiva(m)) and dv["id"],
             "divergencias": [{"etapa": d["etapa"], "data": d["data"], "vereador": vslug.get(d["vereador"]),

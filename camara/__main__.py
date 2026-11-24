@@ -2,6 +2,7 @@
     python -m camara coletar   [--desde 2026] [--secoes resumo,pauta,projetos] [--guardar-pdf]
     python -m camara processar
     python -m camara ocr-resumos   (manual: transcreve resumos escaneados; conferir o .ocr.txt antes de commitar)
+    python -m camara vigiar    (copia os PDFs no Wayback e confere se algum sumiu ou mudou no site da Camara)
     python -m camara tudo      [--desde 2026]
 """
 import argparse
@@ -12,7 +13,7 @@ DADOS = Path(__file__).resolve().parent.parent / "data"
 
 def main():
     ap = argparse.ArgumentParser(prog="camara")
-    ap.add_argument("comando", choices=["coletar", "processar", "tudo", "ocr-resumos"])
+    ap.add_argument("comando", choices=["coletar", "processar", "tudo", "ocr-resumos", "vigiar"])
     ap.add_argument("--desde", type=int, default=2026)
     ap.add_argument("--secoes", default="resumo,pauta,projetos")
     ap.add_argument("--guardar-pdf", action="store_true")
@@ -35,6 +36,17 @@ def main():
         c = Coletor(a.dados, desde=a.desde, guardar_pdf=a.guardar_pdf)
         novos = c.coletar(tuple(a.secoes.split(",")))
         print(f"{len(novos)} documento(s) novo(s)")
+
+    if a.comando in ("vigiar", "tudo"):
+        # copia publica no Wayback + confere se algum PDF ja coletado sumiu ou mudou (nunca derruba a rodada)
+        from .vigia import rodar as vigiar
+
+        rv = vigiar(a.dados)
+        print(f"{len(rv['arquivados'])} documento(s) arquivado(s) no Wayback; {len(rv['eventos'])} mudanca(s) no site da Camara")
+        for ev in rv["eventos"]:
+            print(f"  ! {ev['tipo']}: {ev['titulo']} ({ev['url']})")
+        for av in rv["avisos"][:10]:
+            print(f"  ! {av}")
 
     if a.comando in ("processar", "tudo"):
         from .processar import processar

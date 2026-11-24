@@ -88,6 +88,10 @@ export interface Materia {
   situacao_cls: "lei" | "veto" | "aprovado" | "andamento" | "rejeitado" | "pauta";
   pautas: string[];
   documento: string | null;
+  /** cópia do PDF no Wayback Machine cujo sha256 confere com o coletado (camara/vigia.py) */
+  documento_arquivo?: string | null;
+  /** o PDF sumiu ou mudou no site da Câmara depois da coleta */
+  documento_alerta?: { tipo: "sumiu" | "mudou"; quando: string } | null;
   lei: {
     numero: string; data: string; url: string | null;
     vigencia?: { data: string; trecho: string; regra: "data" | "dias" | "publicacao" };
