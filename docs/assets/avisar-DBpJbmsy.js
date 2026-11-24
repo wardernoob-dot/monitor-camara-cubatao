@@ -1,4 +1,4 @@
-import{a as h,Z as b,r as i,j as e}from"./index-BuXgjEfX.js";function f({sobre:r}){const{meta:t}=h(),{pathname:c}=b(),[s,d]=i.useState(!1),[l,n]=i.useState(!1),m=`${window.location.origin}${window.location.pathname}#${c}`,a=`Achei um erro no Voto a voto.
+import{a as h,Z as b,r as i,j as e}from"./index-Bk0_qx2m.js";function f({sobre:r}){const{meta:t}=h(),{pathname:c}=b(),[s,d]=i.useState(!1),[l,n]=i.useState(!1),m=`${window.location.origin}${window.location.pathname}#${c}`,a=`Achei um erro no Voto a voto.
 Página: ${r}
 Endereço: ${m}
 O que está errado: 

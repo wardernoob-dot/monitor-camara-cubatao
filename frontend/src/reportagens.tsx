@@ -363,7 +363,7 @@ export function Letreiro() {
   ));
   return (
     <div className={`letreiro${roda ? " letreiro--roda" : ""}`}>
-      <p className="letreiro__rot" id="letreiro-rot">Últimas votações</p>
+      <p className="letreiro__rot" id="letreiro-rot">Últimas votações<span className="letreiro__quando">· dados de {dataCurta(b.meta.atualizado.slice(0, 10))}</span></p>
       <div className="letreiro__janela">
         <ul className="letreiro__trilho" aria-labelledby="letreiro-rot" style={{ animationDuration: `${itens.length * 8}s` }}>
           {lista(false)}

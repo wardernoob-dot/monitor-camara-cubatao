@@ -306,7 +306,7 @@ export default function Inicio() {
                   <thead>
                     <tr>
                       <th scope="col" className="mx__canto">Vereador</th>
-                      {grupos.map((g) => <th key={g.data} scope="colgroup" colSpan={g.n} className="mx__data">{dataCurta(g.data)}</th>)}
+                      {grupos.map((g) => <th key={g.data} scope="colgroup" colSpan={g.n} className="mx__data"><Link to={`/sessoes/${g.data}`} aria-label={`Sessão de ${dataCurta(g.data, true)}`}>{dataCurta(g.data)}</Link></th>)}
                     </tr>
                   </thead>
                   <tbody>

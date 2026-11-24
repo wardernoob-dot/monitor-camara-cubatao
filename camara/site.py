@@ -111,7 +111,7 @@ class Base:
                 "chave": k, "nome": x["nome"], "apelido": ap, "exibicao": ap or x["nome"],
                 "slug": slug(ap or x["nome"]), "partido": x.get("bancada_declarada"),
                 "em_exercicio": k in recentes, "presenca": x.get("presenca") or {},
-                "votos": [], "projetos": [], "requerimentos": [], "iniciais": "".join(p[0] for p in (ap or x["nome"]).replace("Dr. ", "").split()[:2]).upper(),
+                "votos": [], "projetos": [], "requerimentos": [], "iniciais": iniciais(ap or x["nome"]),
             }
         for s in sorted((self.dados / "sessoes").glob("*.json")):
             j = json.loads(s.read_text("utf-8"))
@@ -555,6 +555,21 @@ def posicao_executivo(ev: dict) -> str | None:
     return "SIM" if ev["sentido"] == "direto" else "NAO"
 
 
+# titulos que viram parte do apelido de campanha ("Professora Cida", "Pastor Joao") e nao sao o nome
+TITULOS = {"dr", "dra", "doutor", "doutora", "prof", "profa", "professor", "professora", "pastor", "pastora",
+           "irmao", "irma", "dona", "seu", "sargento", "sgt", "cabo", "soldado", "delegado", "delegada",
+           "vereador", "vereadora", "padre", "missionario", "missionaria", "enfermeiro", "enfermeira", "tio", "tia"}
+
+
+def iniciais(nome: str) -> str:
+    """Duas letras pro avatar sem foto, pulando titulo ("Professora Cida Lima" -> "CL", "Dr. Anderson de Lana" -> "AL").
+    Titulo + uma palavra fica so com a inicial dela ("Pastor Joao" -> "J")."""
+    palavras = [p for p in re.split(r"[\s.]+", nome) if p]
+    sem_titulo = [p for p in palavras if slug(p) not in TITULOS] or palavras
+    sem_ligacao = [p for p in sem_titulo if slug(p) not in {"da", "de", "do", "das", "dos", "e"}] or sem_titulo
+    return "".join(p[0] for p in sem_ligacao[:2]).upper()
+
+
 def dividida(ev: dict) -> bool:
     """Votacao em que a Camara se dividiu: entre quem votou sim ou nao, houve os dois.
     Na unanime todos votam igual, entao ela nao diz nada sobre afinidade entre vereadores,
@@ -984,14 +999,20 @@ def preparar_fotos(vereadores: dict) -> dict[str, str]:
             print(f"  ! foto sem vereador correspondente: {arq.name}")
             continue
         final = destino / f"{alvo}.webp"
-        if not final.exists() or final.stat().st_mtime < arq.stat().st_mtime:
+        # versao pequena (160 px) pras listas, onde a foto aparece com 56 a 72 px: a de 480 px pesava ~360 KB na home
+        pequena = destino / f"{alvo}-p.webp"
+        if any(not f.exists() or f.stat().st_mtime < arq.stat().st_mtime for f in (final, pequena)):
             im = ImageOps.exif_transpose(Image.open(arq)).convert("RGB")
             lado = min(im.size)
             x = (im.width - lado) // 2
             y = max(0, min(int(im.height * 0.08), im.height - lado)) if im.height > im.width else 0
+            quadrada = im.crop((x, y, x + lado, y + lado))
             alvo_px = min(lado, 480)  # nao amplia foto pequena (fica borrada)
-            im.crop((x, y, x + lado, y + lado)).resize((alvo_px, alvo_px), Image.LANCZOS).save(final, "WEBP", quality=85)
+            quadrada.resize((alvo_px, alvo_px), Image.LANCZOS).save(final, "WEBP", quality=85)
+            p_px = min(lado, 160)
+            quadrada.resize((p_px, p_px), Image.LANCZOS).save(pequena, "WEBP", quality=82)
         out[alvo] = f"fotos/{alvo}.webp"
+        out[alvo + "-p"] = f"fotos/{alvo}-p.webp"
     return out
 
 
@@ -1058,6 +1079,8 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     explic = EX.carregar(dados)
     vereadores = []
     for v in sorted(b.vereadores.values(), key=lambda v: v["exibicao"]):
+        if len(v["exibicao"]) > 40:  # nada limita o apelido; acima disso o nome quebra feio no celular
+            print(f"  ! nome de exibicao longo ({len(v['exibicao'])} letras), conferir no celular: {v['exibicao']}")
         if not v["em_exercicio"] and v["sessoes_total"] < 1:
             vslug.pop(v["chave"], None)  # suplente de 1 ou 2 sessoes: aparece so pelo nome, sem pagina
             continue
@@ -1072,6 +1095,7 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
             "contra_resultado": v["contra_resultado"], "sessoes_total": v["sessoes_total"], "presenca": v["presenca"],
             "faltas": v["faltas"], "leis": v["leis"], "indice": v["indice"],
             "foto": fotos.get(v["slug"]),
+            "foto_p": fotos.get(v["slug"] + "-p"),
             "projetos": [m["slug"] for m in v["projetos"] if m["slug"] in paginas],
             "requerimentos": [m["slug"] for m in v["requerimentos"] if m["slug"] in paginas],
         })
