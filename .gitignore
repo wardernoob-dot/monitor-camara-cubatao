@@ -14,3 +14,4 @@ pc/token.sec
 pc/*.sec
 pc/log.txt
 .coverage
+.hypothesis/
