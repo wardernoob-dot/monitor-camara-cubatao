@@ -1,6 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { useDados } from "./dados";
 import { ABRIR_PERGUNTA } from "./pergunta";
 import { casaBusca, semAcento } from "./util";

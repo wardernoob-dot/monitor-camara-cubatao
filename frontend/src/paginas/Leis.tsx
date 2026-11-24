@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useDados, type Materia } from "../dados";
 import { TagPartido } from "../componentes";
 import { dataExtenso, useTitulo } from "../util";

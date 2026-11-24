@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 import { useDados } from "./dados";
 
 /** "Achou um erro?": caminho para o morador avisar sem precisar de conta em lugar nenhum.

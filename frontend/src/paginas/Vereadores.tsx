@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router";
 import { motion } from "framer-motion";
 import { useDados, type Vereador } from "../dados";
 import { Avatar, NotaMetodo, TagPartido } from "../componentes";

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { AvisarErro } from "../avisar";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { Toc } from "../toc";
 import { useDados, votacaoDecisiva, type Materia } from "../dados";
 import { ACESSORIAS, AvisoVeto, Grade, LinkMateria, NotaFonte, Placar, ResultadoVotacao, resultadoVeto } from "../componentes";
