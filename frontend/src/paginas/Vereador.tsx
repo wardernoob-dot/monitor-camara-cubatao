@@ -95,7 +95,7 @@ export default function VereadorPagina() {
           <h1 className="titulo-pagina">{v.exibicao}</h1>
           <p className="perfil__civil">
             {v.nome}
-            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href={`#/vereadores/${v.slug}`} aria-label="1: fonte do partido" onClick={(e) => {
+            {v.partido && <> <TagPartido sigla={v.partido} /><sup><a href={`#/vereadores/${v.slug}`} aria-label="1: fonte do partido" title="Nota 1: de onde vem o partido" onClick={(e) => {
               // as rotas usam #; um link "#nota-partido" trocaria a rota. Aqui só rola até a nota.
               e.preventDefault();
               const nota = document.getElementById("nota-partido");
@@ -176,7 +176,8 @@ export default function VereadorPagina() {
             )}
           </div>
           <h3 className="sub-titulo">Cada voto, do mais antigo ao mais recente</h3>
-          <div className="faixa">
+          {/* desenho de todos os votos; o mesmo conteúdo está na tabela acima, que é o que o leitor de tela lê */}
+          <div className="faixa" aria-hidden="true">
             {votos.map(({ ev, voto }) => <Celula key={ev.id} ev={ev} voto={voto} nome={v.exibicao} />)}
           </div>
           <Legenda />

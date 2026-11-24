@@ -144,3 +144,12 @@ def test_hardening_xml_bomb_ssrf_rss_e_path_traversal(tmp_path):
     np.savez(falso_rostos, chaves=np.array(["xuxa"]), mat=np.zeros((1, 4800), dtype=np.float32))
     with pytest.raises(ValueError, match="Integridade violada em rostos_2026.npz"):
         P.Rostos.carregar(falso_rostos)
+
+
+def test_iniciais_pulam_titulo_e_ligacao():
+    assert S.iniciais("Professora Cida Lima") == "CL"
+    assert S.iniciais("Dr. Anderson de Lana") == "AL"
+    assert S.iniciais("Pastor João") == "J"
+    assert S.iniciais("Guilherme do Salão") == "GS"
+    assert S.iniciais("Xuxa") == "X"
+    assert S.iniciais("Vereadora") == "V"  # so titulo: usa ele mesmo, nunca vazio
