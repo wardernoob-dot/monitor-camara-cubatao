@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { motion, useReducedMotion } from "framer-motion";
 
 /** "Nesta página": barra horizontal com as seções, logo abaixo do cabeçalho do site, que acompanha a rolagem.

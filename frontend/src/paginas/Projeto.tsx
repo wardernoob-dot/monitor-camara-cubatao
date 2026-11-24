@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { AvisarErro } from "../avisar";
 import { useAnalise, useDados, votacaoDecisiva, type Votacao } from "../dados";
 import { ACESSORIAS, AvisoVeto, Fonte, Grade, Metodo, NotaFonte, Placar, ResultadoVotacao, Situacao } from "../componentes";

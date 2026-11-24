@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion, type PanInfo } from "framer-motion";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router";
 import { EASE, useContador, useEntrou } from "./movimento";
 
 export interface Aba {

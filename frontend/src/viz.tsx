@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 export interface Ponto { x: string; y: number }
 import { EASE, useContador, useEntrou, useLacoCanvas } from "./movimento";
 import { useDados, type Votacao } from "./dados";

@@ -1,5 +1,5 @@
 import { Fragment, useMemo, useState, type ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useReducedMotion } from "framer-motion";
 import { useDados, votacaoDecisiva, type Base, type Materia, type Reportagem, type Vereador, type Votacao } from "./dados";
 import { Avatar } from "./componentes";

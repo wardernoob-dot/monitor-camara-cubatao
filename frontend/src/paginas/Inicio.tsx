@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { motion, useReducedMotion } from "framer-motion";
 import { ComDados, useDados, votacaoDecisiva, type Materia, type Vereador, type Votacao } from "../dados";
 import { Avatar, Celula, Legenda, TagPartido } from "../componentes";

@@ -1,6 +1,6 @@
 import { useEffect, useId, useState, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 /** Seção retrátil: título clicável que abre e fecha o conteúdo, com animação de altura.
  *  Abre sozinha quando o endereço aponta para ela (#id). */

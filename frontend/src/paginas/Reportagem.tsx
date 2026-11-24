@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { AvisarErro } from "../avisar";
 import { useDados } from "../dados";
 import { Grade, NotaFonte } from "../componentes";

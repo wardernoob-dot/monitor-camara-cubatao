@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useDados, type Materia, type Vereador, type Votacao, type Voto, type Resultado } from "./dados";
 import { slugPartido } from "./dados";
 import { ORDEM_VOTO, ROTULO, dataCurta, minusculaInicial } from "./util";

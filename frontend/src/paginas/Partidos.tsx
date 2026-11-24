@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { Toc } from "../toc";
 import { Termo } from "../explica";
 import { slugPartido, useDados, type Partido, type Vereador } from "../dados";
