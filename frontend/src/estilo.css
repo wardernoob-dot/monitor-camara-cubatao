@@ -13,6 +13,7 @@
   --azul-botao: var(--azul); /* fundo de botão e selo com texto branco: no escuro fica mais fechado para dar 4,5:1 */
   --azul-escuro: #154e70;
   --azul-claro: #e0eef5;
+  --azul-texto: var(--azul);   /* azul usado como cor de texto; no escuro fica mais claro para dar 4,5:1 */
   --azul-trilho: #d6e6ee;
   /* estados (nunca usados como serie) */
   --cor-bom: #1f8f3a;             /* aprovado, sim, veto derrubado */
@@ -160,7 +161,7 @@ button.heat__cel:hover { outline: 2px solid var(--color-ink); outline-offset: 1p
 .cel--ausente { background: repeating-linear-gradient(135deg, var(--color-surface-2) 0 2px, transparent 2px 4px); }
 .cel--vazio { background: var(--suave); }
 .cel--\? { background: var(--color-surface-2); }
-a.cel:hover, a.cel:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 1px; }
+.cel[title]:hover { outline: 1px solid var(--color-surface-3); outline-offset: 1px; }
 
 .legenda { list-style: none; padding: 0; margin: .75rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: .85rem; color: var(--color-surface-3); }
 .legenda li { display: flex; align-items: center; gap: .45rem; }
@@ -786,7 +787,7 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 }
 :root[data-tema="dark"] {
   color-scheme: dark;
-  --azul: #3a8cb9; --azul-botao: #2f7aa5; --azul-botao-hover: #2a6d93; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-trilho: #213f4f;
+  --azul: #3a8cb9; --azul-botao: #2f7aa5; --azul-botao-hover: #2a6d93; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-texto: #7cb6da; --azul-trilho: #213f4f;
   --cor-bom: #4fbf6a; --cor-critico: #ef6b6b; --cor-alerta: #f0b43a; --cor-andamento: #3a6479;
   --seq-0: #3a7a9f; --seq-1: #4a93b8; --seq-2: #6aadcc; --seq-3: #a2d0e6;
   --color-accent: #4fbf6a; --color-secondary: #b9bac0; --color-canvas: #0f1012; --color-ink: #ececee;
@@ -800,7 +801,7 @@ p, li, dd, .tile__nota, .nota, .indice__conta, .lista-vetos__assunto, .tabela__a
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="light"]) {
     color-scheme: dark;
-    --azul: #3a8cb9; --azul-botao: #2f7aa5; --azul-botao-hover: #2a6d93; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-trilho: #213f4f;
+    --azul: #3a8cb9; --azul-botao: #2f7aa5; --azul-botao-hover: #2a6d93; --azul-escuro: #9fd0e8; --azul-claro: #14303f; --azul-texto: #7cb6da; --azul-trilho: #213f4f;
     --cor-bom: #4fbf6a; --cor-critico: #ef6b6b; --cor-alerta: #f0b43a; --cor-andamento: #3a6479;
     --seq-0: #3a7a9f; --seq-1: #4a93b8; --seq-2: #6aadcc; --seq-3: #a2d0e6;
     --color-accent: #4fbf6a; --color-secondary: #b9bac0; --color-canvas: #0f1012; --color-ink: #ececee;
@@ -1028,7 +1029,7 @@ html, body { overflow-x: clip; }
 .segmentado button:hover { color: var(--color-ink); }
 .segmentado button[aria-pressed="true"] { color: var(--branco); font-weight: 500; }
 .segmentado button:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; }
-.segmentado__pilula { position: absolute; inset: 0; border-radius: var(--raio-pilula); background: var(--azul); }
+.segmentado__pilula { position: absolute; inset: 0; border-radius: var(--raio-pilula); background: var(--azul-botao); }
 .segmentado__texto { position: relative; z-index: 1; }
 
 .dist { margin: 0 0 1.75rem; padding: 1.2rem 1.4rem .4rem; background: var(--color-surface-1); border: 1px solid var(--color-linha); border-radius: 18px; }
@@ -1097,7 +1098,7 @@ html, body { overflow-x: clip; }
 .chips button span { display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 .4rem; border-radius: var(--raio-pilula); background: var(--suave); font: 500 .72rem/1 var(--font-mono); color: var(--color-surface-3); transition: background .2s, color .2s; }
 .chips button:hover { border-color: var(--azul); color: var(--azul); }
 .chips button[aria-pressed="true"] { background: var(--azul); border-color: var(--azul); color: var(--branco); font-weight: 500; }
-.chips button[aria-pressed="true"] span { background: rgba(255, 255, 255, .22); color: var(--branco); }
+.chips button[aria-pressed="true"] span { background: rgb(0 0 0 / .22); color: var(--branco); }
 .chips button:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; }
 .chips + form.busca { margin-top: 1rem; }
 
@@ -1154,6 +1155,8 @@ html, body { overflow-x: clip; }
 .racha__lados { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: .9rem; }
 .racha__lado { padding: .7rem .9rem .8rem; border-radius: 12px; border-left: 3px solid var(--lado); background: color-mix(in srgb, var(--lado) 7%, transparent); }
 .racha__lado--sim { --lado: var(--cor-bom); }
+/* o verde da barra (--cor-bom) da 3,8:1 como texto sobre o fundo claro; o rotulo usa o verde de texto */
+.racha__lado--sim .racha__lado-rot { color: var(--bom-texto); }
 .racha__lado--nao { --lado: var(--cor-critico); }
 .racha__lado-rot { display: flex; align-items: baseline; justify-content: space-between; margin: 0 0 .55rem; font: 600 .66rem/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--lado); }
 .racha__lado-rot strong { font: 500 1.4rem/1 var(--font-display); letter-spacing: -0.05em; }
@@ -1196,8 +1199,8 @@ html, body { overflow-x: clip; }
 .sub-secao + .partidos { margin-top: 1.25rem; }
 
 /* ponteiros para o metodo (Como funciona), iguais em todas as paginas */
-.metodo-link { display: inline-flex; align-items: center; gap: .4rem; font-size: .88rem; font-weight: 500; color: var(--azul); text-decoration: none; padding: .15rem .6rem .15rem .5rem; border-radius: var(--raio-pilula); background: var(--azul-claro); transition: background .2s, color .2s; white-space: nowrap; }
-.metodo-link:hover { color: var(--branco); background: var(--azul); }
+.metodo-link { display: inline-flex; align-items: center; gap: .4rem; font-size: .88rem; font-weight: 500; color: var(--azul-texto); text-decoration: none; padding: .15rem .6rem .15rem .5rem; border-radius: var(--raio-pilula); background: var(--azul-claro); transition: background .2s, color .2s; white-space: nowrap; }
+.metodo-link:hover { color: var(--branco); background: var(--azul-botao); }
 .metodo-link__seta { transition: transform .25s var(--ease); }
 .metodo-link:hover .metodo-link__seta { transform: translateX(3px); }
 .metodo-link svg { flex: none; }
@@ -1640,7 +1643,7 @@ a.rp-autor__nome:hover { text-decoration: underline; }
 .compartilhar__rot { font: 600 .68rem/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--color-surface-3); margin-right: .25rem; }
 .compartilhar__botao { display: inline-flex; align-items: center; padding: .5rem .9rem; border-radius: var(--raio-pilula); border: 1px solid var(--color-linha); background: var(--color-surface-1); color: var(--color-ink); font: 500 .88rem/1 var(--font-body); text-decoration: none; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
 .compartilhar__botao:hover, .compartilhar__botao:focus-visible { border-color: var(--azul); color: var(--azul-escuro); }
-.compartilhar__botao--zap { background: var(--azul); border-color: var(--azul); color: var(--rp-texto); }
+.compartilhar__botao--zap { background: var(--azul-botao); border-color: var(--azul-botao); color: var(--branco); }
 .compartilhar__botao--zap:hover, .compartilhar__botao--zap:focus-visible { background: var(--azul-escuro); border-color: var(--azul-escuro); color: var(--color-surface-1); }
 .rp-lista { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1.25rem; }
 .rp-lista__item { position: relative; display: grid; grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); gap: 1.5rem; align-items: center; padding: 1rem; border: 1px solid var(--color-linha); border-radius: 18px; background: var(--color-surface-1); transition: border-color .25s, box-shadow .25s; }
@@ -1917,3 +1920,18 @@ a.rp-autor__nome:hover { text-decoration: underline; }
   .vereadores__card > .indice-mini, .vereadores__card > .vereadores__stats, .vereadores__card > .vereadores__nums { grid-column: 1 / -1; }
   .vereadores__card > .indice-mini { margin: .7rem 0 .2rem; }
 }
+
+/* aviso de PDF que sumiu ou mudou no site da Camara (camara/vigia.py) */
+.ficha__alerta { display: block; margin-top: .35rem; padding: .45rem .6rem; border-radius: 8px; background: var(--aviso-bg); color: var(--aviso-texto); font-size: .82rem; line-height: 1.4; }
+/* acabamento da auditoria (break-ui e accessibility) */
+.mx__data a { display: inline-block; padding: .25rem 0; color: inherit; text-decoration-color: var(--color-surface-2); }
+.mx__data a:hover { color: var(--color-ink); }
+/* 320 px: o nome da marca passava por baixo do botao de busca; fica so o guara (o link tem aria-label pelo texto oculto) */
+@media (max-width: 359px) { .marca__texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
+/* "Ordenar por" com 5 opcoes virava uma bolha de 3 linhas em 320 px: no celular rola para o lado */
+@media (max-width: 420px) {
+  .segmentado { display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+  .segmentado::-webkit-scrollbar { display: none; }
+  .segmentado button { flex: none; white-space: nowrap; }
+}
+.letreiro__quando { margin-left: .35rem; opacity: .75; font-weight: 400; letter-spacing: .04em; }

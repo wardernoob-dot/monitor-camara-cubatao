@@ -90,7 +90,21 @@ export default function ProjetoPagina() {
           </dd></div>
         )}
         {m.pautas.length > 0 && <div><dt>Na pauta em</dt><dd>{m.pautas.map((p) => dataCurta(p, true)).join(", ")}</dd></div>}
-        {m.documento && <div><dt>Texto original</dt><dd><a href={m.documento} rel="noopener">PDF no site da Câmara</a></dd></div>}
+        {m.documento && (
+          <div>
+            <dt>Texto original</dt>
+            <dd>
+              <a href={m.documento} rel="noopener">PDF no site da Câmara</a>
+              {m.documento_arquivo && <> · <a href={m.documento_arquivo} rel="noopener">cópia guardada no archive.org</a></>}
+              {m.documento_alerta && (
+                <span className="ficha__alerta">
+                  {m.documento_alerta.tipo === "sumiu" ? "O PDF saiu do site da Câmara" : "O PDF foi trocado no site da Câmara"} (visto em {dataCurta(m.documento_alerta.quando, true)}).
+                  {m.documento_arquivo ? " A cópia guardada é a versão que o site leu." : " O site usa a versão que leu antes da mudança."}
+                </span>
+              )}
+            </dd>
+          </div>
+        )}
         {m.lei && <div><dt>Lei</dt><dd>Lei {m.lei.numero}, publicada no Diário Oficial em {dataExtenso(m.lei.data)}{m.lei.url && <> (<a href={m.lei.url} rel="noopener">ver publicação</a>)</>}</dd></div>}
         {m.veto && <div><dt><Termo chave="veto">Veto</Termo></dt><dd>Veto {m.veto.alcance} do prefeito{m.veto.url && <> (<a href={m.veto.url} rel="noopener">ver ofício</a>)</>}. {m.veto.resultado === "veto_mantido" ? <>A Câmara manteve o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : m.veto.resultado === "veto_derrubado" ? <>A Câmara derrubou o veto{m.veto.data ? ` em ${dataExtenso(m.veto.data)}` : ""}.</> : <>A Câmara ainda não votou o veto.</>}{m.veto.pagina && <> <Link to={`/projetos/${m.veto.pagina}`}>Ver a votação do veto</Link>.</>}</dd></div>}
       </dl>

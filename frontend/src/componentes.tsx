@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useDados, type Materia, type Vereador, type Votacao, type Voto, type Resultado } from "./dados";
 import { slugPartido } from "./dados";
@@ -17,10 +17,12 @@ export function Celula({ ev, voto, nome }: { ev: Votacao; voto?: Voto; nome: str
   const res = ev.resultado === "APROVADO" ? "aprovado" : ev.resultado === "REJEITADO" ? "rejeitado" : "sem resultado";
   const v = voto ? ROTULO[voto] : "sem registro";
   const titulo = `${nome}: ${v}. ${m?.titulo ?? ""}, ${minusculaInicial(ev.etapa_txt)}, ${dataCurta(ev.data)} (${res})`;
+  // sem link: um quadrado de 9 a 11 px colado no vizinho não dá pra tocar (WCAG 2.5.8). O projeto abre pela
+  // tabela ou lista ao lado; aqui fica o desenho, com o texto para leitor de tela e o title para o mouse.
   return (
-    <Link className={`cel cel--${voto ? voto.toLowerCase() : "vazio"}`} to={`/projetos/${ev.materia}`} title={titulo}>
+    <span className={`cel cel--${voto ? voto.toLowerCase() : "vazio"}`} title={titulo}>
       <span className="sr">{titulo}</span>
-    </Link>
+    </span>
   );
 }
 
@@ -111,9 +113,18 @@ export function NotaFonte({ ev }: { ev: Votacao }) {
 }
 
 /** Rosto do vereador: foto (docs/fotos) quando existir; senao as iniciais. */
+/** Largura em que cada tamanho aparece: o navegador escolhe entre a foto de 160 px e a de 480 px. */
+const LARGURA_AVATAR: Record<string, string> = { p: "40px", m: "64px", g: "120px", retrato: "(max-width: 640px) 72px, 320px" };
+
 export function Avatar({ v, tamanho = "m" }: { v: Vereador; tamanho?: "p" | "m" | "g" | "retrato" }) {
-  if (v.foto)
-    return <img className={`avatar avatar--${tamanho}`} src={`./${v.foto}`} alt={`Foto de ${v.exibicao}`} loading="lazy" decoding="async" />;
+  // arquivo apagado ou caminho errado: cai nas iniciais em vez do ícone de imagem quebrada
+  const [falhou, setFalhou] = useState(false);
+  if (v.foto && !falhou)
+    return (
+      <img className={`avatar avatar--${tamanho}`} src={`./${v.foto}`} alt={`Foto de ${v.exibicao}`} loading="lazy" decoding="async"
+        srcSet={v.foto_p ? `./${v.foto_p} 160w, ./${v.foto} 480w` : undefined} sizes={v.foto_p ? LARGURA_AVATAR[tamanho] : undefined}
+        onError={() => setFalhou(true)} />
+    );
   return <span className={`avatar avatar--${tamanho} avatar--iniciais`} aria-hidden="true">{v.iniciais}</span>;
 }
 
