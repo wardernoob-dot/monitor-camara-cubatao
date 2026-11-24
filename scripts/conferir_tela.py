@@ -12,7 +12,9 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8765"
-CONTRASTE_MIN = 3.0  # texto abaixo disso e ilegivel na pratica (WCAG AA pede 4,5 para texto normal)
+# WCAG 2.2 AA (1.4.3): 4,5:1 para texto normal e 3:1 para texto grande (>= 24 px, ou >= 18,66 px em negrito 700+)
+CONTRASTE_NORMAL = 4.5
+CONTRASTE_GRANDE = 3.0
 
 JS_CONTRASTE = r"""(fundoPadrao) => {
  // "rgb(r, g, b)" ou "color(srgb r g b / a)" (color-mix devolve este, com canais de 0 a 1)
@@ -33,10 +35,12 @@ JS_CONTRASTE = r"""(fundoPadrao) => {
    if (getComputedStyle(el.parentElement).backgroundImage !== 'none' || st.backgroundImage !== 'none') continue;
    const L1 = lum(st.color), L2 = lum(bg(el)); if (L1 == null || L2 == null) continue;
    const cr = (Math.max(L1,L2)+.05)/(Math.min(L1,L2)+.05);
-   if (cr < %s) out.push(`${String(el.className).slice(0,40) || el.tagName} "${el.textContent.trim().slice(0,30)}" ${cr.toFixed(2)}`);
+   const px = parseFloat(st.fontSize), peso = parseInt(st.fontWeight, 10) || 400;
+   const minimo = (px >= 24 || (px >= 18.66 && peso >= 700)) ? %s : %s;
+   if (cr < minimo) out.push(`${String(el.className).slice(0,40) || el.tagName} "${el.textContent.trim().slice(0,30)}" ${cr.toFixed(2)} (min ${minimo})`);
  }
  return [...new Set(out)];
-}""" % CONTRASTE_MIN
+}""" % (CONTRASTE_GRANDE, CONTRASTE_NORMAL)
 
 
 def rotas() -> list[str]:

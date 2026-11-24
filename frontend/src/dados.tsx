@@ -9,6 +9,8 @@ export interface Vereador {
   nome: string;
   iniciais: string;
   foto: string | null;
+  /** mesma foto com 160 px, para listas e avatares pequenos */
+  foto_p?: string | null;
   partido: string | null;
   partido_fonte: string | null;
   partido_url?: string | null;
