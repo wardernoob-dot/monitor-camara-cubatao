@@ -2,7 +2,8 @@ import { Link, useParams } from "react-router";
 import { AvisarErro } from "../avisar";
 import { useDados } from "../dados";
 import { Grade, NotaFonte } from "../componentes";
-import { Autoria, CorpoReportagem, Foto, PlacarRostos, Prefeito, situacaoCurta, classeSituacao, votacaoDa } from "../reportagens";
+import { Autoria, CorpoReportagem, Foto, PlacarRostos, Prefeito, votacaoDa } from "../reportagens";
+import { Chapeu, Situacao } from "../componentes";
 import { dataCurta, dataExtenso, useTitulo } from "../util";
 import NaoEncontrado from "./NaoEncontrado";
 import { Compartilhar } from "../compartilhar";
@@ -31,8 +32,8 @@ export default function ReportagemPagina() {
           <nav className="migalha" aria-label="Você está em"><Link to="/o-que-muda">O que muda</Link></nav>
           {r.status === "rascunho" && <p className="aviso-voto"><strong>Rascunho.</strong> Este texto ainda não foi aprovado e não aparece no site publicado.</p>}
           <p className="rp-pagina__topo-linha">
-            {r.chapeu && <span className="rp__chapeu">{r.chapeu}</span>}
-            {principal && <span className={`rp__sit rp__sit--${classeSituacao(principal)}`}>{situacaoCurta(principal)}</span>}
+            <Chapeu texto={r.chapeu} />
+            {principal && <Situacao m={principal} />}
           </p>
           <h1 className="titulo-pagina rp-pagina__manchete">{r.manchete}</h1>
           <p className="rp-pagina__fina">{r.linha_fina}</p>
@@ -48,7 +49,7 @@ export default function ReportagemPagina() {
           {projetos.map((m) => (
             <div key={m.slug} className="rp-ficha__projeto">
               <Link to={`/projetos/${m.slug}`} className="rp-ficha__id">{m.titulo}</Link>
-              <span className={`rp__sit rp__sit--${classeSituacao(m)}`}>{situacaoCurta(m)}</span>
+              <Situacao m={m} />
               {m !== principal && m.autoria !== principal?.autoria && <Autoria m={m} />}
               {m.lei && <span className="rp-ficha__lei">Lei {m.lei.numero}, de {dataCurta(m.lei.data, true)}{m.lei.url && <> · <a href={m.lei.url} rel="noopener">Diário Oficial</a></>}</span>}
               <Prefeito m={m} />

@@ -2,7 +2,7 @@ import { Fragment, useMemo, useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import { useReducedMotion } from "framer-motion";
 import { useDados, votacaoDecisiva, type Base, type Materia, type Reportagem, type Vereador, type Votacao } from "./dados";
-import { Avatar } from "./componentes";
+import { Avatar, Chapeu, PlacarRotulado, Situacao, classeSituacao, placarDireto, rejeitado, situacaoCurta } from "./componentes";
 import { dataCurta } from "./util";
 
 /* ------------------------------------------------------------------ fatos que vem do dado, nao do texto */
@@ -36,18 +36,6 @@ export function votacaoDa(b: Base, r: Reportagem): Votacao | null {
   return ev && Object.keys(ev.votos).length ? ev : null;
 }
 
-/** Situação em linguagem de quem não acompanha a Câmara. Parecer contrário aprovado = projeto rejeitado. */
-function rejeitado(m: Materia) {
-  return m.situacao_cls === "rejeitado" || /parecer contr[áa]rio[^:]*: aprovado/i.test(m.situacao) || /parecer[^:]*favor[áa]vel[^:]*: rejeitado/i.test(m.situacao);
-}
-function situacaoCurta(m: Materia): string {
-  if (m.lei) return `Virou a Lei ${m.lei.numero}`;
-  if (rejeitado(m)) return "Rejeitado pela Câmara";
-  // "Aprovado pela Câmara" num projeto de lei ainda vai para o prefeito sancionar ou vetar
-  if (m.situacao_cls === "aprovado" && /^(PL|PLC)$/.test(m.tipo)) return "Aprovado, falta o prefeito";
-  return m.situacao.replace(/;.*$/, "");
-}
-const classeSituacao = (m: Materia) => (m.lei ? "lei" : rejeitado(m) ? "rejeitado" : m.situacao_cls);
 
 /* ------------------------------------------------------------------ texto: **negrito** e [link](url) */
 
@@ -176,22 +164,13 @@ function Foto({ r, classe, prioridade = false }: { r: Reportagem; classe: string
 
 /* ------------------------------------------------------------------ capa "O que muda" da pagina inicial */
 
-/** Cor da bolinha da situação: virou lei, ainda andando ou parou (rejeitado, veto, só na pauta). */
-const TOM: Partial<Record<string, "lei" | "anda">> = { lei: "lei", aprovado: "anda", andamento: "anda" };
-const tomSituacao = (m: Materia) => TOM[classeSituacao(m)] ?? "parou";
-
-/** Placar só quando votar Sim é ser a favor do projeto; em parecer contrário, emenda ou veto o número solto confunde. */
-function placarDireto(ev: Votacao | null) {
-  return ev && ev.sim != null && ev.nao != null && ev.sentido === "direto" && Object.keys(ev.votos).length ? `${ev.sim} a ${ev.nao}` : null;
-}
-
+/** Selo de situação e placar sempre no mesmo lugar: lado a lado no computador, um embaixo do outro no celular. */
 function MetaCapa({ m, ev }: { m: Materia | undefined; ev: Votacao | null }) {
-  const placar = placarDireto(ev);
-  if (!m && !placar) return null;
+  if (!m && !placarDireto(ev)) return null;
   return (
     <p className="capa__meta">
-      {m && <span className={`capa__sit capa__sit--${tomSituacao(m)}`}>{situacaoCurta(m)}</span>}
-      {placar && <span className="capa__placar" aria-label={`placar ${placar}`}>{placar}</span>}
+      {m && <Situacao m={m} />}
+      <PlacarRotulado ev={ev} />
     </p>
   );
 }
@@ -200,7 +179,7 @@ function TopoCapa({ r }: { r: Reportagem }) {
   return (
     <p className="capa__topo">
       {r.status === "rascunho" && <span className="rp__rascunho">Rascunho</span>}
-      {r.chapeu && <span className="capa__chapeu">{r.chapeu}</span>}
+      <Chapeu texto={r.chapeu} />
       <span className="capa__data">{dataCurta(r.data)}</span>
     </p>
   );
@@ -398,4 +377,5 @@ export function CorpoReportagem({ r }: { r: Reportagem }) {
   );
 }
 
-export { PlacarRostos, Autoria, Foto, Prefeito, situacaoCurta, classeSituacao };
+export { PlacarRostos, Autoria, Foto, Prefeito };
+export { situacaoCurta, classeSituacao } from "./componentes";

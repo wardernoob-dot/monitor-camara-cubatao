@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { useDados } from "../dados";
-import { classeSituacao, situacaoCurta } from "../reportagens";
+import { Chapeu, Situacao } from "../componentes";
 import { dataExtenso, useTitulo } from "../util";
 
 export default function Reportagens() {
@@ -21,8 +21,8 @@ export default function Reportagens() {
                 <img className="rp-lista__foto" src={`./${r.foto.p}`} alt="" loading="lazy" decoding="async" />
                 <div className="rp-lista__txt">
                   <p className="rp-lista__topo">
-                    {r.chapeu && <span className="rp__chapeu">{r.chapeu}</span>}
-                    {m && <span className={`rp__sit rp__sit--${classeSituacao(m)}`}>{situacaoCurta(m)}</span>}
+                    <Chapeu texto={r.chapeu} />
+                    {m && <Situacao m={m} />}
                   </p>
                   <h2 className="rp-lista__manchete"><Link to={`/o-que-muda/${r.id}`} className="esticado">{r.manchete}</Link></h2>
                   <p className="rp-lista__fina">{r.linha_fina}</p>
