@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router";
 import { useDados, type Materia, type Votacao } from "../dados";
 import { Avatar, Fonte } from "../componentes";
 import { ladosDaVotacao } from "../reportagens";

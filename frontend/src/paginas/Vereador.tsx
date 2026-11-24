@@ -3,7 +3,7 @@ import { AvisarErro } from "../avisar";
 import { Secao, abrirSecao } from "../secao";
 import { Compartilhar } from "../compartilhar";
 import { useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { slugPartido, useDados, type Votacao, type Voto } from "../dados";
 import { Avatar, Celula, Fonte, Legenda, LinkMateria, Metodo, Placar, ResultadoTag, ResultadoVotacao, Situacao, TagPartido, VotoTag } from "../componentes";
 import { dataCurta, useTitulo, votouDiferente } from "../util";

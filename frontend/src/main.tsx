@@ -1,6 +1,6 @@
 import { lazy, Suspense, StrictMode, useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter, NavLink, Link, Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
+import { HashRouter, NavLink, Link, Navigate, Route, Routes, useLocation, useParams } from "react-router";
 import "@fontsource/geist-sans/400.css";
 import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-sans/600.css";
@@ -132,6 +132,7 @@ function Rodape() {
           <nav className="rodape__col" aria-label="Dados e código">
             <h2 className="rodape__titulo">Dados e código</h2>
             <ul>
+              <li><a href="./vereadores/">Versão em texto simples</a></li>
               <li><a href="./data/dados.json">Baixar os dados (JSON)</a></li>
               <li><a href="./reportagens.xml">“O que muda” por RSS</a></li>
               <li><a href={meta.repo} rel="noopener noreferrer">Código-fonte aberto</a></li>

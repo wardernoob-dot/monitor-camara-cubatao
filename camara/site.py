@@ -1153,6 +1153,8 @@ def exportar(dados: Path, saida: Path | None = None) -> dict:
     if saida.resolve() == (RAIZ / "docs" / "data").resolve():
         from . import compartilhar
         compartilhar.gerar(pacote)  # paginas de previa (WhatsApp etc.) para reportagens, vereadores e projetos
+        from . import paginas
+        paginas.gerar(pacote)  # HTML pronto pra buscador e pra quem abre sem JavaScript, mais o sitemap.xml
     tam = (saida / "dados.json").stat().st_size // 1024
     print(f"  site: dados.json ({tam} KB), {len(vereadores)} vereadores, {len(materias)} materias, "
           f"{len(eventos)} votacoes, {len(list((saida / 'analises').glob('*.json')))} analises")

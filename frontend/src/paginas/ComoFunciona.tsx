@@ -3,7 +3,7 @@ import { useTitulo } from "../util";
 import { Secao } from "../secao";
 import { Termo } from "../explica";
 import { Toc } from "../toc";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const PRINCIPIOS = [
   { ancora: "de-onde-vem-os-dados", titulo: "Todo voto mostra a fonte", texto: "Cada voto diz se veio do painel da transmissão ou do resumo oficial, com o link para conferir." },
