@@ -579,6 +579,16 @@
   "titulo": "PAUTA DA 3ª SESSÃO EXTRAORDINÁRIA",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/3a-19-02.2026"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/40a%20%2024.11.2026.pdf": {
+  "baixado_em": "2026-11-24T02:56:15+00:00",
+  "bytes": 7047133,
+  "paginas": 16,
+  "precisa_ocr": false,
+  "secao": "pauta",
+  "sha256": "1880cb4b7d03340894314695c928711d28c71322a45e61767ea4efc6df0d655d",
+  "titulo": "PAUTA DA 40º SESSÃO ORDINÁRIA",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/40a%20%2024.11.2026.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/4a-24-02.2026": {
   "baixado_em": "2026-11-05T15:32:06+00:00",
   "bytes": 4260341,
@@ -2948,6 +2958,16 @@
   "sha256": "b8b2dd6aacac7956fe230029e40c8102d64a644f43887cbda6cc1c7ff4b75cf9",
   "titulo": "RESUMO DA 38ª SESSÃO ORDINÁRIA - 10/11/2026",
   "url": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file": {
+  "baixado_em": "2026-11-24T02:56:08+00:00",
+  "bytes": 530783,
+  "paginas": 6,
+  "precisa_ocr": false,
+  "secao": "resumo",
+  "sha256": "1b0e55299199f1b6aadc77bbd7a25f598e3fedd0ea20064fc538ea72e35fc569",
+  "titulo": "RESUMO DA 39ª SESSÃO ORDINÁRIA - 17/11/2026",
+  "url": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-3a-sessao-ordinaria-19-02-2026/at_download/file": {
   "baixado_em": "2026-11-05T15:29:29+00:00",

@@ -1,7 +1,16 @@
 {
  "data": "2026-11-17",
- "status": "provisorio_painel",
- "sessoes": [],
+ "status": "oficial_conferido",
+ "sessoes": [
+  {
+   "numero": 39,
+   "tipo": "ordinaria",
+   "data": "2026-11-17",
+   "inicio": "14:23",
+   "fim": "17:09",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file"
+  }
+ ],
  "transmissoes": [
   {
    "titulo": "39ª SESSÃO ORDINÁRIA DIA 17 DE NOVEMBRO DE 2026",
@@ -23,7 +32,7 @@
    "autoria": "ALLAN MATIAS BARBOZA DE SOUZA",
    "assunto": "DISPÕE SOBRE A CONCESSÃO DE GRATUIDADE NO TRANSPORTE COLETIVO MUNICIPAL ÀS GESTANTES, PUÉRPERAS E PACIENTES EM TRATAMENTO ONCOLÓGICO NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
    "na_pauta": true,
-   "resultado_oficial": null,
+   "resultado_oficial": "aprovado",
    "votacoes": [
     {
      "etapa": "1a_discussao",
@@ -62,10 +71,53 @@
       "validacao": "confirmado_pauta",
       "aviso": null
      },
-     "resumo": null,
+     "resumo": {
+      "sessao": {
+       "numero": 39,
+       "tipo": "ordinaria",
+       "data": "2026-11-17",
+       "inicio": "14:23",
+       "fim": "17:09"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz"
+       ]
+      }
+     },
      "conferencia": {
-      "status": "aguardando_resumo",
-      "divergencias": []
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "marcos roberto silva",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "11x0",
+        "resumo": "12x0"
+       }
+      ]
      }
     }
    ],
@@ -99,16 +151,198 @@
      "nomes_nao_reconhecidos": []
     }
    ]
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "21",
+   "ano": null,
+   "autoria": "Alexandre Mendes da Silva",
+   "assunto": "Aprovada a Moção nº 21, de autoria do Vereador Alexandre Mendes da Silva, Moção de Aplausos ao atleta Diego Cunha, em reconhecimento à sua expressiva conquista no cenário esportivo internacional, ao sagrar-se Vice-Campeão Pan- Americano de Bodybuilding Clássico, representando o Brasil e levando o nome da cidade de Cubatão a uma importante competição das Américas.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 39,
+       "tipo": "ordinaria",
+       "data": "2026-11-17",
+       "inicio": "14:23",
+       "fim": "17:09"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 11,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "22",
+   "ano": null,
+   "autoria": "José Elan dos Santos Gomes",
+   "assunto": "Aprovada a Moção nº 22, de autoria do Vereador José Elan dos Santos Gomes, Moção de Aplausos ao atleta de alto rendimento e bombeiro militar Guilherme Evangelista Dias por sua brilhante trajetória.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 39,
+       "tipo": "ordinaria",
+       "data": "2026-11-17",
+       "inicio": "14:23",
+       "fim": "17:09"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 10,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "MOCAO",
+   "numero": "23",
+   "ano": null,
+   "autoria": "Jair Ferreira Lucas",
+   "assunto": "Aprovada a Moção nº 23, de autoria do Vereador Jair Ferreira Lucas, Moção de Aplausos ao Projeto CICLO – Cidadania, Convivência, Lazer e Oportunidade, em alusão à Semana do Idoso, realizada no mês de outubro.",
+   "na_pauta": false,
+   "resultado_oficial": "aprovado",
+   "votacoes": [
+    {
+     "etapa": "unica",
+     "painel": null,
+     "resumo": {
+      "sessao": {
+       "numero": 39,
+       "tipo": "ordinaria",
+       "data": "2026-11-17",
+       "inicio": "14:23",
+       "fim": "17:09"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcos roberto silva",
+        "marcio silva nascimento",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
+     "conferencia": {
+      "status": "so_resumo",
+      "divergencias": []
+     }
+    }
+   ],
+   "sem_painel": true
+  },
+  {
+   "tipo": "RELATORIO",
+   "numero": null,
+   "ano": null,
+   "autoria": null,
+   "assunto": "Lido o Relatório Final da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.123, de 24 de agosto de 2026, para “ORGANIZAR O ATO SOLENE EM HOMENAGEM AO CÍRCULO DE ORAÇÃO”.",
+   "na_pauta": false,
+   "resultado_oficial": "lido",
+   "votacoes": [],
+   "sem_painel": true
   }
  ],
  "votacoes_nao_identificadas": [],
- "divergencias": [],
+ "divergencias": [
+  {
+   "materia": "PL 62",
+   "etapa": "1a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "marcos roberto silva",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 62",
+   "etapa": "1a_discussao",
+   "tipo": "placar_divergente",
+   "painel": "11x0",
+   "resumo": "12x0"
+  }
+ ],
  "nomes": {
   "alessandro donizete de oliveira": {
    "nome": "Alessandro Donizete de Oliveira",
    "bancada_declarada": "REPUBLICANOS",
    "presenca": {
-    "sim": 66,
+    "sim": 67,
     "justificada": 2
    }
   },
@@ -116,7 +350,7 @@
    "nome": "Alexandre Mendes da Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 63,
+    "sim": 64,
     "ausente": 3,
     "justificada": 2
    }
@@ -125,7 +359,7 @@
    "nome": "Allan Matias Barboza de Souza",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 59,
+    "sim": 60,
     "justificada": 6,
     "ausente": 2
    }
@@ -134,7 +368,7 @@
    "nome": "Anderson de Lana Andrade",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 40,
+    "sim": 41,
     "justificada": 4
    }
   },
@@ -142,7 +376,7 @@
    "nome": "Daniel Barbosa de Assis Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 67,
+    "sim": 68,
     "ausente": 1
    }
   },
@@ -150,7 +384,7 @@
    "nome": "Edson Menezes Mota",
    "bancada_declarada": "UNIÃO BRASIL",
    "presenca": {
-    "sim": 60,
+    "sim": 61,
     "justificada": 8
    }
   },
@@ -166,7 +400,7 @@
    "bancada_declarada": null,
    "presenca": {
     "justificada": 1,
-    "sim": 66,
+    "sim": 67,
     "ausente": 1
    }
   },
@@ -181,7 +415,7 @@
    "nome": "Jair Ferreira Lucas",
    "bancada_declarada": "PSDB",
    "presenca": {
-    "sim": 67,
+    "sim": 68,
     "ausente": 1
    }
   },
@@ -189,7 +423,7 @@
    "nome": "Joemerson Alves de Souza",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 64,
+    "sim": 65,
     "justificada": 4
    }
   },
@@ -197,7 +431,7 @@
    "nome": "José Afonso",
    "bancada_declarada": "PSD",
    "presenca": {
-    "sim": 65,
+    "sim": 66,
     "justificada": 2
    }
   },
@@ -205,7 +439,7 @@
    "nome": "José Elan dos Santos Gomes",
    "bancada_declarada": "AGIR",
    "presenca": {
-    "sim": 65,
+    "sim": 66,
     "justificada": 2,
     "ausente": 1
    }
@@ -214,7 +448,7 @@
    "nome": "Márcio Silva Nascimento",
    "bancada_declarada": "PSB",
    "presenca": {
-    "sim": 65,
+    "sim": 66,
     "justificada": 2,
     "ausente": 1
    }
@@ -223,7 +457,7 @@
    "nome": "Marcos Roberto Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 65,
+    "sim": 66,
     "justificada": 3
    }
   },
@@ -238,7 +472,7 @@
    "nome": "Ronaldo Araújo Queiroz",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 65,
+    "sim": 66,
     "justificada": 2,
     "ausente": 1
    }
@@ -248,7 +482,7 @@
    "bancada_declarada": "PSD",
    "presenca": {
     "justificada": 5,
-    "sim": 62,
+    "sim": 63,
     "ausente": 1
    }
   },

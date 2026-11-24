@@ -64,6 +64,21 @@
   "modelo": "gemini-3.5-flash-lite",
   "texto": "Homenageia o assistente social Walter Rodrigues Lemos por sua trajetória profissional e defesa dos Direitos Humanos."
  },
+ "mocao-21-2026": {
+  "hash": "dfef0325b88e",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia com aplausos o atleta Diego Cunha por ser Vice-Campeão Pan-Americano de Bodybuilding Clássico, representando o Brasil e Cubatão."
+ },
+ "mocao-22-2026": {
+  "hash": "bbc735386b99",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia com aplausos a trajetória do atleta de alto rendimento e bombeiro militar Guilherme Evangelista Dias."
+ },
+ "mocao-23-2026": {
+  "hash": "a41d72f91719",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Homenageia com aplausos o Projeto CICLO durante a Semana do Idoso realizada em outubro."
+ },
  "mocao-3-2026": {
   "hash": "ac0e07296a80",
   "modelo": "gemini-3.1-flash-lite",
