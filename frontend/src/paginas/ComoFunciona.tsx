@@ -73,6 +73,8 @@ export default function ComoFunciona() {
   <dd>PDFs publicados no site da Câmara. Quando o PDF é uma imagem escaneada, o texto é transcrito automaticamente.</dd>
   <dt>Diário Oficial do Município</dt>
   <dd>Mostra quando um projeto aprovado vira lei.</dd>
+  <dt>Cópia guardada e vigilância</dt>
+  <dd>Cada PDF coletado ganha uma cópia no <a href="https://web.archive.org/" rel="noopener">archive.org</a>, um arquivo público da internet. O site baixa essa cópia e só mostra o link se ela for idêntica, byte a byte, ao arquivo que leu (mesma impressão digital SHA-256). O robô também volta aos PDFs já coletados: se um saiu do site da Câmara ou foi trocado, a página do projeto avisa, e a cópia guardada continua mostrando o que estava publicado.</dd>
 </dl>
 </Secao>
 <Secao id="quando-as-fontes-nao-batem" titulo="Quando as fontes não batem">

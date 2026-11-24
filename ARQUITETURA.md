@@ -21,6 +21,7 @@ Documento técnico do [Voto a Voto](README.md): quem faz o quê, workflows, uso 
 | Módulo / Etapa | Responsável Técnico | Estado Atual | O que entrega |
 |---|---|---|---|
 | **Coletor Documental** | `camara/coletor.py` (`requests` + `BeautifulSoup` + `pdfplumber`) | Em produção (a cada 4h) | Varre pautas, resumos e projetos no portal Plone da Câmara, calcula `SHA-256` em `data/indice.json` e extrai o texto integral em `data/texto/<sha256>.txt`. |
+| **Prova e vigilância** | `camara/vigia.py` (`requests`) | Em produção (a cada 4h) | Guarda cópia de cada PDF no Wayback Machine conferindo o SHA-256 (`data/arquivo.json`) e detecta PDF que sumiu ou mudou no site da Câmara (`data/vigia.json`). |
 | **Agente Residencial de Storyboard** | `pc/pegar_specs.ps1` (PowerShell no Windows) | Em produção (a cada 4h) | Roda em IP residencial para contornar o bloqueio de IPs de nuvem do YouTube, extrai o `spec` de storyboard das sessões novas e grava em `data/storyboard_specs.json`. |
 | **Leitura do Painel Eletrônico** | `camara/youtube.py` + `camara/painel.py` + `camara/videos.py` (`Pillow` + `NumPy`) | Em produção (desde set/2026) | Baixa as folhas de miniaturas do YouTube (`i.ytimg.com`), reconhece o rosto de cada vereador por similaridade de cosseno (`data/rostos_2026.npz`) e lê o voto pela cor RGB da moldura (**100% determinístico, sem IA**). |
 | **Leitura do Cabeçalho e Validação** | `camara/cabecalho.py` (**Gemini Vision API**) + `camara/validacao.py` | Em produção | Transcreve o texto minúsculo (~5 px) no topo do painel via Gemini e **confere obrigatoriamente contra a Pauta Oficial do dia** (`camara/pauta.py`). |
@@ -46,6 +47,7 @@ Todo o fluxo é orquestrado pelo comando `python -m camara tudo` (definido em [`
    - Usa `requests.Session` (com intervalo mínimo de `1.5s` entre requisições) e `BeautifulSoup` para varrer recursivamente até 3 níveis nas seções `/processo-legislativo/resumo-das-sessoes`, `/pauta-das-sessoes-1` e `/projetos-de-lei`.
    - Converte links Plone `/view` em `/at_download/file`, baixa o binário PDF (máximo `25 MB`), calcula o `SHA-256` e usa `pdfplumber` para extrair o texto de até `250` páginas por documento.
    - Se o documento tiver menos de `80` caracteres por página, marca `"precisa_ocr": true` em `data/indice.json`.
+   - **`vigia.rodar()` (`camara/vigia.py`, logo depois da coleta; também `python -m camara vigiar`):** pede ao Wayback Machine (archive.org, Save Page Now) uma cópia de até 5 PDFs por rodada, baixa a cópia crua (`id_`) e só marca `"confere": true` em `data/arquivo.json` se o SHA-256 dela bater com o de `data/indice.json`. Depois rebaixa até 8 documentos já coletados (os conferidos há mais tempo) e registra em `data/vigia.json` quando um PDF sumiu (404/410) ou mudou (SHA-256 diferente). Nada disso derruba a rodada: erro de rede vira aviso. O site mostra a cópia conferida e um aviso de "PDF trocado/saiu do site" na ficha do projeto.
 2. **`processar()` (`camara/processar.py` + `camara/parser_resumo.py` + `camara/pauta.py`):**
    - Passa o texto bruto por `camara/textclean.py` (que desfaz letras/palavras/linhas duplicadas de "negrito falso" e troca caracteres cirílicos por latinos).
    - Extrai do Resumo Oficial a lista de presença, cada item votado, o tipo de votação (nominal ou simbólica), os votos individuais e o resultado, normalizando cada nome de parlamentar pelo catálogo canônico de `camara/nomes.py`.
@@ -243,7 +245,7 @@ Os PDFs e páginas publicados pela Câmara possuem peculiaridades reais que os m
 O projeto conta com blindagem em profundidade cobrindo coleta externa, processamento de arquivos binários, execução em CI/CD, agente local Windows e frontend estático:
 
 ### 8.1. Prevenção de SSRF (Direto e via Redirecionamento HTTP `3xx`)
-- Todas as requisições externas em `coletor.py`, `noticias.py`, `analise.py`, `youtube.py` e `sonda_storyboard.py` validam estritamente o esquema (`https`/`http`) e o hostname contra allowlists explícitas (`www.cubatao.sp.leg.br`, `*.youtube.com`, `*.ytimg.com`).
+- Todas as requisições externas em `coletor.py`, `noticias.py`, `analise.py`, `youtube.py` e `sonda_storyboard.py` validam estritamente o esquema (`https`/`http`) e o hostname contra allowlists explícitas (`www.cubatao.sp.leg.br`, `*.youtube.com`, `*.ytimg.com`). `vigia.py` aceita só `www.cubatao.sp.leg.br` e `web.archive.org`/`archive.org`, inclusive no destino final de redirecionamento.
 - Hooks de resposta HTTP (`_bloquear_redirect_externo` e `_bloquear_redirect_yt`) inspecionam **cada salto de redirecionamento (`301`, `302`, `307`, `308`)** antes de segui-lo, impedindo redirecionamento aberto para IPs internos ou serviços de metadados de nuvem (`169.254.169.254`).
 - Links extraídos de feeds RSS (`_url_noticia_segura`) e URLs de folhas de storyboard (`_validar_base_storyboard`) passam por validação de domínio antes de qualquer download.
 
@@ -290,6 +292,7 @@ monitor-camara-cubatao/
 ├── camara/                  # Pacote principal Python (pipeline de coleta, leitura, IA e exportação)
 │   ├── __main__.py          # CLI: `python -m camara [coletar|processar|tudo]`
 │   ├── coletor.py           # Coleta educada de PDFs e páginas Plone da Câmara
+│   ├── vigia.py             # Cópia no Wayback (confere SHA-256) e aviso de PDF que sumiu ou mudou
 │   ├── textclean.py         # Limpeza de "negrito falso", homógrafos cirílicos e normalização
 │   ├── nomes.py             # Catálogo e normalização canônica dos vereadores e suplentes
 │   ├── parser_resumo.py     # Parser estruturado dos Resumos das Sessões

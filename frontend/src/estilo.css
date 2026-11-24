@@ -1917,3 +1917,6 @@ a.rp-autor__nome:hover { text-decoration: underline; }
   .vereadores__card > .indice-mini, .vereadores__card > .vereadores__stats, .vereadores__card > .vereadores__nums { grid-column: 1 / -1; }
   .vereadores__card > .indice-mini { margin: .7rem 0 .2rem; }
 }
+
+/* aviso de PDF que sumiu ou mudou no site da Camara (camara/vigia.py) */
+.ficha__alerta { display: block; margin-top: .35rem; padding: .45rem .6rem; border-radius: 8px; background: var(--aviso-bg); color: var(--aviso-texto); font-size: .82rem; line-height: 1.4; }
