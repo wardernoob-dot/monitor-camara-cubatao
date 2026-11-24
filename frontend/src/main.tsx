@@ -28,6 +28,10 @@ const Temas = lazy(() => import("./paginas/Temas"));
 const Leis = lazy(() => import("./paginas/Leis"));
 const EmAberto = lazy(() => import("./paginas/EmAberto"));
 import NaoEncontrado from "./paginas/NaoEncontrado";
+const PreviaInsta = import.meta.env.DEV ? lazy(() => import("./testes-gabi/Previa")) : null;
+const Previa3DInsta = import.meta.env.DEV ? lazy(() => import("./testes-gabi/Previa3D")) : null;
+const CardVotoInsta = import.meta.env.DEV ? lazy(() => import("./testes-gabi/CardVotoPagina")) : null;
+const Capa1Insta = import.meta.env.DEV ? lazy(() => import("./testes-gabi/Capa1Pagina")) : null;
 const ReportagemPagina = lazy(() => import("./paginas/Reportagem"));
 
 /** Links antigos (#/reportagens/<id>) continuam valendo. */
@@ -220,6 +224,10 @@ function App() {
             <Route path="/reportagens" element={<Navigate to="/o-que-muda" replace />} />
             <Route path="/o-que-muda/:id" element={<ReportagemPagina />} />
             <Route path="/reportagens/:id" element={<AntigaReportagem />} />
+            {PreviaInsta && <Route path="/insta/mascote" element={<PreviaInsta />} />}
+            {Previa3DInsta && <Route path="/insta/mascote3d" element={<Previa3DInsta />} />}
+            {CardVotoInsta && <Route path="/insta/voto/:slug" element={<CardVotoInsta />} />}
+            {Capa1Insta && <Route path="/insta/capa/:data" element={<Capa1Insta />} />}
             <Route path="*" element={<NaoEncontrado />} />
           </Routes>
           </Suspense>
