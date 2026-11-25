@@ -1,10 +1,10 @@
 ---
 id: gratuidade-onibus-gestantes-cancer
 status: publicado
-data: 2026-11-21
+data: 2026-11-25
 chapeu: Saúde
 manchete: Gestantes, mães de recém-nascidos e pacientes com câncer podem andar de ônibus de graça em Cubatão
-linha_fina: O projeto cria passe livre no ônibus municipal para quem fizer cadastro na Secretaria de Saúde. Ainda falta mais uma votação na Câmara e a decisão do prefeito.
+linha_fina: O projeto cria passe livre no ônibus municipal para quem fizer cadastro na Secretaria de Saúde. A Câmara aprovou o projeto nas duas votações. Agora falta a decisão do prefeito.
 projetos: pl-62-2026
 votacao: pl-62-2026 2026-11-17 1a_discussao
 foto_alt: Passageiros descem pela porta de um ônibus urbano
@@ -61,6 +61,12 @@ Sobre os pacientes com câncer, a justificativa diz que o tratamento exige muita
 
 ## O que ainda não foi definido
 
+Na 1ª discussão, em 17 de novembro, o projeto foi aprovado com emendas, segundo o resumo oficial da sessão.
+
+O Voto a voto ainda não tem o texto dessas emendas. Por isso, este texto descreve a versão original do projeto, e algum ponto pode ter mudado.
+
+A notícia da Câmara sobre a 2ª discussão, em 24 de novembro, não diz se houve novas emendas nessa votação.
+
 A Prefeitura é quem vai regulamentar a lei: as regras de uso, o controle e a fiscalização do benefício.
 
 O projeto não marca prazo para essa regulamentação nem para a entrega do cartão.
@@ -69,9 +75,11 @@ O texto também não tem um artigo dizendo a partir de quando a lei começa a va
 
 ## O que acontece agora
 
-O projeto ainda precisa passar por mais uma votação no plenário, a 2ª discussão.
+Em 24 de novembro, a Câmara aprovou o projeto na 2ª discussão, segundo notícia publicada pela própria Câmara.
 
-Se for aprovado de novo, segue para o prefeito, que pode sancionar (transformar em lei) ou vetar.
+O resumo oficial dessa sessão ainda não saiu. Quando sair, o site mostra a votação com a fonte.
+
+Agora o projeto segue para o prefeito, que pode sancionar (transformar em lei) ou vetar.
 
 Antes deste, foi protocolado na Câmara o [PL 51/2026](#/projetos/pl-51-2026), que tratava de gratuidade só para gestantes e puérperas.
 
@@ -82,8 +90,11 @@ Antes deste, foi protocolado na Câmara o [PL 51/2026](#/projetos/pl-51-2026), q
 - Regulamentar: a Prefeitura publicar as regras de como a lei vai funcionar na prática.
 - 1ª e 2ª discussão: as duas votações que um projeto de lei precisa passar no plenário da Câmara.
 - Sanção: quando o prefeito assina e o projeto vira lei.
+- Emenda: mudança no texto do projeto proposta pelos vereadores.
 
 ## Documentos
 
 - [Projeto de Lei 62/2026](https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/PL%2062.2026.pdf)
+- [Resumo oficial da 39ª Sessão Ordinária (17/11/2026)](https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file)
 - [Notícia da Câmara sobre a votação de 17/11/2026](https://www.cubatao.sp.leg.br/projeto-preve-gratuidade-no-transporte-publico-para-gestantes-puerperas-e-pacientes-em-tratamento-oncologico-em-cubatao)
+- [Notícia da Câmara sobre a sessão de 24/11/2026 (2ª discussão)](https://www.cubatao.sp.leg.br/camara-aprova-projeto-banco-vermelho-de-enfrentamento-a-violencia-contra-a-mulher-e-ao-feminicidio)
