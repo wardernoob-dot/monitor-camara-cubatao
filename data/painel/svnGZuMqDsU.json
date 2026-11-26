@@ -1,0 +1,380 @@
+{
+ "video_id": "svnGZuMqDsU",
+ "titulo": "40ª SESSÃO ORDINÁRIA DIA 24 DE NOVEMBRO DE 2026",
+ "sessao": {
+  "numero": 40,
+  "tipo": "ordinaria",
+  "data": "2026-11-24"
+ },
+ "url": "https://www.youtube.com/watch?v=svnGZuMqDsU",
+ "fonte": "painel eletronico exibido na transmissao oficial da TV Camara (miniaturas do YouTube)",
+ "processado_em": "2026-11-26T00:45:58+00:00",
+ "votacoes": [
+  {
+   "n": 1,
+   "confianca_rostos": 0.96,
+   "inicio_s": 5950,
+   "fim_s": 5960,
+   "quadros": 2,
+   "completo": false,
+   "resultado": null,
+   "placar": {
+    "SIM": 6,
+    "NAO": 0,
+    "BRANCO": 9,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "BRANCO",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "BRANCO",
+    "jair ferreira lucas": "BRANCO",
+    "marcio silva nascimento": "BRANCO",
+    "ronaldo araujo queiroz": "BRANCO",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "BRANCO",
+    "daniel barbosa de assis silva": "BRANCO",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "BRANCO",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "1:39:10",
+   "link": "https://youtu.be/svnGZuMqDsU?t=5930",
+   "evidencia": "painel/img/svnGZuMqDsU_01.jpg",
+   "materia": {
+    "situacao_lida": null,
+    "sessao_lida": "40ª SESSÃO",
+    "texto": "Relatório Final - CEV - Equipamentos de Playground na Ilha Caraguatá - Autor: Guilherme do Salão",
+    "tipo": "RELATORIO",
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": "Guilherme do Salão",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "confianca_rostos": 0.96,
+   "inicio_s": 7960,
+   "fim_s": 8030,
+   "quadros": 8,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 11,
+    "NAO": 0,
+    "BRANCO": 4,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "BRANCO",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "BRANCO",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "BRANCO",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "2:12:40",
+   "link": "https://youtu.be/svnGZuMqDsU?t=8000",
+   "evidencia": "painel/img/svnGZuMqDsU_02.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "40ª SESSÃO",
+    "texto": "Relatório Final - CEI - Condições dos conjuntos habitacionais da CDHU - Autor: Batoré",
+    "tipo": "RELATORIO",
+    "numero": null,
+    "ano": null,
+    "turno": null,
+    "parecer": null,
+    "autor": "Batoré",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "a_confirmar_resumo",
+     "motivo": "requerimento/mocao/relatorio nao constam da pauta"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "confianca_rostos": 0.97,
+   "inicio_s": 8130,
+   "fim_s": 8190,
+   "quadros": 7,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 13,
+    "NAO": 0,
+    "BRANCO": 2,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "BRANCO",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "SIM",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "2:15:30",
+   "link": "https://youtu.be/svnGZuMqDsU?t=8160",
+   "evidencia": "painel/img/svnGZuMqDsU_03.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "40ª SESSÃO",
+    "texto": "PL nº 62/2026 - 2ª Discussão - Autor: Allan Matias",
+    "tipo": "PL",
+    "numero": "62",
+    "ano": "2026",
+    "turno": "2ª Discussão",
+    "parecer": null,
+    "autor": "Allan Matias",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "62"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "62",
+     "ano": "2026",
+     "emenda": false,
+     "parecer": null,
+     "turno": "2ª Discussão"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "confianca_rostos": 0.9,
+   "inicio_s": 9820,
+   "fim_s": 9890,
+   "quadros": 7,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 12,
+    "NAO": 0,
+    "BRANCO": 2,
+    "AUSENTE": 1,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "BRANCO",
+    "ronaldo araujo queiroz": "AUSENTE"
+   },
+   "horario_video": "2:43:40",
+   "link": "https://youtu.be/svnGZuMqDsU?t=9860",
+   "evidencia": "painel/img/svnGZuMqDsU_04.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "40ª SESSÃO",
+    "texto": "PL nº 164/2025 - Parecer em Conjunto Favorável",
+    "tipo": "PL",
+    "numero": "164",
+    "ano": "2025",
+    "turno": null,
+    "parecer": "Parecer em Conjunto Favorável",
+    "autor": null,
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "164"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "164",
+     "ano": "2025",
+     "emenda": false,
+     "parecer": "Parecer em Conjunto Favorável",
+     "turno": null
+    }
+   }
+  },
+  {
+   "n": 5,
+   "confianca_rostos": 0.96,
+   "inicio_s": 10600,
+   "fim_s": 10640,
+   "quadros": 5,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 11,
+    "NAO": 0,
+    "BRANCO": 4,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "BRANCO",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "BRANCO",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "BRANCO"
+   },
+   "horario_video": "2:56:40",
+   "link": "https://youtu.be/svnGZuMqDsU?t=10610",
+   "evidencia": "painel/img/svnGZuMqDsU_05.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "40ª SESSÃO",
+    "texto": "PL nº 164/2025 - 1ª Discussão - Autor: Rony Martins",
+    "tipo": "PL",
+    "numero": "164",
+    "ano": "2025",
+    "turno": "1ª Discussão",
+    "parecer": null,
+    "autor": "Rony Martins",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "164"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "164",
+     "ano": "2025",
+     "emenda": false,
+     "parecer": null,
+     "turno": "1ª Discussão"
+    }
+   }
+  },
+  {
+   "n": 6,
+   "confianca_rostos": 0.97,
+   "inicio_s": 11720,
+   "fim_s": 11750,
+   "quadros": 4,
+   "completo": true,
+   "resultado": "APROVADO",
+   "placar": {
+    "SIM": 13,
+    "NAO": 0,
+    "BRANCO": 2,
+    "AUSENTE": 0,
+    "?": 0
+   },
+   "votos": {
+    "alessandro donizete de oliveira": "SIM",
+    "alexandre mendes da silva": "BRANCO",
+    "joemerson alves de souza": "SIM",
+    "edson menezes mota": "SIM",
+    "guilherme dos santos malaquias": "SIM",
+    "jose elan dos santos gomes": "SIM",
+    "jair ferreira lucas": "SIM",
+    "marcio silva nascimento": "SIM",
+    "ronaldo araujo queiroz": "BRANCO",
+    "roniele martins da silva": "SIM",
+    "marcos roberto silva": "SIM",
+    "daniel barbosa de assis silva": "SIM",
+    "jose afonso": "SIM",
+    "allan matias barboza de souza": "SIM",
+    "anderson de lana andrade": "SIM"
+   },
+   "horario_video": "3:15:20",
+   "link": "https://youtu.be/svnGZuMqDsU?t=11720",
+   "evidencia": "painel/img/svnGZuMqDsU_06.jpg",
+   "materia": {
+    "situacao_lida": "APROVADO",
+    "sessao_lida": "32ª SESSÃO",
+    "texto": "PL nº 164/2025 - 2ª Discussão - Autor: Rony Martins",
+    "tipo": "PL",
+    "numero": "164",
+    "ano": "2025",
+    "turno": "2ª Discussão",
+    "parecer": null,
+    "autor": "Rony Martins",
+    "ref": null,
+    "identificado": true,
+    "tentativas": 1,
+    "fonte": "transcricao do cabecalho do painel por modelo de visao (gemini-3.5-flash-lite, API Gemini)",
+    "validacao": {
+     "status": "confirmado_pauta",
+     "tipo": "PL",
+     "numero": "164"
+    },
+    "final": {
+     "tipo": "PL",
+     "numero": "164",
+     "ano": "2025",
+     "emenda": false,
+     "parecer": null,
+     "turno": "2ª Discussão"
+    }
+   }
+  }
+ ]
+}

@@ -29,6 +29,24 @@
   "sha256": "1880cb4b7d03340894314695c928711d28c71322a45e61767ea4efc6df0d655d",
   "wayback": "https://web.archive.org/web/20261124145621/https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/40a%20%2024.11.2026.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T00:44:23+00:00",
+  "sha256": "07d28aab7f394b0bbf4fe3143b5d931036d5a1b81f8db09c0200bf08f6c065ce",
+  "wayback": "https://web.archive.org/web/20261126004409/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20120.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T00:42:41+00:00",
+  "sha256": "30546bb2c0687273836f233afb2a4b17317732bb9d226cd31e45bb2840ea42a1",
+  "wayback": "https://web.archive.org/web/20261126004223/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20120.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20134.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T00:44:55+00:00",
+  "sha256": "75faad5f132a1a3d92a9e56a512ca13a5d361a833a7d377a018cdfc9623116a8",
+  "wayback": "https://web.archive.org/web/20261126004436/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20134.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2088.pdf": {
   "confere": true,
   "quando": "2026-11-26T00:25:55+00:00",
@@ -46,6 +64,18 @@
   "quando": "2026-11-24T14:59:10+00:00",
   "sha256": "adc8297a885990bfcd9225526516ac7f5de2e11567aeb4a896b54a3da3c4eb83",
   "wayback": "https://web.archive.org/web/20261124145854/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_164-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_126_2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T00:43:13+00:00",
+  "sha256": "9e278e86b4f7150b55faa451199a3f0424ff7e5cbfce3714e4c5477f7dde8019",
+  "wayback": "https://web.archive.org/web/20261126004255/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_126_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_128_2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T00:43:52+00:00",
+  "sha256": "1dedfd0d2b6f8a8293e27696d545732d5d1e7c335ad4c4aa6aee2944672d9fb8",
+  "wayback": "https://web.archive.org/web/20261126004327/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_128_2025.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_no_92_2025_-_SEMANA_DA_SAUDE_VASCULAR.pdf": {
   "confere": true,

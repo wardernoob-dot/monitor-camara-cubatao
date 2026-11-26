@@ -1,0 +1,11 @@
+🏛️ Câmara de Cubatão — votações de 24/11/2026
+
+▪️ PL 62/2026 (Allan Matias): aprovado em 2ª discussão, 13 a 0. Não votaram: Topete e Cléber do Cavaco.
+O projeto cria passe livre no ônibus da cidade para grávidas, mulheres que acabaram de ter filhos e pessoas fazendo tratamento contra o câncer. O objetivo é ajudar essas pessoas a chegarem aos postos de saúde, exames e hospitais. O morador precisará fazer um cadastro e usar um cartão especial para conseguir o benefício. A prefeitura ainda vai decidir como o sistema vai funcionar na prática.
+
+▪️ PL 164/2025 (Rony Martins): aprovado em 2ª discussão, 13 a 0. Não votaram: Topete e Ronaldo da Comissão.
+O projeto cria o "Banco Vermelho" em espaços públicos de Cubatão para combater a violência contra a mulher. Serão instalados ou pintados bancos na cor vermelha com números de denúncia e frases de conscientização. A ideia é usar esses locais para informar a população e prevenir o feminicídio.
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência
