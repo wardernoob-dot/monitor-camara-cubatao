@@ -11,6 +11,12 @@
   "sha256": "9890d822b6c2d50b4b6fb6b6ab08a453400b832a5cb5183764ea1f4f377eb2e4",
   "wayback": "https://web.archive.org/web/20261124145959/https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/31a-sessao-extraordinaria"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/32a%2017.11.2026.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T13:57:31+00:00",
+  "sha256": "0bc5593e2df69db1ba1849092b64e2f4e034758f92e84abdf2cffa190c433248",
+  "wayback": "https://web.archive.org/web/20261126135715/https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/32a%2017.11.2026.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/38a-10-11.2026": {
   "confere": true,
   "quando": "2026-11-26T00:24:46+00:00",
@@ -47,6 +53,18 @@
   "sha256": "75faad5f132a1a3d92a9e56a512ca13a5d361a833a7d377a018cdfc9623116a8",
   "wayback": "https://web.archive.org/web/20261126004436/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20134.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20141.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T13:58:34+00:00",
+  "sha256": "3b4f010a8eb4bce6138851adac4a14dee1c7d99a9974c541fa7f40081c942a7b",
+  "wayback": "https://web.archive.org/web/20261126135816/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20141.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20146.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T13:59:05+00:00",
+  "sha256": "d8d900f2f65f72b640a8ac10c6212e30d837398bf59cf39f9376a15fc0f230f6",
+  "wayback": "https://web.archive.org/web/20261126135847/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20146.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2088.pdf": {
   "confere": true,
   "quando": "2026-11-26T00:25:55+00:00",
@@ -58,6 +76,18 @@
   "quando": "2026-11-26T00:25:24+00:00",
   "sha256": "69c8bdbb1caeaeea07db8ca1b50e30a2290a95804c0e5c418dc2c530d249e411",
   "wayback": "https://web.archive.org/web/20261126002501/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2089.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_139-2025_-_Selo_Empresa_Amiga_da_Mulher.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T13:58:03+00:00",
+  "sha256": "c3e051ea0add4412abcc20a21bfe97885b77ea6a4fd6184016fc3623bd9883b4",
+  "wayback": "https://web.archive.org/web/20261126135745/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_139-2025_-_Selo_Empresa_Amiga_da_Mulher.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_150_2025_-_SELO_EMPRESA_AMIGA_DO_JOVEM_E_DO_ADOLESCENTE.pdf": {
+  "confere": true,
+  "quando": "2026-11-26T13:59:37+00:00",
+  "sha256": "8627b8a0632b926e170188859a5e623e5bf3ceaa360088cd8f65d570c3d1f3f4",
+  "wayback": "https://web.archive.org/web/20261126135919/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_150_2025_-_SELO_EMPRESA_AMIGA_DO_JOVEM_E_DO_ADOLESCENTE.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_164-2025.pdf": {
   "confere": true,
