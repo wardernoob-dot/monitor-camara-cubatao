@@ -41,6 +41,18 @@
   "sha256": "07d28aab7f394b0bbf4fe3143b5d931036d5a1b81f8db09c0200bf08f6c065ce",
   "wayback": "https://web.archive.org/web/20261126004409/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20180-2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T00:39:09+00:00",
+  "sha256": "89a805794d4ffd7e705479d2e3642267a97344f675bfa03062b874ebc77302ad",
+  "wayback": "https://web.archive.org/web/20261127003853/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20180-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20182-2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T00:39:39+00:00",
+  "sha256": "5d62c90f886b46191bfa64bcc066798e12ab467a376bb8496af26aea5018ddb4",
+  "wayback": "https://web.archive.org/web/20261127003922/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20182-2025.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%20120.pdf": {
   "confere": true,
   "quando": "2026-11-26T00:42:41+00:00",
@@ -94,6 +106,24 @@
   "quando": "2026-11-24T14:59:10+00:00",
   "sha256": "adc8297a885990bfcd9225526516ac7f5de2e11567aeb4a896b54a3da3c4eb83",
   "wayback": "https://web.archive.org/web/20261124145854/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_164-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_No_172-2025_Denomina_Rua_Antonio_Medeiros_Bezerra_assinado.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T00:38:37+00:00",
+  "sha256": "5e51926cde1a5134ebe428c8733ab60b90f26be11e79a8d0c51a1d63b15a7a00",
+  "wayback": "https://web.archive.org/web/20261127003817/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_No_172-2025_Denomina_Rua_Antonio_Medeiros_Bezerra_assinado.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_188-2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T00:40:10+00:00",
+  "sha256": "a415356b336c05fd6673ba7b0702dd8c970399def65921254c3acf266335009a",
+  "wayback": "https://web.archive.org/web/20261127003952/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_188-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_190-2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T00:40:41+00:00",
+  "sha256": "fec9221ce3e297e2d60779f238a55c6f7a003670886d72f90d5557d223219163",
+  "wayback": "https://web.archive.org/web/20261127004023/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_190-2025.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_ndeg_126_2025.pdf": {
   "confere": true,
