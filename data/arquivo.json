@@ -89,6 +89,12 @@
   "sha256": "69c8bdbb1caeaeea07db8ca1b50e30a2290a95804c0e5c418dc2c530d249e411",
   "wayback": "https://web.archive.org/web/20261126002501/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL.%2089.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_112_2025_-MULHERES_TRANSPORTE_PUBLICO.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T13:56:50+00:00",
+  "sha256": "6679b1d0c4c3526d0f3649160dcccf69753d0ecf035527f46b71be3a06224d43",
+  "wayback": "https://web.archive.org/web/20261127135631/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_112_2025_-MULHERES_TRANSPORTE_PUBLICO.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_139-2025_-_Selo_Empresa_Amiga_da_Mulher.pdf": {
   "confere": true,
   "quando": "2026-11-26T13:58:03+00:00",
@@ -107,11 +113,35 @@
   "sha256": "adc8297a885990bfcd9225526516ac7f5de2e11567aeb4a896b54a3da3c4eb83",
   "wayback": "https://web.archive.org/web/20261124145854/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_164-2025.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_191_2025_-_REMOCAO_PARA_HOSPITAIS_DE_REDE_PRIVADA.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T13:55:13+00:00",
+  "sha256": "6001f40bba3b87208716c65519a7085b63767cf1fa0a1e72ed687cbe576b9094",
+  "wayback": "https://web.archive.org/web/20261127135454/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_191_2025_-_REMOCAO_PARA_HOSPITAIS_DE_REDE_PRIVADA.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_36_2025_-_DIREITO_AO_ALEITAMENTO_MATERNO.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T13:55:46+00:00",
+  "sha256": "d43724b53635ed8c45cfddd7367099d676b5fb1dfb9f94af8ff168530cde6c27",
+  "wayback": "https://web.archive.org/web/20261127135526/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_36_2025_-_DIREITO_AO_ALEITAMENTO_MATERNO.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_60_2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T13:56:18+00:00",
+  "sha256": "f211d1d1fd0445ed58c464df57837d6c1f945e6fa2fef17afdfad0be787ac8b0",
+  "wayback": "https://web.archive.org/web/20261127135559/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_Ndeg_60_2025.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_No_172-2025_Denomina_Rua_Antonio_Medeiros_Bezerra_assinado.pdf": {
   "confere": true,
   "quando": "2026-11-27T00:38:37+00:00",
   "sha256": "5e51926cde1a5134ebe428c8733ab60b90f26be11e79a8d0c51a1d63b15a7a00",
   "wayback": "https://web.archive.org/web/20261127003817/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_No_172-2025_Denomina_Rua_Antonio_Medeiros_Bezerra_assinado.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_166_2025_-_Instalacao_redutor_de_ar_sabesp_assinado_assinado.pdf": {
+  "confere": true,
+  "quando": "2026-11-27T13:57:24+00:00",
+  "sha256": "5d47834d2bd1d2e0c764617075853d6c03c58eeb1de2c850f72f8fd52447d07f",
+  "wayback": "https://web.archive.org/web/20261127135703/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_166_2025_-_Instalacao_redutor_de_ar_sabesp_assinado_assinado.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_no_188-2025.pdf": {
   "confere": true,
