@@ -41,6 +41,30 @@
   "sha256": "2245e94854a6fdbabf585910f064b175790f6f515b1cc6b6b5c5813f81e222cc",
   "wayback": "https://web.archive.org/web/20261128001113/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF._015.2025_-_MENSAGEM_ADITIVA_PL_Ndeg08.2025.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_108.2025.SEJUR_-_VETO_PL_Ndeg_01_2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T07:55:15+00:00",
+  "sha256": "18c30ccf930c5caf5756e1ee0bbe72535eb0e401c47782d50e2e42de997bf4bb",
+  "wayback": "https://web.archive.org/web/20261128075415/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_108.2025.SEJUR_-_VETO_PL_Ndeg_01_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_114.2025.SEJUR_-_VETO_PL93_2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T07:56:41+00:00",
+  "sha256": "4576456a93ce9d90109ebc103faf5ffb7e104b81346c1ada406dab20ac7fa8e5",
+  "wayback": "https://web.archive.org/web/20261128075602/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF_114.2025.SEJUR_-_VETO_PL93_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._124.2025.CMC_-_VETO_TOTAL_PL_Ndeg_105_2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T07:58:36+00:00",
+  "sha256": "3421ba100d7cbcc11e6ccc0466d81109db939cf1d7d242a82174232b60283ad5",
+  "wayback": "https://web.archive.org/web/20261128075743/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Of._124.2025.CMC_-_VETO_TOTAL_PL_Ndeg_105_2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio%20no%20104.2025.SEJUR.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T07:53:13+00:00",
+  "sha256": "69e7d8459ffd96ad0b8df57f2bb0c588739d53fa77b9a71b1d7513352e00007a",
+  "wayback": "https://web.archive.org/web/20261128075233/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio%20no%20104.2025.SEJUR.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf": {
   "confere": true,
   "quando": "2026-11-26T00:44:23+00:00",
@@ -184,6 +208,12 @@
   "quando": "2026-11-26T00:26:28+00:00",
   "sha256": "28f7a42466cc05b84aec27b0266c517157ba2a0ce2a9aaf2626e8d6e0d6761ee",
   "wayback": "https://web.archive.org/web/20261126002608/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Projeto_de_Lei_no_92_2025_-_SEMANA_DA_SAUDE_VASCULAR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/mensagem%20aditiva%20plc%20131%20Oficio_ndeg_151_2025_SEJUR.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T07:59:18+00:00",
+  "sha256": "938eae2e1c1374a66c8e4fb0ca3a4e0a643da48cb7d45ce3451c3d797dd71ac8",
+  "wayback": "https://web.archive.org/web/20261128075850/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/mensagem%20aditiva%20plc%20131%20Oficio_ndeg_151_2025_SEJUR.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/copy3_of_2025/pl-100.2026": {
   "confere": true,
