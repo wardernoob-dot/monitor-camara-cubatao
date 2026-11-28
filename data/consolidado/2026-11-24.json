@@ -1,7 +1,24 @@
 {
  "data": "2026-11-24",
- "status": "provisorio_painel",
- "sessoes": [],
+ "status": "oficial_conferido",
+ "sessoes": [
+  {
+   "numero": 32,
+   "tipo": "extraordinaria",
+   "data": "2026-11-24",
+   "inicio": "17:02",
+   "fim": "17:16",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-32a-sessao-extraordinaria-24-11-2026/at_download/file"
+  },
+  {
+   "numero": 40,
+   "tipo": "ordinaria",
+   "data": "2026-11-24",
+   "inicio": "14:43",
+   "fim": "16:58",
+   "resumo": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-40a-sessao-ordinaria-24-11-2026/at_download/file"
+  }
+ ],
  "transmissoes": [
   {
    "titulo": "40ª SESSÃO ORDINÁRIA DIA 24 DE NOVEMBRO DE 2026",
@@ -23,7 +40,7 @@
    "autoria": "ALLAN MATIAS BARBOZA DE SOUZA",
    "assunto": "DISPÕE SOBRE A CONCESSÃO DE GRATUIDADE NO TRANSPORTE COLETIVO MUNICIPAL ÀS GESTANTES, PUÉRPERAS E PACIENTES EM TRATAMENTO ONCOLÓGICO NO MUNICÍPIO DE CUBATÃO E DÁ OUTRAS PROVIDÊNCIAS",
    "na_pauta": true,
-   "resultado_oficial": null,
+   "resultado_oficial": "aprovado",
    "votacoes": [
     {
      "etapa": "2a_discussao",
@@ -62,10 +79,55 @@
       "validacao": "confirmado_pauta",
       "aviso": null
      },
-     "resumo": null,
+     "resumo": {
+      "sessao": {
+       "numero": 40,
+       "tipo": "ordinaria",
+       "data": "2026-11-24",
+       "inicio": "14:43",
+       "fim": "16:58"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-40a-sessao-ordinaria-24-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
      "conferencia": {
-      "status": "aguardando_resumo",
-      "divergencias": []
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "joemerson alves de souza",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "13x0",
+        "resumo": "14x0"
+       }
+      ]
      }
     }
    ],
@@ -87,7 +149,7 @@
    "autoria": "RONIELE MARTINS DA SILVA",
    "assunto": "INSTITUI O PROJETO BANCO VERMELHO QUE VISA CONSCIENTIZAR, PREVENIR, INFORMAR E SENSIBILIZAR A POPULAÇÃO POR MEIO DE CAMPANHA CONTRA A VIOLÊNCIA DOMÉSTICA E FAMILIAR E O ENFRENTAMENTO DO FEMINICIDIO E DÁ OUTRAS PROVIDÊNCIAS",
    "na_pauta": true,
-   "resultado_oficial": null,
+   "resultado_oficial": "aprovado",
    "votacoes": [
     {
      "etapa": "parecer",
@@ -128,7 +190,7 @@
      },
      "resumo": null,
      "conferencia": {
-      "status": "aguardando_resumo",
+      "status": "resumo_nao_registra",
       "divergencias": []
      }
     },
@@ -169,10 +231,53 @@
       "validacao": "confirmado_pauta",
       "aviso": null
      },
-     "resumo": null,
+     "resumo": {
+      "sessao": {
+       "numero": 40,
+       "tipo": "ordinaria",
+       "data": "2026-11-24",
+       "inicio": "14:43",
+       "fim": "16:58"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 1ª DISCUSSÃO, COM EMENDAS",
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-40a-sessao-ordinaria-24-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "roniele martins da silva"
+       ]
+      }
+     },
      "conferencia": {
-      "status": "aguardando_resumo",
-      "divergencias": []
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "edson menezes mota",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "11x0",
+        "resumo": "12x0"
+       }
+      ]
      }
     },
     {
@@ -212,10 +317,55 @@
       "validacao": "confirmado_pauta",
       "aviso": null
      },
-     "resumo": null,
+     "resumo": {
+      "sessao": {
+       "numero": 32,
+       "tipo": "extraordinaria",
+       "data": "2026-11-24",
+       "inicio": "17:02",
+       "fim": "17:16"
+      },
+      "resultado": "aprovado",
+      "detalhe": "APROVADO EM 2ª DISCUSSÃO E REDAÇÃO FINAL",
+      "placar": {
+       "favor": 14,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-32a-sessao-extraordinaria-24-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     },
      "conferencia": {
-      "status": "aguardando_resumo",
-      "divergencias": []
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "ronaldo araujo queiroz",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "13x0",
+        "resumo": "14x0"
+       }
+      ]
      }
     }
    ],
@@ -235,9 +385,9 @@
    "numero": null,
    "ano": null,
    "autoria": null,
-   "assunto": null,
+   "assunto": "Lido o Relatório Final da Comissão Especial de Vereadores, nomeada através da Resolução nº 3.132, de 21 de outubro de 2026, para “ORGANIZAR O ATO SOLENE EM HOMENAGEM AO DIA DO NASCITURO”.",
    "na_pauta": false,
-   "resultado_oficial": null,
+   "resultado_oficial": "aprovado",
    "votacoes": [
     {
      "etapa": "unica",
@@ -276,10 +426,48 @@
       "validacao": "a_confirmar_resumo",
       "aviso": null
      },
-     "resumo": null,
+     "resumo": {
+      "sessao": {
+       "numero": 40,
+       "tipo": "ordinaria",
+       "data": "2026-11-24",
+       "inicio": "14:43",
+       "fim": "16:58"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-40a-sessao-ordinaria-24-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "roniele martins da silva"
+       ]
+      }
+     },
      "conferencia": {
-      "status": "aguardando_resumo",
-      "divergencias": []
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "painel_incompleto",
+        "painel": "6x0",
+        "resumo": "12x0",
+        "obs": "print do painel sem resultado na tela; provavel captura antes do fim da votacao"
+       }
+      ]
      }
     },
     {
@@ -319,10 +507,53 @@
       "validacao": "a_confirmar_resumo",
       "aviso": null
      },
-     "resumo": null,
+     "resumo": {
+      "sessao": {
+       "numero": 40,
+       "tipo": "ordinaria",
+       "data": "2026-11-24",
+       "inicio": "14:43",
+       "fim": "16:58"
+      },
+      "resultado": "aprovado",
+      "detalhe": null,
+      "placar": {
+       "favor": 12,
+       "contra": 0
+      },
+      "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-40a-sessao-ordinaria-24-11-2026/at_download/file",
+      "por_acao": {
+       "aprovação": [
+        "alessandro donizete de oliveira",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "roniele martins da silva"
+       ]
+      }
+     },
      "conferencia": {
-      "status": "aguardando_resumo",
-      "divergencias": []
+      "status": "diverge",
+      "divergencias": [
+       {
+        "tipo": "resumo_inclui_nao_votante",
+        "vereador": "daniel barbosa de assis silva",
+        "painel": "nao votou",
+        "resumo": "SIM"
+       },
+       {
+        "tipo": "placar_divergente",
+        "painel": "11x0",
+        "resumo": "12x0"
+       }
+      ]
      }
     }
    ],
@@ -330,13 +561,82 @@
   }
  ],
  "votacoes_nao_identificadas": [],
- "divergencias": [],
+ "divergencias": [
+  {
+   "materia": "PL 62",
+   "etapa": "2a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "joemerson alves de souza",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 62",
+   "etapa": "2a_discussao",
+   "tipo": "placar_divergente",
+   "painel": "13x0",
+   "resumo": "14x0"
+  },
+  {
+   "materia": "PL 164",
+   "etapa": "1a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "edson menezes mota",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 164",
+   "etapa": "1a_discussao",
+   "tipo": "placar_divergente",
+   "painel": "11x0",
+   "resumo": "12x0"
+  },
+  {
+   "materia": "PL 164",
+   "etapa": "2a_discussao",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "ronaldo araujo queiroz",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "PL 164",
+   "etapa": "2a_discussao",
+   "tipo": "placar_divergente",
+   "painel": "13x0",
+   "resumo": "14x0"
+  },
+  {
+   "materia": "RELATORIO",
+   "etapa": "unica",
+   "tipo": "painel_incompleto",
+   "painel": "6x0",
+   "resumo": "12x0",
+   "obs": "print do painel sem resultado na tela; provavel captura antes do fim da votacao"
+  },
+  {
+   "materia": "RELATORIO",
+   "etapa": "unica",
+   "tipo": "resumo_inclui_nao_votante",
+   "vereador": "daniel barbosa de assis silva",
+   "painel": "nao votou",
+   "resumo": "SIM"
+  },
+  {
+   "materia": "RELATORIO",
+   "etapa": "unica",
+   "tipo": "placar_divergente",
+   "painel": "11x0",
+   "resumo": "12x0"
+  }
+ ],
  "nomes": {
   "alessandro donizete de oliveira": {
    "nome": "Alessandro Donizete de Oliveira",
    "bancada_declarada": "REPUBLICANOS",
    "presenca": {
-    "sim": 67,
+    "sim": 70,
     "justificada": 2
    }
   },
@@ -344,7 +644,7 @@
    "nome": "Alexandre Mendes da Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 64,
+    "sim": 67,
     "ausente": 3,
     "justificada": 2
    }
@@ -353,7 +653,7 @@
    "nome": "Allan Matias Barboza de Souza",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 60,
+    "sim": 63,
     "justificada": 6,
     "ausente": 2
    }
@@ -362,7 +662,7 @@
    "nome": "Anderson de Lana Andrade",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 41,
+    "sim": 44,
     "justificada": 4
    }
   },
@@ -370,7 +670,7 @@
    "nome": "Daniel Barbosa de Assis Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 68,
+    "sim": 71,
     "ausente": 1
    }
   },
@@ -378,7 +678,7 @@
    "nome": "Edson Menezes Mota",
    "bancada_declarada": "UNIÃO BRASIL",
    "presenca": {
-    "sim": 61,
+    "sim": 64,
     "justificada": 8
    }
   },
@@ -394,7 +694,7 @@
    "bancada_declarada": null,
    "presenca": {
     "justificada": 1,
-    "sim": 67,
+    "sim": 70,
     "ausente": 1
    }
   },
@@ -409,7 +709,7 @@
    "nome": "Jair Ferreira Lucas",
    "bancada_declarada": "PSDB",
    "presenca": {
-    "sim": 68,
+    "sim": 71,
     "ausente": 1
    }
   },
@@ -417,7 +717,7 @@
    "nome": "Joemerson Alves de Souza",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 65,
+    "sim": 68,
     "justificada": 4
    }
   },
@@ -425,7 +725,7 @@
    "nome": "José Afonso",
    "bancada_declarada": "PSD",
    "presenca": {
-    "sim": 66,
+    "sim": 69,
     "justificada": 2
    }
   },
@@ -433,7 +733,7 @@
    "nome": "José Elan dos Santos Gomes",
    "bancada_declarada": "AGIR",
    "presenca": {
-    "sim": 66,
+    "sim": 69,
     "justificada": 2,
     "ausente": 1
    }
@@ -442,7 +742,7 @@
    "nome": "Márcio Silva Nascimento",
    "bancada_declarada": "PSB",
    "presenca": {
-    "sim": 66,
+    "sim": 69,
     "justificada": 2,
     "ausente": 1
    }
@@ -451,7 +751,7 @@
    "nome": "Marcos Roberto Silva",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 66,
+    "sim": 69,
     "justificada": 3
    }
   },
@@ -466,7 +766,7 @@
    "nome": "Ronaldo Araújo Queiroz",
    "bancada_declarada": null,
    "presenca": {
-    "sim": 66,
+    "sim": 69,
     "justificada": 2,
     "ausente": 1
    }
@@ -476,7 +776,7 @@
    "bancada_declarada": "PSD",
    "presenca": {
     "justificada": 5,
-    "sim": 63,
+    "sim": 66,
     "ausente": 1
    }
   },

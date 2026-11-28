@@ -1,0 +1,184 @@
+{
+ "fonte": "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-33a-sessao-extraordinaria-27-11-2026/at_download/file",
+ "sessao": {
+  "numero": 33,
+  "tipo": "extraordinaria",
+  "data": "2026-11-27",
+  "inicio": "10:14",
+  "fim": "12:43"
+ },
+ "presenca": {
+  "alessandro donizete de oliveira": "sim",
+  "alexandre mendes da silva": "sim",
+  "allan matias barboza de souza": "sim",
+  "anderson de lana andrade": "sim",
+  "daniel barbosa de assis silva": "sim",
+  "edson menezes mota": "sim",
+  "guilherme dos santos malaquias": "sim",
+  "jair ferreira lucas": "sim",
+  "joemerson alves de souza": "sim",
+  "jose afonso": "sim",
+  "jose elan dos santos gomes": "sim",
+  "marcio silva nascimento": "sim",
+  "marcos roberto silva": "sim",
+  "ronaldo araujo queiroz": "sim",
+  "roniele martins da silva": "sim"
+ },
+ "titulo_site": "RESUMO DA 33ª SESSÃO EXTRAORDINÁRIA - 27/11/2026",
+ "participacao_remota": [],
+ "encerrada_por_falta_de_quorum": true,
+ "obstrucoes": [],
+ "itens": [
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "1",
+   "tipo": "deliberacao",
+   "processo": "293/2026",
+   "especie": "OFÍCIO Nº 133/2026/SEJUR",
+   "numero": "133/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "VETO INTEGRAL AO PROJETO DE LEI Nº 27/2026, QUE “INSTITUI O PROGRAMA DE APOIO ÀS PESSOAS COM DOENÇAS RARAS E SEUS FAMILIARES NO MUNICÍPIO DE CUBATÃO”",
+   "data_documento": "23/10/2026",
+   "objeto_votado": "veto",
+   "rotulos": {
+    "favor": "manter o veto",
+    "contra": "derrubar o veto"
+   },
+   "resultado": "veto_derrubado",
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "veto_derrubado",
+     "detalhe": "REJEITADO",
+     "grupos": [
+      {
+       "acao": "rejeição",
+       "alvo": "Veto",
+       "sentido": "contra",
+       "vereadores": [
+        "alessandro donizete de oliveira",
+        "alexandre mendes da silva",
+        "allan matias barboza de souza",
+        "anderson de lana andrade",
+        "daniel barbosa de assis silva",
+        "edson menezes mota",
+        "guilherme dos santos malaquias",
+        "jair ferreira lucas",
+        "joemerson alves de souza",
+        "jose afonso",
+        "jose elan dos santos gomes",
+        "marcio silva nascimento",
+        "marcos roberto silva",
+        "ronaldo araujo queiroz",
+        "roniele martins da silva"
+       ]
+      }
+     ],
+     "por_vereador": {
+      "alessandro donizete de oliveira": "contra",
+      "alexandre mendes da silva": "contra",
+      "allan matias barboza de souza": "contra",
+      "anderson de lana andrade": "contra",
+      "daniel barbosa de assis silva": "contra",
+      "edson menezes mota": "contra",
+      "guilherme dos santos malaquias": "contra",
+      "jair ferreira lucas": "contra",
+      "joemerson alves de souza": "contra",
+      "jose afonso": "contra",
+      "jose elan dos santos gomes": "contra",
+      "marcio silva nascimento": "contra",
+      "marcos roberto silva": "contra",
+      "ronaldo araujo queiroz": "contra",
+      "roniele martins da silva": "contra"
+     },
+     "placar": {
+      "favor": 0,
+      "contra": 15
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "2",
+   "tipo": "deliberacao",
+   "processo": "765/2026",
+   "especie": "PROJETO DE LEI Nº 79/2026",
+   "numero": "79/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "REGULAMENTADOS PELA COMISSÃO DE VALORES MOBILIÁRIOS (CVM)",
+   "data_documento": "18/08/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "outro",
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "outro",
+     "detalhe": "INCONCLUSO FACE AO TÉRMINO DA SESSÃO, POR FALTA DE QUÓRUM REGIMENTAL.",
+     "grupos": [],
+     "por_vereador": {},
+     "placar": {
+      "favor": 0,
+      "contra": 0
+     }
+    }
+   ]
+  },
+  {
+   "secao": "ordem_do_dia",
+   "ordem": "3",
+   "tipo": "deliberacao",
+   "processo": "1.094/2026",
+   "especie": "PROJETO DE LEI Nº 95/2026",
+   "numero": "95/2026",
+   "autoria": "PREFEITO MUNICIPAL",
+   "assunto": "AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO COM A CAIXA ECONÔMICA FEDERAL, COM A GARANTIA DA UNIÃO E DÁ OUTRAS PROVIDÊNCIAS",
+   "data_documento": "09/11/2026",
+   "objeto_votado": "materia",
+   "rotulos": {
+    "favor": "a favor",
+    "contra": "contra"
+   },
+   "resultado": "retornou_comissoes",
+   "votacoes": [
+    {
+     "turno": null,
+     "resultado": "retornou_comissoes",
+     "detalhe": "EM FACE DA APRESENTAÇÃO DE EMENDA, RETORNOU ÀS COMISSÕES PERMANENTES PARA ANÁLISE, NOS TERMOS REGIMENTAIS.",
+     "grupos": [],
+     "por_vereador": {},
+     "placar": {
+      "favor": 0,
+      "contra": 0
+     }
+    }
+   ]
+  }
+ ],
+ "vereadores": {
+  "alessandro donizete de oliveira": "Alessandro Donizete de Oliveira",
+  "alexandre mendes da silva": "Alexandre Mendes da Silva",
+  "allan matias barboza de souza": "Allan Matias Barboza de Souza",
+  "anderson de lana andrade": "Anderson de Lana Andrade",
+  "daniel barbosa de assis silva": "Daniel Barbosa de Assis Silva",
+  "edson menezes mota": "Edson Menezes Mota",
+  "guilherme dos santos malaquias": "Guilherme dos Santos Malaquias",
+  "jair ferreira lucas": "Jair Ferreira Lucas",
+  "joemerson alves de souza": "Joemerson Alves de Souza",
+  "jose afonso": "José Afonso",
+  "jose elan dos santos gomes": "José Elan dos Santos Gomes",
+  "marcio silva nascimento": "Márcio Silva Nascimento",
+  "marcos roberto silva": "Marcos Roberto Silva",
+  "ronaldo araujo queiroz": "Ronaldo Araújo Queiroz",
+  "roniele martins da silva": "Roniele Martins da Silva"
+ },
+ "avisos": [
+  "[33a extraordinaria 2026-11-27] ordem 2: resultado nao classificado 'INCONCLUSO FACE AO TÉRMINO DA SESSÃO, POR FALTA DE QUÓRUM REGIMENTAL.'"
+ ],
+ "notas": [],
+ "sha256_pdf": "0f3f03e32df4e7da65fd257dc88d106567876b11d5573768aecfa7f0c7afd9a0"
+}

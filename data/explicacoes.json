@@ -649,6 +649,11 @@
   "modelo": "gemini-3.1-flash-lite",
   "texto": "Aprova o relatório final da comissão que fiscalizou o descarte irregular de entulhos sob o viaduto da Rodovia dos Imigrantes, na Ilha Caraguatá."
  },
+ "relatorio-x-2026-11-24": {
+  "hash": "421b9a260bf6",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Apresenta o relatório final da comissão criada para organizar a solenidade em homenagem ao Dia do Nascituro."
+ },
  "rq-10-2026": {
   "hash": "31f62241f77e",
   "modelo": "gemini-3.5-flash-lite",
@@ -968,6 +973,11 @@
   "hash": "658991c66a1d",
   "modelo": "gemini-3.5-flash-lite",
   "texto": "Rejeita em parte a criação do programa para prevenir os efeitos negativos das apostas online (bets) e combater o vício em jogos em Cubatão."
+ },
+ "veto-27-2026": {
+  "hash": "d64f4e133a3e",
+  "modelo": "gemini-3.5-flash-lite",
+  "texto": "Rejeita totalmente o projeto de lei que cria o programa de apoio a pessoas com doenças raras e suas famílias."
  },
  "veto-4-2026": {
   "hash": "b3032f6d66fe",

@@ -35,6 +35,12 @@
   "sha256": "1880cb4b7d03340894314695c928711d28c71322a45e61767ea4efc6df0d655d",
   "wayback": "https://web.archive.org/web/20261124145621/https://www.cubatao.sp.leg.br/processo-legislativo/pauta-das-sessoes-1/arquivos/copy_of_2025/40a%20%2024.11.2026.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF._015.2025_-_MENSAGEM_ADITIVA_PL_Ndeg08.2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T00:11:33+00:00",
+  "sha256": "2245e94854a6fdbabf585910f064b175790f6f515b1cc6b6b5c5813f81e222cc",
+  "wayback": "https://web.archive.org/web/20261128001113/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/OF._015.2025_-_MENSAGEM_ADITIVA_PL_Ndeg08.2025.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf": {
   "confere": true,
   "quando": "2026-11-26T00:44:23+00:00",
@@ -112,6 +118,12 @@
   "quando": "2026-11-24T14:59:10+00:00",
   "sha256": "adc8297a885990bfcd9225526516ac7f5de2e11567aeb4a896b54a3da3c4eb83",
   "wayback": "https://web.archive.org/web/20261124145854/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_164-2025.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_178-2025_JOGOS_DE_AZAR_FINAL.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T00:11:00+00:00",
+  "sha256": "322c7c17db90a4852656ac8701b25a85ef2f4c88f92c634e0db7c0824055227f",
+  "wayback": "https://web.archive.org/web/20261128001040/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_178-2025_JOGOS_DE_AZAR_FINAL.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL_191_2025_-_REMOCAO_PARA_HOSPITAIS_DE_REDE_PRIVADA.pdf": {
   "confere": true,
@@ -227,6 +239,18 @@
   "sha256": "bac815a4142fc864c88cb7c2dc73cd14e01138ee85ca529dc840c7c77118cc31",
   "wayback": "https://web.archive.org/web/20261125142613/https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-31a-sessao-extraordinaria-10-11-2026/at_download/file"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-32a-sessao-extraordinaria-24-11-2026/at_download/file": {
+  "confere": true,
+  "quando": "2026-11-28T00:09:00+00:00",
+  "sha256": "c83440e9b89f71ddbaf8c07261312f8e70074b2433083bd0f634eb1188f93bc4",
+  "wayback": "https://web.archive.org/web/20261128000839/https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-32a-sessao-extraordinaria-24-11-2026/at_download/file"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-33a-sessao-extraordinaria-27-11-2026/at_download/file": {
+  "confere": true,
+  "quando": "2026-11-28T00:07:32+00:00",
+  "sha256": "0f3f03e32df4e7da65fd257dc88d106567876b11d5573768aecfa7f0c7afd9a0",
+  "wayback": "https://web.archive.org/web/20261128000716/https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-extraordinarias/resumo-da-33a-sessao-extraordinaria-27-11-2026/at_download/file"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-38a-sessao-ordinaria-10-11-2026/at_download/file": {
   "confere": true,
   "quando": "2026-11-25T14:27:00+00:00",
@@ -238,5 +262,11 @@
   "quando": "2026-11-24T14:58:03+00:00",
   "sha256": "1b0e55299199f1b6aadc77bbd7a25f598e3fedd0ea20064fc538ea72e35fc569",
   "wayback": "https://web.archive.org/web/20261124145746/https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-39a-sessao-ordinaria-17-11-2026/at_download/file"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-40a-sessao-ordinaria-24-11-2026/at_download/file": {
+  "confere": true,
+  "quando": "2026-11-28T00:10:27+00:00",
+  "sha256": "d271241fbeb96321361bb2c7fe28be6c02f95200f83c695a1f715752f468d6df",
+  "wayback": "https://web.archive.org/web/20261128001007/https://www.cubatao.sp.leg.br/processo-legislativo/resumo-das-sessoes/2026/sessoes-ordinarias/resumo-da-40a-sessao-ordinaria-24-11-2026/at_download/file"
  }
 }

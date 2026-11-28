@@ -1,0 +1,12 @@
+🏛️ Câmara de Cubatão — votações de 27/11/2026
+
+▪️ Veto ao PL 27/2026 (Prefeito Municipal): veto_derrubado, 0 a 15. Contra: Alessandro Oliveira, Topete, Allan Matias, Dr. Anderson de Lana, Xuxa, Edson Mota, Guilherme do Salão, Jair do Bar, Cléber do Cavaco, Afonsinho, Batoré, Marcinho, Tinho, Ronaldo da Comissão e Rony Martins.
+
+▪️ PL 79/2026 (Prefeito Municipal): outro, 0 a 0.
+
+▪️ PL 95/2026 (Prefeito Municipal): retornou_comissoes, 0 a 0.
+Este projeto autoriza a Prefeitura de Cubatão a pegar um empréstimo de até 450 milhões de reais com a Caixa Econômica Federal. O dinheiro deve ser usado em obras e investimentos na cidade, como infraestrutura e saneamento. A União dará garantia para o empréstimo, e a Prefeitura usará suas próprias receitas como contragarantia. A lei entra em vigor logo no dia em que for publicada.
+
+Os votos individuais vêm do painel eletrônico exibido na transmissão oficial da TV Câmara. Os resumos de projeto são gerados por IA só com o texto oficial; o prompt e o código são públicos (github.com/wardernoob-dot/monitor-camara-cubatao).
+
+#Cubatão #CâmaraDeCubatão #Transparência
