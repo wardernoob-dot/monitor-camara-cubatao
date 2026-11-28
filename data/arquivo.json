@@ -65,11 +65,41 @@
   "sha256": "69e7d8459ffd96ad0b8df57f2bb0c588739d53fa77b9a71b1d7513352e00007a",
   "wayback": "https://web.archive.org/web/20261128075233/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio%20no%20104.2025.SEJUR.pdf"
  },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_213-2025-SEJUR.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T15:58:34+00:00",
+  "sha256": "155f6b91ed63fbaeb9a27b849ccdfa0bc0fea5f414d44eece0aea4fae9fd8bc0",
+  "wayback": "https://web.archive.org/web/20261128155814/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_213-2025-SEJUR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_239-2025-SEJUR_-_Veto_Total.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T15:59:18+00:00",
+  "sha256": "8de7201b755de1e298bb39d0bd866461644f9f0be1980f1c87256b3c1f39d86b",
+  "wayback": "https://web.archive.org/web/20261128155847/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_239-2025-SEJUR_-_Veto_Total.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_196-2025-SEJUR.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T15:58:01+00:00",
+  "sha256": "c6c36e94660dc3ecc6d444aa272a59c65b0f9293e87df1bd49ac9ee7b42bd789",
+  "wayback": "https://web.archive.org/web/20261128155741/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_196-2025-SEJUR.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_197-2025-SEJUR.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T15:56:48+00:00",
+  "sha256": "14a0ab6154c50c0a829b91e56a88d68474ed8701a702e4036bc61f2caf9169d6",
+  "wayback": "https://web.archive.org/web/20261128155633/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/Oficio_ndeg_197-2025-SEJUR.pdf"
+ },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf": {
   "confere": true,
   "quando": "2026-11-26T00:44:23+00:00",
   "sha256": "07d28aab7f394b0bbf4fe3143b5d931036d5a1b81f8db09c0200bf08f6c065ce",
   "wayback": "https://web.archive.org/web/20261126004409/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20132.pdf"
+ },
+ "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20157.2025%20-%20Oficio_229-2025-Resp.-Of._563-2025.pdf": {
+  "confere": true,
+  "quando": "2026-11-28T15:57:28+00:00",
+  "sha256": "c71c851f0a2de59edb246107b761d9187588ce6e7c0d3a65fc2053d98be9b2f7",
+  "wayback": "https://web.archive.org/web/20261128155703/https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20157.2025%20-%20Oficio_229-2025-Resp.-Of._563-2025.pdf"
  },
  "https://www.cubatao.sp.leg.br/processo-legislativo/projetos-de-lei/arquivos/2025/PL%20no%20180-2025.pdf": {
   "confere": true,
